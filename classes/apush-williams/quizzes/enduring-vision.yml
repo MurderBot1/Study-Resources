@@ -1,0 +1,927 @@
+# Enduring Vision Quiz
+#
+# Quiz format (see the README, "Adding a quiz"):
+#   topics:      groups of questions the student can pick from
+#   questions:   keyed by question number; each has
+#     topic:        one of the keys under `topics`
+#     question:     the question text
+#     A, B, C, D:   the answer choices (2 to 6 choices are fine: A, B, C, ...)
+#     answer:       the letter of the correct choice
+#     hint:         a nudge shown when the student taps "Show hint"
+#     explanation:  (optional) shown after answering
+#     shuffle:      (optional) set to false to keep the choices in this order
+
+title: Enduring Vision Quiz
+description: "100 multiple-choice questions from The Enduring Vision, Ch. 2–6: colonization through the Constitution."
+topics:
+  ch2:
+    title: "Ch. 2: The Rise of the Atlantic World, 1400-1625"
+  ch3:
+    title: "Ch. 3: Expansion and Diversity, 1625-1700"
+  ch4:
+    title: "Ch. 4: The Bonds of Empire, 1660-1750"
+  ch5:
+    title: "Ch. 5: Roads to Revolution, 1750-1776"
+  ch6:
+    title: "Ch. 6: Securing Independence, Defining Nationhood, 1776-1788"
+questions:
+  1:
+    topic: ch2
+    question: In what year did Christopher Columbus land at the island he named San Salvador?
+    A: "1488"
+    B: "1492"
+    C: "1498"
+    D: "1502"
+    answer: B
+    hint: "Think of the rhyme about sailing the ocean blue. It's in the last decade of the 1400s."
+  2:
+    topic: ch2
+    question: Which West African empire was the leading power in the West African savanna during the fifteenth century, known for its wealthy Muslim rulers and the city of Timbuktu?
+    A: Songhai
+    B: Benin
+    C: Mali
+    D: Kongo
+    answer: C
+    hint: "This empire's wealth came from gold, and its ruler's pilgrimage to Mecca became famous. Timbuktu was its scholarly city."
+  3:
+    topic: ch2
+    question: What treaty, signed in 1492, drew a line in the mid-Atlantic dividing future discoveries between Spain and Portugal?
+    A: Treaty of Utrecht
+    B: Treaty of Tordesillas
+    C: Treaty of Westphalia
+    D: Treaty of Ghent
+    answer: B
+    hint: "It's named after a Spanish town, and it split the 'New World' between the two Iberian powers."
+  4:
+    topic: ch2
+    question: Who was the Portuguese prince who sponsored maritime exploration along the African coast in the early-to-mid fifteenth century?
+    A: Vasco da Gama
+    B: Bartolomeu Dias
+    C: Prince Henry the Navigator
+    D: Ferdinand Magellan
+    answer: C
+    hint: He sponsored voyages but never sailed on them himself. His nickname describes what he promoted.
+  5:
+    topic: ch2
+    question: Which Portuguese navigator first rounded the Cape of Good Hope in 1488?
+    A: Bartolomeu Dias
+    B: Vasco da Gama
+    C: Christopher Columbus
+    D: Amerigo Vespucci
+    answer: A
+    hint: "He was first to round Africa's southern tip. The better-known navigator who reached India came after him."
+  6:
+    topic: ch2
+    question: "What German monk's 1517 attack on the sale of indulgences initiated the Protestant Reformation?"
+    A: John Calvin
+    B: Ignatius Loyola
+    C: Martin Luther
+    D: Thomas Cranmer
+    answer: C
+    hint: "He's the German monk who nailed his Ninety-Five Theses to a church door, and one of the major Protestant churches is named after him."
+  7:
+    topic: ch2
+    question: Which theologian developed the doctrine of predestination, asserting that God had foreordained only a few "elect" for salvation?
+    A: Martin Luther
+    B: John Calvin
+    C: Teresa of Avila
+    D: Ignatius Loyola
+    answer: B
+    hint: "He was French-born and worked in Geneva. 'Predestination' is the key word, and Presbyterians and Puritans follow his thinking."
+  8:
+    topic: ch2
+    question: King Henry VIII broke from the Roman Catholic Church in the 1530s primarily because of what conflict?
+    A: Disagreement over Church taxation policy
+    B: "His desire to annul his marriage to Catherine of Aragón since she had not produced a male heir"
+    C: A dispute over control of Irish territory
+    D: His support for Calvinist doctrine
+    answer: B
+    hint: "The motive was personal and dynastic. It wasn't about doctrine or taxes. It was about getting a male heir."
+  9:
+    topic: ch2
+    question: What name was given to militant English Calvinists who sought to purify the Church of England of Catholic practices?
+    A: Puritans
+    B: Huguenots
+    C: Jesuits
+    D: Anabaptists
+    answer: A
+    hint: "The name hints at what they wanted to do to the Church of England: make it purer."
+  10:
+    topic: ch2
+    question: Which Spanish conquistador led the conquest of the Aztec empire, capturing Tenochtitlan by 1521?
+    A: Francisco Pizarro
+    B: "Hernán Cortés"
+    C: "Juan Ponce de León"
+    D: "Francisco Vásquez de Coronado"
+    answer: B
+    hint: He conquered the Aztec capital, Tenochtitlan. The conquistador of the Inca is a different man.
+  11:
+    topic: ch2
+    question: "Who served as Hernán Cortés's interpreter, diplomatic broker, and mistress during the conquest of the Aztecs?"
+    A: Pocahontas
+    B: "Malintzin (Doña Marina)"
+    C: Squanto
+    D: Teresa of Avila
+    answer: B
+    hint: "She was an enslaved Nahua woman given to Cortés. Pocahontas and Squanto belong to other regions and centuries."
+  12:
+    topic: ch2
+    question: What disease, brought by the Spanish, devastated Native American populations and significantly aided the conquest of the Aztec and Inca empires?
+    A: Influenza
+    B: Smallpox
+    C: Typhus
+    D: Bubonic plague
+    answer: B
+    hint: This disease killed most of the people in some regions, and Europeans had partial immunity to it from childhood exposure.
+  13:
+    topic: ch2
+    question: What term describes the wide-ranging exchange of plants, animals, diseases, and people between the Eastern and Western Hemispheres after 1492?
+    A: The Atlantic exchange
+    B: The Columbian exchange
+    C: The mercantile exchange
+    D: The triangular trade
+    answer: B
+    hint: Think about which famous explorer gave his name to the exchange, and a two-way trade of crops, animals and diseases.
+  14:
+    topic: ch2
+    question: Which crop, adapted by Englishman John Rolfe, became the economic salvation of the Virginia colony?
+    A: Sugar
+    B: Cotton
+    C: Tobacco
+    D: Rice
+    answer: C
+    hint: "Rolfe's sweet variety was shipped to England, and it was the 'cash crop' of the Chesapeake region."
+  15:
+    topic: ch2
+    question: What Spanish system granted colonists land, labor, and tribute from Native Americans in the Americas?
+    A: The hacienda
+    B: The encomienda
+    C: The repartimiento
+    D: The cabildo
+    answer: B
+    hint: "The name comes from a Spanish verb meaning 'to entrust.' Colonists were 'entrusted' with Native laborers."
+  16:
+    topic: ch2
+    question: "Which English settlement, founded in the 1580s under Sir Walter Raleigh's patent, later became known as the \"Lost Colony\" after its inhabitants vanished?"
+    A: Jamestown
+    B: Roanoke
+    C: Plymouth
+    D: Sagadahoc
+    answer: B
+    hint: "It's famous for the mysterious 'CROATOAN' carving. It came before Jamestown, which survived."
+  17:
+    topic: ch2
+    question: "Which document, signed in 1620 by the Mayflower's adult male passengers, established a form of self-government for the Plymouth colony?"
+    A: The Fundamental Orders of Connecticut
+    B: The Mayflower Compact
+    C: The Virginia Charter
+    D: The Magna Carta
+    answer: B
+    hint: "'Compact' is the clue: a short agreement signed aboard the ship before landing in New England."
+  18:
+    topic: ch2
+    question: Samuel de Champlain founded the French colony of New France at which location in 1608?
+    A: Montreal
+    B: Quebec
+    C: Acadia
+    D: Port Royal
+    answer: B
+    hint: This city on the St. Lawrence River is today the capital of a Canadian province.
+  19:
+    topic: ch2
+    question: Which Dutch explorer, sailing for the Netherlands, explored the river later named for him and led to Dutch claims and the colony of New Netherland?
+    A: Henry Hudson
+    B: Willem Barentsz
+    C: Peter Minuit
+    D: Peter Stuyvesant
+    answer: A
+    hint: He gave his name to a river and to a bay in the north. He sailed for the Dutch but was English.
+  20:
+    topic: ch2
+    question: "What was a major long-term consequence of the Virginia Company's mismanagement and the destructive Anglo-Powhatan Wars by 1624?"
+    A: Virginia was granted full independence from England
+    B: "James I revoked the company's charter and Virginia became a royal colony"
+    C: The colony was abandoned entirely
+    D: Virginia merged with the Plymouth colony
+    answer: B
+    hint: When a joint-stock company fails, the king can take over. Think what Virginia became under the crown.
+  21:
+    topic: ch3
+    question: "What was the name of the address John Winthrop delivered in 1630 outlining the Puritans' vision for New England?"
+    A: "\"A Model of Christian Charity\""
+    B: "\"The New England Way\""
+    C: "\"The Bay Psalm Book\""
+    D: "\"A City of God\""
+    answer: A
+    hint: "The title is about charity, and the sermon is the source of the 'city upon a hill' idea."
+  22:
+    topic: ch3
+    question: Which Native American group did Massachusetts and Connecticut colonists (aided by Mohegan and Narragansett allies) nearly annihilate in 1637, including a massacre at Mystic, Connecticut?
+    A: Wampanoag
+    B: Pequot
+    C: Narragansett
+    D: Iroquois
+    answer: B
+    hint: They lost a fort and a war in Connecticut. The Wampanoag fought a different war about 40 years later.
+  23:
+    topic: ch3
+    question: Roger Williams, banished from Massachusetts Bay in 1635, founded which colony that became known for religious toleration?
+    A: Connecticut
+    B: New Haven
+    C: Providence/Rhode Island
+    D: Maryland
+    answer: C
+    hint: He was exiled for his beliefs and settled near Narragansett Bay. The state he founded is the smallest in the Union.
+  24:
+    topic: ch3
+    question: Anne Hutchinson was accused of what heresy, which her critics termed "Antinomianism"?
+    A: Denying the Trinity
+    B: "Claiming ministers who judged \"signs of salvation\" in others' behavior were wrong, since only inward personal revelation mattered"
+    C: Refusing to baptize infants
+    D: Advocating separation of church and Anglican doctrine
+    answer: B
+    hint: She thought personal revelation mattered more than outward behavior, and ministers did not like that.
+  25:
+    topic: ch3
+    question: "What was the 1662 compromise that allowed baptized adults' children (including \"nonsaints\") to receive baptism, though without full church membership rights?"
+    A: The Half-Way Covenant
+    B: The Toleration Act
+    C: The Cambridge Platform
+    D: The Mayflower Compact
+    answer: A
+    hint: "The name suggests 'part way' between full church membership and none."
+  26:
+    topic: ch3
+    question: "Who was the Wampanoag sachem, son of Massasoit, who led Native resistance in the 1675-1676 conflict known as King Philip's War?"
+    A: Opechancanough
+    B: Miantonomi
+    C: Metacom
+    D: "Popé"
+    answer: C
+    hint: "His English nickname was 'King Philip.' His Wampanoag name is what the question wants."
+  27:
+    topic: ch3
+    question: "Approximately what percentage of New England's Native American population did King Philip's War eliminate?"
+    A: 10 percent
+    B: 25 percent
+    C: 40 percent
+    D: 75 percent
+    answer: C
+    hint: "It was a devastating war but not a near-total wipeout: it eliminated less than half the population."
+  28:
+    topic: ch3
+    question: The Salem witchcraft crisis of 1692 began after several Salem Village girls accused whom of teaching them fortune-telling and sorcery?
+    A: Sarah Fiske
+    B: Tituba, an enslaved woman
+    C: Mary Rowlandson
+    D: Increase Mather
+    answer: B
+    hint: "She belonged to the household of Salem Village's minister and had little social power to defend herself."
+  29:
+    topic: ch3
+    question: Most of the 342 people accused of witchcraft in the Salem episode shared what common characteristic, according to the chapter?
+    A: They were recent immigrants from England
+    B: "A disproportionate number were women who had inherited or stood to inherit property beyond the usual widow's third"
+    C: They were all elderly men
+    D: They were all servants of wealthy planters
+    answer: B
+    hint: "Look at the pattern: accusers often targeted women whose property might pass outside the usual family line."
+  30:
+    topic: ch3
+    question: "What type of evidence—testimony that a spirit resembling the accused had tormented a victim—did Salem judges controversially allow despite legal prohibitions?"
+    A: Hearsay evidence
+    B: Spectral evidence
+    C: Circumstantial evidence
+    D: Confession under torture
+    answer: B
+    hint: The word describes evidence from a ghost or spirit, not anything physical or witnessed.
+  31:
+    topic: ch3
+    question: In Virginia, what system did planters use to acquire land by paying for the transportation of laborers (including servants), receiving acreage per person brought over?
+    A: The headright system
+    B: The encomienda system
+    C: The manor system
+    D: The town meeting system
+    answer: A
+    hint: "Planters were rewarded for bringing people over. Think of it as acreage 'per head.'"
+  32:
+    topic: ch3
+    question: What crop dominated the Chesapeake economy and drove the demand for indentured servant and later enslaved labor?
+    A: Rice
+    B: Sugar
+    C: Tobacco
+    D: Indigo
+    answer: C
+    hint: "The Chesapeake's cash crop was labor-intensive and exhausted the soil. Rolfe made it popular."
+  33:
+    topic: ch3
+    question: "What 1649 Maryland law, passed by a Protestant-dominated assembly, extended freedom of worship (though not separation of church and state) chiefly to protect the colony's Catholic minority?"
+    A: The Act for Religious Toleration
+    B: The Half-Way Covenant
+    C: The Fundamental Constitutions
+    D: The Act of Establishment
+    answer: A
+    hint: "This 1649 law was passed in a colony founded by Catholics. The name gives it away: it's about tolerating other religions."
+  34:
+    topic: ch3
+    question: "What uprising in Virginia (1675-1676), led by a wealthy planter against Governor Berkeley's Indian policy and eventually turning into an attack on Jamestown itself, revealed deep social tensions between poor freemen, small planters, and the colonial elite?"
+    A: The Pequot War
+    B: "Bacon's Rebellion"
+    C: The Pueblo Revolt
+    D: "King Philip's War"
+    answer: B
+    hint: "It's named for the wealthy planter who led it, not for a Native leader."
+  35:
+    topic: ch3
+    question: By roughly what year did Virginia and Maryland legally codify slavery as a lifelong, inheritable, racial status?
+    A: 1619 and 1624
+    B: 1661 and 1670
+    C: 1700 and 1705
+    D: 1642 and 1649
+    answer: B
+    hint: These dates come soon after the Restoration of 1660, long after the first Africans arrived in 1619.
+  36:
+    topic: ch3
+    question: Which English colony, founded through a 1663 grant from Charles II and developing a rice-based plantation economy modeled partly on West Indian slave societies, achieved a black majority population by 1700?
+    A: New Jersey
+    B: Pennsylvania
+    C: Carolina
+    D: New York
+    answer: C
+    hint: "It was named for Charles (Latin: Carolus) and had a rice economy. It's not a northern colony."
+  37:
+    topic: ch3
+    question: Which two European powers had earlier established colonial outposts (New Netherland and New Sweden) in the region that England seized and reorganized into the middle colonies?
+    A: Spain and Portugal
+    B: France and Spain
+    C: The Dutch and the Swedes
+    D: The Dutch and the French
+    answer: C
+    hint: One of the two powers sent settlers to the Hudson and the other to the Delaware. Both were Protestant and Northern European.
+  38:
+    topic: ch3
+    question: William Penn founded Pennsylvania in 1681 chiefly as a "holy experiment" for members of which religious group, who preached the "Inner Light" and were called Quakers?
+    A: The Puritans
+    B: The Society of Friends (Quakers)
+    C: The Anglicans
+    D: The Huguenots
+    answer: B
+    hint: "The group's formal name has to do with friendship, and they believed in an 'Inner Light.' Quaker is their nickname."
+  39:
+    topic: ch3
+    question: "What was the 1680 Native American revolt in New Mexico, led by Popé, that expelled Spanish colonizers from the region for twelve years?"
+    A: "The Bacon's Rebellion"
+    B: The Pueblo Revolt
+    C: The Beaver Wars
+    D: The Pequot War
+    answer: B
+    hint: The name refers to a Native people and their villages in the Southwest, not to a leader. The year was 1680.
+  40:
+    topic: ch3
+    question: Which French adventurer descended the Mississippi River to its delta in 1682 and claimed the entire Mississippi basin for Louis XIV, naming the territory Louisiana?
+    A: Jacques Marquette
+    B: Louis Jolliet
+    C: Sieur de La Salle
+    D: Jean-Baptiste Colbert
+    answer: C
+    hint: He named the territory for his king. Marquette and Jolliet explored part of the river earlier, but this man followed it all the way to the Gulf.
+  41:
+    topic: ch4
+    question: "What event in 1688-1689 replaced James II with William and Mary and produced England's Bill of Rights?"
+    A: The Restoration
+    B: The Glorious Revolution
+    C: The Dominion of New England
+    D: "King William's War"
+    answer: B
+    hint: "It replaced a king without a battle, and it's called 'glorious' because it was bloodless."
+  42:
+    topic: ch4
+    question: Which colonies did James II and Charles II consolidate into the "Dominion of New England" in 1686-1688, under governor Sir Edmund Andros?
+    A: Only Massachusetts
+    B: Massachusetts, New Hampshire, Connecticut, Rhode Island, Plymouth, New York, and the Jerseys
+    C: Virginia and Maryland
+    D: New York and Pennsylvania
+    answer: B
+    hint: "Think about the size: this was an attempt to put many colonies under one governor, not just one or two."
+  43:
+    topic: ch4
+    question: "Leisler's Rebellion of 1689 occurred in which colony?"
+    A: Massachusetts
+    B: Maryland
+    C: New York
+    D: Virginia
+    answer: C
+    hint: "It's a rebellion in the colony where the Dutch once ruled, and Jacob Leisler seized power there."
+  44:
+    topic: ch4
+    question: "In Maryland, John Coode's Protestant Association (1689) succeeded in doing what?"
+    A: "Restoring the Catholic proprietor's full authority"
+    B: Removing Catholics from office and making the Church of England the established religion (by 1692)
+    C: Establishing full religious toleration for all faiths
+    D: Abolishing the proprietorship permanently
+    answer: B
+    hint: The Protestants took power from the Catholic proprietor, so think about the established church afterward.
+  45:
+    topic: ch4
+    question: "What was the primary purpose of Britain's Navigation Acts (beginning 1651/1660)?"
+    A: To promote free trade with all European nations
+    B: To restrict colonial trade to English/colonial ships and channel key goods through England, benefiting the mother country under mercantilism
+    C: To grant colonies full independence in trade policy
+    D: To ban all colonial manufacturing entirely
+    answer: B
+    hint: "Mercantilism is about benefiting the mother country: the colonies supply raw goods, England gets the profits."
+  46:
+    topic: ch4
+    question: "The Molasses Act of 1733 was intended primarily to:"
+    A: Raise general tax revenue for the crown
+    B: Protect British West Indian sugar producers from French Caribbean competition
+    C: Encourage colonists to distill rum for export to Africa
+    D: Eliminate the slave trade
+    answer: B
+    hint: It was passed to help planters in the British islands, not to raise revenue for the crown.
+  47:
+    topic: ch4
+    question: Which goods were classified as "enumerated" and had to pass through England before being sold to foreign markets?
+    A: Grain, livestock, and fish
+    B: Tobacco, rice, furs, indigo, and naval stores
+    C: Manufactured clothing only
+    D: Iron and lumber exclusively
+    answer: B
+    hint: "'Enumerated' means listed. These were valuable commodities that England wanted to control."
+  48:
+    topic: ch4
+    question: According to the chapter, roughly what share of American tobacco and rice eventually was sold outside the British Empire due to customs duty refunds ("drawbacks")?
+    A: 15 percent
+    B: 40 percent
+    C: 60 percent
+    D: 85 percent
+    answer: D
+    hint: Because of drawbacks, merchants had no reason to keep these goods in the empire. Choose the largest figure.
+  49:
+    topic: ch4
+    question: Approximately what percentage of the population of British North America was African in 1700, compared to 1755?
+    A: 5 percent in 1700, rising to 10 percent in 1755
+    B: 11 percent in 1700, rising to 20 percent in 1755
+    C: 20 percent in 1700, falling to 11 percent by 1755
+    D: 30 percent in both years
+    answer: B
+    hint: "Slavery grew fast in the early 1700s, so the African share of the population rose, and it didn't fall."
+  50:
+    topic: ch4
+    question: "The Scots-Irish who immigrated to America in the early eighteenth century were primarily fleeing:"
+    A: Religious persecution by the Anglican Church in Scotland
+    B: "\"Rack renting\" (sharply rising farm rents) in northern Ireland after 1718"
+    C: Famine in the Scottish Highlands
+    D: Political imprisonment after a failed rebellion
+    answer: B
+    hint: Their reason was economic. Look for a landlord-related complaint after 1718.
+  51:
+    topic: ch4
+    question: What was the Stono Rebellion of 1739?
+    A: A Native American uprising against Carolina settlers
+    B: A slave revolt in South Carolina in which rebels marched toward Spanish Florida crying "Liberty!"
+    C: A tax revolt by backcountry farmers
+    D: An uprising of indentured servants in Virginia
+    answer: B
+    hint: "It was in South Carolina, a revolt by enslaved people, and the cry for 'Liberty!' is a clue."
+  52:
+    topic: ch4
+    question: "Spain's policy of offering freedom to enslaved people who escaped from English colonies to Florida led to the establishment of which community in 1738?"
+    A: St. Augustine
+    B: Savannah
+    C: Mose (Gracia Real de Santa Teresa de Mose)
+    D: Pensacola
+    answer: C
+    hint: It was a fortified free Black town just north of St. Augustine, in Spanish Florida.
+  53:
+    topic: ch4
+    question: "Georgia, founded in 1733 under James Oglethorpe, was originally distinctive among British mainland colonies because it:"
+    A: Allowed only Catholic settlers
+    B: Banned slavery and limited landholding to 500 acres
+    C: Was governed directly by France
+    D: Had no relationship with the British Parliament
+    answer: B
+    hint: It was founded as a buffer and a philanthropic colony, and it started with restrictions that other colonies lacked.
+  54:
+    topic: ch4
+    question: "The 1701 \"Grand Settlement\" negotiated by the Iroquois Confederacy with France and England was significant because it:"
+    A: Ended the Iroquois Confederacy permanently
+    B: Allowed the Iroquois to maintain neutrality between France and England while preserving their lands and diplomatic influence
+    C: Forced the Iroquois to convert to Catholicism
+    D: Gave France full military control over Iroquois territory
+    answer: B
+    hint: "'Grand Settlement' suggests a diplomatic win. The Iroquois stayed independent by not choosing a side."
+  55:
+    topic: ch4
+    question: "The 1737 \"Walking Purchase\" in Pennsylvania resulted in:"
+    A: The Delaware Indians gaining additional protected land
+    B: A fraudulent deal that forced the Delaware Indians to cede roughly 1,200 additional square miles of land
+    C: "William Penn's sons renouncing all claims to Pennsylvania land"
+    D: A peaceful renegotiation that benefited the Delawares
+    answer: B
+    hint: "The deal measured land by how far a man could walk in a day and a half. Pennsylvania's hired runners went much farther than the Delaware expected."
+  56:
+    topic: ch4
+    question: Which 1735 New York trial, involving printer John Peter Zenger, became a landmark moment for freedom of the press?
+    A: Zenger was convicted, establishing strict press controls
+    B: Zenger was acquitted after his attorney Andrew Hamilton argued that true statements should not be considered libelous
+    C: The trial resulted in the banning of all colonial newspapers
+    D: Zenger fled the colony before the verdict
+    answer: B
+    hint: "It's a landmark for press freedom, so the outcome wasn't a conviction. The defense argued truth is not libel."
+  57:
+    topic: ch4
+    question: "Which English scientist's discoveries about gravity, published in 1687, were a major inspiration for the Enlightenment?"
+    A: Robert Boyle
+    B: Isaac Newton
+    C: John Locke
+    D: Francis Bacon
+    answer: B
+    hint: His laws of motion and gravity were the model for Enlightenment thinkers. An apple story is attached to him.
+  58:
+    topic: ch4
+    question: Benjamin Franklin exemplified the American Enlightenment through activities such as founding which organization in 1743 to promote scientific inquiry?
+    A: The Junto
+    B: The Board of Trade
+    C: The American Philosophical Society
+    D: The Royal Society
+    answer: C
+    hint: "Franklin founded this in Philadelphia, a Society 'of' scientific and philosophical learning, not a royal one."
+  59:
+    topic: ch4
+    question: "Jonathan Edwards's famous 1741 sermon, emphasizing human sinfulness and divine wrath to provoke immediate repentance, was titled:"
+    A: "\"The Danger of an Unconverted Ministry\""
+    B: "\"Sinners in the Hands of an Angry God\""
+    C: "\"Poor Richard's Almanack\""
+    D: "\"Essay Concerning Human Understanding\""
+    answer: B
+    hint: "The sermon's title is a vivid picture of sinners and an angry deity."
+  60:
+    topic: ch4
+    question: "During the Great Awakening, the split between revivalist preachers and established, rationalist clergy became known as the division between:"
+    A: Puritans and Quakers
+    B: New Lights and Old Lights
+    C: Federalists and Anti-Federalists
+    D: Deists and Anglicans
+    answer: B
+    hint: Their names refer to a new light of spiritual awakening and to the old one, the established clergy.
+  61:
+    topic: ch5
+    question: What conflict, known to Anglo-Americans as the French and Indian War, planted the seeds of the imperial crisis between Britain and its colonies?
+    A: "King George's War"
+    B: "The Seven Years' War"
+    C: "Pontiac's War"
+    D: "Lord Dunmore's War"
+    answer: B
+    hint: The war is known by a different name in Europe, and it lasted seven years.
+  62:
+    topic: ch5
+    question: Who did Virginia send in 1754 to persuade or force French troops to leave the Ohio valley, triggering the start of fighting?
+    A: George Washington
+    B: William Pitt
+    C: Edward Braddock
+    D: Jeffery Amherst
+    answer: A
+    hint: He was a young Virginian officer, and he would later become the commander in chief of the Continental Army.
+  63:
+    topic: ch5
+    question: What was the purpose of the Albany Congress and Albany Plan of Union (1754)?
+    A: To declare independence from Britain
+    B: To negotiate a treaty with the Six Nations Iroquois and propose a colonial confederation
+    C: To organize a boycott of British goods
+    D: To try British soldiers for the Boston Massacre
+    answer: B
+    hint: It was a meeting in 1754 where Franklin proposed uniting the colonies, and also to deal with the Iroquois.
+  64:
+    topic: ch5
+    question: "Which British statesman took control of military affairs and reinvigorated the war effort, turning the tide of the Seven Years' War in Britain's favor?"
+    A: William Pitt
+    B: Lord North
+    C: Charles Townshend
+    D: Lord Hillsborough
+    answer: A
+    hint: "He was the 'Great Commoner' and the war minister. A Pennsylvania city is named for him."
+  65:
+    topic: ch5
+    question: "Under the Treaty of Paris (1763), what happened to France's mainland North American empire?"
+    A: France kept Canada but lost Louisiana
+    B: France ceded Canada and land east of the Mississippi to Britain and Louisiana to Spain
+    C: France retained all its territory
+    D: France ceded all territory to Spain only
+    answer: B
+    hint: "France lost its empire on the mainland: Britain got the north and the east, Spain got the west."
+  66:
+    topic: ch5
+    question: "What event was triggered by Ottawa leader Pontiac and inspired by the Delaware prophet Neolin's vision urging Native American unity?"
+    A: "Lord Dunmore's War"
+    B: The Paxton Boys uprising
+    C: "Pontiac's War"
+    D: The Regulator movement
+    answer: C
+    hint: "The question describes its own cause. It's the war named for the Ottawa leader."
+  67:
+    topic: ch5
+    question: What was the main purpose of the Proclamation of 1763?
+    A: To ban all trade with Native Americans
+    B: To assert direct British control over land transactions and settlement west of the Appalachian crest
+    C: To grant independence to Quebec
+    D: "To end the Seven Years' War"
+    answer: B
+    hint: The Proclamation set a boundary line in the mountains, to control settlement and land purchases.
+  68:
+    topic: ch5
+    question: Lawyer James Otis challenged the constitutionality of what British measure permitting officials to search for smuggled goods without specific evidence of probable cause?
+    A: The Stamp Act
+    B: The Sugar Act
+    C: Writs of assistance
+    D: The Quartering Act
+    answer: C
+    hint: "It's a type of search warrant, as in 'assist' the customs officers, and it's not a tax law."
+  69:
+    topic: ch5
+    question: How did the Stamp Act (1765) differ from the Sugar Act (1764)?
+    A: The Stamp Act was an internal tax on colonial goods/documents, while the Sugar Act was an external tax on trade
+    B: The Stamp Act only affected merchants, while the Sugar Act affected all colonists
+    C: The Stamp Act was passed by colonial assemblies, not Parliament
+    D: The Stamp Act raised no revenue at all
+    answer: A
+    hint: "Think 'internal' versus 'external': one taxed documents inside the colonies, the other taxed goods crossing the sea."
+  70:
+    topic: ch5
+    question: What group of Boston artisans and shopkeepers organized to pressure stamp distributors into resigning during the Stamp Act crisis?
+    A: The Sons of Liberty
+    B: The Loyal Nine
+    C: The Regulators
+    D: The Daughters of Liberty
+    answer: B
+    hint: The name is a number, a small group of Boston men who organized before the Sons of Liberty grew.
+  71:
+    topic: ch5
+    question: "What did the Declaratory Act (1766), passed alongside the Stamp Act's repeal, assert?"
+    A: That colonists had the same rights as English subjects
+    B: That Parliament could legislate for the colonies "in all cases whatsoever"
+    C: That taxation without representation was illegal
+    D: That the colonies were independent of Parliament
+    answer: B
+    hint: "It was passed the same day as the repeal to save face, and it claimed Parliament's authority 'in all cases.'"
+  72:
+    topic: ch5
+    question: "John Dickinson's Letters from a Farmer in Pennsylvania (1767) argued that which type of parliamentary measure was unconstitutional unless approved by colonists' elected representatives?"
+    A: Only internal taxes
+    B: Any duty designed to produce revenue, whether internal or external
+    C: Only military quartering laws
+    D: Only measures affecting trade with France
+    answer: B
+    hint: Dickinson argued against any tax meant to raise revenue, not only the internal ones like the Stamp Act.
+  73:
+    topic: ch5
+    question: Which of the Townshend duties did Parliament retain in 1770 even while repealing the rest, symbolically upholding its right to tax the colonies?
+    A: The duty on paper
+    B: The duty on glass
+    C: The duty on tea
+    D: The duty on lead
+    answer: C
+    hint: Parliament kept one duty to prove its right to tax, and a famous party in Boston Harbor was about it.
+  74:
+    topic: ch5
+    question: The 1770 street clash in which British soldiers killed five civilians, including Crispus Attucks, became known as what?
+    A: "The St. George's Fields Massacre"
+    B: The Boston Tea Party
+    C: The Boston Massacre
+    D: The Battle of Alamance Creek
+    answer: C
+    hint: "The name tells you what happened and where, and it wasn't a tea-related event."
+  75:
+    topic: ch5
+    question: What system, promoted by Samuel Adams starting in 1772, linked colonial towns and resistance leaders in a communications network to coordinate opposition to Britain?
+    A: The Continental Association
+    B: The committees of correspondence
+    C: The Stamp Act Congress
+    D: The Sons of Liberty network
+    answer: B
+    hint: "The name describes what the network did: members wrote letters to each other."
+  76:
+    topic: ch5
+    question: What 1773 act of Parliament granted the British East India Company a monopoly-lowering advantage on tea sales, provoking colonial resistance including the Boston Tea Party?
+    A: The Sugar Act
+    B: The Revenue Act
+    C: The Tea Act
+    D: The Quartering Act
+    answer: C
+    hint: "The name matches the product, and it's what led to the Boston Tea Party."
+  77:
+    topic: ch5
+    question: The four Coercive Acts passed in response to the Boston Tea Party, combined with the Quebec Act, were collectively known to colonists as what?
+    A: The Navigation Acts
+    B: The Intolerable Acts
+    C: The Declaratory Acts
+    D: The Proclamation Acts
+    answer: B
+    hint: "Colonists named them after how they felt: they considered them unbearable."
+  78:
+    topic: ch5
+    question: What document did the First Continental Congress (1774) endorse that declared the colonies owed no obedience to the Coercive Acts?
+    A: The Olive Branch Petition
+    B: The Declaration of Independence
+    C: The Suffolk Resolves
+    D: The Albany Plan
+    answer: C
+    hint: "It's from Massachusetts, named for the county around Boston, and it rejected the Coercive Acts."
+  79:
+    topic: ch5
+    question: What battles in April 1775 marked the outbreak of armed conflict when British troops marched to seize colonial military supplies?
+    A: "Bunker Hill and Breed's Hill"
+    B: Lexington and Concord
+    C: Alamance Creek and Fort Stanwix
+    D: Ticonderoga and Crown Point
+    answer: B
+    hint: "These two towns are west of Boston, where the 'shot heard round the world' was fired."
+  80:
+    topic: ch5
+    question: "Thomas Paine's Common Sense (January 1776) is credited with doing what for the independence movement?"
+    A: Proposing the Olive Branch Petition
+    B: Persuading colonists that monarchy itself was illegitimate and independence was both practical and inevitable
+    C: Convincing Congress to seek reconciliation with George III
+    D: "Establishing the Continental Association's boycott rules"
+    answer: B
+    hint: "Paine's pamphlet argued for independence in plain language, and attacked monarchy itself."
+  81:
+    topic: ch6
+    question: What is the title and time period covered by Chapter 6 of The Enduring Vision?
+    A: Securing Independence, Defining Nationhood, 1776-1788
+    B: The Coming of Independence, 1774-1776
+    C: Building a New Nation, 1789-1800
+    D: Colonial America, 1750-1776
+    answer: A
+    hint: The chapter title covers the war and the building of a nation, from 1776 to the Constitution era.
+  82:
+    topic: ch6
+    question: Who was Agrippa Hull, whose story opens the chapter?
+    A: A free African-American from Massachusetts who served in the Continental Army for the duration of the war
+    B: A Hessian mercenary who defected to the Americans
+    C: A Mohawk chief who allied with the British
+    D: A Quaker abolitionist from Pennsylvania
+    answer: A
+    hint: He was from Massachusetts, was free, and served as an aide-de-camp to a general in the Continental Army.
+  83:
+    topic: ch6
+    question: Approximately what percentage of white colonists remained loyalists after the Declaration of Independence?
+    A: 5 percent
+    B: 20 percent
+    C: 40 percent
+    D: 60 percent
+    answer: B
+    hint: "A sizable minority, but not a majority: roughly one in five."
+  84:
+    topic: ch6
+    question: Which two states had the greatest loyalist strength, furnishing about half of all Americans who fought as loyalists?
+    A: Georgia and South Carolina
+    B: New York and New Jersey
+    C: Massachusetts and Connecticut
+    D: Virginia and North Carolina
+    answer: B
+    hint: Think of the places where the British held cities during the war, both in the Middle Atlantic.
+  85:
+    topic: ch6
+    question: Which Native American leader, a Mohawk chief, led most of the Six Nations Iroquois in supporting the British?
+    A: Joseph Brant
+    B: Alexander McGillivray
+    C: Samson Occum
+    D: Hyder Ali
+    answer: A
+    hint: He was also known as Thayendanegea, and he was Mohawk. The Iroquois were split, but most sided with the British.
+  86:
+    topic: ch6
+    question: What advantage did Britain hold at the start of the war?
+    A: A smaller population but better morale
+    B: "A far larger population and the world's largest navy"
+    C: Superior guerrilla warfare tactics
+    D: Stronger alliances with France and Spain
+    answer: B
+    hint: Britain was a major world power with a huge fleet. Consider what was true on the American side.
+  87:
+    topic: ch6
+    question: What was the significance of the Battle of Saratoga (1777)?
+    A: It ended the war in the South
+    B: "It was the war's turning point, convincing France to recognize American independence and enter the war"
+    C: "It led to Washington's surrender at Valley Forge"
+    D: It secured the Ohio Valley for the Americans
+    answer: B
+    hint: "A major surrender in New York changed France's mind about the war. It's the 'turning point.'"
+  88:
+    topic: ch6
+    question: Which European drillmaster arrived at Valley Forge in 1778 and transformed the Continental Army into a more disciplined fighting force?
+    A: Marquis de Lafayette
+    B: Friedrich von Steuben
+    C: Thaddeus Kosciuszko
+    D: Horatio Gates
+    answer: B
+    hint: He was a Prussian officer, not French or Polish, and he taught drills at Valley Forge.
+  89:
+    topic: ch6
+    question: What was the outcome of the Battle of Camden (1780)?
+    A: A decisive American victory that turned the tide in the South
+    B: The worst rebel defeat of the war, inflicted by Lord Cornwallis on Horatio Gates
+    C: A stalemate that led to a truce
+    D: The surrender of Cornwallis
+    answer: B
+    hint: "Cornwallis versus Gates in South Carolina. Gates's army was crushed."
+  90:
+    topic: ch6
+    question: What decisive event in 1781 secured American independence?
+    A: The Battle of Camden
+    B: The Battle of Yorktown, where French naval power trapped Cornwallis
+    C: The Battle of Monmouth
+    D: The signing of the Northwest Ordinance
+    answer: B
+    hint: The French fleet trapped Cornwallis on a peninsula in Virginia and ended the major fighting.
+  91:
+    topic: ch6
+    question: Under the Treaty of Paris (1783), what did Britain formally recognize and agree to do?
+    A: Recognize American independence and withdraw all royal troops from U.S. soil
+    B: Return Canada to the United States
+    C: Compensate loyalists for lost property
+    D: Grant Native Americans sovereign territory
+    answer: A
+    hint: "The treaty recognized the new nation and obliged Britain to leave. It didn't give back Canada."
+  92:
+    topic: ch6
+    question: What group was notably left out of the Treaty of Paris negotiations, with no provisions made for their status or land?
+    A: African-Americans
+    B: Native Americans
+    C: Loyalists
+    D: Women
+    answer: B
+    hint: "The negotiators were British and American diplomats, and these people weren't at the table even though it concerned their land."
+  93:
+    topic: ch6
+    question: Approximately what percentage of free adult white males died fighting in the Revolutionary War?
+    A: 1 percent
+    B: 5 percent
+    C: 15 percent
+    D: 25 percent
+    answer: B
+    hint: "The figure is small but meaningful: the Revolution cost thousands of lives, a single digit percentage of men."
+  94:
+    topic: ch6
+    question: "Who was Prince Hall, a prominent figure discussed in the chapter's section on African-Americans?"
+    A: A former slave who became a leading Boston abolitionist and founded a separate African-American Masonic lodge
+    B: A slave poet celebrated by white society
+    C: A Continental Army general
+    D: A loyalist who fled to Nova Scotia
+    answer: A
+    hint: He is associated with the first Black Masonic lodge, in Boston, and with abolition.
+  95:
+    topic: ch6
+    question: What did Abigail Adams urge her husband John to do in her famous 1776 letter?
+    A: Free all slaves immediately
+    B: "\"Remember the Ladies\" in the new code of laws"
+    C: Support a hereditary aristocracy
+    D: Oppose the Declaration of Independence
+    answer: B
+    hint: "The famous line is from her letter to John during the writing of the new laws: 'Remember the ___.'"
+  96:
+    topic: ch6
+    question: What kind of government did the Articles of Confederation establish?
+    A: A strong national government with an independent executive branch
+    B: A weak "firm league of friendship" among sovereign states with no independent executive or judiciary
+    C: A monarchy under a constitutional framework
+    D: A military government led by Washington
+    answer: B
+    hint: "The Articles gave states most of the power. The quoted phrase is a 'firm league of friendship.'"
+  97:
+    topic: ch6
+    question: "What was Shays's Rebellion (1786-1787)?"
+    A: A slave uprising in South Carolina
+    B: An uprising of indebted Massachusetts farmers, led by Daniel Shays, that helped spur calls for a stronger central government
+    C: A loyalist uprising in New York
+    D: A Native American uprising in the Northwest Territory
+    answer: B
+    hint: It was in western Massachusetts, led by a former Army captain, and it exposed the weakness of the Articles.
+  98:
+    topic: ch6
+    question: At the Philadelphia Convention, what was the key difference between the Virginia Plan and the New Jersey Plan?
+    A: The Virginia Plan favored representation by population; the New Jersey Plan favored equal representation for each state
+    B: The Virginia Plan abolished slavery; the New Jersey Plan protected it
+    C: The Virginia Plan created a monarchy; the New Jersey Plan created a republic
+    D: The Virginia Plan was proposed by small states; the New Jersey Plan by large states
+    answer: A
+    hint: Both plans were about how states would be represented, so the difference is about population versus equality.
+  99:
+    topic: ch6
+    question: What compromise resolved the dispute between the Virginia and New Jersey Plans?
+    A: The Three-Fifths Compromise
+    B: The Great (Connecticut) Compromise, giving equal state representation in the Senate and population-based representation in the House
+    C: The Missouri Compromise
+    D: The Compromise of 1850
+    answer: B
+    hint: It was a compromise between big and small states, named for a state, and it created the two houses of Congress.
+  100:
+    topic: ch6
+    question: What was the essential argument of Antifederalists against the proposed Constitution?
+    A: That it gave too little power to the national government
+    B: "That it created excessive centralized power that threatened states' sovereignty and individual liberties without a bill of rights"
+    C: That it did not go far enough to abolish slavery
+    D: That it failed to establish a strong navy
+    answer: B
+    hint: Antifederalists feared the new government was too strong. Their demand led to the first ten amendments.

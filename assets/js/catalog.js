@@ -1,7 +1,8 @@
 /*
  * Site catalog — the single place that lists classes and their resources.
  * To add a class or a resource, add an entry here (see README.md).
- * `href` values are relative to the class folder: classes/<id>/
+ * Quizzes: `quiz` is the slug of classes/<id>/quizzes/<slug>.yml (shown by the shared quiz.html).
+ * Flashcard decks: `href` is relative to the class folder: classes/<id>/
  */
 window.CATALOG = {
   classes: [
@@ -13,14 +14,14 @@ window.CATALOG = {
         {
           title: "Enduring Vision Quiz",
           description: "The Enduring Vision, Ch. 2–6: colonization through the Constitution.",
-          meta: "100 questions",
-          href: "quizzes/enduring-vision.html"
+          meta: "100 questions · hints",
+          quiz: "enduring-vision"
         },
         {
           title: "Early Republic Quiz",
           description: "The Constitution, the Early Republic, and the Age of Jackson. Pick topics and review what you missed.",
-          meta: "171 questions",
-          href: "quizzes/early-republic.html"
+          meta: "171 questions · hints",
+          quiz: "early-republic"
         }
       ],
       flashcards: [

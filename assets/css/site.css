@@ -85,6 +85,43 @@ button { cursor: pointer; }
 .btn.ghost { background: transparent; color: var(--accent); }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
 
+/* ---- shared components (quiz + flashcard pages) ---- */
+.link-btn { background: none; border: 0; color: var(--accent); padding: 4px; font-size: .88rem; text-decoration: underline; }
+.link-btn:disabled { opacity: .45; cursor: not-allowed; text-decoration: none; }
+
+.check { display: inline-flex; gap: 8px; align-items: center; font-size: .93rem; }
+.check input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+#view { display: flex; flex-direction: column; gap: 14px; }
+
+/* ---- progress ---- */
+.meta-row { display: flex; justify-content: space-between; gap: 12px; font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); transition: width .2s; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.card h2 { font-size: 1.25rem; }
+.card .muted { color: var(--muted); font-size: .93rem; }
+.q-prompt-label { font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+.result { border-left: 4px solid var(--accent); padding: 4px 0 4px 14px; display: flex; flex-direction: column; gap: 8px; }
+.result.good { border-color: var(--good); }
+.result.bad { border-color: var(--bad); }
+.result .verdict { font-weight: 700; }
+.result.good .verdict { color: var(--good); }
+.result.bad .verdict { color: var(--bad); }
+.result .chosen { color: var(--bad); }
+.answer-card { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; }
+.answer-card .t { font-family: var(--display); font-weight: 600; font-size: 1.1rem; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.row.between { justify-content: space-between; }
+.score { font-family: var(--display); font-size: 3rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.miss { border-top: 1px solid var(--line); padding-top: 12px; display: flex; flex-direction: column; gap: 3px; }
+.miss .you { color: var(--bad); }
+.miss .ans { color: var(--good); }
+.miss .t { font-weight: 700; }
+.warn { color: var(--bad); font-size: .9rem; }
+
 footer.site-foot { color: var(--muted); font-size: .85rem; }
 
 @media (prefers-reduced-motion: reduce) {

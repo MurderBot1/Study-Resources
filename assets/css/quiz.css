@@ -1,0 +1,60 @@
+/* Shared multiple-choice quiz page (quiz.html). Extends site.css. */
+.quiz { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.quiz-head .eyebrow { margin-bottom: 6px; }
+.quiz-head .lede { font-size: .93rem; }
+
+/* ---- setup ---- */
+.topics { display: flex; flex-direction: column; gap: 8px; }
+.topic {
+  display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--line);
+  border-radius: 9px; padding: 12px 14px; cursor: pointer;
+}
+.topic:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.topic input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+.topic b { display: block; font-weight: 600; }
+.topic small { color: var(--muted); font-size: .88rem; }
+.topic .n { font-weight: 400; color: var(--muted); font-variant-numeric: tabular-nums; }
+.opts { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.opts input[type=number] {
+  width: 5.2em; padding: 7px 8px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--bg); font-variant-numeric: tabular-nums;
+}
+
+/* ---- question ---- */
+.q-topic { font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.q-text { font-family: var(--display); font-size: clamp(1.15rem, 3.6vw, 1.4rem); line-height: 1.4; margin: 0; }
+.choices { display: flex; flex-direction: column; gap: 10px; }
+.choice {
+  display: flex; gap: 12px; align-items: flex-start; text-align: left; width: 100%;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 9px; padding: 12px 14px;
+  line-height: 1.4; overflow-wrap: anywhere;
+}
+.choice .k {
+  flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line);
+  display: grid; place-items: center; font-size: .8rem; font-weight: 700; color: var(--muted);
+}
+.choice:hover:not(:disabled) { border-color: var(--accent); }
+.choice:disabled { cursor: default; }
+.choice.good { background: var(--good-soft); border-color: var(--good); }
+.choice.bad { background: var(--bad-soft); border-color: var(--bad); }
+.choice.good .k { background: var(--good); border-color: var(--good); color: var(--surface); }
+.choice.bad .k { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.choice:disabled:not(.good):not(.bad) { opacity: .75; }
+
+.hint-row { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.hint {
+  border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0;
+  padding: 10px 14px; line-height: 1.45;
+}
+.hint b { display: block; font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.hint[hidden] { display: none; }
+.feedback .why { color: var(--muted); }
+
+/* ---- results ---- */
+.breakdown { display: flex; flex-direction: column; gap: 6px; }
+.breakdown div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 6px; font-variant-numeric: tabular-nums; }
+.breakdown div:last-child { border-bottom: 0; }
+.miss .q { font-weight: 600; }
+.miss .why { color: var(--muted); font-size: .92rem; }
+.miss .hinted { color: var(--muted); font-size: .85rem; }
+.kbd-tip { color: var(--muted); font-size: .8rem; }
