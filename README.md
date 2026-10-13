@@ -6,7 +6,7 @@ Quizzes and flashcards to share with classmates. It's a plain static site (HTML,
 
 | Class | Quizzes | Flashcards |
 | --- | --- | --- |
-| **APUSH – Williams** (`classes/apush-williams/`) | Enduring Vision Quiz, Early Republic Quiz | Terms quiz flashcards (230 terms) |
+| **APUSH – Williams** (`classes/apush-williams/`) | Enduring Vision Quiz, Early Republic Quiz | Terms quiz flashcards (230 terms), Enduring Vision flashcards (111 cards) |
 
 ## Publish with GitHub Pages
 
@@ -32,7 +32,7 @@ To preview locally, run `python3 -m http.server` in this folder and open <http:/
 Everything listed on the home and class pages comes from **`assets/js/catalog.js`**.
 
 - **New quiz:** drop a standalone `.html` file into `classes/<class>/quizzes/` and add an entry to that class's `quizzes` list in `catalog.js`.
-- **New flashcard deck:** copy `classes/apush-williams/flashcards/terms/` to a new folder and replace `terms-data.js`. It's a single `window.DECK = { id, title, cards: [{ n, term, def }] }` object, and the `id` is the key used to save each deck's settings. Then add it to the class's `flashcards` list.
+- **New flashcard deck:** copy `classes/apush-williams/flashcards/terms/` to a new folder and replace the data file. It's a single `window.DECK = { id, title, cards: [{ n, term, def, tag? }] }` object (`tag` is an optional label shown on the card, like a chapter), and the `id` is the key used to save each deck's settings. Then add it to the class's `flashcards` list.
 - **New class:** copy `classes/apush-williams/` (keep the `data-class` value on the `<body>` in sync with the `id` in `catalog.js`) and add the class to `catalog.js`.
 
 ## Layout
@@ -49,6 +49,7 @@ classes/apush-williams/
   index.html                     class page
   quizzes/                       Enduring Vision Quiz, Early Republic Quiz
   flashcards/terms/              Terms quiz flashcards (+ terms-data.js)
+  flashcards/enduring-vision/    Enduring Vision flashcards (+ deck-data.js)
 ```
 
 The terms were imported from the Quizlet export "DHS Mr. Williams APUSH terms (in order)". A few obvious typos were corrected (for example "Millitary" → "Military" and "Pendelton" → "Pendleton"), and the terms that Quizlet split across page breaks were put back together.
