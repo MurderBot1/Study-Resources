@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231f4f7a%27/%3E%3Cpath d=%27M9 9h14v3H9zM9 14.5h14v3H9zM9 20h9v3H9z%27 fill=%27white%27/%3E%3C/svg%3E">
+<title>Early Republic Quiz · APUSH – Williams</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+.sr-nav{max-width:780px;margin:0 auto;padding:12px 16px 0;font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+.sr-nav a{color:inherit;opacity:.72;text-decoration:none}
+.sr-nav a:hover,.sr-nav a:focus-visible{opacity:1;text-decoration:underline}
+</style>
+</head>
+<body>
+<nav class="sr-nav" aria-label="Breadcrumb"><a href="../">← APUSH – Williams</a> &nbsp;/&nbsp; <a href="../../../">All classes</a></nav>
+<style>
+/* Layout: single centered study column; setup card -> one question at a time -> results with missed-question review */
+:root{
+  --bg:#eef1f4; --surface:#ffffff; --fg:#17212b; --muted:#5a6775; --line:#d3dae1;
+  --accent:#1f4f7a; --accent-fg:#ffffff; --accent-soft:#e1ebf5;
+  --good:#1d7a4a; --good-soft:#e0f2e8; --bad:#b3372c; --bad-soft:#f9e3e0;
+  --display:"Newsreader",Georgia,serif; --body:"Public Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10161d; --surface:#18212b; --fg:#e8edf2; --muted:#9aa8b6; --line:#2c3947;
+  --accent:#7db3e3; --accent-fg:#0d1a27; --accent-soft:#1e2f42;
+  --good:#5fcf94; --good-soft:#163527; --bad:#f08a7e; --bad-soft:#3b1d1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10161d; --surface:#18212b; --fg:#e8edf2; --muted:#9aa8b6; --line:#2c3947;
+  --accent:#7db3e3; --accent-fg:#0d1a27; --accent-soft:#1e2f42;
+  --good:#5fcf94; --good-soft:#163527; --bad:#f08a7e; --bad-soft:#3b1d1a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);padding-inline:16px;padding-block:28px 48px}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1,h2{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(1.9rem,6vw,2.5rem)}
+h2{font-size:1.45rem}
+.sub{color:var(--muted);margin:6px 0 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:16px}
+.label{font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.topics{display:flex;flex-direction:column;gap:8px}
+.topic{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:12px 14px;cursor:pointer}
+.topic:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.topic input{margin-top:5px;accent-color:var(--accent);width:18px;height:18px}
+.topic b{display:block;font-weight:600}
+.topic span{color:var(--muted);font-size:.9rem}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.opt{display:flex;gap:8px;align-items:center;font-size:.95rem}
+.opt input{accent-color:var(--accent)}
+.opt input[type=number]{width:72px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);font:inherit}
+button{font:inherit;cursor:pointer}
+.btn{background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);transition:width .25s}
+.meta{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.qtext{font-family:var(--display);font-size:1.3rem;line-height:1.35;margin:0}
+.choices{display:flex;flex-direction:column;gap:10px}
+.choice{display:flex;gap:12px;text-align:left;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;align-items:flex-start;min-width:0}
+.choice:hover:not(:disabled){border-color:var(--accent)}
+.choice .k{flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:.8rem;font-weight:600;color:var(--muted)}
+.choice span.t{min-width:0;overflow-wrap:anywhere}
+.choice.good{background:var(--good-soft);border-color:var(--good)}
+.choice.bad{background:var(--bad-soft);border-color:var(--bad)}
+.choice.good .k{background:var(--good);color:var(--surface);border-color:var(--good)}
+.choice.bad .k{background:var(--bad);color:var(--surface);border-color:var(--bad)}
+.choice:disabled{cursor:default}
+.fb{border-left:4px solid var(--accent);padding:4px 0 4px 14px}
+.fb.good{border-color:var(--good)} .fb.bad{border-color:var(--bad)}
+.fb b{display:block}
+.fb p{margin:4px 0 0;color:var(--muted)}
+.score{font-family:var(--display);font-size:3.2rem;line-height:1;font-variant-numeric:tabular-nums}
+.break{display:flex;flex-direction:column;gap:8px}
+.break div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.miss{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:4px}
+.miss p{margin:0}
+.miss .you{color:var(--bad)} .miss .ans{color:var(--good)} .miss .why{color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+<main id="app"></main>
+<script>
+const Q = [
+// ---------- CONSTITUTION (C) ----------
+["C","When a woman asked Benjamin Franklin what kind of government the Convention had created, what did he reply?",["A monarchy, if the people allow it","A republic, if you can keep it","A democracy, if the states agree","A confederation, until it fails"],1,"Recorded in James McHenry’s journal on the last day of the Convention."],
+["C","T or F: The Constitution of the United States creates a pure democracy.",["True","False"],1,"It creates a republic: citizens elect representatives rather than voting directly on laws."],
+["C","In Federalist #10, which is NOT an advantage Madison saw in a republic over a democracy?",["Republics can cover a larger geographic area","Republics use elected representatives","Differences of opinion are more spread out in a republic","Factions do not occur in a republic"],3,"Madison argued factions can’t be eliminated, only controlled. A large republic dilutes their power."],
+["C","Who wrote Federalist #10?",["Alexander Hamilton","James Madison","John Jay","Thomas Jefferson"],1,"Madison, writing as ‘Publius’ with Hamilton and Jay."],
+["C","Whom did Alexander Hamilton assume would be the first President?",["Himself","Thomas Jefferson","Benjamin Franklin","George Washington"],3,"Washington’s presence at the Convention made ratification easier."],
+["C","Which group did Hamilton expect to resist the Constitution in order to protect their own power?",["Merchants and commercial interests","Owners of property","Creditors and bankers","Officeholders in the state governments"],3,"Hamilton expected merchants, creditors and property owners to support it, and state officials to oppose it."],
+["C","George Mason, a Southerner, objected that Congress could make commercial treaties and navigation laws by what?",["A unanimous vote","A simple majority","A presidential veto only","A vote of the state legislatures"],1,"Southern minority states feared the North could pass commercial laws by simple majority, foreshadowing later North–South battles."],
+["C","Which was the most prominent Anti-Federalist complaint about the new Constitution?",["It created no executive branch","It had no Bill of Rights","It gave states too much power","It abolished trial by jury in every case"],1,"Many Anti-Federalists refused to support ratification without a bill of rights."],
+["C","Which fear is most associated with the common person during the ratification debate?",["That Congress would never meet","That elites would rule over the ‘poor illiterate people’","That states would gain too much power","That the Articles would be restored"],1,"Anti-Federalists feared a distant government run by aristocrats."],
+["C","Which was an Anti-Federalist response to Federalist arguments?",["Supporters were playing to fears of anarchy","Shays’ Rebellion proved the Articles must be replaced at once","State constitutions should be abolished","A strong central government would protect liberty"],0,"Anti-Federalists called Federalists demagogues and argued there was time to fix problems with smaller changes."],
+["C","Federalists pointed to what event as proof that the Articles of Confederation were too weak?",["Whiskey Rebellion","Shays’ Rebellion","Boston Massacre","Burr Conspiracy"],1,"Shays’ Rebellion (1786–87) in Massachusetts. Jefferson felt too much was made of it."],
+["C","Which Article of the Constitution defines the legislative branch?",["Article I","Article II","Article III","Article IV"],0,"Article I: Congress."],
+["C","Which Article defines the executive branch?",["Article I","Article II","Article III","Article V"],1,"Article II: the President."],
+["C","Which Article defines the judicial branch?",["Article I","Article II","Article III","Article VI"],2,"Article III: the Supreme Court and inferior courts."],
+["C","The Preamble is found in which Article?",["Article I","Article II","Article VII","None. It comes before the Articles"],3,"The Preamble (‘We the People…’) introduces the Constitution and is not an Article."],
+["C","Where is Congress’s power to coin money found?",["Article I, Section 9","Article IV, Section 1","The Preamble","Article I, Section 8"],3,"Article I, Section 8 lists the enumerated powers, including coining money."],
+["C","Where in the original Constitution is the right to habeas corpus listed?",["Bill of Rights","Article I, Section 9","Article II, Section 2","Article IV, Section 1"],1,"Article I, Section 9 protects against unlawful imprisonment."],
+["C","The idea of habeas corpus can be traced back to what document?",["Magna Carta","Mayflower Compact","English Bill of Rights only","Declaration of Independence"],0,"Magna Carta (1215) guarantees against false imprisonment."],
+["C","Why was no Bill of Rights originally included?",["Delegates opposed individual rights","Delegates thought they could never list all rights and that Article I, Section 9 was enough","The Articles of Confederation already had one","Congress was to write it later"],1,"Many delegates felt listing rights could imply others weren’t protected."],
+["C","Which Bill of Rights protection does NOT trace back to Magna Carta?",["Right to a speedy trial","No excessive bail or fines","Right to bear arms","Eminent domain protections"],2,"The Second Amendment’s right to bear arms is not a Magna Carta right."],
+["C","Which is NOT stated in Article III?",["The judicial branch is created","The Supreme Court is created","The courts’ original vs. appellate jurisdiction","Judicial review is granted to the courts"],3,"Judicial review is not in Article III. It was established by Marbury v. Madison (1803)."],
+["C","What does Article IV, Section 1 (Full Faith and Credit) require?",["States to honor each other’s public acts, records and court decisions","States to share taxes","Congress to approve all state laws","States to extradite no one"],0,"It underlies recognition of driver’s licenses and marriages. Obergefell v. Hodges (2015) is a related controversy."],
+["C","All of the following relate to state–state or state–national relations in Article IV EXCEPT:",["Citizens of each state get privileges and immunities in other states","Criminals who flee must be returned (extradition)","The U.S. guarantees each state protection","Recognition of the supremacy of state laws"],3,"Supremacy belongs to national law (Article VI). Article IV also allows new states to be created."],
+["C","Which is NOT part of the amendment process in Article V?",["The President must sign the proposed amendment","Two-thirds of Congress must agree to propose it","Three-fourths of the states must ratify it","All of the above are in Article V"],0,"The President has no role in amending the Constitution."],
+["C","What fraction of states must ratify an amendment?",["One-half","Two-thirds","Three-fourths","Unanimity"],2,"Three-fourths of state legislatures or special conventions."],
+["C","What fraction of Congress is needed to propose an amendment?",["Simple majority","Two-thirds of both houses","Three-fifths","Three-fourths"],1,"Article V."],
+["C","Which proposed amendment passed Congress but was never ratified by the states?",["Changing the name of the country","School prayer","Abolishing the electoral college","The Equal Rights Amendment (ERA)"],3,"The ERA, child labor and DC voting representation passed Congress but fell short in the states."],
+["C","Amendments 1–4 primarily protect:",["Rights of the accused","Personal rights","State powers","Voting rights"],1,"Speech/religion, arms, quartering, searches."],
+["C","Amendments 5–8 primarily protect:",["Rights of the accused","Personal freedoms of religion","Rights of states","Property rights of the states"],0,"Due process, trial rights, bail and punishment."],
+["C","Which amendment bans the housing of soldiers in private homes without consent?",["2nd","3rd","4th","5th"],1,"The Quartering Amendment."],
+["C","Which amendment protects against illegal searches and seizures?",["3rd","4th","5th","6th"],1,"4th Amendment."],
+["C","Double jeopardy and self-incrimination are covered by which amendment?",["4th","5th","6th","8th"],1,"5th Amendment."],
+["C","The right to a speedy trial, jury trial and an attorney comes from which amendment?",["5th","6th","7th","8th"],1,"6th Amendment."],
+["C","The 8th Amendment prohibits:",["Quartering of soldiers","Excessive bail, fines and cruel and unusual punishment","Illegal searches","Self-incrimination"],1,"8th Amendment."],
+["C","The right to a jury trial in civil cases over $20 comes from which amendment?",["6th","7th","8th","9th"],1,"7th Amendment."],
+["C","In the ‘Bong Hits 4 Jesus’ case, which part of the First Amendment is most at issue?",["Freedom of the press","Freedom of religion","Freedom of speech","Right to petition"],2,"Morse v. Frederick (2007), arising from a 2002 Olympic torch event in Juneau, Alaska."],
+["C","In that case, the Supreme Court held that the school’s suspension was:",["Unconstitutional","Constitutional","Void because of the 4th Amendment","Not reviewable"],1,"The Court sided with the school, 5–4."],
+["C","Which provision supports an unenumerated right to privacy, as in Griswold v. Connecticut (birth control)?",["The 9th Amendment, among others","The 6th Amendment","The 7th Amendment","The 8th Amendment"],0,"Griswold (1965) relied on a ‘zone of privacy’ drawn from several amendments, including the 9th."],
+["C","Which amendment says rights not listed in the Constitution may still be retained by the people?",["8th","9th","10th","11th"],1,"The 9th protects unenumerated rights."],
+["C","Which amendment reserves powers not given to the national government to the states or people?",["8th","9th","10th","14th"],2,"The 10th, cited by South Carolina to justify secession."],
+["C","Which part of the Bill of Rights did South Carolina use to justify secession?",["10th Amendment","4th Amendment","2nd Amendment","1st Amendment"],0,"States’ rights argument. Texas v. White (1869) later held secession unconstitutional."],
+["C","Which Supreme Court case ruled secession was not constitutional?",["Texas v. White (1869)","Marbury v. Madison","McCulloch v. Maryland","Gibbons v. Ogden"],0,"The Court called the Union indestructible."],
+["C","The first words of the Preamble are:",["In Congress Assembled","We the People","All men are created equal","Whereas the colonies"],1,"‘We the People of the United States…’"],
+["C","What are the Federalist Papers?",["Essays arguing for ratification of the Constitution","A list of Anti-Federalist demands","Minutes of the Constitutional Convention","Early laws of Congress"],0,"Written by Hamilton, Madison and Jay as ‘Publius’."],
+// ---------- EARLY REPUBLIC (E) ----------
+["E","Which of Washington’s successes is listed as setting the tone for later Presidents?",["Precedents set","Winning a third term","Ending political parties","Abolishing the national debt"],0,"E.g., cabinet, two-term tradition, title ‘Mr. President’."],
+["E","Which is NOT one of Hamilton’s three reports?",["Report on Public Credit","Report on the National Bank","Report on Manufactures","Report on Western Lands"],3,"Hamilton wrote on public credit, the bank, and manufactures."],
+["E","Who favored loose construction of the Constitution?",["Jefferson","Hamilton","Patrick Henry","George Mason"],1,"Hamilton: the Constitution is a living document interpreted to meet changing needs."],
+["E","Who favored strict construction?",["Jefferson","Hamilton","John Adams","John Jay"],0,"Jefferson: apply the text precisely and nothing more."],
+["E","Who would agree that ‘the national debt should always exist as a way of uniting the economic interests of the country’?",["Jefferson","Hamilton"],1,"Hamilton wanted creditors tied to the national government."],
+["E","Who would agree that ‘a national bank is a constitutional use of Congressional power’?",["Jefferson","Hamilton"],1,"Hamilton argued implied powers via the Necessary and Proper Clause."],
+["E","Who would agree that ‘taxes hurt the liberty of all Americans’?",["Jefferson","Hamilton"],0,"Jefferson distrusted taxation and a powerful central government."],
+["E","Who said ‘a little rebellion now and then is a good thing’?",["Jefferson","Hamilton"],0,"Jefferson, reflecting on Shays’ Rebellion."],
+["E","What was the total debt after the Revolution?",["$19 million","$79 million","$179 million","$400 million"],1,"Roughly $25M state, $42M national (domestic), $12M foreign."],
+["E","Which part of the Revolutionary debt was owed to foreign nations?",["$12 million","$25 million","$42 million","$79 million"],0,"Foreign debt was $12M. Domestic was $42M and state debt was $25M."],
+["E","Hamilton proposed to refinance the debt by lowering interest from:",["8% to 6%","6% to 4%","10% to 5%","4% to 2%"],1,"Bondholders who kept their bonds received interest, tying them to the government."],
+["E","Which revenue was used to fund the interest on the debt?",["An income tax","The Whiskey Excise and land sales","Tariffs on tea","A federal property tax"],1,"The excise tax on whiskey, with land sales."],
+["E","The Compromise of 1790 (Residence Act) resulted in:",["The capital placed on the Potomac in exchange for Southern support of Hamilton’s debt plan","The creation of the Bank of the U.S.","Jay’s Treaty","A ban on slave importation"],0,"Jefferson, Madison and Hamilton’s ‘room where it happens’ dinner deal."],
+["E","Who designed the plan for Washington, D.C.?",["Pierre L’Enfant","Benjamin Banneker","Thomas Jefferson","Charles Bulfinch"],0,"Banneker assisted with surveying."],
+["E","The Whiskey Excise was regressive because it:",["Taxed the poor at a higher rate than the rich","Taxed only the rich","Was repealed immediately","Was paid only by merchants"],0,"Small western farmers distilled grain into whiskey, so it hit them hardest."],
+["E","Where did the Whiskey Rebellion occur?",["Western Pennsylvania","Virginia tidewater","Massachusetts","New York harbor"],0,"A flag represented six counties in rebellion."],
+["E","Washington’s response to the Whiskey Rebellion demonstrated:",["The new government’s ability to enforce federal law","The weakness of the presidency","The need to repeal all taxes","His disapproval of the Constitution"],0,"He led militia to put down the rebellion in 1794."],
+["E","Explicit (enumerated) powers differ from implied powers because explicit powers are:",["Listed directly in the Constitution","Inferred from the Necessary and Proper Clause","Reserved to the states","Granted by state law"],0,"Implied powers are inferred, as in Hamilton’s bank argument."],
+["E","Which Hamilton report asked for tariffs to promote a diverse economy?",["Report on Manufactures","Report on Public Credit","Report on the Bank","Report on Foreign Trade"],0,"It was not adopted. Jefferson and Madison opposed it."],
+["E","Jefferson feared that large cities would:",["Create corruption as in Europe","Improve the economy of the South","Increase immigration","Strengthen farmers"],0,"He believed in an agrarian republic."],
+["E","How did Jefferson and Hamilton view the French Revolution?",["Jefferson supported it; Hamilton was wary","Hamilton supported it; Jefferson opposed it","Both opposed it","Both supported it"],0,"Hamilton feared its effect on trade."],
+["E","Washington issued the Proclamation of Neutrality in 1793 following:",["Citizen Genet Affair","XYZ Affair","Burr conspiracy","Jay’s Treaty"],0,"The U.S. would not take sides in the Franco-British conflict."],
+["E","What was the Farewell Address’s approach to foreign policy?",["Avoid permanent entanglements","Ally with France","Annex Canada","Build a large navy immediately"],0,"Issued 1796, a few months before the presidential election."],
+["E","Pinckney’s Treaty (1795) was with which nation and granted what?",["Spain; access to the Mississippi and New Orleans","Britain; forts evacuated","France; ended alliance","Spain; sold Florida"],0,"It benefited western farmers and the Federalists."],
+["E","Jay’s Treaty (1794) was with which country?",["Great Britain","France","Spain","Russia"],0,"It was unpopular with many Americans but averted war."],
+["E","In the 1792 election, Washington was:",["Re-elected unanimously","Defeated by Jefferson","Re-elected narrowly","Not on the ballot"],0,"Yet Democratic-Republicans gained seats in Congress."],
+["E","Which party gained more seats in the 1794 midterms?",["Federalists","Democratic-Republicans"],1,"Whiskey Excise and neutrality concerns helped them (+5 for D-R, –4 for Federalists)."],
+["E","The 1796 election was between:",["Adams and Jefferson","Hamilton and Burr","Jefferson and Madison","Adams and Pinckney only"],0,"Adams won. Jefferson, as runner-up, became Vice President."],
+["E","What event helped the Federalists in 1798 by sparking anti-French feeling?",["XYZ Affair","Whiskey Rebellion","Embargo of 1807","Louisiana Purchase"],0,"French agents demanded bribes from American diplomats."],
+["E","The undeclared naval conflict with France (1798–1800) is called the:",["Quasi-War","Tripolitan War","Seminole War","Pig War"],0,"It strengthened the Federalists until their domestic policies backfired."],
+["E","The Alien and Sedition Acts of 1798:",["Restricted criticism of the government and targeted immigrants","Created the Bank","Ended impressment","Banned the slave trade"],0,"They were widely seen as a threat to civil liberties."],
+["E","The Kentucky and Virginia Resolutions argued that:",["States could judge the constitutionality of federal laws","Congress could not tax","The President had no veto","The Supreme Court could nullify state laws"],0,"Written by Jefferson and Madison in protest of the Alien and Sedition Acts."],
+["E","Fries’s Rebellion was a protest against:",["Federal taxes to support a military buildup","The Whiskey Excise","The Embargo","Impressment"],0,"A property tax (the ‘house tax’) in Pennsylvania in 1799."],
+["E","The ‘Revolution of 1800’ is called a revolution because:",["Power peacefully shifted from one party to another","Jefferson used the army","The Constitution was rewritten","It ended the two-party system"],0,"Jefferson called it a peaceful revolution."],
+["E","Who convinced Federalists not to vote for Burr in the House during the 1800 election tie?",["Hamilton","Adams","Madison","Marshall"],0,"Hamilton distrusted Burr more than Jefferson."],
+["E","Jefferson’s inaugural address is most famous for which line?",["‘We are all Federalists, we are all Republicans.’","‘Give me liberty or give me death.’","‘The only thing we have to fear…’","‘Don’t tread on me.’"],0,"A call for national unity after a bitter campaign."],
+["E","Jefferson wrote ‘What is practical must often control what is pure theory’ to Lafayette in 1817. When was that?",["After his presidency","Before his presidency","During his first term","During the Revolution"],0,"Jefferson was out of office by 1809."],
+["E","Before becoming President, which best describes Jefferson’s political beliefs?",["Strict construction of the Constitution","A belief in a small, unobtrusive federal government","A willingness to engage in partisan politics","All of the above"],3,"Jefferson held all three views before 1801."],
+["E","The Judiciary Act of 1801 created:",["The ‘Midnight Judges’","The Supreme Court","The federal income tax","The Bank of the United States"],0,"Adams appointed Federalist judges at the end of his term."],
+["E","Who became Chief Justice in the Midnight Judges crisis?",["John Marshall","John Jay","Roger Taney","Oliver Ellsworth"],0,"Marshall was Adams’s Secretary of State and then Chief Justice."],
+["E","William Marbury asked the Supreme Court for what remedy?",["Writ of mandamus","Writ of habeas corpus","Writ of certiorari","Writ of assistance"],0,"To force Secretary of State Madison to deliver his commission."],
+["E","In Marbury v. Madison, the Court held that:",["Section 13 of the Judiciary Act of 1789 was unconstitutional","Marbury must get his commission","The bank was constitutional","The President could not appoint judges"],0,"This established the principle of judicial review."],
+["E","Marbury v. Madison established:",["Judicial review","Executive privilege","Implied powers","Dual federalism"],0,"The Court can strike down laws that conflict with the Constitution."],
+["E","The Judiciary Act of 1802:",["Repealed the 1801 act and eliminated Marbury’s job","Created the Supreme Court","Expanded the Midnight Judges","Created the Electoral College"],0,"Marbury’s last hope was the Court’s decision."],
+["E","Which event was part of Jefferson’s first term?",["Louisiana Purchase","Embargo of 1807","War of 1812","Adams-Onís Treaty"],0,"1803, along with the Lewis and Clark Expedition and the Tripolitan War."],
+["E","The Tripolitan War is also known as the:",["Barbary War","Seminole War","Quasi-War","Pontiac’s War"],0,"Fought against North African pirate states."],
+["E","The Yazoo claims led to the rise of which faction?",["Quids","Barnburners","Whigs","Know-Nothings"],0,"Quids were dissenting Democratic-Republicans, such as John Randolph."],
+["E","The Embargo of 1807 was meant to:",["Pressure Britain and France to respect American neutrality","Increase tariffs","End slavery","Punish smugglers in Canada"],0,"It ended up devastating American trade and was widely unpopular."],
+["E","In the anti-Jefferson cartoon, ‘Ograbme’ stands for:",["Embargo spelled backwards","A French diplomat","A British ship’s name","The Supreme Court"],0,"It is also an anagram of ‘Mob Rage’."],
+["E","Which Jefferson action contradicted his belief in a government that does not meddle?",["Embargo of 1807","Louisiana Purchase","Barbary War","Midnight Judges"],0,"The Embargo interfered heavily with citizens’ trade."],
+["E","Which event best shows Jefferson putting practicality above pure theory?",["Louisiana Purchase","Embargo of 1807","Eliminating the Whiskey Tax","Marbury v. Madison"],0,"A strict constructionist, he bought the territory despite no explicit authority."],
+["E","Macon’s Bill No. 2 stated that:",["Trade reopened with both nations, but the embargo would be reactivated against the one that didn’t rescind its restrictions","Trade closed with all nations","Trade reopened only with Britain","The U.S. would declare war on France"],0,"It followed the Non-Intercourse Act."],
+["E","The Non-Intercourse Act:",["Stopped trade only with Britain and France","Ended all trade","Declared war on Britain","Opened trade with Britain only"],0,"It replaced the Embargo of 1807."],
+["E","Which is NOT a cause of the War of 1812?",["British seizure of ships and impressment of sailors","British forts in the Northwest and arming of Native Americans","War Hawks defending American honor","Annexation of Texas"],3,"Texas was a later issue."],
+["E","Which leader tried to unite Native American tribes against American expansion before the War of 1812?",["Tecumseh","Osceola","Sequoyah","Black Hawk"],0,"The British were seen as arming them."],
+["E","The War Hawks included:",["Henry Clay and John C. Calhoun","Daniel Webster and Rufus King","Jefferson and Madison","Hamilton and Burr"],0,"Young western and southern congressmen demanding war."],
+["E","Which group opposed the War of 1812 because of trade issues?",["New England Federalists","Western farmers","War Hawks","Southern Democrats"],0,"By then the Federalists were a largely sectional party."],
+// ---------- NATIONALISM (N) ----------
+["N","Which was NOT a factor in the growth of nationalism during and after the War of 1812?",["Andrew Jackson","The Battle of New Orleans","Oliver Hazard Perry","Victory over the British in Washington, D.C."],3,"The British burned Washington. Perry won on Lake Erie."],
+["N","The War of 1812 is called the ‘Second War of Independence’ partly because it:",["Increased national pride and self-sufficiency","Ended Native American resistance in Canada","Made the U.S. a European ally","Ended slavery in the North"],0,"The war and the Embargo helped spur early industrialization."],
+["N","Which treaty ended the War of 1812?",["Treaty of Ghent","Treaty of Paris","Treaty of Versailles","Jay’s Treaty"],0,"Signed in December 1814, before the Battle of New Orleans."],
+["N","Which was NOT part of Henry Clay’s American System?",["Tariffs","A national bank","Internal improvements","Renewed taxation to pay for the war"],3,"The three pillars were tariff, bank and internal improvements."],
+["N","What did the Tariff of 1816 do?",["Protected American manufacturers from foreign competition","Abolished tariffs","Taxed exports","Favored the South"],0,"It was the first protective tariff in peacetime."],
+["N","Why was a transportation revolution necessary?",["It would facilitate westward migration","Roads were expensive and supported only horse-drawn wagons","Most rivers flowed north–south, making it hard to get crops to market","All of the above"],3,"All three were obstacles to a national market economy."],
+["N","Which was NOT an example of the early transportation revolution (1800–1830)?",["The Clermont","Turnpikes","The Erie Canal","The transcontinental railroad"],3,"The transcontinental railroad was completed in 1869."],
+["N","Robert Fulton’s Clermont was:",["A steamboat","A canal boat","A railroad locomotive","A frigate"],0,"It made upstream travel practical."],
+["N","The Erie Canal connected:",["The Hudson River and Lake Erie","The Ohio River and the Mississippi","Boston and Chicago","New York and Baltimore"],0,"It opened in 1825 and boosted New York City."],
+["N","Calhoun’s Bonus Bill of 1817 proposed:",["Federal funds for internal improvements","Tax cuts for farmers","A new national bank charter","A tariff reduction"],0,"Madison vetoed it on constitutional grounds."],
+["N","Which was NOT a reason for westward migration in the early 1800s?",["Federalist laws that made migration attractive to small farmers","Banks making land loans","Growing demand for agricultural products","Preemption rights for squatters"],0,"The Federalists had faded by then."],
+["N","Federal land policy during the Era of Good Feelings:",["Lowered both minimum acreage and price per acre","Raised both minimum acreage and price per acre","Reduced nationalism by dispersing people","Slowed the economy"],0,"E.g., 320 acres at $2 (1800) to 80 acres at $1.25 (1820)."],
+["N","In 1820, the minimum federal land purchase was:",["80 acres at $1.25/acre","160 acres at $1.64/acre","320 acres at $2/acre","640 acres at $5/acre"],0,"Federal land policy became increasingly accessible."],
+["N","What happened to the Federalist Party after 1816?",["It effectively disappeared as a national force","It won the White House","It merged with the Whigs immediately","It formed the Know-Nothings"],0,"Hence the ‘Era of Good Feelings’ under Monroe."],
+["N","Which foreign-policy success demilitarized the Great Lakes?",["Rush-Bagot Treaty","Convention of 1818","Adams-Onís Treaty","Monroe Doctrine"],0,"A naval disarmament agreement with Britain."],
+["N","The Convention of 1818 established:",["The 49th parallel boundary and joint occupation of Oregon","Louisiana’s boundaries","Florida’s cession","The end of impressment"],0,"It settled much of the northern boundary with Canada."],
+["N","The Adams-Onís Treaty (1819) with Spain:",["Transferred Florida to the U.S.","Created Oregon","Ended the War of 1812","Settled the Maine border"],0,"It also defined the western boundary of the Louisiana claim."],
+["N","The Monroe Doctrine (1823) warned:",["European powers against further colonization in the Americas","The U.S. to stay out of Europe forever","Spain to leave Florida","Britain to leave Canada"],0,"It also pledged U.S. non-interference in European affairs."],
+["N","Sectionalism is best defined as:",["Undue concern with local interests at the expense of general well-being","Identification with one’s own nation","Separation of religion and politics","Partisan bias"],0,"Nationalism is loyalty to the nation, secularism is separation of religion and state."],
+["N","Which did NOT cause sectionalism in the Era of Good Feelings?",["Federal land policy","Tariffs","The Second Bank of the United States","All of the above caused sectionalism"],3,"Land policy, industrialism, cities, internal improvements, tariffs and the Bank all affected regions differently."],
+["N","Which did NOT help spur early American industrialism?",["Embargo of 1807","Tariff of 1816","War of 1812","The California Gold Rush"],3,"The Gold Rush was 1848–49. The Embargo, the war and the 1816 tariff all encouraged domestic manufacturing."],
+["N","New York City grew from 124,000 in 1820 to roughly how many by 1860?",["800,000","300,000","1.5 million","50,000"],0,"Urban growth stemmed from industry, transport and immigration."],
+["N","Which was a cause of the growth of cities?",["Industrialism, transportation revolution, and immigration","Only agriculture","Decline of trade","The Embargo only"],0,"Cities fueled a market economy of industrial goods."],
+["N","Which was NOT part of the Missouri Compromise?",["Slaves in Missouri freed at age 25","Maine admitted as a free state","Missouri admitted as a slave state","Slavery banned north of 36°30' in the Louisiana Purchase"],0,"Freeing at 25 was part of the Tallmadge Amendment."],
+["N","Under the Missouri Compromise, slavery was prohibited in the Louisiana Purchase north of:",["36°30'","49°","40°","38°"],0,"Except in Missouri."],
+["N","The main issue for the South in the Missouri Compromise was:",["Keeping the balance of slave and free states in the Senate","Gaining land for the House","Having slavery declared legal","Ending the tariff"],0,"Equal representation in the Senate protected slavery."],
+["N","The Tallmadge Amendment proposed:",["Banning further importation of slaves into Missouri and freeing children born there at 25","Making Missouri free immediately","Ending the slave trade nationwide","Making Maine a slave state"],0,"It passed the House 82–78 but failed in the Senate."],
+["N","One Northern argument for the Tallmadge Amendment was that:",["It would allow poorer classes to move West and own land","It would end all slavery","It would increase Northern power in the Senate","It would lower tariffs"],0,"Free labor would not compete with enslaved labor."],
+["N","Southerners defending slavery did NOT argue that:",["The South could easily handle the economic loss of slavery","The Bible doesn’t forbid slavery","Congress has no authority over it","Agitation could lead to civil war"],0,"They argued slavery was economically essential."],
+["N","The Panic of 1819 was caused in part by:",["A drop in agricultural prices, land speculation and the Bank calling in loans","The Civil War","The Embargo","The Mexican War"],0,"It made Southerners and Westerners suspicious of banks and the Bank of the U.S."],
+["N","After the Panic of 1819, support for tariffs and internal improvements in the South:",["Evaporated","Doubled","Remained the same","Became a Whig program"],0,"The Panic widened sectional divides."],
+["N","McCulloch v. Maryland (1819) held that:",["The national bank was constitutional and states can’t tax it","States can nullify federal laws","Congress can’t regulate commerce","The bank was unconstitutional"],0,"Marshall affirmed implied powers and national supremacy."],
+["N","Gibbons v. Ogden (1824) strengthened federal power over:",["Interstate commerce","State taxes","Contracts","Slavery"],0,"A steamboat monopoly case."],
+["N","Dartmouth College v. Woodward (1819) protected:",["Contracts, including corporate charters, from state interference","The national bank","Free speech on campuses","State sovereignty"],0,"It invoked the Contract Clause."],
+["N","How many candidates ran in the 1824 election, and with what party label?",["Five candidates, all Democratic-Republicans","Two parties","Three parties","Federalists only"],0,"Jackson, Adams, Clay, Crawford and (initially) Calhoun."],
+["N","Who decided the Election of 1824, and why?",["The House of Representatives, because no one had a majority of electoral votes","The Senate","The Supreme Court","The voters in a runoff"],0,"John Quincy Adams won in the House."],
+["N","The ‘Corrupt Bargain’ charge claimed that:",["Clay supported Adams in exchange for Secretary of State","Jackson bribed electors","Crawford sold his votes","Calhoun traded his vote for the vice presidency"],0,"Most believed it despite no evidence. It haunted both men."],
+["N","Who won the most popular and electoral votes in 1824 but lost in the House?",["Andrew Jackson","Henry Clay","William Crawford","John C. Calhoun"],0,"He campaigned bitterly for 1828."],
+["N","Which proposal in J.Q. Adams’s first message to Congress reflected nationalist programs?",["Creating a national university","Strict construction","Abolishing the electoral college","Slavery compromises"],0,"He also proposed a naval observatory and exploration."],
+["N","Which line from Adams’s message was considered divisive?",["That the government should not be ‘palsied by the will of our constituents’","His call for tariff reduction","His call to end slavery","His call to abolish internal improvements"],0,"It sounded elitist."],
+["N","Ralph Waldo Emerson’s ‘The American Scholar’ (1837) echoed which earlier sentiment?",["J.Q. Adams’s call for distinctly American intellectual endeavors","Jefferson’s agrarianism","Hamilton’s report on manufactures","Jackson’s bank veto"],0,"A call for cultural independence from Europe."],
+["N","Which was NOT part of Jacksonian ‘Democratic Nationalism’?",["Congressional caucus nominations","Ending property requirements for voting","State nominating conventions","Secret ballots"],0,"The caucus was replaced by conventions."],
+["N","Who organized the Albany Regency and helped build the Democratic Party?",["Martin Van Buren","Henry Clay","John C. Calhoun","Daniel Webster"],0,"A New York political machine emphasizing party discipline."],
+["N","The crowd at Jackson’s 1829 inaugural party led Justice Story to say:",["‘The reign of King Mob seemed triumphant.’","‘We are all Federalists.’","‘The era of good feelings.’","‘A republic if you can keep it.’"],0,"Jackson was seen as ‘the People’s President.’"],
+["N","The Indian Removal Act (1830) authorized:",["Relocation of Native Americans west of the Mississippi","Citizenship for Cherokees","Federal protection for tribal lands","Forts along the Ohio"],0,"It led to the Trail of Tears."],
+["N","The Tariff of 1828 was nicknamed:",["Tariff of Abominations","Compromise Tariff","Walker Tariff","Morrill Tariff"],0,"Southerners hated its high duties."],
+["N","Why did Southerners generally dislike tariffs?",["They raised the cost of manufactured goods","They could reduce British demand for Southern cotton","They seemed to benefit mainly the North","All of the above"],3,"Southerners felt they paid for Northern prosperity."],
+["N","Calhoun’s ‘South Carolina Exposition and Protest’ argued for:",["Nullification of federal tariffs","Secession","A new bank","Abolition of tariffs by Congress"],0,"Written anonymously in 1828, public in 1831."],
+["N","The Webster-Hayne Debate (1830) was NOT about:",["The national bank","Federal land policy","The tariff","The theory of nullification"],0,"Its core issue was states’ rights vs. national union."],
+["N","Which term is NOT related to the Webster-Hayne debate?",["Embargo of 1807","Tariff of Abominations","American System","Kentucky and Virginia Resolutions"],0,"The Embargo isn’t tied to the nullification debate."],
+["N","At the 1830 Jefferson Day dinner, Jackson toasted:",["‘Our federal Union, it must be preserved.’","‘Liberty and union forever.’","‘Nullification forever.’","‘Down with the bank.’"],0,"Calhoun replied with a toast to ‘the Union, next to our liberty, the most dear.’"],
+["N","The Peggy Eaton affair damaged Jackson’s relationship with:",["John C. Calhoun","Martin Van Buren","Henry Clay","Daniel Webster"],0,"It helped Van Buren replace Calhoun as heir apparent."],
+["N","South Carolina’s Ordinance of Nullification (1832) targeted:",["The tariffs of 1828 and 1832","The Bank","The Indian Removal Act","The Force Bill"],0,"They declared them null and void in the state."],
+["N","How was the Nullification Crisis resolved?",["Compromise Tariff of 1833 plus the Force Bill","Secession of South Carolina","Repeal of the Constitution","War"],0,"Henry Clay’s compromise, with Jackson’s Force Bill as the ‘sword’."],
+["N","Why did conflict over the Bank of the U.S. begin in 1832?",["Distrust of the bank dating back to the Panic of 1819","Henry Clay wanted to make it a campaign issue","Jackson believed it was too powerful over the states","All of the above"],3,"All three played a role."],
+["N","Who led the Second Bank of the United States?",["Nicholas Biddle","Roger Taney","Albert Gallatin","Martin Van Buren"],0,"Biddle compared Jackson’s veto message to a ‘chained panther’."],
+["N","How did Jackson initially attack the Bank in 1832?",["He vetoed its re-charter","He withdrew all funds immediately","He challenged board members to duels","He asked the Court to dissolve it"],0,"Congress failed to override the veto."],
+["N","In his bank veto, Jackson did NOT say that:",["The Supreme Court was right in McCulloch v. Maryland","The Bank is neither necessary nor proper","The Bank benefits the rich and powerful","The President’s job is to protect the high and low"],0,"He asserted that the President may judge constitutionality independently."],
+["N","Jackson’s removal of federal deposits led to money being placed in:",["State ‘pet banks’","Foreign banks","The U.S. Treasury vault","The Bank of England"],0,"The Deposit Act (1836) formalized this."],
+["N","Which was NOT part of the war on the Bank?",["Jackson authorized the printing of paper money to stress Bank reserves","Biddle called in loans","Jackson placed deposits in state banks","Jackson withdrew federal funds"],0,"Jackson favored hard money."],
+["N","The Deposit Act of 1836:",["Spread federal surplus funds across state banks, increasing speculation","Re-chartered the bank","Created the Treasury","Banned paper money"],0,"Banks lent the money freely."],
+["N","The Specie Circular (1837) required:",["Gold or silver for purchases of federal land","Paper money for federal land","Payment in tobacco","A ban on state banks"],0,"It triggered a run on specie and helped cause the Panic of 1837."],
+["N","The Panic of 1837 was caused by all of these EXCEPT:",["Success of the Second Bank of the United States","The Specie Circular","Speculation","European withdrawal of specie"],0,"The Bank had been destroyed."],
+["N","Which was NOT a reason for the rise of the Whig Party?",["The Democrats’ support of the American System","Opposition to Jackson’s strong executive power","The Anti-Mason movement","Support for education and temperance"],0,"Democrats opposed the American System, and Whigs embraced it."],
+["N","Whigs charged Jackson with:",["Wielding presidential power like a king","Weakening the military","Supporting the Bank","Opposing states’ rights"],0,"They called him ‘King Andrew I’."],
+["N","The Independent Treasury Act (Van Buren) created:",["Sub-treasuries to hold government money separate from banks","A new national bank","State-owned banks","A paper currency"],0,"Supporters said it would keep government out of the hands of speculators."],
+["N","What was the most significant cause of Van Buren’s defeat in 1840?",["The Panic of 1837","Anti-Mason sentiment","A duel","Texas annexation"],0,"William Henry Harrison won."],
+["N","Which election year ended the Federalist presidency?",["1800","1796","1808","1792"],0,"Jefferson (D-R) won; Adams was the last Federalist President."],
+["N","Who was President during the Era of Good Feelings (1817–1825)?",["James Monroe","James Madison","John Quincy Adams","Andrew Jackson"],0,"Elected in 1816 and 1820."],
+["N","Which election was Monroe’s first win?",["1816","1812","1820","1824"],0,"A Democratic-Republican."],
+];
+
+const TOPICS={C:["The Constitution","Ratification, the Articles, the Bill of Rights"],E:["The Early Republic, 1789–1824","Washington, Hamilton v. Jefferson, Adams, Jefferson, Madison"],N:["Growth of American Nationalism","Era of Good Feelings, Missouri, Jackson, the Bank War"]};
+const app=document.getElementById('app');
+let S={};
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function prep(q){ // keep order for "all/none of the above" style sets
+  const [t,text,opts,ans,why]=q; const idx=opts.map((_,i)=>i);
+  const keep=opts.some(o=>/of the above|^all of|^none of|caused sectionalism|^both/i.test(o));
+  const order=keep?idx:shuffle(idx);
+  return {t,text,why,opts:order.map(i=>opts[i]),ans:order.indexOf(ans)};
+}
+function setup(){
+  const counts={C:0,E:0,N:0};Q.forEach(q=>counts[q[0]]++);
+  app.innerHTML=`
+  <header><div class="label">Study quiz</div><h1>Early Republic to the Age of Jackson</h1>
+  <p class="sub">${Q.length} questions from your three slide decks. Pick topics and start.</p></header>
+  <section class="card">
+    <div class="label">Topics</div>
+    <div class="topics">${Object.keys(TOPICS).map(k=>`<label class="topic"><input type="checkbox" name="t" value="${k}" checked><div><b>${TOPICS[k][0]} <small style="font-weight:400;color:var(--muted)">· ${counts[k]} questions</small></b><span>${TOPICS[k][1]}</span></div></label>`).join('')}</div>
+    <div class="row">
+      <label class="opt"><input type="checkbox" id="shuf" checked> Shuffle order</label>
+      <label class="opt">Questions <input type="number" id="num" min="1" max="${Q.length}" value="${Q.length}"></label>
+    </div>
+    <button class="btn" id="go">Start quiz</button>
+  </section>`;
+  const num=document.getElementById('num');
+  const upd=()=>{const sel=[...document.querySelectorAll('input[name=t]:checked')].map(i=>i.value);const n=Q.filter(q=>sel.includes(q[0])).length;num.max=n;if(+num.value>n||!num.value)num.value=n;document.getElementById('go').disabled=!n};
+  document.querySelectorAll('input[name=t]').forEach(i=>i.onchange=upd);
+  document.getElementById('go').onclick=()=>{
+    const sel=[...document.querySelectorAll('input[name=t]:checked')].map(i=>i.value);
+    let pool=Q.filter(q=>sel.includes(q[0]));
+    if(document.getElementById('shuf').checked)pool=shuffle(pool);
+    pool=pool.slice(0,Math.max(1,Math.min(+num.value||pool.length,pool.length)));
+    start(pool);
+  };
+}
+function start(pool){S={qs:pool.map(prep),i:0,right:0,log:[],done:false};show()}
+function show(){
+  const q=S.qs[S.i],n=S.qs.length;
+  app.innerHTML=`
+  <div><div class="meta"><span>${esc(TOPICS[q.t][0])}</span><span>Question ${S.i+1} of ${n} · ${S.right} correct</span></div>
+  <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${S.i}"><i style="width:${S.i/n*100}%"></i></div></div>
+  <section class="card">
+    <p class="qtext">${esc(q.text)}</p>
+    <div class="choices">${q.opts.map((o,i)=>`<button class="choice" data-i="${i}"><span class="k">${'ABCDEF'[i]}</span><span class="t">${esc(o)}</span></button>`).join('')}</div>
+    <div id="fb"></div>
+  </section>
+  <div class="row"><button class="btn ghost" id="quit">End quiz</button><span></span></div>`;
+  document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>answer(+b.dataset.i));
+  document.getElementById('quit').onclick=results;
+}
+function answer(i){
+  const q=S.qs[S.i],ok=i===q.ans;
+  if(ok)S.right++;
+  S.log.push({q,pick:i,ok});
+  document.querySelectorAll('.choice').forEach((b,j)=>{b.disabled=true;if(j===q.ans)b.classList.add('good');else if(j===i)b.classList.add('bad')});
+  const last=S.i===S.qs.length-1;
+  document.getElementById('fb').innerHTML=`<div class="fb ${ok?'good':'bad'}"><b>${ok?'Correct':'Not quite'}</b><p>${esc(q.why)}</p></div>
+  <div style="margin-top:16px"><button class="btn" id="next">${last?'See results':'Next question'}</button></div>`;
+  const nx=document.getElementById('next');nx.focus();
+  nx.onclick=()=>{if(last)results();else{S.i++;show();window.scrollTo(0,0)}};
+}
+function results(){
+  const n=S.log.length,pct=n?Math.round(S.right/n*100):0;
+  const by={};S.log.forEach(l=>{const b=by[l.q.t]||(by[l.q.t]={r:0,n:0});b.n++;if(l.ok)b.r++});
+  const miss=S.log.filter(l=>!l.ok);
+  app.innerHTML=`
+  <header><div class="label">Results</div><h2>${pct>=90?'Excellent work':pct>=70?'Solid showing':'Keep studying'}</h2></header>
+  <section class="card">
+    <div class="score">${S.right}/${n} <span style="font-size:1.4rem;color:var(--muted)">${pct}%</span></div>
+    <div class="break">${Object.keys(by).map(k=>`<div><span>${esc(TOPICS[k][0])}</span><span>${by[k].r}/${by[k].n}</span></div>`).join('')}</div>
+    <div class="row" style="justify-content:flex-start">
+      ${miss.length?`<button class="btn" id="retry">Retry ${miss.length} missed</button>`:''}
+      <button class="btn ghost" id="again">New quiz</button>
+    </div>
+  </section>
+  ${miss.length?`<section class="card"><div class="label">Review missed questions</div>${miss.map(l=>`<div class="miss"><p><b>${esc(l.q.text)}</b></p><p class="you">You: ${esc(l.q.opts[l.pick])}</p><p class="ans">Answer: ${esc(l.q.opts[l.q.ans])}</p><p class="why">${esc(l.q.why)}</p></div>`).join('')}</section>`:''}`;
+  window.scrollTo(0,0);
+  const r=document.getElementById('retry');
+  if(r)r.onclick=()=>start(shuffle(miss.map(l=>{const q=l.q;return [q.t,q.text,q.opts,q.ans,q.why]})));
+  document.getElementById('again').onclick=setup;
+}
+setup();
+</script>
+</body>
+</html>
