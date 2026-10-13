@@ -26,13 +26,18 @@
     ]);
   }
 
-  function section(title, items, hrefPrefix) {
+  function hrefFor(cls, it) {
+    // quizzes are YAML files rendered by the shared quiz.html; everything else links by `href`
+    return it.quiz ? root + "quiz.html?class=" + encodeURIComponent(cls.id) + "&quiz=" + encodeURIComponent(it.quiz) : it.href;
+  }
+
+  function section(title, items, cls) {
     var grid = h("div", { "class": "grid" });
     if (!items.length) {
       grid.appendChild(h("p", { "class": "empty", text: "Nothing here yet." }));
     }
     items.forEach(function (it) {
-      grid.appendChild(tile(hrefPrefix + it.href, it.title, it.description, it.meta));
+      grid.appendChild(tile(hrefFor(cls, it), it.title, it.description, it.meta));
     });
     return h("section", { "class": "section" }, [
       h("h2", {}, [document.createTextNode(title), h("small", { text: String(items.length) })]),
@@ -55,8 +60,8 @@
     if (!cls) {
       mount.appendChild(h("p", { "class": "empty", text: "Class not found." }));
     } else {
-      mount.appendChild(section("Quizzes", cls.quizzes, ""));
-      mount.appendChild(section("Flashcards", cls.flashcards, ""));
+      mount.appendChild(section("Quizzes", cls.quizzes, cls));
+      mount.appendChild(section("Flashcards", cls.flashcards, cls));
     }
   }
 })();

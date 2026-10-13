@@ -1,0 +1,1731 @@
+# Early Republic Quiz
+#
+# Quiz format (see the README, "Adding a quiz"):
+#   topics:      groups of questions the student can pick from
+#   questions:   keyed by question number; each has
+#     topic:        one of the keys under `topics`
+#     question:     the question text
+#     A, B, C, D:   the answer choices (2 to 6 choices are fine: A, B, C, ...)
+#     answer:       the letter of the correct choice
+#     hint:         a nudge shown when the student taps "Show hint"
+#     explanation:  (optional) shown after answering
+#     shuffle:      (optional) set to false to keep the choices in this order
+
+title: Early Republic Quiz
+description: The Constitution, the Early Republic, and the Age of Jackson, from three slide decks.
+topics:
+  constitution:
+    title: The Constitution
+    description: Ratification, the Articles, the Bill of Rights
+  early-republic:
+    title: "The Early Republic, 1789–1824"
+    description: Washington, Hamilton v. Jefferson, Adams, Jefferson, Madison
+  nationalism:
+    title: Growth of American Nationalism
+    description: Era of Good Feelings, Missouri, Jackson, the Bank War
+questions:
+  1:
+    topic: constitution
+    question: When a woman asked Benjamin Franklin what kind of government the Convention had created, what did he reply?
+    A: A monarchy, if the people allow it
+    B: A republic, if you can keep it
+    C: A democracy, if the states agree
+    D: A confederation, until it fails
+    answer: B
+    hint: "Franklin's answer was a short, famous warning: it's about a form of government and whether citizens can hold on to it."
+    explanation: "Recorded in James McHenry’s journal on the last day of the Convention."
+  2:
+    topic: constitution
+    question: "T or F: The Constitution of the United States creates a pure democracy."
+    A: "True"
+    B: "False"
+    answer: B
+    hint: Think about whether citizens vote directly on laws or elect people to do it for them.
+    explanation: "It creates a republic: citizens elect representatives rather than voting directly on laws."
+  3:
+    topic: constitution
+    question: "In Federalist #10, which is NOT an advantage Madison saw in a republic over a democracy?"
+    A: Republics can cover a larger geographic area
+    B: Republics use elected representatives
+    C: Differences of opinion are more spread out in a republic
+    D: Factions do not occur in a republic
+    answer: D
+    hint: "Three options are real benefits of a large republic. The odd one out claims something Madison said can never be true: that a problem disappears."
+    explanation: "Madison argued factions can’t be eliminated, only controlled. A large republic dilutes their power."
+  4:
+    topic: constitution
+    question: "Who wrote Federalist #10?"
+    A: Alexander Hamilton
+    B: James Madison
+    C: John Jay
+    D: Thomas Jefferson
+    answer: B
+    hint: "He's often called the 'Father of the Constitution,' and the essay argues that a large republic can control factions."
+    explanation: "Madison, writing as ‘Publius’ with Hamilton and Jay."
+  5:
+    topic: constitution
+    question: Whom did Alexander Hamilton assume would be the first President?
+    A: Himself
+    B: Thomas Jefferson
+    C: Benjamin Franklin
+    D: George Washington
+    answer: D
+    hint: Think of the Revolutionary War commander who presided over the Constitutional Convention.
+    explanation: "Washington’s presence at the Convention made ratification easier."
+  6:
+    topic: constitution
+    question: Which group did Hamilton expect to resist the Constitution in order to protect their own power?
+    A: Merchants and commercial interests
+    B: Owners of property
+    C: Creditors and bankers
+    D: Officeholders in the state governments
+    answer: D
+    hint: Hamilton expected the groups who benefited from a stronger national government to support it, so look for people who would lose power.
+    explanation: Hamilton expected merchants, creditors and property owners to support it, and state officials to oppose it.
+  7:
+    topic: constitution
+    question: George Mason, a Southerner, objected that Congress could make commercial treaties and navigation laws by what?
+    A: A unanimous vote
+    B: A simple majority
+    C: A presidential veto only
+    D: A vote of the state legislatures
+    answer: B
+    hint: Southern delegates worried about being outvoted. Think about the lowest threshold in a vote.
+    explanation: "Southern minority states feared the North could pass commercial laws by simple majority, foreshadowing later North–South battles."
+  8:
+    topic: constitution
+    question: Which was the most prominent Anti-Federalist complaint about the new Constitution?
+    A: It created no executive branch
+    B: It had no Bill of Rights
+    C: It gave states too much power
+    D: It abolished trial by jury in every case
+    answer: B
+    hint: "It's what led to the first ten amendments, and many Anti-Federalists refused to support ratification without it."
+    explanation: Many Anti-Federalists refused to support ratification without a bill of rights.
+  9:
+    topic: constitution
+    question: Which fear is most associated with the common person during the ratification debate?
+    A: That Congress would never meet
+    B: "That elites would rule over the ‘poor illiterate people’"
+    C: That states would gain too much power
+    D: That the Articles would be restored
+    answer: B
+    hint: Anti-Federalists feared a distant government run by the wealthy and well-educated, not by ordinary people.
+    explanation: Anti-Federalists feared a distant government run by aristocrats.
+  10:
+    topic: constitution
+    question: Which was an Anti-Federalist response to Federalist arguments?
+    A: Supporters were playing to fears of anarchy
+    B: "Shays’ Rebellion proved the Articles must be replaced at once"
+    C: State constitutions should be abolished
+    D: A strong central government would protect liberty
+    answer: A
+    hint: Anti-Federalists accused Federalists of exaggerating threats to scare people into supporting the Constitution.
+    explanation: Anti-Federalists called Federalists demagogues and argued there was time to fix problems with smaller changes.
+  11:
+    topic: constitution
+    question: Federalists pointed to what event as proof that the Articles of Confederation were too weak?
+    A: Whiskey Rebellion
+    B: "Shays’ Rebellion"
+    C: Boston Massacre
+    D: Burr Conspiracy
+    answer: B
+    hint: In 1786-87, Massachusetts farmers rebelled over debt and taxes, and it convinced many that the Articles were too weak.
+    explanation: "Shays’ Rebellion (1786–87) in Massachusetts. Jefferson felt too much was made of it."
+  12:
+    topic: constitution
+    question: Which Article of the Constitution defines the legislative branch?
+    A: Article I
+    B: Article II
+    C: Article III
+    D: Article IV
+    answer: A
+    hint: The Constitution lists the branches in order, and Congress comes first.
+    explanation: "Article I: Congress."
+  13:
+    topic: constitution
+    question: Which Article defines the executive branch?
+    A: Article I
+    B: Article II
+    C: Article III
+    D: Article V
+    answer: B
+    hint: "The Constitution lists the branches in order: legislative, then executive."
+    explanation: "Article II: the President."
+  14:
+    topic: constitution
+    question: Which Article defines the judicial branch?
+    A: Article I
+    B: Article II
+    C: Article III
+    D: Article VI
+    answer: C
+    hint: "Legislative, executive, judicial: count to the third branch."
+    explanation: "Article III: the Supreme Court and inferior courts."
+  15:
+    topic: constitution
+    question: The Preamble is found in which Article?
+    A: Article I
+    B: Article II
+    C: Article VII
+    D: None. It comes before the Articles
+    answer: D
+    hint: "The Preamble starts 'We the People.' Ask whether it belongs to one of the numbered Articles."
+    explanation: "The Preamble (‘We the People…’) introduces the Constitution and is not an Article."
+  16:
+    topic: constitution
+    question: "Where is Congress’s power to coin money found?"
+    A: Article I, Section 9
+    B: Article IV, Section 1
+    C: The Preamble
+    D: Article I, Section 8
+    answer: D
+    hint: "Congress's list of enumerated powers is in the Article for Congress, in Section 8, and it includes taxing and borrowing."
+    explanation: Article I, Section 8 lists the enumerated powers, including coining money.
+  17:
+    topic: constitution
+    question: Where in the original Constitution is the right to habeas corpus listed?
+    A: Bill of Rights
+    B: Article I, Section 9
+    C: Article II, Section 2
+    D: Article IV, Section 1
+    answer: B
+    hint: "It's in the Article about Congress, in the section that lists things Congress may NOT do."
+    explanation: Article I, Section 9 protects against unlawful imprisonment.
+  18:
+    topic: constitution
+    question: The idea of habeas corpus can be traced back to what document?
+    A: Magna Carta
+    B: Mayflower Compact
+    C: English Bill of Rights only
+    D: Declaration of Independence
+    answer: A
+    hint: "It's an old English charter from 1215 that limited the king's power."
+    explanation: Magna Carta (1215) guarantees against false imprisonment.
+  19:
+    topic: constitution
+    question: Why was no Bill of Rights originally included?
+    A: Delegates opposed individual rights
+    B: Delegates thought they could never list all rights and that Article I, Section 9 was enough
+    C: The Articles of Confederation already had one
+    D: Congress was to write it later
+    answer: B
+    hint: "Some delegates feared that listing certain rights would imply that unlisted rights weren't protected."
+    explanation: "Many delegates felt listing rights could imply others weren’t protected."
+  20:
+    topic: constitution
+    question: Which Bill of Rights protection does NOT trace back to Magna Carta?
+    A: Right to a speedy trial
+    B: No excessive bail or fines
+    C: Right to bear arms
+    D: Eminent domain protections
+    answer: C
+    hint: "Magna Carta (1215) was about the king's power over justice and property, not about weapons."
+    explanation: "The Second Amendment’s right to bear arms is not a Magna Carta right."
+  21:
+    topic: constitution
+    question: Which is NOT stated in Article III?
+    A: The judicial branch is created
+    B: The Supreme Court is created
+    C: "The courts’ original vs. appellate jurisdiction"
+    D: Judicial review is granted to the courts
+    answer: D
+    hint: "That power isn't spelled out in the text. It came from a famous Supreme Court case in 1803."
+    explanation: Judicial review is not in Article III. It was established by Marbury v. Madison (1803).
+  22:
+    topic: constitution
+    question: What does Article IV, Section 1 (Full Faith and Credit) require?
+    A: "States to honor each other’s public acts, records and court decisions"
+    B: States to share taxes
+    C: Congress to approve all state laws
+    D: States to extradite no one
+    answer: A
+    hint: "'Full faith and credit' means each state must respect the others' official records and court rulings."
+    explanation: "It underlies recognition of driver’s licenses and marriages. Obergefell v. Hodges (2015) is a related controversy."
+  23:
+    topic: constitution
+    question: "All of the following relate to state–state or state–national relations in Article IV EXCEPT:"
+    A: Citizens of each state get privileges and immunities in other states
+    B: Criminals who flee must be returned (extradition)
+    C: The U.S. guarantees each state protection
+    D: Recognition of the supremacy of state laws
+    answer: D
+    hint: Supremacy of national law is in Article VI, so look for the answer that flips it to favor state law.
+    explanation: Supremacy belongs to national law (Article VI). Article IV also allows new states to be created.
+  24:
+    topic: constitution
+    question: Which is NOT part of the amendment process in Article V?
+    A: The President must sign the proposed amendment
+    B: Two-thirds of Congress must agree to propose it
+    C: Three-fourths of the states must ratify it
+    D: All of the above are in Article V
+    answer: A
+    hint: Think about who has no role at all in amending the Constitution, even though they sign regular laws.
+    explanation: The President has no role in amending the Constitution.
+    shuffle: false
+  25:
+    topic: constitution
+    question: What fraction of states must ratify an amendment?
+    A: One-half
+    B: Two-thirds
+    C: Three-fourths
+    D: Unanimity
+    answer: C
+    hint: "It's more than a simple majority and more than two-thirds, but it's not everyone."
+    explanation: Three-fourths of state legislatures or special conventions.
+  26:
+    topic: constitution
+    question: What fraction of Congress is needed to propose an amendment?
+    A: Simple majority
+    B: Two-thirds of both houses
+    C: Three-fifths
+    D: Three-fourths
+    answer: B
+    hint: "To propose an amendment, Congress needs a supermajority that's less than ratification requires."
+    explanation: Article V.
+  27:
+    topic: constitution
+    question: Which proposed amendment passed Congress but was never ratified by the states?
+    A: Changing the name of the country
+    B: School prayer
+    C: Abolishing the electoral college
+    D: The Equal Rights Amendment (ERA)
+    answer: D
+    hint: "It was about equality between men and women, was passed by Congress in 1972, and fell short of the states' votes."
+    explanation: The ERA, child labor and DC voting representation passed Congress but fell short in the states.
+  28:
+    topic: constitution
+    question: "Amendments 1–4 primarily protect:"
+    A: Rights of the accused
+    B: Personal rights
+    C: State powers
+    D: Voting rights
+    answer: B
+    hint: The First through Fourth Amendments cover speech and religion, arms, quartering, and searches. Think everyday individual liberty.
+    explanation: Speech/religion, arms, quartering, searches.
+  29:
+    topic: constitution
+    question: "Amendments 5–8 primarily protect:"
+    A: Rights of the accused
+    B: Personal freedoms of religion
+    C: Rights of states
+    D: Property rights of the states
+    answer: A
+    hint: The Fifth through Eighth cover due process, trials, bail and punishment. These concern people charged with a crime.
+    explanation: Due process, trial rights, bail and punishment.
+  30:
+    topic: constitution
+    question: Which amendment bans the housing of soldiers in private homes without consent?
+    A: 2nd
+    B: 3rd
+    C: 4th
+    D: 5th
+    answer: B
+    hint: "Soldiers in your house: it's the amendment numbered between the right to bear arms and the one about searches."
+    explanation: The Quartering Amendment.
+  31:
+    topic: constitution
+    question: Which amendment protects against illegal searches and seizures?
+    A: 3rd
+    B: 4th
+    C: 5th
+    D: 6th
+    answer: B
+    hint: "Warrants, searches and seizures: it comes right after the Third."
+    explanation: 4th Amendment.
+  32:
+    topic: constitution
+    question: Double jeopardy and self-incrimination are covered by which amendment?
+    A: 4th
+    B: 5th
+    C: 6th
+    D: 8th
+    answer: B
+    hint: "'Pleading the Fifth' and double jeopardy are both here."
+    explanation: 5th Amendment.
+  33:
+    topic: constitution
+    question: The right to a speedy trial, jury trial and an attorney comes from which amendment?
+    A: 5th
+    B: 6th
+    C: 7th
+    D: 8th
+    answer: B
+    hint: "Speedy trial, impartial jury, and the right to a lawyer: it follows the Fifth."
+    explanation: 6th Amendment.
+  34:
+    topic: constitution
+    question: "The 8th Amendment prohibits:"
+    A: Quartering of soldiers
+    B: Excessive bail, fines and cruel and unusual punishment
+    C: Illegal searches
+    D: Self-incrimination
+    answer: B
+    hint: "'Cruel and unusual punishment' is the last of the rights-of-the-accused amendments (5-8)."
+    explanation: 8th Amendment.
+  35:
+    topic: constitution
+    question: The right to a jury trial in civil cases over $20 comes from which amendment?
+    A: 6th
+    B: 7th
+    C: 8th
+    D: 9th
+    answer: B
+    hint: "Civil cases and juries: it follows the Sixth and comes before the amendment about bail."
+    explanation: 7th Amendment.
+  36:
+    topic: constitution
+    question: "In the ‘Bong Hits 4 Jesus’ case, which part of the First Amendment is most at issue?"
+    A: Freedom of the press
+    B: Freedom of religion
+    C: Freedom of speech
+    D: Right to petition
+    answer: C
+    hint: "The student held a banner at a school-supervised event. Ask which of the First Amendment's freedoms was involved."
+    explanation: Morse v. Frederick (2007), arising from a 2002 Olympic torch event in Juneau, Alaska.
+  37:
+    topic: constitution
+    question: "In that case, the Supreme Court held that the school’s suspension was:"
+    A: Unconstitutional
+    B: Constitutional
+    C: Void because of the 4th Amendment
+    D: Not reviewable
+    answer: B
+    hint: Think about whether the Court sided with the student or the school. Student speech rights at school are more limited than elsewhere.
+    explanation: "The Court sided with the school, 5–4."
+  38:
+    topic: constitution
+    question: Which provision supports an unenumerated right to privacy, as in Griswold v. Connecticut (birth control)?
+    A: The 9th Amendment, among others
+    B: The 6th Amendment
+    C: The 7th Amendment
+    D: The 8th Amendment
+    answer: A
+    hint: "The right to privacy isn't named in the text. It was drawn from several amendments, including one about rights 'retained by the people.'"
+    explanation: "Griswold (1965) relied on a ‘zone of privacy’ drawn from several amendments, including the 9th."
+  39:
+    topic: constitution
+    question: Which amendment says rights not listed in the Constitution may still be retained by the people?
+    A: 8th
+    B: 9th
+    C: 10th
+    D: 11th
+    answer: B
+    hint: "Think about the amendment that says listing certain rights doesn't mean the people have no others."
+    explanation: The 9th protects unenumerated rights.
+  40:
+    topic: constitution
+    question: Which amendment reserves powers not given to the national government to the states or people?
+    A: 8th
+    B: 9th
+    C: 10th
+    D: 14th
+    answer: C
+    hint: "Powers not given to the national government are 'reserved to the States.' It's the last of the Bill of Rights."
+    explanation: The 10th, cited by South Carolina to justify secession.
+  41:
+    topic: constitution
+    question: Which part of the Bill of Rights did South Carolina use to justify secession?
+    A: 10th Amendment
+    B: 4th Amendment
+    C: 2nd Amendment
+    D: 1st Amendment
+    answer: A
+    hint: "South Carolina's argument was about states' rights. The amendment that reserves powers to the states is the one."
+    explanation: "States’ rights argument. Texas v. White (1869) later held secession unconstitutional."
+  42:
+    topic: constitution
+    question: Which Supreme Court case ruled secession was not constitutional?
+    A: Texas v. White (1869)
+    B: Marbury v. Madison
+    C: McCulloch v. Maryland
+    D: Gibbons v. Ogden
+    answer: A
+    hint: A Reconstruction-era case from 1869 that called the Union indestructible.
+    explanation: The Court called the Union indestructible.
+  43:
+    topic: constitution
+    question: "The first words of the Preamble are:"
+    A: In Congress Assembled
+    B: We the People
+    C: All men are created equal
+    D: Whereas the colonies
+    answer: B
+    hint: It begins with three words about who the Constitution is by and for.
+    explanation: "‘We the People of the United States…’"
+  44:
+    topic: constitution
+    question: What are the Federalist Papers?
+    A: Essays arguing for ratification of the Constitution
+    B: A list of Anti-Federalist demands
+    C: Minutes of the Constitutional Convention
+    D: Early laws of Congress
+    answer: A
+    hint: "They were newspaper essays signed 'Publius,' written to persuade New Yorkers to ratify."
+    explanation: "Written by Hamilton, Madison and Jay as ‘Publius’."
+  45:
+    topic: early-republic
+    question: "Which of Washington’s successes is listed as setting the tone for later Presidents?"
+    A: Precedents set
+    B: Winning a third term
+    C: Ending political parties
+    D: Abolishing the national debt
+    answer: A
+    hint: Because Washington was first, many of his actions became examples for later Presidents. They set what?
+    explanation: "E.g., cabinet, two-term tradition, title ‘Mr. President’."
+  46:
+    topic: early-republic
+    question: "Which is NOT one of Hamilton’s three reports?"
+    A: Report on Public Credit
+    B: Report on the National Bank
+    C: Report on Manufactures
+    D: Report on Western Lands
+    answer: D
+    hint: "Hamilton wrote three reports: one about debt, one about a bank, and one about making goods. Which choice is not about those?"
+    explanation: Hamilton wrote on public credit, the bank, and manufactures.
+  47:
+    topic: early-republic
+    question: Who favored loose construction of the Constitution?
+    A: Jefferson
+    B: Hamilton
+    C: Patrick Henry
+    D: George Mason
+    answer: B
+    hint: "'Loose' means reading the Constitution broadly. Which of the two Cabinet rivals wanted a stronger national government?"
+    explanation: "Hamilton: the Constitution is a living document interpreted to meet changing needs."
+  48:
+    topic: early-republic
+    question: Who favored strict construction?
+    A: Jefferson
+    B: Hamilton
+    C: John Adams
+    D: John Jay
+    answer: A
+    hint: "'Strict' means sticking to the text only. This Virginian opposed the national bank for that reason."
+    explanation: "Jefferson: apply the text precisely and nothing more."
+  49:
+    topic: early-republic
+    question: "Who would agree that ‘the national debt should always exist as a way of uniting the economic interests of the country’?"
+    A: Jefferson
+    B: Hamilton
+    answer: B
+    hint: Which of the two Cabinet rivals wanted creditors tied to the national government?
+    explanation: Hamilton wanted creditors tied to the national government.
+  50:
+    topic: early-republic
+    question: "Who would agree that ‘a national bank is a constitutional use of Congressional power’?"
+    A: Jefferson
+    B: Hamilton
+    answer: B
+    hint: Which of the two argued the Necessary and Proper Clause allows implied powers like a bank?
+    explanation: Hamilton argued implied powers via the Necessary and Proper Clause.
+  51:
+    topic: early-republic
+    question: "Who would agree that ‘taxes hurt the liberty of all Americans’?"
+    A: Jefferson
+    B: Hamilton
+    answer: A
+    hint: Which of the two feared a powerful central government and distrusted taxes?
+    explanation: Jefferson distrusted taxation and a powerful central government.
+  52:
+    topic: early-republic
+    question: "Who said ‘a little rebellion now and then is a good thing’?"
+    A: Jefferson
+    B: Hamilton
+    answer: A
+    hint: "This line was written about Shays' Rebellion. Which of the two favored limited government?"
+    explanation: "Jefferson, reflecting on Shays’ Rebellion."
+  53:
+    topic: early-republic
+    question: What was the total debt after the Revolution?
+    A: $19 million
+    B: $79 million
+    C: $179 million
+    D: $400 million
+    answer: B
+    hint: "Add up the three parts: what the states owed, what the national government owed at home, and what it owed abroad."
+    explanation: Roughly $25M state, $42M national (domestic), $12M foreign.
+  54:
+    topic: early-republic
+    question: Which part of the Revolutionary debt was owed to foreign nations?
+    A: $12 million
+    B: $25 million
+    C: $42 million
+    D: $79 million
+    answer: A
+    hint: "Foreign debt was the smallest share: much less than the domestic debt."
+    explanation: Foreign debt was $12M. Domestic was $42M and state debt was $25M.
+  55:
+    topic: early-republic
+    question: "Hamilton proposed to refinance the debt by lowering interest from:"
+    A: 8% to 6%
+    B: 6% to 4%
+    C: 10% to 5%
+    D: 4% to 2%
+    answer: B
+    hint: Hamilton wanted lower interest, to make the debt cheaper, but still enough to reward bondholders.
+    explanation: Bondholders who kept their bonds received interest, tying them to the government.
+  56:
+    topic: early-republic
+    question: Which revenue was used to fund the interest on the debt?
+    A: An income tax
+    B: The Whiskey Excise and land sales
+    C: Tariffs on tea
+    D: A federal property tax
+    answer: B
+    hint: It was a tax on a drink made by western farmers, along with money from selling western land.
+    explanation: The excise tax on whiskey, with land sales.
+  57:
+    topic: early-republic
+    question: "The Compromise of 1790 (Residence Act) resulted in:"
+    A: "The capital placed on the Potomac in exchange for Southern support of Hamilton’s debt plan"
+    B: The creation of the Bank of the U.S.
+    C: "Jay’s Treaty"
+    D: A ban on slave importation
+    answer: A
+    hint: "Jefferson and Madison traded their support for Hamilton's debt plan for where the capital would sit."
+    explanation: "Jefferson, Madison and Hamilton’s ‘room where it happens’ dinner deal."
+  58:
+    topic: early-republic
+    question: Who designed the plan for Washington, D.C.?
+    A: "Pierre L’Enfant"
+    B: Benjamin Banneker
+    C: Thomas Jefferson
+    D: Charles Bulfinch
+    answer: A
+    hint: He was a French-born engineer who drew the city plan in the 1790s, and Banneker helped survey.
+    explanation: Banneker assisted with surveying.
+  59:
+    topic: early-republic
+    question: "The Whiskey Excise was regressive because it:"
+    A: Taxed the poor at a higher rate than the rich
+    B: Taxed only the rich
+    C: Was repealed immediately
+    D: Was paid only by merchants
+    answer: A
+    hint: "'Regressive' means it takes a bigger share from the poor. Who made whiskey from their surplus grain?"
+    explanation: Small western farmers distilled grain into whiskey, so it hit them hardest.
+  60:
+    topic: early-republic
+    question: Where did the Whiskey Rebellion occur?
+    A: Western Pennsylvania
+    B: Virginia tidewater
+    C: Massachusetts
+    D: New York harbor
+    answer: A
+    hint: "It's in the frontier area west of the Appalachian Mountains, where farmers turned grain into whiskey."
+    explanation: A flag represented six counties in rebellion.
+  61:
+    topic: early-republic
+    question: "Washington’s response to the Whiskey Rebellion demonstrated:"
+    A: "The new government’s ability to enforce federal law"
+    B: The weakness of the presidency
+    C: The need to repeal all taxes
+    D: His disapproval of the Constitution
+    answer: A
+    hint: Washington sent militia to put the rebellion down in 1794. What did it show about the new government?
+    explanation: He led militia to put down the rebellion in 1794.
+  62:
+    topic: early-republic
+    question: "Explicit (enumerated) powers differ from implied powers because explicit powers are:"
+    A: Listed directly in the Constitution
+    B: Inferred from the Necessary and Proper Clause
+    C: Reserved to the states
+    D: Granted by state law
+    answer: A
+    hint: "'Explicit' means spelled out directly. Implied powers are inferred from the Constitution."
+    explanation: "Implied powers are inferred, as in Hamilton’s bank argument."
+  63:
+    topic: early-republic
+    question: Which Hamilton report asked for tariffs to promote a diverse economy?
+    A: Report on Manufactures
+    B: Report on Public Credit
+    C: Report on the Bank
+    D: Report on Foreign Trade
+    answer: A
+    hint: "Hamilton's third report urged tariffs to build up American industry, and it wasn't adopted."
+    explanation: It was not adopted. Jefferson and Madison opposed it.
+  64:
+    topic: early-republic
+    question: "Jefferson feared that large cities would:"
+    A: Create corruption as in Europe
+    B: Improve the economy of the South
+    C: Increase immigration
+    D: Strengthen farmers
+    answer: A
+    hint: "He believed in an agrarian republic of small farmers and distrusted what he saw in Europe's big cities."
+    explanation: He believed in an agrarian republic.
+  65:
+    topic: early-republic
+    question: How did Jefferson and Hamilton view the French Revolution?
+    A: Jefferson supported it; Hamilton was wary
+    B: Hamilton supported it; Jefferson opposed it
+    C: Both opposed it
+    D: Both supported it
+    answer: A
+    hint: Hamilton valued trade with Britain, while Jefferson admired the French republic. Who supported the Revolution?
+    explanation: Hamilton feared its effect on trade.
+    shuffle: false
+  66:
+    topic: early-republic
+    question: "Washington issued the Proclamation of Neutrality in 1793 following:"
+    A: Citizen Genet Affair
+    B: XYZ Affair
+    C: Burr conspiracy
+    D: "Jay’s Treaty"
+    answer: A
+    hint: "Washington declared neutrality in 1793, after a French diplomat tried to recruit Americans for France's cause."
+    explanation: The U.S. would not take sides in the Franco-British conflict.
+  67:
+    topic: early-republic
+    question: "What was the Farewell Address’s approach to foreign policy?"
+    A: Avoid permanent entanglements
+    B: Ally with France
+    C: Annex Canada
+    D: Build a large navy immediately
+    answer: A
+    hint: Washington warned against permanent alliances with other nations. Which choice is about avoiding ties?
+    explanation: Issued 1796, a few months before the presidential election.
+  68:
+    topic: early-republic
+    question: "Pinckney’s Treaty (1795) was with which nation and granted what?"
+    A: Spain; access to the Mississippi and New Orleans
+    B: Britain; forts evacuated
+    C: France; ended alliance
+    D: Spain; sold Florida
+    answer: A
+    hint: It was signed with Spain, in 1795, and it opened a river and a port that Western farmers needed.
+    explanation: It benefited western farmers and the Federalists.
+  69:
+    topic: early-republic
+    question: "Jay’s Treaty (1794) was with which country?"
+    A: Great Britain
+    B: France
+    C: Spain
+    D: Russia
+    answer: A
+    hint: John Jay negotiated it with Britain in 1794. It was unpopular but averted war.
+    explanation: It was unpopular with many Americans but averted war.
+  70:
+    topic: early-republic
+    question: "In the 1792 election, Washington was:"
+    A: Re-elected unanimously
+    B: Defeated by Jefferson
+    C: Re-elected narrowly
+    D: Not on the ballot
+    answer: A
+    hint: Washington was beloved, and no one opposed him. But the Democratic-Republicans gained seats that year.
+    explanation: Yet Democratic-Republicans gained seats in Congress.
+  71:
+    topic: early-republic
+    question: Which party gained more seats in the 1794 midterms?
+    A: Federalists
+    B: Democratic-Republicans
+    answer: B
+    hint: Neutrality and the whiskey tax angered many voters. Which party benefited in 1794?
+    explanation: "Whiskey Excise and neutrality concerns helped them (+5 for D-R, –4 for Federalists)."
+  72:
+    topic: early-republic
+    question: "The 1796 election was between:"
+    A: Adams and Jefferson
+    B: Hamilton and Burr
+    C: Jefferson and Madison
+    D: Adams and Pinckney only
+    answer: A
+    hint: Washington declined a third term. The election was between his Vice President and the Secretary of State.
+    explanation: Adams won. Jefferson, as runner-up, became Vice President.
+  73:
+    topic: early-republic
+    question: What event helped the Federalists in 1798 by sparking anti-French feeling?
+    A: XYZ Affair
+    B: Whiskey Rebellion
+    C: Embargo of 1807
+    D: Louisiana Purchase
+    answer: A
+    hint: French agents demanded a bribe from American diplomats and the public turned angry at France.
+    explanation: French agents demanded bribes from American diplomats.
+  74:
+    topic: early-republic
+    question: "The undeclared naval conflict with France (1798–1800) is called the:"
+    A: Quasi-War
+    B: Tripolitan War
+    C: Seminole War
+    D: Pig War
+    answer: A
+    hint: "'Quasi' means 'seemingly.' This undeclared naval conflict with France lasted from 1798 to 1800."
+    explanation: It strengthened the Federalists until their domestic policies backfired.
+  75:
+    topic: early-republic
+    question: "The Alien and Sedition Acts of 1798:"
+    A: Restricted criticism of the government and targeted immigrants
+    B: Created the Bank
+    C: Ended impressment
+    D: Banned the slave trade
+    answer: A
+    hint: These laws restricted immigrants and made it a crime to criticize the government, and Republicans opposed them.
+    explanation: They were widely seen as a threat to civil liberties.
+  76:
+    topic: early-republic
+    question: "The Kentucky and Virginia Resolutions argued that:"
+    A: States could judge the constitutionality of federal laws
+    B: Congress could not tax
+    C: The President had no veto
+    D: The Supreme Court could nullify state laws
+    answer: A
+    hint: Jefferson and Madison wrote these. The idea is about which level of government decides what is constitutional.
+    explanation: Written by Jefferson and Madison in protest of the Alien and Sedition Acts.
+  77:
+    topic: early-republic
+    question: "Fries’s Rebellion was a protest against:"
+    A: Federal taxes to support a military buildup
+    B: The Whiskey Excise
+    C: The Embargo
+    D: Impressment
+    answer: A
+    hint: This 1799 Pennsylvania protest was against a tax to pay for a bigger army and navy.
+    explanation: "A property tax (the ‘house tax’) in Pennsylvania in 1799."
+  78:
+    topic: early-republic
+    question: "The ‘Revolution of 1800’ is called a revolution because:"
+    A: Power peacefully shifted from one party to another
+    B: Jefferson used the army
+    C: The Constitution was rewritten
+    D: It ended the two-party system
+    answer: A
+    hint: No one used force to take power. Think about what changed hands, and how.
+    explanation: Jefferson called it a peaceful revolution.
+  79:
+    topic: early-republic
+    question: Who convinced Federalists not to vote for Burr in the House during the 1800 election tie?
+    A: Hamilton
+    B: Adams
+    C: Madison
+    D: Marshall
+    answer: A
+    hint: Though he disliked Jefferson, this former Treasury Secretary distrusted Burr even more.
+    explanation: Hamilton distrusted Burr more than Jefferson.
+  80:
+    topic: early-republic
+    question: "Jefferson’s inaugural address is most famous for which line?"
+    A: "‘We are all Federalists, we are all Republicans.’"
+    B: "‘Give me liberty or give me death.’"
+    C: "‘The only thing we have to fear…’"
+    D: "‘Don’t tread on me.’"
+    answer: A
+    hint: He tried to unite the country after a bitter campaign. The line says what all parties have in common.
+    explanation: A call for national unity after a bitter campaign.
+  81:
+    topic: early-republic
+    question: "Jefferson wrote ‘What is practical must often control what is pure theory’ to Lafayette in 1817. When was that?"
+    A: After his presidency
+    B: Before his presidency
+    C: During his first term
+    D: During the Revolution
+    answer: A
+    hint: "Look at the date: 1817. When was Jefferson President?"
+    explanation: Jefferson was out of office by 1809.
+  82:
+    topic: early-republic
+    question: "Before becoming President, which best describes Jefferson’s political beliefs?"
+    A: Strict construction of the Constitution
+    B: A belief in a small, unobtrusive federal government
+    C: A willingness to engage in partisan politics
+    D: All of the above
+    answer: D
+    hint: Jefferson held all of these views before he took office. Check whether more than one fits.
+    explanation: Jefferson held all three views before 1801.
+    shuffle: false
+  83:
+    topic: early-republic
+    question: "The Judiciary Act of 1801 created:"
+    A: "The ‘Midnight Judges’"
+    B: The Supreme Court
+    C: The federal income tax
+    D: The Bank of the United States
+    answer: A
+    hint: Adams named many Federalist judges in the last days of his term. What did the opposition call them?
+    explanation: Adams appointed Federalist judges at the end of his term.
+  84:
+    topic: early-republic
+    question: Who became Chief Justice in the Midnight Judges crisis?
+    A: John Marshall
+    B: John Jay
+    C: Roger Taney
+    D: Oliver Ellsworth
+    answer: A
+    hint: "He was Adams's Secretary of State and then Chief Justice for over 30 years."
+    explanation: "Marshall was Adams’s Secretary of State and then Chief Justice."
+  85:
+    topic: early-republic
+    question: William Marbury asked the Supreme Court for what remedy?
+    A: Writ of mandamus
+    B: Writ of habeas corpus
+    C: Writ of certiorari
+    D: Writ of assistance
+    answer: A
+    hint: "A writ ordering an official to do his duty: it starts with 'man.'"
+    explanation: To force Secretary of State Madison to deliver his commission.
+  86:
+    topic: early-republic
+    question: "In Marbury v. Madison, the Court held that:"
+    A: Section 13 of the Judiciary Act of 1789 was unconstitutional
+    B: Marbury must get his commission
+    C: The bank was constitutional
+    D: The President could not appoint judges
+    answer: A
+    hint: The Court told Marbury he had a right to his commission but found a law in the Judiciary Act unconstitutional.
+    explanation: This established the principle of judicial review.
+  87:
+    topic: early-republic
+    question: "Marbury v. Madison established:"
+    A: Judicial review
+    B: Executive privilege
+    C: Implied powers
+    D: Dual federalism
+    answer: A
+    hint: Think about what courts can do to laws that conflict with the Constitution.
+    explanation: The Court can strike down laws that conflict with the Constitution.
+  88:
+    topic: early-republic
+    question: "The Judiciary Act of 1802:"
+    A: "Repealed the 1801 act and eliminated Marbury’s job"
+    B: Created the Supreme Court
+    C: Expanded the Midnight Judges
+    D: Created the Electoral College
+    answer: A
+    hint: "The new Congress did away with Adams's new judgeships, so ask what happened to the 1801 law."
+    explanation: "Marbury’s last hope was the Court’s decision."
+  89:
+    topic: early-republic
+    question: "Which event was part of Jefferson’s first term?"
+    A: Louisiana Purchase
+    B: Embargo of 1807
+    C: War of 1812
+    D: "Adams-Onís Treaty"
+    answer: A
+    hint: "Jefferson's first term was 1801-1805. It's the huge land deal with France."
+    explanation: 1803, along with the Lewis and Clark Expedition and the Tripolitan War.
+  90:
+    topic: early-republic
+    question: "The Tripolitan War is also known as the:"
+    A: Barbary War
+    B: Seminole War
+    C: Quasi-War
+    D: "Pontiac’s War"
+    answer: A
+    hint: These wars were fought against pirate states on the North African coast.
+    explanation: Fought against North African pirate states.
+  91:
+    topic: early-republic
+    question: The Yazoo claims led to the rise of which faction?
+    A: Quids
+    B: Barnburners
+    C: Whigs
+    D: Know-Nothings
+    answer: A
+    hint: "A faction broke off from Jefferson's own party, led by John Randolph, who thought he wasn't strict enough."
+    explanation: Quids were dissenting Democratic-Republicans, such as John Randolph.
+  92:
+    topic: early-republic
+    question: "The Embargo of 1807 was meant to:"
+    A: Pressure Britain and France to respect American neutrality
+    B: Increase tariffs
+    C: End slavery
+    D: Punish smugglers in Canada
+    answer: A
+    hint: Jefferson wanted to avoid war, so he used trade as a weapon instead of warships. Which choice describes that goal?
+    explanation: It ended up devastating American trade and was widely unpopular.
+  93:
+    topic: early-republic
+    question: "In the anti-Jefferson cartoon, ‘Ograbme’ stands for:"
+    A: Embargo spelled backwards
+    B: A French diplomat
+    C: "A British ship’s name"
+    D: The Supreme Court
+    answer: A
+    hint: "Read it backwards: the cartoon spells a word in reverse."
+    explanation: "It is also an anagram of ‘Mob Rage’."
+  94:
+    topic: early-republic
+    question: Which Jefferson action contradicted his belief in a government that does not meddle?
+    A: Embargo of 1807
+    B: Louisiana Purchase
+    C: Barbary War
+    D: Midnight Judges
+    answer: A
+    hint: A president who wanted less government meddling ended up heavily restricting private trade.
+    explanation: "The Embargo interfered heavily with citizens’ trade."
+  95:
+    topic: early-republic
+    question: Which event best shows Jefferson putting practicality above pure theory?
+    A: Louisiana Purchase
+    B: Embargo of 1807
+    C: Eliminating the Whiskey Tax
+    D: Marbury v. Madison
+    answer: A
+    hint: "He was a strict constructionist who still bought the land, even though the Constitution didn't clearly allow it."
+    explanation: A strict constructionist, he bought the territory despite no explicit authority.
+  96:
+    topic: early-republic
+    question: "Macon’s Bill No. 2 stated that:"
+    A: "Trade reopened with both nations, but the embargo would be reactivated against the one that didn’t rescind its restrictions"
+    B: Trade closed with all nations
+    C: Trade reopened only with Britain
+    D: The U.S. would declare war on France
+    answer: A
+    hint: "It was an offer to Britain and France: whichever stopped violating American neutral rights first would get U.S. trade, and the other would lose it."
+    explanation: It followed the Non-Intercourse Act.
+  97:
+    topic: early-republic
+    question: "The Non-Intercourse Act:"
+    A: Stopped trade only with Britain and France
+    B: Ended all trade
+    C: Declared war on Britain
+    D: Opened trade with Britain only
+    answer: A
+    hint: It came after the Embargo failed, and it was more targeted. Ask which countries it was aimed at.
+    explanation: It replaced the Embargo of 1807.
+  98:
+    topic: early-republic
+    question: Which is NOT a cause of the War of 1812?
+    A: British seizure of ships and impressment of sailors
+    B: British forts in the Northwest and arming of Native Americans
+    C: War Hawks defending American honor
+    D: Annexation of Texas
+    answer: D
+    hint: "Three are causes from the 1800s-1810s. The odd one out wasn't an issue until the 1840s."
+    explanation: Texas was a later issue.
+  99:
+    topic: early-republic
+    question: Which leader tried to unite Native American tribes against American expansion before the War of 1812?
+    A: Tecumseh
+    B: Osceola
+    C: Sequoyah
+    D: Black Hawk
+    answer: A
+    hint: "A Shawnee leader whose brother was known as 'the Prophet.'"
+    explanation: The British were seen as arming them.
+  100:
+    topic: early-republic
+    question: "The War Hawks included:"
+    A: Henry Clay and John C. Calhoun
+    B: Daniel Webster and Rufus King
+    C: Jefferson and Madison
+    D: Hamilton and Burr
+    answer: A
+    hint: Two young congressmen, one from Kentucky and one from South Carolina, who pushed hard for war.
+    explanation: Young western and southern congressmen demanding war.
+  101:
+    topic: early-republic
+    question: Which group opposed the War of 1812 because of trade issues?
+    A: New England Federalists
+    B: Western farmers
+    C: War Hawks
+    D: Southern Democrats
+    answer: A
+    hint: The war hurt their trade. Think about which region, and which party, relied most on shipping.
+    explanation: By then the Federalists were a largely sectional party.
+  102:
+    topic: nationalism
+    question: Which was NOT a factor in the growth of nationalism during and after the War of 1812?
+    A: Andrew Jackson
+    B: The Battle of New Orleans
+    C: Oliver Hazard Perry
+    D: Victory over the British in Washington, D.C.
+    answer: D
+    hint: Three of these boosted national pride. The odd one out was actually a low point, when the capital was burned.
+    explanation: The British burned Washington. Perry won on Lake Erie.
+  103:
+    topic: nationalism
+    question: "The War of 1812 is called the ‘Second War of Independence’ partly because it:"
+    A: Increased national pride and self-sufficiency
+    B: Ended Native American resistance in Canada
+    C: Made the U.S. a European ally
+    D: Ended slavery in the North
+    answer: A
+    hint: Think about how Americans felt after standing up to Britain a second time, and what the war did for homegrown industry.
+    explanation: The war and the Embargo helped spur early industrialization.
+  104:
+    topic: nationalism
+    question: Which treaty ended the War of 1812?
+    A: Treaty of Ghent
+    B: Treaty of Paris
+    C: Treaty of Versailles
+    D: "Jay’s Treaty"
+    answer: A
+    hint: It was signed in December 1814, before the Battle of New Orleans, and restored pre-war boundaries.
+    explanation: Signed in December 1814, before the Battle of New Orleans.
+  105:
+    topic: nationalism
+    question: "Which was NOT part of Henry Clay’s American System?"
+    A: Tariffs
+    B: A national bank
+    C: Internal improvements
+    D: Renewed taxation to pay for the war
+    answer: D
+    hint: "Clay's plan had three parts: protection, banking and roads. Which choice is something else?"
+    explanation: The three pillars were tariff, bank and internal improvements.
+  106:
+    topic: nationalism
+    question: What did the Tariff of 1816 do?
+    A: Protected American manufacturers from foreign competition
+    B: Abolished tariffs
+    C: Taxed exports
+    D: Favored the South
+    answer: A
+    hint: It was the first protective tariff passed in peacetime, to shield new American industries.
+    explanation: It was the first protective tariff in peacetime.
+  107:
+    topic: nationalism
+    question: Why was a transportation revolution necessary?
+    A: It would facilitate westward migration
+    B: Roads were expensive and supported only horse-drawn wagons
+    C: "Most rivers flowed north–south, making it hard to get crops to market"
+    D: All of the above
+    answer: D
+    hint: "Check each statement. They're all true obstacles to moving people and goods."
+    explanation: All three were obstacles to a national market economy.
+    shuffle: false
+  108:
+    topic: nationalism
+    question: "Which was NOT an example of the early transportation revolution (1800–1830)?"
+    A: The Clermont
+    B: Turnpikes
+    C: The Erie Canal
+    D: The transcontinental railroad
+    answer: D
+    hint: "Three were built early in the 1800s. The odd one out wasn't finished until 1869."
+    explanation: The transcontinental railroad was completed in 1869.
+  109:
+    topic: nationalism
+    question: "Robert Fulton’s Clermont was:"
+    A: A steamboat
+    B: A canal boat
+    C: A railroad locomotive
+    D: A frigate
+    answer: A
+    hint: "It was a vessel, not a road or a track. Think about how it traveled against a river's current."
+    explanation: It made upstream travel practical.
+  110:
+    topic: nationalism
+    question: "The Erie Canal connected:"
+    A: The Hudson River and Lake Erie
+    B: The Ohio River and the Mississippi
+    C: Boston and Chicago
+    D: New York and Baltimore
+    answer: A
+    hint: It linked the Atlantic seaboard with the Great Lakes, and it opened in 1825 in New York.
+    explanation: It opened in 1825 and boosted New York City.
+  111:
+    topic: nationalism
+    question: "Calhoun’s Bonus Bill of 1817 proposed:"
+    A: Federal funds for internal improvements
+    B: Tax cuts for farmers
+    C: A new national bank charter
+    D: A tariff reduction
+    answer: A
+    hint: The bill used money paid to the government by the Second Bank. Think about what nationalists wanted to build with it.
+    explanation: Madison vetoed it on constitutional grounds.
+  112:
+    topic: nationalism
+    question: Which was NOT a reason for westward migration in the early 1800s?
+    A: Federalist laws that made migration attractive to small farmers
+    B: Banks making land loans
+    C: Growing demand for agricultural products
+    D: Preemption rights for squatters
+    answer: A
+    hint: Three of these encouraged settlers to go west. The odd one out is a party that was fading by then.
+    explanation: The Federalists had faded by then.
+  113:
+    topic: nationalism
+    question: "Federal land policy during the Era of Good Feelings:"
+    A: Lowered both minimum acreage and price per acre
+    B: Raised both minimum acreage and price per acre
+    C: Reduced nationalism by dispersing people
+    D: Slowed the economy
+    answer: A
+    hint: The government wanted ordinary families to afford farms. Think about what that did to price and plot size.
+    explanation: E.g., 320 acres at $2 (1800) to 80 acres at $1.25 (1820).
+  114:
+    topic: nationalism
+    question: "In 1820, the minimum federal land purchase was:"
+    A: 80 acres at $1.25/acre
+    B: 160 acres at $1.64/acre
+    C: 320 acres at $2/acre
+    D: 640 acres at $5/acre
+    answer: A
+    hint: In 1800 the minimum was 320 acres at $2 per acre. Over the next 20 years both numbers fell.
+    explanation: Federal land policy became increasingly accessible.
+  115:
+    topic: nationalism
+    question: What happened to the Federalist Party after 1816?
+    A: It effectively disappeared as a national force
+    B: It won the White House
+    C: It merged with the Whigs immediately
+    D: It formed the Know-Nothings
+    answer: A
+    hint: After the Hartford Convention, the party faded, and Monroe ran nearly unopposed.
+    explanation: "Hence the ‘Era of Good Feelings’ under Monroe."
+  116:
+    topic: nationalism
+    question: Which foreign-policy success demilitarized the Great Lakes?
+    A: Rush-Bagot Treaty
+    B: Convention of 1818
+    C: "Adams-Onís Treaty"
+    D: Monroe Doctrine
+    answer: A
+    hint: It was a naval agreement with Britain about the Great Lakes.
+    explanation: A naval disarmament agreement with Britain.
+  117:
+    topic: nationalism
+    question: "The Convention of 1818 established:"
+    A: The 49th parallel boundary and joint occupation of Oregon
+    B: "Louisiana’s boundaries"
+    C: "Florida’s cession"
+    D: The end of impressment
+    answer: A
+    hint: It set a northern boundary with Canada and a joint claim to the Pacific Northwest.
+    explanation: It settled much of the northern boundary with Canada.
+  118:
+    topic: nationalism
+    question: "The Adams-Onís Treaty (1819) with Spain:"
+    A: Transferred Florida to the U.S.
+    B: Created Oregon
+    C: Ended the War of 1812
+    D: Settled the Maine border
+    answer: A
+    hint: It was a treaty with Spain over its colony in the Southeast, and it also set the boundary of Louisiana.
+    explanation: It also defined the western boundary of the Louisiana claim.
+  119:
+    topic: nationalism
+    question: "The Monroe Doctrine (1823) warned:"
+    A: European powers against further colonization in the Americas
+    B: The U.S. to stay out of Europe forever
+    C: Spain to leave Florida
+    D: Britain to leave Canada
+    answer: A
+    hint: "It was a message to Europe's monarchies about the Western Hemisphere."
+    explanation: It also pledged U.S. non-interference in European affairs.
+  120:
+    topic: nationalism
+    question: "Sectionalism is best defined as:"
+    A: Undue concern with local interests at the expense of general well-being
+    B: "Identification with one’s own nation"
+    C: Separation of religion and politics
+    D: Partisan bias
+    answer: A
+    hint: "The word comes from 'section.' Compare it with nationalism, which is loyalty to the whole country."
+    explanation: Nationalism is loyalty to the nation, secularism is separation of religion and state.
+  121:
+    topic: nationalism
+    question: Which did NOT cause sectionalism in the Era of Good Feelings?
+    A: Federal land policy
+    B: Tariffs
+    C: The Second Bank of the United States
+    D: All of the above caused sectionalism
+    answer: D
+    hint: Land, industry, cities, roads, tariffs and the Bank divided regions. Check the last choice.
+    explanation: Land policy, industrialism, cities, internal improvements, tariffs and the Bank all affected regions differently.
+    shuffle: false
+  122:
+    topic: nationalism
+    question: Which did NOT help spur early American industrialism?
+    A: Embargo of 1807
+    B: Tariff of 1816
+    C: War of 1812
+    D: The California Gold Rush
+    answer: D
+    hint: Three of these encouraged American manufacturing between 1807 and 1816. One happened in 1848.
+    explanation: "The Gold Rush was 1848–49. The Embargo, the war and the 1816 tariff all encouraged domestic manufacturing."
+  123:
+    topic: nationalism
+    question: New York City grew from 124,000 in 1820 to roughly how many by 1860?
+    A: 800,000
+    B: 300,000
+    C: 1.5 million
+    D: 50,000
+    answer: A
+    hint: The city grew more than sixfold in 40 years, but was still under a million people in 1860.
+    explanation: Urban growth stemmed from industry, transport and immigration.
+  124:
+    topic: nationalism
+    question: Which was a cause of the growth of cities?
+    A: Industrialism, transportation revolution, and immigration
+    B: Only agriculture
+    C: Decline of trade
+    D: The Embargo only
+    answer: A
+    hint: "Think about what drew people to cities: jobs, new transportation, newcomers."
+    explanation: Cities fueled a market economy of industrial goods.
+  125:
+    topic: nationalism
+    question: Which was NOT part of the Missouri Compromise?
+    A: Slaves in Missouri freed at age 25
+    B: Maine admitted as a free state
+    C: Missouri admitted as a slave state
+    D: "Slavery banned north of 36°30' in the Louisiana Purchase"
+    answer: A
+    hint: "Three terms were in the Compromise. The odd one out was in an earlier proposal that didn't pass."
+    explanation: Freeing at 25 was part of the Tallmadge Amendment.
+  126:
+    topic: nationalism
+    question: "Under the Missouri Compromise, slavery was prohibited in the Louisiana Purchase north of:"
+    A: "36°30'"
+    B: "49°"
+    C: "40°"
+    D: "38°"
+    answer: A
+    hint: "It's a line of latitude that ran along Missouri's southern border."
+    explanation: Except in Missouri.
+  127:
+    topic: nationalism
+    question: "The main issue for the South in the Missouri Compromise was:"
+    A: Keeping the balance of slave and free states in the Senate
+    B: Gaining land for the House
+    C: Having slavery declared legal
+    D: Ending the tariff
+    answer: A
+    hint: "The Senate was the South's protection. Think about what each new state added there."
+    explanation: Equal representation in the Senate protected slavery.
+  128:
+    topic: nationalism
+    question: "The Tallmadge Amendment proposed:"
+    A: Banning further importation of slaves into Missouri and freeing children born there at 25
+    B: Making Missouri free immediately
+    C: Ending the slave trade nationwide
+    D: Making Maine a slave state
+    answer: A
+    hint: It was introduced by a New York congressman and tried to limit slavery in a new state, with a gradual path to freedom.
+    explanation: "It passed the House 82–78 but failed in the Senate."
+  129:
+    topic: nationalism
+    question: "One Northern argument for the Tallmadge Amendment was that:"
+    A: It would allow poorer classes to move West and own land
+    B: It would end all slavery
+    C: It would increase Northern power in the Senate
+    D: It would lower tariffs
+    answer: A
+    hint: "Think about free labor: who could afford western land if slavery were competing with them?"
+    explanation: Free labor would not compete with enslaved labor.
+  130:
+    topic: nationalism
+    question: "Southerners defending slavery did NOT argue that:"
+    A: The South could easily handle the economic loss of slavery
+    B: "The Bible doesn’t forbid slavery"
+    C: Congress has no authority over it
+    D: Agitation could lead to civil war
+    answer: A
+    hint: Pro-slavery Southerners argued slavery was necessary to their economy. Which statement contradicts that?
+    explanation: They argued slavery was economically essential.
+  131:
+    topic: nationalism
+    question: "The Panic of 1819 was caused in part by:"
+    A: A drop in agricultural prices, land speculation and the Bank calling in loans
+    B: The Civil War
+    C: The Embargo
+    D: The Mexican War
+    answer: A
+    hint: It followed a boom in land prices and cotton, and the Bank of the U.S. called in loans.
+    explanation: It made Southerners and Westerners suspicious of banks and the Bank of the U.S.
+  132:
+    topic: nationalism
+    question: "After the Panic of 1819, support for tariffs and internal improvements in the South:"
+    A: Evaporated
+    B: Doubled
+    C: Remained the same
+    D: Became a Whig program
+    answer: A
+    hint: The Panic left Southerners and Westerners angry at the Bank and bitter about federal programs.
+    explanation: The Panic widened sectional divides.
+  133:
+    topic: nationalism
+    question: "McCulloch v. Maryland (1819) held that:"
+    A: "The national bank was constitutional and states can’t tax it"
+    B: States can nullify federal laws
+    C: "Congress can’t regulate commerce"
+    D: The bank was unconstitutional
+    answer: A
+    hint: "Marshall's opinion upheld implied powers and national supremacy over a state tax on the Bank's Baltimore branch."
+    explanation: Marshall affirmed implied powers and national supremacy.
+  134:
+    topic: nationalism
+    question: "Gibbons v. Ogden (1824) strengthened federal power over:"
+    A: Interstate commerce
+    B: State taxes
+    C: Contracts
+    D: Slavery
+    answer: A
+    hint: It was a steamboat case about who regulates trade between states.
+    explanation: A steamboat monopoly case.
+  135:
+    topic: nationalism
+    question: "Dartmouth College v. Woodward (1819) protected:"
+    A: Contracts, including corporate charters, from state interference
+    B: The national bank
+    C: Free speech on campuses
+    D: State sovereignty
+    answer: A
+    hint: Think about the Contract Clause, and a college founded under a royal charter.
+    explanation: It invoked the Contract Clause.
+  136:
+    topic: nationalism
+    question: How many candidates ran in the 1824 election, and with what party label?
+    A: Five candidates, all Democratic-Republicans
+    B: Two parties
+    C: Three parties
+    D: Federalists only
+    answer: A
+    hint: The Federalists had disappeared by 1824, so ask what label all the candidates shared.
+    explanation: Jackson, Adams, Clay, Crawford and (initially) Calhoun.
+  137:
+    topic: nationalism
+    question: Who decided the Election of 1824, and why?
+    A: The House of Representatives, because no one had a majority of electoral votes
+    B: The Senate
+    C: The Supreme Court
+    D: The voters in a runoff
+    answer: A
+    hint: No candidate won a majority of the Electoral College. The Constitution sends that decision to a chamber of Congress.
+    explanation: John Quincy Adams won in the House.
+  138:
+    topic: nationalism
+    question: "The ‘Corrupt Bargain’ charge claimed that:"
+    A: Clay supported Adams in exchange for Secretary of State
+    B: Jackson bribed electors
+    C: Crawford sold his votes
+    D: Calhoun traded his vote for the vice presidency
+    answer: A
+    hint: Think about the job Adams gave Clay after the House vote.
+    explanation: Most believed it despite no evidence. It haunted both men.
+  139:
+    topic: nationalism
+    question: Who won the most popular and electoral votes in 1824 but lost in the House?
+    A: Andrew Jackson
+    B: Henry Clay
+    C: William Crawford
+    D: John C. Calhoun
+    answer: A
+    hint: He was the general who had won the Battle of New Orleans.
+    explanation: He campaigned bitterly for 1828.
+  140:
+    topic: nationalism
+    question: "Which proposal in J.Q. Adams’s first message to Congress reflected nationalist programs?"
+    A: Creating a national university
+    B: Strict construction
+    C: Abolishing the electoral college
+    D: Slavery compromises
+    answer: A
+    hint: Adams proposed an educational institution in Washington, along with a naval observatory.
+    explanation: He also proposed a naval observatory and exploration.
+  141:
+    topic: nationalism
+    question: "Which line from Adams’s message was considered divisive?"
+    A: "That the government should not be ‘palsied by the will of our constituents’"
+    B: His call for tariff reduction
+    C: His call to end slavery
+    D: His call to abolish internal improvements
+    answer: A
+    hint: "The line sounded elitist, as if elected leaders shouldn't have to listen to voters."
+    explanation: It sounded elitist.
+  142:
+    topic: nationalism
+    question: "Ralph Waldo Emerson’s ‘The American Scholar’ (1837) echoed which earlier sentiment?"
+    A: "J.Q. Adams’s call for distinctly American intellectual endeavors"
+    B: "Jefferson’s agrarianism"
+    C: "Hamilton’s report on manufactures"
+    D: "Jackson’s bank veto"
+    answer: A
+    hint: It echoed an earlier call by a President for distinctly American culture and intellect.
+    explanation: A call for cultural independence from Europe.
+  143:
+    topic: nationalism
+    question: "Which was NOT part of Jacksonian ‘Democratic Nationalism’?"
+    A: Congressional caucus nominations
+    B: Ending property requirements for voting
+    C: State nominating conventions
+    D: Secret ballots
+    answer: A
+    hint: Jacksonian democracy replaced caucus nominations with something more open.
+    explanation: The caucus was replaced by conventions.
+  144:
+    topic: nationalism
+    question: Who organized the Albany Regency and helped build the Democratic Party?
+    A: Martin Van Buren
+    B: Henry Clay
+    C: John C. Calhoun
+    D: Daniel Webster
+    answer: A
+    hint: "He was a New York politician, later Vice President and President, and the 'Little Magician.'"
+    explanation: A New York political machine emphasizing party discipline.
+  145:
+    topic: nationalism
+    question: "The crowd at Jackson’s 1829 inaugural party led Justice Story to say:"
+    A: "‘The reign of King Mob seemed triumphant.’"
+    B: "‘We are all Federalists.’"
+    C: "‘The era of good feelings.’"
+    D: "‘A republic if you can keep it.’"
+    answer: A
+    hint: Justice Story was disgusted by the crowd at the White House party. Which choice reflects that?
+    explanation: "Jackson was seen as ‘the People’s President.’"
+  146:
+    topic: nationalism
+    question: "The Indian Removal Act (1830) authorized:"
+    A: Relocation of Native Americans west of the Mississippi
+    B: Citizenship for Cherokees
+    C: Federal protection for tribal lands
+    D: Forts along the Ohio
+    answer: A
+    hint: "It's linked to the Trail of Tears. Think about where the Cherokee and other Southeastern tribes were sent."
+    explanation: It led to the Trail of Tears.
+  147:
+    topic: nationalism
+    question: "The Tariff of 1828 was nicknamed:"
+    A: Tariff of Abominations
+    B: Compromise Tariff
+    C: Walker Tariff
+    D: Morrill Tariff
+    answer: A
+    hint: The South gave it a name that shows how much they hated it.
+    explanation: Southerners hated its high duties.
+  148:
+    topic: nationalism
+    question: Why did Southerners generally dislike tariffs?
+    A: They raised the cost of manufactured goods
+    B: They could reduce British demand for Southern cotton
+    C: They seemed to benefit mainly the North
+    D: All of the above
+    answer: D
+    hint: Think about prices, cotton demand and who benefited. All three apply.
+    explanation: Southerners felt they paid for Northern prosperity.
+    shuffle: false
+  149:
+    topic: nationalism
+    question: "Calhoun’s ‘South Carolina Exposition and Protest’ argued for:"
+    A: Nullification of federal tariffs
+    B: Secession
+    C: A new bank
+    D: Abolition of tariffs by Congress
+    answer: A
+    hint: "Calhoun's essay argued that states had a power over federal laws they considered unconstitutional."
+    explanation: Written anonymously in 1828, public in 1831.
+  150:
+    topic: nationalism
+    question: "The Webster-Hayne Debate (1830) was NOT about:"
+    A: The national bank
+    B: Federal land policy
+    C: The tariff
+    D: The theory of nullification
+    answer: A
+    hint: "The debate was about states' rights and the Union, not a financial institution."
+    explanation: "Its core issue was states’ rights vs. national union."
+  151:
+    topic: nationalism
+    question: Which term is NOT related to the Webster-Hayne debate?
+    A: Embargo of 1807
+    B: Tariff of Abominations
+    C: American System
+    D: Kentucky and Virginia Resolutions
+    answer: A
+    hint: Three of these connect to the nullification debate. One happened under Jefferson in 1807.
+    explanation: "The Embargo isn’t tied to the nullification debate."
+  152:
+    topic: nationalism
+    question: "At the 1830 Jefferson Day dinner, Jackson toasted:"
+    A: "‘Our federal Union, it must be preserved.’"
+    B: "‘Liberty and union forever.’"
+    C: "‘Nullification forever.’"
+    D: "‘Down with the bank.’"
+    answer: A
+    hint: Jackson raised his glass at a dinner in 1830, with Calhoun in the room, to the thing he was determined to protect.
+    explanation: "Calhoun replied with a toast to ‘the Union, next to our liberty, the most dear.’"
+  153:
+    topic: nationalism
+    question: "The Peggy Eaton affair damaged Jackson’s relationship with:"
+    A: John C. Calhoun
+    B: Martin Van Buren
+    C: Henry Clay
+    D: Daniel Webster
+    answer: A
+    hint: "The scandal split Jackson's cabinet. The person it hurt most was the man who had been his Vice President."
+    explanation: It helped Van Buren replace Calhoun as heir apparent.
+  154:
+    topic: nationalism
+    question: "South Carolina’s Ordinance of Nullification (1832) targeted:"
+    A: The tariffs of 1828 and 1832
+    B: The Bank
+    C: The Indian Removal Act
+    D: The Force Bill
+    answer: A
+    hint: South Carolina declared two tariffs null and void within the state.
+    explanation: They declared them null and void in the state.
+  155:
+    topic: nationalism
+    question: How was the Nullification Crisis resolved?
+    A: Compromise Tariff of 1833 plus the Force Bill
+    B: Secession of South Carolina
+    C: Repeal of the Constitution
+    D: War
+    answer: A
+    hint: Jackson got both a compromise on rates and the power to use force, so the crisis ended without war.
+    explanation: "Henry Clay’s compromise, with Jackson’s Force Bill as the ‘sword’."
+  156:
+    topic: nationalism
+    question: Why did conflict over the Bank of the U.S. begin in 1832?
+    A: Distrust of the bank dating back to the Panic of 1819
+    B: Henry Clay wanted to make it a campaign issue
+    C: Jackson believed it was too powerful over the states
+    D: All of the above
+    answer: D
+    hint: "Several things were at play: past distrust, Clay's strategy, and Jackson's fear of its power."
+    explanation: All three played a role.
+    shuffle: false
+  157:
+    topic: nationalism
+    question: Who led the Second Bank of the United States?
+    A: Nicholas Biddle
+    B: Roger Taney
+    C: Albert Gallatin
+    D: Martin Van Buren
+    answer: A
+    hint: He was a Philadelphia banker and the head of the Second Bank of the United States.
+    explanation: "Biddle compared Jackson’s veto message to a ‘chained panther’."
+  158:
+    topic: nationalism
+    question: How did Jackson initially attack the Bank in 1832?
+    A: He vetoed its re-charter
+    B: He withdrew all funds immediately
+    C: He challenged board members to duels
+    D: He asked the Court to dissolve it
+    answer: A
+    hint: "Jackson used a presidential power to stop the Bank's re-charter, and Congress couldn't override it."
+    explanation: Congress failed to override the veto.
+  159:
+    topic: nationalism
+    question: "In his bank veto, Jackson did NOT say that:"
+    A: The Supreme Court was right in McCulloch v. Maryland
+    B: The Bank is neither necessary nor proper
+    C: The Bank benefits the rich and powerful
+    D: "The President’s job is to protect the high and low"
+    answer: A
+    hint: In his veto, Jackson claimed the President could judge constitutionality for himself, even against the Court.
+    explanation: He asserted that the President may judge constitutionality independently.
+  160:
+    topic: nationalism
+    question: "Jackson’s removal of federal deposits led to money being placed in:"
+    A: "State ‘pet banks’"
+    B: Foreign banks
+    C: The U.S. Treasury vault
+    D: The Bank of England
+    answer: A
+    hint: "Jackson's Treasury moved federal money out of the Bank and into banks the critics nicknamed after a favorite animal."
+    explanation: The Deposit Act (1836) formalized this.
+  161:
+    topic: nationalism
+    question: Which was NOT part of the war on the Bank?
+    A: Jackson authorized the printing of paper money to stress Bank reserves
+    B: Biddle called in loans
+    C: Jackson placed deposits in state banks
+    D: Jackson withdrew federal funds
+    answer: A
+    hint: "Jackson favored hard money, so ask which action wouldn't fit with his policy."
+    explanation: Jackson favored hard money.
+  162:
+    topic: nationalism
+    question: "The Deposit Act of 1836:"
+    A: Spread federal surplus funds across state banks, increasing speculation
+    B: Re-chartered the bank
+    C: Created the Treasury
+    D: Banned paper money
+    answer: A
+    hint: It spread surplus federal money to state banks, which lent it freely and fueled speculation.
+    explanation: Banks lent the money freely.
+  163:
+    topic: nationalism
+    question: "The Specie Circular (1837) required:"
+    A: Gold or silver for purchases of federal land
+    B: Paper money for federal land
+    C: Payment in tobacco
+    D: A ban on state banks
+    answer: A
+    hint: "'Specie' is another word for coin. Jackson wanted to stop paper-money speculation in land."
+    explanation: It triggered a run on specie and helped cause the Panic of 1837.
+  164:
+    topic: nationalism
+    question: "The Panic of 1837 was caused by all of these EXCEPT:"
+    A: Success of the Second Bank of the United States
+    B: The Specie Circular
+    C: Speculation
+    D: European withdrawal of specie
+    answer: A
+    hint: Three of these helped cause the Panic. The odd one out was already gone by then.
+    explanation: The Bank had been destroyed.
+  165:
+    topic: nationalism
+    question: Which was NOT a reason for the rise of the Whig Party?
+    A: "The Democrats’ support of the American System"
+    B: "Opposition to Jackson’s strong executive power"
+    C: The Anti-Mason movement
+    D: Support for education and temperance
+    answer: A
+    hint: "The Whigs supported Clay's program. Democrats opposed it."
+    explanation: Democrats opposed the American System, and Whigs embraced it.
+  166:
+    topic: nationalism
+    question: "Whigs charged Jackson with:"
+    A: Wielding presidential power like a king
+    B: Weakening the military
+    C: Supporting the Bank
+    D: "Opposing states’ rights"
+    answer: A
+    hint: They called him a name that suggested a monarch.
+    explanation: "They called him ‘King Andrew I’."
+  167:
+    topic: nationalism
+    question: "The Independent Treasury Act (Van Buren) created:"
+    A: Sub-treasuries to hold government money separate from banks
+    B: A new national bank
+    C: State-owned banks
+    D: A paper currency
+    answer: A
+    hint: "The idea was to keep the government's money out of private banks and in its own vaults."
+    explanation: Supporters said it would keep government out of the hands of speculators.
+  168:
+    topic: nationalism
+    question: "What was the most significant cause of Van Buren’s defeat in 1840?"
+    A: The Panic of 1837
+    B: Anti-Mason sentiment
+    C: A duel
+    D: Texas annexation
+    answer: A
+    hint: Van Buren was blamed for an economic crash that started soon after he took office.
+    explanation: William Henry Harrison won.
+  169:
+    topic: nationalism
+    question: Which election year ended the Federalist presidency?
+    A: "1800"
+    B: "1796"
+    C: "1808"
+    D: "1792"
+    answer: A
+    hint: "Jefferson's victory ended the Federalist presidencies. It's the 'Revolution of ___.'"
+    explanation: Jefferson (D-R) won; Adams was the last Federalist President.
+  170:
+    topic: nationalism
+    question: "Who was President during the Era of Good Feelings (1817–1825)?"
+    A: James Monroe
+    B: James Madison
+    C: John Quincy Adams
+    D: Andrew Jackson
+    answer: A
+    hint: He was a Virginian who followed Madison, and his term is named for a period of one-party politics.
+    explanation: Elected in 1816 and 1820.
+  171:
+    topic: nationalism
+    question: "Which election was Monroe’s first win?"
+    A: "1816"
+    B: "1812"
+    C: "1820"
+    D: "1824"
+    answer: A
+    hint: He was elected in 1816, and again in 1820, as the Federalists faded.
+    explanation: A Democratic-Republican.
