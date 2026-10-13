@@ -1,6 +1,6 @@
 /*
  * Flashcard deck app: flashcard mode + quiz mode with fuzzy-search answers.
- * Expects window.DECK = { id, title, cards: [{ n, term, def }, ...] } and window.Fuzzy (fuzzy.js).
+ * Expects window.DECK = { id, title, cards: [{ n, term, def, tag? }, ...] } and window.Fuzzy (fuzzy.js).
  * Preferences (mode, direction, shuffle, and the card range once the user picks one) are kept in
  * localStorage under "studyresources:deck:<deck id>".
  */
@@ -163,7 +163,7 @@
 
     const face = (kind, cls, hidden) =>
       h("div", { class: "fc-face " + cls, "aria-hidden": hidden ? "true" : "false" },
-        h("span", { class: "fc-num", text: "#" + card.n }),
+        h("span", { class: "fc-num", text: "#" + card.n + (card.tag ? " · " + card.tag : "") }),
         h("span", { class: "fc-side", text: kind === "term" ? "Term" : "Definition" }),
         h("div", { class: "fc-text " + kind, text: kind === "term" ? card.term : card.def }),
         cls === "front" ? h("span", { class: "fc-tip", text: "Click the card or press Space to flip" }) : null);

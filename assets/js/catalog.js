@@ -12,8 +12,8 @@ window.CATALOG = {
       quizzes: [
         {
           title: "Enduring Vision Quiz",
-          description: "The Enduring Vision, Ch. 2–6: colonization through the Constitution. Includes a flashcard tab.",
-          meta: "100 questions · 111 flashcards",
+          description: "The Enduring Vision, Ch. 2–6: colonization through the Constitution.",
+          meta: "100 questions",
           href: "quizzes/enduring-vision.html"
         },
         {
@@ -29,6 +29,12 @@ window.CATALOG = {
           description: "Mr. Williams’ APUSH terms in order. Flip cards, quiz yourself with fuzzy search, or reverse the deck.",
           meta: "230 terms",
           href: "flashcards/terms/"
+        },
+        {
+          title: "Enduring Vision flashcards",
+          description: "Key terms and people from The Enduring Vision, Ch. 2–6. Study one chapter at a time with the card range.",
+          meta: "111 cards",
+          href: "flashcards/enduring-vision/"
         }
       ]
     }
