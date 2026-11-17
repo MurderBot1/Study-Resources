@@ -1,0 +1,2103 @@
+# Chapter 6: Applications of Definite Integrals
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 6.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 6: Applications of Definite Integrals"
+description: Volumes by slicing, disks, washers and shells; lengths of curves; centers of mass; surface area and Pappus; work; fluid forces.
+topics:
+  s6-1:
+    title: 6.1 Volumes by Slicing and Rotation About an Axis
+  s6-2:
+    title: 6.2 Volumes by Cylindrical Shells
+  s6-3:
+    title: 6.3 Lengths of Plane Curves
+  s6-4:
+    title: 6.4 Moments and Centers of Mass
+  s6-5:
+    title: 6.5 Areas of Surfaces of Revolution and the Theorems of Pappus
+  s6-6:
+    title: 6.6 Work
+  s6-7:
+    title: 6.7 Fluid Pressures and Forces
+questions:
+  1:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=-1\) and \(x=1\); its cross-sections run from \(y=-\sqrt{1-x^2}\) to \(y=\sqrt{1-x^2}\) and are circular disks with diameters in the \(xy\)-plane. The cross-sectional area \(A(x)\) is'
+    A: '\(- 4 \pi x^{2} + 4 \pi\)'
+    B: '\(- 2 \pi x^{2} + 2 \pi\)'
+    C: '\(- \frac{\pi x^{2}}{2} + \frac{\pi}{2}\)'
+    D: '\(- \pi x^{2} + \pi\)'
+    answer: D
+    hint: Find the length of the cross-section first (here the vertical distance between the two semicircles), then the area formula for the shape.
+    explanation: 'The length is \(2\sqrt{1-x^2}\): a disk of diameter \(2\sqrt{1-x^2}\) has radius \(\sqrt{1-x^2}\). So \(A(x)=- \pi x^{2} + \pi\).'
+  2:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=-1\) and \(x=1\); its cross-sections run from \(y=-\sqrt{1-x^2}\) to \(y=\sqrt{1-x^2}\) and are squares with bases in the \(xy\)-plane. The cross-sectional area \(A(x)\) is'
+    A: '\(2 - 2 x^{2}\)'
+    B: '\(8 - 8 x^{2}\)'
+    C: '\(1 - x^{2}\)'
+    D: '\(4 - 4 x^{2}\)'
+    answer: D
+    hint: Find the length of the cross-section first (here the vertical distance between the two semicircles), then the area formula for the shape.
+    explanation: 'The length is \(2\sqrt{1-x^2}\): the side is \(2\sqrt{1-x^2}\). So \(A(x)=4 - 4 x^{2}\).'
+  3:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=-1\) and \(x=1\); its cross-sections run from \(y=-\sqrt{1-x^2}\) to \(y=\sqrt{1-x^2}\) and are squares with diagonals in the \(xy\)-plane. The cross-sectional area \(A(x)\) is'
+    A: '\(2 - 2 x^{2}\)'
+    B: '\(1 - x^{2}\)'
+    C: '\(4 - 4 x^{2}\)'
+    D: '\(8 - 8 x^{2}\)'
+    answer: A
+    hint: Find the length of the cross-section first (here the vertical distance between the two semicircles), then the area formula for the shape.
+    explanation: 'The length is \(2\sqrt{1-x^2}\): the diagonal is \(2\sqrt{1-x^2}\), so the side is \(\sqrt2\sqrt{1-x^2}\). So \(A(x)=2 - 2 x^{2}\).'
+  4:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=-1\) and \(x=1\); its cross-sections run from \(y=-\sqrt{1-x^2}\) to \(y=\sqrt{1-x^2}\) and are equilateral triangles with bases in the \(xy\)-plane. The cross-sectional area \(A(x)\) is'
+    A: '\(- 4 \sqrt{3} x^{2} + 4 \sqrt{3}\)'
+    B: '\(- \frac{\sqrt{3} x^{2}}{2} + \frac{\sqrt{3}}{2}\)'
+    C: '\(- \sqrt{3} x^{2} + \sqrt{3}\)'
+    D: '\(- 2 \sqrt{3} x^{2} + 2 \sqrt{3}\)'
+    answer: C
+    hint: Find the length of the cross-section first (here the vertical distance between the two semicircles), then the area formula for the shape.
+    explanation: 'The length is \(2\sqrt{1-x^2}\): the base is \(2\sqrt{1-x^2}\) and the area of an equilateral triangle is \(\tfrac{\sqrt3}{4}s^2\). So \(A(x)=- \sqrt{3} x^{2} + \sqrt{3}\).'
+  5:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=0\) and \(x=4\); the cross-sections run from \(y=-\sqrt x\) to \(y=\sqrt x\) and are circular disks with the \(xy\)-plane segment as a diameter, side or base. The cross-sectional area is'
+    A: '\(2 \pi x\)'
+    B: '\(\frac{\pi x}{2}\)'
+    C: '\(\pi x\)'
+    D: '\(\pi x^{2}\)'
+    answer: C
+    hint: 'The segment from \(-\sqrt x\) to \(\sqrt x\) has length \(2\sqrt x\).'
+    explanation: 'With the length \(2\sqrt{x}\): disks \(\pi x\), squares \(4x\), diagonal squares \(2x\), equilateral triangles \(\sqrt3x\).'
+  6:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=0\) and \(x=4\); the cross-sections run from \(y=-\sqrt x\) to \(y=\sqrt x\) and are squares with bases in the \(xy\)-plane with the \(xy\)-plane segment as a diameter, side or base. The cross-sectional area is'
+    A: '\(8 x\)'
+    B: '\(2 x\)'
+    C: '\(4 x^{2}\)'
+    D: '\(4 x\)'
+    answer: D
+    hint: 'The segment from \(-\sqrt x\) to \(\sqrt x\) has length \(2\sqrt x\).'
+    explanation: 'With the length \(2\sqrt{x}\): disks \(\pi x\), squares \(4x\), diagonal squares \(2x\), equilateral triangles \(\sqrt3x\).'
+  7:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=0\) and \(x=4\); the cross-sections run from \(y=-\sqrt x\) to \(y=\sqrt x\) and are squares with diagonals in the \(xy\)-plane with the \(xy\)-plane segment as a diameter, side or base. The cross-sectional area is'
+    A: '\(2 x^{2}\)'
+    B: '\(4 x\)'
+    C: '\(x\)'
+    D: '\(2 x\)'
+    answer: D
+    hint: 'The segment from \(-\sqrt x\) to \(\sqrt x\) has length \(2\sqrt x\).'
+    explanation: 'With the length \(2\sqrt{x}\): disks \(\pi x\), squares \(4x\), diagonal squares \(2x\), equilateral triangles \(\sqrt3x\).'
+  8:
+    topic: s6-1
+    question: 'The solid lies between planes perpendicular to the \(x\)-axis at \(x=0\) and \(x=4\); the cross-sections run from \(y=-\sqrt x\) to \(y=\sqrt x\) and are equilateral triangles with the \(xy\)-plane segment as a diameter, side or base. The cross-sectional area is'
+    A: '\(\sqrt{3} x^{2}\)'
+    B: '\(2 \sqrt{3} x\)'
+    C: '\(\frac{\sqrt{3} x}{2}\)'
+    D: '\(\sqrt{3} x\)'
+    answer: D
+    hint: 'The segment from \(-\sqrt x\) to \(\sqrt x\) has length \(2\sqrt x\).'
+    explanation: 'With the length \(2\sqrt{x}\): disks \(\pi x\), squares \(4x\), diagonal squares \(2x\), equilateral triangles \(\sqrt3x\).'
+  9:
+    topic: s6-1
+    question: 'The solid lies between \(x=0\) and \(x=4\); its cross-sections between \(y=-\sqrt x\) and \(y=\sqrt x\) are squares. Its volume is'
+    A: '\(16\)'
+    B: '\(32\)'
+    C: '\(-32\)'
+    D: '\(64\)'
+    answer: B
+    hint: '\(V=\int_0^4A(x)\,dx\) with \(A=(2\sqrt x)^2\).'
+    explanation: '\(\int_0^44x\,dx=32\).'
+  10:
+    topic: s6-1
+    question: 'The solid lies between \(x=-1\) and \(x=1\); cross-sections are disks whose diameters run from \(y=x^2\) to \(y=2-x^2\). Its volume is'
+    A: '\(\frac{16 \pi}{15}\)'
+    B: '\(- \frac{16 \pi}{15}\)'
+    C: '\(\frac{32 \pi}{15}\)'
+    D: '\(\frac{16}{15}\)'
+    answer: A
+    hint: 'The diameter is \(2-2x^2\), so the radius is \(1-x^2\).'
+    explanation: '\(V=\pi\int_{-1}^1(1-x^2)^2dx=\tfrac{16\pi}{15}\).'
+  11:
+    topic: s6-1
+    question: 'The solid lies between \(x=-1\) and \(x=1\); cross-sections are squares with bases from \(y=-\sqrt{1-x^2}\) to \(y=\sqrt{1-x^2}\). Its volume is'
+    A: '\(- \frac{16}{3}\)'
+    B: '\(\frac{32}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{16}{3}\)'
+    answer: D
+    hint: '\(A=(2\sqrt{1-x^2})^2\).'
+    explanation: '\(\int_{-1}^14(1-x^2)dx=\tfrac{16}{3}\).'
+  12:
+    topic: s6-1
+    question: 'The same solid but with squares whose diagonals run from \(y=-\sqrt{1-x^2}\) to \(y=\sqrt{1-x^2}\) has volume'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{8}{3}\)'
+    C: '\(- \frac{8}{3}\)'
+    D: '\(\frac{16}{3}\)'
+    answer: B
+    hint: 'A square with diagonal \(d\) has area \(d^2/2\).'
+    explanation: '\(\int_{-1}^12(1-x^2)dx=\tfrac83\).'
+  13:
+    topic: s6-1
+    question: 'The base of a solid is the region between \(y=2\sqrt{\sin x}\) and the \(x\)-axis on \([0,\pi]\). Its cross-sections perpendicular to the \(x\)-axis are equilateral triangles with bases from the axis to the curve. The volume is'
+    A: '\(\sqrt{3}\)'
+    B: '\(- 2 \sqrt{3}\)'
+    C: '\(4 \sqrt{3}\)'
+    D: '\(2 \sqrt{3}\)'
+    answer: D
+    hint: 'The side is \(2\sqrt{\sin x}\); equilateral area is \(\tfrac{\sqrt3}{4}s^2\).'
+    explanation: '\(\int_0^\pi\sqrt3\sin x\,dx=2\sqrt3\).'
+  14:
+    topic: s6-1
+    question: 'With the same base, but cross-sections that are squares with bases running from the \(x\)-axis to the curve, the volume is'
+    A: '\(8\)'
+    B: '\(4\)'
+    C: '\(16\)'
+    D: '\(-8\)'
+    answer: A
+    hint: '\(A=(2\sqrt{\sin x})^2=4\sin x\).'
+    explanation: '\(\int_0^\pi4\sin x\,dx=8\).'
+  15:
+    topic: s6-1
+    question: 'The solid lies between \(x=-\pi/3\) and \(x=\pi/3\); its cross-sections are circular disks whose diameters run from \(y=\tan x\) to \(y=\sec x\). The volume is'
+    A: '\(\frac{\pi \left(\pi - 6 \sqrt{3}\right)}{6}\)'
+    B: '\(\frac{\pi \left(- \pi + 6 \sqrt{3}\right)}{6}\)'
+    C: '\(- \frac{\pi}{6} + \sqrt{3}\)'
+    D: '\(\frac{\pi \left(- \pi + 6 \sqrt{3}\right)}{3}\)'
+    answer: B
+    hint: 'The radius is \(\tfrac12(\sec x-\tan x)\).'
+    explanation: '\(\tfrac\pi4\int_{-\pi/3}^{\pi/3}(\sec x-\tan x)^2dx\).'
+  16:
+    topic: s6-1
+    question: 'The solid lies between \(y=0\) and \(y=2\); its cross-sections perpendicular to the \(y\)-axis are disks whose diameters run from the \(y\)-axis to the parabola \(x=\sqrt5y^2\). Its volume is'
+    A: '\(8\)'
+    B: '\(- 8 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(8 \pi\)'
+    answer: D
+    hint: 'The diameter is \(\sqrt5y^2\), so \(A=\tfrac\pi4\cdot5y^4\).'
+    explanation: '\(\tfrac{5\pi}4\cdot\tfrac{32}5=8\pi\).'
+  17:
+    topic: s6-1
+    question: 'The base of a solid is the disk \(x^2+y^2\le1\). Its cross-sections perpendicular to the \(y\)-axis between \(y=-1\) and \(y=1\) are isosceles right triangles with one leg in the disk. The volume is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(- \frac{8}{3}\)'
+    C: '\(\frac{16}{3}\)'
+    D: '\(\frac{8}{3}\)'
+    answer: D
+    hint: 'The leg is \(2\sqrt{1-y^2}\); the area is \(\tfrac12\) leg\(^2\).'
+    explanation: '\(\int_{-1}^12(1-y^2)dy=\tfrac83\).'
+  18:
+    topic: s6-1
+    question: 'The solid lies between \(x=-1\) and \(x=1\); cross-sections are circles whose diameters stretch from \(y=-\dfrac{1}{\sqrt{1+x^2}}\) to \(y=\dfrac{1}{\sqrt{1+x^2}}\). The volume is'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(\frac{\pi^{2}}{2}\)'
+    C: '\(- \frac{\pi^{2}}{2}\)'
+    D: '\(\pi^{2}\)'
+    answer: B
+    hint: 'The radius is \(\dfrac{1}{\sqrt{1+x^2}}\), so \(A=\dfrac{\pi}{1+x^2}\).'
+    explanation: '\(\pi\left[\tan^{-1}x\right]_{-1}^1=\dfrac{\pi^2}{2}\).'
+  19:
+    topic: s6-1
+    question: 'With the same \(x\)-range, cross-sections that are vertical squares with base edges from \(y=-\dfrac1{\sqrt{1+x^2}}\) to \(y=\dfrac1{\sqrt{1+x^2}}\) give volume'
+    A: '\(4 \pi\)'
+    B: '\(2 \pi\)'
+    C: '\(2\)'
+    D: '\(- 2 \pi\)'
+    answer: B
+    hint: 'The side is \(\dfrac{2}{\sqrt{1+x^2}}\).'
+    explanation: '\(4\left[\tan^{-1}x\right]_{-1}^1=2\pi\).'
+  20:
+    topic: s6-1
+    question: 'A square of side \(s\) lies in a plane perpendicular to a line \(L\). One vertex is on \(L\). The square moves a distance \(h\) along \(L\), turning once, to form a twisted column. Its volume is'
+    A: '\(\dfrac{s^2h}{3}\)'
+    B: '\(s^2h\)'
+    C: '\(\pi s^2h\)'
+    D: '\(\dfrac{s^2h}{2}\)'
+    answer: B
+    hint: 'Every cross-section has area \(s^2\); rotation does not change area (Cavalieri''s principle).'
+    explanation: The volume is the area times the height. Turning twice instead of once does not change it.
+  21:
+    topic: s6-1
+    question: 'A solid between \(x=0\) and \(x=12\) has circular-disk cross-sections with diameters from \(y=x/2\) to \(y=x\). Its volume equals that of a right circular cone with base radius 3 and height 12. Why?'
+    A: The solids are congruent
+    B: Both have the same surface area
+    C: Both have radius 3
+    D: 'Cross-sectional areas match at every \(x\) (Cavalieri''s principle)'
+    answer: D
+    hint: 'The disk diameter is \(x/2\).'
+    explanation: '\(A(x)=\pi(x/4)^2\) in both solids; the cone of radius 3 and height 12 has volume \(36\pi\).'
+  22:
+    topic: s6-1
+    question: 'The region bounded by \(y=x^2\), \(y=0\), \(x=2\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(- \frac{32 \pi}{5}\)'
+    B: '\(\frac{32}{5}\)'
+    C: '\(\frac{64 \pi}{5}\)'
+    D: '\(\frac{32 \pi}{5}\)'
+    answer: D
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{0}^{2}\left(x^{4}\right)dx=\frac{32 \pi}{5}\).'
+  23:
+    topic: s6-1
+    question: 'The region bounded by \(y=x^3\), \(y=0\), \(x=2\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(\frac{128 \pi}{7}\)'
+    B: '\(- \frac{128 \pi}{7}\)'
+    C: '\(\frac{128}{7}\)'
+    D: '\(\frac{256 \pi}{7}\)'
+    answer: A
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{0}^{2}\left(x^{6}\right)dx=\frac{128 \pi}{7}\).'
+  24:
+    topic: s6-1
+    question: 'The region bounded by \(y=\sqrt{9-x^2}\), \(y=0\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(72 \pi\)'
+    B: '\(36 \pi\)'
+    C: '\(36\)'
+    D: '\(- 36 \pi\)'
+    answer: B
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{-3}^{3}\left(9 - x^{2}\right)dx=36 \pi\).'
+  25:
+    topic: s6-1
+    question: 'The region bounded by \(y=x-x^2\), \(y=0\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(\frac{1}{30}\)'
+    B: '\(\frac{\pi}{15}\)'
+    C: '\(\frac{\pi}{30}\)'
+    D: '\(- \frac{\pi}{30}\)'
+    answer: C
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{0}^{1}\left(\left(- x^{2} + x\right)^{2}\right)dx=\frac{\pi}{30}\).'
+  26:
+    topic: s6-1
+    question: 'The region bounded by \(y=\sqrt{\cos x}\), \(0\le x\le\tfrac\pi2\), \(y=0\), \(x=0\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(\pi\)'
+    B: '\(1\)'
+    C: '\(2 \pi\)'
+    D: '\(- \pi\)'
+    answer: A
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{0}^{\frac{\pi}{2}}\left(\cos{\left(x \right)}\right)dx=\pi\).'
+  27:
+    topic: s6-1
+    question: 'The region bounded by \(y=\sec x\), \(y=0\), \(x=-\tfrac\pi4\), \(x=\tfrac\pi4\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(4 \pi\)'
+    B: '\(- 2 \pi\)'
+    C: '\(2\)'
+    D: '\(2 \pi\)'
+    answer: D
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{- \frac{\pi}{4}}^{\frac{\pi}{4}}\left(\sec^{2}{\left(x \right)}\right)dx=2 \pi\).'
+  28:
+    topic: s6-1
+    question: 'The region bounded by \(y=e^{-x}\), \(y=0\), \(x=0\), \(x=1\) is revolved about the \(x\)-axis. Using the disk method, the volume is'
+    A: '\(- \frac{\pi}{2} + \frac{\pi}{2 e^{2}}\)'
+    B: '\(- \frac{1 - e^{2}}{2 e^{2}}\)'
+    C: '\(- \frac{\pi}{e^{2}} + \pi\)'
+    D: '\(- \frac{\pi}{2 e^{2}} + \frac{\pi}{2}\)'
+    answer: D
+    hint: '\(V=\pi\int_a^b[f(x)]^2dx\).'
+    explanation: '\(V=\pi\int_{0}^{1}\left(e^{- 2 x}\right)dx=- \frac{\pi}{2 e^{2}} + \frac{\pi}{2}\).'
+  29:
+    topic: s6-1
+    question: 'The region under \(x+2y=2\) in the first quadrant is revolved about the \(x\)-axis. The volume is'
+    A: '\(\frac{4 \pi}{3}\)'
+    B: '\(\frac{2 \pi}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(- \frac{2 \pi}{3}\)'
+    answer: B
+    hint: '\(y=\tfrac{2-x}{2}\) for \(0\le x\le2\).'
+    explanation: '\(\tfrac\pi4\int_0^2(2-x)^2dx=\tfrac{2\pi}3\).'
+  30:
+    topic: s6-1
+    question: 'The region between the \(y\)-axis, \(y=2\), and the line \(x=\tfrac{3y}{2}\) (for \(0\le y\le2\)) is revolved about the \(y\)-axis. The volume is'
+    A: '\(6 \pi\)'
+    B: '\(12 \pi\)'
+    C: '\(6\)'
+    D: '\(- 6 \pi\)'
+    answer: A
+    hint: 'Integrate with respect to \(y\); the radius is \(x=\tfrac{3y}{2}\).'
+    explanation: '\(\tfrac{9\pi}4\int_0^2y^2dy=6\pi\).'
+  31:
+    topic: s6-1
+    question: 'The region under \(y=\sin x\cos x\) on \([0,\tfrac\pi2]\) is revolved about the \(x\)-axis. The volume is'
+    A: '\(\frac{\pi}{16}\)'
+    B: '\(\frac{\pi^{2}}{8}\)'
+    C: '\(\frac{\pi^{2}}{16}\)'
+    D: '\(- \frac{\pi^{2}}{16}\)'
+    answer: C
+    hint: '\(\sin^2x\cos^2x=\tfrac14\sin^22x\).'
+    explanation: '\(\dfrac{\pi^2}{16}\).'
+  32:
+    topic: s6-1
+    question: 'The region bounded by \(y=\dfrac{1}{2\sqrt x}\), the \(x\)-axis, \(x=\tfrac14\) and \(x=4\) is revolved about the \(x\)-axis. The volume is'
+    A: '\(\pi \ln{\left(2 \right)}\)'
+    B: '\(- \pi \ln{\left(2 \right)}\)'
+    C: '\(\ln{\left(2 \right)}\)'
+    D: '\(2 \pi \ln{\left(2 \right)}\)'
+    answer: A
+    hint: '\(y^2=\dfrac{1}{4x}\).'
+    explanation: '\(\tfrac\pi4\ln16=\pi\ln2\).'
+  33:
+    topic: s6-1
+    question: 'The region bounded by \(y=\sqrt{\cot x}\), the \(x\)-axis, \(x=\tfrac\pi6\) and \(x=\tfrac\pi2\) is revolved about the \(x\)-axis. The volume is'
+    A: '\(- \pi \ln{\left(2 \right)}\)'
+    B: '\(2 \pi \ln{\left(2 \right)}\)'
+    C: '\(\pi \ln{\left(2 \right)}\)'
+    D: '\(\ln{\left(2 \right)}\)'
+    answer: C
+    hint: '\(\int\cot x\,dx=\ln|\sin x|\).'
+    explanation: '\(\pi\ln\dfrac{1}{1/2}=\pi\ln2\).'
+  34:
+    topic: s6-1
+    question: 'The region enclosed by \(x=\sqrt5\,y^2\), \(x=0\), \(y=-1\) and \(y=1\) is revolved about the \(y\)-axis. The volume is'
+    A: '\(- 2 \pi\)'
+    B: '\(4 \pi\)'
+    C: '\(2\)'
+    D: '\(2 \pi\)'
+    answer: D
+    hint: 'Use disks perpendicular to the \(y\)-axis.'
+    explanation: '\(5\pi\cdot\tfrac25=2\pi\).'
+  35:
+    topic: s6-1
+    question: 'The region enclosed by \(y=x\), \(y=1\), \(x=0\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(\frac{2 \pi}{3}\)'
+    B: '\(\frac{4 \pi}{3}\)'
+    C: '\(- \frac{2 \pi}{3}\)'
+    D: '\(\frac{2}{3}\)'
+    answer: A
+    hint: '\(V=\pi\int(R^2-r^2)\,dx\), where \(R\) is the outer curve and \(r\) the inner.'
+    explanation: 'Outer minus inner squared, integrated: \(V=\frac{2 \pi}{3}\).'
+  36:
+    topic: s6-1
+    question: 'The region enclosed by \(y=2\sqrt x\), \(y=2\), \(x=0\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(2 \pi\)'
+    B: '\(2\)'
+    C: '\(- 2 \pi\)'
+    D: '\(4 \pi\)'
+    answer: A
+    hint: '\(V=\pi\int(R^2-r^2)\,dx\), where \(R\) is the outer curve and \(r\) the inner.'
+    explanation: 'Outer minus inner squared, integrated: \(V=2 \pi\).'
+  37:
+    topic: s6-1
+    question: 'The region enclosed by \(y=x^2+1\) and \(y=x+3\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(\frac{117 \pi}{5}\)'
+    B: '\(\frac{234 \pi}{5}\)'
+    C: '\(\frac{117}{5}\)'
+    D: '\(- \frac{117 \pi}{5}\)'
+    answer: A
+    hint: '\(V=\pi\int(R^2-r^2)\,dx\), where \(R\) is the outer curve and \(r\) the inner.'
+    explanation: 'Outer minus inner squared, integrated: \(V=\frac{117 \pi}{5}\).'
+  38:
+    topic: s6-1
+    question: 'The region enclosed by \(y=4-x^2\) and \(y=2-x\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(\frac{108 \pi}{5}\)'
+    B: '\(\frac{108}{5}\)'
+    C: '\(- \frac{108 \pi}{5}\)'
+    D: '\(\frac{216 \pi}{5}\)'
+    answer: A
+    hint: '\(V=\pi\int(R^2-r^2)\,dx\), where \(R\) is the outer curve and \(r\) the inner.'
+    explanation: 'Outer minus inner squared, integrated: \(V=\frac{108 \pi}{5}\).'
+  39:
+    topic: s6-1
+    question: 'The region enclosed by \(y=\sec x\), \(y=\sqrt2\), \(-\tfrac\pi4\le x\le\tfrac\pi4\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(2 \pi \left(-2 + \pi\right)\)'
+    B: '\(\pi \left(-2 + \pi\right)\)'
+    C: '\(-2 + \pi\)'
+    D: '\(\pi \left(2 - \pi\right)\)'
+    answer: B
+    hint: '\(V=\pi\int(R^2-r^2)\,dx\), where \(R\) is the outer curve and \(r\) the inner.'
+    explanation: 'Outer minus inner squared, integrated: \(V=\pi \left(-2 + \pi\right)\).'
+  40:
+    topic: s6-1
+    question: 'The region enclosed by \(y=\sec x\), \(y=\tan x\), \(x=0\), \(x=1\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(\pi\)'
+    B: '\(2 \pi\)'
+    C: '\(1\)'
+    D: '\(- \pi\)'
+    answer: A
+    hint: '\(V=\pi\int(R^2-r^2)\,dx\), where \(R\) is the outer curve and \(r\) the inner.'
+    explanation: 'Outer minus inner squared, integrated: \(V=\pi\).'
+  41:
+    topic: s6-1
+    question: 'The first-quadrant region bounded above by \(y=x^2\), below by the \(x\)-axis, and on the right by \(x=2\) is revolved about the \(y\)-axis. The volume is'
+    A: '\(8 \pi\)'
+    B: '\(16 \pi\)'
+    C: '\(8\)'
+    D: '\(- 8 \pi\)'
+    answer: A
+    hint: 'Use washers: outer radius 2, inner radius \(\sqrt y\).'
+    explanation: '\(\pi\int_0^4(4-y)\,dy=8\pi\).'
+  42:
+    topic: s6-1
+    question: 'The region bounded by \(y=\sqrt x\), \(y=2\), and \(x=0\) is revolved about (a) the \(x\)-axis. The volume is'
+    A: '\(8 \pi\)'
+    B: '\(- 8 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(8\)'
+    answer: A
+    hint: 'Washers with outer radius 2 and inner radius \(\sqrt x\).'
+    explanation: '\(\pi\int_0^4(4-x)\,dx=8\pi\).'
+  43:
+    topic: s6-1
+    question: 'For the same region (\(y=\sqrt x\), \(y=2\), \(x=0\)), revolving about the \(y\)-axis gives volume'
+    A: '\(\frac{32 \pi}{5}\)'
+    B: '\(- \frac{32 \pi}{5}\)'
+    C: '\(\frac{32}{5}\)'
+    D: '\(\frac{64 \pi}{5}\)'
+    answer: A
+    hint: 'Disks perpendicular to the \(y\)-axis, radius \(x=y^2\).'
+    explanation: '\(\pi\int_0^2y^4dy=\tfrac{32\pi}5\).'
+  44:
+    topic: s6-1
+    question: 'For the same region, revolving about the line \(y=2\) gives volume'
+    A: '\(\frac{8}{3}\)'
+    B: '\(\frac{8 \pi}{3}\)'
+    C: '\(\frac{16 \pi}{3}\)'
+    D: '\(- \frac{8 \pi}{3}\)'
+    answer: B
+    hint: 'The radius is the distance from the curve to \(y=2\): \(2-\sqrt x\).'
+    explanation: '\(\pi\int_0^4(2-\sqrt x)^2dx=\tfrac{8\pi}3\).'
+  45:
+    topic: s6-1
+    question: 'For the same region, revolving about the line \(x=4\) gives volume'
+    A: '\(\frac{224}{15}\)'
+    B: '\(\frac{224 \pi}{15}\)'
+    C: '\(- \frac{224 \pi}{15}\)'
+    D: '\(\frac{448 \pi}{15}\)'
+    answer: B
+    hint: 'Washers: outer radius 4 (the line to the \(y\)-axis), inner radius \(4-y^2\).'
+    explanation: '\(\pi\int_0^2\left[16-(4-y^2)^2\right]dy=\tfrac{224\pi}{15}\).'
+  46:
+    topic: s6-1
+    question: 'The triangular region bounded by \(y=2x\), \(y=0\) and \(x=1\) is revolved about the line \(x=1\). The volume is'
+    A: '\(\frac{2}{3}\)'
+    B: '\(\frac{4 \pi}{3}\)'
+    C: '\(\frac{2 \pi}{3}\)'
+    D: '\(- \frac{2 \pi}{3}\)'
+    answer: C
+    hint: 'Disks perpendicular to the line: radius \(1-\tfrac y2\).'
+    explanation: '\(\tfrac{2\pi}3\), one third of a cone \(\pi r^2h\) with \(r=1\), \(h=2\).'
+  47:
+    topic: s6-1
+    question: 'The region bounded by \(y=x^2\) and \(y=1\) is revolved about the line \(y=1\). The volume is'
+    A: '\(\frac{16}{15}\)'
+    B: '\(- \frac{16 \pi}{15}\)'
+    C: '\(\frac{32 \pi}{15}\)'
+    D: '\(\frac{16 \pi}{15}\)'
+    answer: D
+    hint: 'The radius is \(1-x^2\).'
+    explanation: '\(\tfrac{16\pi}{15}\).'
+  48:
+    topic: s6-1
+    question: 'The volume of a torus formed by revolving the disk \(x^2+y^2\le a^2\) about the line \(x=b>a\) is'
+    A: '\(2\pi^2a^2b\)'
+    B: '\(4\pi^2a^2b\)'
+    C: '\(\pi^2a^2b\)'
+    D: '\(2\pi a^2b\)'
+    answer: A
+    hint: 'Use the hint \(\int_{-a}^a\sqrt{a^2-y^2}\,dy=\tfrac{\pi a^2}{2}\).'
+    explanation: 'Washers give \(4\pi b\int_{-a}^a\sqrt{a^2-y^2}dy=2\pi^2a^2b\). (Pappus: area \(\pi a^2\) times path \(2\pi b\).)'
+  49:
+    topic: s6-1
+    question: 'A bowl is formed by revolving \(y=x^2/2\) between \(y=0\) and \(y=5\) about the \(y\)-axis. Its volume is'
+    A: '\(25\)'
+    B: '\(50 \pi\)'
+    C: '\(- 25 \pi\)'
+    D: '\(25 \pi\)'
+    answer: D
+    hint: '\(x^2=2y\) so the disk area is \(2\pi y\).'
+    explanation: '\(\pi\int_0^52y\,dy=25\pi\).'
+  50:
+    topic: s6-1
+    question: 'If the bowl \(y=x^2/2\) is filled at a constant 3 cubic units per second, how fast is the water level rising when the water is 4 units deep?'
+    A: '\(\dfrac{3}{4\pi}\) units/s'
+    B: '\(\dfrac{3}{8\pi}\) units/s'
+    C: '\(\dfrac{3}{25\pi}\) units/s'
+    D: '\(\dfrac{3\pi}{8}\) units/s'
+    answer: B
+    hint: '\(V=\pi y^2\), so \(\dfrac{dV}{dt}=2\pi y\dfrac{dy}{dt}\).'
+    explanation: '\(3=2\pi(4)\dfrac{dy}{dt}\) gives \(\dfrac{dy}{dt}=\dfrac{3}{8\pi}\).'
+  51:
+    topic: s6-1
+    question: 'A hemispherical bowl of radius \(a\) holds water to depth \(h\). The volume of water is'
+    A: '\(\pi\left(ah^2-\dfrac{h^3}{3}\right)\)'
+    B: '\(\dfrac{2}{3}\pi a^3\)'
+    C: '\(\pi a h^2\)'
+    D: '\(\dfrac{\pi h^3}{3}\)'
+    answer: A
+    hint: '\(V=\pi\int_0^h(2ay-y^2)\,dy\).'
+    explanation: '\(V=\pi\left[ay^2-\tfrac{y^3}3\right]_0^h\). For \(h=a\) it gives \(\tfrac23\pi a^3\).'
+  52:
+    topic: s6-1
+    question: 'Use calculus to find the volume of a right circular cone of height \(h\) and base radius \(r\):'
+    A: '\(\dfrac12\pi r^2h\)'
+    B: '\(\dfrac23\pi r^2h\)'
+    C: '\(\pi r^2h\)'
+    D: '\(\dfrac13\pi r^2h\)'
+    answer: D
+    hint: 'Revolve the line \(y=\tfrac rhx\) about the \(x\)-axis.'
+    explanation: '\(\pi\int_0^h\left(\tfrac rhx\right)^2dx=\tfrac{\pi r^2h}3\).'
+  53:
+    topic: s6-1
+    question: 'The solid of revolution generated by \(y=\dfrac{1}{\sqrt{1+x^2}}\) from \(x=-\dfrac{\sqrt3}{3}\) to \(x=\sqrt3\) about the \(x\)-axis has volume'
+    A: '\(- \frac{\pi^{2}}{2}\)'
+    B: '\(\pi^{2}\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(\frac{\pi^{2}}{2}\)'
+    answer: D
+    hint: '\(\int\dfrac{dx}{1+x^2}=\tan^{-1}x\).'
+    explanation: '\(\pi\left[\tfrac\pi3+\tfrac\pi6\right]=\tfrac{\pi^2}2\).'
+  54:
+    topic: s6-1
+    question: 'A wok is the part of a sphere of radius 16 cm that is 9 cm deep (from the top of the bowl cut by a plane). Its volume, to the nearest cm\(^3\), is about'
+    A: '\(9216\) cm\(^3\)'
+    B: '\(3308\) cm\(^3\) (about 3.3 L)'
+    C: '\(1053\) cm\(^3\)'
+    D: '\(3000\) cm\(^3\)'
+    answer: B
+    hint: 'The volume of a spherical cap of depth \(h\) is \(\pi h^2(3R-h)/3\).'
+    explanation: '\(\pi\cdot81\cdot39/3=1053\pi\approx3308\) cm\(^3\).'
+  55:
+    topic: s6-1
+    question: 'A plumb bob is formed by revolving \(y=\dfrac{x}{12}\sqrt{36-x^2}\), \(0\le x\le6\), about the \(x\)-axis. Its volume (in cm\(^3\)) is'
+    A: '\(\frac{36}{5}\)'
+    B: '\(- \frac{36 \pi}{5}\)'
+    C: '\(\frac{36 \pi}{5}\)'
+    D: '\(\frac{72 \pi}{5}\)'
+    answer: C
+    hint: '\(y^2=\dfrac{x^2(36-x^2)}{144}\).'
+    explanation: '\(\dfrac{\pi}{144}\left[12x^3-\tfrac{x^5}5\right]_0^6=7.2\pi\approx22.6\). At 8.5 g/cm\(^3\) it weighs about 192 g.'
+  56:
+    topic: s6-1
+    question: 'A fuel tank is formed by revolving \(y=1-\dfrac{x^2}{16}\), \(-4\le x\le4\), about the \(x\)-axis. Its volume (ft\(^3\)) is'
+    A: '\(\frac{64}{15}\)'
+    B: '\(- \frac{64 \pi}{15}\)'
+    C: '\(\frac{128 \pi}{15}\)'
+    D: '\(\frac{64 \pi}{15}\)'
+    answer: D
+    hint: 'Disk method with \(y^2=\left(1-\tfrac{x^2}{16}\right)^2\).'
+    explanation: Integrating the square and evaluating gives the exact value shown.
+  57:
+    topic: s6-1
+    question: 'The arch \(y=\sin x\), \(0\le x\le\pi\), is revolved about the line \(y=c\). The volume is smallest when \(c=\)'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(\dfrac12\)'
+    D: '\(\dfrac2\pi\) (the average value of \(\sin x\))'
+    answer: D
+    hint: '\(V(c)=\pi\int_0^\pi(\sin x-c)^2dx=\pi\left(\tfrac\pi2-4c+\pi c^2\right)\).'
+    explanation: '\(V''(c)=\pi(-4+2\pi c)=0\) gives \(c=2/\pi\). The minimum volume is \(\pi\left(\tfrac\pi2-\tfrac4\pi\right)\).'
+  58:
+    topic: s6-1
+    question: 'The same family (\(y=\sin x\) revolved about \(y=c\) for \(0\le c\le1\)) has its largest volume at'
+    A: '\(c=1\)'
+    B: '\(c=0\)'
+    C: '\(c=\dfrac2\pi\)'
+    D: '\(c=\dfrac12\)'
+    answer: B
+    hint: 'Compare \(V(0)\) and \(V(1)\).'
+    explanation: '\(V(0)=\tfrac{\pi^2}2\) and \(V(1)=\pi\left(\tfrac\pi2-4+\pi\right)\approx2.2\) is smaller, and \(V\) is a parabola in \(c\) opening up, so its maximum on \([0,1]\) is at an endpoint.'
+  59:
+    topic: s6-2
+    question: 'Use shells to find the volume generated by revolving the region under \(y=1+\tfrac{x^2}4\) between \(x=0\) and \(x=2\) about the \(y\)-axis.'
+    A: '\(6\)'
+    B: '\(- 6 \pi\)'
+    C: '\(12 \pi\)'
+    D: '\(6 \pi\)'
+    answer: D
+    hint: '\(V=2\pi\int_a^bx\,h(x)\,dx\).'
+    explanation: '\(V=2\pi\int_{0}^{2}x\,h(x)\,dx=6 \pi\).'
+  60:
+    topic: s6-2
+    question: 'Use shells to find the volume generated by revolving the region under \(y=2-\tfrac{x^2}4\) between \(x=0\) and \(x=2\) about the \(y\)-axis.'
+    A: '\(12 \pi\)'
+    B: '\(6\)'
+    C: '\(- 6 \pi\)'
+    D: '\(6 \pi\)'
+    answer: D
+    hint: '\(V=2\pi\int_a^bx\,h(x)\,dx\).'
+    explanation: '\(V=2\pi\int_{0}^{2}x\,h(x)\,dx=6 \pi\).'
+  61:
+    topic: s6-2
+    question: 'Use shells to find the volume generated by revolving the region under \(y=\sqrt{x^2+1}\) between \(x=0\) and \(x=\sqrt3\) about the \(y\)-axis.'
+    A: '\(\frac{28 \pi}{3}\)'
+    B: '\(\frac{14 \pi}{3}\)'
+    C: '\(\frac{14}{3}\)'
+    D: '\(- \frac{14 \pi}{3}\)'
+    answer: B
+    hint: '\(V=2\pi\int_a^bx\,h(x)\,dx\).'
+    explanation: '\(V=2\pi\int_{0}^{\sqrt{3}}x\,h(x)\,dx=\frac{14 \pi}{3}\).'
+  62:
+    topic: s6-2
+    question: 'Use shells to find the volume generated by revolving the region under \(y=\dfrac{9x}{\sqrt{x^3+9}}\) between \(x=0\) and \(x=3\) about the \(y\)-axis.'
+    A: '\(72 \pi\)'
+    B: '\(- 36 \pi\)'
+    C: '\(36 \pi\)'
+    D: '\(36\)'
+    answer: C
+    hint: '\(V=2\pi\int_a^bx\,h(x)\,dx\).'
+    explanation: '\(V=2\pi\int_{0}^{3}x\,h(x)\,dx=36 \pi\).'
+  63:
+    topic: s6-2
+    question: 'Use shells to find the volume of the solid generated by revolving the region bounded by \(y=x\), \(y=-\tfrac x2\), \(x=2\) about the \(y\)-axis.'
+    A: '\(8 \pi\)'
+    B: '\(16 \pi\)'
+    C: '\(8\)'
+    D: '\(- 8 \pi\)'
+    answer: A
+    hint: 'Shell height is top minus bottom; radius is \(x\).'
+    explanation: '\(V=2\pi\int x(\text{top}-\text{bottom})\,dx=8 \pi\).'
+  64:
+    topic: s6-2
+    question: 'Use shells to find the volume of the solid generated by revolving the region bounded by \(y=2x\), \(y=\tfrac x2\), \(x=1\) about the \(y\)-axis.'
+    A: '\(- \pi\)'
+    B: '\(\pi\)'
+    C: '\(1\)'
+    D: '\(2 \pi\)'
+    answer: B
+    hint: 'Shell height is top minus bottom; radius is \(x\).'
+    explanation: '\(V=2\pi\int x(\text{top}-\text{bottom})\,dx=\pi\).'
+  65:
+    topic: s6-2
+    question: 'Use shells to find the volume of the solid generated by revolving the region bounded by \(y=x^2\), \(y=2-x\), \(x=0\) (\(x\ge0\)) about the \(y\)-axis.'
+    A: '\(\frac{5 \pi}{6}\)'
+    B: '\(- \frac{5 \pi}{6}\)'
+    C: '\(\frac{5}{6}\)'
+    D: '\(\frac{5 \pi}{3}\)'
+    answer: A
+    hint: 'Shell height is top minus bottom; radius is \(x\).'
+    explanation: '\(V=2\pi\int x(\text{top}-\text{bottom})\,dx=\frac{5 \pi}{6}\).'
+  66:
+    topic: s6-2
+    question: 'Use shells to find the volume of the solid generated by revolving the region bounded by \(y=2-x^2\), \(y=x^2\), \(x=0\) about the \(y\)-axis.'
+    A: '\(1\)'
+    B: '\(- \pi\)'
+    C: '\(\pi\)'
+    D: '\(2 \pi\)'
+    answer: C
+    hint: 'Shell height is top minus bottom; radius is \(x\).'
+    explanation: '\(V=2\pi\int x(\text{top}-\text{bottom})\,dx=\pi\).'
+  67:
+    topic: s6-2
+    question: 'Use shells to find the volume of the solid generated by revolving the region bounded by \(y=2x-1\), \(y=\sqrt x\), \(x=0\) about the \(y\)-axis.'
+    A: '\(\frac{7 \pi}{15}\)'
+    B: '\(- \frac{7 \pi}{15}\)'
+    C: '\(\frac{7}{15}\)'
+    D: '\(\frac{14 \pi}{15}\)'
+    answer: A
+    hint: 'Shell height is top minus bottom; radius is \(x\).'
+    explanation: '\(V=2\pi\int x(\text{top}-\text{bottom})\,dx=\frac{7 \pi}{15}\).'
+  68:
+    topic: s6-2
+    question: 'Use shells to find the volume of the solid generated by revolving the region bounded by \(y=\dfrac{3}{2\sqrt x}\), \(y=0\), \(x=1\), \(x=4\) about the \(y\)-axis.'
+    A: '\(14 \pi\)'
+    B: '\(28 \pi\)'
+    C: '\(14\)'
+    D: '\(- 14 \pi\)'
+    answer: A
+    hint: 'Shell height is top minus bottom; radius is \(x\).'
+    explanation: '\(V=2\pi\int x(\text{top}-\text{bottom})\,dx=14 \pi\).'
+  69:
+    topic: s6-2
+    question: 'Let \(f(x)=\dfrac{\sin x}{x}\) for \(0<x\le\pi\) and \(f(0)=1\). Revolving the region under \(f\) about the \(y\)-axis (shells with \(x f(x)=\sin x\)) gives volume'
+    A: '\(4\)'
+    B: '\(- 4 \pi\)'
+    C: '\(4 \pi\)'
+    D: '\(8 \pi\)'
+    answer: C
+    hint: '\(2\pi\int xf(x)\,dx=2\pi\int\sin x\,dx\).'
+    explanation: '\(2\pi\cdot2=4\pi\).'
+  70:
+    topic: s6-2
+    question: 'Let \(g(x)=\dfrac{\tan^2x}{x}\) for \(0<x\le\tfrac\pi4\) and \(g(0)=0\). Revolving the region under \(g\) about the \(y\)-axis gives volume'
+    A: '\(\frac{\pi \left(-4 + \pi\right)}{2}\)'
+    B: '\(\frac{\pi \left(4 - \pi\right)}{2}\)'
+    C: '\(\pi \left(4 - \pi\right)\)'
+    D: '\(2 - \frac{\pi}{2}\)'
+    answer: B
+    hint: '\(xg(x)=\tan^2x=\sec^2x-1\).'
+    explanation: '\(2\pi\left[\tan x-x\right]_0^{\pi/4}=2\pi-\dfrac{\pi^2}{2}\).'
+  71:
+    topic: s6-2
+    question: 'Using shells, the volume generated by revolving the region bounded by \(x=\sqrt y\), \(x=-y\) and \(y=2\) about the \(x\)-axis is'
+    A: '\(\frac{16 \sqrt{2}}{5} + \frac{16}{3}\)'
+    B: '\(- \frac{16 \pi \left(3 \sqrt{2} + 5\right)}{15}\)'
+    C: '\(\frac{32 \pi \left(3 \sqrt{2} + 5\right)}{15}\)'
+    D: '\(\frac{16 \pi \left(3 \sqrt{2} + 5\right)}{15}\)'
+    answer: D
+    hint: 'Horizontal shells: radius \(y\), height \(\sqrt y-(-y)\).'
+    explanation: '\(2\pi\int_0^2y(\sqrt y+y)\,dy\).'
+  72:
+    topic: s6-2
+    question: 'Using shells, revolving the region bounded by \(x=2y-y^2\) and \(x=0\) about the \(x\)-axis gives volume'
+    A: '\(- \frac{8 \pi}{3}\)'
+    B: '\(\frac{8 \pi}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{16 \pi}{3}\)'
+    answer: B
+    hint: 'Horizontal shells of radius \(y\) and height \(2y-y^2\).'
+    explanation: '\(2\pi\left[\tfrac{2y^3}3-\tfrac{y^4}4\right]_0^2=2\pi\left(\tfrac{16}3-4\right)=\tfrac{8\pi}3\).'
+  73:
+    topic: s6-2
+    question: 'Revolving the region bounded by \(y=|x|\) and \(y=1\) about the \(x\)-axis (shells with horizontal slices) gives volume'
+    A: '\(\frac{4}{3}\)'
+    B: '\(- \frac{4 \pi}{3}\)'
+    C: '\(\frac{8 \pi}{3}\)'
+    D: '\(\frac{4 \pi}{3}\)'
+    answer: D
+    hint: 'At height \(y\) the width is \(2y\).'
+    explanation: '\(2\pi\int_0^12y^2dy=\tfrac{4\pi}3\).'
+  74:
+    topic: s6-2
+    question: 'Revolve the region bounded by \(x=12(y^2-y^3)\) and the \(y\)-axis (\(0\le y\le1\)) about the \(x\)-axis. The volume is'
+    A: '\(\frac{12 \pi}{5}\)'
+    B: '\(\frac{6 \pi}{5}\)'
+    C: '\(\frac{6}{5}\)'
+    D: '\(- \frac{6 \pi}{5}\)'
+    answer: B
+    hint: 'Horizontal shells: \(2\pi\int y\cdot x(y)\,dy\).'
+    explanation: '\(24\pi\left(\tfrac14-\tfrac15\right)=\tfrac{6\pi}5\).'
+  75:
+    topic: s6-2
+    question: 'Revolving the region between \(y=x\) and \(y=x^2\) about the \(y\)-axis (shell method) gives volume'
+    A: '\(- \frac{\pi}{6}\)'
+    B: '\(\frac{\pi}{6}\)'
+    C: '\(\frac{\pi}{3}\)'
+    D: '\(\frac{1}{6}\)'
+    answer: B
+    hint: 'Shells of radius \(x\) and height \(x-x^2\).'
+    explanation: '\(2\pi\left(\tfrac13-\tfrac14\right)=\tfrac\pi6\).'
+  76:
+    topic: s6-2
+    question: 'Revolving that same region (between \(y=x\) and \(y=x^2\)) about the \(x\)-axis (washer method) gives volume'
+    A: '\(\frac{2}{15}\)'
+    B: '\(\frac{2 \pi}{15}\)'
+    C: '\(\frac{4 \pi}{15}\)'
+    D: '\(- \frac{2 \pi}{15}\)'
+    answer: B
+    hint: 'Outer radius \(x\), inner radius \(x^2\).'
+    explanation: '\(\pi\left(\tfrac13-\tfrac15\right)=\tfrac{2\pi}{15}\).'
+  77:
+    topic: s6-2
+    question: 'The triangle with vertices \((1,1)\), \((1,2)\), \((2,2)\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(\frac{5 \pi}{3}\)'
+    B: '\(\frac{5}{3}\)'
+    C: '\(\frac{10 \pi}{3}\)'
+    D: '\(- \frac{5 \pi}{3}\)'
+    answer: A
+    hint: 'For \(1\le x\le2\), the region is between \(y=x\) and \(y=2\): outer 2, inner \(x\).'
+    explanation: '\(\pi\int_1^2(4-x^2)\,dx=\tfrac{5\pi}3\).'
+  78:
+    topic: s6-2
+    question: 'The region bounded by \(y=\sqrt x\), \(y=2\), \(x=0\) is revolved about the line \(x=4\). By shells (horizontal), the volume is'
+    A: '\(\frac{224}{15}\)'
+    B: '\(\frac{448 \pi}{15}\)'
+    C: '\(- \frac{224 \pi}{15}\)'
+    D: '\(\frac{224 \pi}{15}\)'
+    answer: D
+    hint: 'Washers with outer radius 4 and inner radius \(4-y^2\) give the same answer.'
+    explanation: '\(\tfrac{224\pi}{15}\).'
+  79:
+    topic: s6-2
+    question: 'The region in the first quadrant bounded above by \(y=\dfrac{1}{x^{1/4}}\), on the left by \(x=\tfrac1{16}\), and below by \(y=1\) is revolved about the \(x\)-axis. Using washers, the volume is'
+    A: '\(\frac{9}{16}\)'
+    B: '\(\frac{9 \pi}{16}\)'
+    C: '\(- \frac{9 \pi}{16}\)'
+    D: '\(\frac{9 \pi}{8}\)'
+    answer: B
+    hint: 'Outer radius \(x^{-1/4}\), inner radius 1.'
+    explanation: '\(\pi\left[2\sqrt x-x\right]_{1/16}^1=\tfrac{9\pi}{16}\).'
+  80:
+    topic: s6-2
+    question: 'The region in the first quadrant bounded above by \(y=\dfrac{1}{\sqrt x}\), on the left by \(x=\tfrac14\), and below by \(y=1\) is revolved about the \(y\)-axis. Using the washer method, the volume is'
+    A: '\(- \frac{11 \pi}{48}\)'
+    B: '\(\frac{11 \pi}{48}\)'
+    C: '\(\frac{11 \pi}{24}\)'
+    D: '\(\frac{11}{48}\)'
+    answer: B
+    hint: 'For \(1\le y\le2\), \(x\) runs from \(\tfrac14\) to \(\tfrac{1}{y^2}\).'
+    explanation: '\(\pi\int_1^2\left(y^{-4}-\tfrac1{16}\right)dy=\pi\left(\tfrac7{24}-\tfrac1{16}\right)=\tfrac{11\pi}{48}\).'
+  81:
+    topic: s6-2
+    question: 'The region bounded by \(y=e^{-x^2}\), \(y=0\), \(x=0\), \(x=1\) is revolved about the \(y\)-axis. The volume is'
+    A: '\(- \frac{2 \pi}{e} + 2 \pi\)'
+    B: '\(- \frac{\pi}{e} + \pi\)'
+    C: '\(- \pi + \frac{\pi}{e}\)'
+    D: '\(1 - e^{-1}\)'
+    answer: B
+    hint: 'Shells: \(2\pi\int xe^{-x^2}dx\), \(u=x^2\).'
+    explanation: '\(\pi(1-e^{-1})\).'
+  82:
+    topic: s6-2
+    question: 'The region bounded by \(y=e^{x/2}\), \(y=1\), \(x=\ln3\) is revolved about the \(x\)-axis. The volume is'
+    A: '\(2 - \ln{\left(3 \right)}\)'
+    B: '\(2 \pi \left(2 - \ln{\left(3 \right)}\right)\)'
+    C: '\(\pi \left(2 - \ln{\left(3 \right)}\right)\)'
+    D: '\(\pi \left(-2 + \ln{\left(3 \right)}\right)\)'
+    answer: C
+    hint: 'Washers: \(\pi\int(e^{x}-1)\,dx\).'
+    explanation: '\(\pi(2-\ln3)\).'
+  83:
+    topic: s6-2
+    question: 'For which solid are both the washer and shell methods easy to apply (the region \(y=x\), \(y=x^2\) revolved about an axis)?'
+    A: Only the shell method works
+    B: Both give the same volume, so use whichever integral is simpler to set up
+    C: Only the washer method works
+    D: The washer method always gives a larger volume
+    answer: B
+    hint: 'Compare \(\tfrac\pi6\) from shells (about the \(y\)-axis) with washers over \(y\).'
+    explanation: Whenever both apply, the volumes agree; you choose the more convenient integral.
+  84:
+    topic: s6-2
+    question: 'To revolve a region about the \(y\)-axis when it is described by \(y=f(x)\) and the integral \(\int\pi[f^{-1}(y)]^2dy\) is hard, a good alternative is'
+    A: 'disks along the \(x\)-axis'
+    B: switching to polar coordinates
+    C: 'shells: \(2\pi\int xf(x)\,dx\)'
+    D: 'integrating \(f\) over \([a,b]\) alone'
+    answer: C
+    hint: 'Shells integrate with respect to \(x\), so you never have to invert \(f\).'
+    explanation: The washer and shell methods give equal volumes (Exercise 37).
+  85:
+    topic: s6-2
+    question: The shell method uses cylinders whose radius is
+    A: the length of the interval
+    B: the height of the region
+    C: the distance from the shell to the axis of revolution
+    D: 'the \(y\)-coordinate always'
+    answer: C
+    hint: Think of the thin cylinder wrapped around the axis.
+    explanation: 'Each shell has volume \(2\pi(\text{radius})(\text{height})(\text{thickness})\).'
+  86:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=1-t\), \(y=2+3t\), \(-\tfrac23\le t\le1\).'
+    A: '\(\frac{5 \sqrt{10}}{3}\)'
+    B: '\(\frac{5 \sqrt{10}}{6}\)'
+    C: '\(1 + \frac{5 \sqrt{10}}{3}\)'
+    D: '\(- \frac{5 \sqrt{10}}{3}\)'
+    answer: A
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(\frac{5 \sqrt{10}}{3}\).'
+  87:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=\cos t\), \(y=t+\sin t\), \(0\le t\le\pi\).'
+    A: '\(5\)'
+    B: '\(-4\)'
+    C: '\(2\)'
+    D: '\(4\)'
+    answer: D
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(4\).'
+  88:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=t^3\), \(y=\tfrac{3t^2}{2}\), \(0\le t\le\sqrt3\).'
+    A: '\(7\)'
+    B: '\(-7\)'
+    C: '\(8\)'
+    D: '\(\frac{7}{2}\)'
+    answer: A
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(7\).'
+  89:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=\tfrac{t^2}{2}\), \(y=\tfrac{(2t+1)^{3/2}}{3}\), \(0\le t\le4\).'
+    A: '\(6\)'
+    B: '\(12\)'
+    C: '\(-12\)'
+    D: '\(13\)'
+    answer: B
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(12\).'
+  90:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=\tfrac{(2t+3)^{3/2}}3\), \(y=t+\tfrac{t^2}2\), \(0\le t\le3\).'
+    A: '\(- \frac{21}{2}\)'
+    B: '\(\frac{23}{2}\)'
+    C: '\(\frac{21}{2}\)'
+    D: '\(\frac{21}{4}\)'
+    answer: C
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(\frac{21}{2}\).'
+  91:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=8\cos t+8t\sin t\), \(y=8\sin t-8t\cos t\), \(0\le t\le\tfrac\pi2\).'
+    A: '\(\frac{\pi^{2}}{2}\)'
+    B: '\(1 + \pi^{2}\)'
+    C: '\(\pi^{2}\)'
+    D: '\(\pi\)'
+    answer: C
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(\pi^{2}\).'
+  92:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=e^t-t\), \(y=4e^{t/2}\), \(0\le t\le3\).'
+    A: '\(3 + e^{3}\)'
+    B: '\(1 + \frac{e^{3}}{2}\)'
+    C: '\(- e^{3} - 2\)'
+    D: '\(2 + e^{3}\)'
+    answer: D
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(2 + e^{3}\).'
+  93:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=e^t\cos t\), \(y=e^t\sin t\), \(0\le t\le\pi\).'
+    A: '\(- \frac{\sqrt{2} \left(1 - e^{\pi}\right)}{2}\)'
+    B: '\(1 - \sqrt{2} \left(1 - e^{\pi}\right)\)'
+    C: '\(- \frac{\sqrt{2} \left(1 - e^{\pi}\right)}{\pi}\)'
+    D: '\(- \sqrt{2} \left(1 - e^{\pi}\right)\)'
+    answer: D
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(- \sqrt{2} \left(1 - e^{\pi}\right)\).'
+  94:
+    topic: s6-3
+    question: 'Find the length of the curve \(x=e^t+e^{-t}\), \(y=3-2t\), \(0\le t\le3\).'
+    A: '\(\sinh{\left(3 \right)}\)'
+    B: '\(2 \sinh{\left(3 \right)}\)'
+    C: '\(- 2 \sinh{\left(3 \right)}\)'
+    D: '\(1 + 2 \sinh{\left(3 \right)}\)'
+    answer: B
+    hint: '\(L=\int\sqrt{(dx/dt)^2+(dy/dt)^2}\,dt\); look for a perfect square under the root.'
+    explanation: 'The integrand simplifies and the length is \(2 \sinh{\left(3 \right)}\).'
+  95:
+    topic: s6-3
+    question: 'Find the length of \(y=\tfrac13(x^2+2)^{3/2}\) from \(x=0\) to \(x=3\).'
+    A: '\(13\)'
+    B: '\(-12\)'
+    C: '\(6\)'
+    D: '\(12\)'
+    answer: D
+    hint: 'Compute \(1+(y'')^2\); for this curve it is a perfect square.'
+    explanation: '\(L=\int_a^b\sqrt{1+(y'')^2}\,dx=12\).'
+  96:
+    topic: s6-3
+    question: 'Find the length of \(y=x^{3/2}\) from \(x=0\) to \(x=4\).'
+    A: '\(- \frac{4}{27} + \frac{40 \sqrt{10}}{27}\)'
+    B: '\(\frac{19}{27} + \frac{80 \sqrt{10}}{27}\)'
+    C: '\(- \frac{8}{27} + \frac{80 \sqrt{10}}{27}\)'
+    D: '\(\frac{8}{27} - \frac{80 \sqrt{10}}{27}\)'
+    answer: C
+    hint: 'Compute \(1+(y'')^2\); for this curve it is a perfect square.'
+    explanation: '\(L=\int_a^b\sqrt{1+(y'')^2}\,dx=- \frac{8}{27} + \frac{80 \sqrt{10}}{27}\).'
+  97:
+    topic: s6-3
+    question: 'Find the length of \(y=\tfrac34x^{4/3}-\tfrac38x^{2/3}+5\) from \(x=1\) to \(x=8\).'
+    A: '\(\frac{99}{16}\)'
+    B: '\(- \frac{99}{8}\)'
+    C: '\(\frac{107}{8}\)'
+    D: '\(\frac{99}{8}\)'
+    answer: D
+    hint: 'Compute \(1+(y'')^2\); for this curve it is a perfect square.'
+    explanation: '\(L=\int_a^b\sqrt{1+(y'')^2}\,dx=\frac{99}{8}\).'
+  98:
+    topic: s6-3
+    question: 'Find the length of \(y=\tfrac{x^3}3+x^2+x+\tfrac{1}{4x+4}\) from \(x=0\) to \(x=2\).'
+    A: '\(\frac{53}{12}\)'
+    B: '\(\frac{59}{6}\)'
+    C: '\(- \frac{53}{6}\)'
+    D: '\(\frac{53}{6}\)'
+    answer: D
+    hint: 'Compute \(1+(y'')^2\); for this curve it is a perfect square.'
+    explanation: '\(L=\int_a^b\sqrt{1+(y'')^2}\,dx=\frac{53}{6}\).'
+  99:
+    topic: s6-3
+    question: 'Find the length of \(x=\tfrac{y^3}3+\tfrac1{4y}\) from \(y=1\) to \(y=3\).'
+    A: '\(\frac{59}{6}\)'
+    B: '\(\frac{53}{12}\)'
+    C: '\(- \frac{53}{6}\)'
+    D: '\(\frac{53}{6}\)'
+    answer: D
+    hint: 'Use \(L=\int\sqrt{1+(dx/dy)^2}\,dy\); \(1+(dx/dy)^2\) is a perfect square.'
+    explanation: 'The length is \(\frac{53}{6}\).'
+  100:
+    topic: s6-3
+    question: 'Find the length of \(x=\tfrac{y^{3/2}}3-y^{1/2}\) from \(y=1\) to \(y=9\).'
+    A: '\(\frac{35}{3}\)'
+    B: '\(- \frac{32}{3}\)'
+    C: '\(\frac{16}{3}\)'
+    D: '\(\frac{32}{3}\)'
+    answer: D
+    hint: 'Use \(L=\int\sqrt{1+(dx/dy)^2}\,dy\); \(1+(dx/dy)^2\) is a perfect square.'
+    explanation: 'The length is \(\frac{32}{3}\).'
+  101:
+    topic: s6-3
+    question: 'Find the length of \(x=\tfrac{y^4}4+\tfrac1{8y^2}\) from \(y=1\) to \(y=2\).'
+    A: '\(\frac{123}{32}\)'
+    B: '\(\frac{155}{32}\)'
+    C: '\(\frac{123}{64}\)'
+    D: '\(- \frac{123}{32}\)'
+    answer: A
+    hint: 'Use \(L=\int\sqrt{1+(dx/dy)^2}\,dy\); \(1+(dx/dy)^2\) is a perfect square.'
+    explanation: 'The length is \(\frac{123}{32}\).'
+  102:
+    topic: s6-3
+    question: 'Find the length of \(x=\tfrac{y^3}6+\tfrac1{2y}\) from \(y=2\) to \(y=3\).'
+    A: '\(- \frac{13}{4}\)'
+    B: '\(\frac{13}{4}\)'
+    C: '\(\frac{17}{4}\)'
+    D: '\(\frac{13}{8}\)'
+    answer: B
+    hint: 'Use \(L=\int\sqrt{1+(dx/dy)^2}\,dy\); \(1+(dx/dy)^2\) is a perfect square.'
+    explanation: 'The length is \(\frac{13}{4}\).'
+  103:
+    topic: s6-3
+    question: 'Which integral gives the length of \(y=x^2\), \(-1\le x\le2\)?'
+    A: '\(\displaystyle\int_{-1}^{2}(1+4x^2)\,dx\)'
+    B: '\(\displaystyle\int_{-1}^{2}\sqrt{1+4x^2}\,dx\)'
+    C: '\(\displaystyle\int_{-1}^{2}\sqrt{1+2x}\,dx\)'
+    D: '\(\displaystyle\int_{-1}^{2}\sqrt{1+x^4}\,dx\)'
+    answer: B
+    hint: '\(y''=2x\).'
+    explanation: '\(L=\int\sqrt{1+(y'')^2}dx\).'
+  104:
+    topic: s6-3
+    question: 'Which integral gives the length of \(x=\sin y\), \(0\le y\le\pi\)?'
+    A: '\(\displaystyle\int_0^\pi\sqrt{1+\sin^2y}\,dy\)'
+    B: '\(\displaystyle\int_0^\pi\sqrt{1+\cos^2y}\,dy\)'
+    C: '\(\displaystyle\int_0^\pi\sqrt{1-\cos^2y}\,dy\)'
+    D: '\(\displaystyle\int_0^\pi\sqrt{1+\cos y}\,dy\)'
+    answer: B
+    hint: '\(\dfrac{dx}{dy}=\cos y\).'
+    explanation: 'Use \(L=\int\sqrt{1+(dx/dy)^2}dy\).'
+  105:
+    topic: s6-3
+    question: 'Which integral gives the length of \(y=\tan x\), \(-\tfrac\pi3\le x\le0\)?'
+    A: '\(\displaystyle\int_{-\pi/3}^0\sqrt{1+\sec^4x}\,dx\)'
+    B: '\(\displaystyle\int_{-\pi/3}^0\sqrt{1+\sec^2x}\,dx\)'
+    C: '\(\displaystyle\int_{-\pi/3}^0\sec x\,dx\)'
+    D: '\(\displaystyle\int_{-\pi/3}^0\sqrt{1+\tan^2x}\,dx\)'
+    answer: A
+    hint: '\(\dfrac{dy}{dx}=\sec^2x\).'
+    explanation: '\(1+(\sec^2x)^2=1+\sec^4x\).'
+  106:
+    topic: s6-3
+    question: 'Is there a smooth curve \(y=f(x)\) whose length over \(0\le x\le a\) is always \(\sqrt2\,a\)?'
+    A: 'No: the length is always larger than \(\sqrt2a\)'
+    B: Yes, but only a parabola
+    C: 'No: the length is always \(a\)'
+    D: 'Yes: the line \(y=x\) (or \(y=-x\))'
+    answer: D
+    hint: 'The line \(y=x\) has length \(\sqrt{1+1}\,a\).'
+    explanation: 'Any line of slope \(\pm1\) works.'
+  107:
+    topic: s6-3
+    question: 'The length of one arch of the cycloid \(x=a(\theta-\sin\theta)\), \(y=a(1-\cos\theta)\), \(0\le\theta\le2\pi\), is'
+    A: '\(4a\)'
+    B: '\(8a\)'
+    C: '\(4\pi a\)'
+    D: '\(2\pi a\)'
+    answer: B
+    hint: '\(\sqrt{x''^2+y''^2}=2a\sin\tfrac\theta2\).'
+    explanation: '\(\int_0^{2\pi}2a\sin\tfrac\theta2d\theta=8a\).'
+  108:
+    topic: s6-3
+    question: 'The length of the semicircle \(y=\sqrt{1-x^2}\) does not depend on parametrization. Using \(x=\cos2t\), \(y=\sin2t\), \(0\le t\le\tfrac\pi2\), the length is'
+    A: '\(2\pi\)'
+    B: '\(2\)'
+    C: '\(\pi\)'
+    D: '\(\dfrac\pi2\)'
+    answer: C
+    hint: 'The speed is \(2\).'
+    explanation: '\(\int_0^{\pi/2}2\,dt=\pi\).'
+  109:
+    topic: s6-3
+    question: 'The curve \(x=\ln(\sec t+\tan t)-\sin t\), \(y=\cos t\), \(0\le t\le\tfrac\pi3\), has length'
+    A: '\(\ln\sqrt3\)'
+    B: '\(\ln2\)'
+    C: '\(\ln\left(2+\sqrt3\right)\)'
+    D: '\(\dfrac{\pi}{3}\)'
+    answer: B
+    hint: '\(\dfrac{dx}{dt}=\sec t-\cos t=\dfrac{\sin^2t}{\cos t}\) and \(\dfrac{dy}{dt}=-\sin t\).'
+    explanation: 'The speed is \(\tan t\), so \(L=\int_0^{\pi/3}\tan t\,dt=\ln\sec\tfrac\pi3=\ln2\).'
+  110:
+    topic: s6-3
+    question: 'In deriving the length formula with tangent fins, the length of the \(k\)th tangent fin over \([x_{k-1},x_k]\) is'
+    A: '\(f''(x_{k-1})\,\Delta x_k\)'
+    B: '\(f(x_k)-f(x_{k-1})\)'
+    C: '\(\sqrt{(\Delta x_k)^2+\left(f''(x_{k-1})\Delta x_k\right)^2}\)'
+    D: '\(\Delta x_k\)'
+    answer: C
+    hint: 'Use the Pythagorean theorem with run \(\Delta x_k\) and rise \(f''\Delta x_k\).'
+    explanation: 'Summing these and letting \(n\to\infty\) gives \(\int_a^b\sqrt{1+(f'')^2}\,dx\).'
+  111:
+    topic: s6-4
+    question: An 80-lb child and a 100-lb child balance on a seesaw. The 80-lb child is 5 ft from the fulcrum. How far from the fulcrum is the 100-lb child?
+    A: '\(6.25\) ft'
+    B: '\(2\) ft'
+    C: '\(5\) ft'
+    D: '\(4\) ft'
+    answer: D
+    hint: 'Torques must balance: \(80\cdot5=100\cdot d\).'
+    explanation: '\(d=\dfrac{400}{100}=4\) ft.'
+  112:
+    topic: s6-4
+    question: 'The ends of a log are placed on two scales reading 100 kg and 200 kg. Where is the log''s center of mass (as a fraction of its length \(L\) measured from the 100-kg end)?'
+    A: '\(\dfrac L2\)'
+    B: '\(\dfrac{L}{3}\)'
+    C: '\(\dfrac{2L}{3}\)'
+    D: '\(\dfrac{3L}{4}\)'
+    answer: C
+    hint: 'The scale readings are the supporting forces; torque about one end gives \(x\).'
+    explanation: '\(300\bar x=200L\) so \(\bar x=\tfrac{2L}3\) (closer to the end reading 200 kg).'
+  113:
+    topic: s6-4
+    question: 'Two thin rods of equal length \(L\) are welded in a right angle (along the positive \(x\)- and \(y\)-axes). Where is the center of mass?'
+    A: '\(\left(\dfrac L4,\dfrac L2\right)\)'
+    B: '\(\left(\dfrac L2,\dfrac L2\right)\)'
+    C: '\(\left(\dfrac L4,\dfrac L4\right)\)'
+    D: '\(\left(\dfrac L3,\dfrac L3\right)\)'
+    answer: C
+    hint: Each rod acts as if its mass were at its midpoint.
+    explanation: '\(\bar x=\dfrac{m\frac L2+m\cdot0}{2m}=\dfrac L4\); similarly \(\bar y=\dfrac L4\).'
+  114:
+    topic: s6-4
+    question: 'Two thin rods are welded in a right angle, one twice as long as the other. If the shorter rod (length \(L\)) lies along the \(x\)-axis and the longer rod (length \(2L\)) along the \(y\)-axis, the center of mass is'
+    A: '\(\left(\dfrac L2,L\right)\)'
+    B: '\(\left(\dfrac L6,\dfrac L3\right)\)'
+    C: '\(\left(\dfrac L6,\dfrac{2L}3\right)\)'
+    D: '\(\left(\dfrac L3,\dfrac{2L}{3}\right)\)'
+    answer: C
+    hint: 'Masses are proportional to lengths: \(m\) and \(2m\).'
+    explanation: '\(\bar x=\dfrac{m(L/2)}{3m}=\dfrac L6\), \(\bar y=\dfrac{2m\cdot L}{3m}=\dfrac{2L}3\).'
+  115:
+    topic: s6-4
+    question: 'A thin rod along the \(x\)-axis has density \(\delta(x)=4\), \(0\le x\le2\). Its center of mass \(\bar x\) is'
+    A: '\(-1\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(\frac{1}{2}\)'
+    answer: B
+    hint: '\(\bar x=\dfrac{M_0}{m}=\dfrac{\int x\delta\,dx}{\int\delta\,dx}\).'
+    explanation: 'The mass is \(8\), the moment is \(8\), so \(\bar x=1\).'
+  116:
+    topic: s6-4
+    question: 'A thin rod along the \(x\)-axis has density \(\delta(x)=4\), \(1\le x\le3\). Its center of mass \(\bar x\) is'
+    A: '\(2\)'
+    B: '\(1\)'
+    C: '\(4\)'
+    D: '\(-2\)'
+    answer: A
+    hint: '\(\bar x=\dfrac{M_0}{m}=\dfrac{\int x\delta\,dx}{\int\delta\,dx}\).'
+    explanation: 'The mass is \(8\), the moment is \(16\), so \(\bar x=2\).'
+  117:
+    topic: s6-4
+    question: 'A thin rod along the \(x\)-axis has density \(\delta(x)=1+\tfrac x3\), \(0\le x\le3\). Its center of mass \(\bar x\) is'
+    A: '\(\frac{5}{3}\)'
+    B: '\(- \frac{5}{3}\)'
+    C: '\(\frac{10}{3}\)'
+    D: '\(\frac{5}{6}\)'
+    answer: A
+    hint: '\(\bar x=\dfrac{M_0}{m}=\dfrac{\int x\delta\,dx}{\int\delta\,dx}\).'
+    explanation: 'The mass is \(\frac{9}{2}\), the moment is \(\frac{15}{2}\), so \(\bar x=\frac{5}{3}\).'
+  118:
+    topic: s6-4
+    question: 'A thin rod along the \(x\)-axis has density \(\delta(x)=2-\tfrac x4\), \(0\le x\le4\). Its center of mass \(\bar x\) is'
+    A: '\(\frac{8}{9}\)'
+    B: '\(\frac{16}{9}\)'
+    C: '\(- \frac{16}{9}\)'
+    D: '\(\frac{32}{9}\)'
+    answer: B
+    hint: '\(\bar x=\dfrac{M_0}{m}=\dfrac{\int x\delta\,dx}{\int\delta\,dx}\).'
+    explanation: 'The mass is \(6\), the moment is \(\frac{32}{3}\), so \(\bar x=\frac{16}{9}\).'
+  119:
+    topic: s6-4
+    question: 'A thin rod along the \(x\)-axis has density \(\delta(x)=1+\tfrac1{\sqrt x}\), \(1\le x\le4\). Its center of mass \(\bar x\) is'
+    A: '\(- \frac{73}{30}\)'
+    B: '\(\frac{73}{60}\)'
+    C: '\(\frac{73}{30}\)'
+    D: '\(\frac{73}{15}\)'
+    answer: C
+    hint: '\(\bar x=\dfrac{M_0}{m}=\dfrac{\int x\delta\,dx}{\int\delta\,dx}\).'
+    explanation: 'The mass is \(5\), the moment is \(\frac{73}{6}\), so \(\bar x=\frac{73}{30}\).'
+  120:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of a thin plate of constant density covering the region between \(y=x^2\) and \(y=4\) is'
+    A: '\(- \frac{12}{5}\)'
+    B: '\(\frac{24}{5}\)'
+    C: '\(\frac{12}{5}\)'
+    D: '\(\frac{6}{5}\)'
+    answer: C
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(\frac{32}{3}\), giving \(\bar{y}=\frac{12}{5}\).'
+  121:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of a thin plate of constant density covering the region between \(y=25-x^2\) and the \(x\)-axis is'
+    A: '\(-10\)'
+    B: '\(20\)'
+    C: '\(5\)'
+    D: '\(10\)'
+    answer: D
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(\frac{500}{3}\), giving \(\bar{y}=10\).'
+  122:
+    topic: s6-4
+    question: 'The center of mass \(\bar{x}\) of a thin plate of constant density covering the region between \(y=x-x^2\) and \(y=-x\) is'
+    A: '\(2\)'
+    B: '\(-1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(1\)'
+    answer: D
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(\frac{4}{3}\), giving \(\bar{x}=1\).'
+  123:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of a thin plate of constant density covering the region between \(y=x-x^2\) and \(y=-x\) is'
+    A: '\(- \frac{3}{5}\)'
+    B: '\(- \frac{6}{5}\)'
+    C: '\(\frac{3}{5}\)'
+    D: '\(- \frac{3}{10}\)'
+    answer: A
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(\frac{4}{3}\), giving \(\bar{y}=- \frac{3}{5}\).'
+  124:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of a thin plate of constant density covering the region between \(y=\cos x\), \(-\tfrac\pi2\le x\le\tfrac\pi2\), and the \(x\)-axis is'
+    A: '\(\frac{\pi}{8}\)'
+    B: '\(- \frac{\pi}{8}\)'
+    C: '\(\frac{\pi}{4}\)'
+    D: '\(\frac{1}{8}\)'
+    answer: A
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(2\), giving \(\bar{y}=\frac{\pi}{8}\).'
+  125:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of a thin plate of constant density covering the region between \(y=\sec^2x\), \(-\tfrac\pi4\le x\le\tfrac\pi4\), and the \(x\)-axis is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{2}{3}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(- \frac{2}{3}\)'
+    answer: B
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(2\), giving \(\bar{y}=\frac{2}{3}\).'
+  126:
+    topic: s6-4
+    question: 'The center of mass \(\bar{x}\) of a thin plate of constant density covering the region between \(y=\dfrac1{\sqrt x}\) and the \(x\)-axis from \(x=1\) to \(x=16\) is'
+    A: '\(7\)'
+    B: '\(\frac{7}{2}\)'
+    C: '\(-7\)'
+    D: '\(14\)'
+    answer: A
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(6\), giving \(\bar{x}=7\).'
+  127:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of a thin plate of constant density covering the region between \(y=\dfrac1{\sqrt x}\) and the \(x\)-axis from \(x=1\) to \(x=16\) is'
+    A: '\(\frac{\ln{\left(2 \right)}}{6}\)'
+    B: '\(- \frac{\ln{\left(2 \right)}}{3}\)'
+    C: '\(\frac{\ln{\left(2 \right)}}{3}\)'
+    D: '\(\frac{2 \ln{\left(2 \right)}}{3}\)'
+    answer: C
+    hint: '\(\bar y=\dfrac1A\int\tfrac12\left(f^2-g^2\right)dx\), \(\bar x=\dfrac1A\int x(f-g)\,dx\); use symmetry where possible.'
+    explanation: 'The area is \(6\), giving \(\bar{y}=\frac{\ln{\left(2 \right)}}{3}\).'
+  128:
+    topic: s6-4
+    question: 'The center of mass \(\bar{y}\) of the plate cut from the first quadrant by the circle \(x^2+y^2=9\) (a quarter disk) is'
+    A: '\(\frac{4}{\pi}\)'
+    B: '\(\frac{4}{\pi^{2}}\)'
+    C: '\(- \frac{4}{\pi}\)'
+    D: '\(\frac{8}{\pi}\)'
+    answer: A
+    hint: 'For a quarter disk of radius \(r\), \(\bar x=\bar y=\dfrac{4r}{3\pi}\).'
+    explanation: '\(\dfrac{4\cdot3}{3\pi}=\dfrac4\pi\).'
+  129:
+    topic: s6-4
+    question: 'The center of mass \(\bar y\) of the plate bounded by the \(x\)-axis and the semicircle \(y=\sqrt{9-x^2}\) is'
+    A: '\(\frac{8}{\pi}\)'
+    B: '\(- \frac{4}{\pi}\)'
+    C: '\(\frac{4}{\pi}\)'
+    D: '\(\frac{4}{\pi^{2}}\)'
+    answer: C
+    hint: 'For a semicircular disk of radius \(a\), \(\bar y=\dfrac{4a}{3\pi}\).'
+    explanation: '\(\dfrac{4\cdot3}{3\pi}=\dfrac4\pi\), the same as for the quarter disk.'
+  130:
+    topic: s6-4
+    question: 'A plate covers the region between the \(x\)-axis and \(y=\dfrac{2}{x^2}\), \(1\le x\le2\), with density \(\delta(x)=x^2\). Its center of mass \(\bar x\) is'
+    A: '\(3\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(- \frac{3}{2}\)'
+    answer: C
+    hint: '\(\bar x=\dfrac{\int x\,\delta\,y\,dx}{\int\delta\,y\,dx}\) with \(y=2/x^2\).'
+    explanation: 'The mass is \(\int2\,dx=2\); the moment is \(\int2x\,dx=3\), so \(\bar x=\tfrac32\).'
+  131:
+    topic: s6-4
+    question: 'The centroid of the triangle with vertices \((-1,0),(1,0),(0,3)\) is'
+    A: '\(\left(1,0\right)\)'
+    B: '\(\left(0,1\right)\)'
+    C: '\(\left(1,1\right)\)'
+    D: '\(\left(0,2\right)\)'
+    answer: B
+    hint: The centroid is the average of the three vertices (the intersection of the medians).
+    explanation: '\(\left(\dfrac{\sum x_i}3,\dfrac{\sum y_i}3\right)\).'
+  132:
+    topic: s6-4
+    question: 'The centroid of the triangle with vertices \((0,0),(1,0),(0,1)\) is'
+    A: '\(\left(\frac{1}{3},\frac{1}{3}\right)\)'
+    B: '\(\left(\frac{4}{3},\frac{1}{3}\right)\)'
+    C: '\(\left(\frac{1}{6},\frac{1}{6}\right)\)'
+    D: '\(\left(\frac{2}{3},\frac{2}{3}\right)\)'
+    answer: A
+    hint: The centroid is the average of the three vertices (the intersection of the medians).
+    explanation: '\(\left(\dfrac{\sum x_i}3,\dfrac{\sum y_i}3\right)\).'
+  133:
+    topic: s6-4
+    question: 'The centroid of the triangle with vertices \((0,0),(2,0),(0,6)\) is'
+    A: '\(\left(2,\frac{2}{3}\right)\)'
+    B: '\(\left(\frac{5}{3},2\right)\)'
+    C: '\(\left(\frac{2}{3},2\right)\)'
+    D: '\(\left(\frac{4}{3},4\right)\)'
+    answer: C
+    hint: The centroid is the average of the three vertices (the intersection of the medians).
+    explanation: '\(\left(\dfrac{\sum x_i}3,\dfrac{\sum y_i}3\right)\).'
+  134:
+    topic: s6-4
+    question: 'The centroid of the triangle with vertices \((0,0),(4,0),(2,3)\) is'
+    A: '\(\left(2,1\right)\)'
+    B: '\(\left(3,1\right)\)'
+    C: '\(\left(4,2\right)\)'
+    D: '\(\left(1,2\right)\)'
+    answer: A
+    hint: The centroid is the average of the three vertices (the intersection of the medians).
+    explanation: '\(\left(\dfrac{\sum x_i}3,\dfrac{\sum y_i}3\right)\).'
+  135:
+    topic: s6-4
+    question: 'The centroid of the triangle with vertices \((0,0)\), \((a,0)\), \((0,b)\) is'
+    A: '\(\left(\dfrac{a}{3},\dfrac{b}{2}\right)\)'
+    B: '\(\left(\dfrac a3,\dfrac b3\right)\)'
+    C: '\(\left(\dfrac a2,\dfrac b2\right)\)'
+    D: '\(\left(\dfrac{2a}{3},\dfrac{2b}{3}\right)\)'
+    answer: B
+    hint: Average the vertices.
+    explanation: '\(\left(\tfrac{a}{3},\tfrac{b}{3}\right)\).'
+  136:
+    topic: s6-4
+    question: The centroid of a triangle lies at the intersection of the medians, which is
+    A: at the midpoint of each side
+    B: at the vertex with the largest angle
+    C: one-third of the way from each side toward the opposite vertex
+    D: halfway along each median
+    answer: C
+    hint: 'For the triangle of height \(h\), \(\bar y=\dfrac1A\int y\,L(y)\,dy=\dfrac h3\).'
+    explanation: 'Computing \(\int_0^hy\cdot\tfrac bh(h-y)\,dy\) over \(\tfrac12bh\) gives \(\bar y=\tfrac h3\).'
+  137:
+    topic: s6-4
+    question: 'The moment about the \(x\)-axis of a wire of constant density 1 lying along \(y=\sqrt x\) from \(x=0\) to \(x=2\) is'
+    A: '\(- \frac{13}{6}\)'
+    B: '\(\frac{13}{12}\)'
+    C: '\(\frac{13}{3}\)'
+    D: '\(\frac{13}{6}\)'
+    answer: D
+    hint: '\(M_x=\int y\,ds\) with \(ds=\sqrt{1+\tfrac1{4x}}\,dx\).'
+    explanation: '\(\int_0^2\sqrt{x+\tfrac14}\,dx=\tfrac23\left[(\tfrac94)^{3/2}-(\tfrac14)^{3/2}\right]=\tfrac{13}6\).'
+  138:
+    topic: s6-4
+    question: 'The moment about the \(x\)-axis of a wire of density 1 lying along \(y=x^3\) from \(x=0\) to \(x=1\) is'
+    A: '\(\frac{1}{54} - \frac{5 \sqrt{10}}{27}\)'
+    B: '\(- \frac{1}{108} + \frac{5 \sqrt{10}}{54}\)'
+    C: '\(- \frac{1}{27} + \frac{10 \sqrt{10}}{27}\)'
+    D: '\(- \frac{1}{54} + \frac{5 \sqrt{10}}{27}\)'
+    answer: D
+    hint: '\(M_x=\int y\,ds\), \(ds=\sqrt{1+9x^4}\,dx\). Let \(u=1+9x^4\).'
+    explanation: '\(\tfrac1{54}\left[(1+9x^4)^{3/2}\right]_0^1=\dfrac{10\sqrt{10}-1}{54}\).'
+  139:
+    topic: s6-4
+    question: 'The centroid of a circular arc of radius \(a\) and half-angle \(\alpha\), symmetric about the \(y\)-axis, has \(\bar y=\)'
+    A: '\(\dfrac{a\alpha}{\sin\alpha}\)'
+    B: '\(\dfrac{2a}{\pi}\)'
+    C: '\(\dfrac{a\cos\alpha}{\alpha}\)'
+    D: '\(\dfrac{a\sin\alpha}{\alpha}\)'
+    answer: D
+    hint: 'For a semicircle (\(\alpha=\tfrac\pi2\)) this must give \(\tfrac{2a}{\pi}\).'
+    explanation: '\(\dfrac{a\sin(\pi/2)}{\pi/2}=\dfrac{2a}\pi\) as expected.'
+  140:
+    topic: s6-4
+    question: 'Find \(\displaystyle\lim_{\alpha\to0^+}\dfrac{\sin\alpha-\alpha\cos\alpha}{\alpha-\alpha\cos\alpha}\) (the ratio \(d/h\) of centroid distance to arc height for a shallow arc).'
+    A: '\(\dfrac23\)'
+    B: '\(1\)'
+    C: '\(\dfrac12\)'
+    D: '\(\dfrac13\)'
+    answer: A
+    hint: "Use L'Hôpital's Rule twice, or Taylor expansions."
+    explanation: 'Numerator \(\approx\tfrac{\alpha^3}3\) and denominator \(\approx\tfrac{\alpha^3}{2}\), so the ratio is \(\tfrac23\).'
+  141:
+    topic: s6-4
+    question: 'Whatever \(p>0\) is, the \(y\)-coordinate of the centroid of the parabolic segment bounded by \(y=\dfrac{x^2}{4p}\) and the line \(y=a\) is'
+    A: '\(\dfrac34a\)'
+    B: '\(\dfrac35a\)'
+    C: '\(\dfrac12a\)'
+    D: '\(\dfrac23a\)'
+    answer: B
+    hint: 'The region is symmetric about the \(y\)-axis; integrate with strips of width \(2\sqrt{4py}\).'
+    explanation: '\(\bar y=\dfrac{\int_0^ay\sqrt y\,dy}{\int_0^a\sqrt y\,dy}=\dfrac{\frac25a^{5/2}}{\frac23a^{3/2}}=\dfrac35a\).'
+  142:
+    topic: s6-5
+    question: 'The lateral surface area generated by revolving \(y=\tfrac x2\), \(0\le x\le4\), about the \(x\)-axis is'
+    A: '\(- 4 \sqrt{5} \pi\)'
+    B: '\(8 \sqrt{5} \pi\)'
+    C: '\(4 \sqrt{5} \pi\)'
+    D: '\(4 \sqrt{5}\)'
+    answer: C
+    hint: '\(S=\int2\pi y\,ds\) with \(ds=\tfrac{\sqrt5}2dx\). Check: \(\tfrac12\) (base circumference) (slant height).'
+    explanation: '\(2\pi\cdot\tfrac{\sqrt5}2\int_0^4\tfrac x2dx=4\pi\sqrt5\).'
+  143:
+    topic: s6-5
+    question: 'The lateral surface area generated by revolving \(y=\tfrac x2\), \(0\le x\le4\), about the \(y\)-axis is'
+    A: '\(8 \sqrt{5} \pi\)'
+    B: '\(16 \sqrt{5} \pi\)'
+    C: '\(- 8 \sqrt{5} \pi\)'
+    D: '\(8 \sqrt{5}\)'
+    answer: A
+    hint: '\(S=\int2\pi x\,ds\).'
+    explanation: '\(2\pi\cdot\tfrac{\sqrt5}{2}\cdot8=8\pi\sqrt5\).'
+  144:
+    topic: s6-5
+    question: 'Revolving the segment \(y=\tfrac x2+\tfrac12\), \(1\le x\le3\), about the \(x\)-axis generates a cone frustum with surface area'
+    A: '\(3 \sqrt{5}\)'
+    B: '\(- 3 \sqrt{5} \pi\)'
+    C: '\(6 \sqrt{5} \pi\)'
+    D: '\(3 \sqrt{5} \pi\)'
+    answer: D
+    hint: 'Geometry: \(\pi(r_1+r_2)\times\) slant height, with \(r_1=1\), \(r_2=2\), slant \(\sqrt5\).'
+    explanation: '\(3\pi\sqrt5\).'
+  145:
+    topic: s6-5
+    question: 'Revolving that segment about the \(y\)-axis instead gives surface area'
+    A: '\(8 \sqrt{5} \pi\)'
+    B: '\(4 \sqrt{5}\)'
+    C: '\(4 \sqrt{5} \pi\)'
+    D: '\(- 4 \sqrt{5} \pi\)'
+    answer: C
+    hint: 'Radii are 1 and 3; slant height is \(\sqrt5\).'
+    explanation: '\(\pi(1+3)\sqrt5=4\pi\sqrt5\).'
+  146:
+    topic: s6-5
+    question: 'The area of the surface generated by revolving \(y=\dfrac{x^3}9\), \(0\le x\le2\), about the \(x\)-axis is'
+    A: '\(\frac{98 \pi}{81}\)'
+    B: '\(\frac{196 \pi}{81}\)'
+    C: '\(- \frac{98 \pi}{81}\)'
+    D: '\(\frac{98}{81}\)'
+    answer: A
+    hint: '\(S=2\pi\int\dfrac{x^3}9\sqrt{1+\dfrac{x^4}9}\,dx\); let \(u=1+\tfrac{x^4}9\).'
+    explanation: '\(\tfrac{\pi}{3}\left[u^{3/2}\right]_1^{25/9}=\tfrac{98\pi}{81}\).'
+  147:
+    topic: s6-5
+    question: 'The area of the surface generated by revolving \(y=\sqrt x\), \(\tfrac34\le x\le\tfrac{15}4\), about the \(x\)-axis is'
+    A: '\(\frac{56 \pi}{3}\)'
+    B: '\(- \frac{28 \pi}{3}\)'
+    C: '\(\frac{28}{3}\)'
+    D: '\(\frac{28 \pi}{3}\)'
+    answer: D
+    hint: '\(\sqrt x\sqrt{1+\tfrac1{4x}}=\sqrt{x+\tfrac14}\).'
+    explanation: '\(2\pi\cdot\tfrac23\left[(x+\tfrac14)^{3/2}\right]=\tfrac{28\pi}3\).'
+  148:
+    topic: s6-5
+    question: 'The area of the surface generated by revolving \(y=\sqrt{2x-x^2}\), \(0.5\le x\le1.5\), about the \(x\)-axis is'
+    A: '\(2\)'
+    B: '\(- 2 \pi\)'
+    C: '\(4 \pi\)'
+    D: '\(2 \pi\)'
+    answer: D
+    hint: '\(y\sqrt{1+(y'')^2}=1\) for this circle of radius 1.'
+    explanation: '\(2\pi\int_{0.5}^{1.5}1\,dx=2\pi\).'
+  149:
+    topic: s6-5
+    question: 'The area of the surface generated by revolving \(y=\sqrt{x+1}\), \(1\le x\le5\), about the \(x\)-axis is'
+    A: '\(\frac{49 \pi}{3}\)'
+    B: '\(\frac{49}{3}\)'
+    C: '\(\frac{98 \pi}{3}\)'
+    D: '\(- \frac{49 \pi}{3}\)'
+    answer: A
+    hint: '\(\sqrt{x+1}\sqrt{1+\tfrac1{4(x+1)}}=\sqrt{x+\tfrac54}\).'
+    explanation: '\(2\pi\cdot\tfrac23\left[(x+\tfrac54)^{3/2}\right]_1^5\).'
+  150:
+    topic: s6-5
+    question: 'The surface area of a sphere of radius \(a\), found by revolving \(y=\sqrt{a^2-x^2}\), \(-a\le x\le a\), about the \(x\)-axis, is'
+    A: '\(2\pi a^2\)'
+    B: '\(\pi a^2\)'
+    C: '\(4\pi a^2\)'
+    D: '\(\dfrac43\pi a^3\)'
+    answer: C
+    hint: '\(y\sqrt{1+(y'')^2}=a\).'
+    explanation: '\(2\pi\int_{-a}^aa\,dx=4\pi a^2\).'
+  151:
+    topic: s6-5
+    question: 'The lateral surface area of a cone of height \(h\) and base radius \(r\), found by revolving \(y=\tfrac rhx\), \(0\le x\le h\), about the \(x\)-axis, is'
+    A: '\(\pi r^2\)'
+    B: '\(\pi r\sqrt{r^2+h^2}\)'
+    C: '\(2\pi r\sqrt{r^2+h^2}\)'
+    D: '\(\dfrac13\pi r^2h\)'
+    answer: B
+    hint: '\(S=2\pi\int\tfrac rhx\sqrt{1+\tfrac{r^2}{h^2}}\,dx\).'
+    explanation: '\(\pi r\sqrt{h^2+r^2}\), the semiperimeter of the base times the slant height.'
+  152:
+    topic: s6-5
+    question: 'The band cut from a sphere of radius \(R\) by two parallel planes \(h\) apart has surface area'
+    A: '\(2\pi Rh\)'
+    B: '\(4\pi Rh\)'
+    C: '\(\pi R^2h\)'
+    D: '\(\pi Rh\)'
+    answer: A
+    hint: The area depends only on the distance between the planes (Archimedes).
+    explanation: '\(2\pi\int_a^{a+h}R\,dx=2\pi Rh\).'
+  153:
+    topic: s6-5
+    question: When a curve crosses the axis of revolution, the surface-area formula should use
+    A: '\(S=\displaystyle\int2\pi x\,ds\)'
+    B: '\(S=\displaystyle\int2\pi f(x)\,ds\) with no change'
+    C: '\(S=\displaystyle\int\pi f(x)^2\,dx\)'
+    D: '\(S=\displaystyle\int2\pi|f(x)|\,ds\)'
+    answer: D
+    hint: Otherwise the part below the axis would count negatively.
+    explanation: 'For \(y=x\), \(-1\le x\le2\): \(S=2\pi\sqrt2\int|x|\,dx=5\sqrt2\,\pi\).'
+  154:
+    topic: s6-5
+    question: 'The surface area of the double cone generated by revolving \(y=x\), \(-1\le x\le2\), about the \(x\)-axis is'
+    A: '\(10 \sqrt{2} \pi\)'
+    B: '\(- 5 \sqrt{2} \pi\)'
+    C: '\(5 \sqrt{2} \pi\)'
+    D: '\(5 \sqrt{2}\)'
+    answer: C
+    hint: 'Use \(|f(x)|\) in the integrand.'
+    explanation: '\(2\pi\sqrt2\left(\tfrac12+2\right)=5\sqrt2\,\pi\).'
+  155:
+    topic: s6-5
+    question: 'Revolving \(x=\cos t\), \(y=2+\sin t\), \(0\le t\le2\pi\), about the \(x\)-axis generates a torus of surface area'
+    A: '\(8 \pi^{2}\)'
+    B: '\(8 \pi\)'
+    C: '\(16 \pi^{2}\)'
+    D: '\(- 8 \pi^{2}\)'
+    answer: A
+    hint: '\(ds=dt\) because the speed is 1. \(S=\int2\pi y\,ds\).'
+    explanation: '\(2\pi\cdot4\pi=8\pi^2\).'
+  156:
+    topic: s6-5
+    question: 'Revolving the segment \(x=2t\), \(y=t+1\), \(0\le t\le1\), about the \(x\)-axis gives a frustum of surface area'
+    A: '\(3 \sqrt{5}\)'
+    B: '\(- 3 \sqrt{5} \pi\)'
+    C: '\(6 \sqrt{5} \pi\)'
+    D: '\(3 \sqrt{5} \pi\)'
+    answer: D
+    hint: '\(ds=\sqrt{4+1}\,dt\).'
+    explanation: '\(2\pi\sqrt5\left[\tfrac{t^2}2+t\right]_0^1=3\pi\sqrt5\). Geometry: \(\pi(1+2)\sqrt5\).'
+  157:
+    topic: s6-5
+    question: "Pappus's First Theorem says the volume of a solid of revolution equals"
+    A: the surface area times the height
+    B: the area times the diameter
+    C: the perimeter times the radius
+    D: the area of the region times the distance traveled by its centroid
+    answer: D
+    hint: '\(V=2\pi\bar\rho A\).'
+    explanation: 'Here \(\bar\rho\) is the distance from the centroid to the axis.'
+  158:
+    topic: s6-5
+    question: "Pappus's Second Theorem says the lateral surface area of a solid of revolution equals"
+    A: the volume divided by the radius
+    B: 'the area of the region times \(2\pi\)'
+    C: half the product of radius and height
+    D: the length of the generating curve times the distance traveled by its centroid
+    answer: D
+    hint: '\(S=2\pi\bar\rho L\).'
+    explanation: The centroid of the curve (not the region) is used.
+  159:
+    topic: s6-5
+    question: 'The square with vertices \((0,2)\), \((2,0)\), \((4,2)\), \((2,4)\) is revolved about the \(x\)-axis. Its volume (Pappus) is'
+    A: '\(8\pi\)'
+    B: '\(16\pi\)'
+    C: '\(32\pi\)'
+    D: '\(64\pi\)'
+    answer: C
+    hint: 'The area is 8 and the centroid is \((2,2)\).'
+    explanation: '\(V=2\pi\cdot2\cdot8=32\pi\).'
+  160:
+    topic: s6-5
+    question: For the same square, the surface area of the solid (Pappus) is
+    A: '\(32\pi\)'
+    B: '\(64\pi\sqrt2\)'
+    C: '\(16\pi\sqrt2\)'
+    D: '\(32\pi\sqrt2\)'
+    answer: D
+    hint: 'The perimeter is \(4\cdot2\sqrt2\) and the centroid of the boundary is also \((2,2)\).'
+    explanation: '\(S=2\pi\cdot2\cdot8\sqrt2=32\pi\sqrt2\).'
+  161:
+    topic: s6-5
+    question: 'The triangle bounded by the coordinate axes and \(2x+y=6\) is revolved about \(x=5\). Its volume is'
+    A: '\(72\pi\)'
+    B: '\(54\pi\)'
+    C: '\(144\pi\)'
+    D: '\(36\pi\)'
+    answer: A
+    hint: 'The area is 9 and the centroid is \((1,2)\), at distance 4 from the line.'
+    explanation: '\(V=2\pi\cdot4\cdot9=72\pi\).'
+  162:
+    topic: s6-5
+    question: 'The circle \((x-2)^2+y^2=1\) is revolved about the \(y\)-axis. The volume of the torus (Pappus) is'
+    A: '\(4\pi^2\)'
+    B: '\(2\pi^2\)'
+    C: '\(\pi^2\)'
+    D: '\(8\pi^2\)'
+    answer: A
+    hint: 'The centroid is the center \((2,0)\), at distance 2; the area is \(\pi\).'
+    explanation: '\(V=2\pi\cdot2\cdot\pi=4\pi^2\).'
+  163:
+    topic: s6-5
+    question: 'The semicircle \(y=\sqrt{a^2-x^2}\) has its centroid at \(\left(0,\tfrac{2a}\pi\right)\). When the semicircle (an arc) is revolved about the line \(y=a\), the surface area is'
+    A: '\(2\pi(a-\tfrac{2a}{\pi})\cdot\pi a=2\pi a^2(\pi-2)\)'
+    B: '\(2\pi^2a^2\)'
+    C: '\(\pi a^2(\pi-2)\)'
+    D: '\(4\pi a^2\)'
+    answer: A
+    hint: 'Distance from the centroid to the axis is \(a-\tfrac{2a}\pi\); the arc length is \(\pi a\).'
+    explanation: '\(S=2\pi\left(a-\tfrac{2a}\pi\right)\pi a=2\pi a^2(\pi-2)\).'
+  164:
+    topic: s6-5
+    question: 'The region under the semiellipse \(y=\tfrac ba\sqrt{a^2-x^2}\) has area \(\tfrac12\pi ab\), and revolving it about the \(x\)-axis gives volume \(\tfrac43\pi ab^2\). By Pappus, the centroid of the region has \(\bar y=\)'
+    A: '\(\dfrac{2b}{\pi}\)'
+    B: '\(\dfrac{4b}{3\pi}\)'
+    C: '\(\dfrac{b}{2}\)'
+    D: '\(\dfrac{4a}{3\pi}\)'
+    answer: B
+    hint: '\(V=2\pi\bar y\,A\).'
+    explanation: '\(\bar y=\dfrac{4\pi ab^2/3}{2\pi\cdot\pi ab/2}=\dfrac{4b}{3\pi}\); notice it does not depend on \(a\).'
+  165:
+    topic: s6-6
+    question: "It takes 1800 J of work to stretch a spring from its natural length of 2 m to a length of 5 m. The spring's force constant is"
+    A: '\(1200\) N/m'
+    B: '\(400\) N/m'
+    C: '\(200\) N/m'
+    D: '\(600\) N/m'
+    answer: B
+    hint: '\(W=\tfrac12kx^2\) with \(x=3\) m.'
+    explanation: '\(1800=\tfrac12k\cdot9\) gives \(k=400\).'
+  166:
+    topic: s6-6
+    question: An 800-lb force stretches a spring from 10 in. to 14 in. The force constant (in lb/in.) is
+    A: '\(200\)'
+    B: '\(800\)'
+    C: '\(100\)'
+    D: '\(400\)'
+    answer: A
+    hint: '\(F=kx\) with \(x=4\) in.'
+    explanation: '\(k=800/4=200\) lb/in.'
+  167:
+    topic: s6-6
+    question: 'With \(k=200\) lb/in., the work done stretching the spring from 10 in. to 12 in. is'
+    A: '\(200\) in.-lb'
+    B: '\(1600\) in.-lb'
+    C: '\(400\) in.-lb'
+    D: '\(800\) in.-lb'
+    answer: C
+    hint: '\(W=\int_0^2200x\,dx\).'
+    explanation: '\(100x^2\Big|_0^2=400\).'
+  168:
+    topic: s6-6
+    question: 'With \(k=200\) lb/in., a 1600-lb force stretches the spring how far beyond its natural length?'
+    A: '\(16\) in.'
+    B: '\(4\) in.'
+    C: '\(2\) in.'
+    D: '\(8\) in.'
+    answer: D
+    hint: '\(F=kx\).'
+    explanation: '\(x=1600/200\).'
+  169:
+    topic: s6-6
+    question: "A 2 N force stretches a rubber band 2 cm (assume Hooke's law). How much work does it take to stretch it 4 cm?"
+    A: '\(0.16\) J'
+    B: '\(4\) J'
+    C: '\(0.08\) J'
+    D: '\(0.04\) J'
+    answer: C
+    hint: '\(k=2/0.02=100\) N/m.'
+    explanation: '\(W=\tfrac12(100)(0.04)^2=0.08\) J.'
+  170:
+    topic: s6-6
+    question: If a force of 90 N stretches a spring 1 m, the work to stretch it 5 m is
+    A: '\(2250\) J'
+    B: '\(225\) J'
+    C: '\(450\) J'
+    D: '\(1125\) J'
+    answer: D
+    hint: '\(k=90\) N/m.'
+    explanation: '\(\tfrac12(90)(25)=1125\).'
+  171:
+    topic: s6-6
+    question: 'A subway spring assembly compresses 3 in. under 21,714 lb (force constant \(k=7238\) lb/in.). The work to compress it the first half inch is about'
+    A: '\(2714\) in.-lb'
+    B: '\(3619\) in.-lb'
+    C: '\(905\) in.-lb'
+    D: '\(1810\) in.-lb'
+    answer: C
+    hint: '\(W=\tfrac12kx^2\) with \(x=0.5\).'
+    explanation: '\(\tfrac12(7238)(0.25)\approx905\). For the second half inch: \(\tfrac12k(1-0.25)\approx2714\).'
+  172:
+    topic: s6-6
+    question: 'A bathroom scale is compressed \(\tfrac1{16}\) in. by a 150-lb person. The work done compressing it \(\tfrac18\) in. is'
+    A: '\(37.5\) in.-lb'
+    B: '\(9.375\) in.-lb'
+    C: '\(150\) in.-lb'
+    D: '\(18.75\) in.-lb'
+    answer: D
+    hint: '\(k=150\cdot16=2400\) lb/in.'
+    explanation: '\(\tfrac12(2400)\left(\tfrac18\right)^2=18.75\).'
+  173:
+    topic: s6-6
+    question: A mountain climber hauls up 50 m of hanging rope weighing 0.624 N/m. The work is
+    A: '\(390\text{ J}\)'
+    B: '\(780\text{ J}\)'
+    C: '\(1{,}170\text{ J}\)'
+    D: '\(1{,}560\text{ J}\)'
+    answer: B
+    hint: 'Work \(=\int_0^{50}0.624x\,dx\).'
+    explanation: '\(0.312\cdot2500=780\) J.'
+  174:
+    topic: s6-6
+    question: A 144-lb bag of sand is lifted at a constant rate; half the sand has leaked out by the time it reaches 18 ft. The work (ft-lb) is
+    A: '\(3{,}888\text{ ft-lb}\)'
+    B: '\(1{,}944\text{ ft-lb}\)'
+    C: '\(972\text{ ft-lb}\)'
+    D: '\(2{,}916\text{ ft-lb}\)'
+    answer: B
+    hint: 'The weight at height \(x\) is \(144-4x\).'
+    explanation: '\(144\cdot18-2\cdot324=1944\).'
+  175:
+    topic: s6-6
+    question: An elevator cable weighing 4.5 lb/ft is paid out; at the first floor 180 ft are out. The work the motor does lifting only the cable to the top is
+    A: '\(72{,}900\text{ ft-lb}\)'
+    B: '\(36{,}450\text{ ft-lb}\)'
+    C: '\(145{,}800\text{ ft-lb}\)'
+    D: '\(109{,}350\text{ ft-lb}\)'
+    answer: A
+    hint: 'Cable still hanging \(=x\) ft when the car is \(180-x\) ft from the top.'
+    explanation: '\(\tfrac92\cdot\tfrac{180^2}2=72{,}900\) ft-lb.'
+  176:
+    topic: s6-6
+    question: A leaky bucket starts with 16 lb of water and loses it at a constant rate, empty just as it reaches a height of 20 ft. The work spent lifting the water alone is
+    A: '\(320\text{ ft-lb}\)'
+    B: '\(240\text{ ft-lb}\)'
+    C: '\(80\text{ ft-lb}\)'
+    D: '\(160\text{ ft-lb}\)'
+    answer: D
+    hint: 'The weight at height \(x\) is \(16-0.8x\).'
+    explanation: '\(320-160=160\) ft-lb.'
+  177:
+    topic: s6-6
+    question: 'A particle at \((x,0)\) is attracted to the origin with force \(k/x^2\). It starts at rest at \(x=b\) and reaches \(x=a<b\). The work done on it is'
+    A: '\(k\left(\dfrac1b-\dfrac1a\right)\)'
+    B: '\(k\ln\dfrac ba\)'
+    C: '\(k\left(\dfrac1a-\dfrac1b\right)\)'
+    D: '\(\dfrac{k}{ab}\)'
+    answer: C
+    hint: '\(W=\int_a^b\dfrac{k}{x^2}dx\).'
+    explanation: '\(k\left[-\tfrac1x\right]_a^b=k\left(\tfrac1a-\tfrac1b\right)\).'
+  178:
+    topic: s6-6
+    question: 'When a gas in a cylinder of cross-section \(A\) is compressed by a piston from \((p_1,V_1)\) to \((p_2,V_2)\), the work done is'
+    A: '\(\displaystyle\int V\,dp\)'
+    B: '\(\displaystyle\int_{V_1}^{V_2}p\,dV\)'
+    C: '\(\displaystyle\int p\,dA\)'
+    D: '\(p(V_2-V_1)\) for any gas'
+    answer: B
+    hint: 'Force \(=pA\) and \(dV=A\,dx\).'
+    explanation: 'Work \(=\int F\,dx=\int pA\,dx=\int p\,dV\) (sign conventions aside).'
+  179:
+    topic: s6-6
+    question: 'Gas obeying \(pV^{1.4}=\text{constant}\) is compressed from \(V_1=243\) in.\(^3\) to \(V_2=32\) in.\(^3\), starting at \(p_1=50\) lb/in.\(^2\). The work (in.-lb) done on the gas is about'
+    A: '\(75{,}938\) in.-lb'
+    B: '\(2121\) in.-lb'
+    C: '\(18{,}984\) in.-lb'
+    D: '\(37{,}969\) in.-lb'
+    answer: D
+    hint: '\(p=cV^{-1.4}\) with \(c=p_1V_1^{1.4}\); \(W=\int_{V_2}^{V_1}p\,dV\).'
+    explanation: '\(243^{-0.4}=\tfrac19\) and \(32^{-0.4}=\tfrac14\), so \(W=\dfrac{50\cdot243^{1.4}}{0.4}\left(\tfrac14-\tfrac19\right)=37{,}968.75\).'
+  180:
+    topic: s6-6
+    question: 'A vertical cylindrical tank 30 ft high and 20 ft in diameter is full of kerosene weighing 51.2 lb/ft\(^3\). The work to pump it all to the top of the tank is'
+    A: '\(7{,}238{,}229\text{ ft-lb}\)'
+    B: '\(2{,}304{,}000\text{ ft-lb}\)'
+    C: '\(10{,}857{,}344\text{ ft-lb}\)'
+    D: '\(14{,}476{,}459\text{ ft-lb}\)'
+    answer: A
+    hint: 'A slice at height \(y\) weighs \(51.2\cdot\pi\cdot100\,dy\) and is lifted \(30-y\).'
+    explanation: '\(51.2\cdot100\pi\cdot450=2{,}304{,}000\pi\) ft-lb \(\approx7.24\times10^6\) ft-lb.'
+  181:
+    topic: s6-6
+    question: 'The paraboloid tank formed by revolving \(y=x^2\), \(0\le x\le4\) (meters) about the \(y\)-axis is full of seawater (10,000 N/m\(^3\)). The work to pump it all to the top is'
+    A: '\(21{,}446{,}606\text{ J}\)'
+    B: '\(32{,}169{,}909\text{ J}\)'
+    C: '\(6{,}826{,}667\text{ J}\)'
+    D: '\(42{,}893{,}212\text{ J}\)'
+    answer: A
+    hint: 'A slice at height \(y\) has area \(\pi y\) and is lifted \(16-y\).'
+    explanation: '\(10^4\pi\int_0^{16}y(16-y)\,dy=10^4\pi\cdot\tfrac{2048}3\approx2.14\times10^7\) J.'
+  182:
+    topic: s6-6
+    question: 'A hemispherical reservoir of radius 5 m is full of water (9800 N/m\(^3\)). The work to pump it all to 4 m above the top is'
+    A: '\(22{,}609{,}650\text{ J}\)'
+    B: '\(4{,}797{,}917\text{ J}\)'
+    C: '\(30{,}146{,}200\text{ J}\)'
+    D: '\(15{,}073{,}100\text{ J}\)'
+    answer: D
+    hint: 'With the origin at the center, the slice at \(y\) has radius \(\sqrt{25-y^2}\) and is lifted \(4-y\).'
+    explanation: '\(9800\pi\int_{-5}^0(25-y^2)(4-y)\,dy\approx1.5\times10^7\) J.'
+  183:
+    topic: s6-6
+    question: 'A 2-oz tennis ball is served at 160 ft/s. The work done on it (use \(m=\text{weight}/32\)) is'
+    A: '\(100\) ft-lb'
+    B: '\(50\) ft-lb'
+    C: '\(12.5\) ft-lb'
+    D: '\(25\) ft-lb'
+    answer: B
+    hint: '\(W=\tfrac12mv^2\).'
+    explanation: '\(m=\tfrac{2/16}{32}=\tfrac1{256}\), so \(W=\tfrac12\cdot\tfrac{1}{256}\cdot160^2=50\).'
+  184:
+    topic: s6-6
+    question: How many foot-pounds of work does it take to throw a baseball (5 oz) at 90 mph (132 ft/s)?
+    A: 'about \(170\) ft-lb'
+    B: 'about \(85\) ft-lb'
+    C: 'about \(11\) ft-lb'
+    D: 'about \(42\) ft-lb'
+    answer: B
+    hint: '\(m=0.3125/32\), \(W=\tfrac12mv^2\).'
+    explanation: '\(\tfrac12(0.009766)(17424)\approx85.1\).'
+  185:
+    topic: s6-6
+    question: A 1.6-oz golf ball leaves the tee at 280 ft/s. The work done on it is about
+    A: '\(61\) ft-lb'
+    B: '\(12\) ft-lb'
+    C: '\(245\) ft-lb'
+    D: '\(122.5\) ft-lb'
+    answer: D
+    hint: '\(m=(0.1)/32\).'
+    explanation: '\(\tfrac12(0.003125)(78400)=122.5\).'
+  186:
+    topic: s6-6
+    question: 'The work done on a body by the net force moving it from \(x_1\) to \(x_2\) equals'
+    A: the force times the time
+    B: its change in velocity
+    C: its change in momentum
+    D: 'the change in its kinetic energy, \(\tfrac12mv_2^2-\tfrac12mv_1^2\)'
+    answer: D
+    hint: 'Use \(F=m\,dv/dt=mv\,dv/dx\).'
+    explanation: '\(\int F\,dx=\int mv\,dv=\tfrac12mv^2\Big|\).'
+  187:
+    topic: s6-6
+    question: 'A 2-oz steel ball bearing is placed on a vertical spring (\(k=18\) lb/ft), compressed 2 in. and released. How high does it go?'
+    A: '\(4\) ft'
+    B: '\(1\) ft'
+    C: '\(0.25\) ft'
+    D: '\(2\) ft'
+    answer: D
+    hint: 'Spring energy \(\tfrac12kx^2\) becomes gravitational energy \(wh\).'
+    explanation: '\(\tfrac12\cdot18\cdot\left(\tfrac16\right)^2=0.25\) ft-lb \(=\tfrac18h\), so \(h=2\) ft.'
+  188:
+    topic: s6-6
+    question: 'The work to lift a 1000-kg satellite from Earth''s surface (\(r=6.37\times10^6\) m) to an orbit \(r=35.78\times10^6\) m is \(\displaystyle\int\dfrac{1000MG}{r^2}dr\) with \(M=5.975\times10^{24}\) kg, \(G=6.672\times10^{-11}\). It is about'
+    A: '\(1.4\times10^{9}\) J'
+    B: '\(5.14\times10^{7}\) J'
+    C: '\(5.14\times10^{10}\) J'
+    D: '\(6.3\times10^{9}\) J'
+    answer: C
+    hint: 'Evaluate \(1000MG\left(\tfrac1{r_1}-\tfrac1{r_2}\right)\).'
+    explanation: '\(1000MG\approx3.986\times10^{17}\) and \(\tfrac1{r_1}-\tfrac1{r_2}\approx1.29\times10^{-7}\).'
+  189:
+    topic: s6-6
+    question: 'Two electrons repel with force \(F=\dfrac{23\times10^{-29}}{r^2}\) N. One is fixed at \((1,0)\). The work to move a second one along the \(x\)-axis from \((-1,0)\) to the origin is'
+    A: '\(11.5\times10^{-29}\) J'
+    B: '\(23\times10^{-29}\) J'
+    C: '\(5.75\times10^{-29}\) J'
+    D: '\(46\times10^{-29}\) J'
+    answer: A
+    hint: 'The distance \(r\) from the fixed electron goes from 2 to 1.'
+    explanation: '\(\int_1^2\dfrac{23\times10^{-29}}{r^2}dr=23\times10^{-29}\left(1-\tfrac12\right)\).'
+  190:
+    topic: s6-7
+    question: 'The fluid force on a horizontal surface of area \(A\) at depth \(h\) in a fluid of weight density \(w\) is'
+    A: '\(F=whA\)'
+    B: '\(F=wA/h\)'
+    C: '\(F=whA/2\)'
+    D: '\(F=wh^2\)'
+    answer: A
+    hint: 'Pressure is \(wh\); force is pressure times area.'
+    explanation: 'On vertical plates, the depth varies, so integrate: \(F=\int w\cdot(\text{depth})\cdot(\text{width})\,dy\).'
+  191:
+    topic: s6-7
+    question: 'A semicircular plate 2 ft in diameter sticks straight down into fresh water (62.4 lb/ft\(^3\)) with the diameter along the surface. The force on one side is'
+    A: '\(83.2\text{ lb}\)'
+    B: '\(62.4\text{ lb}\)'
+    C: '\(20.8\text{ lb}\)'
+    D: '\(41.6\text{ lb}\)'
+    answer: D
+    hint: 'The width at depth \(y\) is \(2\sqrt{1-y^2}\).'
+    explanation: '\(62.4\cdot\tfrac23=41.6\) lb.'
+  192:
+    topic: s6-7
+    question: 'An isosceles triangular plate with a 4-ft base is submerged vertically in a lake with its base 1 ft below the surface and its apex 4 ft deeper (at depth 5 ft). The force against one face in fresh water (62.4 lb/ft\(^3\)) is'
+    A: '\(1{,}164.8\text{ lb}\)'
+    B: '\(1{,}747.2\text{ lb}\)'
+    C: '\(2{,}329.6\text{ lb}\)'
+    D: '\(582.4\text{ lb}\)'
+    answer: A
+    hint: 'The width at depth \(y\) is \(5-y\) ft.'
+    explanation: '\(62.4\int_1^5y(5-y)\,dy=62.4\cdot\tfrac{56}{3}\approx1164.8\) lb.'
+  193:
+    topic: s6-7
+    question: 'If the same triangular plate is in seawater (64 lb/ft\(^3\)), the force changes by the factor'
+    A: '\(\frac{1}{2}\)'
+    B: '\(\frac{40}{39}\)'
+    C: '\(\frac{39}{40}\)'
+    D: '\(2\)'
+    answer: B
+    hint: The force is proportional to the weight density.
+    explanation: '\(\dfrac{64}{62.4}\approx1.026\).'
+  194:
+    topic: s6-7
+    question: 'The vertical ends of a watering trough are 3-ft squares. When the trough is full of water (62.4 lb/ft\(^3\)), the force on each end is'
+    A: '\(421.2\text{ lb}\)'
+    B: '\(1{,}684.8\text{ lb}\)'
+    C: '\(1{,}263.6\text{ lb}\)'
+    D: '\(842.4\text{ lb}\)'
+    answer: D
+    hint: The width is constant, 3 ft.
+    explanation: '\(62.4\cdot3\cdot\tfrac92=842.4\) lb.'
+  195:
+    topic: s6-7
+    question: 'For the trough with 3-ft-square ends, the depth to which the water must be lowered to cut the force on the ends by 25% is \(d=3\sqrt{0.75}\approx2.6\) ft. So the level drops by about'
+    A: '\(2.4\) in.'
+    B: '\(12\) in.'
+    C: '\(4.8\) in.'
+    D: '\(9\) in.'
+    answer: C
+    hint: Force is proportional to the square of the depth.
+    explanation: '\(3-2.598=0.402\) ft \(\approx4.8\) in.'
+  196:
+    topic: s6-7
+    question: 'The vertical ends of a trough are isosceles triangles (base 4 ft at the top, height 3 ft, apex down). Full of water (62.4 lb/ft\(^3\)), the force on one end is'
+    A: '\(187.2\text{ lb}\)'
+    B: '\(748.8\text{ lb}\)'
+    C: '\(561.6\text{ lb}\)'
+    D: '\(374.4\text{ lb}\)'
+    answer: D
+    hint: 'Measure \(y\) up from the apex: the width at height \(y\) is \(\tfrac43y\) and the depth is \(3-y\).'
+    explanation: '\(62.4\cdot\tfrac43\int_0^3y(3-y)\,dy=62.4\cdot6=374.4\) lb.'
+  197:
+    topic: s6-7
+    question: 'A cylindrical milk truck tank of diameter 6 ft is full of milk (64.5 lb/ft\(^3\)). The force on each end is'
+    A: '\(8{,}207\text{ lb}\)'
+    B: '\(5{,}471\text{ lb}\)'
+    C: '\(10{,}942\text{ lb}\)'
+    D: '\(1{,}742\text{ lb}\)'
+    answer: B
+    hint: 'The depth at height \(y\) from the center is \(3-y\); the width is \(2\sqrt{9-y^2}\).'
+    explanation: '\(64.5\cdot3\cdot9\pi=64.5\cdot27\pi\approx5471\) lb.'
+  198:
+    topic: s6-7
+    question: 'The average value of the fluid pressure over the vertical dimension of a submerged vertical rectangular plate (top at depth \(d_1\), bottom at depth \(d_2\)) times its area equals'
+    A: the pressure at the top times the area
+    B: half the weight of the fluid above
+    C: the pressure at the bottom times the area
+    D: the total force on one face of the plate
+    answer: D
+    hint: 'Average pressure \(=\dfrac{1}{d_2-d_1}\int_{d_1}^{d_2}wh\,dh\).'
+    explanation: 'This is Exercises 15–16: \(F=\operatorname{av}(p)\cdot A\).'
+  199:
+    topic: s6-7
+    question: 'A rectangular fish tank (freshwater, 62.4 lb/ft\(^3\)) has base 2 ft by 4 ft and height 2 ft, filled to 2 in. from the top (water depth \(\tfrac53\) ft). The force on one 4-ft side is'
+    A: '\(693.3\text{ lb}\)'
+    B: '\(173.3\text{ lb}\)'
+    C: '\(346.7\text{ lb}\)'
+    D: '\(520\text{ lb}\)'
+    answer: C
+    hint: '\(F=\int w\,y\cdot4\,dy\).'
+    explanation: '\(62.4\cdot4\cdot\tfrac{25}{18}\approx346.7\) lb.'
+  200:
+    topic: s6-7
+    question: 'The same tank: the force on one 2-ft end (width 2 ft, depth \(\tfrac53\) ft) is'
+    A: '\(346.7\text{ lb}\)'
+    B: '\(260\text{ lb}\)'
+    C: '\(173.3\text{ lb}\)'
+    D: '\(86.7\text{ lb}\)'
+    answer: C
+    hint: The width is 2 ft.
+    explanation: '\(62.4\cdot2\cdot\tfrac{25}{18}\approx173.3\) lb.'
+  201:
+    topic: s6-7
+    question: A trough has vertical triangular ends with height 3 ft and a top width of 4 ft (apex down). The force on one end when full of water is
+    A: '\(561.6\text{ lb}\)'
+    B: '\(187.2\text{ lb}\)'
+    C: '\(374.4\text{ lb}\)'
+    D: '\(748.8\text{ lb}\)'
+    answer: C
+    hint: Same as the earlier triangular end.
+    explanation: '\(374.4\) lb.'
+  202:
+    topic: s6-7
+    question: 'A rectangular plate lies in a vertical plane with its top edge at the water surface. Its width is \(b\) and height \(a\). The fluid force on one face is'
+    A: '\(\dfrac12wba^2\)'
+    B: '\(wba\)'
+    C: '\(\dfrac13wba^2\)'
+    D: '\(wba^2\)'
+    answer: A
+    hint: '\(F=\int_0^awyb\,dy\).'
+    explanation: '\(wb\cdot\tfrac{a^2}{2}\).'
+  203:
+    topic: s6-7
+    question: If a vertical plate is lowered deeper into a fluid (with the same orientation), the fluid force on it
+    A: increases
+    B: decreases
+    C: stays the same
+    D: doubles exactly
+    answer: A
+    hint: Pressure increases with depth.
+    explanation: Every strip is at greater depth, so each carries more force.
+  204:
+    topic: s6-7
+    question: "The fluid force on a submerged plate depends on the plate's shape and depth but not on"
+    A: the length of a trough (for the end plates)
+    B: the depth of the plate
+    C: the weight density of the fluid
+    D: the width of the plate
+    answer: A
+    hint: 'Which quantity does not appear in \(F=\int w\cdot\text{depth}\cdot\text{width}\,dy\)?'
+    explanation: The force on an end plate does not depend on how long the trough is (Exercise 21c).
+  205:
+    topic: s6-7
+    question: 'A tank end is a trapezoid; the fluid force is computed by splitting it into horizontal strips of width \(L(y)\) at depth \(h(y)\). The strip''s force is approximately'
+    A: '\(w\,L(y)\,\Delta y\) only'
+    B: '\(w\,h(y)^2\Delta y\)'
+    C: '\(w\,h(y)\,L(y)\,\Delta y\)'
+    D: '\(h(y)\,L(y)/w\)'
+    answer: C
+    hint: 'Pressure \(wh\) times area \(L\,\Delta y\).'
+    explanation: 'Summing the strips and taking \(\Delta y\to0\) gives the integral.'
+  206:
+    topic: s6-7
+    question: A dam face is inclined. For an inclined plate, the fluid force is computed using
+    A: only the slant length
+    B: only the vertical height
+    C: the horizontal width of the plate at the bottom
+    D: the vertical depth of each strip and the slant width of the strip
+    answer: D
+    hint: Pressure depends on vertical depth; area depends on the actual strip length.
+    explanation: 'For the 100 ft by 26 ft face with a 24 ft vertical rise, the strip area uses the 26-ft slant: \(F=62.4\cdot100\cdot\tfrac{26}{24}\cdot\tfrac{24^2}{2}\).'
+  207:
+    topic: s6-7
+    question: 'A dam face is a 100 ft by 26 ft rectangle inclined so its top is 24 ft above its bottom. Water (62.4 lb/ft\(^3\)) is level with the top. The force on the dam is'
+    A: '\(3{,}894{,}000\text{ lb}\)'
+    B: '\(1{,}797{,}120\text{ lb}\)'
+    C: '\(1{,}946{,}880\text{ lb}\)'
+    D: '\(974{,}000\text{ lb}\)'
+    answer: C
+    hint: 'Use vertical depth \(y\in[0,24]\) and strip width \(100\cdot\tfrac{26}{24}\,dy\) along the slant.'
+    explanation: '\(62.4\cdot100\cdot\tfrac{26}{24}\cdot288=1{,}947{,}000\) lb \(\approx1.95\times10^6\) lb.'
+  208:
+    topic: s6-7
+    question: 'A window 63 in. wide runs from 0.5 in. to 33.5 in. below the surface of seawater (64 lb/ft\(^3\)). The force on it is about'
+    A: '\(1310\) lb'
+    B: '\(2620\) lb'
+    C: '\(650\) lb'
+    D: '\(330\) lb'
+    answer: A
+    hint: 'Convert to feet: width \(\tfrac{63}{12}=5.25\) ft; depths \(\tfrac{0.5}{12}\) to \(\tfrac{33.5}{12}\).'
+    explanation: '\(F=64\cdot5.25\cdot\tfrac12\left(d_2^2-d_1^2\right)\approx1309\) lb.'
