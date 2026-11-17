@@ -1421,24 +1421,24 @@ questions:
     explanation: 'An antiderivative is \(\frac{t}{2} - \frac{\sin{\left(2 t \right)}}{4}\); then \(F(\frac{\pi}{3})-F(- \frac{\pi}{3})=- \frac{\sqrt{3}}{4} + \frac{\pi}{3}\).'
   141:
     topic: s5-4
-    question: 'Evaluate \(\displaystyle\int_{0}^{\log{\left(2 \right)}} e^{3 x}\,dx\).'
+    question: 'Evaluate \(\displaystyle\int_{0}^{\ln{\left(2 \right)}} e^{3 x}\,dx\).'
     A: '\(\frac{7}{3}\)'
     B: '\(\frac{7}{6}\)'
     C: '\(\frac{14}{3}\)'
     D: '\(- \frac{7}{3}\)'
     answer: A
     hint: '\(\int e^{3x}dx=\tfrac13e^{3x}\).'
-    explanation: 'An antiderivative is \(\frac{e^{3 x}}{3}\); then \(F(\log{\left(2 \right)})-F(0)=\frac{7}{3}\).'
+    explanation: 'An antiderivative is \(\frac{e^{3 x}}{3}\); then \(F(\ln{\left(2 \right)})-F(0)=\frac{7}{3}\).'
   142:
     topic: s5-4
     question: 'Evaluate \(\displaystyle\int_{1}^{2} - e^{- x} + \frac{1}{x}\,dx\).'
-    A: '\(- \frac{2}{e} + \frac{2}{e^{2}} + 2 \log{\left(2 \right)}\)'
-    B: '\(- \frac{1}{e} + e^{-2} + \log{\left(2 \right)}\)'
-    C: '\(- \frac{1}{2 e} + \frac{1}{2 e^{2}} + \frac{\log{\left(2 \right)}}{2}\)'
-    D: '\(- \log{\left(2 \right)} - e^{-2} + e^{-1}\)'
+    A: '\(- \frac{2}{e} + \frac{2}{e^{2}} + 2 \ln{\left(2 \right)}\)'
+    B: '\(- \frac{1}{e} + e^{-2} + \ln{\left(2 \right)}\)'
+    C: '\(- \frac{1}{2 e} + \frac{1}{2 e^{2}} + \frac{\ln{\left(2 \right)}}{2}\)'
+    D: '\(- \ln{\left(2 \right)} - e^{-2} + e^{-1}\)'
     answer: B
     hint: '\(\int\dfrac1x\,dx=\ln|x|\).'
-    explanation: 'An antiderivative is \(\log{\left(x \right)} + e^{- x}\); then \(F(2)-F(1)=- \frac{1}{e} + e^{-2} + \log{\left(2 \right)}\).'
+    explanation: 'An antiderivative is \(\ln{\left(x \right)} + e^{- x}\); then \(F(2)-F(1)=- \frac{1}{e} + e^{-2} + \ln{\left(2 \right)}\).'
   143:
     topic: s5-4
     question: 'Evaluate \(\displaystyle\int_{0}^{1} \frac{4}{x^{2} + 1}\,dx\).'
@@ -1471,14 +1471,14 @@ questions:
     explanation: 'An antiderivative is \(\frac{e^{x^{2}}}{2}\); then \(F(1)-F(0)=- \frac{1}{2} + \frac{e}{2}\).'
   146:
     topic: s5-4
-    question: 'Evaluate \(\displaystyle\int_{1}^{2} \frac{\log{\left(x \right)}}{x}\,dx\).'
-    A: '\(\frac{\log{\left(2 \right)}^{2}}{4}\)'
-    B: '\(\log{\left(2 \right)}^{2}\)'
-    C: '\(\frac{\log{\left(2 \right)}^{2}}{2}\)'
-    D: '\(- \frac{\log{\left(2 \right)}^{2}}{2}\)'
+    question: 'Evaluate \(\displaystyle\int_{1}^{2} \frac{\ln{\left(x \right)}}{x}\,dx\).'
+    A: '\(\frac{\ln{\left(2 \right)}^{2}}{4}\)'
+    B: '\(\ln{\left(2 \right)}^{2}\)'
+    C: '\(\frac{\ln{\left(2 \right)}^{2}}{2}\)'
+    D: '\(- \frac{\ln{\left(2 \right)}^{2}}{2}\)'
     answer: C
     hint: 'Guess \(\tfrac12(\ln x)^2\).'
-    explanation: 'An antiderivative is \(\frac{\log{\left(x \right)}^{2}}{2}\); then \(F(2)-F(1)=\frac{\log{\left(2 \right)}^{2}}{2}\).'
+    explanation: 'An antiderivative is \(\frac{\ln{\left(x \right)}^{2}}{2}\); then \(F(2)-F(1)=\frac{\ln{\left(2 \right)}^{2}}{2}\).'
   147:
     topic: s5-4
     question: 'Evaluate \(\displaystyle\int_{-4}^{4} \left|{x}\right|\,dx\).'
@@ -1943,12 +1943,12 @@ questions:
     topic: s5-5
     question: 'Find \(\displaystyle\int \tan{\left(x \right)}\,dx\).'
     A: '\(\frac{\sin{\left(x \right)}}{\cos{\left(x \right)}}+C\)'
-    B: '\(\log{\left(\cos{\left(x \right)} \right)}+C\)'
-    C: '\(- \log{\left(\cos{\left(x \right)} \right)}+C\)'
-    D: '\(- 2 \log{\left(\cos{\left(x \right)} \right)}+C\)'
+    B: '\(\ln{\left(\cos{\left(x \right)} \right)}+C\)'
+    C: '\(- \ln{\left(\cos{\left(x \right)} \right)}+C\)'
+    D: '\(- 2 \ln{\left(\cos{\left(x \right)} \right)}+C\)'
     answer: C
     hint: '\(\tan x=\dfrac{\sin x}{\cos x}\); let \(u=\cos x\).'
-    explanation: 'Differentiating \(- \log{\left(\cos{\left(x \right)} \right)}\) gives back \(\tan{\left(x \right)}\), so the answer is \(- \log{\left(\cos{\left(x \right)} \right)}+C\).'
+    explanation: 'Differentiating \(- \ln{\left(\cos{\left(x \right)} \right)}\) gives back \(\tan{\left(x \right)}\), so the answer is \(- \ln{\left(\cos{\left(x \right)} \right)}+C\).'
   194:
     topic: s5-5
     question: 'Find \(\displaystyle\int \tan^{2}{\left(x \right)} \sec^{2}{\left(x \right)}\,dx\).'
@@ -1991,14 +1991,14 @@ questions:
     explanation: 'Differentiating \(e^{\sin{\left(x \right)}}\) gives back \(e^{\sin{\left(x \right)}} \cos{\left(x \right)}\), so the answer is \(e^{\sin{\left(x \right)}}+C\).'
   198:
     topic: s5-5
-    question: 'Find \(\displaystyle\int \frac{1}{x \log{\left(x \right)}}\,dx\).'
-    A: '\(\log{\left(\log{\left(x \right)} \right)}+C\)'
-    B: '\(\frac{\log{\left(\log{\left(x \right)} \right)}}{2}+C\)'
-    C: '\(2 \log{\left(\log{\left(x \right)} \right)}+C\)'
-    D: '\(- \log{\left(\log{\left(x \right)} \right)}+C\)'
+    question: 'Find \(\displaystyle\int \frac{1}{x \ln{\left(x \right)}}\,dx\).'
+    A: '\(\ln{\left(\ln{\left(x \right)} \right)}+C\)'
+    B: '\(\frac{\ln{\left(\ln{\left(x \right)} \right)}}{2}+C\)'
+    C: '\(2 \ln{\left(\ln{\left(x \right)} \right)}+C\)'
+    D: '\(- \ln{\left(\ln{\left(x \right)} \right)}+C\)'
     answer: A
     hint: 'Let \(u=\ln x\).'
-    explanation: 'Differentiating \(\log{\left(\log{\left(x \right)} \right)}\) gives back \(\frac{1}{x \log{\left(x \right)}}\), so the answer is \(\log{\left(\log{\left(x \right)} \right)}+C\).'
+    explanation: 'Differentiating \(\ln{\left(\ln{\left(x \right)} \right)}\) gives back \(\frac{1}{x \ln{\left(x \right)}}\), so the answer is \(\ln{\left(\ln{\left(x \right)} \right)}+C\).'
   199:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{1}{4 x^{2} + 1}\,dx\).'
@@ -2012,13 +2012,13 @@ questions:
   200:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{e^{x}}{e^{2 x} + 1}\,dx\).'
-    A: '\(2 \operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
-    B: '\(\frac{\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}}{2}+C\)'
-    C: '\(- \operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
-    D: '\(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
+    A: '\(2 \operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
+    B: '\(\frac{\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}}{2}+C\)'
+    C: '\(- \operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
+    D: '\(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
     answer: D
     hint: 'Let \(u=e^x\).'
-    explanation: 'Differentiating \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}\) gives back \(\frac{e^{x}}{e^{2 x} + 1}\), so the answer is \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}+C\).'
+    explanation: 'Differentiating \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}\) gives back \(\frac{e^{x}}{e^{2 x} + 1}\), so the answer is \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\).'
   201:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{5}{4 r^{2} + 9}\,dr\).'
@@ -2062,13 +2062,13 @@ questions:
   205:
     topic: s5-5
     question: 'Find \(\displaystyle\int \left(1 - \cos{\left(\frac{t}{2} \right)}\right)^{2} \sin{\left(\frac{t}{2} \right)}\,dt\).'
-    A: '\(- 4 \sin^{2}{\left(\frac{t}{2} \right)} - \frac{4 \cos^{3}{\left(\frac{t}{2} \right)}}{3} - 4 \cos{\left(\frac{t}{2} \right)}+C\)'
-    B: '\(- 2 \sin^{2}{\left(\frac{t}{2} \right)} - \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} - 2 \cos{\left(\frac{t}{2} \right)}+C\)'
-    C: '\(2 \sin^{2}{\left(\frac{t}{2} \right)} + \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos{\left(\frac{t}{2} \right)}+C\)'
+    A: '\(- \frac{4 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 4 \cos^{2}{\left(\frac{t}{2} \right)} - 4 \cos{\left(\frac{t}{2} \right)}+C\)'
+    B: '\(- \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos^{2}{\left(\frac{t}{2} \right)} - 2 \cos{\left(\frac{t}{2} \right)}+C\)'
+    C: '\(\frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} - 2 \cos^{2}{\left(\frac{t}{2} \right)} + 2 \cos{\left(\frac{t}{2} \right)}+C\)'
     D: '\(\sin{\left(\frac{t}{2} \right)} \cos^{2}{\left(\frac{t}{2} \right)} - 2 \sin{\left(\frac{t}{2} \right)} \cos{\left(\frac{t}{2} \right)} + \sin{\left(\frac{t}{2} \right)}+C\)'
     answer: B
     hint: 'Let \(u=1-\cos\tfrac t2\).'
-    explanation: 'Differentiating \(- 2 \sin^{2}{\left(\frac{t}{2} \right)} - \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} - 2 \cos{\left(\frac{t}{2} \right)}\) gives back \(\left(1 - \cos{\left(\frac{t}{2} \right)}\right)^{2} \sin{\left(\frac{t}{2} \right)}\), so the answer is \(- 2 \sin^{2}{\left(\frac{t}{2} \right)} - \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} - 2 \cos{\left(\frac{t}{2} \right)}+C\).'
+    explanation: 'Differentiating \(- \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos^{2}{\left(\frac{t}{2} \right)} - 2 \cos{\left(\frac{t}{2} \right)}\) gives back \(\left(1 - \cos{\left(\frac{t}{2} \right)}\right)^{2} \sin{\left(\frac{t}{2} \right)}\), so the answer is \(- \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos^{2}{\left(\frac{t}{2} \right)} - 2 \cos{\left(\frac{t}{2} \right)}+C\).'
   206:
     topic: s5-5
     question: 'Find \(\displaystyle\int \cot{\left(2 \theta \right)} \csc{\left(2 \theta \right)}\,d\theta\).'
@@ -2328,7 +2328,7 @@ questions:
     D: '\(- \frac{1}{6}\)'
     answer: B
     hint: 'Let \(u=1-\cos3t\).'
-    explanation: 'An antiderivative is \(\frac{\cos^{2}{\left(3 t \right)}}{6} - \frac{\cos{\left(3 t \right)}}{3}\); then \(F(\frac{\pi}{6})-F(0)=\frac{1}{6}\).'
+    explanation: 'An antiderivative is \(- \frac{\sin^{2}{\left(3 t \right)}}{6} - \frac{\cos{\left(3 t \right)}}{3}\); then \(F(\frac{\pi}{6})-F(0)=\frac{1}{6}\).'
   232:
     topic: s5-6
     question: 'Evaluate \(\displaystyle\int_{- \frac{\pi}{2}}^{0} \left(\tan{\left(\frac{t}{2} \right)} + 2\right) \sec^{2}{\left(\frac{t}{2} \right)}\,dt\).'
@@ -2352,73 +2352,73 @@ questions:
   234:
     topic: s5-6
     question: 'Evaluate \(\displaystyle\int_{0}^{\pi} \frac{\sin{\left(t \right)}}{2 - \cos{\left(t \right)}}\,dt\).'
-    A: '\(2 \log{\left(3 \right)}\)'
-    B: '\(\frac{\log{\left(3 \right)}}{2}\)'
-    C: '\(- \log{\left(3 \right)}\)'
-    D: '\(\log{\left(3 \right)}\)'
+    A: '\(2 \ln{\left(3 \right)}\)'
+    B: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    C: '\(- \ln{\left(3 \right)}\)'
+    D: '\(\ln{\left(3 \right)}\)'
     answer: D
     hint: 'Let \(u=2-\cos t\).'
-    explanation: 'An antiderivative is \(\log{\left(\cos{\left(t \right)} - 2 \right)}\); then \(F(\pi)-F(0)=\log{\left(3 \right)}\).'
+    explanation: 'An antiderivative is \(\ln{\left(\cos{\left(t \right)} - 2 \right)}\); then \(F(\pi)-F(0)=\ln{\left(3 \right)}\).'
   235:
     topic: s5-6
     question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{3}} \frac{4 \sin{\left(\theta \right)}}{1 - 4 \cos{\left(\theta \right)}}\,d\theta\).'
-    A: '\(- \log{\left(3 \right)}\)'
-    B: '\(- 2 \log{\left(3 \right)}\)'
-    C: '\(- \frac{\log{\left(3 \right)}}{2}\)'
-    D: '\(\log{\left(3 \right)}\)'
+    A: '\(- \ln{\left(3 \right)}\)'
+    B: '\(- 2 \ln{\left(3 \right)}\)'
+    C: '\(- \frac{\ln{\left(3 \right)}}{2}\)'
+    D: '\(\ln{\left(3 \right)}\)'
     answer: A
     hint: 'Let \(u=1-4\cos\theta\).'
-    explanation: 'An antiderivative is \(\log{\left(4 \cos{\left(\theta \right)} - 1 \right)}\); then \(F(\frac{\pi}{3})-F(0)=- \log{\left(3 \right)}\).'
+    explanation: 'An antiderivative is \(\ln{\left(4 \cos{\left(\theta \right)} - 1 \right)}\); then \(F(\frac{\pi}{3})-F(0)=- \ln{\left(3 \right)}\).'
   236:
     topic: s5-6
-    question: 'Evaluate \(\displaystyle\int_{1}^{2} \frac{2 \log{\left(x \right)}}{x}\,dx\).'
-    A: '\(2 \log{\left(2 \right)}^{2}\)'
-    B: '\(- \log{\left(2 \right)}^{2}\)'
-    C: '\(\log{\left(2 \right)}^{2}\)'
-    D: '\(\frac{\log{\left(2 \right)}^{2}}{2}\)'
+    question: 'Evaluate \(\displaystyle\int_{1}^{2} \frac{2 \ln{\left(x \right)}}{x}\,dx\).'
+    A: '\(2 \ln{\left(2 \right)}^{2}\)'
+    B: '\(- \ln{\left(2 \right)}^{2}\)'
+    C: '\(\ln{\left(2 \right)}^{2}\)'
+    D: '\(\frac{\ln{\left(2 \right)}^{2}}{2}\)'
     answer: C
     hint: 'Let \(u=\ln x\).'
-    explanation: 'An antiderivative is \(\log{\left(x \right)}^{2}\); then \(F(2)-F(1)=\log{\left(2 \right)}^{2}\).'
+    explanation: 'An antiderivative is \(\ln{\left(x \right)}^{2}\); then \(F(2)-F(1)=\ln{\left(2 \right)}^{2}\).'
   237:
     topic: s5-6
-    question: 'Evaluate \(\displaystyle\int_{2}^{4} \frac{1}{x \log{\left(x \right)}^{2}}\,dx\).'
-    A: '\(\frac{1}{4 \log{\left(2 \right)}}\)'
-    B: '\(\frac{1}{2 \log{\left(2 \right)}}\)'
-    C: '\(- \frac{1}{2 \log{\left(2 \right)}}\)'
-    D: '\(\frac{1}{\log{\left(2 \right)}}\)'
+    question: 'Evaluate \(\displaystyle\int_{2}^{4} \frac{1}{x \ln{\left(x \right)}^{2}}\,dx\).'
+    A: '\(\frac{1}{4 \ln{\left(2 \right)}}\)'
+    B: '\(\frac{1}{2 \ln{\left(2 \right)}}\)'
+    C: '\(- \frac{1}{2 \ln{\left(2 \right)}}\)'
+    D: '\(\frac{1}{\ln{\left(2 \right)}}\)'
     answer: B
     hint: 'Let \(u=\ln x\).'
-    explanation: 'An antiderivative is \(- \frac{1}{\log{\left(x \right)}}\); then \(F(4)-F(2)=\frac{1}{2 \log{\left(2 \right)}}\).'
+    explanation: 'An antiderivative is \(- \frac{1}{\ln{\left(x \right)}}\); then \(F(4)-F(2)=\frac{1}{2 \ln{\left(2 \right)}}\).'
   238:
     topic: s5-6
-    question: 'Evaluate \(\displaystyle\int_{0}^{\log{\left(\sqrt{3} \right)}} \frac{e^{x}}{e^{2 x} + 1}\,dx\).'
-    A: '\(- \frac{i \left(\log{\left(2 \right)} - \frac{i \pi}{6}\right)}{2} - \frac{i \left(\log{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\log{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\log{\left(2 \right)} + \frac{i \pi}{6}\right)}{2}\)'
-    B: '\(- \frac{i \left(\log{\left(2 \right)} + \frac{i \pi}{6}\right)}{2} - \frac{i \left(\log{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\log{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\log{\left(2 \right)} - \frac{i \pi}{6}\right)}{2}\)'
-    C: '\(- i \left(\log{\left(2 \right)} - \frac{i \pi}{6}\right) - i \left(\log{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right) + i \left(\log{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right) + i \left(\log{\left(2 \right)} + \frac{i \pi}{6}\right)\)'
-    D: '\(- \frac{i \left(\log{\left(2 \right)} - \frac{i \pi}{6}\right)}{4} - \frac{i \left(\log{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{4} + \frac{i \left(\log{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{4} + \frac{i \left(\log{\left(2 \right)} + \frac{i \pi}{6}\right)}{4}\)'
+    question: 'Evaluate \(\displaystyle\int_{0}^{\ln{\left(\sqrt{3} \right)}} \frac{e^{x}}{e^{2 x} + 1}\,dx\).'
+    A: '\(- \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{2} - \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{2}\)'
+    B: '\(- \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{2} - \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{2}\)'
+    C: '\(- i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right) - i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right) + i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right) + i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)\)'
+    D: '\(- \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{4} - \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{4} + \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{4} + \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{4}\)'
     answer: A
     hint: 'Let \(u=e^x\).'
-    explanation: 'An antiderivative is \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \log{\left(2 i + e^{x} \right)} \right)\right)}\); then \(F(\log{\left(\sqrt{3} \right)})-F(0)=- \frac{i \left(\log{\left(2 \right)} - \frac{i \pi}{6}\right)}{2} - \frac{i \left(\log{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\log{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\log{\left(2 \right)} + \frac{i \pi}{6}\right)}{2}\).'
+    explanation: 'An antiderivative is \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}\); then \(F(\ln{\left(\sqrt{3} \right)})-F(0)=- \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{2} - \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{2}\).'
   239:
     topic: s5-6
     question: 'Evaluate \(\displaystyle\int_{\frac{\pi}{2}}^{\pi} 2 \cot{\left(\frac{\theta}{3} \right)}\,d\theta\).'
-    A: '\(2 \log{\left(27 \right)}\)'
-    B: '\(\log{\left(27 \right)}\)'
-    C: '\(\frac{\log{\left(27 \right)}}{2}\)'
-    D: '\(- \log{\left(27 \right)}\)'
+    A: '\(2 \ln{\left(27 \right)}\)'
+    B: '\(\ln{\left(27 \right)}\)'
+    C: '\(\frac{\ln{\left(27 \right)}}{2}\)'
+    D: '\(- \ln{\left(27 \right)}\)'
     answer: B
     hint: 'Let \(u=\theta/3\), then \(\int\cot u\,du=\ln|\sin u|\).'
-    explanation: 'An antiderivative is \(6 \log{\left(\sin{\left(\frac{\theta}{3} \right)} \right)}\); then \(F(\pi)-F(\frac{\pi}{2})=\log{\left(27 \right)}\).'
+    explanation: 'An antiderivative is \(6 \ln{\left(\sin{\left(\frac{\theta}{3} \right)} \right)}\); then \(F(\pi)-F(\frac{\pi}{2})=\ln{\left(27 \right)}\).'
   240:
     topic: s5-6
     question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{12}} 6 \tan{\left(3 x \right)}\,dx\).'
-    A: '\(\log{\left(2 \right)}\)'
-    B: '\(\frac{\log{\left(2 \right)}}{2}\)'
-    C: '\(2 \log{\left(2 \right)}\)'
-    D: '\(- \log{\left(2 \right)}\)'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(\frac{\ln{\left(2 \right)}}{2}\)'
+    C: '\(2 \ln{\left(2 \right)}\)'
+    D: '\(- \ln{\left(2 \right)}\)'
     answer: A
     hint: '\(\int\tan u\,du=-\ln|\cos u|\).'
-    explanation: 'An antiderivative is \(- 2 \log{\left(\cos{\left(3 x \right)} \right)}\); then \(F(\frac{\pi}{12})-F(0)=\log{\left(2 \right)}\).'
+    explanation: 'An antiderivative is \(- 2 \ln{\left(\cos{\left(3 x \right)} \right)}\); then \(F(\frac{\pi}{12})-F(0)=\ln{\left(2 \right)}\).'
   241:
     topic: s5-6
     question: 'Which of the two ways of evaluating \(\displaystyle\int_{-1}^{1}r\sqrt{1-r^2}\,dr\) is right? (I) Let \(u=1-r^2\) and change limits to \(u(-1)=0\), \(u(1)=0\). (II) Compute the antiderivative \(-\tfrac13(1-r^2)^{3/2}\) and substitute.'
@@ -2572,20 +2572,20 @@ questions:
   256:
     topic: s5-6
     question: 'Find the area between \(y=\ln x\) and \(y=\ln2x\) from \(x=1\) to \(x=5\).'
-    A: '\(\log{\left(16 \right)}\)'
-    B: '\(2 \log{\left(16 \right)}\)'
-    C: '\(\frac{\log{\left(16 \right)}}{2}\)'
-    D: '\(- \log{\left(16 \right)}\)'
+    A: '\(\ln{\left(16 \right)}\)'
+    B: '\(2 \ln{\left(16 \right)}\)'
+    C: '\(\frac{\ln{\left(16 \right)}}{2}\)'
+    D: '\(- \ln{\left(16 \right)}\)'
     answer: A
     hint: '\(\ln2x-\ln x=\ln2\) is constant.'
     explanation: 'The region has height \(\ln2\) and width 4, so the area is \(4\ln2\).'
   257:
     topic: s5-6
     question: 'Find the area between \(y=\tan x\) and the \(x\)-axis from \(x=-\tfrac\pi4\) to \(x=\tfrac\pi3\).'
-    A: '\(- \frac{3 \log{\left(2 \right)}}{2}\)'
-    B: '\(\frac{3 \log{\left(2 \right)}}{2}\)'
-    C: '\(3 \log{\left(2 \right)}\)'
-    D: '\(\frac{3 \log{\left(2 \right)}}{4}\)'
+    A: '\(- \frac{3 \ln{\left(2 \right)}}{2}\)'
+    B: '\(\frac{3 \ln{\left(2 \right)}}{2}\)'
+    C: '\(3 \ln{\left(2 \right)}\)'
+    D: '\(\frac{3 \ln{\left(2 \right)}}{4}\)'
     answer: B
     hint: '\(\tan x\) is negative on \((-\tfrac\pi4,0)\) and positive on \((0,\tfrac\pi3)\), so integrate each piece separately.'
     explanation: '\(\ln\sqrt2+\ln2=\ln(2\sqrt2)=\tfrac32\ln2\).'
@@ -2602,20 +2602,20 @@ questions:
   259:
     topic: s5-6
     question: 'Find the area between \(y=\dfrac{2x}{1+x^2}\) and the \(x\)-axis on \([-2,2]\).'
-    A: '\(- \log{\left(25 \right)}\)'
-    B: '\(\frac{\log{\left(25 \right)}}{2}\)'
-    C: '\(2 \log{\left(25 \right)}\)'
-    D: '\(\log{\left(25 \right)}\)'
+    A: '\(- \ln{\left(25 \right)}\)'
+    B: '\(\frac{\ln{\left(25 \right)}}{2}\)'
+    C: '\(2 \ln{\left(25 \right)}\)'
+    D: '\(\ln{\left(25 \right)}\)'
     answer: D
     hint: The function is odd, so the signed integral is 0, but the area is twice the right half.
     explanation: '\(2\ln(1+x^2)\big|_0^2=2\ln5\).'
   260:
     topic: s5-6
     question: 'Find the area between \(y=2^{1-x}\) and the \(x\)-axis on \([-1,1]\).'
-    A: '\(\frac{6}{\log{\left(2 \right)}}\)'
-    B: '\(- \frac{3}{\log{\left(2 \right)}}\)'
-    C: '\(\frac{3}{\log{\left(2 \right)}}\)'
-    D: '\(\frac{3}{2 \log{\left(2 \right)}}\)'
+    A: '\(\frac{6}{\ln{\left(2 \right)}}\)'
+    B: '\(- \frac{3}{\ln{\left(2 \right)}}\)'
+    C: '\(\frac{3}{\ln{\left(2 \right)}}\)'
+    D: '\(\frac{3}{2 \ln{\left(2 \right)}}\)'
     answer: C
     hint: '\(\int2^{1-x}dx=-\dfrac{2^{1-x}}{\ln2}\).'
     explanation: '\(\dfrac{4-1}{\ln2}=\dfrac{3}{\ln2}\).'

@@ -126,8 +126,8 @@ questions:
     question: 'Find \(\lim_{x\to 0} \frac{3^{x} - 1}{x}\).'
     A: '\(3\)'
     B: '\(1\)'
-    C: '\(\frac{\log{\left(3 \right)}}{2}\)'
-    D: '\(\log{\left(3 \right)}\)'
+    C: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    D: '\(\ln{\left(3 \right)}\)'
     answer: D
     hint: 'This is the derivative of \(3^x\) at 0.'
     explanation: 'The limit is \(\dfrac{d}{dx}3^x\Big|_{x=0}=\ln3\).'
@@ -1133,7 +1133,7 @@ questions:
     explanation: '\(\sin(\tfrac\pi2\cdot1)=1\).'
   112:
     topic: s2-6
-    question: 'Find \(\lim_{x\to 1} \operatorname{acos}{\left(\log{\left(\sqrt{x} \right)} \right)}\).'
+    question: 'Find \(\lim_{x\to 1} \operatorname{acos}{\left(\ln{\left(\sqrt{x} \right)} \right)}\).'
     A: '\(\frac{\pi}{2}\)'
     B: '\(- \frac{\pi}{2}\)'
     C: does not exist
