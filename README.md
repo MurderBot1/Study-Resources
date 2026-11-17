@@ -6,7 +6,7 @@ Quizzes and flashcards to share with classmates. It's a plain static site (HTML,
 
 | Class | Quizzes | Flashcards |
 | --- | --- | --- |
-| **APUSH – Williams** (`classes/apush-williams/`) | Enduring Vision Quiz, Early Republic Quiz | Terms quiz flashcards (230 terms), Enduring Vision flashcards (111 cards) |
+| **APUSH – Williams** (`classes/apush-williams/`) | Enduring Vision Quiz, Early Republic Quiz, Road to the Civil War Quiz | Terms quiz flashcards (230 terms), Enduring Vision flashcards (111 cards) |
 
 ## Publish with GitHub Pages
 
@@ -86,7 +86,7 @@ assets/js/quiz.js                multiple-choice quiz app (reads the YAML files)
 assets/js/vendor/js-yaml.min.js  YAML parser (js-yaml 4.1.0, MIT license)
 classes/apush-williams/
   index.html                     class page
-  quizzes/                       enduring-vision.yml, early-republic.yml
+  quizzes/                       enduring-vision.yml, early-republic.yml, road-to-civil-war.yml
   flashcards/terms/              Terms quiz flashcards (+ terms-data.js)
   flashcards/enduring-vision/    Enduring Vision flashcards (+ deck-data.js)
 ```

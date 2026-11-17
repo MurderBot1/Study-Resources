@@ -1,0 +1,765 @@
+# Road to the Civil War Quiz
+#
+# Built from the slide decks "Expansion and Road to Civil War" and "The American Civil War".
+# Format: see the README ("Quiz file format").
+
+title: Road to the Civil War Quiz
+description: Westward expansion, the Mexican-American War, the Compromise of 1850, Kansas, secession, and the Civil War, from two slide decks.
+topics:
+  mexican-war:
+    title: Texas and the Mexican-American War
+    description: Manifest Destiny, annexation, the Wilmot Proviso, and the Mexican Cession
+  compromise-1850:
+    title: The Compromise of 1850
+    description: "The five parts, the Fugitive Slave Law, personal liberty laws, and Uncle Tom's Cabin"
+  kansas-to-harpers-ferry:
+    title: "Kansas to Harpers Ferry, 1854–1859"
+    description: Kansas-Nebraska, Bleeding Kansas, Dred Scott, and John Brown
+  secession:
+    title: Secession and the Election of 1860
+    description: Buchanan, the last compromises, the four candidates, and the causes of secession
+  civil-war:
+    title: The Civil War and Rebuilding Unity
+    description: "The scale of the war, Lincoln's economic programs, and leniency at the end"
+questions:
+  1:
+    topic: mexican-war
+    question: Why did Americans begin moving into Texas in the 1830s?
+    A: To grow cotton
+    B: To mine gold and silver
+    C: To join the Mexican army
+    D: To build the transcontinental railroad
+    answer: A
+    hint: Think of the crop that drove the Southern economy and needed fresh, fertile land.
+    explanation: Cotton production drew American settlers into Texas in the 1830s.
+  2:
+    topic: mexican-war
+    question: How did Mexico respond to the growing number of American settlers in Texas?
+    A: It sold Texas to the United States
+    B: It paid the settlers to leave
+    C: It banned slavery and shut off American immigration
+    D: It lowered taxes to attract even more settlers
+    answer: C
+    hint: Mexico was alarmed by both slavery and the loss of control over its northern province.
+    explanation: Mexico banned slavery and closed Texas to American immigration, so continued American settlement was illegal immigration.
+  3:
+    topic: mexican-war
+    question: In what year did the United States annex Texas, a controversial move?
+    A: "1850"
+    B: "1845"
+    C: "1836"
+    D: "1848"
+    answer: B
+    hint: It came after Texas had been independent for about a decade and just before the war with Mexico began.
+    explanation: Texas won independence after its revolution and was annexed by the United States in 1845.
+  4:
+    topic: mexican-war
+    question: Which border dispute did the United States inherit when it annexed Texas?
+    A: Whether the border was the Red River or the Sabine River
+    B: Whether the border was the Arkansas River or the Pecos River
+    C: Whether the border was the Colorado River or the Brazos River
+    D: Whether the border was the Nueces River or the Rio Grande
+    answer: D
+    hint: The disputed area lay between two rivers. Mexico claimed the nearer one, and the United States claimed the farther one.
+    explanation: Mexico said the border was the Nueces; the United States claimed the Rio Grande. The land between them was the disputed area.
+  5:
+    topic: mexican-war
+    question: Which of the following was the public U.S. justification for declaring war against Mexico?
+    A: Mexico refused to sell California
+    B: Mexico attacked U.S. soldiers on U.S. soil
+    C: Mexico attacked a regiment of U.S. soldiers stationed in California
+    D: Mexico refused to negotiate the border between the U.S. and Texas
+    answer: B
+    hint: The president wanted a reason that sounded like self-defense, not land-grabbing.
+    explanation: The public reason was that Mexican forces had shed American blood on American soil. Mexico argued the clash happened in disputed land.
+  6:
+    topic: mexican-war
+    question: What major issue, already present in the U.S. before the Mexican War, was intensified by the war?
+    A: Taxation to pay for war
+    B: Slavery and its expansion
+    C: The aggressive American foreign policy
+    D: The desire to keep the U.S. white "racial purity" intact
+    answer: B
+    hint: Winning new land forced the question of what kind of labor system would spread there.
+    explanation: Every acquisition of land reopened the fight over whether slavery could expand.
+  7:
+    topic: mexican-war
+    question: Which term best describes David Wilmot?
+    A: Abolitionist
+    B: Free Soil
+    C: Slave owner
+    D: Secessionist
+    answer: B
+    hint: He wanted to keep the new land closed to slavery, but he was not trying to end slavery where it already existed.
+    explanation: "Wilmot's proviso aimed to keep slavery out of land taken from Mexico, a Free Soil position."
+  8:
+    topic: mexican-war
+    question: What did the Wilmot Proviso propose?
+    A: Ending slavery in Washington, D.C.
+    B: Banning slavery in any land acquired from Mexico
+    C: Letting settlers vote on slavery in each new territory
+    D: Paying Mexico $15 million for California
+    answer: B
+    hint: It was aimed at land the U.S. hoped to win in the war, not at slavery in the existing states.
+    explanation: The Wilmot Proviso would have prohibited slavery in any territory taken from Mexico. It never became law.
+  9:
+    topic: mexican-war
+    question: Who was the American negotiator of the Treaty of Guadalupe Hidalgo?
+    A: Winfield Scott
+    B: Nicholas Trist
+    C: Zachary Taylor
+    D: Stephen Douglas
+    answer: B
+    hint: He was a diplomat, not a general or an elected official.
+    explanation: Nicholas Trist negotiated the treaty that ended the Mexican-American War.
+  10:
+    topic: mexican-war
+    question: How much did the United States pay Mexico under the Treaty of Guadalupe Hidalgo?
+    A: $15 million
+    B: $500 million
+    C: $150 million
+    D: $1.5 million
+    answer: A
+    hint: It was in the low tens of millions of dollars.
+    explanation: The U.S. paid Mexico $15 million and received the Mexican Cession.
+  11:
+    topic: mexican-war
+    question: The Mexican Cession came to the United States with no Wilmot Proviso attached. What did that leave unsettled?
+    A: Where the Texas border would be drawn
+    B: Whether slavery would be allowed in the new land
+    C: Whether Mexico would be paid
+    D: Whether the war would be repaid with new taxes
+    answer: B
+    hint: Think about what the Wilmot Proviso would have decided.
+    explanation: Without the proviso, Congress had not decided whether slavery could spread into the Mexican Cession, and that question led to the Compromise of 1850.
+  12:
+    topic: compromise-1850
+    question: Before the Compromise of 1850, why could an antislavery law not pass the Senate?
+    A: The president appointed all senators
+    B: The Constitution barred the Senate from considering slavery
+    C: There were equal numbers of free and slave states
+    D: Slave states held more Senate seats than free states
+    answer: C
+    hint: "Count senators: each state gets two. Think about the balance of states."
+    explanation: "Free and slave states were equal in number, so the South could block antislavery bills in the Senate. The North's larger population gave it the House."
+  13:
+    topic: compromise-1850
+    question: Before 1850, why could an antislavery law pass the House of Representatives?
+    A: Each state had equal representation
+    B: The Supreme Court controlled the House
+    C: The North had a larger population
+    D: The Senate always voted first
+    answer: C
+    hint: The House is based on population, not on states.
+    explanation: House seats depend on population, and the North had more people than the South.
+  14:
+    topic: compromise-1850
+    question: Which of the following was NOT part of the Compromise of 1850?
+    A: A stronger Fugitive Slave Law was passed
+    B: The United States agreed to assume the Texan debt
+    C: Ending slavery in Washington, D.C.
+    D: California joined the Union as a free state
+    answer: C
+    hint: Washington, D.C. was affected by the Compromise, but not in the way this choice says.
+    explanation: Only the slave trade was ended in Washington, D.C. Slavery itself remained there.
+  15:
+    topic: compromise-1850
+    question: How were Utah and New Mexico to decide whether to allow slavery under the Compromise of 1850?
+    A: "By the 36°30′ line"
+    B: By popular sovereignty
+    C: By the Supreme Court
+    D: By a vote in the Senate
+    answer: B
+    hint: The people living in those territories would decide.
+    explanation: The rest of the Mexican Cession was divided into Utah and New Mexico, which used popular sovereignty.
+  16:
+    topic: compromise-1850
+    question: Immediately after its passage, what was the most divisive aspect of the Compromise of 1850?
+    A: The stronger Fugitive Slave Law
+    B: California being admitted as a free state
+    C: The slave trade ending in Washington, D.C.
+    D: Opening the Mexican Cession to popular sovereignty
+    answer: A
+    hint: Which part reached into Northern communities and affected ordinary citizens?
+    explanation: The Fugitive Slave Law angered many in the North because it involved them directly in returning enslaved people.
+  17:
+    topic: compromise-1850
+    question: According to Giddings, why did many Northerners strongly oppose the Fugitive Slave Law?
+    A: It compelled Northerners to assist in the apprehension of fugitive slaves
+    B: It made being antislavery a legal decision rather than a moral one
+    C: Jails would be filled with slave catchers, so other criminals had no place to be jailed
+    D: It meant that slavery could be legal in the North
+    answer: A
+    hint: The law turned ordinary Northerners into participants.
+    explanation: The law required citizens to help capture fugitives, which many Northerners saw as complicity in slavery.
+  18:
+    topic: compromise-1850
+    question: What did Northern personal liberty laws do?
+    A: Required Northerners to help capture fugitives
+    B: Banned slavery throughout the nation
+    C: Barred slave catchers from using jails and treated slave catching as kidnapping
+    D: Made the Underground Railroad illegal
+    answer: C
+    hint: These local laws were a Northern answer to the Fugitive Slave Law.
+    explanation: Personal liberty laws kept slave catchers out of jails and defined slave catching as kidnapping, a crime.
+  19:
+    topic: compromise-1850
+    question: In Prigg v. Pennsylvania (1842), what did the Supreme Court decide?
+    A: It found in favor of Prigg, a slave catcher charged with kidnapping
+    B: It refused to hear the case
+    C: It ruled slavery unconstitutional
+    D: "It found in favor of Pennsylvania's personal liberty law"
+    answer: A
+    hint: The Court backed federal law over state law.
+    explanation: The Court sided with the slave catcher, setting up a clash between Northern state laws and federal law.
+  20:
+    topic: compromise-1850
+    question: "How did the Fugitive Slave Law reverse the earlier pattern of states' rights versus federal law?"
+    A: The North demanded that Congress give states more power
+    B: Southerners began refusing federal laws
+    C: Northerners became the nullifiers, resisting federal law
+    D: The Supreme Court nullified state laws
+    answer: C
+    hint: Think back to South Carolina and nullification in 1832. Who was resisting a federal law now?
+    explanation: "In the 1830s, Southerners had claimed states' rights against federal law. In the 1850s, Northerners did, by resisting the Fugitive Slave Law."
+  21:
+    topic: compromise-1850
+    question: The slides compare Northern personal liberty laws to which modern example?
+    A: Sanctuary cities
+    B: National parks
+    C: State sales taxes
+    D: Federal income taxes
+    answer: A
+    hint: Think of a local policy that limits cooperation with a federal law.
+    explanation: Sanctuary cities, such as Davis, California, let local governments set policy that differs from some state or federal laws.
+  22:
+    topic: compromise-1850
+    question: "What inspired Harriet Beecher Stowe to write Uncle Tom's Cabin (1852)?"
+    A: The passage of the Fugitive Slave Law
+    B: The death of Zachary Taylor
+    C: The domestic slave trade within the United States
+    D: "Further oppression of enslaved people after Nat Turner's Rebellion"
+    answer: A
+    hint: "Look at the dates: the law passed in 1850 and the book appeared in 1852."
+    explanation: Stowe was moved to write the novel by the Fugitive Slave Law.
+  23:
+    topic: compromise-1850
+    question: Which of the following was NOT an idea put forth by John Calhoun to save the Union?
+    A: A constitutional amendment
+    B: Northerners must honor the requirements of the Fugitive Slave Law
+    C: The South must be given an equal right in any acquired territory
+    D: California must be admitted without condition
+    answer: D
+    hint: Calhoun wanted guarantees for the South. Look for the choice that would not help the South.
+    explanation: Calhoun demanded guarantees for the South, not unconditional admission of California. He died before the Compromise passed.
+  24:
+    topic: compromise-1850
+    question: "How did California's admission as a free state change the political balance in the Senate?"
+    A: Free and slave states stayed equal
+    B: Free states outnumbered slave states, so an antislavery law could pass Congress
+    C: Slave states gained a majority
+    D: The Senate lost the power to vote on slavery
+    answer: B
+    hint: Before California there was a tie. Which side did the new state join?
+    explanation: California tipped the balance. After 1850, an antislavery measure could pass both houses of Congress.
+  25:
+    topic: compromise-1850
+    question: After 1850, how could the South hope to prevent antislavery measures from becoming law?
+    A: By asking the Supreme Court to rewrite the Senate rules
+    B: By winning a majority of House seats
+    C: By passing a constitutional amendment
+    D: By relying on a Southern or South-sympathetic president, or by adding another slave state
+    answer: D
+    hint: A president can veto, and a new state adds senators.
+    explanation: The South needed a Southern or South-friendly president, or another slave state, to protect slavery.
+  26:
+    topic: compromise-1850
+    question: Which of these presidents after the Compromise of 1850 was from Pennsylvania?
+    A: Abraham Lincoln
+    B: Millard Fillmore
+    C: Franklin Pierce
+    D: James Buchanan
+    answer: D
+    hint: He was the last president before Lincoln.
+    explanation: Fillmore was from New York, Pierce from New Hampshire, Buchanan from Pennsylvania, and Lincoln from Illinois.
+  27:
+    topic: compromise-1850
+    question: Which of the following was an attempt to add a state or territory into which slavery could expand after 1850?
+    A: Passing the Kansas-Nebraska Act
+    B: Supporting an American takeover of Nicaragua
+    C: Southern support for the annexation of Cuba
+    D: All of the above
+    answer: D
+    hint: Southern leaders looked in several directions, not only west.
+    explanation: Kansas-Nebraska, a Nicaraguan takeover, annexing Cuba, and moving enslaved people into New Mexico were all attempts to expand slavery.
+    shuffle: false
+  28:
+    topic: kansas-to-harpers-ferry
+    question: Why did Stephen Douglas want to organize Kansas as a territory?
+    A: He wanted to create a new slave state
+    B: He wanted to punish Missouri
+    C: He wanted the transcontinental railroad to start in Chicago and cross Kansas
+    D: He wanted a place for freed slaves to settle
+    answer: C
+    hint: Think railroads and Chicago.
+    explanation: Douglas wanted the eastern end of the transcontinental railroad in Chicago, with the route crossing what would become Kansas. Southerners refused until a compromise was reached.
+  29:
+    topic: kansas-to-harpers-ferry
+    question: What principle did the Kansas-Nebraska Act use to decide whether Kansas would be free or slave?
+    A: The Wilmot Proviso
+    B: Popular sovereignty
+    C: A decision by the Supreme Court
+    D: "The 36°30′ line"
+    answer: B
+    hint: The people living there would decide.
+    explanation: Popular sovereignty meant the people of Kansas could decide whether to be a free or slave state.
+  30:
+    topic: kansas-to-harpers-ferry
+    question: What previous agreement was violated by the terms of the Kansas-Nebraska Act?
+    A: The Compromise of 1850
+    B: The Compromise of 1833
+    C: The Missouri Compromise
+    D: The Fugitive Slave Law
+    answer: C
+    hint: Think of the compromise that drew a line across the Louisiana Purchase.
+    explanation: Kansas and Nebraska lay north of the Missouri Compromise line, where slavery had been banned.
+  31:
+    topic: kansas-to-harpers-ferry
+    question: Who were the Border Ruffians?
+    A: Missourians who crossed into Kansas to vote
+    B: Free-state settlers from New England
+    C: Abolitionist newspaper editors
+    D: Federal soldiers sent to Kansas
+    answer: A
+    hint: Their home state bordered Kansas and allowed slavery.
+    explanation: Border Ruffians crossed from Missouri to cast ballots in Kansas, and the sham voting led to violence.
+  32:
+    topic: kansas-to-harpers-ferry
+    question: What led John Brown to carry out the Pottawattamie raid in Kansas?
+    A: The sacking of Lawrence
+    B: The Dred Scott decision
+    C: The Compromise of 1850
+    D: The raid on Harpers Ferry
+    answer: A
+    hint: It was in response to violence against a free-state town in Kansas.
+    explanation: After proslavery forces sacked Lawrence, John Brown carried out the Pottawattamie raid.
+  33:
+    topic: kansas-to-harpers-ferry
+    question: What was the ruling in the Dred Scott decision (1857)?
+    A: Congress could ban slavery in the territories
+    B: Scott had to be freed because he lived in a free territory
+    C: Scott was not a citizen and therefore could not sue
+    D: Scott was a free citizen of Missouri
+    answer: C
+    hint: The Court said Scott had no standing to bring a lawsuit.
+    explanation: The Court ruled that Dred Scott was not a citizen and could not sue in federal court.
+  34:
+    topic: kansas-to-harpers-ferry
+    question: What is an obiter dictum, as in the Dred Scott decision?
+    A: A decision made without hearing arguments
+    B: A ruling later overturned by Congress
+    C: A unanimous opinion
+    D: A ruling that goes beyond the constitutional question at hand
+    answer: D
+    hint: The Latin phrase means something like "said in passing."
+    explanation: "The Court went beyond the question of Scott's lawsuit to rule broadly on slavery."
+  35:
+    topic: kansas-to-harpers-ferry
+    question: "What was James Buchanan's aim in urging the Supreme Court to decide Dred Scott?"
+    A: To create security by settling the slavery question
+    B: To give Congress more power
+    C: To end slavery in the territories
+    D: To punish Northern abolitionists
+    answer: A
+    hint: The slide calls it an attempt to create "security."
+    explanation: Buchanan hoped a decision from the Court would restore security, but it did not. The ruling angered many Northerners.
+  36:
+    topic: kansas-to-harpers-ferry
+    question: What did John Brown attempt in 1859?
+    A: "He negotiated Kansas's admission to the Union"
+    B: He led a proslavery militia into Kansas
+    C: He organized a slave rebellion at Harpers Ferry, Virginia
+    D: He tried to assassinate President Buchanan
+    answer: C
+    hint: It was the same man who had been involved in Kansas, but this time in Virginia.
+    explanation: "Brown's raid at Harpers Ferry failed, but it was still very significant."
+  37:
+    topic: kansas-to-harpers-ferry
+    question: In December 1859, Buchanan called certain events "symptoms of an incurable disease in the public mind." What event was he referring to?
+    A: "John Brown's raid at Harpers Ferry"
+    B: The Fugitive Slave Law
+    C: "Kansas's decision to enter the Union as a free state"
+    D: The Dred Scott decision
+    answer: A
+    hint: Look at the date. It was a very recent event, from the fall of 1859.
+    explanation: Buchanan feared such "outrages" could end in "an open war by the North to abolish slavery in the South."
+  38:
+    topic: kansas-to-harpers-ferry
+    question: "Why did Southerners react so strongly to John Brown's failed raid?"
+    A: It showed Brown had the support of Southern legislatures
+    B: It put weapons in the hands of thousands of enslaved people
+    C: It convinced many that Northerners were plotting violence against slaveholders
+    D: It proved the North was unprepared for war
+    answer: C
+    hint: Think about what the raid made Southerners believe about their Northern neighbors.
+    explanation: Even though the raid failed, it deepened Southern fears that Northerners wanted to incite slave rebellion.
+  39:
+    topic: secession
+    question: In his fourth State of the Union address, what did Buchanan name as the most significant cause of the impending crisis?
+    A: Agitation over slavery had given the enslaved vague notions of freedom
+    B: Northern personal liberty laws
+    C: "Congress's claim that it could exclude slavery from the territories"
+    D: Occurrences in Kansas
+    answer: A
+    hint: "Read the quote on the slide: the agitation \"produced its malign influence on the slaves.\""
+    explanation: Buchanan blamed Northern agitation for inspiring the enslaved with "vague notions of freedom," so "a sense of security no longer exists around the family altar."
+  40:
+    topic: secession
+    question: What did Buchanan do to stop secession?
+    A: He called a national election on slavery
+    B: He sent troops to stop the South
+    C: "Nothing: he said the president had no authority to decide the issue and passed it to Congress"
+    D: He issued an executive order protecting slavery
+    answer: C
+    hint: "He said the executive had no power to change a state's relations with the federal government."
+    explanation: Buchanan argued that the Executive possessed no power to decide the relations between the federal government and South Carolina, and left the question to Congress.
+  41:
+    topic: secession
+    question: What did Buchanan think was the best option to avoid war between North and South?
+    A: Stronger enforcement of the Fugitive Slave Law
+    B: The passing of time
+    C: Allowing Kansas to become a slave state
+    D: An explanatory constitutional amendment on slavery
+    answer: D
+    hint: "He turned to the Constitution's own process for change."
+    explanation: Buchanan asked Congress to recommend an "explanatory amendment" on slavery to the states.
+  42:
+    topic: secession
+    question: "Which two proposed amendments tried to prevent war in the winter of 1860–1861?"
+    A: The Crittenden Compromise and the Corwin Amendment
+    B: The Crittenden Compromise and the Tallmadge Amendment
+    C: The Wilmot Proviso and the Crittenden Compromise
+    D: The Corwin Amendment and the Missouri Compromise
+    answer: A
+    hint: One was named for a Kentucky senator and the other for an Ohio congressman.
+    explanation: Over 50 amendments were proposed in December 1860, but the Crittenden Compromise and the Corwin Amendment were the best-known attempts.
+  43:
+    topic: secession
+    question: Which of these was a provision of the Crittenden Compromise?
+    A: The Fugitive Slave Law would be repealed
+    B: Slavery would be banned in all territories
+    C: Each territory would vote on slavery by popular sovereignty
+    D: Congress could not interfere with the interstate slave trade
+    answer: D
+    hint: It offered strong protections for slavery to try to keep the South in the Union.
+    explanation: Among other things, Congress was barred from interfering with the interstate slave trade, and Congress would compensate owners of rescued fugitive slaves.
+  44:
+    topic: secession
+    question: President-elect Lincoln told Republicans to vote against the Crittenden Compromise. Which part would he have objected to most?
+    A: Barring Congress from interfering with the interstate slave trade
+    B: Compensating owners of rescued fugitive slaves
+    C: "Reestablishing the 36°30′ line"
+    D: Barring Congress from abolishing slavery at military posts in slave states
+    answer: C
+    hint: "Lincoln's party had formed to stop the spread of slavery into the territories."
+    explanation: Extending the line would open territory to slavery. Lincoln opposed any compromise on the extension of slavery.
+  45:
+    topic: secession
+    question: What would the Corwin Amendment have done?
+    A: Banned slavery in the territories
+    B: Ended slavery gradually
+    C: Allowed California to join the Union as a free state
+    D: Prohibited Congress from interfering with slavery in the states, irrevocably
+    answer: D
+    hint: It was a final attempt to reassure the South.
+    explanation: The Corwin Amendment passed Congress in March 1861 but was never ratified by three-fourths of the states.
+  46:
+    topic: secession
+    question: "What was Lincoln's response to the Corwin Amendment in his Inaugural Address?"
+    A: He denounced it as unconstitutional
+    B: He demanded it be rewritten
+    C: He had no objection to it being made express and irrevocable
+    D: He asked Congress to repeal it
+    answer: C
+    hint: "Lincoln's priority was holding the Union together, and he promised not to interfere where slavery already existed."
+    explanation: Lincoln said he understood the amendment had passed Congress and had no objection to its being made express and irrevocable.
+  47:
+    topic: secession
+    question: The Corwin Amendment would have been the 13th Amendment. What does the real 13th Amendment do?
+    A: It outlaws slavery
+    B: It gives Black men the right to vote
+    C: It protects slavery in the states
+    D: It grants citizenship to all born in the U.S.
+    answer: A
+    hint: The real 13th Amendment is the opposite of the Corwin Amendment.
+    explanation: The real 13th Amendment outlawed slavery.
+  48:
+    topic: secession
+    question: In the Election of 1860, who was the candidate of the Southern Democrats?
+    A: John Bell
+    B: Stephen Douglas
+    C: John C. Breckinridge
+    D: William Seward
+    answer: C
+    hint: "He was James Buchanan's vice president."
+    explanation: Breckinridge ran for the Southern Democrats, Douglas for the Northern Democrats, and Bell for the Constitutional Union Party.
+  49:
+    topic: secession
+    question: Which candidate in 1860 represented the Northern Democrats and was linked to the Freeport Doctrine?
+    A: John C. Breckinridge
+    B: Abraham Lincoln
+    C: John Bell
+    D: Stephen Douglas
+    answer: D
+    hint: He was the Illinois senator behind popular sovereignty.
+    explanation: Douglas, the Northern Democratic candidate, was tied to the Freeport Doctrine.
+  50:
+    topic: secession
+    question: Who was the Constitutional Union Party candidate in 1860?
+    A: John C. Breckinridge
+    B: Stephen Douglas
+    C: Abraham Lincoln
+    D: John Bell
+    answer: D
+    hint: He was the fourth man in a four-way race.
+    explanation: John Bell ran for the Constitutional Union Party.
+  51:
+    topic: secession
+    question: Lincoln won the 1860 election with about what share of the popular vote?
+    A: 51%
+    B: 25%
+    C: 39%
+    D: 60%
+    answer: C
+    hint: He won without a majority.
+    explanation: The split among the Democrats and the Constitutional Union Party let Lincoln win with only 39% of the vote.
+  52:
+    topic: secession
+    question: What allowed Abraham Lincoln to win the Election of 1860 with a minority of the vote?
+    A: The South did not hold an election
+    B: The Democrats split, with a third party also on the ballot
+    C: The Republicans and Democrats nominated the same candidate
+    D: The Supreme Court decided the election
+    answer: B
+    hint: Count the candidates against him.
+    explanation: The Democrats divided into Northern and Southern wings, and the Constitutional Union Party also drew votes, so the opposition was split four ways.
+  53:
+    topic: secession
+    question: "The cartoon on the \"Evidence #1\" slide labels fence rails \"Homestead Act,\" \"Transcontinental Railroad,\" and \"Protective Tariffs.\" Which party's platform did these belong to?"
+    A: "The Constitutional Union Party's"
+    B: "The Southern Democrats'"
+    C: "The Republican Party's"
+    D: "The Federalist Party's"
+    answer: C
+    hint: "Think of Lincoln's party and its economic program."
+    explanation: These were parts of the Republican platform, and the Lincoln administration later passed them during the war.
+  54:
+    topic: secession
+    question: "What is the \"smoking gun\" Evidence #2 for the causes of secession?"
+    A: "South Carolina's Declaration of Causes"
+    B: "Buchanan's State of the Union address"
+    C: The Crittenden Compromise
+    D: "Lincoln's Inaugural Address"
+    answer: A
+    hint: It is a document in which a state explained its own reasons.
+    explanation: "South Carolina's Declaration of Causes states the justifications for secession, including constitutional ones."
+  55:
+    topic: secession
+    question: Which constitutional argument did South Carolina draw from Article VII, on ratification?
+    A: State legislatures had to approve every federal law
+    B: The president could dissolve the Union
+    C: Congress had the power to end slavery
+    D: The states had been separate, sovereign states before ratifying the Constitution
+    answer: D
+    hint: The declaration noted that two states joined the Union long after the others.
+    explanation: South Carolina argued that the states acted as independent nations before and between ratification.
+  56:
+    topic: secession
+    question: "South Carolina's Declaration complained about nonenforcement of which part of the Constitution?"
+    A: Article I, Section 8
+    B: The Preamble
+    C: The Three-Fifths Clause
+    D: The Fugitive Slave Clause in Article IV
+    answer: D
+    hint: It concerns people escaping from one state into another.
+    explanation: Article IV says no person held to service escaping into another state shall be discharged, but shall be delivered up on claim.
+  57:
+    topic: secession
+    question: Which amendment did South Carolina cite to claim powers were reserved to the states?
+    A: The 10th Amendment
+    B: The 1st Amendment
+    C: The 5th Amendment
+    D: The 13th Amendment
+    answer: A
+    hint: "It begins \"The powers not delegated to the United States…\""
+    explanation: South Carolina quoted the 10th Amendment, which reserves powers not delegated to the federal government to the states or to the people.
+  58:
+    topic: secession
+    question: Who delivered the "Cornerstone Speech" on March 21, 1861?
+    A: Alexander Stephens
+    B: John C. Calhoun
+    C: Jefferson Davis
+    D: Robert E. Lee
+    answer: A
+    hint: He was the vice president of the Confederacy.
+    explanation: Alexander Stephens gave the speech as vice president of the Confederacy.
+  59:
+    topic: secession
+    question: "According to Stephens's Cornerstone Speech, what did the new Confederate government rest on?"
+    A: The protection of tariffs
+    B: "The principle of states' rights alone"
+    C: The idea that Black people were not equal to white people and that slavery was their natural condition
+    D: The right to expand slavery by popular sovereignty
+    answer: C
+    hint: "He contrasted the Confederacy with the Founders' ideas about equality."
+    explanation: "Stephens said the Confederacy's \"corner-stone\" was racial inequality and slavery, the opposite of the idea he said the Founders held. Historians use the speech as evidence that slavery was a central cause of secession."
+  60:
+    topic: civil-war
+    question: Approximately what share of the American population died in the Civil War?
+    A: 10%
+    B: 0.2%
+    C: 2%
+    D: 20%
+    answer: C
+    hint: It sounds small as a percentage but represents a huge number of people.
+    explanation: About 2% of the population died in the war.
+  61:
+    topic: civil-war
+    question: In two days at Shiloh in western Tennessee, more people died than in what?
+    A: All previous American wars combined
+    B: The Mexican-American War only
+    C: The War of 1812 only
+    D: The entire Revolutionary War
+    answer: A
+    hint: It shows the scale of the Civil War compared with everything before it.
+    explanation: At Shiloh, more people died in two days than in all earlier American wars combined.
+  62:
+    topic: civil-war
+    question: At Cold Harbor in Virginia, about 7,000 died in how long?
+    A: 3 days
+    B: 2 hours
+    C: 20 minutes
+    D: 1 day
+    answer: C
+    hint: It was shorter than a class period.
+    explanation: At Cold Harbor, close to Richmond, 7,000 died in 20 minutes.
+  63:
+    topic: civil-war
+    question: Which earlier nationalistic program is most like the economic programs passed by the Lincoln administration (banking, tariffs, infrastructure)?
+    A: The Cotton Culture
+    B: The Embargo of 1807
+    C: The Lowell System
+    D: The American System
+    answer: D
+    hint: "Banking, a tariff, and internal improvements: think of Henry Clay."
+    explanation: "Lincoln-era banking, tariff, and infrastructure programs echoed Henry Clay's American System."
+  64:
+    topic: civil-war
+    question: What did the Homestead Act of 1862 offer?
+    A: Free railroad tickets to the West
+    B: 160 acres to any male age 21 or above who stayed on the land and improved it
+    C: 40 acres and a mule
+    D: A farm in exchange for military service
+    answer: B
+    hint: The number is the size of a quarter-section.
+    explanation: A settler could claim 160 acres by staying and making improvements.
+  65:
+    topic: civil-war
+    question: What did the Pacific Railroad Act of 1862 create?
+    A: The Transcontinental Railroad
+    B: The Erie Canal
+    C: The first national bank
+    D: The telegraph line to California
+    answer: A
+    hint: Look at the "Pacific" in the title.
+    explanation: The Pacific Railroad Act set up the Transcontinental Railroad and the basis for a burgeoning economy.
+  66:
+    topic: civil-war
+    question: What did the Morrill Land Grant Act of 1862 do?
+    A: Gave 160-acre farms to settlers
+    B: Gave land to freed slaves
+    C: Gave states land to fund colleges and universities
+    D: Gave land to railroad companies
+    answer: C
+    hint: The map on the slide is labeled "1862 Land Grant Colleges and Universities."
+    explanation: The Morrill Act provided land to states to support land-grant colleges.
+  67:
+    topic: civil-war
+    question: "Which three amendments were part of the Civil War era's expansion of federal power?"
+    A: The 16th, 17th, and 18th
+    B: The 10th, 11th, and 12th
+    C: The 1st, 2nd, and 3rd
+    D: The 13th, 14th, and 15th
+    answer: D
+    hint: They are consecutive and come right after the war.
+    explanation: The war and Reconstruction produced the 13th, 14th, and 15th Amendments. According to the slides, the Civil War was the largest increase in the size of the federal government ever.
+  68:
+    topic: civil-war
+    question: What did the Supreme Court decide in Texas v. White?
+    A: That slavery was legal in the territories
+    B: That secession was illegal
+    C: That states could nullify federal laws
+    D: That Congress could not tax incomes
+    answer: B
+    hint: The case was about whether a state could leave the Union.
+    explanation: Texas v. White held that secession was illegal.
+  69:
+    topic: civil-war
+    question: "What did Lincoln's Proclamation of Amnesty and Reconstruction (December 8, 1863) require?"
+    A: Military rule over every state
+    B: Immediate payment of war debts
+    C: A 10% loyalty oath in the rebel states
+    D: Full voting rights for all Black citizens
+    answer: C
+    hint: "It was a lenient plan: only a small share of voters had to take the oath."
+    explanation: A rebel state could form a new government once 10% of its voters took an oath of loyalty.
+  70:
+    topic: civil-war
+    question: "What theme is shown in this line from Lincoln's Second Inaugural Address: \"With malice toward none; with charity for all\"?"
+    A: Immediate military occupation
+    B: Punishment of the South
+    C: Leniency and reconciliation
+    D: Revenge against Confederate leaders
+    answer: C
+    hint: "He spoke of binding up the nation's wounds."
+    explanation: "Lincoln's speech called for a just and lasting peace and an effort to bind up the nation's wounds."
+  71:
+    topic: civil-war
+    question: Under the Appomattox surrender terms, what were Confederate officers allowed to keep?
+    A: Their side-arms, private horses, and baggage
+    B: Their artillery and public property
+    C: Their rifles and regimental flags
+    D: Nothing; all property was confiscated
+    answer: A
+    hint: The terms were generous to individual officers but not to the army as a whole.
+    explanation: "Grant's terms had arms, artillery, and public property turned over, but did not embrace officers' side-arms, private horses, or baggage."
+  72:
+    topic: civil-war
+    question: "What did Grant's terms require of Confederate soldiers at Appomattox?"
+    A: To pay a fine
+    B: To sign paroles promising not to take up arms until properly exchanged
+    C: To join the Union army
+    D: To go into prison camps
+    answer: B
+    hint: A parole is a promise.
+    explanation: Soldiers were paroled and promised not to fight against the government until properly exchanged.
+  73:
+    topic: civil-war
+    question: On what date did Grant and Lee agree to the terms at Appomattox?
+    A: July 4, 1863
+    B: December 8, 1863
+    C: April 14, 1865
+    D: April 9, 1865
+    answer: D
+    hint: "It was in early spring, shortly before the war's end."
+    explanation: Grant wrote the terms to Lee on April 9, 1865.
+  74:
+    topic: civil-war
+    question: "What do Lincoln's Second Inaugural, Grant's surrender terms, and Finch's poem \"The Blue and the Gray\" (1867) have in common?"
+    A: A plan for dividing Confederate land
+    B: A call to continue the war
+    C: A spirit of leniency and reconciliation
+    D: A demand to punish Confederate leaders
+    answer: C
+    hint: The slides ask you to compare their "leniency."
+    explanation: All three look toward reconciliation instead of revenge.

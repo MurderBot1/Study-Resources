@@ -22,6 +22,12 @@ window.CATALOG = {
           description: "The Constitution, the Early Republic, and the Age of Jackson. Pick topics and review what you missed.",
           meta: "171 questions · hints",
           quiz: "early-republic"
+        },
+        {
+          title: "Road to the Civil War Quiz",
+          description: "Texas and the Mexican-American War, the Compromise of 1850, Kansas, secession, and the Civil War. Pick topics and review what you missed.",
+          meta: "74 questions · hints",
+          quiz: "road-to-civil-war"
         }
       ],
       flashcards: [
