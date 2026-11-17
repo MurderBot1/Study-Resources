@@ -1,0 +1,2449 @@
+# Chapter 3: Differentiation
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 3.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 3: Differentiation"
+description: The derivative as a function, differentiation rules, rates of change, trig/chain/implicit/inverse derivatives, related rates, and linearization.
+topics:
+  s3-1:
+    title: 3.1 The Derivative as a Function
+  s3-2:
+    title: 3.2 Differentiation Rules for Polynomials, Exponentials, Products, and Quotients
+  s3-3:
+    title: 3.3 The Derivative as a Rate of Change
+  s3-4:
+    title: 3.4 Derivatives of Trigonometric Functions
+  s3-5:
+    title: 3.5 The Chain Rule and Parametric Equations
+  s3-6:
+    title: 3.6 Implicit Differentiation
+  s3-7:
+    title: 3.7 Derivatives of Inverse Functions and Logarithms
+  s3-8:
+    title: 3.8 Inverse Trigonometric Functions
+  s3-9:
+    title: 3.9 Related Rates
+  s3-10:
+    title: 3.10 Linearization and Differentials
+questions:
+  1:
+    topic: s3-1
+    question: 'For \(f(x)=4-x^2\), the derivative computed from the definition \(f''(x)=\lim_{h\to0}\dfrac{f(x+h)-f(x)}{h}\) gives \(f''(-3)=\)'
+    A: '\(3\)'
+    B: '\(6\)'
+    C: '\(-2\)'
+    D: '\(-6\)'
+    answer: B
+    hint: 'Compute \(\dfrac{f(x+h)-f(x)}{h}=-2x-h\).'
+    explanation: '\(f''(x)=-2x\), so \(f''(-3)=6\).'
+  2:
+    topic: s3-1
+    question: 'If \(g(t)=\dfrac{1}{t^2}\), then \(g''(2)=\)'
+    A: '\(- \frac{1}{4}\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(- \frac{1}{2}\)'
+    answer: A
+    hint: 'Use \(g''(t)=-2t^{-3}\).'
+    explanation: '\(-\dfrac{2}{8}=-\dfrac14\).'
+  3:
+    topic: s3-1
+    question: 'If \(k(z)=\dfrac{1-z}{2z}\), then \(k''(1)=\)'
+    A: '\(\frac{1}{2}\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(-1\)'
+    D: '\(- \frac{1}{2}\)'
+    answer: D
+    hint: 'Rewrite \(k(z)=\dfrac1{2z}-\dfrac12\).'
+    explanation: '\(k''(z)=-\dfrac{1}{2z^2}\), so \(k''(1)=-\tfrac12\).'
+  4:
+    topic: s3-1
+    question: 'If \(r(s)=\sqrt{2s+1}\), then \(r''(0)=\)'
+    A: '\(\frac{1}{2}\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(0\)'
+    answer: B
+    hint: 'The derivative of \(\sqrt{u}\) is \(\dfrac{u''}{2\sqrt u}\).'
+    explanation: '\(r''(s)=\dfrac{1}{\sqrt{2s+1}}\), so \(r''(0)=1\).'
+  5:
+    topic: s3-1
+    question: 'If \(p(\theta)=\sqrt{3\theta}\), then \(p''(3)=\)'
+    A: '\(\frac{1}{2}\)'
+    B: '\(\frac{3}{2}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(1\)'
+    answer: A
+    hint: '\(p''(\theta)=\dfrac{3}{2\sqrt{3\theta}}\).'
+    explanation: '\(\dfrac{3}{2\cdot3}=\dfrac12\).'
+  6:
+    topic: s3-1
+    question: 'Find \(\dfrac{d}{dt}\left[\frac{t}{2 t + 1}\right]\).'
+    A: '\(- \frac{3 t}{\left(2 t + 1\right)^{3}} + \frac{1}{2 t + 1}\)'
+    B: '\(- \frac{2 t}{\left(2 t + 1\right)^{2}} + \frac{1}{2 t + 1}\)'
+    C: '\(- \frac{2 t}{\left(1 - 2 t\right)^{2}} + \frac{1}{1 - 2 t}\)'
+    D: '\(- \frac{2 t}{\left(2 t + 1\right)^{2}} + 1\)'
+    answer: B
+    hint: Use the quotient rule.
+    explanation: 'Differentiating gives \(- \frac{2 t}{\left(2 t + 1\right)^{2}} + \frac{1}{2 t + 1}\).'
+  7:
+    topic: s3-1
+    question: 'The slope of the tangent line to \(f(x)=x+\dfrac9x\) at \(x=-3\) is'
+    A: '\(\frac{1}{3}\)'
+    B: '\(0\)'
+    C: '\(-2\)'
+    D: '\(2\)'
+    answer: B
+    hint: '\(f''(x)=1-\dfrac{9}{x^2}\).'
+    explanation: '\(1-\tfrac99=0\): a horizontal tangent.'
+  8:
+    topic: s3-1
+    question: 'The slope of the tangent to \(y=(x+1)^3\) at \(x=-2\) is'
+    A: '\(-3\)'
+    B: '\(3\)'
+    C: '\(9\)'
+    D: '\(12\)'
+    answer: B
+    hint: '\(y''=3(x+1)^2\).'
+    explanation: '\(3(-1)^2=3\).'
+  9:
+    topic: s3-1
+    question: 'An equation of the tangent line to \(y=\dfrac{8}{\sqrt{x-2}}\) at \((6,4)\) is'
+    A: '\(y=-\dfrac12x+4\)'
+    B: '\(y=\dfrac12x+1\)'
+    C: '\(y=-2x+16\)'
+    D: '\(y=-\dfrac12x+7\)'
+    answer: D
+    hint: '\(y''=-4(x-2)^{-3/2}\). Find the slope at \(x=6\), then use point-slope form.'
+    explanation: 'Slope \(=-4/8=-\tfrac12\), so \(y-4=-\tfrac12(x-6)\), i.e. \(y=-\tfrac12x+7\).'
+  10:
+    topic: s3-1
+    question: Which statement about differentiability is true?
+    A: '\(f\) is differentiable wherever it has a corner'
+    B: 'If \(f\) is continuous at \(x_0\), then \(f\) is differentiable at \(x_0\)'
+    C: 'If \(f\) is differentiable at \(x_0\), then \(f\) is continuous at \(x_0\)'
+    D: '\(f\) can be differentiable at \(x_0\) without being defined there'
+    answer: C
+    hint: 'Think of \(|x|\) at 0.'
+    explanation: 'Differentiability implies continuity, but the converse fails (for example \(|x|\) at 0).'
+  11:
+    topic: s3-1
+    question: At which kind of point is a continuous function NOT differentiable?
+    A: 'A corner, such as the point of \(y=|x|\) at \(x=0\)'
+    B: A point where the tangent line is horizontal
+    C: A point where the graph is smooth
+    D: A point where the derivative equals 0
+    answer: A
+    hint: Compare the left-hand and right-hand derivatives.
+    explanation: 'At a corner the two one-sided slopes (\(-1\) and \(1\) for \(|x|\)) are different, so the derivative does not exist.'
+  12:
+    topic: s3-1
+    question: 'The graph of \(y=\lfloor x\rfloor\) (the greatest integer function)'
+    A: 'is not differentiable on \((-\infty,\infty)\) because it has jumps at the integers'
+    B: is differentiable everywhere with derivative 1
+    C: is differentiable everywhere with derivative 0
+    D: is differentiable only at the integers
+    answer: A
+    hint: Is the function even continuous at the integers?
+    explanation: It is discontinuous at every integer, so it cannot be differentiable there. (It is differentiable, with derivative 0, between integers.)
+  13:
+    topic: s3-1
+    question: 'Does the curve \(y=x^3\) ever have a negative slope?'
+    A: 'Yes, for \(x>0\)'
+    B: 'No, because \(y''=3x^2\ge0\)'
+    C: 'Only at \(x=0\)'
+    D: 'Yes, for \(x<0\)'
+    answer: B
+    hint: 'Compute \(y''\) and check its sign.'
+    explanation: '\(3x^2\) is never negative; it is 0 only at the origin.'
+  14:
+    topic: s3-1
+    question: 'Does the graph of \(y=2\sqrt x\) have any horizontal tangent?'
+    A: 'Yes, at \(x=1\)'
+    B: 'Yes, at \(x=0\)'
+    C: 'Yes, wherever \(x>0\)'
+    D: 'No, because \(y''=1/\sqrt x\) is never 0'
+    answer: D
+    hint: 'A horizontal tangent needs \(y''=0\).'
+    explanation: '\(1/\sqrt{x}\) is positive for every \(x>0\) (and undefined at 0).'
+  15:
+    topic: s3-1
+    question: 'Does the parabola \(y=2x^2-13x+5\) have a tangent line with slope \(-1\)? If so, where is the point of tangency?'
+    A: 'Yes, at \((3,-16)\), with tangent \(y=-x-13\)'
+    B: 'Yes, at \((-3,62)\), with tangent \(y=-x+59\)'
+    C: 'No, the slope is never \(-1\)'
+    D: 'Yes, at \((3,-16)\), with tangent \(y=-x+13\)'
+    answer: A
+    hint: 'Solve \(y''=4x-13=-1\).'
+    explanation: '\(x=3\) and \(y=18-39+5=-16\); the line is \(y+16=-(x-3)\).'
+  16:
+    topic: s3-1
+    question: 'Does \(y=\sqrt x\) have a tangent line with slope \(-1\)?'
+    A: 'No, because \(y''=\dfrac{1}{2\sqrt x}>0\)'
+    B: 'Yes, at \(x=-1\)'
+    C: 'Yes, at \(x=\tfrac14\)'
+    D: 'Yes, at \(x=1\)'
+    answer: A
+    hint: Check the sign of the derivative.
+    explanation: 'The derivative of \(\sqrt{x}\) is always positive, so no tangent has negative slope.'
+  17:
+    topic: s3-1
+    question: 'If \(|f(x)|\le x^2\) for \(-1\le x\le1\), then \(f\) is differentiable at \(x=0\) and \(f''(0)=\)'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: It cannot be determined
+    D: '\(\infty\)'
+    answer: A
+    hint: '\(|f(h)|/|h|\le|h|\) and \(f(0)=0\) because \(|f(0)|\le0\).'
+    explanation: '\(\left|\dfrac{f(h)-f(0)}{h}\right|\le|h|\to0\).'
+  18:
+    topic: s3-1
+    question: 'For \(f(x)=\begin{cases}x^2\sin\frac1x,&x\neq0\\0,&x=0\end{cases}\), the derivative at \(0\) is'
+    A: It does not exist
+    B: '\(0\)'
+    C: '\(\infty\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'Compute \(\dfrac{h^2\sin(1/h)-0}{h}=h\sin(1/h)\).'
+    explanation: '\(|h\sin(1/h)|\le|h|\to0\).'
+  19:
+    topic: s3-1
+    question: 'The centered difference quotient \(\dfrac{f(0+h)-f(0-h)}{2h}\) for \(f(x)=|x|\) has limit \(0\) as \(h\to0\), yet \(f\) has no derivative at \(0\). The moral is'
+    A: '\(|x|\) is differentiable at 0'
+    B: make sure the derivative exists before using a centered difference quotient
+    C: one-sided derivatives never differ
+    D: centered difference quotients are always exact
+    answer: B
+    hint: 'Compute the quotient: \(\dfrac{|h|-|{-h}|}{2h}\).'
+    explanation: 'The quotient is identically 0, but the one-sided slopes are \(-1\) and \(1\).'
+  20:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dt}\left[- 3 t^{5} + 5 t^{3}\right]\).'
+    A: '\(- 15 t^{4} - 15 t^{2}\)'
+    B: '\(- 15 t^{4} + 15 t^{2}\)'
+    C: '\(- 15 t^{4} + 15 t\)'
+    D: '\(15 t^{4} + 15 t^{2}\)'
+    answer: B
+    hint: Use the power rule on each term.
+    explanation: 'Differentiating gives \(- 15 t^{4} + 15 t^{2}\).'
+  21:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{4 x^{3}}{3} - x + 2 e^{x}\right]\).'
+    A: '\(4 x^{2} + 2 e^{x} - 1\)'
+    B: '\(4 x^{2} + 2 e^{x} - 2\)'
+    C: '\(2 x^{2} + 2 e^{x} - 1\)'
+    D: '\(4 x^{4} + 4 e^{x} - 1\)'
+    answer: A
+    hint: 'The derivative of \(e^x\) is \(e^x\).'
+    explanation: 'Differentiating gives \(4 x^{2} + 2 e^{x} - 1\).'
+  22:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dz}\left[- \frac{1}{z} + \frac{3}{z^{2}}\right]\).'
+    A: '\(\frac{1}{z^{2}} - \frac{3}{z^{3}}\)'
+    B: '\(- \frac{6}{z^{3}}\)'
+    C: '\(\frac{1}{z^{2}} - \frac{6}{z^{3}}\)'
+    D: '\(\frac{1}{z^{2}}\)'
+    answer: C
+    hint: 'Rewrite \(1/z\) as \(z^{-1}\).'
+    explanation: 'Differentiating gives \(\frac{1}{z^{2}} - \frac{6}{z^{3}}\).'
+  23:
+    topic: s3-2
+    question: 'Find \(\dfrac{d^{2}}{dx^{2}}\left[6 x^{2} - 10 x - \frac{5}{x^{2}}\right]\).'
+    A: '\(6 \left(2 - \frac{5}{x^{4}}\right)\)'
+    B: '\(12 x - 10 + \frac{10}{x^{3}}\)'
+    C: '\(12 - \frac{10}{x^{4}}\)'
+    D: '\(12 - \frac{30}{x^{3}}\)'
+    answer: A
+    hint: 'Differentiate \(-5x^{-2}\) with the power rule.'
+    explanation: 'Differentiating gives \(6 \left(2 - \frac{5}{x^{4}}\right)\).'
+  24:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[\left(3 - x^{2}\right) \left(x^{3} - x + 1\right)\right]\).'
+    A: '\(2 x \left(x^{3} - x + 1\right) + \left(3 - x^{2}\right) \left(3 x^{2} - 1\right)\)'
+    B: '\(- 2 x \left(x^{3} - x + 1\right) - \left(3 - x^{2}\right) \left(3 x^{2} - 1\right)\)'
+    C: '\(- 2 x \left(3 x^{2} - 1\right)\)'
+    D: '\(- 2 x \left(x^{3} - x + 1\right) + \left(3 - x^{2}\right) \left(3 x^{2} - 1\right)\)'
+    answer: D
+    hint: 'Product rule: \((uv)''=u''v+uv''\).'
+    explanation: 'Differentiating gives \(- 2 x \left(x^{3} - x + 1\right) + \left(3 - x^{2}\right) \left(3 x^{2} - 1\right)\).'
+  25:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[\left(x^{2} + 1\right) \left(x + 5 + \frac{1}{x}\right)\right]\).'
+    A: '\(2 x \left(x + 5 + \frac{1}{\sqrt{x}}\right) + \left(1 - \frac{1}{2 x^{2}}\right) \left(x^{2} + 1\right)\)'
+    B: '\(2 x \left(x + 5 + \frac{1}{x}\right) + \left(1 - \frac{1}{x}\right) \left(x^{2} + 1\right)\)'
+    C: '\(2 x \left(x + 5 + \frac{1}{x}\right) + \left(1 - \frac{1}{x^{2}}\right) \left(x^{2} + 1\right)\)'
+    D: '\(2 x \left(x + 5 + \frac{1}{x}\right) + \left(2 - \frac{1}{x^{2}}\right) \left(x^{2} + 2\right)\)'
+    answer: C
+    hint: Multiply out first, or use the product rule.
+    explanation: 'Differentiating gives \(2 x \left(x + 5 + \frac{1}{x}\right) + \left(1 - \frac{1}{x^{2}}\right) \left(x^{2} + 1\right)\).'
+  26:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{2 x + 5}{3 x - 2}\right]\).'
+    A: '\(- \frac{3 \left(2 x + 5\right)}{\left(3 x - 2\right)^{2}} + \frac{2}{3 x - 2}\)'
+    B: '\(- \frac{19}{3 x - 2}\)'
+    C: '\(0.666666666666667\)'
+    D: '\(\frac{12 x + 11}{\left(3 x - 2\right)^{2}}\)'
+    answer: A
+    hint: 'Quotient rule: \(\left(\dfrac uv\right)''=\dfrac{u''v-uv''}{v^2}\).'
+    explanation: 'Differentiating gives \(- \frac{3 \left(2 x + 5\right)}{\left(3 x - 2\right)^{2}} + \frac{2}{3 x - 2}\).'
+  27:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{2 x + 1}{x^{2} - 1}\right]\).'
+    A: '\(- \frac{3 x \left(2 x + 1\right)}{\left(x^{2} - 1\right)^{3}} + \frac{2}{x^{2} - 1}\)'
+    B: '\(- \frac{2 x \left(2 x + 1\right)}{\left(x^{2} - 1\right)^{2}} - \frac{2}{x^{2} - 1}\)'
+    C: '\(2 - \frac{2 \left(2 x + 1\right)}{x^{3}}\)'
+    D: '\(- \frac{2 x \left(2 x + 1\right)}{\left(x^{2} - 1\right)^{2}} + \frac{2}{x^{2} - 1}\)'
+    answer: D
+    hint: 'Use the quotient rule with \(u=2x+1\), \(v=x^2-1\).'
+    explanation: 'Differentiating gives \(- \frac{2 x \left(2 x + 1\right)}{\left(x^{2} - 1\right)^{2}} + \frac{2}{x^{2} - 1}\).'
+  28:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dt}\left[\frac{1 - t}{t^{2} + 1}\right]\).'
+    A: '\(- \frac{2 t \left(1 - t\right)}{\left(t^{2} + 1\right)^{2}} - \frac{1}{t^{2} + 1}\)'
+    B: '\(- \frac{2 t}{\left(t^{2} + 1\right)^{2}}\)'
+    C: '\(- \frac{2 t \left(\frac{1}{2} - t\right)}{\left(t^{2} + \frac{1}{2}\right)^{2}} - \frac{1}{t^{2} + \frac{1}{2}}\)'
+    D: '\(t^{2} - \frac{2 t \left(t + 1\right)}{\left(t^{2} + 1\right)^{2}} + 1\)'
+    answer: A
+    hint: Quotient rule.
+    explanation: 'Differentiating gives \(- \frac{2 t \left(1 - t\right)}{\left(t^{2} + 1\right)^{2}} - \frac{1}{t^{2} + 1}\).'
+  29:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[x^{3} e^{x}\right]\).'
+    A: '\(3 x^{2} e^{x}\)'
+    B: '\(x^{3} e^{x} + 3 x^{2} e^{x}\)'
+    C: '\(- x^{3} e^{x} + 3 x^{2} e^{x}\)'
+    D: '\(x^{3} e^{x}\)'
+    answer: B
+    hint: 'Product rule with \(u=x^3\) and \(v=e^x\).'
+    explanation: 'Differentiating gives \(x^{3} e^{x} + 3 x^{2} e^{x}\).'
+  30:
+    topic: s3-2
+    question: 'Find \(\dfrac{d}{dx}\left[2 e^{- x}\right]\).'
+    A: '\(-2\)'
+    B: '\(- e^{- x}\)'
+    C: '\(- 2 e^{- 2 x}\)'
+    D: '\(- 2 e^{- x}\)'
+    answer: D
+    hint: 'The derivative of \(e^{-x}\) is \(-e^{-x}\).'
+    explanation: 'Differentiating gives \(- 2 e^{- x}\).'
+  31:
+    topic: s3-2
+    question: 'Find \(\dfrac{d^{2}}{dx^{2}}\left[\frac{x^{3} + 7}{x}\right]\).'
+    A: '\(\frac{2 \left(x^{4} + 7\right)}{x^{3}}\)'
+    B: '\(\frac{2 \left(x^{3} + 7\right)}{x^{4}}\)'
+    C: '\(\frac{2 \left(x^{3} + 8\right)}{x^{3}}\)'
+    D: '\(\frac{2 \left(x^{3} + 7\right)}{x^{3}}\)'
+    answer: D
+    hint: 'Divide term by term first: \(x^2+7/x\).'
+    explanation: 'Differentiating gives \(\frac{2 \left(x^{3} + 7\right)}{x^{3}}\).'
+  32:
+    topic: s3-2
+    question: 'Find \(\dfrac{d^{5}}{dx^{5}}\left[\frac{x^{5}}{120}\right]\).'
+    A: '\(1\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(-1\)'
+    answer: A
+    hint: Repeated power rule.
+    explanation: 'Differentiating gives \(1\).'
+  33:
+    topic: s3-2
+    question: 'Suppose \(u\) and \(v\) are differentiable with \(u(0)=5\), \(u''(0)=-3\), \(v(0)=-1\), \(v''(0)=2\). Then \(\dfrac{d}{dx}(uv)\) at \(x=0\) equals'
+    A: '\(-6\)'
+    B: '\(7\)'
+    C: '\(13\)'
+    D: '\(-13\)'
+    answer: C
+    hint: '\((uv)''=u''v+uv''\).'
+    explanation: '\((-3)(-1)+5\cdot2=3+10=13\).'
+  34:
+    topic: s3-2
+    question: 'With the same values \(u(0)=5\), \(u''(0)=-3\), \(v(0)=-1\), \(v''(0)=2\), \(\dfrac{d}{dx}\!\left(\dfrac uv\right)\) at \(x=0\) equals'
+    A: '\(-7\)'
+    B: '\(-\dfrac{7}{25}\)'
+    C: '\(7\)'
+    D: '\(13\)'
+    answer: A
+    hint: '\(\left(\dfrac uv\right)''=\dfrac{u''v-uv''}{v^2}\).'
+    explanation: '\(\dfrac{(-3)(-1)-5(2)}{(-1)^2}=3-10=-7\).'
+  35:
+    topic: s3-2
+    question: 'With the same values, \(\dfrac{d}{dx}\!\left(\dfrac vu\right)\) at \(x=0\) equals'
+    A: '\(\dfrac{7}{25}\)'
+    B: '\(\dfrac{13}{25}\)'
+    C: '\(\dfrac{7}{5}\)'
+    D: '\(-\dfrac{7}{25}\)'
+    answer: A
+    hint: 'Swap the roles of \(u\) and \(v\) in the quotient rule.'
+    explanation: '\(\dfrac{v''u-vu''}{u^2}=\dfrac{2\cdot5-(-1)(-3)}{25}=\dfrac{7}{25}\).'
+  36:
+    topic: s3-2
+    question: 'With \(u(1)=2\), \(u''(1)=0\), \(v(1)=5\), \(v''(1)=-1\), the value of \(\dfrac{d}{dx}(uv)\) at \(x=1\) is'
+    A: '\(-2\)'
+    B: '\(0\)'
+    C: '\(2\)'
+    D: '\(-5\)'
+    answer: A
+    hint: '\((uv)''=u''v+uv''\).'
+    explanation: '\(0\cdot5+2(-1)=-2\).'
+  37:
+    topic: s3-2
+    question: 'An equation of the line perpendicular (normal) to \(y=x^3-4x+1\) at the point \((2,1)\) is'
+    A: '\(y-1=\dfrac18(x-2)\)'
+    B: '\(y-1=8(x-2)\)'
+    C: '\(y-1=-8(x-2)\)'
+    D: '\(y-1=-\dfrac18(x-2)\)'
+    answer: D
+    hint: 'The slope of the tangent is \(y''(2)=3\cdot4-4\). The normal has the negative reciprocal slope.'
+    explanation: '\(y''(2)=8\), so the normal has slope \(-\tfrac18\).'
+  38:
+    topic: s3-2
+    question: 'What is the smallest slope on the curve \(y=x^3-4x+1\), and where does it occur?'
+    A: '\(-4\), at the point \((2,1)\)'
+    B: '\(-4\), at the point \((0,1)\)'
+    C: '\(0\), at the point \((0,1)\)'
+    D: '\(-1\), at the point \((1,-2)\)'
+    answer: B
+    hint: 'Minimize \(y''=3x^2-4\).'
+    explanation: '\(3x^2-4\) is smallest at \(x=0\), where it equals \(-4\); \(y(0)=1\).'
+  39:
+    topic: s3-2
+    question: 'The tangents to \(y=x^3-4x+1\) that have slope \(8\) are'
+    A: '\(y=8x-15\) and \(y=8x+17\)'
+    B: '\(y=8x-15\) and \(y=8x-17\)'
+    C: '\(y=8x-15\) only'
+    D: '\(y=8x+1\) and \(y=8x-1\)'
+    answer: A
+    hint: 'Solve \(3x^2-4=8\), then use point-slope form at each point.'
+    explanation: '\(x=\pm2\): the points are \((2,1)\) and \((-2,1)\), giving \(y=8x-15\) and \(y=8x+17\).'
+  40:
+    topic: s3-2
+    question: 'The horizontal tangents to \(y=x^3-3x-2\) are the lines'
+    A: '\(y=0\) and \(y=-4\)'
+    B: '\(y=1\) and \(y=-1\)'
+    C: '\(y=2\) and \(y=-2\)'
+    D: '\(y=-2\) only'
+    answer: A
+    hint: 'Solve \(y''=3x^2-3=0\) and evaluate \(y\).'
+    explanation: '\(x=\pm1\) gives \(y=-4\) at \(x=1\) and \(y=0\) at \(x=-1\).'
+  41:
+    topic: s3-2
+    question: 'The tangent to Newton''s serpentine \(y=\dfrac{4x}{x^2+1}\) at the origin is'
+    A: '\(y=0\)'
+    B: '\(y=2\)'
+    C: '\(y=x\)'
+    D: '\(y=4x\)'
+    answer: D
+    hint: '\(y''=\dfrac{4(1-x^2)}{(x^2+1)^2}\).'
+    explanation: '\(y''(0)=4\), and the line passes through the origin.'
+  42:
+    topic: s3-2
+    question: 'The tangent to the Witch of Agnesi \(y=\dfrac{8}{x^2+4}\) at \((2,1)\) is'
+    A: '\(y=-\dfrac{x}{2}+1\)'
+    B: '\(y=-2x+5\)'
+    C: '\(y=\dfrac{x}{2}\)'
+    D: '\(y=-\dfrac{x}{2}+2\)'
+    answer: D
+    hint: '\(y''=\dfrac{-16x}{(x^2+4)^2}\).'
+    explanation: 'The slope at \(x=2\) is \(-32/64=-\tfrac12\), so \(y-1=-\tfrac12(x-2)\).'
+  43:
+    topic: s3-2
+    question: 'The curve \(y=ax^2+bx+c\) passes through \((1,2)\) and is tangent to the line \(y=x\) at the origin. Then \((a,b,c)=\)'
+    A: '\((0,1,1)\)'
+    B: '\((1,0,1)\)'
+    C: '\((2,0,0)\)'
+    D: '\((1,1,0)\)'
+    answer: D
+    hint: 'Use \(c=0\) (origin), \(y''(0)=b=1\), and \(a+b=2\).'
+    explanation: '\(y=x^2+x\).'
+  44:
+    topic: s3-2
+    question: 'The curves \(y=x^2+ax+b\) and \(y=cx-x^2\) have a common tangent line at \((1,0)\). Then \((a,b,c)=\)'
+    A: '\((-3,2,1)\)'
+    B: '\((-3,2,-1)\)'
+    C: '\((3,-2,1)\)'
+    D: '\((-1,0,1)\)'
+    answer: A
+    hint: 'Both curves pass through \((1,0)\) and have equal slopes there.'
+    explanation: '\(c-1=0\Rightarrow c=1\); slopes: \(2+a=c-2=-1\Rightarrow a=-3\); \(1+a+b=0\Rightarrow b=2\).'
+  45:
+    topic: s3-2
+    question: 'The tangent to \(y=x^3-x\) at \((-1,0)\) meets the curve again at'
+    A: '\((2,6)\)'
+    B: '\((1,0)\)'
+    C: '\((2,2)\)'
+    D: '\((0,0)\)'
+    answer: A
+    hint: 'The tangent is \(y=2x+2\). Solve \(x^3-x=2x+2\).'
+    explanation: '\(x^3-3x-2=(x+1)^2(x-2)\), so the other root is \(x=2\), \(y=6\).'
+  46:
+    topic: s3-2
+    question: 'The tangent to \(y=x^3-6x^2+5x\) at the origin meets the curve again at'
+    A: '\((5,0)\)'
+    B: '\((6,0)\)'
+    C: '\((1,0)\)'
+    D: '\((6,30)\)'
+    answer: D
+    hint: 'The tangent at the origin is \(y=5x\).'
+    explanation: '\(x^3-6x^2+5x=5x\) gives \(x^2(x-6)=0\), so \(x=6\), \(y=30\).'
+  47:
+    topic: s3-2
+    question: 'If \(P(x)=a_nx^n+\dots+a_1x+a_0\), then \(P''(x)=\)'
+    A: '\(a_n n!\)'
+    B: '\(na_nx^n+\dots+a_1x\)'
+    C: '\(a_nx^{n-1}+\dots+a_1\)'
+    D: '\(na_nx^{n-1}+\dots+2a_2x+a_1\)'
+    answer: D
+    hint: Differentiate each term with the power rule; constants vanish.
+    explanation: 'The constant \(a_0\) disappears and each \(a_kx^k\) becomes \(ka_kx^{k-1}\).'
+  48:
+    topic: s3-2
+    question: 'If \(R=M^2\left(\dfrac C2-\dfrac M3\right)\), the sensitivity \(dR/dM\) is'
+    A: '\(CM-M^2\)'
+    B: '\(\dfrac{C}{2}-\dfrac{M}{3}\)'
+    C: '\(CM-\dfrac{M^2}{3}\)'
+    D: '\(C-2M\)'
+    answer: A
+    hint: 'Expand first: \(R=\tfrac C2M^2-\tfrac13M^3\).'
+    explanation: '\(\dfrac{dR}{dM}=CM-M^2\).'
+  49:
+    topic: s3-2
+    question: 'If \(A(q)=\dfrac{km}{q}+cm+\dfrac{hq}{2}\), then \(\dfrac{d^2A}{dq^2}=\)'
+    A: '\(\dfrac{h}{2}\)'
+    B: '\(\dfrac{2km}{q^3}\)'
+    C: '\(-\dfrac{2km}{q^3}\)'
+    D: '\(-\dfrac{km}{q^2}\)'
+    answer: B
+    hint: '\(A''=-km\,q^{-2}+h/2\).'
+    explanation: 'Differentiating again: \(2km\,q^{-3}\).'
+  50:
+    topic: s3-2
+    question: 'If \(g\) is constant \(g(x)=c\) in the Product Rule, \((fg)''=f''g+fg''\) becomes'
+    A: '\((cf)''=cf''\), the Constant Multiple Rule'
+    B: '\((cf)''=0\)'
+    C: '\((cf)''=c\), a constant'
+    D: '\((cf)''=f''+c\)'
+    answer: A
+    hint: 'What is \(g''\) when \(g\) is constant?'
+    explanation: '\(g''=0\), so \((cf)''=cf''+f\cdot0=cf''\).'
+  51:
+    topic: s3-3
+    question: 'A body moves with position \(s=t^2-3t+2\) m, \(0\le t\le2\). Its displacement and average velocity over the interval are'
+    A: '\(-2\) m and \(-2\) m/s'
+    B: '\(-2\) m and \(-1\) m/s'
+    C: '\(2\) m and \(1\) m/s'
+    D: '\(0\) m and \(0\) m/s'
+    answer: B
+    hint: 'Displacement \(=s(2)-s(0)\).'
+    explanation: '\(s(2)=0\), \(s(0)=2\), so displacement is \(-2\) and the average velocity is \(-2/2=-1\).'
+  52:
+    topic: s3-3
+    question: 'For \(s=t^2-3t+2\), the body changes direction at'
+    A: '\(t=0\)'
+    B: '\(t=2\)'
+    C: '\(t=1\)'
+    D: '\(t=\dfrac32\)'
+    answer: D
+    hint: 'Direction changes when the velocity \(2t-3\) changes sign.'
+    explanation: '\(v=2t-3=0\) at \(t=\tfrac32\), and \(v\) goes from negative to positive there.'
+  53:
+    topic: s3-3
+    question: 'For \(s=6t-t^2\), \(0\le t\le6\), the body changes direction at'
+    A: '\(t=0\)'
+    B: '\(t=3\)'
+    C: '\(t=2\)'
+    D: '\(t=6\)'
+    answer: B
+    hint: '\(v=6-2t\).'
+    explanation: '\(v>0\) for \(t<3\) and \(v<0\) for \(t>3\).'
+  54:
+    topic: s3-3
+    question: 'For \(s=-t^3+3t^2-3t\), \(0\le t\le3\), the body'
+    A: 'changes direction at \(t=\tfrac32\)'
+    B: 'changes direction at \(t=1\)'
+    C: never changes direction
+    D: 'changes direction at \(t=3\)'
+    answer: C
+    hint: 'Factor \(v=-3t^2+6t-3\).'
+    explanation: '\(v=-3(t-1)^2\le0\); it touches zero at \(t=1\) without changing sign.'
+  55:
+    topic: s3-3
+    question: 'A body has velocity \(v=t^2-4t+3\) (\(t\ge0\)). When is it moving backward?'
+    A: '\(1<t<3\)'
+    B: '\(t>2\)'
+    C: '\(t>3\)'
+    D: '\(0\le t<1\)'
+    answer: A
+    hint: 'Solve \(v<0\); factor \(v=(t-1)(t-3)\).'
+    explanation: '\(v<0\) exactly between its roots.'
+  56:
+    topic: s3-3
+    question: 'A particle has position \(s=t^3-6t^2+9t\) m. Its acceleration at each time the velocity is zero is'
+    A: '\(0\) at both times'
+    B: '\(6\) m/s\(^2\) at \(t=1\) and \(-6\) m/s\(^2\) at \(t=3\)'
+    C: '\(-6\) m/s\(^2\) at both times'
+    D: '\(-6\) m/s\(^2\) at \(t=1\) and \(6\) m/s\(^2\) at \(t=3\)'
+    answer: D
+    hint: '\(v=3t^2-12t+9\) and \(a=6t-12\).'
+    explanation: '\(v=3(t-1)(t-3)\), zero at \(t=1\) and \(t=3\); \(a(1)=-6\) and \(a(3)=6\).'
+  57:
+    topic: s3-3
+    question: 'For \(s=t^3-6t^2+9t\), the total distance traveled from \(t=0\) to \(t=2\) is'
+    A: '\(2\) m'
+    B: '\(6\) m'
+    C: '\(8\) m'
+    D: '\(4\) m'
+    answer: B
+    hint: 'The body turns around at \(t=1\), so add the two legs.'
+    explanation: '\(s(0)=0\), \(s(1)=4\), \(s(2)=2\): it travels \(4\) m forward and then \(2\) m back, for \(6\) m in total.'
+  58:
+    topic: s3-3
+    question: 'On Mars, free fall is \(s=1.86t^2\) m. About how long until a rock dropped from rest reaches \(27.8\) m/s?'
+    A: 'about \(3.7\) s'
+    B: 'about \(14.9\) s'
+    C: 'about \(7.5\) s'
+    D: 'about \(15.0\) s'
+    answer: C
+    hint: 'Differentiate: \(v=3.72t\). Set it equal to 27.8.'
+    explanation: '\(t=27.8/3.72\approx7.47\) s.'
+  59:
+    topic: s3-3
+    question: 'A rock thrown up on the moon has height \(s=24t-0.8t^2\) m. How long does it take to reach its highest point?'
+    A: '\(30\) s'
+    B: '\(15\) s'
+    C: '\(24\) s'
+    D: '\(7.5\) s'
+    answer: B
+    hint: 'The highest point is where \(v=0\).'
+    explanation: '\(v=24-1.6t=0\) gives \(t=15\) s.'
+  60:
+    topic: s3-3
+    question: 'How high does the rock with \(s=24t-0.8t^2\) go?'
+    A: '\(90\) m'
+    B: '\(180\) m'
+    C: '\(360\) m'
+    D: '\(24\) m'
+    answer: B
+    hint: 'Evaluate \(s\) at the time of the highest point, \(t=15\).'
+    explanation: '\(24(15)-0.8(225)=360-180=180\) m.'
+  61:
+    topic: s3-3
+    question: 'How long is the rock with \(s=24t-0.8t^2\) in the air?'
+    A: '\(15\) s'
+    B: '\(60\) s'
+    C: '\(180\) s'
+    D: '\(30\) s'
+    answer: D
+    hint: 'It returns to the surface when \(s=0\) again.'
+    explanation: '\(t(24-0.8t)=0\) gives \(t=30\) s.'
+  62:
+    topic: s3-3
+    question: 'On a small planet a ball launched upward reaches \(s=15t-\tfrac12g_st^2\) m. If it reaches its maximum height at \(t=20\) s, then \(g_s\) equals'
+    A: '\(1.5\) m/s\(^2\)'
+    B: '\(0.75\) m/s\(^2\)'
+    C: '\(0.375\) m/s\(^2\)'
+    D: '\(9.8\) m/s\(^2\)'
+    answer: B
+    hint: '\(v=15-g_st\) is zero at the top.'
+    explanation: '\(15-20g_s=0\) gives \(g_s=0.75\).'
+  63:
+    topic: s3-3
+    question: 'A bullet fired straight up on the moon has \(s=832t-2.6t^2\) ft. How long does it stay aloft?'
+    A: '\(832\) s'
+    B: '\(320\) s'
+    C: '\(160\) s'
+    D: '\(52\) s'
+    answer: B
+    hint: 'Solve \(s=0\) for \(t>0\).'
+    explanation: '\(t(832-2.6t)=0\) gives \(t=320\) s. (On Earth, \(s=832t-16t^2\) gives only 52 s.)'
+  64:
+    topic: s3-3
+    question: 'A ball dropped from the Tower of Pisa (179 ft) has \(s=179-16t^2\). About how fast is it going when it hits the ground?'
+    A: 'about \(54\) ft/s'
+    B: 'about \(107\) ft/s'
+    C: 'about \(11\) ft/s'
+    D: 'about \(179\) ft/s'
+    answer: B
+    hint: 'Find the impact time with \(s=0\), then \(v=-32t\).'
+    explanation: '\(t=\sqrt{179/16}\approx3.34\) s, so \(|v|=32t\approx107\) ft/s.'
+  65:
+    topic: s3-3
+    question: 'The cost of producing \(x\) washing machines is \(c(x)=2000+100x-0.1x^2\) dollars. The marginal cost at \(x=100\) is'
+    A: '\(\$80\)'
+    B: '\(\$90\)'
+    C: '\(\$110\)'
+    D: '\(\$10{,}000\)'
+    answer: A
+    hint: 'Marginal cost is \(c''(x)\).'
+    explanation: '\(c''(x)=100-0.2x\), so \(c''(100)=80\). (The average cost per machine for the first 100 is \(\$110\).)'
+  66:
+    topic: s3-3
+    question: 'The revenue from selling \(x\) machines is \(r(x)=20000\left(1-\dfrac1x\right)\). The marginal revenue at \(x=100\) is'
+    A: '\(\$2\)'
+    B: '\(\$20{,}000\)'
+    C: '\(\$200\)'
+    D: '\(\$0.02\)'
+    answer: A
+    hint: '\(r''(x)=\dfrac{20000}{x^2}\).'
+    explanation: '\(20000/10000=2\). As \(x\to\infty\), \(r''\to0\): each extra machine adds almost no revenue.'
+  67:
+    topic: s3-3
+    question: 'A bacteria population is \(b=10^6+10^4t-10^3t^2\) after \(t\) hours. The growth rate at \(t=5\) hours is'
+    A: '\(0\) bacteria/hour'
+    B: '\(10^6\) bacteria per hour'
+    C: '\(10^4\) bacteria per hour'
+    D: '\(-10^4\) bacteria per hour'
+    answer: A
+    hint: '\(b''=10^4-2\cdot10^3t\).'
+    explanation: '\(b''(5)=10^4-10^4=0\): the population has stopped growing. At \(t=10\) the rate is \(-10^4\).'
+  68:
+    topic: s3-3
+    question: 'A tank drains so that \(Q(t)=200(30-t)^2\) gallons remain after \(t\) minutes. How fast is the water leaving at \(t=10\)?'
+    A: '\(80{,}000\) gal/min'
+    B: '\(10{,}000\) gal/min'
+    C: '\(4000\) gal/min'
+    D: '\(8000\) gal/min'
+    answer: D
+    hint: '\(Q''(t)=-400(30-t)\).'
+    explanation: '\(Q''(10)=-8000\), so the water is leaving at 8000 gal/min. (The average rate over the first 10 minutes is 10,000 gal/min.)'
+  69:
+    topic: s3-3
+    question: 'The volume of a balloon is \(V=\tfrac43\pi r^3\). Its rate of change with respect to the radius at \(r=2\) ft is'
+    A: '\(8\pi\) ft\(^3\)/ft'
+    B: '\(32\pi\) ft\(^3\)/ft'
+    C: '\(16\pi\) ft\(^3\)/ft'
+    D: '\(\dfrac{32\pi}{3}\) ft\(^3\)/ft'
+    answer: C
+    hint: '\(V''(r)=4\pi r^2\).'
+    explanation: '\(4\pi\cdot4=16\pi\).'
+  70:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[- 10 x + 3 \cos{\left(x \right)}\right]\).'
+    A: '\(- 3 \sin{(x)} - 20\)'
+    B: '\(- 3 \sin{(x)} - 10\)'
+    C: '\(-10\)'
+    D: '\(- 3 \cos{(x)} - 10\)'
+    answer: B
+    hint: 'The derivative of \(\cos x\) is \(-\sin x\).'
+    explanation: 'Differentiating gives \(- 3 \sin{\left(x \right)} - 10\).'
+  71:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[5 \sin{\left(x \right)} + \frac{3}{x}\right]\).'
+    A: '\(- 3 x^{2} + 5 \cos{(x)}\)'
+    B: '\(5 \cos{(x)} - \frac{3}{x}\)'
+    C: '\(5 \cos{(x)} - \frac{3}{x^{3}}\)'
+    D: '\(5 \cos{(x)} - \frac{3}{x^{2}}\)'
+    answer: D
+    hint: 'Rewrite \(3/x=3x^{-1}\).'
+    explanation: 'Differentiating gives \(5 \cos{\left(x \right)} - \frac{3}{x^{2}}\).'
+  72:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[- 4 \sqrt{x} + \csc{\left(x \right)} + 7\right]\).'
+    A: '\(- \cot{(x)} \csc{(x)} - \frac{2}{\sqrt{x}}\)'
+    B: '\(- \cot{(x)} \csc{(x)} - \frac{2}{\sqrt[4]{x}}\)'
+    C: '\(- 2 \cot{(x)} \csc{(x)} - \frac{2}{\sqrt{x}}\)'
+    D: '\(- \cot{(x)} \csc{(x)} - \frac{1}{\sqrt{x}}\)'
+    answer: A
+    hint: '\(\dfrac{d}{dx}\csc x=-\csc x\cot x\).'
+    explanation: 'Differentiating gives \(- \cot{\left(x \right)} \csc{\left(x \right)} - \frac{2}{\sqrt{x}}\).'
+  73:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[x^{2} \cot{\left(x \right)} - \frac{1}{x^{2}}\right]\).'
+    A: '\(x^{4} \left(- \cot^{4}{(x)} - 1\right) + 4 x \cot{(x)} + \frac{4}{x^{3}}\)'
+    B: '\(x^{2} \left(- \cot^{2}{(x)} - 1\right) + 2 x \cot{(x)} - \frac{2}{x^{3}}\)'
+    C: '\(x^{2} \left(- \cot^{2}{(x)} - 1\right) + 2 x \cot{(x)} + \frac{2}{x^{3}}\)'
+    D: '\(- 2 x \cot{(x)} + \frac{-1 - \frac{1}{\cot^{2}{(x)}}}{x^{2}} - \frac{2}{x^{3}}\)'
+    answer: C
+    hint: 'Product rule for \(x^2\cot x\); \(\dfrac{d}{dx}\cot x=-\csc^2x\).'
+    explanation: 'Differentiating gives \(x^{2} \left(- \cot^{2}{\left(x \right)} - 1\right) + 2 x \cot{\left(x \right)} + \frac{2}{x^{3}}\).'
+  74:
+    topic: s3-4
+    question: 'Simplify and differentiate: \(y=(\sec x+\tan x)(\sec x-\tan x)\). Then \(\dfrac{dy}{dx}=\)'
+    A: '\(\sec^2x-\tan^2x\)'
+    B: '\(2\sec x\tan x\)'
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Multiply out using \(\sec^2x-\tan^2x=1\).'
+    explanation: 'The product is \(\sec^2x-\tan^2x=1\), a constant, so the derivative is 0.'
+  75:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[\left(\sin{\left(x \right)} + \cos{\left(x \right)}\right) \sec{\left(x \right)}\right]\).'
+    A: '\(\left(\sin{(x)} + \cos{(x)}\right) \tan{(x)} \sec{(x)}\)'
+    B: '\(\left(- \sin{(x)} + \cos{(x)}\right) \sec{(x)} + \left(\sin{(x)} + \cos{(x)}\right) \sec^{2}{(x)}\)'
+    C: '\(\left(\sin{(x)} + \cos{(x)}\right) \tan{(x)} \sec{(x)} + \cos{(x)} \sec{(x)}\)'
+    D: '\(\left(- \sin{(x)} + \cos{(x)}\right) \sec{(x)} + \left(\sin{(x)} + \cos{(x)}\right) \tan{(x)} \sec{(x)}\)'
+    answer: D
+    hint: 'Multiply out: \(\tan x+1\).'
+    explanation: 'Differentiating gives \(\left(- \sin{\left(x \right)} + \cos{\left(x \right)}\right) \sec{\left(x \right)} + \left(\sin{\left(x \right)} + \cos{\left(x \right)}\right) \tan{\left(x \right)} \sec{\left(x \right)}\).'
+  76:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{\cos{\left(x \right)}}{\sin{\left(x \right)} + 1}\right]\).'
+    A: '\(-1 - \frac{\cos^{2}{(x)}}{\sin^{2}{(x)}}\)'
+    B: '\(- \frac{\sin{(x)}}{\sin{(x)} + 1} - \frac{\cos^{2}{(x)}}{\left(\sin{(x)} + 1\right)^{2}}\)'
+    C: '\(- \frac{\sin{(x)}}{\sin{(x)} + 1} - \frac{\cos{(x)}}{\left(\sin{(x)} + 1\right)^{2}}\)'
+    D: '\(- \frac{\sin{(x)}}{\sin{(x)} + 2} - \frac{\cos^{2}{(x)}}{\left(\sin{(x)} + 2\right)^{2}}\)'
+    answer: B
+    hint: 'Quotient rule; \(\cos^2x+\sin^2x=1\) simplifies the numerator.'
+    explanation: 'Differentiating gives \(- \frac{\sin{\left(x \right)}}{\sin{\left(x \right)} + 1} - \frac{\cos^{2}{\left(x \right)}}{\left(\sin{\left(x \right)} + 1\right)^{2}}\).'
+  77:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dt}\left[\tan{\left(t \right)} - e^{- t}\right]\).'
+    A: '\(1 + e^{- t}\)'
+    B: '\(\tan^{2}{\left(t \right)} + 1 - e^{- t}\)'
+    C: '\(\tan^{3}{\left(t \right)} + 1 + e^{- t}\)'
+    D: '\(\tan^{2}{\left(t \right)} + 1 + e^{- t}\)'
+    answer: D
+    hint: '\(\dfrac{d}{dt}\tan t=\sec^2t\).'
+    explanation: 'Differentiating gives \(\tan^{2}{\left(t \right)} + 1 + e^{- t}\).'
+  78:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{d\theta}\left[- \theta^{2} \sin{\left(\theta \right)} + 4\right]\).'
+    A: '\(- \theta^{2} \cos{\left(\theta \right)} - 2 \theta \sin{\left(\theta \right)}\)'
+    B: '\(- 2 \theta \sin{\left(\theta \right)} - \theta \cos{\left(\theta \right)}\)'
+    C: '\(- \frac{\theta^{2} \cos{\left(\theta \right)}}{2} - 2 \theta \sin{\left(\theta \right)}\)'
+    D: '\(\theta^{2} \cos{\left(\theta \right)} + 2 \theta \sin{\left(\theta \right)}\)'
+    answer: A
+    hint: 'Product rule on \(\theta^2\sin\theta\).'
+    explanation: 'Differentiating gives \(- \theta^{2} \cos{\left(\theta \right)} - 2 \theta \sin{\left(\theta \right)}\).'
+  79:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{d\theta}\left[\theta \sin{\left(\theta \right)} + \cos{\left(\theta \right)}\right]\).'
+    A: '\(2 \theta \cos{\left(\theta \right)}\)'
+    B: '\(\theta \cos{\left(\theta \right)}\)'
+    C: '\(- \theta \cos{\left(\theta \right)}\)'
+    D: '\(\theta \sin{\left(\theta \right)}\)'
+    answer: B
+    hint: 'Product rule on \(\theta\sin\theta\); then the \(\sin\theta\) terms cancel.'
+    explanation: 'Differentiating gives \(\theta \cos{\left(\theta \right)}\).'
+  80:
+    topic: s3-4
+    question: 'Find \(\dfrac{d}{dx}\left[5 + \frac{1}{\cot{\left(x \right)}}\right]\).'
+    A: '\(\frac{\cot{(x)} + 1}{\cot^{2}{(x)}}\)'
+    B: '\(\frac{\cot^{2}{(x)} + \frac{1}{2}}{\cot^{2}{(x)}}\)'
+    C: '\(\frac{\cot^{2}{(x)} + 1}{\cot^{2}{(x)}}\)'
+    D: '\(\frac{1 + \frac{1}{\cot^{2}{(x)}}}{\cot^{2}{(x)}}\)'
+    answer: C
+    hint: '\(1/\cot x=\tan x\).'
+    explanation: 'Differentiating gives \(\frac{\cot^{2}{\left(x \right)} + 1}{\cot^{2}{\left(x \right)}}\).'
+  81:
+    topic: s3-4
+    question: 'Find \(\dfrac{d^{2}}{dx^{2}}\left[\csc{\left(x \right)}\right]\).'
+    A: '\(\left(4 \cot^{4}{(x)} + 1\right) \csc{(x)}\)'
+    B: '\(\left(2 \cot^{2}{(x)} + 2\right) \csc{(x)}\)'
+    C: '\(\left(2 \cot^{2}{(x)} + 1\right) \csc{(x)}\)'
+    D: '\(\left(2 \cot^{2}{(x)} - 1\right) \csc{(x)}\)'
+    answer: C
+    hint: '\(y''=-\csc x\cot x\); differentiate again with the product rule.'
+    explanation: 'Differentiating gives \(\left(2 \cot^{2}{\left(x \right)} + 1\right) \csc{\left(x \right)}\).'
+  82:
+    topic: s3-4
+    question: 'If \(y=-2\sin x\), then \(y^{(4)}=\dfrac{d^4y}{dx^4}\) equals'
+    A: '\(-2\cos x\)'
+    B: '\(2\sin x\)'
+    C: '\(-2\sin x\)'
+    D: '\(2\cos x\)'
+    answer: C
+    hint: 'The derivatives of \(\sin x\) cycle with period 4.'
+    explanation: '\(\sin\to\cos\to-\sin\to-\cos\to\sin\), so the fourth derivative returns to \(-2\sin x\).'
+  83:
+    topic: s3-4
+    question: '\(\dfrac{d^{999}}{dx^{999}}(\cos x)=\)'
+    A: '\(-\cos x\)'
+    B: '\(\cos x\)'
+    C: '\(\sin x\)'
+    D: '\(-\sin x\)'
+    answer: C
+    hint: 'The derivatives cycle with period 4. What is \(999\bmod4\)?'
+    explanation: '\(999=4\cdot249+3\). The third derivative of \(\cos x\) is \(\sin x\).'
+  84:
+    topic: s3-4
+    question: 'At what points does the graph of \(y=\tan x\), \(-\tfrac\pi2<x<\tfrac\pi2\), have a tangent line parallel to \(y=2x\)?'
+    A: '\(x=0\)'
+    B: '\(x=\pm\dfrac\pi3\)'
+    C: '\(x=\pm\dfrac\pi6\)'
+    D: '\(x=\pm\dfrac\pi4\)'
+    answer: D
+    hint: 'Solve \(\sec^2x=2\).'
+    explanation: '\(\cos^2x=\tfrac12\) gives \(x=\pm\tfrac\pi4\), at the points \((\pm\tfrac\pi4,\pm1)\).'
+  85:
+    topic: s3-4
+    question: 'Where on \(0<x<\pi\) is the tangent to \(y=\cot x\) parallel to \(y=-x\)?'
+    A: '\(x=\dfrac\pi4\)'
+    B: nowhere
+    C: '\(x=\dfrac\pi2\)'
+    D: '\(x=\dfrac{3\pi}4\)'
+    answer: C
+    hint: 'Solve \(-\csc^2x=-1\).'
+    explanation: '\(\csc^2x=1\) means \(\sin x=1\), so \(x=\tfrac\pi2\); the point is \((\tfrac\pi2,0)\).'
+  86:
+    topic: s3-4
+    question: 'Does \(y=x+2\cos x\) have a horizontal tangent on \(0\le x\le2\pi\)?'
+    A: 'Yes, at \(x=\dfrac\pi6\) and \(x=\dfrac{5\pi}6\)'
+    B: 'Yes, only at \(x=\dfrac\pi2\)'
+    C: "No"
+    D: 'Yes, at \(x=0\) and \(x=\pi\)'
+    answer: A
+    hint: 'Solve \(y''=1-2\sin x=0\).'
+    explanation: '\(\sin x=\tfrac12\) gives \(x=\tfrac\pi6\) and \(\tfrac{5\pi}6\).'
+  87:
+    topic: s3-4
+    question: 'Does \(y=2x+\sin x\) have a horizontal tangent?'
+    A: 'Yes, at \(x=0\)'
+    B: 'Yes, at \(x=\dfrac\pi2\)'
+    C: 'Yes, at \(x=\pi\)'
+    D: 'No, because \(y''=2+\cos x\ge1\)'
+    answer: D
+    hint: 'Can \(2+\cos x\) ever be 0?'
+    explanation: '\(\cos x\ge-1\), so \(y''\ge1>0\).'
+  88:
+    topic: s3-4
+    question: '\(\displaystyle\lim_{x\to-\pi/6}\sqrt{1+\cos(\pi\csc x)}=\)'
+    A: '\(\sqrt2\)'
+    B: '\(0\)'
+    C: '\(\sqrt3\)'
+    D: '\(1\)'
+    answer: A
+    hint: '\(\csc(-\pi/6)=-2\).'
+    explanation: '\(\cos(-2\pi)=1\), so the limit is \(\sqrt{1+1}=\sqrt2\).'
+  89:
+    topic: s3-4
+    question: '\(\displaystyle\lim_{\theta\to0}\cos\!\left(\dfrac{\pi\theta}{\sin\theta}\right)=\)'
+    A: '\(-\dfrac\pi2\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(-1\)'
+    answer: D
+    hint: '\(\theta/\sin\theta\to1\).'
+    explanation: '\(\cos\pi=-1\), by continuity of cosine.'
+  90:
+    topic: s3-4
+    question: 'For \(f(x)=\begin{cases}\dfrac{\sin^23x}{x^2},&x\neq0\\ c,&x=0\end{cases}\) to be continuous at \(x=0\), \(c\) must equal'
+    A: '\(3\)'
+    B: '\(1\)'
+    C: '\(0\)'
+    D: '\(9\)'
+    answer: D
+    hint: 'Write \(\dfrac{\sin^23x}{x^2}=9\left(\dfrac{\sin3x}{3x}\right)^2\).'
+    explanation: 'The limit is \(9\cdot1^2=9\).'
+  91:
+    topic: s3-4
+    question: 'For \(g(x)=\begin{cases}x+b,&x<0\\ \cos x,&x\ge0\end{cases}\), which statement is true?'
+    A: '\(g\) is differentiable at 0 when \(b=1\)'
+    B: '\(g\) is continuous for every \(b\)'
+    C: '\(g\) is differentiable at 0 for every \(b\)'
+    D: '\(g\) is continuous at 0 only when \(b=1\), and then it is still not differentiable at 0'
+    answer: D
+    hint: Match the values, then compare the one-sided derivatives.
+    explanation: 'Continuity needs \(0+b=\cos0=1\). The left slope is 1 and the right slope is \(-\sin0=0\), so there is a corner.'
+  92:
+    topic: s3-4
+    question: 'The position of a body is \(s=2-2\sin t\) m. Its velocity at \(t=\pi/4\) is'
+    A: '\(2\) m/s'
+    B: '\(-2\) m/s'
+    C: '\(\sqrt2\) m/s'
+    D: '\(-\sqrt2\) m/s'
+    answer: D
+    hint: '\(v=ds/dt\).'
+    explanation: '\(v=-2\cos t\), so \(v(\pi/4)=-\sqrt2\). (The acceleration is \(2\sin t=\sqrt2\) m/s\(^2\).)'
+  93:
+    topic: s3-4
+    question: 'In degree mode, \(\displaystyle\lim_{h\to0}\dfrac{\sin h}{h}\) equals'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(\dfrac{180}{\pi}\)'
+    D: '\(\dfrac{\pi}{180}\)'
+    answer: D
+    hint: 'Convert \(h\) degrees to radians: \(h^\circ=\dfrac{\pi h}{180}\) rad.'
+    explanation: '\(\dfrac{\sin(\pi h/180)}{h}=\dfrac{\pi}{180}\cdot\dfrac{\sin u}{u}\to\dfrac{\pi}{180}\). This is why calculus uses radians.'
+  94:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[\left(2 x + 1\right)^{5}\right]\).'
+    A: '\(10 \left(2 x + 1\right)^{5}\)'
+    B: '\(5 \left(2 x + 1\right)^{4}\)'
+    C: '\(10 \left(2 x + 1\right)^{4}\)'
+    D: '\(10 x \left(2 x + 1\right)^{4}\)'
+    answer: C
+    hint: 'Chain rule: \(5(2x+1)^4\cdot2\).'
+    explanation: 'Differentiating gives \(10 \left(2 x + 1\right)^{4}\).'
+  95:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{1}{\left(1 - \frac{x}{7}\right)^{7}}\right]\).'
+    A: '\(\frac{1}{\left(\frac{6 x}{7} + 1\right)^{8}}\)'
+    B: '\(\frac{1}{\left(1 - \frac{x}{7}\right)^{7}}\)'
+    C: '\(\frac{1}{\left(1 - \frac{x}{7}\right)^{9}}\)'
+    D: '\(\frac{1}{\left(1 - \frac{x}{7}\right)^{8}}\)'
+    answer: D
+    hint: 'Differentiate the outer power, then multiply by \(-\tfrac17\).'
+    explanation: 'Differentiating gives \(\frac{1}{\left(1 - \frac{x}{7}\right)^{8}}\).'
+  96:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[\sin^{3}{\left(x \right)}\right]\).'
+    A: '\(3 \sin^{2}{(x)} \cos{(x)}\)'
+    B: '\(4 \sin^{2}{(x)} \cos{(x)}\)'
+    C: '\(3 \sin{(x)} \cos{(x)}\)'
+    D: '\(6 \sin^{2}{(x)} \cos{(x)}\)'
+    answer: A
+    hint: 'Outer power 3, inner \(\sin x\).'
+    explanation: 'Differentiating gives \(3 \sin^{2}{\left(x \right)} \cos{\left(x \right)}\).'
+  97:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[e^{- 5 x}\right]\).'
+    A: '\(- 6 e^{- 6 x}\)'
+    B: '\(- 5 e^{- 5 x}\)'
+    C: '\(- 10 e^{- 10 x}\)'
+    D: '\(- \frac{5 e^{- \frac{5 x}{2}}}{2}\)'
+    answer: B
+    hint: '\(\dfrac{d}{dx}e^{u}=e^{u}u''\).'
+    explanation: 'Differentiating gives \(- 5 e^{- 5 x}\).'
+  98:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[e^{5 - 7 x}\right]\).'
+    A: '\(- 7 e^{- 7 x - 5}\)'
+    B: '\(- 7 e^{5 - 7 x}\)'
+    C: '\(7 e^{5 - 7 x}\)'
+    D: '\(- 8 e^{5 - 8 x}\)'
+    answer: B
+    hint: 'Multiply by the derivative of the exponent, \(-7\).'
+    explanation: 'Differentiating gives \(- 7 e^{5 - 7 x}\).'
+  99:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dt}\left[\sqrt{3 - t}\right]\).'
+    A: '\(\frac{1}{2 \sqrt{3 - t}}\)'
+    B: '\(- \frac{1}{2 \sqrt{3 - t}}\)'
+    C: '\(- \frac{1}{2 \sqrt{3 - 2 t}}\)'
+    D: '\(\frac{\sqrt{3 - t}}{2}\)'
+    answer: B
+    hint: 'Write \(\sqrt{3-t}=(3-t)^{1/2}\).'
+    explanation: 'Differentiating gives \(- \frac{1}{2 \sqrt{3 - t}}\).'
+  100:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[\sec{\left(\tan{\left(x \right)} \right)}\right]\).'
+    A: '\(\left(\tan^{2}{(x)} + \frac{1}{2}\right) \tan{\left(\tan{(x)} \right)} \sec{\left(\tan{(x)} \right)}\)'
+    B: '\(\left(\tan^{4}{(x)} + 1\right) \tan{\left(\tan{(x)} \right)} \sec{\left(\tan{(x)} \right)}\)'
+    C: '\(\left(\tan^{2}{(x)} + 1\right) \tan{\left(\tan{(x)} \right)} \sec{\left(\tan{(x)} \right)}\)'
+    D: '\(\left(1 + \frac{1}{\tan^{2}{(x)}}\right) \tan{\left(\tan{(x)} \right)} \sec{\left(\tan{(x)} \right)}\)'
+    answer: C
+    hint: '\(\dfrac{d}{du}\sec u=\sec u\tan u\), then multiply by \(\sec^2x\).'
+    explanation: 'Differentiating gives \(\left(\tan^{2}{\left(x \right)} + 1\right) \tan{\left(\tan{\left(x \right)} \right)} \sec{\left(\tan{\left(x \right)} \right)}\).'
+  101:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[x^{2} \sin^{4}{\left(x \right)} + \frac{x}{\cos^{2}{\left(x \right)}}\right]\).'
+    A: '\(4 x^{2} \sin^{3}{(x)} \cos{(x)} + 2 x \sin^{4}{(x)} + 2 x \sin{(x)} \cos^{3}{(x)} + \frac{1}{\cos^{2}{(x)}}\)'
+    B: '\(4 x^{3} \sin^{3}{(x)} \cos{(x)} + 3 x \sin^{4}{(x)} + \frac{3 x \sin{(x)}}{\cos^{3}{(x)}} + \frac{1}{\cos^{2}{(x)}}\)'
+    C: '\(- 4 x^{2} \sin^{3}{(x)} \cos{(x)} + 2 x \sin^{4}{(x)} + \frac{2 x \sin{(x)}}{\cos^{3}{(x)}} + \frac{1}{\cos^{2}{(x)}}\)'
+    D: '\(4 x^{2} \sin^{3}{(x)} \cos{(x)} + 2 x \sin^{4}{(x)} + \frac{2 x \sin{(x)}}{\cos^{3}{(x)}} + \frac{1}{\cos^{2}{(x)}}\)'
+    answer: D
+    hint: Use the product rule on each term and the chain rule for the powers.
+    explanation: 'Differentiating gives \(4 x^{2} \sin^{3}{\left(x \right)} \cos{\left(x \right)} + 2 x \sin^{4}{\left(x \right)} + \frac{2 x \sin{\left(x \right)}}{\cos^{3}{\left(x \right)}} + \frac{1}{\cos^{2}{\left(x \right)}}\).'
+  102:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dx}\left[\left(x^{2} - 2 x + 2\right) e^{\frac{5 x}{2}}\right]\).'
+    A: '\(\left(2 x + 2\right) e^{\frac{5 x}{2}} + \frac{5 \left(x^{2} + 2 x + 2\right) e^{\frac{5 x}{2}}}{2}\)'
+    B: '\(\left(2 x - 2\right) e^{\frac{5 x}{2}} + \frac{5 \left(x^{2} - 2 x + 2\right) e^{\frac{5 x}{2}}}{2}\)'
+    C: '\(\left(- 2 x - 2\right) e^{\frac{5 x}{2}} + \frac{5 \left(- 2 x - 2 + \frac{1}{x^{2}}\right) e^{\frac{5 x}{2}}}{2}\)'
+    D: '\(\left(2 x - 1\right) e^{\frac{5 x}{2}} + \frac{5 \left(x^{2} - x + 2\right) e^{\frac{5 x}{2}}}{2}\)'
+    answer: B
+    hint: 'Product rule; the derivative of \(e^{5x/2}\) is \(\tfrac52e^{5x/2}\).'
+    explanation: 'Differentiating gives \(\left(2 x - 2\right) e^{\frac{5 x}{2}} + \frac{5 \left(x^{2} - 2 x + 2\right) e^{\frac{5 x}{2}}}{2}\).'
+  103:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dt}\left[\sin^{2}{\left(\pi t - 2 \right)}\right]\).'
+    A: '\(2 \pi \sin{\left(\pi t - 3 \right)} \cos{\left(\pi t - 3 \right)}\)'
+    B: '\(2 \pi \sin{\left(\pi t + 2 \right)} \cos{\left(\pi t + 2 \right)}\)'
+    C: '\(2 \pi \sin{\left(\pi t - 2 \right)} \cos{\left(\pi t - 2 \right)}\)'
+    D: '\(2 \pi \sin^{2}{\left(\pi t - 2 \right)}\)'
+    answer: C
+    hint: Chain rule twice.
+    explanation: 'Differentiating gives \(2 \pi \sin{\left(\pi t - 2 \right)} \cos{\left(\pi t - 2 \right)}\).'
+  104:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dt}\left[\sec^{2}{\left(\pi t \right)}\right]\).'
+    A: '\(2 \pi \tan{\left(\pi t \right)} \sec^{2}{\left(\pi t \right)}\)'
+    B: '\(3 \pi \tan{\left(\pi t \right)} \sec^{3}{\left(\pi t \right)}\)'
+    C: '\(\pi \tan{\left(\pi t \right)} \sec{\left(\pi t \right)}\)'
+    D: '\(4 \pi \tan{\left(\pi t \right)} \sec^{4}{\left(\pi t \right)}\)'
+    answer: A
+    hint: 'Outer power 2, then \(\sec\), then \(\pi t\).'
+    explanation: 'Differentiating gives \(2 \pi \tan{\left(\pi t \right)} \sec^{2}{\left(\pi t \right)}\).'
+  105:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dt}\left[e^{3 \sin{\left(\frac{t}{2} \right)}}\right]\).'
+    A: '\(\frac{3 e^{3 \sin{\left(\frac{t}{2} \right)}} \cos{\left(\frac{t}{2} \right)}}{2}\)'
+    B: '\(\frac{3 e^{3 \sin{\left(t \right)}} \cos{\left(t \right)}}{2}\)'
+    C: '\(\frac{3 e^{4 \sin{\left(\frac{t}{2} \right)}} \cos{\left(\frac{t}{2} \right)}}{2}\)'
+    D: '\(\frac{3 e^{- 3 \sin{\left(\frac{t}{2} \right)}} \cos{\left(\frac{t}{2} \right)}}{2}\)'
+    answer: A
+    hint: '\(\left(e^{\sin(t/2)}\right)^3=e^{3\sin(t/2)}\).'
+    explanation: 'Differentiating gives \(\frac{3 e^{3 \sin{\left(\frac{t}{2} \right)}} \cos{\left(\frac{t}{2} \right)}}{2}\).'
+  106:
+    topic: s3-5
+    question: 'Find \(\dfrac{d}{dt}\left[\sin{\left(\cos{\left(2 t - 5 \right)} \right)}\right]\).'
+    A: '\(2 \sin{\left(2 t + 5 \right)} \cos{\left(\cos{\left(2 t + 5 \right)} \right)}\)'
+    B: '\(- 2 \sin{\left(2 t + 5 \right)} \cos{\left(\cos{\left(2 t + 5 \right)} \right)}\)'
+    C: '\(- 2 \sin{\left(2 t - 5 \right)} \cos{\left(\cos{\left(2 t - 5 \right)} \right)}\)'
+    D: '\(- 2 \sin{\left(3 t - 5 \right)} \cos{\left(\cos{\left(3 t - 5 \right)} \right)}\)'
+    answer: C
+    hint: 'Three layers: \(\sin\), \(\cos\), and \(2t-5\).'
+    explanation: 'Differentiating gives \(- 2 \sin{\left(2 t - 5 \right)} \cos{\left(\cos{\left(2 t - 5 \right)} \right)}\).'
+  107:
+    topic: s3-5
+    question: 'Find \(\dfrac{d^{2}}{dx^{2}}\left[\left(1 + \frac{1}{x}\right)^{3}\right]\).'
+    A: '\(\frac{6 \left(1 + \frac{1}{x}\right) \left(1 + \frac{2}{x}\right)}{x^{3}}\)'
+    B: '\(\frac{6 \left(1 + \frac{1}{x}\right) \left(1 + \frac{2}{x}\right)}{x^{4}}\)'
+    C: '\(\frac{12 \left(1 + \frac{1}{x}\right) \left(1 + \frac{2}{x}\right)}{x^{3}}\)'
+    D: '\(\frac{6 \left(2 + \frac{1}{x}\right) \left(2 + \frac{2}{x}\right)}{x^{3}}\)'
+    answer: A
+    hint: 'Second derivative: differentiate \(3(1+1/x)^2\cdot(-1/x^2)\) again.'
+    explanation: 'Differentiating gives \(\frac{6 \left(1 + \frac{1}{x}\right) \left(1 + \frac{2}{x}\right)}{x^{3}}\).'
+  108:
+    topic: s3-5
+    question: 'Find \(\dfrac{d^{2}}{dx^{2}}\left[5 x + e^{x^{2}}\right]\).'
+    A: '\(3 \left(3 x^{3} + 1\right) e^{x^{3}}\)'
+    B: '\(2 \left(2 x^{2} + 2\right) e^{x^{2}}\)'
+    C: '\(\left(x + 1\right) e^{x}\)'
+    D: '\(2 \left(2 x^{2} + 1\right) e^{x^{2}}\)'
+    answer: D
+    hint: 'Second derivative of \(e^{x^2}\) needs the product rule.'
+    explanation: 'Differentiating gives \(2 \left(2 x^{2} + 1\right) e^{x^{2}}\).'
+  109:
+    topic: s3-5
+    question: 'Find the value of \((f\circ g)''(x)\) if \(f(u)=u^5+1\), \(u=g(x)=\sqrt x\), \(x=1\).'
+    A: '\(- \frac{5}{2}\)'
+    B: '\(5\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(\frac{7}{2}\)'
+    answer: C
+    hint: '\((f\circ g)''(x)=f''(g(x))\,g''(x)\).'
+    explanation: 'Compute \(g(x_0)\), then \(f''(g(x_0))\cdot g''(x_0)=\frac{5}{2}\).'
+  110:
+    topic: s3-5
+    question: 'Find the value of \((f\circ g)''(x)\) if \(f(u)=1-\dfrac1u\), \(u=g(x)=\dfrac1{1-x}\), \(x=-1\).'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(-1\)'
+    D: '\(2\)'
+    answer: A
+    hint: '\((f\circ g)''(x)=f''(g(x))\,g''(x)\).'
+    explanation: 'Compute \(g(x_0)\), then \(f''(g(x_0))\cdot g''(x_0)=1\).'
+  111:
+    topic: s3-5
+    question: 'Find the value of \((f\circ g)''(x)\) if \(f(u)=\cot\dfrac{\pi u}{10}\), \(u=g(x)=5\sqrt x\), \(x=1\).'
+    A: '\(- \frac{\pi}{2}\)'
+    B: '\(1 - \frac{\pi}{4}\)'
+    C: '\(\frac{\pi}{4}\)'
+    D: '\(- \frac{\pi}{4}\)'
+    answer: D
+    hint: '\((f\circ g)''(x)=f''(g(x))\,g''(x)\).'
+    explanation: 'Compute \(g(x_0)\), then \(f''(g(x_0))\cdot g''(x_0)=- \frac{\pi}{4}\).'
+  112:
+    topic: s3-5
+    question: 'Find the value of \((f\circ g)''(x)\) if \(f(u)=u+\dfrac1{\cos^2u}\), \(u=g(x)=\pi x\), \(x=\tfrac14\).'
+    A: '\(- 5 \pi\)'
+    B: '\(5 \pi\)'
+    C: '\(10 \pi\)'
+    D: '\(1 + 5 \pi\)'
+    answer: B
+    hint: '\((f\circ g)''(x)=f''(g(x))\,g''(x)\).'
+    explanation: 'Compute \(g(x_0)\), then \(f''(g(x_0))\cdot g''(x_0)=5 \pi\).'
+  113:
+    topic: s3-5
+    question: 'Find the value of \((f\circ g)''(x)\) if \(f(u)=\left(\dfrac{u-1}{u+1}\right)^2\), \(u=g(x)=\dfrac1{x^2}-1\), \(x=-1\).'
+    A: '\(8\)'
+    B: '\(-8\)'
+    C: '\(-7\)'
+    D: '\(-16\)'
+    answer: B
+    hint: '\((f\circ g)''(x)=f''(g(x))\,g''(x)\).'
+    explanation: 'Compute \(g(x_0)\), then \(f''(g(x_0))\cdot g''(x_0)=-8\).'
+  114:
+    topic: s3-5
+    question: 'Suppose \(f(2)=8\), \(g(2)=2\), \(f''(2)=\tfrac13\), \(g''(2)=-3\), and \(f(3)=3\), \(g(3)=-4\), \(f''(3)=2\pi\), \(g''(3)=5\). Then \(\dfrac{d}{dx}f(g(x))\) at \(x=2\) equals'
+    A: '\(-3\)'
+    B: '\(\tfrac13\)'
+    C: '\(1\)'
+    D: '\(-1\)'
+    answer: D
+    hint: '\(f''(g(2))\,g''(2)=f''(2)\,g''(2)\).'
+    explanation: '\(\tfrac13\cdot(-3)=-1\).'
+  115:
+    topic: s3-5
+    question: 'With the same table, \(\dfrac{d}{dx}\bigl(f(x)g(x)\bigr)\) at \(x=3\) equals'
+    A: '\(10\pi\)'
+    B: '\(15-8\pi\)'
+    C: '\(8\pi-15\)'
+    D: '\(15+8\pi\)'
+    answer: B
+    hint: 'Product rule: \(f''g+fg''\).'
+    explanation: '\(2\pi(-4)+3\cdot5=15-8\pi\).'
+  116:
+    topic: s3-5
+    question: 'With the same table, \(\dfrac{d}{dx}\dfrac{f(x)}{g(x)}\) at \(x=2\) equals'
+    A: '\(\dfrac{-37}{6}\)'
+    B: '\(\dfrac{1}{6}\)'
+    C: '\(\dfrac{26}{3}\)'
+    D: '\(\dfrac{37}{6}\)'
+    answer: D
+    hint: 'Quotient rule: \(\dfrac{f''g-fg''}{g^2}\).'
+    explanation: '\(\dfrac{\frac13\cdot2-8(-3)}{4}=\dfrac{2/3+24}{4}=\dfrac{37}{6}\).'
+  117:
+    topic: s3-5
+    question: 'With the same table, \(\dfrac{d}{dx}\dfrac{1}{g^2(x)}\) at \(x=3\) equals'
+    A: '\(-\dfrac{5}{32}\)'
+    B: '\(\dfrac{5}{16}\)'
+    C: '\(\dfrac{5}{32}\)'
+    D: '\(-\dfrac{5}{64}\)'
+    answer: C
+    hint: '\(\dfrac{d}{dx}g^{-2}=-2g^{-3}g''\).'
+    explanation: '\(-2\cdot\dfrac{5}{(-4)^3}=\dfrac{10}{64}=\dfrac5{32}\).'
+  118:
+    topic: s3-5
+    question: 'Find \(\dfrac{ds}{dt}\) when \(\theta=3\pi/2\) if \(s=\cos\theta\) and \(\dfrac{d\theta}{dt}=5\).'
+    A: '\(-5\)'
+    B: '\(-1\)'
+    C: '\(5\)'
+    D: '\(0\)'
+    answer: C
+    hint: '\(\dfrac{ds}{dt}=-\sin\theta\cdot\dfrac{d\theta}{dt}\).'
+    explanation: '\(-\sin(3\pi/2)\cdot5=-(-1)(5)=5\).'
+  119:
+    topic: s3-5
+    question: 'The parametric curve \(x=\cos2t\), \(y=\sin2t\), \(0\le t\le\pi\), traces'
+    A: half the unit circle
+    B: the unit circle twice
+    C: 'the unit circle once, clockwise from \((1,0)\)'
+    D: 'the unit circle once, counterclockwise from \((1,0)\)'
+    answer: D
+    hint: '\(2t\) runs from 0 to \(2\pi\).'
+    explanation: '\(x^2+y^2=1\), and the angle \(2t\) goes through \(2\pi\), one full counterclockwise turn.'
+  120:
+    topic: s3-5
+    question: 'The path \(x=3t\), \(y=9t^2\), \(-\infty<t<\infty\) is'
+    A: 'the parabola \(y=x^2\)'
+    B: 'the line \(y=3x\)'
+    C: 'half of the parabola \(y=x^2\)'
+    D: 'the parabola \(y=3x^2\)'
+    answer: A
+    hint: 'Substitute \(t=x/3\).'
+    explanation: '\(y=9(x/3)^2=x^2\), traced entirely, left to right.'
+  121:
+    topic: s3-5
+    question: 'The path \(x=2t-5\), \(y=4t-7\), \(-\infty<t<\infty\) is'
+    A: 'the line \(y=2x-3\)'
+    B: 'the line \(y=4x-7\)'
+    C: a parabola
+    D: 'the line \(y=2x+3\)'
+    answer: D
+    hint: 'Eliminate \(t=(x+5)/2\).'
+    explanation: '\(y=4\cdot\dfrac{x+5}{2}-7=2x+3\).'
+  122:
+    topic: s3-5
+    question: 'The path \(x=4\cos t\), \(y=2\sin t\), \(0\le t\le2\pi\) traces'
+    A: 'the circle \(x^2+y^2=4\)'
+    B: the ellipse once clockwise
+    C: 'the ellipse \(\dfrac{x^2}{4}+\dfrac{y^2}{16}=1\)'
+    D: 'the ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}{4}=1\) once counterclockwise'
+    answer: D
+    hint: 'Use \(\cos^2t+\sin^2t=1\).'
+    explanation: '\((x/4)^2+(y/2)^2=1\).'
+  123:
+    topic: s3-5
+    question: 'For \(x=2\cos t\), \(y=2\sin t\), the slope \(\dfrac{dy}{dx}\) at \(t=\pi/4\) is'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(-\sqrt2\)'
+    D: '\(-1\)'
+    answer: D
+    hint: '\(\dfrac{dy}{dx}=\dfrac{dy/dt}{dx/dt}\).'
+    explanation: '\(\dfrac{2\cos t}{-2\sin t}=-\cot t=-1\) at \(t=\pi/4\).'
+  124:
+    topic: s3-5
+    question: 'For \(x=2\cos t\), \(y=2\sin t\), the value of \(\dfrac{d^2y}{dx^2}\) at \(t=\pi/4\) is'
+    A: '\(-2\sqrt2\)'
+    B: '\(-1\)'
+    C: '\(-\sqrt2\)'
+    D: '\(\sqrt2\)'
+    answer: C
+    hint: '\(\dfrac{d^2y}{dx^2}=\dfrac{d(dy/dx)/dt}{dx/dt}\).'
+    explanation: '\(\dfrac{d}{dt}(-\cot t)=\csc^2t\); divide by \(-2\sin t\): \(-\tfrac12\csc^3t=-\tfrac12(\sqrt2)^3=-\sqrt2\).'
+  125:
+    topic: s3-5
+    question: 'A piston has position \(s=A\cos(2\pi bt)\). If the frequency \(b\) is doubled, the maximum velocity, acceleration and jerk are multiplied by'
+    A: '\(4\), \(8\) and \(16\)'
+    B: '\(2\), \(4\) and \(8\) respectively'
+    C: '\(1\), \(2\) and \(4\)'
+    D: '\(2\), \(2\) and \(2\)'
+    answer: B
+    hint: 'Each derivative brings down another factor of \(2\pi b\).'
+    explanation: '\(s''\) has amplitude \(2\pi bA\), \(s''''\) has \((2\pi b)^2A\), \(s''''''\) has \((2\pi b)^3A\).'
+  126:
+    topic: s3-5
+    question: 'The temperature in Fairbanks is approximated by \(y=37\sin\!\left[\dfrac{2\pi}{365}(x-101)\right]+25\). The temperature is rising fastest when'
+    A: '\(x=101\), at about \(0.64^\circ\)F per day'
+    B: '\(x=193\), at about \(0.64^\circ\)F per day'
+    C: '\(x=101\), at about \(37^\circ\)F per day'
+    D: '\(x=283\), at about \(0.64^\circ\)F per day'
+    answer: A
+    hint: '\(y''=37\cdot\dfrac{2\pi}{365}\cos[\dots]\) is largest when the cosine is 1.'
+    explanation: '\(\cos0=1\) at \(x=101\); the rate is \(37\cdot2\pi/365\approx0.637\).'
+  127:
+    topic: s3-5
+    question: 'A particle has position \(s=\sqrt{1+4t}\). Its velocity at \(t=6\) s is'
+    A: '\(0.4\) m/s'
+    B: '\(0.8\) m/s'
+    C: '\(0.2\) m/s'
+    D: '\(5\) m/s'
+    answer: A
+    hint: '\(s''=\dfrac{2}{\sqrt{1+4t}}\).'
+    explanation: '\(\dfrac{2}{\sqrt{25}}=0.4\). The acceleration is \(-\dfrac{4}{(1+4t)^{3/2}}=-0.032\) m/s\(^2\).'
+  128:
+    topic: s3-5
+    question: 'If \(f(x)=x^2\) and \(g(x)=|x|\), the composites \(f\circ g\) and \(g\circ f\) are both differentiable at \(x=0\) even though \(g\) is not. Why is that not a contradiction of the Chain Rule?'
+    A: The Chain Rule is a sufficient condition; it only guarantees a derivative when both parts are differentiable
+    B: The Chain Rule is wrong in this case
+    C: Composites are always differentiable
+    D: '\(|x|\) is differentiable at 0 after all'
+    answer: A
+    hint: '\(f\circ g(x)=|x|^2=x^2\) and \(g\circ f(x)=|x^2|=x^2\).'
+    explanation: 'The composites simplify to \(x^2\), which is smooth. The theorem just does not apply, and it does not forbid the result.'
+  129:
+    topic: s3-6
+    question: 'Find \(\dfrac{d}{dx}\left[x^{\frac{9}{4}}\right]\).'
+    A: '\(\frac{9 x^{\frac{9}{4}}}{4}\)'
+    B: '\(\frac{9}{4 x^{\frac{5}{4}}}\)'
+    C: '\(\frac{13 x^{\frac{5}{4}}}{4}\)'
+    D: '\(\frac{9 x^{\frac{5}{4}}}{4}\)'
+    answer: D
+    hint: Power rule with a rational exponent.
+    explanation: 'Differentiating gives \(\frac{9 x^{\frac{5}{4}}}{4}\).'
+  130:
+    topic: s3-6
+    question: 'Find \(\dfrac{d}{dx}\left[7 \sqrt{x + 6}\right]\).'
+    A: '\(\frac{7}{2 \left(x + 6\right)}\)'
+    B: '\(\frac{7}{2 \sqrt{x + 6}}\)'
+    C: '\(\frac{9}{2 \sqrt{x + 6}}\)'
+    D: '\(\frac{7}{2 \sqrt{x + 5}}\)'
+    answer: B
+    hint: 'Chain rule with \(u=x+6\).'
+    explanation: 'Differentiating gives \(\frac{7}{2 \sqrt{x + 6}}\).'
+  131:
+    topic: s3-6
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{1}{\sqrt{2 x + 5}}\right]\).'
+    A: '\(- \frac{1}{\left(2 x + 5\right)^{\frac{3}{2}}}\)'
+    B: '\(- \frac{1}{\left(2 x + 6\right)^{\frac{3}{2}}}\)'
+    C: '\(- \frac{1}{\left(2 x + 5\right)^{3}}\)'
+    D: '\(- \frac{1}{\left(x + 5\right)^{\frac{3}{2}}}\)'
+    answer: A
+    hint: 'Chain rule: bring down \(-\tfrac12\) and multiply by 2.'
+    explanation: 'Differentiating gives \(- \frac{1}{\left(2 x + 5\right)^{\frac{3}{2}}}\).'
+  132:
+    topic: s3-6
+    question: 'Find \(\dfrac{d}{dx}\left[x \sqrt{x^{2} + 1}\right]\).'
+    A: '\(\frac{x^{2}}{\sqrt{x^{2} + 1}} + \sqrt{x^{2} + 1}\)'
+    B: '\(\sqrt{1 + \frac{1}{x^{2}}} + \frac{1}{x^{2} \sqrt{1 + \frac{1}{x^{2}}}}\)'
+    C: '\(\frac{x^{4}}{\sqrt{x^{4} + 1}} + \sqrt{x^{4} + 1}\)'
+    D: '\(\frac{x^{2}}{\sqrt{x^{2} + 2}} + \sqrt{x^{2} + 2}\)'
+    answer: A
+    hint: Product rule with the chain rule inside.
+    explanation: 'Differentiating gives \(\frac{x^{2}}{\sqrt{x^{2} + 1}} + \sqrt{x^{2} + 1}\).'
+  133:
+    topic: s3-6
+    question: 'Find \(\dfrac{d}{dx}\left[\left(1 - 6 x\right)^{\frac{2}{3}}\right]\).'
+    A: '\(- \frac{4}{\sqrt[3]{6 x + 1}}\)'
+    B: '\(- \frac{4}{\sqrt[6]{1 - 6 x}}\)'
+    C: '\(- \frac{4}{\sqrt[3]{1 - 6 x}}\)'
+    D: '\(- \frac{4}{\sqrt[3]{1 - 3 x}}\)'
+    answer: C
+    hint: 'Chain rule with inner derivative \(-6\).'
+    explanation: 'Differentiating gives \(- \frac{4}{\sqrt[3]{1 - 6 x}}\).'
+  134:
+    topic: s3-6
+    question: 'If \(x^2y+xy^2=6\), implicit differentiation gives \(\dfrac{dy}{dx}=\)'
+    A: '\(-\dfrac{2xy+y^2}{x^2+2xy}\)'
+    B: '\(-\dfrac{2xy+y^2}{x^2}\)'
+    C: '\(\dfrac{2xy+y^2}{x^2+2xy}\)'
+    D: '\(-\dfrac{x^2+2xy}{2xy+y^2}\)'
+    answer: A
+    hint: 'Differentiate each term with respect to \(x\), treating \(y\) as a function of \(x\).'
+    explanation: '\(2xy+x^2y''+y^2+2xyy''=0\), so \(y''=-\dfrac{2xy+y^2}{x^2+2xy}\).'
+  135:
+    topic: s3-6
+    question: 'If \(x^3+y^3=18xy\), then \(\dfrac{dy}{dx}=\)'
+    A: '\(\dfrac{x^2-6y}{y^2-6x}\)'
+    B: '\(\dfrac{6y-x^2}{y^2-6x}\)'
+    C: '\(\dfrac{6y-x^2}{6x-y^2}\)'
+    D: '\(\dfrac{18y-3x^2}{3y^2}\)'
+    answer: B
+    hint: '\(3x^2+3y^2y''=18y+18xy''\).'
+    explanation: 'Collect \(y''\): \(y''(3y^2-18x)=18y-3x^2\).'
+  136:
+    topic: s3-6
+    question: 'If \(y^2=\dfrac{x-1}{x+1}\), then \(\dfrac{dy}{dx}=\)'
+    A: '\(\dfrac{1}{2y(x+1)}\)'
+    B: '\(\dfrac{1}{y(x+1)^2}\)'
+    C: '\(\dfrac{y}{(x+1)^2}\)'
+    D: '\(\dfrac{2}{y(x+1)^2}\)'
+    answer: B
+    hint: '\(2yy''=\dfrac{2}{(x+1)^2}\).'
+    explanation: 'The quotient rule gives \(\dfrac{(x+1)-(x-1)}{(x+1)^2}=\dfrac{2}{(x+1)^2}\).'
+  137:
+    topic: s3-6
+    question: 'If \(x=\tan y\), then \(\dfrac{dy}{dx}=\)'
+    A: '\(\cos^2y=\dfrac{1}{1+x^2}\)'
+    B: '\(\sin^2y\)'
+    C: '\(\dfrac1{\cos y}\)'
+    D: '\(\sec^2y\)'
+    answer: A
+    hint: '\(1=\sec^2y\cdot y''\).'
+    explanation: '\(y''=\cos^2y\), and \(\cos^2y=\dfrac1{1+\tan^2y}=\dfrac1{1+x^2}\).'
+  138:
+    topic: s3-6
+    question: 'If \(x^2+y^2=1\), then \(\dfrac{d^2y}{dx^2}=\)'
+    A: '\(-\dfrac{1}{y^3}\)'
+    B: '\(-\dfrac{x}{y^3}\)'
+    C: '\(\dfrac1{y^3}\)'
+    D: '\(-\dfrac1y\)'
+    answer: A
+    hint: '\(y''=-x/y\). Differentiate again and substitute \(x^2+y^2=1\).'
+    explanation: '\(y''''=\dfrac{-y+xy''}{y^2}\cdot\dots=-\dfrac{y^2+x^2}{y^3}=-\dfrac1{y^3}\).'
+  139:
+    topic: s3-6
+    question: 'At \((2,3)\) on \(x^2+xy-y^2=1\), the tangent line is'
+    A: '\(y-3=\dfrac74(x-2)\)'
+    B: '\(y-3=\dfrac47(x-2)\)'
+    C: '\(y-3=-\dfrac74(x-2)\)'
+    D: '\(y-3=\dfrac74x\)'
+    answer: A
+    hint: '\(y''=\dfrac{2x+y}{2y-x}\).'
+    explanation: '\(y''(2,3)=\dfrac{7}{4}\). (The normal has slope \(-\tfrac47\).)'
+  140:
+    topic: s3-6
+    question: 'At \((3,-4)\) on the circle \(x^2+y^2=25\), the slope of the tangent is'
+    A: '\(\dfrac43\)'
+    B: '\(\dfrac34\)'
+    C: '\(-\dfrac43\)'
+    D: '\(-\dfrac34\)'
+    answer: B
+    hint: '\(y''=-x/y\).'
+    explanation: '\(-3/(-4)=\tfrac34\).'
+  141:
+    topic: s3-6
+    question: 'On \(x^2y^2=9\) at \((-1,3)\), the tangent line has slope'
+    A: '\(3\)'
+    B: '\(-\dfrac13\)'
+    C: '\(-3\)'
+    D: '\(\dfrac13\)'
+    answer: A
+    hint: '\(y''=-y/x\).'
+    explanation: '\(-3/(-1)=3\).'
+  142:
+    topic: s3-6
+    question: 'The curve \(x^2+xy+y^2=7\) crosses the \(x\)-axis at two points. The tangents there are'
+    A: 'parallel, each with slope \(2\)'
+    B: both horizontal
+    C: 'parallel, each with slope \(-2\)'
+    D: perpendicular
+    answer: C
+    hint: 'Set \(y=0\): \(x=\pm\sqrt7\). Then \(y''=-\dfrac{2x+y}{x+2y}\).'
+    explanation: 'At \(y=0\): \(y''=-\dfrac{2x}{x}=-2\) for both points.'
+  143:
+    topic: s3-6
+    question: 'The folium \(x^3+y^3-9xy=0\) has slope \(\dfrac54\) at'
+    A: '\((4,2)\)'
+    B: '\((4,4)\)'
+    C: '\((0,0)\)'
+    D: '\((2,4)\)'
+    answer: A
+    hint: '\(y''=\dfrac{9y-3x^2}{3y^2-9x}\).'
+    explanation: 'At \((4,2)\): \(\dfrac{18-48}{12-36}=\dfrac54\). At \((2,4)\): \(\dfrac{36-12}{48-18}=\dfrac45\).'
+  144:
+    topic: s3-6
+    question: 'Which of these could be true if \(f''''(x)=x^{-1/3}\)?'
+    A: '\(f(x)=\dfrac9{10}x^{5/3}-7\)'
+    B: '\(f''(x)=\dfrac32x^{2/3}+6\) with \(f''''''(x)=\dfrac13x^{-4/3}\)'
+    C: '\(f(x)=x^{-1/3}\)'
+    D: '\(f(x)=\dfrac32x^{2/3}-3\)'
+    answer: A
+    hint: Differentiate each candidate twice.
+    explanation: '\(f''=\dfrac32x^{2/3}\) and \(f''''=x^{-1/3}\). (The choice with \(f''''''\) has the wrong sign: \(f''''''=-\tfrac13x^{-4/3}\).)'
+  145:
+    topic: s3-6
+    question: 'The curves \(y^2=x^3\) and \(2x^2+3y^2=5\) meet at \((1,1)\). Their tangent lines there are'
+    A: identical
+    B: perpendicular
+    C: neither perpendicular nor parallel
+    D: parallel
+    answer: B
+    hint: 'Compute both slopes at \((1,1)\).'
+    explanation: 'The slopes are \(\tfrac32\) and \(-\tfrac23\); their product is \(-1\).'
+  146:
+    topic: s3-7
+    question: 'Let \(f(x)=x^3-3x^2-1\), \(x\ge2\). The value of \(\dfrac{df^{-1}}{dx}\) at \(x=-1=f(3)\) is'
+    A: '\(9\)'
+    B: '\(\dfrac19\)'
+    C: '\(-\dfrac19\)'
+    D: '\(\dfrac13\)'
+    answer: B
+    hint: '\((f^{-1})''(f(a))=\dfrac{1}{f''(a)}\).'
+    explanation: '\(f''(x)=3x^2-6x\), so \(f''(3)=9\) and the inverse slope is \(\tfrac19\).'
+  147:
+    topic: s3-7
+    question: 'Let \(f(x)=x^2-4x-5\), \(x>2\). The value of \(\dfrac{df^{-1}}{dx}\) at \(x=0=f(5)\) is'
+    A: '\(6\)'
+    B: '\(\dfrac16\)'
+    C: '\(\dfrac15\)'
+    D: '\(\dfrac1{10}\)'
+    answer: B
+    hint: '\(f''(5)=2\cdot5-4\).'
+    explanation: '\(f''(5)=6\), so \((f^{-1})''(0)=\tfrac16\).'
+  148:
+    topic: s3-7
+    question: 'If \(y=f(x)\) has an inverse and its graph passes through \((2,4)\) with slope \(\tfrac13\), then \(\dfrac{df^{-1}}{dx}\) at \(x=4\) is'
+    A: '\(\dfrac13\)'
+    B: '\(-3\)'
+    C: '\(3\)'
+    D: '\(\dfrac12\)'
+    answer: C
+    hint: Slopes of inverse functions are reciprocals.
+    explanation: '\((f^{-1})''(4)=1/f''(2)=3\).'
+  149:
+    topic: s3-7
+    question: 'If \(y=g(x)\) has an inverse and passes through the origin with slope 2, the graph of \(g^{-1}\) at the origin has slope'
+    A: '\(-2\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(\dfrac12\)'
+    answer: D
+    hint: 'Reflect across \(y=x\).'
+    explanation: 'Reflecting across \(y=x\) inverts the slope.'
+  150:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(3 x \right)}\right]\).'
+    A: '\(\frac{1}{x^{2}}\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{x}\)'
+    D: '\(x\)'
+    answer: C
+    hint: '\(\ln3x=\ln3+\ln x\).'
+    explanation: 'Differentiating gives \(\frac{1}{x}\).'
+  151:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dt}\left[\log{\left(t^{\frac{3}{2}} \right)}\right]\).'
+    A: '\(\frac{3 t}{2}\)'
+    B: '\(\frac{3}{t}\)'
+    C: '\(\frac{3}{2 t}\)'
+    D: '\(\frac{3}{2 t^{2}}\)'
+    answer: C
+    hint: '\(\ln t^{3/2}=\tfrac32\ln t\).'
+    explanation: 'Differentiating gives \(\frac{3}{2 t}\).'
+  152:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(\frac{3}{x} \right)}\right]\).'
+    A: '\(0\)'
+    B: '\(- \frac{2}{x^{2}}\)'
+    C: '\(- \frac{1}{x}\)'
+    D: '\(x\)'
+    answer: C
+    hint: '\(\ln\dfrac3x=\ln3-\ln x\).'
+    explanation: 'Differentiating gives \(- \frac{1}{x}\).'
+  153:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(x \right)}^{3}\right]\).'
+    A: '\(\frac{3 \log{(x)}^{2}}{2 x}\)'
+    B: '\(\frac{3}{x \log{(x)}^{2}}\)'
+    C: '\(\frac{3 \log{(x)}^{2}}{x}\)'
+    D: '\(\frac{3 \log{(x)}^{2}}{\sqrt{x}}\)'
+    answer: C
+    hint: Chain rule with the cube.
+    explanation: 'Differentiating gives \(\frac{3 \log{\left(x \right)}^{2}}{x}\).'
+  154:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dt}\left[t \log{\left(t \right)}^{2}\right]\).'
+    A: '\(\log{\left(t \right)}^{4} + 4 \log{\left(t \right)}\)'
+    B: '\(\log{\left(t \right)}^{2}\)'
+    C: '\(\log{\left(t \right)}^{2} - 2 \log{\left(t \right)}\)'
+    D: '\(\log{\left(t \right)}^{2} + 2 \log{\left(t \right)}\)'
+    answer: D
+    hint: Product rule.
+    explanation: 'Differentiating gives \(\log{\left(t \right)}^{2} + 2 \log{\left(t \right)}\).'
+  155:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dt}\left[\frac{\log{\left(t \right)}}{t}\right]\).'
+    A: '\(- \frac{\log{\left(t \right)}}{t} + \frac{1}{t}\)'
+    B: '\(- \frac{\log{\left(t \right)}}{t^{2}}\)'
+    C: '\(\frac{\log{\left(t \right)}}{t^{2}} - \frac{1}{t^{2}}\)'
+    D: '\(- \frac{\log{\left(t \right)}}{t^{2}} + \frac{1}{t^{2}}\)'
+    answer: D
+    hint: Quotient rule.
+    explanation: 'Differentiating gives \(- \frac{\log{\left(t \right)}}{t^{2}} + \frac{1}{t^{2}}\).'
+  156:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(\log{\left(x \right)} \right)}\right]\).'
+    A: '\(\frac{1}{x^{2} \log{(x)}^{2}}\)'
+    B: '\(- \frac{1}{x \log{(x)}}\)'
+    C: '\(\frac{1}{x \log{(x)}}\)'
+    D: '\(x \log{(x)}\)'
+    answer: C
+    hint: 'Chain rule: \(\dfrac{1}{\ln x}\cdot\dfrac1x\).'
+    explanation: 'Differentiating gives \(\frac{1}{x \log{\left(x \right)}}\).'
+  157:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{d\theta}\left[\theta \left(\sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\right)\right]\).'
+    A: '\(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\)'
+    B: '\(\theta \left(- \frac{2 \sin{\left(\log{\left(\theta \right)} \right)}}{\theta^{2}} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta^{2}}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\)'
+    C: '\(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{2 \sqrt{\theta}} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\sqrt{\theta}}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\)'
+    D: '\(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\log{\left(\theta \right)} \right)} - \cos{\left(\log{\left(\theta \right)} \right)}\)'
+    answer: A
+    hint: 'Product rule; the \(\sin\) and \(\cos\) terms combine nicely.'
+    explanation: 'Differentiating gives \(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\).'
+  158:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{d\theta}\left[\log{\left(\tan{\left(\theta \right)} + \sec{\left(\theta \right)} \right)}\right]\).'
+    A: '\(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)}}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
+    B: '\(\frac{\tan^{4}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 1}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
+    C: '\(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 2}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
+    D: '\(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 1}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
+    answer: D
+    hint: 'The derivative of \(\sec\theta+\tan\theta\) is \(\sec\theta(\tan\theta+\sec\theta)\).'
+    explanation: 'Differentiating gives \(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 1}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\).'
+  159:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{\log{\left(\frac{x + 1}{1 - x} \right)}}{2}\right]\).'
+    A: '\(\frac{\left(1 - x\right) \left(\frac{1}{1 - x} + \frac{x + 1}{\left(1 - x\right)^{2}}\right)}{2 \left(x + 1\right)}\)'
+    B: '\(\frac{\left(2 - x\right) \left(\frac{1}{2 - x} + \frac{x + 2}{\left(2 - x\right)^{2}}\right)}{2 \left(x + 2\right)}\)'
+    C: '\(- \frac{\left(1 - x\right) \left(\frac{1}{1 - x} + \frac{x + 1}{\left(1 - x\right)^{2}}\right)}{2 \left(x + 1\right)}\)'
+    D: '\(\frac{\left(x + 1\right)^{2} \left(x + 1 + \frac{1}{x + 1}\right)}{2}\)'
+    answer: A
+    hint: 'Write \(\tfrac12[\ln(1+x)-\ln(1-x)]\).'
+    explanation: 'Differentiating gives \(\frac{\left(1 - x\right) \left(\frac{1}{1 - x} + \frac{x + 1}{\left(1 - x\right)^{2}}\right)}{2 \left(x + 1\right)}\).'
+  160:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[2^{x}\right]\).'
+    A: '\(3^{x} \log{\left(3 \right)}\)'
+    B: '\(4^{x} \log{\left(4 \right)}\)'
+    C: '\(2^{x} \log{\left(2 \right)}\)'
+    D: '\(- 2^{x} \log{\left(2 \right)}\)'
+    answer: C
+    hint: '\(\dfrac{d}{dx}a^x=a^x\ln a\).'
+    explanation: 'Differentiating gives \(2^{x} \log{\left(2 \right)}\).'
+  161:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{ds}\left[5^{\sqrt{s}}\right]\).'
+    A: '\(\frac{\left(\frac{5}{2}\right)^{\sqrt{s}} \log{\left(\frac{5}{2} \right)}}{2 \sqrt{s}}\)'
+    B: '\(\frac{5^{\sqrt{s}} \log{\left(5 \right)}}{2 \sqrt{s}}\)'
+    C: '\(\frac{5^{\sqrt{s}} \log{\left(5 \right)}}{2 s^{\frac{3}{2}}}\)'
+    D: '\(\frac{6^{\sqrt{s}} \log{\left(6 \right)}}{2 \sqrt{s}}\)'
+    answer: B
+    hint: 'Chain rule with \(a^u\): \(a^u\ln a\cdot u''\).'
+    explanation: 'Differentiating gives \(\frac{5^{\sqrt{s}} \log{\left(5 \right)}}{2 \sqrt{s}}\).'
+  162:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[x^{\pi}\right]\).'
+    A: '\(- \frac{\pi x^{\pi}}{x}\)'
+    B: '\(\pi x x^{\pi}\)'
+    C: '\(\frac{\pi x^{\pi}}{x}\)'
+    D: '\(\pi x^{\pi}\)'
+    answer: C
+    hint: '\(\pi\) is just a constant exponent: use the power rule.'
+    explanation: 'Differentiating gives \(\frac{\pi x^{\pi}}{x}\).'
+  163:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{d\theta}\left[\frac{\log{\left(5 \theta \right)}}{\log{\left(2 \right)}}\right]\).'
+    A: '\(1\)'
+    B: '\(\frac{1}{\theta^{2} \log{\left(2 \right)}^{2}}\)'
+    C: '\(\frac{1}{\theta \log{\left(3 \right)}}\)'
+    D: '\(\frac{1}{\theta \log{\left(2 \right)}}\)'
+    answer: D
+    hint: '\(\log_2 5\theta=\dfrac{\ln5\theta}{\ln2}\).'
+    explanation: 'Differentiating gives \(\frac{1}{\theta \log{\left(2 \right)}}\).'
+  164:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\left(x + 1\right)^{x}\right]\).'
+    A: '\(\left(x + 1\right)^{x} \left(x \left(x + 1\right) + \log{\left(x + 1 \right)}\right)\)'
+    B: '\(\left(x + \frac{1}{2}\right)^{x} \left(\frac{x}{x + \frac{1}{2}} + \log{\left(x + \frac{1}{2} \right)}\right)\)'
+    C: '\(\left(x - 1\right)^{x} \left(\frac{x}{x - 1} + \log{\left(x - 1 \right)}\right)\)'
+    D: '\(\left(x + 1\right)^{x} \left(\frac{x}{x + 1} + \log{\left(x + 1 \right)}\right)\)'
+    answer: D
+    hint: 'Logarithmic differentiation: \(\ln y=x\ln(x+1)\).'
+    explanation: 'Differentiating gives \(\left(x + 1\right)^{x} \left(\frac{x}{x + 1} + \log{\left(x + 1 \right)}\right)\).'
+  165:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[\sin^{x}{\left(x \right)}\right]\).'
+    A: '\(\left(x \sin{(x)} \cos{(x)} + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    B: '\(\left(\frac{x \cos{(x)}}{\sin^{2}{(x)}} + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    C: '\(\left(x + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    D: '\(\left(\frac{x \cos{(x)}}{\sin{(x)}} + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    answer: D
+    hint: 'Take logs: \(\ln y=x\ln\sin x\).'
+    explanation: 'Differentiating gives \(\left(\frac{x \cos{\left(x \right)}}{\sin{\left(x \right)}} + \log{\left(\sin{\left(x \right)} \right)}\right) \sin^{x}{\left(x \right)}\).'
+  166:
+    topic: s3-7
+    question: 'Find \(\dfrac{d}{dx}\left[x^{\log{\left(x \right)}}\right]\).'
+    A: '\(\frac{2 x^{\log{(x)}} \log{(x)}}{x}\)'
+    B: '\(2 x^{\log{(x)}} \log{(x)}\)'
+    C: '\(- \frac{2 x^{\log{(x)}} \log{(x)}}{x}\)'
+    D: '\(\frac{2 x^{\log{(x)}} \log{(x)}}{\sqrt{x}}\)'
+    answer: A
+    hint: '\(x^{\ln x}=e^{(\ln x)^2}\).'
+    explanation: 'Differentiating gives \(\frac{2 x^{\log{\left(x \right)}} \log{\left(x \right)}}{x}\).'
+  167:
+    topic: s3-7
+    question: 'By logarithmic differentiation, the derivative of \(y=\sqrt{x(x+1)}\) is'
+    A: '\(\dfrac{x(x+1)}{2}\)'
+    B: '\(\dfrac{2x+1}{\sqrt{x(x+1)}}\)'
+    C: '\(\dfrac{2x+1}{2\sqrt{x(x+1)}}\)'
+    D: '\(\dfrac{1}{2\sqrt{x(x+1)}}\)'
+    answer: C
+    hint: '\(\ln y=\tfrac12[\ln x+\ln(x+1)]\), so \(\dfrac{y''}{y}=\tfrac12\left(\tfrac1x+\tfrac1{x+1}\right)\).'
+    explanation: '\(y''=y\cdot\dfrac{2x+1}{2x(x+1)}=\dfrac{2x+1}{2\sqrt{x(x+1)}}\).'
+  168:
+    topic: s3-7
+    question: 'If \(y=A\sin(\ln x)+B\cos(\ln x)\), then \(x^2y''''+xy''+y\) equals'
+    A: '\(x\)'
+    B: '\(y\)'
+    C: '\(A+B\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Compute \(xy''=A\cos(\ln x)-B\sin(\ln x)\) and differentiate again.'
+    explanation: '\(x^2y''''+xy''=-y\), so the sum with \(y\) is 0.'
+  169:
+    topic: s3-7
+    question: '\(\dfrac{d^n}{dx^n}\ln x=\)'
+    A: '\(\dfrac{1}{x^n}\)'
+    B: '\(\dfrac{n!}{x^n}\)'
+    C: '\(\dfrac{(-1)^{n-1}(n-1)!}{x^n}\)'
+    D: '\(\dfrac{(-1)^n n!}{x^n}\)'
+    answer: C
+    hint: 'Compute the first three derivatives: \(1/x\), \(-1/x^2\), \(2/x^3\).'
+    explanation: The pattern follows by induction.
+  170:
+    topic: s3-8
+    question: 'Find the exact value of \(\tan^{-1}(-\sqrt3)\).'
+    A: '\(\dfrac{2\pi}{3}\)'
+    B: '\(-\dfrac\pi3\)'
+    C: '\(-\dfrac{2\pi}3\)'
+    D: '\(\dfrac\pi3\)'
+    answer: B
+    hint: 'Use the range of the inverse function (e.g. \([0,\pi]\) for \(\cos^{-1}\), \((0,\pi)\) for \(\cot^{-1}\)).'
+    explanation: 'The value in the correct principal range is \(-\dfrac\pi3\).'
+  171:
+    topic: s3-8
+    question: 'Find the exact value of \(\sin^{-1}\!\left(\dfrac12\right)\).'
+    A: '\(\dfrac\pi6\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac{5\pi}6\)'
+    D: '\(-\dfrac\pi6\)'
+    answer: A
+    hint: 'Use the range of the inverse function (e.g. \([0,\pi]\) for \(\cos^{-1}\), \((0,\pi)\) for \(\cot^{-1}\)).'
+    explanation: 'The value in the correct principal range is \(\dfrac\pi6\).'
+  172:
+    topic: s3-8
+    question: 'Find the exact value of \(\cos^{-1}\!\left(-\dfrac12\right)\).'
+    A: '\(-\dfrac\pi3\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac{4\pi}3\)'
+    D: '\(\dfrac{2\pi}3\)'
+    answer: D
+    hint: 'Use the range of the inverse function (e.g. \([0,\pi]\) for \(\cos^{-1}\), \((0,\pi)\) for \(\cot^{-1}\)).'
+    explanation: 'The value in the correct principal range is \(\dfrac{2\pi}3\).'
+  173:
+    topic: s3-8
+    question: 'Find the exact value of \(\sec^{-1}(-\sqrt2)\).'
+    A: '\(\dfrac{3\pi}4\)'
+    B: '\(-\dfrac\pi4\)'
+    C: '\(\dfrac{5\pi}4\)'
+    D: '\(\dfrac{\pi}4\)'
+    answer: A
+    hint: 'Use the range of the inverse function (e.g. \([0,\pi]\) for \(\cos^{-1}\), \((0,\pi)\) for \(\cot^{-1}\)).'
+    explanation: 'The value in the correct principal range is \(\dfrac{3\pi}4\).'
+  174:
+    topic: s3-8
+    question: 'Find the exact value of \(\csc^{-1}\sqrt2\).'
+    A: '\(-\dfrac\pi4\)'
+    B: '\(\dfrac\pi4\)'
+    C: '\(\dfrac{3\pi}4\)'
+    D: '\(\dfrac\pi2\)'
+    answer: B
+    hint: 'Use the range of the inverse function (e.g. \([0,\pi]\) for \(\cos^{-1}\), \((0,\pi)\) for \(\cot^{-1}\)).'
+    explanation: 'The value in the correct principal range is \(\dfrac\pi4\).'
+  175:
+    topic: s3-8
+    question: 'Find the exact value of \(\cot^{-1}(-1)\).'
+    A: '\(\dfrac{3\pi}4\)'
+    B: '\(\dfrac\pi4\)'
+    C: '\(-\dfrac\pi4\)'
+    D: '\(\dfrac{5\pi}4\)'
+    answer: A
+    hint: 'Use the range of the inverse function (e.g. \([0,\pi]\) for \(\cos^{-1}\), \((0,\pi)\) for \(\cot^{-1}\)).'
+    explanation: 'The value in the correct principal range is \(\dfrac{3\pi}4\).'
+  176:
+    topic: s3-8
+    question: 'If \(\alpha=\sin^{-1}(5/13)\), then \(\cos\alpha\) and \(\tan\alpha\) are'
+    A: '\(\dfrac{13}{12}\) and \(\dfrac5{12}\)'
+    B: '\(\dfrac{12}{13}\) and \(\dfrac5{12}\)'
+    C: '\(\dfrac{12}{13}\) and \(\dfrac{12}{5}\)'
+    D: '\(\dfrac{5}{13}\) and \(\dfrac{12}{5}\)'
+    answer: B
+    hint: Draw a right triangle with opposite side 5 and hypotenuse 13.
+    explanation: The adjacent side is 12.
+  177:
+    topic: s3-8
+    question: 'If \(\alpha=\tan^{-1}(4/3)\), then \(\sin\alpha\) and \(\sec\alpha\) are'
+    A: '\(\dfrac35\) and \(\dfrac54\)'
+    B: '\(\dfrac34\) and \(\dfrac53\)'
+    C: '\(\dfrac45\) and \(\dfrac35\)'
+    D: '\(\dfrac45\) and \(\dfrac53\)'
+    answer: D
+    hint: Draw a triangle with legs 4 and 3.
+    explanation: The hypotenuse is 5.
+  178:
+    topic: s3-8
+    question: '\(\sec\!\left(\tan^{-1}\dfrac x2\right)=\)'
+    A: '\(\dfrac{2}{\sqrt{4+x^2}}\)'
+    B: '\(\dfrac{\sqrt{4+x^2}}{2}\)'
+    C: '\(\dfrac{\sqrt{4+x^2}}{x}\)'
+    D: '\(\dfrac{x}{2}\)'
+    answer: B
+    hint: 'Triangle with opposite \(x\) and adjacent 2.'
+    explanation: 'The hypotenuse is \(\sqrt{x^2+4}\) and \(\sec\) is hypotenuse over adjacent.'
+  179:
+    topic: s3-8
+    question: '\(\cos(\sin^{-1}x)=\)'
+    A: '\(\sqrt{1-x^2}\)'
+    B: '\(x\)'
+    C: '\(\sqrt{x^2-1}\)'
+    D: '\(1-x\)'
+    answer: A
+    hint: 'Triangle with opposite \(x\) and hypotenuse 1.'
+    explanation: 'The adjacent side is \(\sqrt{1-x^2}\).'
+  180:
+    topic: s3-8
+    question: '\(\displaystyle\lim_{x\to\infty}\tan^{-1}x=\)'
+    A: '\(\infty\)'
+    B: '\(0\)'
+    C: '\(\pi\)'
+    D: '\(\dfrac\pi2\)'
+    answer: D
+    hint: Think of the horizontal asymptotes of the arctangent graph.
+    explanation: 'The range of \(\tan^{-1}\) is \((-\pi/2,\pi/2)\) and it approaches the top endpoint.'
+  181:
+    topic: s3-8
+    question: '\(\displaystyle\lim_{x\to-\infty}\tan^{-1}x=\)'
+    A: '\(-\dfrac\pi2\)'
+    B: '\(\dfrac\pi2\)'
+    C: '\(0\)'
+    D: '\(-\infty\)'
+    answer: A
+    hint: Same graph, left end.
+    explanation: It approaches the lower endpoint of its range.
+  182:
+    topic: s3-8
+    question: '\(\displaystyle\lim_{x\to\infty}\sec^{-1}x=\)'
+    A: '\(\dfrac\pi2\)'
+    B: '\(\infty\)'
+    C: '\(\pi\)'
+    D: '\(0\)'
+    answer: A
+    hint: '\(\sec^{-1}x=\cos^{-1}(1/x)\) and \(1/x\to0\).'
+    explanation: '\(\cos^{-1}0=\tfrac\pi2\).'
+  183:
+    topic: s3-8
+    question: 'Find \(\dfrac{d}{dx}\left[\operatorname{acos}{\left(x^{2} \right)}\right]\).'
+    A: '\(- \frac{2 x}{\sqrt{1 - x^{4}}}\)'
+    B: '\(- \frac{2 x}{\sqrt{- x^{4} - 1}}\)'
+    C: '\(- \frac{2 x}{\sqrt{1 - \frac{x^{4}}{2}}}\)'
+    D: '\(- \frac{2 x}{\sqrt{1 - x^{3}}}\)'
+    answer: A
+    hint: '\(\dfrac{d}{dx}\cos^{-1}u=-\dfrac{u''}{\sqrt{1-u^2}}\).'
+    explanation: 'Differentiating gives \(- \frac{2 x}{\sqrt{1 - x^{4}}}\).'
+  184:
+    topic: s3-8
+    question: 'Find \(\dfrac{d}{dt}\left[\operatorname{asin}{\left(\sqrt{2} t \right)}\right]\).'
+    A: '\(\frac{\sqrt{2}}{\sqrt{2 - 2 t^{2}}}\)'
+    B: '\(\frac{2 \sqrt{2}}{\sqrt{1 - 2 t^{2}}}\)'
+    C: '\(\frac{1}{\sqrt{1 - 2 t}}\)'
+    D: '\(\frac{\sqrt{2}}{\sqrt{1 - 2 t^{2}}}\)'
+    answer: D
+    hint: '\(\dfrac{d}{dx}\sin^{-1}u=\dfrac{u''}{\sqrt{1-u^2}}\).'
+    explanation: 'Differentiating gives \(\frac{\sqrt{2}}{\sqrt{1 - 2 t^{2}}}\).'
+  185:
+    topic: s3-8
+    question: 'Find \(\dfrac{d}{dx}\left[\operatorname{atan}{\left(\log{\left(x \right)} \right)}\right]\).'
+    A: '\(x \left(\log{(x)}^{2} + 1\right)\)'
+    B: '\(\frac{1}{x \left(\log{(x)} + 1\right)}\)'
+    C: '\(\frac{1}{x \left(\log{(x)}^{3} + 1\right)}\)'
+    D: '\(\frac{1}{x \left(\log{(x)}^{2} + 1\right)}\)'
+    answer: D
+    hint: '\(\dfrac{d}{dx}\tan^{-1}u=\dfrac{u''}{1+u^2}\).'
+    explanation: 'Differentiating gives \(\frac{1}{x \left(\log{\left(x \right)}^{2} + 1\right)}\).'
+  186:
+    topic: s3-8
+    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(\operatorname{atan}{\left(x \right)} \right)}\right]\).'
+    A: '\(\frac{1}{\left(x^{2} + \frac{1}{2}\right) \operatorname{atan}{(x)}}\)'
+    B: '\(\frac{1}{\sqrt{x^{2} + 1} \sqrt{\operatorname{atan}{(x)}}}\)'
+    C: '\(\left(x^{2} + 1\right) \operatorname{atan}{(x)}\)'
+    D: '\(\frac{1}{\left(x^{2} + 1\right) \operatorname{atan}{(x)}}\)'
+    answer: D
+    hint: 'Chain rule with \(\ln u\).'
+    explanation: 'Differentiating gives \(\frac{1}{\left(x^{2} + 1\right) \operatorname{atan}{\left(x \right)}}\).'
+  187:
+    topic: s3-8
+    question: 'Find \(\dfrac{d}{dx}\left[x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}\right]\).'
+    A: '\(- \operatorname{asin}{(x)}\)'
+    B: '\(2 \operatorname{asin}{(x)}\)'
+    C: '\(\operatorname{asin}{(x)} + 1\)'
+    D: '\(\operatorname{asin}{(x)}\)'
+    answer: D
+    hint: Product rule; watch the cancellation.
+    explanation: 'Differentiating gives \(\operatorname{asin}{\left(x \right)}\).'
+  188:
+    topic: s3-8
+    question: 'Find \(\dfrac{d}{dx}\left[- x \operatorname{atan}{\left(\frac{x}{2} \right)} + \log{\left(x^{2} + 4 \right)}\right]\).'
+    A: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
+    B: '\(\frac{2 x}{x^{2} + 4} - \operatorname{atan}{\left(\frac{x}{2} \right)} - \frac{2}{x}\)'
+    C: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 2\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
+    D: '\(\frac{2 x}{x^{2} + 3} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
+    answer: A
+    hint: 'Product rule on \(x\tan^{-1}(x/2)\); terms cancel.'
+    explanation: 'Differentiating gives \(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\).'
+  189:
+    topic: s3-8
+    question: 'The functions \(f(x)=\sin^{-1}\dfrac{x-1}{x+1}\) and \(g(x)=2\tan^{-1}\sqrt x\) (\(x\ge0\)) have the same derivative, so'
+    A: '\(f(x)=g(x)+\dfrac\pi2\)'
+    B: '\(f(x)=g(x)-\dfrac\pi2\)'
+    C: '\(f(x)=-g(x)\)'
+    D: '\(f(x)=g(x)\)'
+    answer: B
+    hint: 'Two functions with equal derivatives differ by a constant. Evaluate at \(x=0\).'
+    explanation: '\(f(0)=\sin^{-1}(-1)=-\tfrac\pi2\) and \(g(0)=0\).'
+  190:
+    topic: s3-8
+    question: 'For \(x>0\), \(\tan^{-1}x+\tan^{-1}\dfrac1x\) equals'
+    A: '\(0\)'
+    B: '\(\pi\)'
+    C: '\(\dfrac\pi2\)'
+    D: '\(1\)'
+    answer: C
+    hint: 'Differentiate: the sum is constant. Evaluate at \(x=1\).'
+    explanation: 'At \(x=1\): \(\tfrac\pi4+\tfrac\pi4=\tfrac\pi2\).'
+  191:
+    topic: s3-8
+    question: Which of these expressions is defined (as a real number)?
+    A: '\(\sin^{-1}\sqrt2\)'
+    B: '\(\sec^{-1}0\)'
+    C: '\(\tan^{-1}2\)'
+    D: '\(\cos^{-1}2\)'
+    answer: C
+    hint: 'The domains: \(\sin^{-1},\cos^{-1}\) need \([-1,1]\); \(\sec^{-1}\) needs \(|x|\ge1\).'
+    explanation: '\(\tan^{-1}\) is defined for all real numbers.'
+  192:
+    topic: s3-8
+    question: 'Using \(\csc^{-1}u=\dfrac\pi2-\sec^{-1}u\), the derivative of \(\csc^{-1}u\) with respect to \(x\) is'
+    A: '\(\dfrac{u''}{1+u^2}\)'
+    B: '\(-\dfrac{u''}{|u|\sqrt{u^2-1}}\)'
+    C: '\(\dfrac{u''}{|u|\sqrt{u^2-1}}\)'
+    D: '\(-\dfrac{u''}{\sqrt{1-u^2}}\)'
+    answer: B
+    hint: 'The constant \(\pi/2\) has derivative 0.'
+    explanation: 'Differentiating \(\sec^{-1}u\) and negating gives the formula.'
+  193:
+    topic: s3-9
+    question: 'A circle''s radius \(r\) and area \(A=\pi r^2\) both depend on time. Then \(\dfrac{dA}{dt}=\)'
+    A: '\(2\pi r\,\dfrac{dr}{dt}\)'
+    B: '\(\pi r^2\,\dfrac{dr}{dt}\)'
+    C: '\(2\pi r\)'
+    D: '\(\pi\,\dfrac{dr}{dt}\)'
+    answer: A
+    hint: 'Differentiate both sides with respect to \(t\) using the chain rule.'
+    explanation: '\(\dfrac{d}{dt}\pi r^2=2\pi r\,\dfrac{dr}{dt}\).'
+  194:
+    topic: s3-9
+    question: 'For a cylinder \(V=\pi r^2h\) with \(r\) constant, \(\dfrac{dV}{dt}=\)'
+    A: '\(\pi r^2\dfrac{dh}{dt}\)'
+    B: '\(2\pi rh\dfrac{dr}{dt}\)'
+    C: '\(2\pi r\dfrac{dh}{dt}\)'
+    D: '\(\pi r^2h\)'
+    answer: A
+    hint: 'If \(r\) is constant, only \(h\) changes.'
+    explanation: '\(\dfrac{dV}{dt}=\pi r^2\dfrac{dh}{dt}\). With both varying: \(\pi\left(2rh\dfrac{dr}{dt}+r^2\dfrac{dh}{dt}\right)\).'
+  195:
+    topic: s3-9
+    question: 'In a circuit \(V=IR\), \(V\) increases at 1 volt/s while \(I\) decreases at \(\tfrac13\) amp/s. When \(V=12\) V and \(I=2\) A, \(R\) is changing at'
+    A: '\(\dfrac32\) ohm/s (increasing)'
+    B: '\(-\dfrac32\) ohm/s (decreasing)'
+    C: '\(6\) ohm/s'
+    D: '\(0\)'
+    answer: A
+    hint: '\(\dfrac{dV}{dt}=R\dfrac{dI}{dt}+I\dfrac{dR}{dt}\), with \(R=V/I=6\).'
+    explanation: '\(1=6(-\tfrac13)+2\dfrac{dR}{dt}\), so \(\dfrac{dR}{dt}=\tfrac32\).'
+  196:
+    topic: s3-9
+    question: The radius of a metal plate increases at 0.01 cm/min. How fast is the area increasing when the radius is 50 cm?
+    A: '\(0.5\pi\) cm\(^2\)/min'
+    B: '\(2\pi\) cm\(^2\)/min'
+    C: '\(\pi\) cm\(^2\)/min'
+    D: '\(100\pi\) cm\(^2\)/min'
+    answer: C
+    hint: '\(\dfrac{dA}{dt}=2\pi r\dfrac{dr}{dt}\).'
+    explanation: '\(2\pi(50)(0.01)=\pi\).'
+  197:
+    topic: s3-9
+    question: 'A rectangle has length \(l\) decreasing at 2 cm/s and width \(w\) increasing at 2 cm/s. When \(l=12\) and \(w=5\), the area is changing at'
+    A: '\(-14\) cm\(^2\)/s'
+    B: '\(0\) cm\(^2\)/s'
+    C: '\(+34\) cm\(^2\)/s'
+    D: '\(+14\) cm\(^2\)/s'
+    answer: D
+    hint: '\(\dfrac{dA}{dt}=l\dfrac{dw}{dt}+w\dfrac{dl}{dt}\).'
+    explanation: '\(12(2)+5(-2)=14\): the area is increasing.'
+  198:
+    topic: s3-9
+    question: 'For the same rectangle (\(l=12\), \(w=5\), \(dl/dt=-2\), \(dw/dt=2\)), the length of the diagonal is changing at'
+    A: '\(0\)'
+    B: '\(\dfrac{14}{13}\) cm/s (increasing)'
+    C: '\(-\dfrac{14}{13}\) cm/s (decreasing)'
+    D: '\(-\dfrac{34}{13}\) cm/s'
+    answer: C
+    hint: 'Diagonal \(s=\sqrt{l^2+w^2}=13\); \(\dfrac{ds}{dt}=\dfrac{l\,l''+w\,w''}{s}\).'
+    explanation: '\(\dfrac{12(-2)+5(2)}{13}=-\dfrac{14}{13}\).'
+  199:
+    topic: s3-9
+    question: 'A closed box has edges \(x=4\), \(y=3\), \(z=2\) m with \(\dot x=1\), \(\dot y=-2\), \(\dot z=1\) m/s. The volume is changing at'
+    A: '\(24\) m\(^3\)/s'
+    B: '\(0\) m\(^3\)/s'
+    C: '\(2\) m\(^3\)/s'
+    D: '\(-2\) m\(^3\)/s'
+    answer: C
+    hint: '\(V=xyz\), so \(\dot V=yz\dot x+xz\dot y+xy\dot z\).'
+    explanation: '\(6(1)+8(-2)+12(1)=2\).'
+  200:
+    topic: s3-9
+    question: A 13-ft ladder slides away from a wall; when the base is 12 ft from the wall it moves at 5 ft/s. How fast is the top sliding down the wall?
+    A: '\(13\) ft/s'
+    B: '\(5\) ft/s'
+    C: '\(\dfrac{25}{12}\) ft/s'
+    D: '\(12\) ft/s'
+    answer: D
+    hint: '\(x^2+y^2=169\), and \(y=5\) when \(x=12\).'
+    explanation: '\(x\dot x+y\dot y=0\) gives \(\dot y=-\dfrac{12}{5}\cdot5=-12\) ft/s.'
+  201:
+    topic: s3-9
+    question: For the same ladder, how fast is the area of the triangle formed by ladder, wall and ground changing?
+    A: '\(-119\) ft\(^2\)/s'
+    B: '\(59.5\) ft\(^2\)/s'
+    C: '\(-30\) ft\(^2\)/s'
+    D: '\(-59.5\) ft\(^2\)/s'
+    answer: D
+    hint: '\(A=\tfrac12xy\), so \(\dot A=\tfrac12(y\dot x+x\dot y)\).'
+    explanation: '\(\tfrac12(5\cdot5+12(-12))=\tfrac12(-119)=-59.5\).'
+  202:
+    topic: s3-9
+    question: 'For the same ladder, the angle \(\theta\) between the ladder and the ground is changing at'
+    A: '\(-5\) rad/s'
+    B: '\(-\dfrac{5}{13}\) rad/s'
+    C: '\(-1\) rad/s'
+    D: '\(1\) rad/s'
+    answer: C
+    hint: '\(\cos\theta=\dfrac{x}{13}\) with \(\sin\theta=\dfrac5{13}\).'
+    explanation: '\(-\sin\theta\,\dot\theta=\dfrac{\dot x}{13}\) gives \(\dot\theta=-\dfrac{5/13}{5/13}=-1\).'
+  203:
+    topic: s3-9
+    question: Plane A flies toward an intersection at 442 knots and plane B at 481 knots, on perpendicular courses. When A is 5 nautical miles away and B is 12, the distance between them is changing at
+    A: '\(614\) knots'
+    B: '\(-481\) knots'
+    C: '\(-923\) knots'
+    D: '\(-614\) knots'
+    answer: D
+    hint: '\(s=\sqrt{x^2+y^2}=13\); \(\dot s=\dfrac{x\dot x+y\dot y}{s}\) with \(\dot x=-442\), \(\dot y=-481\).'
+    explanation: '\(\dfrac{5(-442)+12(-481)}{13}=\dfrac{-7982}{13}=-614\).'
+  204:
+    topic: s3-9
+    question: A kite 300 ft high is carried horizontally by the wind at 25 ft/s. How fast must the string be let out when 500 ft of string are out?
+    A: '\(15\) ft/s'
+    B: '\(500\) ft/s'
+    C: '\(25\) ft/s'
+    D: '\(20\) ft/s'
+    answer: D
+    hint: 'The horizontal distance is \(x=\sqrt{500^2-300^2}=400\).'
+    explanation: '\(\dot s=\dfrac{x}{s}\dot x=\dfrac{400}{500}(25)=20\).'
+  205:
+    topic: s3-9
+    question: 'Sand falls onto a conical pile at 10 m\(^3\)/min. The height of the pile is always \(\tfrac38\) of the base diameter. How fast is the height rising when the pile is 4 m high?'
+    A: 'about \(14.9\) cm/min'
+    B: 'about \(28.0\) cm/min'
+    C: 'about \(8.9\) cm/min'
+    D: 'about \(11.2\) cm/min'
+    answer: D
+    hint: '\(h=\tfrac34r\), so \(r=\tfrac43h\) and \(V=\dfrac{16\pi}{27}h^3\).'
+    explanation: '\(\dot V=\dfrac{16\pi}{9}h^2\dot h\), so \(\dot h=\dfrac{90}{16\pi h^2}\approx0.112\) m/min \(\approx11.2\) cm/min at \(h=4\).'
+  206:
+    topic: s3-9
+    question: 'A spherical balloon is inflated at \(100\pi\) ft\(^3\)/min. How fast is the radius increasing when \(r=5\) ft?'
+    A: '\(1\) ft/min'
+    B: '\(\dfrac{1}{5}\) ft/min'
+    C: '\(2\) ft/min'
+    D: '\(5\) ft/min'
+    answer: A
+    hint: '\(\dot V=4\pi r^2\dot r\).'
+    explanation: '\(100\pi=4\pi\cdot25\,\dot r\) gives \(\dot r=1\). The surface area then grows at \(8\pi r\dot r=40\pi\) ft\(^2\)/min.'
+  207:
+    topic: s3-9
+    question: A dinghy is pulled to a dock by a rope through a ring 6 ft above the bow, hauled in at 2 ft/s. How fast is the boat approaching the dock when 10 ft of rope are out?
+    A: '\(2\) ft/s'
+    B: '\(2.5\) ft/s'
+    C: '\(4\) ft/s'
+    D: '\(1.6\) ft/s'
+    answer: B
+    hint: '\(s^2=x^2+36\) with \(s=10\), \(x=8\).'
+    explanation: '\(s\dot s=x\dot x\) gives \(\dot x=\dfrac{10}{8}(-2)=-2.5\) ft/s.'
+  208:
+    topic: s3-9
+    question: A balloon rises at 1 ft/s while a bicycle moving at 17 ft/s passes under it when the balloon is 65 ft up. Three seconds later, the distance between them is increasing at
+    A: '\(17\) ft/s'
+    B: '\(85\) ft/s'
+    C: '\(9.5\) ft/s'
+    D: '\(11\) ft/s'
+    answer: D
+    hint: 'After 3 s: \(x=51\), \(y=68\), \(s=85\).'
+    explanation: '\(\dot s=\dfrac{x\dot x+y\dot y}{s}=\dfrac{51(17)+68(1)}{85}=11\).'
+  209:
+    topic: s3-9
+    question: 'A particle moves along \(y=x^2\) in the first quadrant with \(\dot x=10\) m/s. How fast is the angle of inclination \(\theta\) of the line to the origin changing when \(x=3\)?'
+    A: '\(\dfrac{10}{9}\) rad/s'
+    B: '\(10\) rad/s'
+    C: '\(\dfrac{1}{3}\) rad/s'
+    D: '\(1\) rad/s'
+    answer: D
+    hint: '\(\tan\theta=\dfrac yx=x\), so \(\theta=\tan^{-1}x\).'
+    explanation: '\(\dot\theta=\dfrac{\dot x}{1+x^2}=\dfrac{10}{10}=1\).'
+  210:
+    topic: s3-9
+    question: A man 6 ft tall walks at 5 ft/s toward a street lamp 16 ft high. The tip of his shadow moves at
+    A: '\(8\) ft/s away from the lamp'
+    B: '\(3\) ft/s toward the lamp'
+    C: '\(8\) ft/s toward the lamp'
+    D: '\(5\) ft/s toward the lamp'
+    answer: C
+    hint: 'Similar triangles give the tip at \(T=\dfrac{16}{10}x=1.6x\) from the lamp pole, where \(x\) is his distance.'
+    explanation: '\(\dot T=1.6\cdot(-5)=-8\); the shadow''s length changes at \(-3\) ft/s.'
+  211:
+    topic: s3-9
+    question: 'Ice of uniform thickness coats an 8-in. (diameter) iron ball and melts at 10 in\(^3\)/min. When the ice is 2 in. thick, the outer surface area is changing at'
+    A: '\(\dfrac{10}{3}\) in\(^2\)/min'
+    B: '\(-\dfrac{10}{3}\) in\(^2\)/min'
+    C: '\(-10\) in\(^2\)/min'
+    D: '\(-\dfrac{5}{72\pi}\) in\(^2\)/min'
+    answer: B
+    hint: 'The outer radius is \(r=6\); \(\dot V=4\pi r^2\dot r\).'
+    explanation: '\(\dot r=-\dfrac{10}{144\pi}\), and \(\dot S=8\pi r\dot r=-\dfrac{10}{3}\).'
+  212:
+    topic: s3-9
+    question: "A highway patrol plane at 3 mi altitude flies at 120 mph. The radar shows the line-of-sight distance to an oncoming car is 5 mi and decreasing at 160 mph. The car's speed is"
+    A: '\(40\) mph'
+    B: '\(80\) mph'
+    C: '\(160\) mph'
+    D: '\(200\) mph'
+    answer: B
+    hint: 'The horizontal distance is 4 mi, so its rate is \(\dfrac54(-160)\).'
+    explanation: 'The gap closes horizontally at 200 mph; the plane contributes 120, so the car goes \(200-120=80\) mph.'
+  213:
+    topic: s3-9
+    question: 'Two walkers are on perpendicular streets: A approaches the intersection at 2 m/s (now 10 m away) and B moves away at 1 m/s (now 20 m away). The angle \(\theta\) at B is changing at about'
+    A: '\(-3^\circ\) per second'
+    B: '\(-0.5^\circ\) per second'
+    C: '\(+6^\circ\) per second'
+    D: '\(-6^\circ\) per second'
+    answer: D
+    hint: '\(\tan\theta=\dfrac{OA}{OB}\), so \(\dot\theta=\dfrac{OB\cdot\dot{OA}-OA\cdot\dot{OB}}{OA^2+OB^2}\).'
+    explanation: '\(\dfrac{20(-2)-10(1)}{500}=-0.1\) rad/s \(\approx-5.7^\circ\)/s, about \(-6^\circ\)/s.'
+  214:
+    topic: s3-9
+    question: A baseball diamond is a 90-ft square. A runner goes from first base to second at 16 ft/s. When 30 ft from first base, the distance to third base is changing at about
+    A: '\(12.7\) ft/s'
+    B: '\(5.1\) ft/s'
+    C: '\(2.4\) ft/s'
+    D: '\(16\) ft/s'
+    answer: B
+    hint: 'Distance to third: \(s=\sqrt{90^2+x^2}\).'
+    explanation: '\(\dot s=\dfrac{x\dot x}{s}=\dfrac{30(16)}{\sqrt{9000}}\approx5.06\).'
+  215:
+    topic: s3-9
+    question: 'Two ships leave point \(O\) on courses 120° apart at 14 and 21 knots. When \(OA=5\) and \(OB=3\) nautical miles, they are moving apart at'
+    A: '\(29.5\) knots'
+    B: '\(14.5\) knots'
+    C: '\(35\) knots'
+    D: '\(7\) knots'
+    answer: A
+    hint: 'Law of cosines with \(\cos120^\circ=-\tfrac12\): \(D^2=a^2+b^2+ab\).'
+    explanation: '\(D=7\) and \(\dot D=\dfrac{2a\dot a+2b\dot b+a\dot b+\dot ab}{2D}=\dfrac{413}{14}=29.5\).'
+  216:
+    topic: s3-10
+    question: 'The linearization of \(f(x)=x^3-2x+3\) at \(a=2\) is'
+    A: '\(L(x)=10x-7\)'
+    B: '\(L(x)=7x-7\)'
+    C: '\(L(x)=10x+7\)'
+    D: '\(L(x)=10x-13\)'
+    answer: D
+    hint: '\(L(x)=f(a)+f''(a)(x-a)\).'
+    explanation: '\(f(2)=7\) and \(f''(2)=3(4)-2=10\), so \(L=7+10(x-2)=10x-13\).'
+  217:
+    topic: s3-10
+    question: 'The linearization of \(f(x)=\sqrt{x^2+9}\) at \(a=-4\) is'
+    A: '\(L(x)=-\dfrac45x+\dfrac95\)'
+    B: '\(L(x)=\dfrac45x+\dfrac{41}5\)'
+    C: '\(L(x)=-\dfrac45x+5\)'
+    D: '\(L(x)=\dfrac45x+\dfrac95\)'
+    answer: A
+    hint: '\(f(-4)=5\) and \(f''(x)=\dfrac{x}{\sqrt{x^2+9}}\).'
+    explanation: '\(L=5-\tfrac45(x+4)=-\tfrac45x+\tfrac95\).'
+  218:
+    topic: s3-10
+    question: 'The linearization of \(f(x)=x+\dfrac1x\) at \(a=1\) is'
+    A: '\(L(x)=x\)'
+    B: '\(L(x)=x+1\)'
+    C: '\(L(x)=2\)'
+    D: '\(L(x)=2x\)'
+    answer: C
+    hint: '\(f''(1)=1-1\).'
+    explanation: 'The tangent is horizontal at \(x=1\) with \(f(1)=2\).'
+  219:
+    topic: s3-10
+    question: 'The linearization of \(f(x)=\sqrt[3]{x}\) at \(a=-8\) is'
+    A: '\(L(x)=-2+\dfrac{x+8}{12}\)'
+    B: '\(L(x)=2+\dfrac{x+8}{12}\)'
+    C: '\(L(x)=-2+\dfrac{x+8}{3}\)'
+    D: '\(L(x)=-2-\dfrac{x+8}{12}\)'
+    answer: A
+    hint: '\(f''(x)=\dfrac{1}{3x^{2/3}}\).'
+    explanation: '\(f(-8)=-2\) and \(f''(-8)=\dfrac1{3\cdot4}=\dfrac1{12}\).'
+  220:
+    topic: s3-10
+    question: 'The linearization of \(\tan x\) at \(x=\pi\) is'
+    A: '\(L(x)=1\)'
+    B: '\(L(x)=x\)'
+    C: '\(L(x)=x-\pi\)'
+    D: '\(L(x)=\pi\)'
+    answer: C
+    hint: '\(\tan\pi=0\) and \(\sec^2\pi=1\).'
+    explanation: '\(L=0+1\cdot(x-\pi)\).'
+  221:
+    topic: s3-10
+    question: 'The linearizations at \(x=0\) of \(\sin x\), \(\cos x\), \(\tan x\), \(e^x\) and \(\ln(1+x)\) are, respectively'
+    A: '\(x,\ 1-x,\ x,\ 1+x,\ 1+x\)'
+    B: '\(x,\ x,\ x,\ x,\ x\)'
+    C: '\(1,\ 1,\ 1,\ 1+x,\ x\)'
+    D: '\(x,\ 1,\ x,\ 1+x,\ x\)'
+    answer: D
+    hint: Evaluate each function and its derivative at 0.
+    explanation: 'Their values at 0 are \(0,1,0,1,0\), and their derivatives are \(1,0,1,1,1\).'
+  222:
+    topic: s3-10
+    question: 'The linearization of \((1+x)^k\) at \(x=0\) is'
+    A: '\(1+kx\)'
+    B: '\(1+x^k\)'
+    C: '\(1+k\)'
+    D: '\(kx\)'
+    answer: A
+    hint: '\(f(0)=1\) and \(f''(0)=k\).'
+    explanation: '\(L(x)=1+kx\).'
+  223:
+    topic: s3-10
+    question: 'Use \((1+x)^k\approx1+kx\) to estimate \((1.0002)^{50}\).'
+    A: '\(1.01\)'
+    B: '\(1.0002\)'
+    C: '\(1.001\)'
+    D: '\(1.1\)'
+    answer: A
+    hint: 'Here \(x=0.0002\) and \(k=50\).'
+    explanation: '\(1+50(0.0002)=1.01\).'
+  224:
+    topic: s3-10
+    question: 'Using the linear approximation, \(\sqrt[3]{1.009}\approx\)'
+    A: '\(1.0003\)'
+    B: '\(1.03\)'
+    C: '\(1.003\)'
+    D: '\(1.009\)'
+    answer: C
+    hint: '\(\sqrt[3]{1+x}\approx1+\tfrac x3\).'
+    explanation: '\(1+0.009/3=1.003\).'
+  225:
+    topic: s3-10
+    question: 'Find \(\dfrac{d}{dx}\left[- 3 \sqrt{x} + x^{3}\right]\).'
+    A: '\(3 x^{3} - \frac{3}{2 \sqrt{x}}\)'
+    B: '\(3 x^{2} - \frac{3}{2 \sqrt{x}}\)'
+    C: '\(- \frac{3 \sqrt{x}}{2} + 3 x^{2}\)'
+    D: '\(2 x^{2} - \frac{3}{2 \sqrt{x}}\)'
+    answer: B
+    hint: 'Then \(dy=y''\,dx\).'
+    explanation: 'Differentiating gives \(3 x^{2} - \frac{3}{2 \sqrt{x}}\).'
+  226:
+    topic: s3-10
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{2 x}{x^{2} + 1}\right]\).'
+    A: '\(2 x^{2} - \frac{4 x^{2}}{\left(x^{2} + 1\right)^{2}} + 2\)'
+    B: '\(- \frac{4 x^{2}}{\left(x^{2} + 1\right)^{2}} + \frac{2}{x^{2} + 1}\)'
+    C: '\(- \frac{2}{x^{2}}\)'
+    D: '\(- 4 x^{2} \left(x^{2} + 1\right)^{2} + \frac{2}{x^{2} + 1}\)'
+    answer: B
+    hint: 'Quotient rule; multiply the result by \(dx\) to get \(dy\).'
+    explanation: 'Differentiating gives \(- \frac{4 x^{2}}{\left(x^{2} + 1\right)^{2}} + \frac{2}{x^{2} + 1}\).'
+  227:
+    topic: s3-10
+    question: 'Find \(\dfrac{d}{dx}\left[e^{\sqrt{x}}\right]\).'
+    A: '\(\frac{e^{\sqrt{x}}}{2 x^{\frac{3}{2}}}\)'
+    B: '\(- \frac{e^{\frac{1}{\sqrt{x}}}}{2 \sqrt{x}}\)'
+    C: '\(\frac{e^{\sqrt{x}}}{2 \sqrt{x}}\)'
+    D: '\(\frac{e^{x}}{\sqrt{x}}\)'
+    answer: C
+    hint: 'Chain rule; the differential is \(dy=\dfrac{e^{\sqrt x}}{2\sqrt x}dx\).'
+    explanation: 'Differentiating gives \(\frac{e^{\sqrt{x}}}{2 \sqrt{x}}\).'
+  228:
+    topic: s3-10
+    question: 'For \(f(x)=x^2+2x\), \(x_0=1\), \(dx=0.1\), the change \(\Delta f\), the differential \(df\), and the approximation error are'
+    A: '\(\Delta f=0.41\), \(df=0.4\), error \(0.01\)'
+    B: '\(\Delta f=0.31\), \(df=0.4\), error \(0.09\)'
+    C: '\(\Delta f=0.41\), \(df=0.3\), error \(0.11\)'
+    D: '\(\Delta f=0.4\), \(df=0.41\), error \(0.01\)'
+    answer: A
+    hint: '\(\Delta f=f(1.1)-f(1)\) and \(df=f''(1)\,dx\).'
+    explanation: '\(f(1.1)=3.41\), \(f(1)=3\); \(f''(1)=4\) so \(df=0.4\); error \(=0.01\).'
+  229:
+    topic: s3-10
+    question: 'The change in the volume \(V=\tfrac43\pi r^3\) of a sphere when \(r\) changes from \(r_0\) to \(r_0+dr\) is approximately'
+    A: '\(dV=8\pi r_0^2\,dr\)'
+    B: '\(dV=4\pi r_0^2\,dr\)'
+    C: '\(dV=4\pi r_0\,dr\)'
+    D: '\(dV=\tfrac43\pi r_0^3\,dr\)'
+    answer: B
+    hint: '\(dV=V''(r_0)\,dr\).'
+    explanation: '\(V''(r)=4\pi r^2\), the surface area.'
+  230:
+    topic: s3-10
+    question: 'The edge of a cube changes from \(x_0\) to \(x_0+dx\). The change in its volume \(V=x^3\) is approximately'
+    A: '\(dV=6x_0\,dx\)'
+    B: '\(dV=3x_0\,dx\)'
+    C: '\(dV=3x_0^2\,dx\)'
+    D: '\(dV=x_0^2\,dx\)'
+    answer: C
+    hint: 'Differentiate \(x^3\).'
+    explanation: '\(3x_0^2\,dx\); its surface area changes by \(12x_0\,dx\).'
+  231:
+    topic: s3-10
+    question: The radius of a circle increases from 2.00 m to 2.02 m. The estimated change in area is about
+    A: '\(0.08\pi\) m\(^2\), a \(4\%\) increase'
+    B: '\(0.08\pi\approx0.25\) m\(^2\), which is a \(2\%\) increase'
+    C: '\(0.04\pi\) m\(^2\), a \(1\%\) increase'
+    D: '\(0.02\pi\) m\(^2\), a \(2\%\) increase'
+    answer: B
+    hint: '\(dA=2\pi r\,dr\) and the original area is \(4\pi\).'
+    explanation: '\(dA=2\pi(2)(0.02)=0.08\pi\), which is \(0.08\pi/4\pi=2\%\).'
+  232:
+    topic: s3-10
+    question: "A tree's trunk has diameter 10 in. and its circumference increases by 2 in. in a year. About how much did the cross-sectional area increase?"
+    A: '\(5\pi\) in\(^2\)'
+    B: '\(2\pi\) in\(^2\)'
+    C: '\(20\) in\(^2\)'
+    D: '\(10\) in\(^2\)'
+    answer: D
+    hint: '\(C=\pi D\), so \(dD=2/\pi\); \(A=\tfrac\pi4D^2\) gives \(dA=\tfrac\pi2D\,dD\).'
+    explanation: '\(dD=2/\pi\approx0.64\) in. and \(dA=\tfrac\pi2\cdot10\cdot\tfrac2\pi=10\).'
+  233:
+    topic: s3-10
+    question: A cylinder has height 30 in., radius 6 in. and shell thickness 0.5 in. Its shell volume is approximately
+    A: '\(180\pi\) in\(^3\)'
+    B: '\(18\pi\) in\(^3\)'
+    C: '\(90\pi\) in\(^3\)'
+    D: '\(1080\pi\) in\(^3\)'
+    answer: A
+    hint: '\(dV=2\pi rh\,dr\).'
+    explanation: '\(2\pi(6)(30)(0.5)=180\pi\).'
+  234:
+    topic: s3-10
+    question: 'The edge of a cube is measured as \(10\pm1\%\) cm. The estimated percentage error in the volume is'
+    A: '\(1\%\)'
+    B: '\(9\%\)'
+    C: '\(6\%\)'
+    D: '\(3\%\)'
+    answer: D
+    hint: '\(V=x^3\) so \(\dfrac{dV}{V}=3\dfrac{dx}{x}\).'
+    explanation: '\(3\cdot1\%=3\%\).'
+  235:
+    topic: s3-10
+    question: "A square's side is measured. To be sure of calculating the area within 2% of its true value, the side must be measured to within about"
+    A: '\(4\%\)'
+    B: '\(1\%\)'
+    C: '\(0.5\%\)'
+    D: '\(2\%\)'
+    answer: B
+    hint: '\(A=s^2\) so \(\dfrac{dA}{A}=2\dfrac{ds}{s}\).'
+    explanation: '\(2\%/2=1\%\).'
+  236:
+    topic: s3-10
+    question: 'A sphere''s diameter is measured as \(100\pm1\) cm. The estimated percentage error in the volume is'
+    A: '\(6\%\)'
+    B: '\(3\%\)'
+    C: '\(1\%\)'
+    D: '\(0.03\%\)'
+    answer: B
+    hint: '\(V\propto D^3\), so the relative error triples.'
+    explanation: '\(\dfrac{dV}{V}=3\dfrac{dD}{D}=3(1\%)=3\%\).'
+  237:
+    topic: s3-10
+    question: 'A 5% error in measuring \(t\) causes about what error in calculating \(s=16t^2\)?'
+    A: '\(2.5\%\)'
+    B: '\(25\%\)'
+    C: '\(10\%\)'
+    D: '\(5\%\)'
+    answer: C
+    hint: '\(\dfrac{ds}{s}=2\dfrac{dt}{t}\).'
+    explanation: '\(2\cdot5\%=10\%\).'
+  238:
+    topic: s3-10
+    question: 'A cylinder has equal height and radius, \(V=\pi h^3\). To calculate the volume to within 1%, the height can be measured with an error of at most about'
+    A: '\(3\%\)'
+    B: '\(\tfrac13\%\)'
+    C: '\(1\%\)'
+    D: '\(\tfrac{1}{9}\%\)'
+    answer: B
+    hint: '\(\dfrac{dV}{V}=3\dfrac{dh}{h}\).'
+    explanation: '\(\dfrac{dh}{h}\le\dfrac{1\%}{3}\).'
+  239:
+    topic: s3-10
+    question: Using the linear approximation, by about what percentage should the radius of a sphere be increased to increase its volume by 50%?
+    A: 'about \(25\%\)'
+    B: 'about \(16.7\%\)'
+    C: 'about \(10\%\)'
+    D: 'about \(50\%\)'
+    answer: B
+    hint: '\(\dfrac{dV}{V}=3\dfrac{dr}{r}\).'
+    explanation: '\(0.5=3\,dr/r\) gives \(dr/r\approx1/6\).'
+  240:
+    topic: s3-10
+    question: 'A body''s mass is \(m=m_0\big/\sqrt{1-v^2/c^2}\approx m_0\left(1+\dfrac{v^2}{2c^2}\right)\). To increase its mass by 1%, it must be accelerated to a speed of about'
+    A: '\(0.01c\)'
+    B: '\(0.5c\)'
+    C: '\(0.14c\)'
+    D: '\(0.1c\)'
+    answer: C
+    hint: 'Set \(\dfrac{v^2}{2c^2}=0.01\).'
+    explanation: '\(v^2/c^2=0.02\), so \(v\approx0.141c\).'
+  241:
+    topic: s3-10
+    question: 'The linear approximation to \(\sqrt{1+x}\) near 0 is \(1+\tfrac x2\). It must improve as \(x\to0\) because'
+    A: '\(\displaystyle\lim_{x\to0}\dfrac{\sqrt{1+x}}{1+x/2}=1\)'
+    B: 'the error equals \(x\)'
+    C: '\(\sqrt{1+x}=1+x/2\) exactly'
+    D: '\(\sqrt{1+x}\) is a polynomial'
+    answer: A
+    hint: The ratio of the function to its approximation tends to 1.
+    explanation: This is the statement that the error is negligible compared to the function near 0.
+  242:
+    topic: s3-10
+    question: 'Among all linear functions \(g(x)=m(x-a)+c\), the linearization \(L(x)=f(a)+f''(a)(x-a)\) is the only one for which the error \(E(x)=f(x)-g(x)\) satisfies'
+    A: '\(E(a)=1\)'
+    B: '\(E(a)=0\) and \(\displaystyle\lim_{x\to a}\dfrac{E(x)}{x-a}=0\)'
+    C: '\(E(x)=0\) for all \(x\)'
+    D: '\(E\) is always positive'
+    answer: B
+    hint: 'The error must vanish at \(a\) and be negligible compared with \(x-a\).'
+    explanation: 'Those two conditions force \(c=f(a)\) and \(m=f''(a)\).'

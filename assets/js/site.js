@@ -32,10 +32,8 @@
   }
 
   function section(title, items, cls) {
+    if (!items.length) return null;   // a class without flashcards (or quizzes) just omits that section
     var grid = h("div", { "class": "grid" });
-    if (!items.length) {
-      grid.appendChild(h("p", { "class": "empty", text: "Nothing here yet." }));
-    }
     items.forEach(function (it) {
       grid.appendChild(tile(hrefFor(cls, it), it.title, it.description, it.meta));
     });
@@ -60,8 +58,9 @@
     if (!cls) {
       mount.appendChild(h("p", { "class": "empty", text: "Class not found." }));
     } else {
-      mount.appendChild(section("Quizzes", cls.quizzes, cls));
-      mount.appendChild(section("Flashcards", cls.flashcards, cls));
+      [section("Quizzes", cls.quizzes, cls), section("Flashcards", cls.flashcards, cls)].forEach(function (sec) {
+        if (sec) mount.appendChild(sec);
+      });
     }
   }
 })();

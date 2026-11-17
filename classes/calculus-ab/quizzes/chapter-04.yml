@@ -1,0 +1,2515 @@
+# Chapter 4: Applications of Derivatives
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 4.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 4: Applications of Derivatives"
+description: "Extreme values, the Mean Value Theorem, monotonicity, concavity, optimization, L'Hôpital's Rule, Newton's method, and antiderivatives."
+topics:
+  s4-1:
+    title: 4.1 Extreme Values of Functions
+  s4-2:
+    title: 4.2 The Mean Value Theorem
+  s4-3:
+    title: 4.3 Monotonic Functions and the First Derivative Test
+  s4-4:
+    title: 4.4 Concavity and Curve Sketching
+  s4-5:
+    title: 4.5 Applied Optimization Problems
+  s4-6:
+    title: "4.6 Indeterminate Forms and L'Hôpital's Rule"
+  s4-7:
+    title: "4.7 Newton's Method"
+  s4-8:
+    title: 4.8 Antiderivatives
+questions:
+  1:
+    topic: s4-1
+    question: 'A function \(f\) is continuous on the closed interval \([a,b]\). Which statement must be true?'
+    A: '\(f\) is differentiable on \((a,b)\)'
+    B: '\(f\) attains an absolute maximum and an absolute minimum on \([a,b]\)'
+    C: '\(f\) attains its extreme values only at critical points'
+    D: '\(f\) has a local maximum at an interior point'
+    answer: B
+    hint: This is the Extreme Value Theorem.
+    explanation: A continuous function on a closed, bounded interval always achieves its absolute extrema, possibly at the endpoints.
+  2:
+    topic: s4-1
+    question: 'Which function has an absolute maximum but no absolute minimum on \([-1,1]\)?'
+    A: '\(y=|x|\)'
+    B: '\(g(x)=\begin{cases}x^2,&x\ne0\\ 1,&x=0\end{cases}\)'
+    C: '\(y=x^2\)'
+    D: '\(y=\cos x\)'
+    answer: B
+    hint: The Extreme Value Theorem needs continuity. Look for a discontinuity that "hides" the lowest value.
+    explanation: 'The values \(x^2\) come arbitrarily close to 0 but \(g(0)=1\), so the lowest value is never reached. The other three are continuous on \([-1,1]\).'
+  3:
+    topic: s4-1
+    question: 'If \(f\) is differentiable at an interior local extreme point \(c\), then'
+    A: '\(f''''(c)=0\)'
+    B: '\(f''(c)\) does not exist'
+    C: '\(f(c)=0\)'
+    D: '\(f''(c)=0\)'
+    answer: D
+    hint: "This is Fermat's theorem about local extrema."
+    explanation: At a smooth interior peak or valley, the tangent line is horizontal.
+  4:
+    topic: s4-1
+    question: 'A number \(c\) in the domain of \(f\) is a critical point if'
+    A: '\(f''(c)=0\) or \(f''(c)\) does not exist'
+    B: '\(f''(c)=0\) only'
+    C: '\(f(c)=0\)'
+    D: '\(f''''(c)=0\)'
+    answer: A
+    hint: Corners and cusps count too.
+    explanation: Interior extrema can only occur where the derivative is zero or fails to exist.
+  5:
+    topic: s4-1
+    question: 'Does \(f(x)=|x|\) contradict Fermat''s theorem, since it has an absolute minimum at \(x=0\) but no derivative there?'
+    A: 'Yes, because \(|x|\) is not continuous'
+    B: 'Yes, because the minimum must have \(f''=0\)'
+    C: 'No, because \(|x|\) has no minimum'
+    D: 'No: the theorem only says extrema occur at points where \(f''=0\) or \(f''\) does not exist'
+    answer: D
+    hint: 'Is \(x=0\) a critical point?'
+    explanation: 'Corners are critical points because \(f''\) fails to exist there.'
+  6:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=\frac{2 x}{3} - 5\) on \([-2,3]\).'
+    A: '\(\max=- \frac{19}{3} \text{ at } x=-2,\ \min=-3 \text{ at } x=3\)'
+    B: '\(\max=-2 \text{ at } x=3,\ \min=- \frac{22}{3} \text{ at } x=-2\)'
+    C: '\(\max=-3 \text{ at } x=3,\ \min=- \frac{19}{3} \text{ at } x=-2\)'
+    D: '\(\max=-3 \text{ at } x=-2,\ \min=- \frac{19}{3} \text{ at } x=3\)'
+    answer: C
+    hint: A linear function is monotonic, so check the endpoints.
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(-3\) (at \(x=3\)) and the smallest is \(- \frac{19}{3}\) (at \(x=-2\)).'
+  7:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=- x - 4\) on \([-4,1]\).'
+    A: '\(\max=-5 \text{ at } x=1,\ \min=0 \text{ at } x=-4\)'
+    B: '\(\max=1 \text{ at } x=-4,\ \min=-6 \text{ at } x=1\)'
+    C: '\(\max=0 \text{ at } x=-4,\ \min=-5 \text{ at } x=1\)'
+    D: '\(\max=0 \text{ at } x=1,\ \min=-5 \text{ at } x=-4\)'
+    answer: C
+    hint: The function is decreasing, so the maximum is at the left endpoint.
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(0\) (at \(x=-4\)) and the smallest is \(-5\) (at \(x=1\)).'
+  8:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=x^{2} - 1\) on \([-1,2]\).'
+    A: '\(\max=4 \text{ at } x=2,\ \min=-2 \text{ at } x=0\)'
+    B: '\(\max=3 \text{ at } x=2,\ \min=-1 \text{ at } x=0\)'
+    C: '\(\max=-1 \text{ at } x=0,\ \min=3 \text{ at } x=2\)'
+    D: '\(\max=3 \text{ at } x=0,\ \min=-1 \text{ at } x=2\)'
+    answer: B
+    hint: Find the vertex and compare with the endpoints.
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(3\) (at \(x=2\)) and the smallest is \(-1\) (at \(x=0\)).'
+  9:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=4 - x^{2}\) on \([-3,1]\).'
+    A: '\(\max=4 \text{ at } x=0,\ \min=-5 \text{ at } x=-3\)'
+    B: '\(\max=4 \text{ at } x=-3,\ \min=-5 \text{ at } x=0\)'
+    C: '\(\max=5 \text{ at } x=0,\ \min=-6 \text{ at } x=-3\)'
+    D: '\(\max=-5 \text{ at } x=-3,\ \min=4 \text{ at } x=0\)'
+    answer: A
+    hint: The vertex is the maximum; compare the endpoints for the minimum.
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(4\) (at \(x=0\)) and the smallest is \(-5\) (at \(x=-3\)).'
+  10:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=- \frac{1}{x^{2}}\) on \([\frac{1}{2},2]\).'
+    A: '\(\max=\frac{3}{4} \text{ at } x=2,\ \min=-5 \text{ at } x=\frac{1}{2}\)'
+    B: '\(\max=-4 \text{ at } x=\frac{1}{2},\ \min=- \frac{1}{4} \text{ at } x=2\)'
+    C: '\(\max=- \frac{1}{4} \text{ at } x=2,\ \min=-4 \text{ at } x=\frac{1}{2}\)'
+    D: '\(\max=- \frac{1}{4} \text{ at } x=\frac{1}{2},\ \min=-4 \text{ at } x=2\)'
+    answer: C
+    hint: 'The function \(-1/x^2\) is increasing for \(x>0\).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(- \frac{1}{4}\) (at \(x=2\)) and the smallest is \(-4\) (at \(x=\frac{1}{2}\)).'
+  11:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=- \frac{1}{x}\) on \([-2,-1]\).'
+    A: '\(\max=\frac{1}{2} \text{ at } x=-2,\ \min=1 \text{ at } x=-1\)'
+    B: '\(\max=1 \text{ at } x=-1,\ \min=\frac{1}{2} \text{ at } x=-2\)'
+    C: '\(\max=1 \text{ at } x=-2,\ \min=\frac{1}{2} \text{ at } x=-1\)'
+    D: '\(\max=2 \text{ at } x=-1,\ \min=- \frac{1}{2} \text{ at } x=-2\)'
+    answer: B
+    hint: 'Differentiate: \(f''=1/x^2>0\).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(1\) (at \(x=-1\)) and the smallest is \(\frac{1}{2}\) (at \(x=-2\)).'
+  12:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=\sqrt[3]{x}\) on \([-1,8]\).'
+    A: '\(\max=2 \text{ at } x=-1,\ \min=-1 \text{ at } x=8\)'
+    B: '\(\max=3 \text{ at } x=8,\ \min=-2 \text{ at } x=-1\)'
+    C: '\(\max=2 \text{ at } x=8,\ \min=-1 \text{ at } x=-1\)'
+    D: '\(\max=-1 \text{ at } x=-1,\ \min=2 \text{ at } x=8\)'
+    answer: C
+    hint: The cube root is increasing.
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(2\) (at \(x=8\)) and the smallest is \(-1\) (at \(x=-1\)).'
+  13:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=-3x^{2/3}\) on \([-1,8]\).'
+    A: '\(\max=1 \text{ at } x=0,\ \min=-13 \text{ at } x=8\)'
+    B: '\(\max=-12 \text{ at } x=8,\ \min=0 \text{ at } x=0\)'
+    C: '\(\max=0 \text{ at } x=0,\ \min=-12 \text{ at } x=8\)'
+    D: '\(\max=0 \text{ at } x=8,\ \min=-12 \text{ at } x=0\)'
+    answer: C
+    hint: '\(x^{2/3}\) has a cusp at 0; compare it with the endpoints.'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(0\) (at \(x=0\)) and the smallest is \(-12\) (at \(x=8\)).'
+  14:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=\sqrt{4 - x^{2}}\) on \([-2,1]\).'
+    A: '\(\max=3 \text{ at } x=0,\ \min=-1 \text{ at } x=-2\)'
+    B: '\(\max=2 \text{ at } x=-2,\ \min=0 \text{ at } x=0\)'
+    C: '\(\max=0 \text{ at } x=-2,\ \min=2 \text{ at } x=0\)'
+    D: '\(\max=2 \text{ at } x=0,\ \min=0 \text{ at } x=-2\)'
+    answer: D
+    hint: 'The square root of the radicand is largest at \(x=0\).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(2\) (at \(x=0\)) and the smallest is \(0\) (at \(x=-2\)).'
+  15:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=\sin{\left(x \right)}\) on \([- \frac{\pi}{2},\frac{5 \pi}{6}]\).'
+    A: '\(\max=1 \text{ at } x=\frac{\pi}{2},\ \min=-1 \text{ at } x=- \frac{\pi}{2}\)'
+    B: '\(\max=1 \text{ at } x=- \frac{\pi}{2},\ \min=-1 \text{ at } x=\frac{\pi}{2}\)'
+    C: '\(\max=2 \text{ at } x=\frac{\pi}{2},\ \min=-2 \text{ at } x=- \frac{\pi}{2}\)'
+    D: '\(\max=-1 \text{ at } x=- \frac{\pi}{2},\ \min=1 \text{ at } x=\frac{\pi}{2}\)'
+    answer: A
+    hint: 'Where does \(\sin\) reach 1 and where is it smallest on this interval?'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(1\) (at \(x=\frac{\pi}{2}\)) and the smallest is \(-1\) (at \(x=- \frac{\pi}{2}\)).'
+  16:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=2 - \left|{x}\right|\) on \([-1,3]\).'
+    A: '\(\max=2 \text{ at } x=0,\ \min=-1 \text{ at } x=3\)'
+    B: '\(\max=3 \text{ at } x=0,\ \min=-2 \text{ at } x=3\)'
+    C: '\(\max=-1 \text{ at } x=3,\ \min=2 \text{ at } x=0\)'
+    D: '\(\max=2 \text{ at } x=3,\ \min=-1 \text{ at } x=0\)'
+    answer: A
+    hint: 'The graph of \(2-|x|\) is an upside-down V.'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(2\) (at \(x=0\)) and the smallest is \(-1\) (at \(x=3\)).'
+  17:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=\left|{x - 5}\right|\) on \([4,7]\).'
+    A: '\(\max=2 \text{ at } x=5,\ \min=0 \text{ at } x=7\)'
+    B: '\(\max=3 \text{ at } x=7,\ \min=-1 \text{ at } x=5\)'
+    C: '\(\max=2 \text{ at } x=7,\ \min=0 \text{ at } x=5\)'
+    D: '\(\max=0 \text{ at } x=5,\ \min=2 \text{ at } x=7\)'
+    answer: C
+    hint: The V-shaped graph has its vertex at 5.
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(2\) (at \(x=7\)) and the smallest is \(0\) (at \(x=5\)).'
+  18:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=x e^{- x}\) on \([-1,1]\).'
+    A: '\(\max=- e \text{ at } x=-1,\ \min=e^{-1} \text{ at } x=1\)'
+    B: '\(\max=e^{-1} + 1 \text{ at } x=1,\ \min=- e - 1 \text{ at } x=-1\)'
+    C: '\(\max=e^{-1} \text{ at } x=1,\ \min=- e \text{ at } x=-1\)'
+    D: '\(\max=e^{-1} \text{ at } x=-1,\ \min=- e \text{ at } x=1\)'
+    answer: C
+    hint: '\(f''=e^{-x}(1-x)\).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(e^{-1}\) (at \(x=1\)) and the smallest is \(- e\) (at \(x=-1\)).'
+  19:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=\log{\left(x \right)} + \frac{1}{x}\) on \([\frac{1}{2},4]\).'
+    A: '\(\max=\frac{5}{4} + \log{\left(4 \right)} \text{ at } x=4,\ \min=0 \text{ at } x=1\)'
+    B: '\(\max=\frac{1}{4} + \log{\left(4 \right)} \text{ at } x=1,\ \min=1 \text{ at } x=4\)'
+    C: '\(\max=1 \text{ at } x=1,\ \min=\frac{1}{4} + \log{\left(4 \right)} \text{ at } x=4\)'
+    D: '\(\max=\frac{1}{4} + \log{\left(4 \right)} \text{ at } x=4,\ \min=1 \text{ at } x=1\)'
+    answer: D
+    hint: 'Set \(f''=-1/x^2+1/x=0\).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(\frac{1}{4} + \log{\left(4 \right)}\) (at \(x=4\)) and the smallest is \(1\) (at \(x=1\)).'
+  20:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=e^{- x^{2}}\) on \([-2,1]\).'
+    A: '\(\max=1 \text{ at } x=0,\ \min=e^{-4} \text{ at } x=-2\)'
+    B: '\(\max=e^{-4} \text{ at } x=-2,\ \min=1 \text{ at } x=0\)'
+    C: '\(\max=1 \text{ at } x=-2,\ \min=e^{-4} \text{ at } x=0\)'
+    D: '\(\max=2 \text{ at } x=0,\ \min=-1 + e^{-4} \text{ at } x=-2\)'
+    answer: A
+    hint: '\(e^{-x^2}\) is largest where the exponent is largest.'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(1\) (at \(x=0\)) and the smallest is \(e^{-4}\) (at \(x=-2\)).'
+  21:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=2 x^{2} - 8 x + 9\) on \([-5,5]\).'
+    A: '\(\max=100 \text{ at } x=-5,\ \min=0 \text{ at } x=2\)'
+    B: '\(\max=99 \text{ at } x=-5,\ \min=1 \text{ at } x=2\)'
+    C: '\(\max=99 \text{ at } x=2,\ \min=1 \text{ at } x=-5\)'
+    D: '\(\max=1 \text{ at } x=2,\ \min=99 \text{ at } x=-5\)'
+    answer: B
+    hint: 'The parabola opens upward; its vertex is at \(x=2\).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(99\) (at \(x=-5\)) and the smallest is \(1\) (at \(x=2\)).'
+  22:
+    topic: s4-1
+    question: 'Find the absolute maximum and minimum of \(f(x)=x^{3} - 3 x^{2} + 3 x - 2\) on \([-2,3]\).'
+    A: '\(\max=7 \text{ at } x=-2,\ \min=-28 \text{ at } x=3\)'
+    B: '\(\max=8 \text{ at } x=3,\ \min=-29 \text{ at } x=-2\)'
+    C: '\(\max=-28 \text{ at } x=-2,\ \min=7 \text{ at } x=3\)'
+    D: '\(\max=7 \text{ at } x=3,\ \min=-28 \text{ at } x=-2\)'
+    answer: D
+    hint: 'Check the derivative: \(3(x-1)^2\ge0\), so the function never decreases.'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(7\) (at \(x=3\)) and the smallest is \(-28\) (at \(x=-2\)).'
+  23:
+    topic: s4-1
+    question: 'The function \(y=x^3+x^2-8x+5\) has local extrema at \(x=\) (find the critical points of its derivative)'
+    A: '\(x=-2\) and \(x=-\tfrac43\)'
+    B: '\(x=-2\) and \(x=\tfrac43\)'
+    C: '\(x=2\) and \(x=-\tfrac43\)'
+    D: '\(x=0\) only'
+    answer: B
+    hint: 'Solve \(3x^2+2x-8=0\).'
+    explanation: '\((3x-4)(x+2)=0\).'
+  24:
+    topic: s4-1
+    question: 'The function \(y=x^3-3x^2+3x-2\) has'
+    A: 'a critical point at \(x=1\) but no local extremum there'
+    B: no critical points
+    C: 'a local maximum at \(x=1\)'
+    D: 'a local minimum at \(x=1\)'
+    answer: A
+    hint: '\(y''=3(x-1)^2\) does not change sign.'
+    explanation: 'The derivative is zero at 1 but stays nonnegative on both sides, so \(x=1\) is an inflection point, not an extremum.'
+  25:
+    topic: s4-1
+    question: 'At the critical point \(x=2\) of \(f(x)=(x-2)^{2/3}\), which statement is true?'
+    A: '\(f\) has a local maximum at \(x=2\)'
+    B: '\(f''(2)\) does not exist, yet \(f\) has a local (and absolute) minimum at \(x=2\)'
+    C: '\(f\) has no local extremum at \(x=2\)'
+    D: '\(f''(2)=0\)'
+    answer: B
+    hint: '\(f''=\tfrac23(x-2)^{-1/3}\) blows up at 2, while \(f\ge0=f(2)\).'
+    explanation: 'The graph has a cusp at \(x=2\). This does not contradict the Extreme Value Theorem, which does not say a derivative must exist.'
+  26:
+    topic: s4-1
+    question: 'What are the local extrema of \(y=x^{2/3}(x+2)\)?'
+    A: 'a local minimum at \(x=-\tfrac45\) and a local maximum at \(x=0\)'
+    B: 'only a maximum at \(x=-\tfrac45\)'
+    C: 'only a minimum at \(x=0\)'
+    D: 'a local maximum at \(x=-\tfrac45\) and a local minimum at \(x=0\)'
+    answer: D
+    hint: 'Expand to \(y=x^{5/3}+2x^{2/3}\); then \(y''=\dfrac{5x+4}{3x^{1/3}}\).'
+    explanation: 'The critical points are \(x=-\tfrac45\) (\(y''=0\)) and \(x=0\) (\(y''\) undefined). \(y''\) goes \(+,-,+\) across them.'
+  27:
+    topic: s4-1
+    question: 'A continuous function \(f\) on \([-1,1]\) has \(f(-1)=-1\) and an interior corner at the origin. The Extreme Value Theorem guarantees'
+    A: no absolute extrema because the derivative fails at 0
+    B: both an absolute maximum and an absolute minimum, even if they occur at the corner or at the endpoints
+    C: 'extrema only at critical points where \(f''=0\)'
+    D: only an absolute maximum
+    answer: B
+    hint: Continuity on a closed interval is all the theorem needs.
+    explanation: Differentiability is not required for existence of the extrema.
+  28:
+    topic: s4-1
+    question: 'An even function \(f\) has a local maximum at \(x=c\). What can be said about \(x=-c\)?'
+    A: nothing
+    B: '\(f(-c)=0\)'
+    C: '\(f\) has a local minimum at \(x=-c\)'
+    D: '\(f\) also has a local maximum at \(x=-c\)'
+    answer: D
+    hint: 'An even function is symmetric about the \(y\)-axis.'
+    explanation: 'Reflecting the graph across the \(y\)-axis carries a local maximum to a local maximum. (For an odd function a local minimum at \(c\) gives a local maximum at \(-c\).)'
+  29:
+    topic: s4-1
+    question: 'An odd function \(g\) has a local minimum at \(x=c\). What can be said about \(x=-c\)?'
+    A: nothing
+    B: '\(g\) has a local maximum at \(-c\)'
+    C: '\(g\) has a local minimum at \(-c\)'
+    D: '\(g(-c)=g(c)\)'
+    answer: B
+    hint: '\(g(-x)=-g(x)\) flips the graph upside down.'
+    explanation: Odd symmetry is symmetry through the origin, which turns valleys into hills.
+  30:
+    topic: s4-1
+    question: 'The Extreme Value Theorem can fail on an open interval. Which function has neither an absolute maximum nor an absolute minimum on \((0,1)\)?'
+    A: '\(f(x)=\sin(\pi x)\)'
+    B: '\(f(x)=1\)'
+    C: '\(f(x)=x^2-x\)'
+    D: '\(f(x)=x\)'
+    answer: D
+    hint: 'The extreme values of \(f(x)=x\) on \([0,1]\) occur at the endpoints, which are excluded.'
+    explanation: 'On \((0,1)\), \(x\) takes every value strictly between 0 and 1 but neither 0 nor 1.'
+  31:
+    topic: s4-1
+    question: Which of these has an absolute maximum value but no absolute minimum on its domain?
+    A: '\(f(x)=-x^2\) on \((-\infty,\infty)\)'
+    B: '\(f(x)=x^2\) on \([0,1]\)'
+    C: '\(f(x)=\cos x\) on \([0,2\pi]\)'
+    D: '\(f(x)=\sin x\) on \((-\infty,\infty)\)'
+    answer: A
+    hint: The graph must rise to a peak and then fall without bound.
+    explanation: '\(-x^2\) peaks at 0 and decreases without bound. The others have both a max and a min.'
+  32:
+    topic: s4-1
+    question: 'The perimeter of a rectangle with dimensions \(x\) by \(100/x\) is \(P(x)=2x+\dfrac{200}{x}\) for \(0<x<\infty\). Its absolute minimum is'
+    A: '\(100\), at \(x=1\)'
+    B: '\(20\), at \(x=10\)'
+    C: '\(40\), at \(x=100\)'
+    D: '\(40\), at \(x=10\)'
+    answer: D
+    hint: 'Solve \(P''=2-200/x^2=0\).'
+    explanation: '\(x=10\) and \(P=20+20=40\): the rectangle is a \(10\times10\) square.'
+  33:
+    topic: s4-1
+    question: The largest possible area of a right triangle whose hypotenuse is 5 cm long is
+    A: '\(\dfrac{25}{8}\) cm\(^2\)'
+    B: '\(\dfrac{25}{2}\) cm\(^2\)'
+    C: '\(\dfrac{25}{4}\) cm\(^2\)'
+    D: '\(6\) cm\(^2\)'
+    answer: C
+    hint: 'The legs \(a,b\) satisfy \(a^2+b^2=25\) and \(A=\tfrac12ab\). The maximum occurs when \(a=b\).'
+    explanation: '\(a=b=\tfrac{5}{\sqrt2}\) gives \(A=\tfrac12\cdot\tfrac{25}{2}=\tfrac{25}{4}\).'
+  34:
+    topic: s4-1
+    question: 'The peak current of \(i=2\cos t+2\sin t\) (the largest magnitude) is'
+    A: '\(2\)'
+    B: '\(\sqrt2\)'
+    C: '\(4\)'
+    D: '\(2\sqrt2\)'
+    answer: D
+    hint: 'Maximize \(i\); set \(i''=-2\sin t+2\cos t=0\).'
+    explanation: '\(\tan t=1\) gives \(i=2\cdot\tfrac{\sqrt2}{2}\cdot2=2\sqrt2\).'
+  35:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=x^{2} + 2 x - 1\) on \([0,1]\).'
+    A: '\(\frac{9}{10}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(1\)'
+    D: '\(3\)'
+    answer: B
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(3\), which equals \(f''(c)\) at \(c=\frac{1}{2}\).'
+  36:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=x^{\frac{2}{3}}\) on \([0,1]\).'
+    A: '\(\frac{9}{10}\)'
+    B: '\(\frac{8}{27}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(1\), which equals \(f''(c)\) at \(c=\frac{8}{27}\).'
+  37:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=\log{\left(x - 1 \right)}\) on \([2,4]\).'
+    A: '\(3\)'
+    B: '\(1 + \frac{2}{\log{\left(3 \right)}}\)'
+    C: '\(6\)'
+    D: '\(\frac{39}{10}\)'
+    answer: B
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(\frac{\log{\left(3 \right)}}{2}\), which equals \(f''(c)\) at \(c=1 + \frac{2}{\log{\left(3 \right)}}\).'
+  38:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=x + \frac{1}{x}\) on \([\frac{1}{2},2]\).'
+    A: '\(\frac{19}{10}\)'
+    B: '\(\frac{5}{4}\)'
+    C: '\(1\)'
+    D: '\(\frac{3}{2}\)'
+    answer: C
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(0\), which equals \(f''(c)\) at \(c=1\).'
+  39:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=x^{3} - x\) on \([0,2]\).'
+    A: '\(\frac{2 \sqrt{3}}{3}\)'
+    B: '\(\frac{19}{10}\)'
+    C: '\(4\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(3\), which equals \(f''(c)\) at \(c=\frac{2 \sqrt{3}}{3}\).'
+  40:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=\sqrt{x}\) on \([1,4]\).'
+    A: '\(\frac{5}{2}\)'
+    B: '\(\frac{9}{4}\)'
+    C: '\(\frac{39}{10}\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(\frac{1}{3}\), which equals \(f''(c)\) at \(c=\frac{9}{4}\).'
+  41:
+    topic: s4-2
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=e^{x}\) on \([0,1]\).'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\log{\left(-1 + e \right)}\)'
+    D: '\(\frac{9}{10}\)'
+    answer: C
+    hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
+    explanation: 'The average slope is \(-1 + e\), which equals \(f''(c)\) at \(c=\log{\left(-1 + e \right)}\).'
+  42:
+    topic: s4-2
+    question: 'Does \(f(x)=x^{2/3}\) satisfy the hypotheses of the Mean Value Theorem on \([-1,8]\)?'
+    A: 'Yes, because \(f(-1)\ne f(8)\)'
+    B: 'No: \(f\) is not continuous on \([-1,8]\)'
+    C: 'No: \(f\) is not differentiable at \(x=0\), which lies inside the interval'
+    D: 'Yes: \(f\) is continuous and differentiable everywhere'
+    answer: C
+    hint: 'Check \(f''\) on the open interval.'
+    explanation: '\(f''(x)=\tfrac23x^{-1/3}\) is undefined at 0. (The hypotheses are sufficient, not necessary, so the conclusion may still happen to hold.)'
+  43:
+    topic: s4-2
+    question: 'Does \(f(x)=x^{4/5}\) satisfy the hypotheses of the Mean Value Theorem on \([0,1]\)?'
+    A: 'No: \(f\) is not differentiable at 0, so the theorem fails'
+    B: 'No: \(f\) is not continuous'
+    C: 'No: \(f(0)=f(1)\)'
+    D: 'Yes: \(f\) is continuous on \([0,1]\) and differentiable on \((0,1)\)'
+    answer: D
+    hint: 'The MVT only needs differentiability on the open interval \((0,1)\).'
+    explanation: '\(f''(x)=\tfrac45x^{-1/5}\) exists for \(0<x<1\); the trouble at \(x=0\) is an endpoint.'
+  44:
+    topic: s4-2
+    question: 'Does \(f(x)=\sqrt{x(1-x)}\) satisfy the hypotheses of the Mean Value Theorem on \([0,1]\)?'
+    A: 'No: \(f''\) is undefined at \(x=\tfrac12\)'
+    B: 'Yes: it is continuous on \([0,1]\) and differentiable on \((0,1)\)'
+    C: 'No: \(f\) is not defined on \([0,1]\)'
+    D: 'No: it is not continuous at \(x=1\)'
+    answer: B
+    hint: Check endpoint continuity and the open-interval derivative.
+    explanation: 'The graph is a semicircle of radius \(\tfrac12\). The vertical tangents at the endpoints are allowed.'
+  45:
+    topic: s4-2
+    question: 'The function \(f(x)=\begin{cases}x,&0\le x<1\\ 0,&x=1\end{cases}\) is zero at \(x=0\) and \(x=1\) and differentiable on \((0,1)\), but \(f''\) is never zero. Why does this not contradict Rolle''s Theorem?'
+    A: '\(f\) is not differentiable on \((0,1)\)'
+    B: '\(f\) is not continuous at \(x=1\)'
+    C: 'Rolle''s Theorem requires \(f(0)\ne f(1)\)'
+    D: '\(f\) is not defined at 0'
+    answer: B
+    hint: "Rolle's Theorem requires continuity on the closed interval."
+    explanation: '\(\lim_{x\to1^-}f(x)=1\ne f(1)=0\), so the hypotheses fail at the right endpoint.'
+  46:
+    topic: s4-2
+    question: 'For what values of \(a\), \(m\), and \(b\) does \(f(x)=\begin{cases}3,&x=0\\ -x^2+3x+a,&0<x<1\\ mx+b,&1\le x\le2\end{cases}\) satisfy the hypotheses of the MVT on \([0,2]\)?'
+    A: '\(a=3\), \(m=1\), \(b=2\)'
+    B: '\(a=3\), \(m=-1\), \(b=6\)'
+    C: '\(a=3\), \(m=1\), \(b=4\)'
+    D: '\(a=0\), \(m=1\), \(b=4\)'
+    answer: C
+    hint: "The function must be continuous at 0 and 1 and differentiable at 1: match values, then slopes."
+    explanation: 'Continuity at 0: \(a=3\). Continuity at 1: \(-1+3+3=5=m+b\). Slopes at 1: \(-2+3=1=m\). So \(m=1\) and \(b=4\).'
+  47:
+    topic: s4-2
+    question: Which statement is a consequence of the Mean Value Theorem?
+    A: Every function has an antiderivative that is a polynomial
+    B: 'If \(f''(x)=0\) on an interval, then \(f\) is constant on that interval'
+    C: 'If \(f\) is continuous, then \(f\) has a derivative'
+    D: 'If \(f(a)=f(b)\), then \(f\) is constant'
+    answer: B
+    hint: Apply the MVT on subintervals; the average slope is 0.
+    explanation: '\(f(b)-f(a)=f''(c)(b-a)=0\) for every pair \(a<b\).'
+  48:
+    topic: s4-2
+    question: 'If \(f''(x)=0\) for all \(x\) and \(f(-1)=3\), must \(f(x)=3\) for all \(x\)?'
+    A: 'No, \(f\) could be a nonconstant function'
+    B: 'Only if \(f\) is continuous at 0'
+    C: Yes, because a function with zero derivative on an interval is constant
+    D: 'Only for \(x\ge-1\)'
+    answer: C
+    hint: Two functions with the same derivative differ by a constant.
+    explanation: 'The MVT shows \(f(x)-f(-1)=f''(c)(x+1)=0\).'
+  49:
+    topic: s4-2
+    question: 'If \(f''(x)=2\) for all \(x\) and \(f(0)=5\), must \(f(x)=2x+5\)?'
+    A: 'Yes, because \(f(x)-2x\) has derivative 0 and is therefore constant'
+    B: 'Only for \(x>0\)'
+    C: 'No, \(f\) could be any function with slope 2 somewhere'
+    D: No, there is not enough information
+    answer: A
+    hint: 'Consider \(g(x)=f(x)-2x\).'
+    explanation: '\(g''=0\), so \(g=g(0)=5\).'
+  50:
+    topic: s4-2
+    question: 'Suppose \(f''(x)=2x\) and \(f(0)=0\). Find \(f(2)\).'
+    A: '\(2\)'
+    B: '\(0\)'
+    C: '\(8\)'
+    D: '\(4\)'
+    answer: D
+    hint: 'Find all functions with \(f''=2x\); then use \(f(0)=0\).'
+    explanation: '\(f(x)=x^2+C\) with \(C=0\), so \(f(2)=4\).'
+  51:
+    topic: s4-2
+    question: 'All antiderivatives of \(y''=x\) are'
+    A: '\(y=\dfrac{x^2}{2}\)'
+    B: '\(y=x^2+C\)'
+    C: '\(y=\dfrac{x^2}{2}+C\)'
+    D: '\(y=2x+C\)'
+    answer: C
+    hint: Any two antiderivatives differ by a constant.
+    explanation: The power rule in reverse.
+  52:
+    topic: s4-2
+    question: 'All antiderivatives of \(y''=3x^2+2x-1\) are'
+    A: '\(y=6x+2+C\)'
+    B: '\(y=x^3+x^2-x+C\)'
+    C: '\(y=x^3+2x^2-x+C\)'
+    D: '\(y=x^3+x^2-x\)'
+    answer: B
+    hint: Antidifferentiate term by term.
+    explanation: 'The constant of integration \(C\) is needed.'
+  53:
+    topic: s4-2
+    question: 'All antiderivatives of \(y''=-\dfrac1x\) (for \(x>0\)) are'
+    A: '\(y=-\dfrac{1}{x^2}+C\)'
+    B: '\(y=\ln x+C\)'
+    C: '\(y=\dfrac{1}{x^2}+C\)'
+    D: '\(y=-\ln x+C\)'
+    answer: D
+    hint: 'What function has derivative \(\dfrac1x\)?'
+    explanation: '\(\dfrac{d}{dx}\ln x=\tfrac1x\).'
+  54:
+    topic: s4-2
+    question: 'All antiderivatives of \(y''=\dfrac{1}{2\sqrt x}\) are'
+    A: '\(y=2\sqrt x+C\)'
+    B: '\(y=x^{3/2}+C\)'
+    C: '\(y=\sqrt x+C\)'
+    D: '\(y=\dfrac{1}{\sqrt x}+C\)'
+    answer: C
+    hint: '\(\dfrac{d}{dx}\sqrt x=\dfrac{1}{2\sqrt x}\).'
+    explanation: 'The derivative of \(\sqrt{x}\) is exactly the given function.'
+  55:
+    topic: s4-2
+    question: 'Find the function with \(f''(x)=2x-1\) whose graph passes through \(P(0,0)\).'
+    A: '\(f(x)=x^2-x\)'
+    B: '\(f(x)=2x^2-x\)'
+    C: '\(f(x)=x^2+x\)'
+    D: '\(f(x)=x^2-x+1\)'
+    answer: A
+    hint: '\(f=x^2-x+C\); use the point.'
+    explanation: '\(f(0)=0\) gives \(C=0\).'
+  56:
+    topic: s4-2
+    question: 'Find the function with \(g''(x)=\dfrac1x+2x\) whose graph passes through \((1,-1)\).'
+    A: '\(g(x)=\ln x+x^2\)'
+    B: '\(g(x)=\ln x+x^2-2\)'
+    C: '\(g(x)=\ln x+x^2-1\)'
+    D: '\(g(x)=\ln x+x^2+2\)'
+    answer: B
+    hint: '\(g=\ln x+x^2+C\).'
+    explanation: '\(g(1)=0+1+C=-1\), so \(C=-2\).'
+  57:
+    topic: s4-2
+    question: 'Find the function with \(r''(t)=\sec t\tan t-1\) whose graph passes through the origin.'
+    A: '\(r(t)=\sec t-t\)'
+    B: '\(r(t)=\sec t-t-1\)'
+    C: '\(r(t)=\tan t-t\)'
+    D: '\(r(t)=\sec t-t+1\)'
+    answer: B
+    hint: '\(\dfrac{d}{dt}\sec t=\sec t\tan t\).'
+    explanation: '\(r=\sec t-t+C\) and \(r(0)=1+C=0\).'
+  58:
+    topic: s4-2
+    question: 'A body has velocity \(v=9.8t+5\) m/s and \(s(0)=10\). Its position is'
+    A: '\(s=9.8t^2+5t+10\)'
+    B: '\(s=4.9t^2+5t+10\)'
+    C: '\(s=4.9t^2+5t\)'
+    D: '\(s=9.8t+5\)'
+    answer: B
+    hint: Antidifferentiate the velocity and use the initial position.
+    explanation: '\(s=4.9t^2+5t+C\) with \(C=10\).'
+  59:
+    topic: s4-2
+    question: 'A body has acceleration \(a=9.8\) m/s\(^2\), \(v(0)=-3\) and \(s(0)=0\). Its position is'
+    A: '\(s=4.9t^2+3t\)'
+    B: '\(s=4.9t^2-3t\)'
+    C: '\(s=9.8t^2-3t\)'
+    D: '\(s=4.9t^2-3\)'
+    answer: B
+    hint: Integrate twice, using the initial conditions each time.
+    explanation: '\(v=9.8t-3\), then \(s=4.9t^2-3t\).'
+  60:
+    topic: s4-2
+    question: 'It took 14 s for a thermometer to rise from \(-19^\circ\)C to \(100^\circ\)C. By the MVT, somewhere along the way the mercury was rising at'
+    A: '\(14^\circ\)C per second'
+    B: '\(119^\circ\)C per second'
+    C: '\(8.5^\circ\)C per second'
+    D: '\(4.25^\circ\)C per second'
+    answer: C
+    hint: 'Average rate \(=\dfrac{\Delta T}{\Delta t}\).'
+    explanation: '\(\dfrac{119}{14}=8.5\).'
+  61:
+    topic: s4-2
+    question: A trucker covers 159 mi in 2 hours on a road with a 65 mph limit and is cited. Why?
+    A: 'By the MVT her speed was \(79.5\) mph at some instant'
+    B: "By Rolle's Theorem, her speed was 159 mph"
+    C: Her average speed was 65 mph
+    D: Her speed was zero at some instant
+    answer: A
+    hint: 'Average speed \(=\dfrac{159}{2}\).'
+    explanation: The MVT guarantees an instant when the speed equals the average.
+  62:
+    topic: s4-2
+    question: 'The geometric mean of \(a\) and \(b\) is \(\sqrt{ab}\). For \(f(x)=\dfrac1x\) on \([a,b]\), the value of \(c\) in the MVT is'
+    A: '\(c=\dfrac{2ab}{a+b}\)'
+    B: '\(c=\sqrt{ab}\)'
+    C: '\(c=\dfrac{a+b}{2}\)'
+    D: '\(c=ab\)'
+    answer: B
+    hint: '\(f''(c)=-\dfrac1{c^2}\) and the average slope is \(-\dfrac{1}{ab}\).'
+    explanation: '\(c^2=ab\).'
+  63:
+    topic: s4-2
+    question: 'For \(f(x)=x^2\) on \([a,b]\), the value of \(c\) in the MVT is'
+    A: '\(c=\dfrac{a+b}{2}\)'
+    B: '\(c=a+b\)'
+    C: '\(c=\sqrt{ab}\)'
+    D: '\(c=\dfrac{a^2+b^2}{2}\)'
+    answer: A
+    hint: 'The average slope is \(\dfrac{b^2-a^2}{b-a}\).'
+    explanation: '\(2c=a+b\), the arithmetic mean.'
+  64:
+    topic: s4-2
+    question: 'Use the Mean Value Theorem to say which inequality is true for all \(a,b\):'
+    A: '\(|\sin b-\sin a|=|b-a|\)'
+    B: '\(|\sin b-\sin a|\ge|b-a|\)'
+    C: '\(|\sin b-\sin a|\le|b-a|\)'
+    D: '\(|\sin b-\sin a|\le\tfrac12|b-a|\)'
+    answer: C
+    hint: '\(\dfrac{\sin b-\sin a}{b-a}=\cos c\).'
+    explanation: '\(|\cos c|\le1\).'
+  65:
+    topic: s4-2
+    question: 'A function \(f\) is differentiable with \(f(0)=-1\) and \(f(2)=5\)... then somewhere in \((0,2)\)'
+    A: '\(f''(c)=6\)'
+    B: '\(f''(c)=2\)'
+    C: '\(f''(c)=3\)'
+    D: '\(f''(c)=0\)'
+    answer: C
+    hint: 'Compute \(\dfrac{f(2)-f(0)}{2-0}\).'
+    explanation: '\(\dfrac{5-(-1)}{2}=3\).'
+  66:
+    topic: s4-2
+    question: 'Rolle''s Theorem implies that between any two zeros of a differentiable function \(f\), there is a zero of'
+    A: '\(\int f\)'
+    B: '\(f''\)'
+    C: '\(f\) itself, again'
+    D: '\(f''''\)'
+    answer: B
+    hint: Between two equal values, the slope must be zero somewhere.
+    explanation: "This is the standard use of Rolle's Theorem."
+  67:
+    topic: s4-2
+    question: A cubic polynomial can have at most how many real zeros?
+    A: three
+    B: one
+    C: four
+    D: two
+    answer: A
+    hint: "If it had four, Rolle's Theorem would give three zeros of the quadratic derivative."
+    explanation: 'A quadratic has at most 2 zeros, so \(f\) has at most 3.'
+  68:
+    topic: s4-2
+    question: 'If \(f''''>0\) throughout \([a,b]\), then \(f\) has at most how many zeros there?'
+    A: at most two
+    B: at most one
+    C: at most three
+    D: none
+    answer: A
+    hint: '\(f''\) is increasing, so it can vanish at most once.'
+    explanation: 'If \(f\) had three zeros, Rolle''s Theorem gives two zeros of \(f''\) and then one of \(f''''\), contradicting \(f''''>0\).'
+  69:
+    topic: s4-3
+    question: 'On what intervals is \(f(x)=- x^{2} - 3 x + 3\) increasing and decreasing?'
+    A: '\(\text{inc: }(- \frac{3}{2},\infty);\ \text{dec: }(-\infty,- \frac{3}{2})\)'
+    B: '\(\text{inc: }(-\infty,- \frac{1}{2});\ \text{dec: }(- \frac{1}{2},\infty)\)'
+    C: '\(\text{inc: }(-\infty,- \frac{3}{2});\ \text{dec: }(- \frac{3}{2},\infty)\)'
+    D: '\(\text{inc: }(-\infty,\infty);\ \text{dec: }\varnothing\)'
+    answer: C
+    hint: 'Find where \(f''(x)=- 2 x - 3\) is positive and negative.'
+    explanation: '\(f''=- 2 x - 3\), with critical points \(- \frac{3}{2}\). Test the sign of \(f''\) on each interval.'
+  70:
+    topic: s4-3
+    question: 'On what intervals is \(f(x)=- x^{3} + 2 x^{2}\) increasing and decreasing?'
+    A: '\(\text{inc: }(-\infty,\infty);\ \text{dec: }\varnothing\)'
+    B: '\(\text{inc: }(1,\frac{7}{3});\ \text{dec: }(-\infty,1)\cup (\frac{7}{3},\infty)\)'
+    C: '\(\text{inc: }(0,\frac{4}{3});\ \text{dec: }(-\infty,0)\cup (\frac{4}{3},\infty)\)'
+    D: '\(\text{inc: }(-\infty,0)\cup (\frac{4}{3},\infty);\ \text{dec: }(0,\frac{4}{3})\)'
+    answer: C
+    hint: 'Find where \(f''(x)=- 3 x^{2} + 4 x\) is positive and negative.'
+    explanation: '\(f''=- x \left(3 x - 4\right)\), with critical points \(0\), \(\frac{4}{3}\). Test the sign of \(f''\) on each interval.'
+  71:
+    topic: s4-3
+    question: 'On what intervals is \(f(x)=- 4 x^{3} + 3 x^{2}\) increasing and decreasing?'
+    A: '\(\text{inc: }(-\infty,\infty);\ \text{dec: }\varnothing\)'
+    B: '\(\text{inc: }(-\infty,0)\cup (\frac{1}{2},\infty);\ \text{dec: }(0,\frac{1}{2})\)'
+    C: '\(\text{inc: }(0,\frac{1}{2});\ \text{dec: }(-\infty,0)\cup (\frac{1}{2},\infty)\)'
+    D: '\(\text{inc: }(1,\frac{3}{2});\ \text{dec: }(-\infty,1)\cup (\frac{3}{2},\infty)\)'
+    answer: C
+    hint: 'Find where \(f''(x)=- 12 x^{2} + 6 x\) is positive and negative.'
+    explanation: '\(f''=- 6 x \left(2 x - 1\right)\), with critical points \(0\), \(\frac{1}{2}\). Test the sign of \(f''\) on each interval.'
+  72:
+    topic: s4-3
+    question: 'On what intervals is \(f(x)=x^{4} - 8 x^{2} + 16\) increasing and decreasing?'
+    A: '\(\text{inc: }(-\infty,-2)\cup (0,2);\ \text{dec: }(-2,0)\cup (2,\infty)\)'
+    B: '\(\text{inc: }(-1,1)\cup (3,\infty);\ \text{dec: }(-\infty,-1)\cup (1,3)\)'
+    C: '\(\text{inc: }(-2,0)\cup (2,\infty);\ \text{dec: }(-\infty,-2)\cup (0,2)\)'
+    D: '\(\text{inc: }(-\infty,\infty);\ \text{dec: }\varnothing\)'
+    answer: C
+    hint: 'Find where \(f''(x)=4 x^{3} - 16 x\) is positive and negative.'
+    explanation: '\(f''=4 x \left(x - 2\right) \left(x + 2\right)\), with critical points \(-2\), \(0\), \(2\). Test the sign of \(f''\) on each interval.'
+  73:
+    topic: s4-3
+    question: 'On what intervals is \(f(x)=x^{3} - 3 x^{2} + 4\) increasing and decreasing?'
+    A: '\(\text{inc: }(-\infty,1)\cup (3,\infty);\ \text{dec: }(1,3)\)'
+    B: '\(\text{inc: }(-\infty,\infty);\ \text{dec: }\varnothing\)'
+    C: '\(\text{inc: }(-\infty,0)\cup (2,\infty);\ \text{dec: }(0,2)\)'
+    D: '\(\text{inc: }(0,2);\ \text{dec: }(-\infty,0)\cup (2,\infty)\)'
+    answer: C
+    hint: 'Find where \(f''(x)=3 x^{2} - 6 x\) is positive and negative.'
+    explanation: '\(f''=3 x \left(x - 2\right)\), with critical points \(0\), \(2\). Test the sign of \(f''\) on each interval.'
+  74:
+    topic: s4-3
+    question: 'Identify the local extreme values of \(f(x)=- 4 x^{3} + 3 x^{2}\) and where they occur.'
+    A: '\(\text{local min } 0 \text{ at } x=0,\ \text{local max } \frac{1}{4} \text{ at } x=\frac{1}{2}\)'
+    B: '\(\text{local max } 0 \text{ at } x=0,\ \text{local min } \frac{1}{4} \text{ at } x=\frac{1}{2}\)'
+    C: '\(\text{local min } 0 \text{ at } x=0,\ \text{local max } \frac{5}{4} \text{ at } x=- \frac{1}{2}\)'
+    D: '\(\text{local min } 0 \text{ at } x=0\)'
+    answer: A
+    hint: 'Use the First Derivative Test: \(f''(x)=- 12 x^{2} + 6 x\).'
+    explanation: 'The sign of \(f''\) changes at \(x=0\), \(x=\frac{1}{2}\). A change from \(+\) to \(-\) is a local maximum; from \(-\) to \(+\) a local minimum.'
+  75:
+    topic: s4-3
+    question: 'Identify the local extreme values of \(f(x)=x^{4} - 8 x^{2} + 16\) and where they occur.'
+    A: '\(\text{local max } 0 \text{ at } x=-2,\ \text{local min } 16 \text{ at } x=0,\ \text{local max } 0 \text{ at } x=2\)'
+    B: '\(\text{local min } 0 \text{ at } x=2,\ \text{local max } 16 \text{ at } x=0,\ \text{local min } 0 \text{ at } x=-2\)'
+    C: '\(\text{local min } 0 \text{ at } x=-2\)'
+    D: '\(\text{local min } 0 \text{ at } x=-2,\ \text{local max } 16 \text{ at } x=0,\ \text{local min } 0 \text{ at } x=2\)'
+    answer: D
+    hint: 'Use the First Derivative Test: \(f''(x)=4 x^{3} - 16 x\).'
+    explanation: 'The sign of \(f''\) changes at \(x=-2\), \(x=0\), \(x=2\). A change from \(+\) to \(-\) is a local maximum; from \(-\) to \(+\) a local minimum.'
+  76:
+    topic: s4-3
+    question: 'Identify the local extreme values of \(f(x)=2 x^{3} - 18 x\) and where they occur.'
+    A: '\(\text{local max } 12 \sqrt{3} \text{ at } x=- \sqrt{3}\)'
+    B: '\(\text{local max } - 12 \sqrt{3} \text{ at } x=\sqrt{3},\ \text{local min } 12 \sqrt{3} \text{ at } x=- \sqrt{3}\)'
+    C: '\(\text{local min } 12 \sqrt{3} \text{ at } x=- \sqrt{3},\ \text{local max } - 12 \sqrt{3} \text{ at } x=\sqrt{3}\)'
+    D: '\(\text{local max } 12 \sqrt{3} \text{ at } x=- \sqrt{3},\ \text{local min } - 12 \sqrt{3} \text{ at } x=\sqrt{3}\)'
+    answer: D
+    hint: 'Use the First Derivative Test: \(f''(x)=6 x^{2} - 18\).'
+    explanation: 'The sign of \(f''\) changes at \(x=- \sqrt{3}\), \(x=\sqrt{3}\). A change from \(+\) to \(-\) is a local maximum; from \(-\) to \(+\) a local minimum.'
+  77:
+    topic: s4-3
+    question: 'Identify the local extreme values of \(f(x)=- x^{3} + 2 x^{2}\) and where they occur.'
+    A: '\(\text{local min } 0 \text{ at } x=0,\ \text{local max } \frac{160}{27} \text{ at } x=- \frac{4}{3}\)'
+    B: '\(\text{local min } 0 \text{ at } x=0\)'
+    C: '\(\text{local min } 0 \text{ at } x=0,\ \text{local max } \frac{32}{27} \text{ at } x=\frac{4}{3}\)'
+    D: '\(\text{local max } 0 \text{ at } x=0,\ \text{local min } \frac{32}{27} \text{ at } x=\frac{4}{3}\)'
+    answer: C
+    hint: 'Use the First Derivative Test: \(f''(x)=- 3 x^{2} + 4 x\).'
+    explanation: 'The sign of \(f''\) changes at \(x=0\), \(x=\frac{4}{3}\). A change from \(+\) to \(-\) is a local maximum; from \(-\) to \(+\) a local minimum.'
+  78:
+    topic: s4-3
+    question: 'Identify the local extreme values of \(f(x)=x^{3} - 12 x\) and where they occur.'
+    A: '\(\text{local min } 16 \text{ at } x=-2,\ \text{local max } -16 \text{ at } x=2\)'
+    B: '\(\text{local max } 16 \text{ at } x=-2\)'
+    C: '\(\text{local max } -16 \text{ at } x=2,\ \text{local min } 16 \text{ at } x=-2\)'
+    D: '\(\text{local max } 16 \text{ at } x=-2,\ \text{local min } -16 \text{ at } x=2\)'
+    answer: D
+    hint: 'Use the First Derivative Test: \(f''(x)=3 x^{2} - 12\).'
+    explanation: 'The sign of \(f''\) changes at \(x=-2\), \(x=2\). A change from \(+\) to \(-\) is a local maximum; from \(-\) to \(+\) a local minimum.'
+  79:
+    topic: s4-3
+    question: 'Suppose \(f''(x)=x(x-1)\). On which intervals is \(f\) increasing, and where is there a local maximum?'
+    A: decreasing everywhere
+    B: 'increasing on \((-\infty,0)\) and \((1,\infty)\); local maximum at \(x=0\)'
+    C: 'increasing on \((0,1)\); local maximum at \(x=1\)'
+    D: 'increasing on \((-\infty,0)\) and \((1,\infty)\); local maximum at \(x=1\)'
+    answer: B
+    hint: 'Make a sign chart for \(x(x-1)\).'
+    explanation: '\(f''>0\) for \(x<0\) and \(x>1\), \(f''<0\) on \((0,1)\); the sign goes \(+\to-\) at 0.'
+  80:
+    topic: s4-3
+    question: 'Suppose \(f''(x)=(x-1)^2(x+2)\). Then \(f\) has'
+    A: local maxima at both
+    B: 'a local maximum at \(x=-2\) and a minimum at \(x=1\)'
+    C: 'a local minimum at \(x=1\) only'
+    D: 'a local minimum at \(x=-2\) and no extremum at \(x=1\)'
+    answer: D
+    hint: 'The factor \((x-1)^2\) never changes sign.'
+    explanation: '\(f''\) is negative for \(x<-2\) and positive afterward (except 0 at \(x=1\)).'
+  81:
+    topic: s4-3
+    question: 'Suppose \(f''(x)=(x-1)e^{-x}\). The function \(f\) has'
+    A: 'a local minimum at \(x=0\)'
+    B: 'a local maximum at \(x=1\)'
+    C: 'a local minimum at \(x=1\)'
+    D: no critical points
+    answer: C
+    hint: '\(e^{-x}>0\) always.'
+    explanation: 'The sign of \(f''\) is the sign of \(x-1\): negative then positive.'
+  82:
+    topic: s4-3
+    question: 'Suppose \(f''(x)=x^{-1/3}(x+2)\). The critical points of \(f\) are'
+    A: '\(x=0\) only'
+    B: '\(x=-2\) only'
+    C: '\(x=-2\) and \(x=0\)'
+    D: '\(x=2\) and \(x=0\)'
+    answer: C
+    hint: 'Look for zeros AND points where \(f''\) is undefined.'
+    explanation: '\(f''=0\) at \(-2\), and \(f''\) is undefined at 0 (where \(f\) may still be defined).'
+  83:
+    topic: s4-3
+    question: 'For \(g(x)=x\sqrt{8-x^2}\), the absolute maximum value is'
+    A: '\(4\sqrt2\), at \(x=2\sqrt2\)'
+    B: '\(8\), at \(x=2\)'
+    C: '\(4\), at \(x=2\)'
+    D: '\(0\), at \(x=0\)'
+    answer: C
+    hint: 'The domain is \([-2\sqrt2,2\sqrt2]\). Set \(g''=\dfrac{8-2x^2}{\sqrt{8-x^2}}=0\).'
+    explanation: '\(x=\pm2\); \(g(2)=2\cdot2=4\).'
+  84:
+    topic: s4-3
+    question: 'For \(f(x)=xe^{-x}\), the local extreme value is'
+    A: 'a local maximum \(\dfrac1e\) at \(x=0\)'
+    B: 'a local minimum \(\dfrac1e\) at \(x=1\)'
+    C: 'a local maximum \(e\) at \(x=1\)'
+    D: 'a local (and absolute) maximum \(\dfrac1e\) at \(x=1\)'
+    answer: D
+    hint: '\(f''=e^{-x}(1-x)\).'
+    explanation: '\(f''\) goes from \(+\) to \(-\) at \(x=1\), and \(f(1)=1/e\).'
+  85:
+    topic: s4-3
+    question: 'For \(f(x)=x\ln x\) with \(x>0\), the minimum value is'
+    A: '\(-\dfrac1e\), at \(x=\dfrac1e\)'
+    B: '\(\dfrac1e\), at \(x=\dfrac1e\)'
+    C: '\(-e\), at \(x=e\)'
+    D: '\(0\), at \(x=1\)'
+    answer: A
+    hint: '\(f''=\ln x+1\).'
+    explanation: '\(\ln x=-1\) gives \(x=1/e\) and \(f=\tfrac1e\cdot(-1)=-\tfrac1e\).'
+  86:
+    topic: s4-3
+    question: 'For \(f(x)=x^2\ln x\) with \(x>0\), the minimum value is'
+    A: '\(-\dfrac1e\), at \(x=\dfrac1e\)'
+    B: '\(\dfrac{1}{2e}\), at \(x=e^{-1/2}\)'
+    C: '\(0\), at \(x=1\)'
+    D: '\(-\dfrac{1}{2e}\), at \(x=e^{-1/2}\)'
+    answer: D
+    hint: '\(f''=x(2\ln x+1)\).'
+    explanation: '\(\ln x=-\tfrac12\); then \(f=e^{-1}\cdot(-\tfrac12)\).'
+  87:
+    topic: s4-3
+    question: 'For \(f(x)=x^3-3x^2\) on \((-\infty,2]\), the local extrema are'
+    A: 'a local maximum \(0\) at \(x=0\) and an endpoint minimum \(-4\) at \(x=2\)'
+    B: no extrema
+    C: 'a local minimum \(0\) at \(x=0\) and an endpoint maximum \(-4\) at \(x=2\)'
+    D: 'only a local maximum at \(x=0\)'
+    answer: A
+    hint: '\(f''=3x(x-2)\); the domain is cut at \(x=2\).'
+    explanation: '\(f''>0\) for \(x<0\) and \(f''<0\) on \((0,2)\): a local max at 0. At the endpoint \(x=2\), \(f=-4\) is the smallest value nearby.'
+  88:
+    topic: s4-3
+    question: 'To show that \(\ln x<x\) for \(x>1\), consider \(f(x)=x-\ln x\). Why does this work?'
+    A: '\(f\) is decreasing for \(x>1\)'
+    B: '\(f''\) is negative for \(x>1\)'
+    C: '\(f(1)=0\)'
+    D: '\(f''(x)=1-\tfrac1x>0\) for \(x>1\), so \(f\) is increasing, and \(f(1)=1>0\)'
+    answer: D
+    hint: 'Show \(f\) starts positive and increases.'
+    explanation: 'So \(f(x)>f(1)=1>0\), i.e. \(x>\ln x\).'
+  89:
+    topic: s4-3
+    question: 'If \(f\) is increasing on an interval, then \(f\) is'
+    A: constant
+    B: periodic
+    C: one-to-one on that interval
+    D: even
+    answer: C
+    hint: Two different inputs must give two different outputs.
+    explanation: Increasing functions never repeat a value, so they have inverses.
+  90:
+    topic: s4-3
+    question: 'The function \(f(x)=\tfrac13x+\tfrac56\) is increasing everywhere. Its inverse has derivative'
+    A: '\(\dfrac{df^{-1}}{dx}=3\)'
+    B: '\(-3\)'
+    C: '\(\dfrac56\)'
+    D: '\(\dfrac13\)'
+    answer: A
+    hint: 'Reciprocal slopes: \((f^{-1})''=1/f''\).'
+    explanation: '\(f''=\tfrac13\) so \((f^{-1})''=3\).'
+  91:
+    topic: s4-3
+    question: 'The function \(f(x)=27x^3\) is increasing, so it has an inverse. \(\dfrac{df^{-1}}{dx}\) at \(x=27\) (where \(f(1)=27\)) equals'
+    A: '\(\dfrac{1}{3}\)'
+    B: '\(\dfrac1{81}\)'
+    C: '\(81\)'
+    D: '\(\dfrac{1}{27}\)'
+    answer: B
+    hint: '\(f''(1)=81\).'
+    explanation: '\((f^{-1})''(27)=1/f''(1)=1/81\).'
+  92:
+    topic: s4-3
+    question: 'Where is \(f(x)=ax^2+bx+c\) (\(a>0\)) increasing?'
+    A: 'for all \(x\)'
+    B: 'for \(x>\dfrac{b}{2a}\)'
+    C: 'for \(x>-\dfrac{b}{2a}\)'
+    D: 'for \(x<-\dfrac{b}{2a}\)'
+    answer: C
+    hint: '\(f''=2ax+b\).'
+    explanation: '\(2ax+b>0\iff x>-b/(2a)\).'
+  93:
+    topic: s4-3
+    question: 'Is \(f(x)=x^3-3x+2\) rising or falling as \(x\) increases through \(x=2\)?'
+    A: falling
+    B: it has a vertical tangent
+    C: "neither: it is stationary"
+    D: rising
+    answer: D
+    hint: 'Evaluate \(f''(2)\).'
+    explanation: '\(f''(2)=3(4)-3=9>0\).'
+  94:
+    topic: s4-3
+    question: 'The graph of \(e^x\ge1+x\) for \(x\ge0\). Which function can be used to prove it?'
+    A: '\(h(x)=e^x-1-x\), with \(h(0)=0\) and \(h''(x)=e^x-1\ge0\)'
+    B: '\(h(x)=e^x+1+x\)'
+    C: '\(h(x)=e^x\cdot x\)'
+    D: '\(h(x)=\ln x-x\)'
+    answer: A
+    hint: 'Show \(h\) starts at 0 and does not decrease.'
+    explanation: '\(h\) is nondecreasing for \(x\ge0\) and \(h(0)=0\).'
+  95:
+    topic: s4-4
+    question: 'Where are the inflection points of \(y=x^{3} - 3 x^{2} + 4\)?'
+    A: '\((1,-3)\)'
+    B: '\((2,0)\)'
+    C: '\((-1,0)\)'
+    D: '\((1,2)\)'
+    answer: D
+    hint: 'Find where \(y''''=6 \left(x - 1\right)\) changes sign.'
+    explanation: '\(y''''=6 \left(x - 1\right)\) changes sign at \(x=1\).'
+  96:
+    topic: s4-4
+    question: 'Where are the inflection points of \(y=\frac{x^{4}}{4} - 2 x^{2} + 4\)?'
+    A: '\((- \frac{2 \sqrt{3}}{3},\frac{16}{9}),\ (\frac{2 \sqrt{3}}{3},\frac{16}{9})\)'
+    B: '\((\frac{2 \sqrt{3}}{3},\frac{16}{9}),\ (- \frac{2 \sqrt{3}}{3},\frac{16}{9})\)'
+    C: '\((- \frac{2 \sqrt{3}}{3},\frac{16 \sqrt{3}}{9}),\ (\frac{2 \sqrt{3}}{3},- \frac{16 \sqrt{3}}{9})\)'
+    D: '\((1 - \frac{2 \sqrt{3}}{3},\frac{10 \sqrt{3}}{9} + \frac{73}{36}),\ (1 + \frac{2 \sqrt{3}}{3},\frac{73}{36} - \frac{10 \sqrt{3}}{9})\)'
+    answer: A
+    hint: 'Find where \(y''''=3 x^{2} - 4\) changes sign.'
+    explanation: '\(y''''=3 x^{2} - 4\) changes sign at \(x=- \frac{2 \sqrt{3}}{3}\), \(x=\frac{2 \sqrt{3}}{3}\).'
+  97:
+    topic: s4-4
+    question: 'Where are the inflection points of \(y=\frac{x^{3}}{3} - \frac{x^{2}}{2} - 2 x + \frac{1}{3}\)?'
+    A: '\((\frac{3}{2},- \frac{8}{3})\)'
+    B: '\((- \frac{1}{2},\frac{7}{6})\)'
+    C: '\((\frac{1}{2},- \frac{3}{4})\)'
+    D: '\((\frac{1}{2},- \frac{9}{4})\)'
+    answer: C
+    hint: 'Find where \(y''''=2 x - 1\) changes sign.'
+    explanation: '\(y''''=2 x - 1\) changes sign at \(x=\frac{1}{2}\).'
+  98:
+    topic: s4-4
+    question: 'Where are the inflection points of \(y=x^{4} - 4 x^{3} + 10\)?'
+    A: '\((1,7),\ (3,-17)\)'
+    B: '\((0,0),\ (2,-16)\)'
+    C: '\((0,10),\ (-2,58)\)'
+    D: '\((0,10),\ (2,-6)\)'
+    answer: D
+    hint: 'Find where \(y''''=12 x \left(x - 2\right)\) changes sign.'
+    explanation: '\(y''''=12 x \left(x - 2\right)\) changes sign at \(x=0\), \(x=2\).'
+  99:
+    topic: s4-4
+    question: 'Where are the inflection points of \(y=2 x^{3} - 6 x^{2} + 1\)?'
+    A: '\((1,-3)\)'
+    B: '\((1,-6)\)'
+    C: '\((-1,-7)\)'
+    D: '\((2,-7)\)'
+    answer: A
+    hint: 'Find where \(y''''=12 \left(x - 1\right)\) changes sign.'
+    explanation: '\(y''''=12 \left(x - 1\right)\) changes sign at \(x=1\).'
+  100:
+    topic: s4-4
+    question: 'On what intervals is \(y=\frac{x^{3}}{3} - \frac{x^{2}}{2} - 2 x + \frac{1}{3}\) concave up and concave down?'
+    A: '\(\text{up: }(\frac{1}{2},\infty);\ \text{down: }(-\infty,\frac{1}{2})\)'
+    B: '\(\text{up: }(-\infty,\frac{1}{2});\ \text{down: }(\frac{1}{2},\infty)\)'
+    C: '\(\text{up: }(-\infty,\infty)\)'
+    D: '\(\text{up: }\varnothing;\ \text{down: }(-\infty,\infty)\)'
+    answer: A
+    hint: 'Concave up where \(y''''>0\); here \(y''''=2 x - 1\).'
+    explanation: 'The sign of \(y''''\) is \(-+\) in order across the inflection points.'
+  101:
+    topic: s4-4
+    question: 'On what intervals is \(y=\frac{x^{4}}{4} - 2 x^{2} + 4\) concave up and concave down?'
+    A: '\(\text{up: }(-\infty,\infty)\)'
+    B: '\(\text{up: }(- \frac{2 \sqrt{3}}{3},\frac{2 \sqrt{3}}{3});\ \text{down: }(-\infty,- \frac{2 \sqrt{3}}{3})\cup (\frac{2 \sqrt{3}}{3},\infty)\)'
+    C: '\(\text{up: }(-\infty,- \frac{2 \sqrt{3}}{3})\cup (\frac{2 \sqrt{3}}{3},\infty);\ \text{down: }(- \frac{2 \sqrt{3}}{3},\frac{2 \sqrt{3}}{3})\)'
+    D: '\(\text{up: }\varnothing;\ \text{down: }(-\infty,\infty)\)'
+    answer: C
+    hint: 'Concave up where \(y''''>0\); here \(y''''=3 x^{2} - 4\).'
+    explanation: 'The sign of \(y''''\) is \(+-+\) in order across the inflection points.'
+  102:
+    topic: s4-4
+    question: 'On what intervals is \(y=x^{3} - 3 x + 2\) concave up and concave down?'
+    A: '\(\text{up: }(0,\infty);\ \text{down: }(-\infty,0)\)'
+    B: '\(\text{up: }(-\infty,0);\ \text{down: }(0,\infty)\)'
+    C: '\(\text{up: }\varnothing;\ \text{down: }(-\infty,\infty)\)'
+    D: '\(\text{up: }(-\infty,\infty)\)'
+    answer: A
+    hint: 'Concave up where \(y''''>0\); here \(y''''=6 x\).'
+    explanation: 'The sign of \(y''''\) is \(-+\) in order across the inflection points.'
+  103:
+    topic: s4-4
+    question: 'If \(f''(c)=0\) and \(f''''(c)<0\), then \(f\) has at \(x=c\)'
+    A: an inflection point
+    B: a local maximum
+    C: no information
+    D: a local minimum
+    answer: B
+    hint: Second Derivative Test.
+    explanation: Concave down at a critical point means a peak.
+  104:
+    topic: s4-4
+    question: 'If \(f''(c)=0\) and \(f''''(c)>0\), then \(f\) has at \(x=c\)'
+    A: no information
+    B: a local minimum
+    C: an inflection point
+    D: a local maximum
+    answer: B
+    hint: Second Derivative Test.
+    explanation: Concave up at a critical point means a valley.
+  105:
+    topic: s4-4
+    question: 'If \(f''(c)=0\) and \(f''''(c)=0\), the Second Derivative Test'
+    A: shows an inflection point
+    B: is inconclusive
+    C: shows a local maximum
+    D: shows a local minimum
+    answer: B
+    hint: 'Consider \(x^3\), \(x^4\) and \(-x^4\) at 0.'
+    explanation: 'All three have \(f''=f''''=0\) at 0, with different behavior.'
+  106:
+    topic: s4-4
+    question: A point of inflection is a point where
+    A: '\(f''=0\)'
+    B: the concavity of the graph changes
+    C: '\(f''''\) exists'
+    D: '\(f\) has a local extremum'
+    answer: B
+    hint: 'Think "sign change of \(f''''\)".'
+    explanation: '\(f''''(c)=0\) alone is not enough (\(y=x^4\) at 0).'
+  107:
+    topic: s4-4
+    question: 'Is it true that the concavity of a twice-differentiable \(f\) changes every time \(f''''(x)=0\)?'
+    A: Only for cubics
+    B: Only for even functions
+    C: Yes, always
+    D: 'No: \(y=x^4\) has \(f''''(0)=0\) but is concave up on both sides'
+    answer: D
+    hint: 'A sign change of \(f''''\) is needed.'
+    explanation: '\(12x^2\) does not change sign at 0.'
+  108:
+    topic: s4-4
+    question: 'What can be said about the inflection points of a quadratic \(y=ax^2+bx+c\), \(a\ne0\)?'
+    A: 'There are none, since \(y''''=2a\) never changes sign'
+    B: There is exactly one, at the vertex
+    C: There are infinitely many
+    D: There are two
+    answer: A
+    hint: 'Compute \(y''''\).'
+    explanation: A parabola has constant concavity.
+  109:
+    topic: s4-4
+    question: 'What can be said about the inflection points of a cubic \(y=ax^3+bx^2+cx+d\), \(a\ne0\)?'
+    A: 'It depends on \(c\)'
+    B: There are none
+    C: 'There is exactly one, at \(x=-\dfrac{b}{3a}\)'
+    D: There are two
+    answer: C
+    hint: '\(y''''=6ax+2b\) is linear.'
+    explanation: A line with nonzero slope changes sign exactly once.
+  110:
+    topic: s4-4
+    question: 'For what value of \(b\) does \(y=x^3+bx^2+cx+d\) have an inflection point at \(x=1\)?'
+    A: '\(b=3\)'
+    B: '\(b=-1\)'
+    C: '\(b=-\tfrac13\)'
+    D: '\(b=-3\)'
+    answer: D
+    hint: '\(y''''=6x+2b=0\) at \(x=1\).'
+    explanation: '\(6+2b=0\).'
+  111:
+    topic: s4-4
+    question: 'The function \(y=\sin|x|\) on \([-2\pi,2\pi]\) at \(x=0\) has'
+    A: a local maximum
+    B: 'a smooth minimum with \(y''=0\)'
+    C: an inflection point
+    D: a corner (not differentiable), and a local minimum
+    answer: D
+    hint: Compare the one-sided slopes at 0.
+    explanation: 'The slope is \(-1\) on the left and \(+1\) on the right: a V-shaped corner.'
+  112:
+    topic: s4-4
+    question: 'A curve is concave up and decreasing on an interval. The signs of \(y''\) and \(y''''\) are'
+    A: '\(y''<0\) and \(y''''<0\)'
+    B: '\(y''>0\) and \(y''''<0\)'
+    C: '\(y''<0\) and \(y''''>0\)'
+    D: '\(y''>0\) and \(y''''>0\)'
+    answer: C
+    hint: Decreasing means negative slope; concave up means the slope is increasing.
+    explanation: The negative slope is rising toward 0.
+  113:
+    topic: s4-4
+    question: 'A cost function \(c=f(x)\) has an inflection point at the level where marginal cost changes from decreasing to increasing. This happens where'
+    A: '\(f''(x)=0\)'
+    B: '\(f(x)\) is largest'
+    C: '\(f''''\) goes from positive to negative'
+    D: '\(f''''(x)=0\) with \(f''''\) going from negative to positive'
+    answer: D
+    hint: 'Marginal cost is \(f''\).'
+    explanation: 'Marginal cost decreasing means \(f''''<0\); increasing means \(f''''>0\).'
+  114:
+    topic: s4-4
+    question: 'Given \(y''=(x-1)^2(x-2)\), at what points does \(y\) have a local minimum, local maximum, or inflection point?'
+    A: 'a local maximum at \(x=2\); inflection at \(x=1\) only'
+    B: 'a local minimum at \(x=2\); inflection points at \(x=1\) and \(x=\tfrac53\)'
+    C: 'a local minimum at \(x=1\); inflection at \(x=2\)'
+    D: 'a local minimum at \(x=2\) only'
+    answer: B
+    hint: 'Compute \(y''''=2(x-1)(x-2)+(x-1)^2=(x-1)(3x-5)\).'
+    explanation: '\(y''\) goes \(-\) to \(+\) at \(x=2\) (min); \(y''''\) changes sign at \(1\) and \(\tfrac53\).'
+  115:
+    topic: s4-4
+    question: 'Given \(y''=x^2(2-x)\), the function \(y\) has'
+    A: 'a local maximum at \(x=2\) and an inflection point at \(x=0\)'
+    B: 'a local minimum at \(x=2\)'
+    C: no inflection points
+    D: 'a local maximum at \(x=0\)'
+    answer: A
+    hint: '\(y''=2x^2-x^3\), so \(y''''=4x-3x^2=x(4-3x)\).'
+    explanation: '\(y''\) goes \(+\) to \(-\) at 2. \(y''''\) changes sign at 0 and at \(\tfrac43\).'
+  116:
+    topic: s4-4
+    question: 'Given \(y''=\cos t\) for \(0\le t\le2\pi\), the function \(y\) has'
+    A: 'inflection points at \(t=\tfrac\pi2,\tfrac{3\pi}2\)'
+    B: 'a local maximum at \(t=\tfrac\pi2\), a local minimum at \(t=\tfrac{3\pi}2\), and inflection points at \(t=0,\pi,2\pi\)'
+    C: no local extrema
+    D: 'a local minimum at \(t=\tfrac\pi2\)'
+    answer: B
+    hint: '\(y''''=-\sin t\).'
+    explanation: '\(y=\sin t+C\) behaves like \(\sin\).'
+  117:
+    topic: s4-4
+    question: 'The graph of \(f\) is concave down where'
+    A: '\(f''''>0\)'
+    B: '\(f''''<0\)'
+    C: '\(f''<0\)'
+    D: '\(f''>0\)'
+    answer: B
+    hint: Concavity is about the sign of the second derivative.
+    explanation: 'The slope decreases as \(x\) increases.'
+  118:
+    topic: s4-4
+    question: 'A graph with \(f''>0\) and \(f''''>0\) on an interval is'
+    A: increasing and concave up (curving upward, getting steeper)
+    B: increasing and concave down
+    C: decreasing and concave down
+    D: decreasing and concave up
+    answer: A
+    hint: The first derivative controls rise/fall.
+    explanation: Positive slope that itself increases.
+  119:
+    topic: s4-4
+    question: 'Which statement about \(f(x)=\sin x\) on \((0,\pi)\) is true?'
+    A: It is increasing then decreasing and concave down throughout
+    B: It is increasing and concave up
+    C: It is concave up then concave down
+    D: It is decreasing throughout
+    answer: A
+    hint: '\(f''''=-\sin x<0\) on \((0,\pi)\).'
+    explanation: '\(\cos x\) changes sign at \(\tfrac\pi2\) but \(-\sin x\) does not change sign on \((0,\pi)\).'
+  120:
+    topic: s4-4
+    question: 'The function \(y=x+\sin x\) on \([-\tfrac{2\pi}{3},\tfrac{2\pi}{3}]\) at \(x=0\) has'
+    A: an inflection point with slope 2
+    B: a corner
+    C: a local maximum
+    D: a local minimum
+    answer: A
+    hint: '\(y''=1+\cos x\), \(y''''=-\sin x\).'
+    explanation: '\(y''''\) changes sign at 0 and \(y''(0)=2\).'
+  121:
+    topic: s4-4
+    question: 'The curve \(y=\tan x-4x\) on \((-\tfrac\pi2,\tfrac\pi2)\) has local extrema at'
+    A: '\(x=\pm\dfrac\pi4\)'
+    B: '\(x=\pm\dfrac\pi3\)'
+    C: '\(x=\pm\dfrac\pi6\)'
+    D: '\(x=0\)'
+    answer: B
+    hint: '\(y''=\sec^2x-4=0\).'
+    explanation: '\(\cos^2x=\tfrac14\), so \(x=\pm\tfrac\pi3\).'
+  122:
+    topic: s4-4
+    question: 'The cost of manufacturing \(x\) items is shown with an inflection near \(x=60\) thousand. There, marginal cost'
+    A: is undefined
+    B: switches from increasing to decreasing
+    C: switches from decreasing to increasing
+    D: is zero
+    answer: C
+    hint: 'At an inflection point of cost, \(c''\) has a local minimum.'
+    explanation: The slope of the cost curve is smallest there.
+  123:
+    topic: s4-4
+    question: 'An oblique (slant) asymptote of \(y=\dfrac{x^2-3}{x-2}\) is'
+    A: '\(y=x+2\)'
+    B: '\(y=2\)'
+    C: '\(y=x-2\)'
+    D: '\(y=x\)'
+    answer: A
+    hint: 'Divide: \(x^2-3=(x-2)(x+2)+1\).'
+    explanation: '\(y=x+2+\dfrac{1}{x-2}\).'
+  124:
+    topic: s4-4
+    question: 'The curve \(y=\dfrac{x^3}{3x^2+1}\) has an oblique asymptote at'
+    A: '\(y=x\)'
+    B: '\(y=3x\)'
+    C: '\(y=0\)'
+    D: '\(y=\dfrac{x}{3}\)'
+    answer: D
+    hint: 'The leading terms give \(\dfrac{x^3}{3x^2}\).'
+    explanation: '\(y=\dfrac x3-\dfrac{x}{3(3x^2+1)}\).'
+  125:
+    topic: s4-4
+    question: 'The curve \(y=\dfrac{x^2-3}{x-2}\) has local extrema at'
+    A: '\(x=1\) (a local maximum) and \(x=3\) (a local minimum)'
+    B: '\(x=1\) (a local minimum) and \(x=3\) (a local maximum)'
+    C: '\(x=2\) (a local maximum)'
+    D: no local extrema
+    answer: A
+    hint: '\(y''=\dfrac{x^2-4x+3}{(x-2)^2}=\dfrac{(x-1)(x-3)}{(x-2)^2}\).'
+    explanation: '\(y''\) goes \(+,-,-,+\) across \(1,2,3\).'
+  126:
+    topic: s4-5
+    question: 'What is the smallest possible perimeter of a rectangle with area 16 in.\(^2\)?'
+    A: '\(32\) in.'
+    B: '\(20\) in.'
+    C: '\(16\) in., for a \(4\times4\) square'
+    D: '\(8\) in.'
+    answer: C
+    hint: '\(P=2x+\dfrac{32}{x}\); set \(P''=0\).'
+    explanation: '\(x=4\) and \(P=8+8=16\).'
+  127:
+    topic: s4-5
+    question: Among all rectangles with perimeter 8 m, the largest area is
+    A: '\(3\) m\(^2\)'
+    B: '\(8\) m\(^2\)'
+    C: '\(4\) m\(^2\), for a \(2\times2\) square'
+    D: '\(16\) m\(^2\)'
+    answer: C
+    hint: '\(A=x(4-x)\).'
+    explanation: 'Maximum at \(x=2\).'
+  128:
+    topic: s4-5
+    question: A rectangle is inscribed in an isosceles right triangle with hypotenuse 2. The largest area it can have is
+    A: '\(1\)'
+    B: '\(\dfrac14\)'
+    C: '\(\dfrac{\sqrt2}{2}\)'
+    D: '\(\dfrac12\), using dimensions \(1\) by \(\tfrac12\)'
+    answer: D
+    hint: 'Put the triangle on the \(x\)-axis; the top vertices are on the lines \(y=1-x\); \(A=2x(1-x)\).'
+    explanation: '\(A''=2-4x=0\) gives \(x=\tfrac12\) and \(A=\tfrac12\).'
+  129:
+    topic: s4-5
+    question: 'A rectangle has its base on the \(x\)-axis and its upper vertices on \(y=12-x^2\). The largest possible area is'
+    A: '\(24\)'
+    B: '\(48\)'
+    C: '\(16\)'
+    D: '\(32\)'
+    answer: D
+    hint: '\(A=2x(12-x^2)\).'
+    explanation: '\(A''=24-6x^2=0\) gives \(x=2\) and \(A=2\cdot2\cdot8=32\) (dimensions \(4\times8\)).'
+  130:
+    topic: s4-5
+    question: An open box is made from an 8-in.-by-15-in. sheet by cutting equal squares from the corners. The box with largest volume has height about
+    A: '\(1\) in.'
+    B: '\(2.5\) in.'
+    C: '\(4\) in.'
+    D: '\(1.67\) in.'
+    answer: D
+    hint: '\(V=x(8-2x)(15-2x)\).'
+    explanation: '\(V''=12x^2-92x+120=0\) gives \(x=\dfrac{5}{3}\approx1.67\) (the other root, 6, is outside \((0,4)\)).'
+  131:
+    topic: s4-5
+    question: 'A 216 m\(^2\) rectangular pea patch is enclosed by a fence and divided into two equal parts by another fence parallel to one side. The least fence length is'
+    A: '\(60\) m'
+    B: '\(108\) m'
+    C: '\(72\) m, with outer dimensions \(18\times12\) m'
+    D: '\(90\) m'
+    answer: C
+    hint: 'If the outer sides are \(x\) and \(y\) with \(xy=216\), the fence length is \(2x+3y\) (the divider has length \(y\)).'
+    explanation: '\(F=2x+\dfrac{648}{x}\); \(F''=0\) gives \(x=18\), \(y=12\), and \(F=36+36=72\).'
+  132:
+    topic: s4-5
+    question: With 800 m of wire for a one-sided river fence, the largest area you can enclose with a rectangle (using the river as the fourth side) is
+    A: '\(20{,}000\) m\(^2\)'
+    B: '\(160{,}000\) m\(^2\)'
+    C: '\(80{,}000\) m\(^2\)'
+    D: '\(40{,}000\) m\(^2\)'
+    answer: C
+    hint: '\(A=x(800-2x)\).'
+    explanation: '\(x=200\), length 400: \(A=200\cdot400=80{,}000\).'
+  133:
+    topic: s4-5
+    question: 'A square-based, open-top tank holds 500 ft\(^3\). To use the least sheet metal, the base side and height should be'
+    A: '\(7\) ft by \(10\) ft'
+    B: '\(20\) ft by \(1.25\) ft'
+    C: '\(5\) ft by \(20\) ft'
+    D: '\(10\) ft by \(5\) ft'
+    answer: D
+    hint: 'Surface area \(=x^2+4xh\) with \(x^2h=500\).'
+    explanation: '\(S=x^2+2000/x\); \(S''=0\) gives \(x=10\), \(h=5\).'
+  134:
+    topic: s4-5
+    question: 'A poster has 50 in.\(^2\) of printing with 4-in. margins top and bottom and 2-in. margins on each side. The overall dimensions that use the least paper are'
+    A: '\(7\) in. by \(14\) in.'
+    B: '\(9\) in. by \(9\) in.'
+    C: '\(10\) in. by \(15\) in.'
+    D: '\(9\) in. wide by \(18\) in. tall'
+    answer: D
+    hint: 'Let the printed width be \(x\) and height \(50/x\). The overall area is \((x+4)(50/x+8)\).'
+    explanation: 'Minimizing gives \(x=5\), so the paper is \(9\) by \(18\).'
+  135:
+    topic: s4-5
+    question: The largest right circular cone that can be inscribed in a sphere of radius 3 has volume
+    A: '\(\dfrac{64\pi}{3}\)'
+    B: '\(\dfrac{32\pi}{3}\)'
+    C: '\(36\pi\)'
+    D: '\(12\pi\)'
+    answer: B
+    hint: 'If the cone''s height is \(h\) above the base plane, the base radius satisfies \(r^2=9-(h-3)^2\).'
+    explanation: '\(V=\tfrac\pi3(6h^2-h^3)\); \(V''=0\) gives \(h=4\) and \(V=\tfrac{32\pi}3\).'
+  136:
+    topic: s4-5
+    question: 'Two sides of a triangle have lengths \(a\) and \(b\) and enclose angle \(\theta\). The area \(\tfrac12ab\sin\theta\) is largest when'
+    A: '\(\theta=\dfrac\pi2\)'
+    B: '\(\theta=\pi\)'
+    C: '\(\theta=\dfrac\pi3\)'
+    D: '\(\theta=\dfrac\pi4\)'
+    answer: A
+    hint: 'Maximize \(\sin\theta\).'
+    explanation: '\(\sin\theta\) is 1 at \(\theta=\pi/2\).'
+  137:
+    topic: s4-5
+    question: 'The lightest open-top cylindrical can holding 1000 cm\(^3\) has height-to-radius ratio'
+    A: '\(\pi\)'
+    B: '\(1\) (so \(h=r\))'
+    C: '\(\tfrac12\)'
+    D: '\(2\)'
+    answer: B
+    hint: '\(S=\pi r^2+2\pi rh\) with \(\pi r^2h=1000\).'
+    explanation: '\(S''=0\) gives \(r^3=1000/\pi\) and \(h=r\).'
+  138:
+    topic: s4-5
+    question: 'If the top and bottom of a can are cut from squares of side \(2r\) (the side is cut with no waste), the aluminum used is \(A=8r^2+2\pi rh\). With fixed volume, the most economical ratio \(h/r\) is'
+    A: '\(2\)'
+    B: '\(\dfrac{8}{\pi}\)'
+    C: '\(1\)'
+    D: '\(\dfrac{4}{\pi}\)'
+    answer: B
+    hint: 'Substitute \(h=V/(\pi r^2)\) and set \(A''=0\).'
+    explanation: '\(A=8r^2+\dfrac{2V}{r}\), so \(A''=16r-\dfrac{2V}{r^2}=0\) gives \(V=8r^3\). Then \(\pi r^2h=8r^3\) and \(h/r=\dfrac8\pi\).'
+  139:
+    topic: s4-5
+    question: 'The U.S. Postal Service accepts a box with a square end only if length plus girth is at most 108 in. The largest volume has end side \(x=\) and length \(\ell=\)'
+    A: '\(x=18\) in., \(\ell=36\) in.'
+    B: '\(x=20\) in., \(\ell=28\) in.'
+    C: '\(x=27\) in., \(\ell=0\) in.'
+    D: '\(x=12\) in., \(\ell=60\) in.'
+    answer: A
+    hint: '\(\ell+4x=108\) and \(V=x^2\ell=x^2(108-4x)\).'
+    explanation: '\(V''=216x-12x^2=0\) gives \(x=18\), \(\ell=36\), \(V=11{,}664\) in.\(^3\).'
+  140:
+    topic: s4-5
+    question: 'A rectangular piece of paper with perimeter 36 cm is rolled into a cylinder (the rectangle''s sides \(x\) by \(y\) with circumference \(x\)). The values of \(x\) and \(y\) that give the largest volume are'
+    A: '\(x=6\) cm and \(y=12\) cm'
+    B: '\(x=18\) cm and \(y=0\)'
+    C: '\(x=12\) cm and \(y=6\) cm'
+    D: '\(x=9\) cm and \(y=9\) cm'
+    answer: C
+    hint: '\(x+y=18\), \(V=\dfrac{x^2y}{4\pi}\).'
+    explanation: '\(V\propto x^2(18-x)\); \(V''=0\) gives \(x=12\).'
+  141:
+    topic: s4-5
+    question: 'A right triangle with hypotenuse \(\sqrt3\) is revolved about one leg to make a cone. The cone of greatest volume has radius \(r\) and height \(h\):'
+    A: '\(r=1\), \(h=\sqrt2\), \(V=\dfrac{\sqrt2\pi}{3}\)'
+    B: '\(r=\sqrt2\), \(h=1\), \(V=\dfrac{2\pi}{3}\)'
+    C: '\(r=\sqrt{3/2}\), \(h=\sqrt{3/2}\)'
+    D: '\(r=\sqrt3\), \(h=0\)'
+    answer: B
+    hint: '\(r^2+h^2=3\) and \(V=\tfrac\pi3r^2h=\tfrac\pi3(3h-h^3)\).'
+    explanation: '\(V''=0\) gives \(h=1\), \(r^2=2\).'
+  142:
+    topic: s4-5
+    question: Jane is 2 mi offshore in a boat; she rows at 2 mph and walks at 5 mph to a village 6 mi down the shore from the nearest point. Where should she land to minimize time?
+    A: 'at the nearest point (\(0\) mi)'
+    B: 'directly at the village (\(6\) mi)'
+    C: 'about \(0.87\) mi from the nearest point, toward the village'
+    D: '\(3\) mi from the nearest point'
+    answer: C
+    hint: 'Time \(T(x)=\dfrac{\sqrt{4+x^2}}{2}+\dfrac{6-x}{5}\).'
+    explanation: '\(T''=\dfrac{x}{2\sqrt{4+x^2}}-\dfrac15=0\) gives \(x=\tfrac{4}{\sqrt{21}}\approx0.873\).'
+  143:
+    topic: s4-5
+    question: The 8-ft wall stands 27 ft from a building. The shortest straight beam that reaches the building from the ground outside the wall has length
+    A: '\(13\sqrt{13}\) ft \(\approx46.9\) ft'
+    B: '\(35\) ft'
+    C: '\(8\sqrt{13}\) ft'
+    D: '\(27\) ft'
+    answer: A
+    hint: '\(L=\dfrac{8}{\sin\theta}+\dfrac{27}{\cos\theta}\); set \(L''=0\), giving \(\tan^3\theta=\tfrac{8}{27}\).'
+    explanation: '\(\tan\theta=\tfrac23\); \(L=(8^{2/3}+27^{2/3})^{3/2}=(4+9)^{3/2}=13\sqrt{13}\).'
+  144:
+    topic: s4-5
+    question: "Fermat's principle says light travels along the path of least time. Reflecting off a plane mirror, this implies"
+    A: the angle of incidence equals the angle of reflection
+    B: the ray follows the shortest vertical path
+    C: the angle of incidence is twice the angle of reflection
+    D: the ray bends toward the normal
+    answer: A
+    hint: 'Minimize the total path \(A\to\) mirror \(\to B\).'
+    explanation: 'Setting the derivative of the travel time to 0 gives \(\theta_1=\theta_2\).'
+  145:
+    topic: s4-5
+    question: 'The rate of an autocatalytic reaction is \(v=kx(a-x)\). It is greatest when \(x=\)'
+    A: '\(0\)'
+    B: '\(\dfrac a2\)'
+    C: '\(\dfrac a4\)'
+    D: '\(a\)'
+    answer: B
+    hint: '\(v''=k(a-2x)\).'
+    explanation: 'The maximum rate is \(ka^2/4\).'
+  146:
+    topic: s4-5
+    question: 'The average flow velocity in the trachea is \(v=c(r_0-r)r^2\) for \(\tfrac{r_0}2\le r\le r_0\). It is greatest at \(r=\)'
+    A: '\(r_0\)'
+    B: '\(\dfrac{r_0}{2}\)'
+    C: '\(\dfrac23r_0\)'
+    D: '\(\dfrac34r_0\)'
+    answer: C
+    hint: '\(v''=c(2r_0r-3r^2)=0\).'
+    explanation: '\(r=\tfrac23r_0\): the trachea is about 33% contracted.'
+  147:
+    topic: s4-5
+    question: To make the average cost per item smallest, the production level must be where
+    A: average cost is zero
+    B: fixed cost equals variable cost
+    C: marginal cost is zero
+    D: average cost equals marginal cost
+    answer: D
+    hint: 'Minimize \(\dfrac{c(x)}{x}\).'
+    explanation: '\(\dfrac{d}{dx}\dfrac{c}{x}=\dfrac{xc''-c}{x^2}=0\) means \(c''=c/x\).'
+  148:
+    topic: s4-5
+    question: 'If \(r(x)=6x\) and \(c(x)=x^3-6x^2+15x\), the best you can do is'
+    A: 'a profit of \(10\) at \(x=3\)'
+    B: 'a loss at every \(x>0\)'
+    C: a profit that grows without bound
+    D: 'break even at \(x=0\) and \(x=3\) (revenue equals cost)'
+    answer: D
+    hint: 'Profit \(p=r-c=-x^3+6x^2-9x=-x(x-3)^2\).'
+    explanation: '\(p\le0\) for \(x\ge0\), with \(p=0\) at \(x=0\) and \(x=3\).'
+  149:
+    topic: s4-5
+    question: 'A tour service charges \$200 per person for 50 people, reduced by \$2 per person for each extra person (up to 80 people). Fixed costs are \$6000 and each person costs \$32. How many people maximize profit?'
+    A: '\(50\)'
+    B: '\(59\)'
+    C: '\(80\)'
+    D: '\(67\)'
+    answer: D
+    hint: 'With \(n\) people, the price per person is \(200-2(n-50)=300-2n\), so the profit is \(n(300-2n)-6000-32n\).'
+    explanation: '\(P=-2n^2+268n-6000\), so \(P''=268-4n=0\) gives \(n=67\), which is within the allowed range of 50 to 80.'
+  150:
+    topic: s4-5
+    question: 'The Wilson lot size formula minimizes \(A(q)=\dfrac{km}{q}+cm+\dfrac{hq}{2}\). The optimal order quantity is'
+    A: '\(q=\dfrac{2km}{h}\)'
+    B: '\(q=\sqrt{\dfrac{h}{2km}}\)'
+    C: '\(q=\sqrt{\dfrac{km}{2h}}\)'
+    D: '\(q=\sqrt{\dfrac{2km}{h}}\)'
+    answer: D
+    hint: 'Solve \(A''(q)=-\dfrac{km}{q^2}+\dfrac h2=0\).'
+    explanation: '\(q^2=\dfrac{2km}{h}\). Since \(A''''>0\), this is a minimum.'
+  151:
+    topic: s4-5
+    question: 'How close does the curve \(y=\sqrt x\) come to the point \((\tfrac32,0)\)?'
+    A: '\(\dfrac{\sqrt5}{2}\)'
+    B: '\(\dfrac{\sqrt3}{2}\)'
+    C: '\(\dfrac32\)'
+    D: '\(\dfrac{\sqrt2}{2}\)'
+    answer: A
+    hint: 'Minimize the square of the distance, \(D=(x-\tfrac32)^2+x\).'
+    explanation: '\(D''=2x-3+1=0\) gives \(x=1\), so \(D=\tfrac14+1=\tfrac54\) and the distance is \(\tfrac{\sqrt5}{2}\).'
+  152:
+    topic: s4-5
+    question: 'The function \(f(x)=3+4\cos x+\cos2x\) is never negative because'
+    A: 'its minimum value is \(-1\)'
+    B: it is increasing
+    C: 'its minimum value on \([0,2\pi]\) is \(0\)'
+    D: its minimum is 3
+    answer: C
+    hint: '\(f''=-4\sin x-2\sin2x=-4\sin x(1+\cos x)\).'
+    explanation: 'The minimum \(f(\pi)=3-4+1=0\); also \(f=2(1+\cos x)^2\).'
+  153:
+    topic: s4-5
+    question: 'A trough''s cross-section is an isosceles trapezoid with a 1-ft base and two 1-ft legs, each tilted outward by angle \(\theta\) from the vertical (\(\theta=0\) is a rectangle). The area is largest when \(\theta=\)'
+    A: '\(\dfrac{\pi}{2}\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac\pi4\)'
+    D: '\(\dfrac\pi6\)'
+    answer: D
+    hint: 'The height is \(\cos\theta\) and the top width is \(1+2\sin\theta\), so \(A=(1+\sin\theta)\cos\theta\).'
+    explanation: '\(A''=\cos^2\theta-\sin\theta-\sin^2\theta=1-\sin\theta-2\sin^2\theta=0\) gives \(\sin\theta=\tfrac12\).'
+  154:
+    topic: s4-5
+    question: 'The stiffness \(S\) of a beam is proportional to width times the cube of the depth. From a 12-in.-diameter log, the stiffest beam has width \(w\) and depth \(d\):'
+    A: '\(w=6\) in., \(d=6\sqrt3\) in.'
+    B: '\(w=6\sqrt3\) in., \(d=6\) in.'
+    C: '\(w=4\) in., \(d=\sqrt{128}\) in.'
+    D: '\(w=6\sqrt2\) in., \(d=6\sqrt2\) in.'
+    answer: A
+    hint: '\(d^2=144-w^2\), so \(S=w(144-w^2)^{3/2}\).'
+    explanation: '\(S''=0\) gives \(144-4w^2=0\), \(w=6\). (The strongest beam, with \(S=wd^2\), has \(w=4\sqrt3\) and \(d=4\sqrt6\).)'
+  155:
+    topic: s4-5
+    question: 'The strength \(S\) of a rectangular beam is proportional to width times the square of its depth. From a 12-in.-diameter log, the strongest beam has width'
+    A: '\(6\) in.'
+    B: '\(6\sqrt2\) in.'
+    C: '\(4\sqrt6\) in.'
+    D: '\(4\sqrt3\) in.'
+    answer: D
+    hint: '\(S=wd^2=w(144-w^2)\).'
+    explanation: '\(S''=144-3w^2=0\) gives \(w=4\sqrt3\), and \(d=4\sqrt6\).'
+  156:
+    topic: s4-5
+    question: 'Where is the sum \(\tfrac{x}{2}+\dfrac{2}{x}\) (for \(x>0\)) smallest?'
+    A: 'at \(x=2\), where it equals \(2\)'
+    B: 'at \(x=1\)'
+    C: it has no minimum
+    D: 'at \(x=4\)'
+    answer: A
+    hint: '\(f''=\tfrac12-\tfrac2{x^2}\).'
+    explanation: '\(x=2\) gives \(1+1=2\).'
+  157:
+    topic: s4-5
+    question: A cylinder is inscribed in a sphere of radius 10 cm. The maximum volume of the cylinder is
+    A: '\(\dfrac{4000\pi}{3\sqrt3}\) cm\(^3\)\(\approx2418\) cm\(^3\)'
+    B: '\(\dfrac{4000\pi}{3}\) cm\(^3\)'
+    C: '\(1000\pi\) cm\(^3\)'
+    D: '\(\dfrac{2000\pi}{\sqrt3}\) cm\(^3\)'
+    answer: A
+    hint: 'With height \(h\) and radius \(r\): \(r^2=100-h^2/4\), so \(V=\pi h(100-h^2/4)\).'
+    explanation: '\(V''=0\) gives \(h=\dfrac{20}{\sqrt3}\), and \(V=\dfrac{4000\pi}{3\sqrt3}\).'
+  158:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 2} \frac{x - 2}{x^{2} - 4}\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(- \frac{1}{4}\)'
+    C: does not exist
+    D: '\(\frac{1}{4}\)'
+    answer: D
+    hint: 'This is \(\tfrac00\); differentiate numerator and denominator.'
+    explanation: '\(\dfrac{1}{2x}\to\dfrac14\).'
+  159:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} \frac{\sin{\left(5 x \right)}}{x}\).'
+    A: '\(-5\)'
+    B: does not exist
+    C: '\(10\)'
+    D: '\(5\)'
+    answer: D
+    hint: '\(\tfrac00\) form.'
+    explanation: '\(\dfrac{5\cos5x}{1}\to5\).'
+  160:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{5 x^{2} - 3 x}{7 x^{2} + 1}\).'
+    A: '\(\frac{5}{7}\)'
+    B: '\(- \frac{5}{7}\)'
+    C: does not exist
+    D: '\(\frac{10}{7}\)'
+    answer: A
+    hint: '\(\tfrac\infty\infty\) form; differentiate twice if needed.'
+    explanation: 'The ratio of leading coefficients is \(\tfrac57\).'
+  161:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 1} \frac{x^{3} - 1}{4 x^{3} - x - 3}\).'
+    A: '\(- \frac{3}{11}\)'
+    B: does not exist
+    C: '\(\frac{3}{11}\)'
+    D: '\(\frac{6}{11}\)'
+    answer: C
+    hint: '\(\tfrac00\) form.'
+    explanation: '\(\dfrac{3x^2}{12x^2-1}\to\dfrac{3}{11}\).'
+  162:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} \frac{1 - \cos{\left(x \right)}}{x^{2}}\).'
+    A: '\(1\)'
+    B: does not exist
+    C: '\(- \frac{1}{2}\)'
+    D: '\(\frac{1}{2}\)'
+    answer: D
+    hint: "Apply L'Hôpital twice."
+    explanation: '\(\dfrac{\sin x}{2x}\to\dfrac{\cos x}{2}\to\dfrac12\).'
+  163:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{t\to -3} \frac{t^{3} - 4 t + 15}{t^{2} - t - 12}\).'
+    A: '\(\frac{23}{7}\)'
+    B: '\(- \frac{46}{7}\)'
+    C: does not exist
+    D: '\(- \frac{23}{7}\)'
+    answer: D
+    hint: '\(\tfrac00\) form at \(t=-3\).'
+    explanation: '\(\dfrac{3t^2-4}{2t-1}\to\dfrac{23}{-7}=-\dfrac{23}{7}\).'
+  164:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{5 x^{3} - 2 x}{7 x^{3} + 3}\).'
+    A: '\(- \frac{5}{7}\)'
+    B: '\(\frac{5}{7}\)'
+    C: does not exist
+    D: '\(\frac{10}{7}\)'
+    answer: B
+    hint: Same degree.
+    explanation: 'The limit is \(\tfrac57\).'
+  165:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} \frac{- x + \sin{\left(x \right)}}{x^{3}}\).'
+    A: '\(\frac{1}{6}\)'
+    B: does not exist
+    C: '\(- \frac{1}{6}\)'
+    D: '\(- \frac{1}{3}\)'
+    answer: C
+    hint: "Apply L'Hôpital three times."
+    explanation: '\(\dfrac{\cos x-1}{3x^2}\to\dfrac{-\sin x}{6x}\to\dfrac{-\cos x}{6}\to-\dfrac16\).'
+  166:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 1} \frac{x - 1}{\log{\left(x \right)}}\).'
+    A: '\(2\)'
+    B: '\(-1\)'
+    C: does not exist
+    D: '\(1\)'
+    answer: D
+    hint: '\(\tfrac00\) form.'
+    explanation: '\(\dfrac{1}{1/x}=x\to1\).'
+  167:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} \frac{x^{2}}{\log{\left(\sec{\left(x \right)} \right)}}\).'
+    A: '\(-2\)'
+    B: does not exist
+    C: '\(4\)'
+    D: '\(2\)'
+    answer: D
+    hint: '\(\tfrac00\); \(\dfrac{d}{dx}\ln\sec x=\tan x\).'
+    explanation: '\(\dfrac{2x}{\tan x}\to2\).'
+  168:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} \frac{3^{x} - 1}{x}\).'
+    A: '\(3\)'
+    B: '\(\frac{\log{\left(3 \right)}}{2}\)'
+    C: '\(1\)'
+    D: '\(\log{\left(3 \right)}\)'
+    answer: D
+    hint: '\(\dfrac{d}{dx}3^x=3^x\ln3\).'
+    explanation: 'The limit is \(\ln3\).'
+  169:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} \frac{2^{x} x}{2^{x} - 1}\).'
+    A: '\(1\)'
+    B: '\(\frac{1}{\log{\left(2 \right)}}\)'
+    C: '\(2\)'
+    D: '\(\log{\left(2 \right)}\)'
+    answer: B
+    hint: 'Apply L''Hôpital to \(\dfrac{x}{2^x-1}\).'
+    explanation: 'Since \(2^x-1\approx x\ln2\), the quotient \(\dfrac{x\,2^x}{2^x-1}\to\dfrac{1}{\ln2}\).'
+  170:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{\log{\left(x + 1 \right)}}{\log{\left(x \right)}}\).'
+    A: '\(1\)'
+    B: does not exist
+    C: '\(-1\)'
+    D: '\(2\)'
+    answer: A
+    hint: '\(\tfrac\infty\infty\) form.'
+    explanation: '\(\dfrac{1/(x+1)}{1/x}=\dfrac{x}{x+1}\to1\).'
+  171:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0^{+}} x \log{\left(x \right)}\).'
+    A: '\(1\)'
+    B: '\(-1\)'
+    C: '\(0\)'
+    D: does not exist
+    answer: C
+    hint: 'This is \(0\cdot(-\infty)\). Rewrite as \(\dfrac{\ln x}{1/x}\).'
+    explanation: '\(\dfrac{1/x}{-1/x^2}=-x\to0\).'
+  172:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} x^{2} e^{- x}\).'
+    A: '\(\infty\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(e\)'
+    answer: B
+    hint: 'Not indeterminate as \(x\to0\): substitute.'
+    explanation: '\(0\cdot1=0\).'
+  173:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} x^{2} e^{- x}\).'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: does not exist
+    D: '\(-1\)'
+    answer: A
+    hint: 'Rewrite as \(\dfrac{x^2}{e^x}\).'
+    explanation: 'Applying L''Hôpital twice gives \(\dfrac{2}{e^x}\to0\).'
+  174:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{\log{\left(x \right)}^{2}}{x}\).'
+    A: '\(0\)'
+    B: does not exist
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: A
+    hint: '\(\tfrac\infty\infty\).'
+    explanation: '\(\dfrac{2\ln x/x}{1}\to0\).'
+  175:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 1^{+}} - \frac{1}{\log{\left(x \right)}} + \frac{1}{x - 1}\).'
+    A: '\(\frac{1}{2}\)'
+    B: does not exist
+    C: '\(- \frac{1}{2}\)'
+    D: '\(-1\)'
+    answer: C
+    hint: 'This is \(\infty-\infty\); combine over a common denominator.'
+    explanation: '\(\dfrac{\ln x-x+1}{(x-1)\ln x}\to-\tfrac12\) after applying L''Hôpital twice.'
+  176:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0} - \frac{1}{\sin{\left(x \right)}} + \frac{1}{x}\).'
+    A: does not exist
+    B: '\(-1\)'
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Combine: \(\dfrac{\sin x-x}{x\sin x}\).'
+    explanation: '\(\dfrac{\cos x-1}{\sin x+x\cos x}\to0\).'
+  177:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 1^{+}} x^{\frac{1}{1 - x}}\).'
+    A: '\(e^{-1}\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(e\)'
+    answer: A
+    hint: '\(1^\infty\) form: take the log.'
+    explanation: '\(\ln y=\dfrac{\ln x}{1-x}\to-1\), so the limit is \(e^{-1}\).'
+  178:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0^{+}} x^{x}\).'
+    A: '\(e\)'
+    B: '\(1\)'
+    C: '\(0\)'
+    D: '\(\infty\)'
+    answer: B
+    hint: '\(0^0\) form: \(\ln y=x\ln x\to0\).'
+    explanation: 'The limit is \(e^0=1\).'
+  179:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \left(1 + \frac{1}{x}\right)^{x}\).'
+    A: '\(\infty\)'
+    B: '\(e\)'
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: B
+    hint: '\(1^\infty\): \(\ln y=x\ln(1+1/x)\).'
+    explanation: '\(\dfrac{\ln(1+1/x)}{1/x}\to1\), so the limit is \(e\).'
+  180:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \left(2 x + 1\right)^{\frac{1}{2 \log{\left(x \right)}}}\).'
+    A: '\(0\)'
+    B: '\(e\)'
+    C: '\(1\)'
+    D: '\(e^{\frac{1}{2}}\)'
+    answer: D
+    hint: Take the natural log.
+    explanation: '\(\ln y=\dfrac{\ln(1+2x)}{2\ln x}\to\dfrac12\), so the limit is \(e^{1/2}\).'
+  181:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to 0^{+}} \left(x + e^{x}\right)^{\frac{1}{x}}\).'
+    A: '\(2\)'
+    B: '\(e^{2}\)'
+    C: '\(1\)'
+    D: '\(e\)'
+    answer: B
+    hint: '\(1^\infty\) form.'
+    explanation: '\(\ln y=\dfrac{\ln(e^x+x)}{x}\to\dfrac{e^x+1}{e^x+x}\to2\), so the limit is \(e^2\).'
+  182:
+    topic: s4-6
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{\sqrt{x}}{\sqrt{x + 1}}\).'
+    A: '\(-1\)'
+    B: does not exist
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: C
+    hint: "This is not a candidate for L'Hôpital; simplify instead."
+    explanation: '\(\sqrt{\dfrac{x}{x+1}}\to1\). L''Hôpital''s Rule would just cycle.'
+  183:
+    topic: s4-6
+    question: 'Why does L''Hôpital''s Rule not help in evaluating \(\displaystyle\lim_{x\to\infty}\dfrac{\sqrt{9x+1}}{\sqrt{x+1}}\)?'
+    A: 'The limit is not of the form \(\infty/\infty\)'
+    B: The limit is infinite
+    C: The derivatives do not exist
+    D: Each application returns the reciprocal form of the original quotient, so it cycles; simplify algebraically instead
+    answer: D
+    hint: Differentiate top and bottom and compare.
+    explanation: 'Dividing by \(\sqrt x\): \(\sqrt{\dfrac{9+1/x}{1+1/x}}\to3\).'
+  184:
+    topic: s4-6
+    question: Which limit is correct?
+    A: '\(\displaystyle\lim_{x\to3}\dfrac{x-3}{x^2-3}=\lim\dfrac{1}{2x}=\dfrac16\)'
+    B: '\(\displaystyle\lim_{x\to3}\dfrac{x-3}{x^2-3}=\dfrac{0}{6}=0\), since the form is not indeterminate'
+    C: The limit does not exist
+    D: 'The limit is \(\infty\)'
+    answer: B
+    hint: 'Check whether the form is \(\tfrac00\) before applying L''Hôpital.'
+    explanation: 'The denominator at \(x=3\) is \(6\), not 0. L''Hôpital''s Rule applies only to indeterminate forms.'
+  185:
+    topic: s4-6
+    question: Which of the following is an indeterminate form?
+    A: '\(\infty+\infty\)'
+    B: '\(\dfrac{1}{\infty}\)'
+    C: '\(\infty-\infty\)'
+    D: '\(\infty\cdot\infty\)'
+    answer: C
+    hint: The others have definite values.
+    explanation: '\(\infty-\infty\) can equal anything depending on the functions involved.'
+  186:
+    topic: s4-6
+    question: Which of the following is NOT an indeterminate form?
+    A: '\(1^\infty\)'
+    B: '\(0^0\)'
+    C: '\(0\cdot\infty\)'
+    D: '\(\infty\cdot\infty\)'
+    answer: D
+    hint: A product of two large numbers is large.
+    explanation: '\(\infty\cdot\infty=\infty\).'
+  187:
+    topic: s4-6
+    question: 'To compute \(\displaystyle\lim_{x\to0^+}x^x\), one writes \(x^x=e^{x\ln x}\). The exponent has the form'
+    A: '\(1^\infty\)'
+    B: '\(\infty-\infty\)'
+    C: '\(0\cdot(-\infty)\)'
+    D: '\(\dfrac00\)'
+    answer: C
+    hint: 'As \(x\to0^+\): \(x\to0\) and \(\ln x\to-\infty\).'
+    explanation: 'Convert to \(\dfrac{\ln x}{1/x}\) to apply L''Hôpital.'
+  188:
+    topic: s4-6
+    question: 'If \(f(x)=x+2\) and \(g(x)=x+1\), then \(\displaystyle\lim_{x\to0}\dfrac{f''(x)}{g''(x)}\) and \(\displaystyle\lim_{x\to0}\dfrac{f(x)}{g(x)}\) are'
+    A: '\(2\) and \(1\)'
+    B: '\(1\) and \(1\)'
+    C: '\(2\) and \(2\)'
+    D: '\(1\) and \(2\)'
+    answer: D
+    hint: 'This does not violate L''Hôpital''s Rule: the quotient \(f/g\) was not an indeterminate form.'
+    explanation: '\(f''/g''=1\), but \(f(0)/g(0)=2\). The rule requires \(f(0)=g(0)=0\).'
+  189:
+    topic: s4-6
+    question: 'Find a value of \(c\) that makes \(f(x)=\dfrac{9x-3\sin3x}{5x^3}\) (\(x\ne0\)), \(f(0)=c\), continuous at \(0\).'
+    A: '\(c=\dfrac95\)'
+    B: '\(c=\dfrac{27}{10}\)'
+    C: '\(c=\dfrac{27}{5}\)'
+    D: '\(c=0\)'
+    answer: B
+    hint: 'Compute \(\displaystyle\lim_{x\to0}f(x)\) by L''Hôpital''s Rule; the form is \(\tfrac00\) three times.'
+    explanation: '\(\dfrac{9-9\cos3x}{15x^2}\to\dfrac{27\sin3x}{30x}\to\dfrac{81\cos3x}{30}=\dfrac{27}{10}\).'
+  190:
+    topic: s4-6
+    question: 'The limit \(\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+x}-\sqrt{x^2-x}\right)\) equals'
+    A: '\(0\)'
+    B: '\(2\)'
+    C: '\(\infty\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'This is \(\infty-\infty\); multiply by the conjugate.'
+    explanation: '\(\dfrac{2x}{\sqrt{x^2+x}+\sqrt{x^2-x}}\to\dfrac{2x}{2x}=1\).'
+  191:
+    topic: s4-6
+    question: 'As \(x\to\infty\), which of these grows fastest?'
+    A: '\(x^{100}\)'
+    B: '\(\ln x\)'
+    C: '\(x^{\ln x}\)'
+    D: '\(e^x\)'
+    answer: D
+    hint: Exponentials outgrow polynomials.
+    explanation: 'Repeated L''Hôpital shows \(x^n/e^x\to0\) for every \(n\).'
+  192:
+    topic: s4-6
+    question: 'A triangle has legs 1 and \(y\), hypotenuse \(r\), and the angle opposite \(y\) is \(\theta\). As \(\theta\to\pi/2\), the limit of \(r-y\) is'
+    A: '\(\tfrac12\)'
+    B: '\(1\)'
+    C: '\(0\)'
+    D: '\(\infty\)'
+    answer: C
+    hint: '\(r=\sec\theta\), \(y=\tan\theta\). Write \(\sec\theta-\tan\theta=\dfrac{1-\sin\theta}{\cos\theta}\).'
+    explanation: 'L''Hôpital: \(\dfrac{-\cos\theta}{-\sin\theta}\to0\).'
+  193:
+    topic: s4-6
+    question: 'Cauchy''s Mean Value Theorem for \(f(x)=x\), \(g(x)=x^2\) on \([a,b]\) gives \(c=\)'
+    A: '\(\dfrac{a+b}{2}\)'
+    B: '\(\sqrt{ab}\)'
+    C: '\(a+b\)'
+    D: '\(\dfrac{ab}{a+b}\)'
+    answer: A
+    hint: '\(\dfrac{f''(c)}{g''(c)}=\dfrac{f(b)-f(a)}{g(b)-g(a)}\).'
+    explanation: '\(\dfrac{1}{2c}=\dfrac{b-a}{b^2-a^2}=\dfrac1{a+b}\).'
+  194:
+    topic: s4-7
+    question: 'Use Newton''s method on \(f(x)=x^2+x-1\) with \(x_0=1\). The approximation \(x_2\) is'
+    A: '\(-0.619\)'
+    B: '\(0.719\)'
+    C: '\(0.619\)'
+    D: '\(0.6667\)'
+    answer: C
+    hint: '\(x_1=1-\dfrac{f(1)}{f''(1)}\) with \(f''(x)=2x+1\).'
+    explanation: 'Iterate \(x_{n+1}=x_n-\dfrac{f(x_n)}{f''(x_n)}\): \(x_0\approx1.0\), \(x_1\approx0.6667\), \(x_2\approx0.619\).'
+  195:
+    topic: s4-7
+    question: 'Use Newton''s method on \(f(x)=x^2+x-1\) with \(x_0=-1\). The approximation \(x_2\) is'
+    A: '\(-2.0\)'
+    B: '\(-1.5667\)'
+    C: '\(1.6667\)'
+    D: '\(-1.6667\)'
+    answer: D
+    hint: '\(f''(x)=2x+1\); note \(f''(-1)=-1\).'
+    explanation: 'Iterate \(x_{n+1}=x_n-\dfrac{f(x_n)}{f''(x_n)}\): \(x_0\approx-1.0\), \(x_1\approx-2.0\), \(x_2\approx-1.6667\).'
+  196:
+    topic: s4-7
+    question: 'Use Newton''s method on \(f(x)=x^3+3x+1\) with \(x_0=0\). \(x_2=\)'
+    A: '\(0.3222\)'
+    B: '\(-0.3333\)'
+    C: '\(-0.2222\)'
+    D: '\(-0.3222\)'
+    answer: D
+    hint: '\(f''(x)=3x^2+3\).'
+    explanation: 'Iterate \(x_{n+1}=x_n-\dfrac{f(x_n)}{f''(x_n)}\): \(x_0\approx0.0\), \(x_1\approx-0.3333\), \(x_2\approx-0.3222\).'
+  197:
+    topic: s4-7
+    question: 'Use Newton''s method on \(f(x)=x^4+x-3\) with \(x_0=1\). \(x_2=\)'
+    A: '\(1.2\)'
+    B: '\(1.2654\)'
+    C: '\(1.1654\)'
+    D: '\(-1.1654\)'
+    answer: C
+    hint: '\(f''(x)=4x^3+1\).'
+    explanation: 'Iterate \(x_{n+1}=x_n-\dfrac{f(x_n)}{f''(x_n)}\): \(x_0\approx1.0\), \(x_1\approx1.2\), \(x_2\approx1.1654\).'
+  198:
+    topic: s4-7
+    question: 'Use Newton''s method on \(f(x)=x^4+x-3\) with \(x_0=-1\). \(x_2=\)'
+    A: '\(-1.6452\)'
+    B: '\(-1.5452\)'
+    C: '\(1.6452\)'
+    D: '\(-2.0\)'
+    answer: A
+    hint: '\(f(-1)=-3\) and \(f''(-1)=-3\).'
+    explanation: 'Iterate \(x_{n+1}=x_n-\dfrac{f(x_n)}{f''(x_n)}\): \(x_0\approx-1.0\), \(x_1\approx-2.0\), \(x_2\approx-1.6452\).'
+  199:
+    topic: s4-7
+    question: 'Use Newton''s method on \(f(x)=2x-x^2+1\) with \(x_0=2\). \(x_2=\)'
+    A: '\(2.4167\)'
+    B: '\(2.5\)'
+    C: '\(2.5167\)'
+    D: '\(-2.4167\)'
+    answer: A
+    hint: '\(f''(x)=2-2x\).'
+    explanation: 'Iterate \(x_{n+1}=x_n-\dfrac{f(x_n)}{f''(x_n)}\): \(x_0\approx2.0\), \(x_1\approx2.5\), \(x_2\approx2.4167\).'
+  200:
+    topic: s4-7
+    question: 'If \(x_0\) is a root of \(f\) and \(f''(x_0)\ne0\), then Newton''s method gives'
+    A: '\(x_1=x_0\) (and all later approximations stay at the root)'
+    B: '\(x_1\) undefined'
+    C: '\(x_1=0\)'
+    D: '\(x_1=-x_0\)'
+    answer: A
+    hint: '\(x_1=x_0-\dfrac{f(x_0)}{f''(x_0)}\).'
+    explanation: '\(f(x_0)=0\) so the correction term vanishes.'
+  201:
+    topic: s4-7
+    question: 'To estimate \(\dfrac\pi2\) to five decimal places by solving \(\cos x=0\) with Newton''s method, the starting value'
+    A: does not matter at all
+    B: 'must be exactly \(\tfrac\pi2\)'
+    C: must be negative
+    D: 'matters: it must be chosen close enough to \(\pi/2\) (for example \(x_0=1\))'
+    answer: D
+    hint: '\(x_{n+1}=x_n+\cot x_n\). Check what happens near a point where \(\sin\) is 0.'
+    explanation: 'Starting near an extremum of \(\cos\) (e.g. \(x_0=0\) with \(\sin0=0\)) the iteration breaks down.'
+  202:
+    topic: s4-7
+    question: 'Newton''s method applied to \(f(x)=\begin{cases}\sqrt x,&x\ge0\\ \sqrt{-x},&x<0\end{cases}\) with \(x_0=h>0\) gives \(x_1=\)'
+    A: '\(h\)'
+    B: '\(-h\)'
+    C: '\(h/2\)'
+    D: '\(0\)'
+    answer: B
+    hint: '\(x_1=h-\dfrac{\sqrt h}{1/(2\sqrt h)}\).'
+    explanation: '\(x_1=h-2h=-h\), and then \(x_2=h\): the iteration oscillates and never converges.'
+  203:
+    topic: s4-7
+    question: 'Newton''s method for \(f(x)=x^{1/3}\) with \(x_0=1\) produces \(x_n=\)'
+    A: '\(0\) after one step'
+    B: '\(2^{-n}\)'
+    C: '\((-2)^n\), so \(|x_n|\to\infty\)'
+    D: '\(1\) for all \(n\)'
+    answer: C
+    hint: '\(x_{n+1}=x_n-3x_n=-2x_n\).'
+    explanation: The approximations move farther from the root 0 each time.
+  204:
+    topic: s4-7
+    question: 'Newton''s method to solve \(x^3-3x-1=0\) near \(x_0=2\) uses the recursion'
+    A: '\(x_{n+1}=x_n-\dfrac{x_n^3-3x_n-1}{3x_n^2-3}\)'
+    B: '\(x_{n+1}=x_n-(x_n^3-3x_n-1)\)'
+    C: '\(x_{n+1}=\dfrac{x_n^3-3x_n-1}{3x_n^2-3}\)'
+    D: '\(x_{n+1}=x_n+\dfrac{x_n^3-3x_n-1}{3x_n^2-3}\)'
+    answer: A
+    hint: '\(x_{n+1}=x_n-f(x_n)/f''(x_n)\).'
+    explanation: '\(f''(x)=3x^2-3\).'
+  205:
+    topic: s4-7
+    question: 'The four statements "find the roots of \(f(x)=x^3-3x-1\)", "find the \(x\)-coordinates where \(y=x^3\) meets \(y=3x+1\)", "find where \(y=x^3-3x\) crosses \(y=1\)", and "find \(x\) where \(g''(x)=0\) for \(g=\tfrac14x^4-\tfrac32x^2-x+5\)" ask for'
+    A: two different pairs of answers
+    B: the same information
+    C: four different answers
+    D: no solutions
+    answer: B
+    hint: 'Rewrite each as \(x^3-3x-1=0\).'
+    explanation: 'All reduce to \(x^3-3x-1=0\) (note \(g''=x^3-3x-1\)).'
+  206:
+    topic: s4-7
+    question: 'Newton''s method applied to \(f(x)=(x-1)^{40}\) with \(x_0=2\) converges very slowly because'
+    A: the function is not continuous
+    B: the root is complex
+    C: 'the curve is nearly flat near the root so each step moves only a little (\(x_{n+1}-1=\tfrac{39}{40}(x_n-1)\))'
+    D: 'the derivative is zero at \(x_0\)'
+    answer: C
+    hint: '\(x_{n+1}=x_n-\dfrac{x_n-1}{40}\).'
+    explanation: 'Each step reduces the error by a factor of \(\tfrac{39}{40}\).'
+  207:
+    topic: s4-7
+    question: 'Newton''s method on \(f(x)=4x^4-4x^2\) converges to a different zero depending on \(x_0\). Starting at \(x_0=-2\) leads to the zero at'
+    A: it diverges
+    B: '\(x=-1\)'
+    C: '\(x=1\)'
+    D: '\(x=0\)'
+    answer: B
+    hint: 'The zeros are \(0,\pm1\). Start far left.'
+    explanation: '\(f=4x^2(x-1)(x+1)\) and Newton''s method from the far left moves toward the nearest root, \(-1\).'
+  208:
+    topic: s4-7
+    question: "Newton's method requires"
+    A: '\(f\) to have only one root'
+    B: '\(f\) to be a polynomial'
+    C: '\(f''\) to be constant'
+    D: '\(f\) to be differentiable near the root and \(f''\ne0\) at the approximations'
+    answer: D
+    hint: 'Each step divides by \(f''(x_n)\).'
+    explanation: 'If \(f''(x_n)=0\) the iteration breaks down.'
+  209:
+    topic: s4-8
+    question: 'An antiderivative of \(f(x)=x^{2} - 2 x + 1\) is'
+    A: '\(\frac{x^{3}}{3} - x^{2} + x\)'
+    B: '\(\frac{x^{3}}{3} - x + 1\)'
+    C: '\(\frac{x^{4}}{12} - \frac{x^{3}}{3} + \frac{x^{2}}{2}\)'
+    D: '\(2 x - 2\)'
+    answer: A
+    hint: Reverse the power rule on each term.
+    explanation: '\(\dfrac{d}{dx}\left[\frac{x^{3}}{3} - x^{2} + x\right]=x^{2} - 2 x + 1\).'
+  210:
+    topic: s4-8
+    question: 'An antiderivative of \(f(x)=2 x + 3 + \frac{1}{x^{4}}\) is'
+    A: '\(x^{2} + 5 x + 3 - \frac{1}{3 x^{3}} + \frac{1}{x^{4}}\)'
+    B: '\(2 - \frac{4}{x^{5}}\)'
+    C: '\(x^{2} + 3 x - \frac{1}{3 x^{3}}\)'
+    D: '\(\frac{x^{3}}{3} + \frac{3 x^{2}}{2} + \frac{1}{6 x^{2}}\)'
+    answer: C
+    hint: Reverse the power rule on each term.
+    explanation: '\(\dfrac{d}{dx}\left[x^{2} + 3 x - \frac{1}{3 x^{3}}\right]=2 x + 3 + \frac{1}{x^{4}}\).'
+  211:
+    topic: s4-8
+    question: 'An antiderivative of \(f(x)=2 - \frac{5}{x^{2}}\) is'
+    A: '\(\frac{10}{x^{3}}\)'
+    B: '\(2 x + 2 + \frac{5}{x} - \frac{5}{x^{2}}\)'
+    C: '\(2 x + \frac{5}{x}\)'
+    D: '\(x^{2} + 5 \log{\left(x \right)}\)'
+    answer: C
+    hint: Reverse the power rule on each term.
+    explanation: '\(\dfrac{d}{dx}\left[2 x + \frac{5}{x}\right]=2 - \frac{5}{x^{2}}\).'
+  212:
+    topic: s4-8
+    question: 'An antiderivative of \(f(x)=x^{3} - \frac{1}{x^{3}}\) is'
+    A: '\(\frac{x^{4}}{4} + \frac{1}{2 x^{2}}\)'
+    B: '\(3 x^{2} + \frac{3}{x^{4}}\)'
+    C: '\(\frac{x^{4}}{4} + x^{3} + \frac{1}{2 x^{2}} - \frac{1}{x^{3}}\)'
+    D: '\(\frac{x^{5}}{20} - \frac{1}{2 x}\)'
+    answer: A
+    hint: Reverse the power rule on each term.
+    explanation: '\(\dfrac{d}{dx}\left[\frac{x^{4}}{4} + \frac{1}{2 x^{2}}\right]=x^{3} - \frac{1}{x^{3}}\).'
+  213:
+    topic: s4-8
+    question: 'An antiderivative of \(f(x)=\frac{3 \sqrt{x}}{2}\) is'
+    A: '\(\frac{2 x^{\frac{5}{2}}}{5}\)'
+    B: '\(x^{\frac{3}{2}}\)'
+    C: '\(\frac{3}{4 \sqrt{x}}\)'
+    D: '\(x^{\frac{3}{2}} + \frac{3 \sqrt{x}}{2}\)'
+    answer: B
+    hint: Reverse the power rule on each term.
+    explanation: '\(\dfrac{d}{dx}\left[x^{\frac{3}{2}}\right]=\frac{3 \sqrt{x}}{2}\).'
+  214:
+    topic: s4-8
+    question: 'An antiderivative of \(f(x)=1 - \frac{5}{x}\) is'
+    A: '\(\frac{5}{x^{2}}\)'
+    B: '\(x - 5 \log{\left(x \right)}\)'
+    C: '\(x - 5 \log{\left(x \right)} + 1 - \frac{5}{x}\)'
+    D: '\(\frac{x^{2}}{2} - 5 x \log{\left(x \right)} + 5 x\)'
+    answer: B
+    hint: Reverse the power rule on each term.
+    explanation: '\(\dfrac{d}{dx}\left[x - 5 \log{\left(x \right)}\right]=1 - \frac{5}{x}\).'
+  215:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(7 \sin{\left(\frac{x}{3} \right)}\right)dx\) is'
+    A: '\(21 \cos{\left(\frac{x}{3} \right)}+C\)'
+    B: '\(\frac{7 \cos{\left(\frac{x}{3} \right)}}{3}+C\)'
+    C: '\(- 21 \cos{\left(\frac{x}{3} \right)}+C\)'
+    D: '\(- 42 \cos{\left(\frac{x}{3} \right)}+C\)'
+    answer: C
+    hint: '\(\int\sin ax\,dx=-\dfrac{\cos ax}{a}\).'
+    explanation: 'Differentiating \(- 21 \cos{\left(\frac{x}{3} \right)}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  216:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(3 \cos{\left(5 x \right)}\right)dx\) is'
+    A: '\(- \frac{3 \sin{\left(5 x \right)}}{5}+C\)'
+    B: '\(\frac{6 \sin{\left(5 x \right)}}{5}+C\)'
+    C: '\(\frac{3 \sin{\left(5 x \right)}}{5}+C\)'
+    D: '\(- 15 \sin{\left(5 x \right)}+C\)'
+    answer: C
+    hint: '\(\int\cos ax\,dx=\dfrac{\sin ax}{a}\).'
+    explanation: 'Differentiating \(\frac{3 \sin{\left(5 x \right)}}{5}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  217:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(- 5 \csc^{2}{\left(x \right)}\right)dx\) is'
+    A: '\(10 \cot{\left(x \right)} \csc^{2}{\left(x \right)}+C\)'
+    B: '\(\frac{5 \cos{\left(x \right)}}{\sin{\left(x \right)}}+C\)'
+    C: '\(\frac{10 \cos{\left(x \right)}}{\sin{\left(x \right)}}+C\)'
+    D: '\(- \frac{5 \cos{\left(x \right)}}{\sin{\left(x \right)}}+C\)'
+    answer: B
+    hint: '\(\dfrac{d}{dx}\cot x=-\csc^2x\).'
+    explanation: 'Differentiating \(\frac{5 \cos{\left(x \right)}}{\sin{\left(x \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  218:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(e^{3 x} + 5 e^{- x}\right)dx\) is'
+    A: '\(- \frac{e^{3 x}}{3} + 5 e^{- x}+C\)'
+    B: '\(\frac{2 e^{3 x}}{3} - 10 e^{- x}+C\)'
+    C: '\(3 e^{3 x} - 5 e^{- x}+C\)'
+    D: '\(\frac{e^{3 x}}{3} - 5 e^{- x}+C\)'
+    answer: D
+    hint: '\(\int e^{ax}dx=\dfrac{e^{ax}}{a}\).'
+    explanation: 'Differentiating \(\frac{e^{3 x}}{3} - 5 e^{- x}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  219:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(3^{x}\right)dx\) is'
+    A: '\(3^{x} \log{\left(3 \right)}+C\)'
+    B: '\(- \frac{3^{x}}{\log{\left(3 \right)}}+C\)'
+    C: '\(\frac{2 \cdot 3^{x}}{\log{\left(3 \right)}}+C\)'
+    D: '\(\frac{3^{x}}{\log{\left(3 \right)}}+C\)'
+    answer: D
+    hint: '\(\int a^xdx=\dfrac{a^x}{\ln a}\).'
+    explanation: 'Differentiating \(\frac{3^{x}}{\log{\left(3 \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  220:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(\frac{2}{\sqrt{1 - x^{2}}}\right)dx\) is'
+    A: '\(\frac{2 x}{\left(1 - x^{2}\right)^{\frac{3}{2}}}+C\)'
+    B: '\(2 \operatorname{asin}{\left(x \right)}+C\)'
+    C: '\(4 \operatorname{asin}{\left(x \right)}+C\)'
+    D: '\(- 2 \operatorname{asin}{\left(x \right)}+C\)'
+    answer: B
+    hint: '\(\dfrac{d}{dx}\sin^{-1}x=\dfrac1{\sqrt{1-x^2}}\).'
+    explanation: 'Differentiating \(2 \operatorname{asin}{\left(x \right)}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  221:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(\frac{1}{4 x^{2} + 1}\right)dx\) is'
+    A: '\(\operatorname{atan}{\left(2 x \right)}+C\)'
+    B: '\(- \frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    C: '\(- \frac{8 x}{\left(4 x^{2} + 1\right)^{2}}+C\)'
+    D: '\(\frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    answer: D
+    hint: '\(\int\dfrac{du}{1+u^2}=\tan^{-1}u\); let \(u=2x\).'
+    explanation: 'Differentiating \(\frac{\operatorname{atan}{\left(2 x \right)}}{2}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  222:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(4 \tan{\left(x \right)} \sec{\left(x \right)} - 2 \sec^{2}{\left(x \right)}\right)dx\) is'
+    A: '\(- \frac{4 \sin{\left(x \right)}}{\cos{\left(x \right)}} + \frac{8}{\cos{\left(x \right)}}+C\)'
+    B: '\(- \frac{2 \sin{\left(x \right)}}{\cos{\left(x \right)}} + \frac{4}{\cos{\left(x \right)}}+C\)'
+    C: '\(\frac{2 \sin{\left(x \right)}}{\cos{\left(x \right)}} - \frac{4}{\cos{\left(x \right)}}+C\)'
+    D: '\(4 \left(\tan^{2}{\left(x \right)} + 1\right) \sec{\left(x \right)} + 4 \tan^{2}{\left(x \right)} \sec{\left(x \right)} - 4 \tan{\left(x \right)} \sec^{2}{\left(x \right)}+C\)'
+    answer: B
+    hint: 'Use \(\sec x\tan x\) and \(\sec^2x\).'
+    explanation: 'Differentiating \(- \frac{2 \sin{\left(x \right)}}{\cos{\left(x \right)}} + \frac{4}{\cos{\left(x \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  223:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(\frac{\cos{\left(4 x \right)}}{2} + \frac{1}{2}\right)dx\) is'
+    A: '\(- 2 \sin{\left(4 x \right)}+C\)'
+    B: '\(- \frac{x}{2} - \frac{\sin{\left(4 x \right)}}{8}+C\)'
+    C: '\(x + \frac{\sin{\left(4 x \right)}}{4}+C\)'
+    D: '\(\frac{x}{2} + \frac{\sin{\left(4 x \right)}}{8}+C\)'
+    answer: D
+    hint: '\(\cos^2 2x=\dfrac{1+\cos4x}{2}\).'
+    explanation: 'Differentiating \(\frac{x}{2} + \frac{\sin{\left(4 x \right)}}{8}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  224:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(\cot^{2}{\left(x \right)}\right)dx\) is'
+    A: '\(- 2 x - \frac{2 \cos{\left(x \right)}}{\sin{\left(x \right)}}+C\)'
+    B: '\(\left(- 2 \cot^{2}{\left(x \right)} - 2\right) \cot{\left(x \right)}+C\)'
+    C: '\(- x - \frac{\cos{\left(x \right)}}{\sin{\left(x \right)}}+C\)'
+    D: '\(x + \frac{\cos{\left(x \right)}}{\sin{\left(x \right)}}+C\)'
+    answer: C
+    hint: 'Use \(\cot^2x=\csc^2x-1\).'
+    explanation: 'Differentiating \(- x - \frac{\cos{\left(x \right)}}{\sin{\left(x \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  225:
+    topic: s4-8
+    question: 'The most general antiderivative \(\displaystyle\int\left(\tan^{2}{\left(x \right)}\right)dx\) is'
+    A: '\(- x + \frac{\sin{\left(x \right)}}{\cos{\left(x \right)}}+C\)'
+    B: '\(\left(2 \tan^{2}{\left(x \right)} + 2\right) \tan{\left(x \right)}+C\)'
+    C: '\(- 2 x + \frac{2 \sin{\left(x \right)}}{\cos{\left(x \right)}}+C\)'
+    D: '\(x - \frac{\sin{\left(x \right)}}{\cos{\left(x \right)}}+C\)'
+    answer: A
+    hint: 'Use \(\tan^2x=\sec^2x-1\).'
+    explanation: 'Differentiating \(- x + \frac{\sin{\left(x \right)}}{\cos{\left(x \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+  226:
+    topic: s4-8
+    question: 'Right or wrong: \(\displaystyle\int x\sin x\,dx=\dfrac{x^2}{2}\sin x+C\)?'
+    A: 'Wrong: differentiating gives \(x\sin x+\tfrac{x^2}{2}\cos x\)'
+    B: 'Right if \(C=0\)'
+    C: 'Wrong: the answer should be \(-\cos x+C\)'
+    D: Right
+    answer: A
+    hint: Differentiate the proposed answer with the product rule.
+    explanation: 'The extra term \(\tfrac{x^2}{2}\cos x\) means this is not an antiderivative. The correct one is \(-x\cos x+\sin x+C\).'
+  227:
+    topic: s4-8
+    question: 'Which is the correct antiderivative? \(\displaystyle\int x\sin x\,dx=\)'
+    A: '\(-x\cos x+\sin x+C\)'
+    B: '\(x\cos x-\sin x+C\)'
+    C: '\(-x\cos x+C\)'
+    D: '\(\dfrac{x^2}{2}\sin x+C\)'
+    answer: A
+    hint: Differentiate each option.
+    explanation: '\(\dfrac{d}{dx}(-x\cos x+\sin x)=-\cos x+x\sin x+\cos x=x\sin x\).'
+  228:
+    topic: s4-8
+    question: 'Right or wrong: \(\displaystyle\int6(2x+1)^2dx=(2x+1)^3+C\)?'
+    A: 'Wrong: it should be \(\tfrac13(2x+1)^3+C\)'
+    B: 'Wrong: it should be \(6(2x+1)^3+C\)'
+    C: 'Wrong: it should be \(2(2x+1)^3+C\)'
+    D: Right
+    answer: D
+    hint: '\(\dfrac{d}{dx}(2x+1)^3=3(2x+1)^2\cdot2\).'
+    explanation: 'The derivative is \(6(2x+1)^2\), exactly the integrand.'
+  229:
+    topic: s4-8
+    question: 'Verify by differentiation: \(\displaystyle\int\dfrac{1}{(x+1)^2}dx=-\dfrac{1}{x+1}+C\) is'
+    A: 'incorrect: it should be \(\dfrac{1}{x+1}+C\)'
+    B: correct
+    C: 'incorrect: it should be \(-\dfrac{2}{(x+1)^3}+C\)'
+    D: 'incorrect: it should be \(\ln|x+1|+C\)'
+    answer: B
+    hint: '\(\dfrac{d}{dx}\left(-(x+1)^{-1}\right)=(x+1)^{-2}\).'
+    explanation: Yes.
+  230:
+    topic: s4-8
+    question: 'Right or wrong: \(\displaystyle\int\dfrac{1}{x+1}dx=\ln(x+1)+C\) for \(x>-1\)?'
+    A: 'Wrong: it is \(\ln x+C\)'
+    B: Right
+    C: 'Wrong: it is \(\dfrac{1}{(x+1)^2}\)'
+    D: 'Wrong: it is \(\tan^{-1}(x+1)\)'
+    answer: B
+    hint: '\(\dfrac{d}{dx}\ln(x+1)\).'
+    explanation: '\(\dfrac{1}{x+1}\).'
+  231:
+    topic: s4-8
+    question: 'Solve the initial value problem \(\dfrac{dy}{dx}=2x-7\), \(y(2)=0\).'
+    A: '\(y=x^2-7x\)'
+    B: '\(y=2x^2-7x+6\)'
+    C: '\(y=x^2-7x-10\)'
+    D: '\(y=x^2-7x+10\)'
+    answer: D
+    hint: '\(y=x^2-7x+C\); use \(y(2)=0\).'
+    explanation: '\(4-14+C=0\) gives \(C=10\).'
+  232:
+    topic: s4-8
+    question: 'Solve \(\dfrac{dy}{dx}=\dfrac1{x^2}+x\), \(x>0\), \(y(2)=1\).'
+    A: '\(y=-\dfrac1x+\dfrac{x^2}{2}+\dfrac12\)'
+    B: '\(y=-\dfrac1x+\dfrac{x^2}{2}\)'
+    C: '\(y=-\dfrac1x+\dfrac{x^2}{2}-\dfrac12\)'
+    D: '\(y=\dfrac1x+\dfrac{x^2}2+C\)'
+    answer: C
+    hint: '\(y=-\dfrac1x+\dfrac{x^2}2+C\) and \(y(2)=-\tfrac12+2+C=1\).'
+    explanation: '\(C=-\tfrac12\).'
+  233:
+    topic: s4-8
+    question: 'Solve \(\dfrac{dy}{dx}=9x^2-4x+5\), \(y(-1)=0\).'
+    A: '\(y=9x^3-4x^2+5x+18\)'
+    B: '\(y=3x^3-2x^2+5x\)'
+    C: '\(y=3x^3-2x^2+5x-10\)'
+    D: '\(y=3x^3-2x^2+5x+10\)'
+    answer: D
+    hint: '\(y=3x^3-2x^2+5x+C\).'
+    explanation: '\(-3-2-5+C=0\), so \(C=10\).'
+  234:
+    topic: s4-8
+    question: 'Solve \(\dfrac{dy}{dx}=3x^{-2/3}\), \(y(-1)=-5\).'
+    A: '\(y=9x^{1/3}-4\)'
+    B: '\(y=9x^{1/3}\)'
+    C: '\(y=2x^{-5/3}-3\)'
+    D: '\(y=9x^{1/3}+4\)'
+    answer: D
+    hint: '\(\int3x^{-2/3}dx=9x^{1/3}\); note \((-1)^{1/3}=-1\).'
+    explanation: '\(-9+C=-5\) gives \(C=4\).'
+  235:
+    topic: s4-8
+    question: 'Solve \(\dfrac{ds}{dt}=\cos t+\sin t\), \(s(\pi)=1\).'
+    A: '\(s=\sin t+\cos t\)'
+    B: '\(s=\sin t-\cos t\)'
+    C: '\(s=-\sin t+\cos t+1\)'
+    D: '\(s=\sin t-\cos t+2\)'
+    answer: B
+    hint: '\(s=\sin t-\cos t+C\).'
+    explanation: '\(0+1+C=1\) so \(C=0\).'
+  236:
+    topic: s4-8
+    question: 'Solve \(\dfrac{d^2y}{dx^2}=2-6x\), \(y''(0)=4\), \(y(0)=1\).'
+    A: '\(y=x^2-x^3+4x\)'
+    B: '\(y=x^2-x^3+4x+1\)'
+    C: '\(y=x^2-x^3+x+4\)'
+    D: '\(y=2x^2-6x^3+4x+1\)'
+    answer: B
+    hint: 'Integrate twice, using \(y''(0)=4\) after the first integration.'
+    explanation: '\(y''=2x-3x^2+4\), then \(y=x^2-x^3+4x+1\).'
+  237:
+    topic: s4-8
+    question: 'Solve \(\dfrac{d^3y}{dx^3}=6\), \(y''''(0)=-8\), \(y''(0)=0\), \(y(0)=5\).'
+    A: '\(y=x^3-4x^2+5\)'
+    B: '\(y=x^3-8x^2+5\)'
+    C: '\(y=x^3+4x^2+5\)'
+    D: '\(y=6x^3-8x^2+5\)'
+    answer: A
+    hint: Integrate three times.
+    explanation: '\(y''''=6x-8\), \(y''=3x^2-8x\), \(y=x^3-4x^2+5\).'
+  238:
+    topic: s4-8
+    question: 'The curve through \((9,4)\) whose slope at each point is \(3\sqrt x\) is'
+    A: '\(y=2x^{3/2}-50\)'
+    B: '\(y=3x^{3/2}-77\)'
+    C: '\(y=\dfrac32x^{-1/2}\)'
+    D: '\(y=2x^{3/2}+50\)'
+    answer: A
+    hint: '\(y=2x^{3/2}+C\).'
+    explanation: '\(2\cdot27+C=4\) gives \(C=-50\).'
+  239:
+    topic: s4-8
+    question: 'There are how many curves \(y=f(x)\) with \(\dfrac{d^2y}{dx^2}=6x\), passing through \((0,1)\) with a horizontal tangent there?'
+    A: none
+    B: 'exactly one, \(y=x^3+1\)'
+    C: infinitely many
+    D: two
+    answer: B
+    hint: '\(y''=3x^2+C_1\), with \(y''(0)=0\), then \(y=x^3+C_2\).'
+    explanation: '\(C_1=0\) and \(C_2=1\): the conditions fix both constants.'
+  240:
+    topic: s4-8
+    question: 'A rocket lifts off with constant acceleration \(20\) m/s\(^2\). After 1 minute its speed is'
+    A: '\(1200\) m/s'
+    B: '\(60\) m/s'
+    C: '\(72{,}000\) m/s'
+    D: '\(20\) m/s'
+    answer: A
+    hint: '\(v=20t\) with \(t=60\) s.'
+    explanation: '\(20\cdot60=1200\).'
+  241:
+    topic: s4-8
+    question: 'A car traveling at 60 mph (88 ft/s) must stop in 242 ft with constant deceleration \(k\). The value of \(k\) is'
+    A: '\(32\) ft/s\(^2\)'
+    B: '\(8\) ft/s\(^2\)'
+    C: '\(88\) ft/s\(^2\)'
+    D: '\(16\) ft/s\(^2\)'
+    answer: D
+    hint: '\(v=88-kt\), \(s=88t-\tfrac12kt^2\); stopping time \(t=88/k\).'
+    explanation: '\(s=\dfrac{88^2}{2k}=242\) gives \(k=16\).'
+  242:
+    topic: s4-8
+    question: A motorcycle rider must stop from 30 mph (44 ft/s) in 45 ft. The constant deceleration required is about
+    A: '\(10.8\) ft/s\(^2\)'
+    B: '\(32\) ft/s\(^2\)'
+    C: '\(21.5\) ft/s\(^2\)'
+    D: '\(44\) ft/s\(^2\)'
+    answer: C
+    hint: '\(s=\dfrac{v_0^2}{2k}\).'
+    explanation: '\(k=\dfrac{44^2}{90}\approx21.5\).'
+  243:
+    topic: s4-8
+    question: 'A hammer and a feather dropped on the moon from 4 ft obey \(\dfrac{d^2s}{dt^2}=-5.2\), \(\dfrac{ds}{dt}=0\), \(s=4\) at \(t=0\). They reach the surface after about'
+    A: '\(0.5\) s'
+    B: '\(1.24\) s'
+    C: '\(2.5\) s'
+    D: '\(0.78\) s'
+    answer: B
+    hint: '\(s=4-2.6t^2\).'
+    explanation: '\(t=\sqrt{4/2.6}\approx1.24\) s.'
+  244:
+    topic: s4-8
+    question: 'The free fall equation near a planet with gravity \(g\) is \(s=-\tfrac12gt^2+v_0t+s_0\). It comes from solving \(\dfrac{d^2s}{dt^2}=\)'
+    A: '\(-g\), with \(s(0)=0\) and \(v(0)=0\)'
+    B: '\(g\), with \(s(0)=0\)'
+    C: '\(-g\), with \(\dfrac{ds}{dt}(0)=v_0\) and \(s(0)=s_0\)'
+    D: '\(-\tfrac12g\)'
+    answer: C
+    hint: The acceleration is constant and points downward.
+    explanation: Integrating twice and applying the initial conditions gives the formula.
+  245:
+    topic: s4-8
+    question: 'If \(f\) and \(F\) are antiderivatives with the same derivative on an interval, then'
+    A: '\(F\) and \(f\) must be linear'
+    B: '\(F(x)-f(x)\) is constant on that interval'
+    C: '\(F=-f\)'
+    D: '\(F=f\)'
+    answer: B
+    hint: Apply the Mean Value Theorem to the difference.
+    explanation: 'That is why every antiderivative has the form \(F(x)+C\).'
+  246:
+    topic: s4-8
+    question: 'If two differentiable functions \(F\) and \(G\) solve \(\dfrac{dy}{dx}=f(x)\), \(y(x_0)=y_0\), on an interval, then'
+    A: '\(F\) and \(G\) need not agree'
+    B: they can differ by a constant
+    C: '\(F(x)=G(x)\) for every \(x\) on the interval'
+    D: '\(F(x)=G(x)+1\)'
+    answer: C
+    hint: 'Their difference has derivative 0 and equals 0 at \(x_0\).'
+    explanation: This is the uniqueness theorem for initial value problems.
+  247:
+    topic: s4-8
+    question: 'Given \(f(x)=\dfrac{d}{dx}\left(1-\sqrt x\right)\), \(\displaystyle\int f(x)\,dx=\)'
+    A: '\(-\dfrac{1}{2\sqrt x}+C\)'
+    B: '\(\sqrt x+C\)'
+    C: '\(1+\sqrt x+C\)'
+    D: '\(1-\sqrt x+C\)'
+    answer: D
+    hint: Differentiation and integration undo each other.
+    explanation: The integral of a derivative recovers the function plus a constant.
+  248:
+    topic: s4-8
+    question: 'Given \(g(x)=\dfrac{d}{dx}(x+2)\), \(\displaystyle\int\left[-g(x)\right]dx=\)'
+    A: '\(-x+C\)'
+    B: '\(x+2+C\)'
+    C: '\(-x-2+C\)'
+    D: '\(-1+C\)'
+    answer: A
+    hint: '\(g(x)=1\).'
+    explanation: '\(\int(-1)\,dx=-x+C\).'
+  249:
+    topic: s4-8
+    question: 'A body moving along the \(s\)-axis has velocity \(\dfrac{ds}{dt}=9.8t-3\). Its displacement from \(t=1\) to \(t=3\) is'
+    A: '\(26.4\) m'
+    B: '\(35.2\) m'
+    C: 'it cannot be found without \(s(0)\)'
+    D: '\(33.2\) m (regardless of \(s(0)\))'
+    answer: D
+    hint: 'Displacement \(=s(3)-s(1)\); the constant of integration cancels.'
+    explanation: '\(s=4.9t^2-3t+C\), so \(s(3)-s(1)=(44.1-9)-(4.9-3)=35.1-1.9=33.2\).'

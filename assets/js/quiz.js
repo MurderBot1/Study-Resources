@@ -22,11 +22,32 @@
       if (v == null || v === false) return;
       if (k === "class") e.className = v;
       else if (k === "text") e.textContent = v;
+      else if (k === "math") e.append(M(v));
       else if (k.slice(0, 2) === "on") e.addEventListener(k.slice(2), v);
       else e.setAttribute(k, v === true ? "" : v);
     });
     kids.flat().forEach((c) => { if (c != null && c !== false) e.append(c); });
     return e;
+  }
+  // Text with inline math written as \( ... \) (or display math as \[ ... \]) -> a fragment with KaTeX output.
+  // Without KaTeX (or on a LaTeX error) the raw text is shown, so quizzes still work.
+  function M(text) {
+    const s = String(text == null ? "" : text);
+    const frag = document.createDocumentFragment();
+    const re = /\\\((.+?)\\\)|\\\[(.+?)\\\]/gs;
+    let last = 0, m;
+    while ((m = re.exec(s)) !== null) {
+      if (m.index > last) frag.append(s.slice(last, m.index));
+      const span = document.createElement("span");
+      try {
+        if (!window.katex) throw new Error("no katex");
+        window.katex.render(m[1] != null ? m[1] : m[2], span, { throwOnError: false, displayMode: m[2] != null });
+      } catch (e) { span.textContent = m[0]; }
+      frag.append(span);
+      last = re.lastIndex;
+    }
+    if (last < s.length) frag.append(s.slice(last));
+    return frag;
   }
   function shuffle(a) {
     a = a.slice();
@@ -113,7 +134,7 @@
       h("header", { class: "quiz-head" },
         h("p", { class: "eyebrow", text: "Quiz" }),
         h("h1", { text: QUIZ.title }),
-        QUIZ.description ? h("p", { class: "lede", text: QUIZ.description }) : null),
+        QUIZ.description ? h("p", { class: "lede", math: QUIZ.description }) : null),
       view);
   }
 
@@ -187,16 +208,16 @@
     const choiceBtns = item.choices.map((text, i) => {
       const cls = answered ? (i === item.answer ? "good" : i === run.picked ? "bad" : "") : "";
       return h("button", { type: "button", class: "choice " + cls, disabled: answered ? true : null, "data-i": i, onclick: () => choose(i) },
-        h("span", { class: "k", text: LETTERS[i] }), h("span", { text }));
+        h("span", { class: "k", text: LETTERS[i] }), h("span", { math: text }));
     });
 
-    const hintBox = h("div", { class: "hint", id: "hint", role: "note", hidden: item.hintShown ? null : true }, h("b", { text: "Hint" }), item.q.hint);
+    const hintBox = h("div", { class: "hint", id: "hint", role: "note", hidden: item.hintShown ? null : true }, h("b", { text: "Hint" }), M(item.q.hint));
     const hintBtn = h("button", { type: "button", class: "link-btn", id: "hint-btn", "aria-expanded": String(item.hintShown),
       text: item.hintShown ? "Hide hint" : "Show hint", onclick: toggleHint });
 
     const body = [
       h("div", { class: "q-topic", text: topic.title }),
-      h("p", { class: "q-text", text: item.q.text }),
+      h("p", { class: "q-text", math: item.q.text }),
       h("div", { class: "choices", role: "group", "aria-label": "Answer choices" }, choiceBtns)
     ];
     if (!answered && item.q.hint) body.push(h("div", { class: "hint-row" }, hintBtn, hintBox));
@@ -216,8 +237,8 @@
   function buildFeedback(item) {
     const ok = run.picked === item.answer;
     const kids = [h("span", { class: "verdict", text: ok ? "Correct!" : "Not quite" })];
-    if (!ok) kids.push(h("span", { text: "The answer is " + LETTERS[item.answer] + ": " + item.choices[item.answer] }));
-    if (item.q.explanation) kids.push(h("span", { class: "why", text: item.q.explanation }));
+    if (!ok) kids.push(h("span", { math: "The answer is " + LETTERS[item.answer] + ": " + item.choices[item.answer] }));
+    if (item.q.explanation) kids.push(h("span", { class: "why", math: item.q.explanation }));
     return h("div", { class: "result feedback " + (ok ? "good" : "bad"), role: "status" }, kids);
   }
 
@@ -278,11 +299,11 @@
       missed.length ? h("div", { class: "card" },
         h("h2", { text: "Review missed questions" }),
         missed.map((l) => h("div", { class: "miss" },
-          h("span", { class: "q", text: l.item.q.text }),
-          h("span", { class: "you", text: "You chose: " + l.item.choices[l.picked] }),
-          h("span", { class: "ans", text: "Answer: " + l.item.choices[l.item.answer] }),
-          l.item.q.explanation ? h("span", { class: "why", text: l.item.q.explanation }) : null,
-          l.item.q.hint ? h("span", { class: "hinted", text: "Hint: " + l.item.q.hint }) : null))) : null);
+          h("span", { class: "q", math: l.item.q.text }),
+          h("span", { class: "you", math: "You chose: " + l.item.choices[l.picked] }),
+          h("span", { class: "ans", math: "Answer: " + l.item.choices[l.item.answer] }),
+          l.item.q.explanation ? h("span", { class: "why", math: l.item.q.explanation }) : null,
+          l.item.q.hint ? h("span", { class: "hinted", math: "Hint: " + l.item.q.hint }) : null))) : null);
     window.scrollTo(0, 0);
   }
 

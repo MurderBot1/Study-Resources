@@ -1,0 +1,1413 @@
+# Chapter 2: Limits and Continuity
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 2.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 2: Limits and Continuity"
+description: Rates of change, limit laws, the epsilon-delta definition, one-sided and infinite limits, continuity, and tangents.
+topics:
+  s2-1:
+    title: 2.1 Rates of Change and Limits
+  s2-2:
+    title: 2.2 Calculating Limits Using the Limit Laws
+  s2-3:
+    title: 2.3 The Precise Definition of a Limit
+  s2-4:
+    title: 2.4 One-Sided Limits and Limits at Infinity
+  s2-5:
+    title: 2.5 Infinite Limits and Vertical Asymptotes
+  s2-6:
+    title: 2.6 Continuity
+  s2-7:
+    title: 2.7 Tangents and Derivatives
+questions:
+  1:
+    topic: s2-1
+    question: 'Why does \(\displaystyle\lim_{x\to0}\frac{x}{|x|}\) not exist?'
+    A: 'The function is undefined at \(x=0\), so no limit can exist'
+    B: 'Both one-sided limits are \(\infty\)'
+    C: 'Both one-sided limits equal \(0\)'
+    D: 'The left-hand limit is \(-1\) and the right-hand limit is \(1\)'
+    answer: D
+    hint: 'Simplify \(x/|x|\) separately for \(x>0\) and \(x<0\).'
+    explanation: 'For \(x>0\), \(x/|x|=1\); for \(x<0\), \(x/|x|=-1\). The one-sided limits differ, so the two-sided limit does not exist. (Being undefined at 0 alone would not prevent a limit.)'
+  2:
+    topic: s2-1
+    question: 'Suppose \(f(x)\) is defined for all real \(x\) except \(x=x_0\). What can be said about \(\displaystyle\lim_{x\to x_0}f(x)\)?'
+    A: 'It must equal \(f(x_0)\)'
+    B: It must exist
+    C: "Nothing can be said: the limit may or may not exist"
+    D: It must not exist
+    answer: C
+    hint: 'Limits ignore the value at \(x_0\) itself. Compare \(f(x)=1\) with \(f(x)=1/(x-x_0)\).'
+    explanation: 'The limit depends on the behavior of \(f\) near \(x_0\), not at it. Both \(\lim\ 1=1\) (exists) and \(\lim\,\frac{1}{x-x_0}\) (does not) are possible.'
+  3:
+    topic: s2-1
+    question: 'If \(\displaystyle\lim_{x\to1}f(x)=5\), which statement is true?'
+    A: '\(f(1)\) must equal 5'
+    B: '\(f\) may be undefined at \(x=1\), and if \(f(1)\) exists it need not equal 5'
+    C: '\(f(1)\) must exist but may be anything except 5'
+    D: '\(f\) must be defined at \(x=1\)'
+    answer: B
+    hint: The limit describes behavior near 1, not at 1.
+    explanation: A limit says nothing about the value at the point itself (that is what continuity adds).
+  4:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to -3} \frac{x^{2} - 9}{x + 3}\).'
+    A: '\(6\)'
+    B: does not exist
+    C: '\(-12\)'
+    D: '\(-6\)'
+    answer: D
+    hint: Factor the numerator.
+    explanation: '\(\dfrac{x^2-9}{x+3}=x-3\) for \(x\neq-3\), so the limit is \(-3-3=-6\).'
+  5:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to \sqrt{2}} \frac{x^{2} - 2}{x - \sqrt{2}}\).'
+    A: '\(2 \sqrt{2}\)'
+    B: '\(- 2 \sqrt{2}\)'
+    C: '\(4 \sqrt{2}\)'
+    D: does not exist
+    answer: A
+    hint: 'Write \(x^2-2=(x-\sqrt2)(x+\sqrt2)\).'
+    explanation: 'The quotient is \(x+\sqrt2\) for \(x\ne\sqrt2\), which tends to \(2\sqrt2\).'
+  6:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to -6} \frac{x + 6}{x^{2} + 4 x - 12}\).'
+    A: '\(- \frac{1}{8}\)'
+    B: '\(\frac{1}{8}\)'
+    C: does not exist
+    D: '\(- \frac{1}{4}\)'
+    answer: A
+    hint: 'Factor the denominator: \(x^2+4x-12=(x+6)(x-2)\).'
+    explanation: 'Cancel \(x+6\) to get \(\dfrac{1}{x-2}\), which tends to \(-\tfrac18\).'
+  7:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 3} \frac{x^{2} - 2 x - 3}{x^{2} - 4 x + 3}\).'
+    A: '\(-2\)'
+    B: does not exist
+    C: '\(2\)'
+    D: '\(4\)'
+    answer: C
+    hint: Factor both quadratics.
+    explanation: '\(\dfrac{(x-3)(x+1)}{(x-3)(x-1)}=\dfrac{x+1}{x-1}\to\dfrac{4}{2}=2\).'
+  8:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to -1} \frac{x^{2} - 1}{\left|{x}\right| - 1}\).'
+    A: '\(2\)'
+    B: does not exist
+    C: '\(-2\)'
+    D: '\(4\)'
+    answer: A
+    hint: 'Near \(x=-1\) we have \(x<0\), so \(|x|=-x\).'
+    explanation: 'For \(x<0\): \(\dfrac{x^2-1}{-x-1}=-(x-1)=1-x\), which tends to 2.'
+  9:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 0} \frac{1 - \cos{\left(x \right)}}{x^{2}}\).'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(- \frac{1}{2}\)'
+    D: does not exist
+    answer: B
+    hint: 'Use the standard limit built from \(\sin\theta/\theta\), or the half-angle identity.'
+    explanation: '\(\dfrac{1-\cos x}{x^2}=\dfrac{2\sin^2(x/2)}{x^2}\to\dfrac12\).'
+  10:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 1} x^{\frac{1}{1 - x}}\).'
+    A: '\(0\)'
+    B: '\(e\)'
+    C: '\(e^{-1}\)'
+    D: '\(1\)'
+    answer: C
+    hint: 'Take the natural log: \(\ln f=\dfrac{\ln x}{1-x}\).'
+    explanation: '\(\dfrac{\ln x}{1-x}\to-1\) as \(x\to1\), so \(f\to e^{-1}=1/e\).'
+  11:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 0} \frac{3^{x} - 1}{x}\).'
+    A: '\(3\)'
+    B: '\(1\)'
+    C: '\(\frac{\log{\left(3 \right)}}{2}\)'
+    D: '\(\log{\left(3 \right)}\)'
+    answer: D
+    hint: 'This is the derivative of \(3^x\) at 0.'
+    explanation: 'The limit is \(\dfrac{d}{dx}3^x\Big|_{x=0}=\ln3\).'
+  12:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 2} \frac{x^{4} - 16}{x - 2}\).'
+    A: '\(64\)'
+    B: does not exist
+    C: '\(32\)'
+    D: '\(-32\)'
+    answer: C
+    hint: 'Factor \(x^4-16\) as a difference of squares, repeatedly.'
+    explanation: '\(x^4-16=(x-2)(x+2)(x^2+4)\), so the quotient tends to \(4\cdot8=32\).'
+  13:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 0} \frac{1 - \cos{\left(x \right)}}{x \sin{\left(x \right)}}\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(1\)'
+    C: does not exist
+    D: '\(- \frac{1}{2}\)'
+    answer: A
+    hint: 'Use \(1-\cos x\approx x^2/2\) and \(\sin x\approx x\).'
+    explanation: 'Multiply top and bottom by \(1+\cos x\): \(\dfrac{\sin^2x}{x\sin x(1+\cos x)}=\dfrac{\sin x}{x(1+\cos x)}\to\dfrac12\).'
+  14:
+    topic: s2-1
+    question: 'Find \(\lim_{x\to 3} \frac{x^{2} - 9}{\sqrt{x^{2} + 7} - 4}\).'
+    A: '\(8\)'
+    B: '\(-8\)'
+    C: does not exist
+    D: '\(16\)'
+    answer: A
+    hint: 'Multiply by the conjugate \(\sqrt{x^2+7}+4\).'
+    explanation: 'The denominator times its conjugate is \(x^2-9\), leaving \(\sqrt{x^2+7}+4\to8\).'
+  15:
+    topic: s2-1
+    question: 'The average rate of change of \(f(x)=x^3+1\) over \([2,3]\) is'
+    A: '\(5\)'
+    B: '\(19\)'
+    C: '\(9\)'
+    D: '\(28\)'
+    answer: B
+    hint: 'Compute \(\dfrac{f(3)-f(2)}{3-2}\).'
+    explanation: '\(\dfrac{28-9}{1}=19\).'
+  16:
+    topic: s2-1
+    question: 'The average rate of change of \(h(t)=\cot t\) over \([\pi/4,\,3\pi/4]\) is'
+    A: '\(- \frac{4}{\pi}\)'
+    B: '\(\frac{4}{\pi}\)'
+    C: '\(- \frac{2}{\pi}\)'
+    D: '\(0\)'
+    answer: A
+    hint: '\(\cot(\pi/4)=1\) and \(\cot(3\pi/4)=-1\).'
+    explanation: '\(\dfrac{-1-1}{\pi/2}=-\dfrac4\pi\).'
+  17:
+    topic: s2-1
+    question: 'The average rate of change of \(g(x)=x^2\) over \([-2,0]\) is'
+    A: '\(-2\)'
+    B: '\(0\)'
+    C: '\(-4\)'
+    D: '\(2\)'
+    answer: A
+    hint: 'Compute \(\dfrac{g(0)-g(-2)}{0-(-2)}\).'
+    explanation: '\(\dfrac{0-4}{2}=-2\).'
+  18:
+    topic: s2-1
+    question: 'What is the instantaneous rate of change of \(F(x)=\dfrac{x+2}{x-2}\) at \(x=1\)?'
+    A: '\(-4\)'
+    B: '\(4\)'
+    C: '\(-3\)'
+    D: '\(\frac{1}{4}\)'
+    answer: A
+    hint: 'Find the limit of the average rate of change \(\dfrac{F(x)-F(1)}{x-1}\) as \(x\to1\).'
+    explanation: '\(F''(x)=\dfrac{-4}{(x-2)^2}\), so \(F''(1)=-4\).'
+  19:
+    topic: s2-2
+    question: 'Find \(\lim_{x\to 2} - x^{2} + 5 x - 2\).'
+    A: '\(4\)'
+    B: '\(8\)'
+    C: '\(-4\)'
+    D: does not exist
+    answer: A
+    hint: Direct substitution works for polynomials.
+    explanation: '\(-4+10-2=4\).'
+  20:
+    topic: s2-2
+    question: 'Find \(\lim_{x\to -2} x^{3} - 2 x^{2} + 4 x + 8\).'
+    A: '\(-32\)'
+    B: '\(-16\)'
+    C: '\(16\)'
+    D: does not exist
+    answer: B
+    hint: 'Substitute \(x=-2\).'
+    explanation: '\(-8-8-8+8=-16\).'
+  21:
+    topic: s2-2
+    question: 'Find \(\lim_{t\to 6} \left(t - 7\right) \left(8 t - 40\right)\).'
+    A: '\(8\)'
+    B: '\(-8\)'
+    C: does not exist
+    D: '\(-16\)'
+    answer: B
+    hint: The limit of a product is the product of the limits.
+    explanation: '\(8(1)(-1)=-8\).'
+  22:
+    topic: s2-2
+    question: 'Find \(\lim_{y\to -5} \frac{y^{2}}{5 - y}\).'
+    A: '\(\frac{5}{2}\)'
+    B: does not exist
+    C: '\(- \frac{5}{2}\)'
+    D: '\(5\)'
+    answer: A
+    hint: 'The denominator at \(y=-5\) is 10, which is not zero.'
+    explanation: '\(\dfrac{25}{10}=\dfrac52\).'
+  23:
+    topic: s2-2
+    question: 'Find \(\lim_{y\to -5} \frac{y + 2}{y^{2} + 5 y + 6}\).'
+    A: '\(- \frac{1}{2}\)'
+    B: '\(\frac{1}{2}\)'
+    C: does not exist
+    D: '\(-1\)'
+    answer: A
+    hint: 'Substitute directly; the denominator at \(y=-5\) is \(25-25+6=6\).'
+    explanation: '\(\dfrac{-3}{6}=-\dfrac12\).'
+  24:
+    topic: s2-2
+    question: 'Find \(\lim_{y\to -3} \left(5 - y\right)^{\frac{4}{3}}\).'
+    A: '\(-16\)'
+    B: '\(16\)'
+    C: does not exist
+    D: '\(32\)'
+    answer: B
+    hint: '\(8^{4/3}=(8^{1/3})^4\).'
+    explanation: '\((5-(-3))^{4/3}=8^{4/3}=16\).'
+  25:
+    topic: s2-2
+    question: 'Find \(\lim_{h\to 0} \frac{3}{\sqrt{3 h + 1} + 1}\).'
+    A: '\(\frac{3}{2}\)'
+    B: '\(- \frac{3}{2}\)'
+    C: '\(3\)'
+    D: does not exist
+    answer: A
+    hint: 'The denominator tends to \(1+1=2\).'
+    explanation: '\(\dfrac{3}{\sqrt{1}+1}=\dfrac32\).'
+  26:
+    topic: s2-2
+    question: 'Find \(\lim_{h\to 0} \frac{\sqrt{5 h + 4} - 2}{h}\).'
+    A: '\(\frac{5}{2}\)'
+    B: does not exist
+    C: '\(- \frac{5}{4}\)'
+    D: '\(\frac{5}{4}\)'
+    answer: D
+    hint: 'Multiply top and bottom by the conjugate \(\sqrt{5h+4}+2\).'
+    explanation: 'The numerator becomes \(5h\), so the limit is \(\dfrac{5}{\sqrt4+2}=\dfrac54\).'
+  27:
+    topic: s2-2
+    question: 'Find \(\lim_{x\to -2} \frac{- 2 x - 4}{x^{3} + 2 x^{2}}\).'
+    A: does not exist
+    B: '\(- \frac{1}{2}\)'
+    C: '\(-1\)'
+    D: '\(\frac{1}{2}\)'
+    answer: B
+    hint: 'Factor \(-2x-4=-2(x+2)\) and \(x^3+2x^2=x^2(x+2)\).'
+    explanation: 'The quotient is \(-2/x^2\), which tends to \(-\tfrac12\).'
+  28:
+    topic: s2-2
+    question: 'Find \(\lim_{u\to 1} \frac{u^{4} - 1}{u^{3} - 1}\).'
+    A: '\(- \frac{4}{3}\)'
+    B: does not exist
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{4}{3}\)'
+    answer: D
+    hint: 'Use \(a^n-b^n\) factorizations, or L''Hôpital-style derivative ratios.'
+    explanation: '\(\dfrac{(u-1)(u+1)(u^2+1)}{(u-1)(u^2+u+1)}\to\dfrac{2\cdot2}{3}=\dfrac43\).'
+  29:
+    topic: s2-2
+    question: 'Find \(\lim_{x\to 4} \frac{- x^{2} + 4 x}{2 - \sqrt{x}}\).'
+    A: '\(-16\)'
+    B: '\(16\)'
+    C: does not exist
+    D: '\(32\)'
+    answer: B
+    hint: 'Factor \(4x-x^2=x(4-x)\) and \(4-x=(2-\sqrt x)(2+\sqrt x)\).'
+    explanation: 'The quotient is \(x(2+\sqrt x)\to4\cdot4=16\).'
+  30:
+    topic: s2-2
+    question: 'Find \(\lim_{x\to 1} \frac{x - 1}{\sqrt{x + 3} - 2}\).'
+    A: '\(-4\)'
+    B: does not exist
+    C: '\(8\)'
+    D: '\(4\)'
+    answer: D
+    hint: 'Multiply by the conjugate \(\sqrt{x+3}+2\).'
+    explanation: '\((x-1)(\sqrt{x+3}+2)/(x-1)=\sqrt{x+3}+2\to4\).'
+  31:
+    topic: s2-2
+    question: 'Find \(\lim_{x\to 4} \frac{4 - x}{5 - \sqrt{x^{2} + 9}}\).'
+    A: '\(- \frac{5}{4}\)'
+    B: does not exist
+    C: '\(\frac{5}{4}\)'
+    D: '\(\frac{5}{2}\)'
+    answer: C
+    hint: 'Multiply by the conjugate \(5+\sqrt{x^2+9}\).'
+    explanation: 'The denominator becomes \(16-x^2\), leaving \(\dfrac{5+\sqrt{x^2+9}}{4+x}\to\dfrac{10}{8}=\dfrac54\).'
+  32:
+    topic: s2-2
+    question: 'Suppose \(\displaystyle\lim_{x\to c}f(x)=5\) and \(\displaystyle\lim_{x\to c}g(x)=-2\). Then \(\displaystyle\lim_{x\to c}\dfrac{f(x)}{f(x)-g(x)}\) equals'
+    A: '\(-\dfrac52\)'
+    B: '\(1\)'
+    C: '\(\dfrac53\)'
+    D: '\(\dfrac57\)'
+    answer: D
+    hint: 'Use the quotient law; the denominator tends to \(5-(-2)\).'
+    explanation: '\(\dfrac{5}{5+2}=\dfrac57\).'
+  33:
+    topic: s2-2
+    question: 'Suppose \(\displaystyle\lim_{x\to4}f(x)=0\) and \(\displaystyle\lim_{x\to4}g(x)=-3\). Then \(\displaystyle\lim_{x\to4}\dfrac{g(x)}{f(x)-1}\) equals'
+    A: '\(\dfrac13\)'
+    B: '\(0\)'
+    C: '\(-3\)'
+    D: '\(3\)'
+    answer: D
+    hint: 'The denominator tends to \(0-1\).'
+    explanation: '\(\dfrac{-3}{-1}=3\).'
+  34:
+    topic: s2-2
+    question: 'Suppose \(\displaystyle\lim_{x\to-2}p(x)=4\), \(\displaystyle\lim_{x\to-2}r(x)=0\) and \(\displaystyle\lim_{x\to-2}s(x)=-3\). Then \(\displaystyle\lim_{x\to-2}\dfrac{-4p(x)+5r(x)}{s(x)}\) equals'
+    A: '\(0\)'
+    B: '\(\dfrac{4}{3}\)'
+    C: '\(\dfrac{16}{3}\)'
+    D: '\(-\dfrac{16}{3}\)'
+    answer: C
+    hint: Apply the sum, constant-multiple and quotient laws.
+    explanation: '\(\dfrac{-16+0}{-3}=\dfrac{16}{3}\).'
+  35:
+    topic: s2-2
+    question: 'If \(\sqrt{5-2x^2}\le f(x)\le\sqrt{5-x^2}\) for \(-1\le x\le1\), then \(\displaystyle\lim_{x\to0}f(x)=\)'
+    A: '\(0\)'
+    B: '\(5\)'
+    C: It cannot be determined
+    D: '\(\sqrt5\)'
+    answer: D
+    hint: Compute the limits of the two bounding functions.
+    explanation: 'Both bounds tend to \(\sqrt5\) as \(x\to0\), so the Sandwich Theorem gives \(\sqrt5\).'
+  36:
+    topic: s2-2
+    question: 'If \(2-x^2\le g(x)\le2\cos x\) for all \(x\), then \(\displaystyle\lim_{x\to0}g(x)=\)'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(-2\)'
+    D: '\(2\)'
+    answer: D
+    hint: 'Evaluate both bounds at \(x=0\).'
+    explanation: '\(2-0=2\) and \(2\cos0=2\), so \(g(x)\to2\).'
+  37:
+    topic: s2-2
+    question: 'If \(\displaystyle\lim_{x\to4}\dfrac{f(x)-5}{x-2}=1\), then \(\displaystyle\lim_{x\to4}f(x)=\)'
+    A: '\(1\)'
+    B: '\(7\)'
+    C: '\(5\)'
+    D: '\(6\)'
+    answer: B
+    hint: 'Write \(f(x)-5=\dfrac{f(x)-5}{x-2}\cdot(x-2)\).'
+    explanation: 'The product tends to \(1\cdot(4-2)=2\), so \(f(x)\to5+2=7\).'
+  38:
+    topic: s2-2
+    question: 'If \(\displaystyle\lim_{x\to2}\dfrac{f(x)-5}{x-2}=3\), then \(\displaystyle\lim_{x\to2}f(x)=\)'
+    A: '\(8\)'
+    B: '\(5\)'
+    C: '\(0\)'
+    D: '\(3\)'
+    answer: B
+    hint: The denominator tends to 0, yet the quotient has a finite limit.
+    explanation: 'For the quotient to stay finite, \(f(x)-5\) must tend to 0, so \(f(x)\to5\).'
+  39:
+    topic: s2-2
+    question: 'If \(\displaystyle\lim_{x\to0}\dfrac{f(x)}{x^2}=1\), then \(\displaystyle\lim_{x\to0}\dfrac{f(x)}{x}=\)'
+    A: '\(\infty\)'
+    B: It does not exist
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Write \(\dfrac{f(x)}{x}=\dfrac{f(x)}{x^2}\cdot x\).'
+    explanation: 'The product tends to \(1\cdot0=0\).'
+  40:
+    topic: s2-2
+    question: '\(\displaystyle\lim_{x\to0}x\sin\dfrac1x=\)'
+    A: It does not exist
+    B: '\(\infty\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(|\sin(1/x)|\le1\). Use the Sandwich Theorem with \(\pm|x|\).'
+    explanation: '\(-|x|\le x\sin(1/x)\le|x|\), and both bounds tend to 0.'
+  41:
+    topic: s2-2
+    question: 'If \(x^4\le f(x)\le x^2\) for \(x\) in \([-1,1]\) and \(x^2\le f(x)\le x^4\) for \(x<-1\) and \(x>1\), at which points \(c\) do we automatically know \(\displaystyle\lim_{x\to c}f(x)\)?'
+    A: '\(c=1\) only'
+    B: 'Every \(c\)'
+    C: '\(c=0\) only'
+    D: '\(c=-1,\ 0,\ 1\)'
+    answer: D
+    hint: 'The Sandwich Theorem needs the two bounds to have the same limit. Where do \(x^2\) and \(x^4\) agree?'
+    explanation: '\(x^4=x^2\) at \(x=0,\pm1\), where the limit equals \(0,1,1\) respectively.'
+  42:
+    topic: s2-3
+    question: 'Find the largest \(\delta>0\) so that \(0<|x-5|<\delta\Rightarrow 1<x<7\).'
+    A: '\(\delta=2\)'
+    B: '\(\delta=6\)'
+    C: '\(\delta=1\)'
+    D: '\(\delta=4\)'
+    answer: A
+    hint: 'The interval \((1,7)\) is centered at 4, not 5. Use the nearer endpoint.'
+    explanation: 'The distances from 5 to the endpoints are \(4\) and \(2\); \(\delta\) is the smaller, \(2\).'
+  43:
+    topic: s2-3
+    question: 'Find the largest \(\delta>0\) so that \(0<|x-(-3)|<\delta\Rightarrow-\tfrac72<x<-\tfrac12\).'
+    A: '\(\delta=\tfrac32\)'
+    B: '\(\delta=3\)'
+    C: '\(\delta=\tfrac52\)'
+    D: '\(\delta=\tfrac12\)'
+    answer: D
+    hint: 'Compute the distances from \(-3\) to \(-\tfrac72\) and to \(-\tfrac12\).'
+    explanation: 'The distances are \(\tfrac12\) and \(\tfrac52\); take the smaller.'
+  44:
+    topic: s2-3
+    question: 'For \(f(x)=2x-4\), \(x_0=5\), \(L=6\), \(\epsilon=0.2\), a suitable \(\delta\) is'
+    A: '\(\delta=1\)'
+    B: '\(\delta=0.4\)'
+    C: '\(\delta=0.2\)'
+    D: '\(\delta=0.1\)'
+    answer: D
+    hint: '\(|f(x)-L|=2|x-5|\). Require it to be less than \(0.2\).'
+    explanation: '\(|2x-10|<0.2\iff|x-5|<0.1\).'
+  45:
+    topic: s2-3
+    question: 'For \(f(x)=\sqrt{x+1}\), \(L=1\), \(x_0=0\), \(\epsilon=0.1\), the largest \(\delta\) that works is'
+    A: '\(\delta=0.21\)'
+    B: '\(\delta=0.19\)'
+    C: '\(\delta=0.9\)'
+    D: '\(\delta=0.1\)'
+    answer: B
+    hint: 'Solve \(0.9<\sqrt{x+1}<1.1\) and take the closer endpoint to 0.'
+    explanation: '\(0.81<x+1<1.21\) gives \(-0.19<x<0.21\); the smaller distance is \(0.19\).'
+  46:
+    topic: s2-3
+    question: 'For \(f(x)=\sqrt{x}\), \(L=\tfrac12\), \(x_0=\tfrac14\), \(\epsilon=0.1\), the largest \(\delta\) is'
+    A: '\(\delta=0.2\)'
+    B: '\(\delta=0.11\)'
+    C: '\(\delta=0.1\)'
+    D: '\(\delta=0.09\)'
+    answer: D
+    hint: 'Solve \(0.4<\sqrt{x}<0.6\) for \(x\) and measure from \(\tfrac14\).'
+    explanation: '\(0.16<x<0.36\); the distances from \(0.25\) are \(0.09\) and \(0.11\). Take \(0.09\).'
+  47:
+    topic: s2-3
+    question: 'For \(f(x)=\sqrt{19-x}\), \(L=3\), \(x_0=10\), \(\epsilon=1\), the largest \(\delta\) is'
+    A: '\(\delta=1\)'
+    B: '\(\delta=7\)'
+    C: '\(\delta=12\)'
+    D: '\(\delta=5\)'
+    answer: D
+    hint: 'Solve \(2<\sqrt{19-x}<4\).'
+    explanation: '\(4<19-x<16\) gives \(3<x<15\); the distances from 10 are \(7\) and \(5\).'
+  48:
+    topic: s2-3
+    question: 'For \(f(x)=\dfrac{120}{x}\), \(L=5\), \(x_0=24\), \(\epsilon=1\), the largest \(\delta\) is'
+    A: '\(\delta=4\)'
+    B: '\(\delta=24\)'
+    C: '\(\delta=1\)'
+    D: '\(\delta=6\)'
+    answer: A
+    hint: 'Solve \(4<120/x<6\).'
+    explanation: '\(20<x<30\); the distances from 24 are \(4\) and \(6\).'
+  49:
+    topic: s2-3
+    question: 'For \(f(x)=mx\) with \(m>0\), \(L=2m\), \(x_0=2\), and \(\epsilon=0.03\), a suitable \(\delta\) is'
+    A: '\(\delta=\dfrac{0.03}{m}\)'
+    B: '\(\delta=0.03m\)'
+    C: '\(\delta=0.03\)'
+    D: '\(\delta=\dfrac{m}{0.03}\)'
+    answer: A
+    hint: '\(|f(x)-L|=m|x-2|\).'
+    explanation: '\(m|x-2|<0.03\iff|x-2|<0.03/m\).'
+  50:
+    topic: s2-3
+    question: 'Which statement is the definition of \(\displaystyle\lim_{x\to x_0}g(x)=k\)?'
+    A: 'For every \(\epsilon>0\) there is a \(\delta>0\) such that \(0<|x-x_0|<\delta\Rightarrow|g(x)-k|<\epsilon\)'
+    B: 'For every \(\epsilon>0\) there is a \(\delta>0\) such that \(|x-x_0|<\delta\Rightarrow|g(x)-k|>\epsilon\)'
+    C: '\(g(x)\) gets closer to \(k\) as \(x\) gets closer to \(x_0\)'
+    D: 'For every \(\delta>0\) there is an \(\epsilon>0\) such that \(0<|x-x_0|<\delta\Rightarrow|g(x)-k|<\epsilon\)'
+    answer: A
+    hint: 'The tolerance \(\epsilon\) on the output comes first; \(\delta\) on the input is found afterward.'
+    explanation: 'This is the formal definition. The informal statement in the last choice is not sufficient (see \(f(x)=x^2\), \(x_0=0\), \(L=-1\)).'
+  51:
+    topic: s2-3
+    question: 'The statement "\(L\) is the limit of \(f(x)\) if \(f(x)\) gets closer to \(L\) as \(x\) approaches \(x_0\)" is wrong. Which example shows this?'
+    A: '\(f(x)=x^2\), \(x_0=0\), \(L=-1\)'
+    B: '\(f(x)=x\), \(x_0=0\), \(L=0\)'
+    C: '\(f(x)=1\), \(x_0=3\), \(L=1\)'
+    D: '\(f(x)=2x\), \(x_0=1\), \(L=2\)'
+    answer: A
+    hint: 'Find a function whose values do get closer to a number \(L\) but never settle at it.'
+    explanation: 'As \(x\to0\), the values of \(x^2\) keep getting closer to \(-1\) in the loose sense (their distance to \(-1\) shrinks from larger values toward 1), yet they never get near \(-1\): the actual limit is 0. "Getting closer" is not the same as "as close as we like". The other three examples are genuine limits.'
+  52:
+    topic: s2-3
+    question: 'A cylinder is ground to a cross-sectional area \(A=\pi(x/2)^2\) of \(9\text{ in}^2\) from a diameter \(x_0=3.385\) in. How far from \(x_0\) can \(x\) be and still guarantee \(|A-9|\le0.01\)?'
+    A: 'about \(0.017\) in.'
+    B: 'about \(0.1\) in.'
+    C: 'about \(0.0002\) in.'
+    D: 'about \(0.0017\) in.'
+    answer: D
+    hint: 'Solve \(|\pi x^2/4-9|\le0.01\) for \(x\); the interval is not centered at \(x_0\), so use the nearer endpoint.'
+    explanation: '\(x\) must lie between about \(3.38325\) and \(3.38701\). These are about \(0.00175\) below and \(0.00201\) above 3.385, so a deviation of about \(0.0017\) in. is always safe.'
+  53:
+    topic: s2-3
+    question: 'A circuit must supply \(V=120\) volts with current \(I=5\pm0.1\) amp. By Ohm''s law \(V=RI\), the resistance \(R\) must lie in the interval'
+    A: '\([20.0,\ 28.0]\) ohms'
+    B: '\([24.00,\ 24.49]\) ohms'
+    C: '\([23.00,\ 25.00]\) ohms'
+    D: '\([23.53,\ 24.49]\) ohms'
+    answer: D
+    hint: '\(R=120/I\) with \(4.9\le I\le5.1\).'
+    explanation: '\(120/5.1\approx23.53\) and \(120/4.9\approx24.49\).'
+  54:
+    topic: s2-3
+    question: 'For \(f(x)=\begin{cases}x,&x<1\\ x+1,&x>1\end{cases}\), which statement is true?'
+    A: '\(\displaystyle\lim_{x\to1}f(x)=1.5\)'
+    B: '\(\displaystyle\lim_{x\to1}f(x)=2\)'
+    C: '\(\displaystyle\lim_{x\to1}f(x)\) does not exist'
+    D: '\(\displaystyle\lim_{x\to1}f(x)=1\)'
+    answer: C
+    hint: Compare the one-sided limits.
+    explanation: 'The left limit is 1, the right limit is 2. They differ, so no number \(L\) works for every \(\epsilon\).'
+  55:
+    topic: s2-3
+    question: 'Find \(\lim_{x\to 3} \frac{x^{4} - 81}{x - 3}\).'
+    A: '\(216\)'
+    B: does not exist
+    C: '\(-108\)'
+    D: '\(108\)'
+    answer: D
+    hint: 'Factor \(x^4-81\).'
+    explanation: '\(x^4-81=(x-3)(x+3)(x^2+9)\), so the limit is \(6\cdot18=108\).'
+  56:
+    topic: s2-3
+    question: 'Find \(\lim_{x\to 0} \frac{5 x^{3} + 9 x^{2}}{2 x^{5} + 3 x^{2}}\).'
+    A: '\(-3\)'
+    B: '\(6\)'
+    C: does not exist
+    D: '\(3\)'
+    answer: D
+    hint: 'Divide numerator and denominator by \(x^2\).'
+    explanation: '\(\dfrac{5x+9}{2x^3+3}\to\dfrac93=3\).'
+  57:
+    topic: s2-3
+    question: 'Find \(\lim_{x\to 0} \frac{x \left(1 - \cos{\left(x \right)}\right)}{x - \sin{\left(x \right)}}\).'
+    A: '\(6\)'
+    B: '\(-3\)'
+    C: '\(3\)'
+    D: does not exist
+    answer: C
+    hint: 'Use \(1-\cos x\approx x^2/2\) and \(x-\sin x\approx x^3/6\).'
+    explanation: 'The ratio of the leading terms is \(\dfrac{x^3/2}{x^3/6}=3\).'
+  58:
+    topic: s2-4
+    question: 'Let \(f(x)=\begin{cases}3-x,&x<2\\ \tfrac x2+1,&x>2\end{cases}\). Then \(\displaystyle\lim_{x\to2^-}f(x)\) and \(\displaystyle\lim_{x\to2^+}f(x)\) are'
+    A: '\(1\) and \(1\), so the limit is 1'
+    B: '\(1\) and \(2\), so the limit is 1.5'
+    C: '\(2\) and \(1\), so the limit does not exist'
+    D: '\(1\) and \(2\), so \(\displaystyle\lim_{x\to2}f(x)\) does not exist'
+    answer: D
+    hint: 'Evaluate each piece at \(x=2\).'
+    explanation: 'From the left \(3-2=1\); from the right \(\tfrac22+1=2\). The values differ, so the two-sided limit does not exist.'
+  59:
+    topic: s2-4
+    question: 'For \(f(x)=\begin{cases}0,&x\le0\\ \sin\frac1x,&x>0\end{cases}\), which statement is correct?'
+    A: '\(\lim_{x\to0^-}f(x)=0\), but \(\lim_{x\to0^+}f(x)\) does not exist because \(\sin(1/x)\) oscillates'
+    B: '\(\lim_{x\to0^+}f(x)=\infty\)'
+    C: '\(\lim_{x\to0}f(x)=0\)'
+    D: '\(\lim_{x\to0^+}f(x)=1\)'
+    answer: A
+    hint: 'What does \(\sin(1/x)\) do as \(x\to0^+\)?'
+    explanation: '\(\sin(1/x)\) swings between \(-1\) and \(1\) infinitely often near 0, so there is no right-hand limit.'
+  60:
+    topic: s2-4
+    question: 'For \(g(x)=\sqrt{x}\sin\dfrac1x\), the right-hand limit \(\displaystyle\lim_{x\to0^+}g(x)\) is'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: It does not exist
+    D: '\(\infty\)'
+    answer: B
+    hint: '\(-\sqrt x\le g(x)\le\sqrt x\).'
+    explanation: 'The Sandwich Theorem gives 0. (There is no left-hand limit since \(g\) is not defined for \(x<0\).)'
+  61:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to - \frac{1}{2}^{+}} \sqrt{\frac{x + 2}{x + 1}}\).'
+    A: '\(2 \sqrt{3}\)'
+    B: does not exist
+    C: '\(\sqrt{3}\)'
+    D: '\(- \sqrt{3}\)'
+    answer: C
+    hint: 'Substitute \(x=-0.5\) (from the right).'
+    explanation: '\(\sqrt{\dfrac{1.5}{0.5}}=\sqrt3\).'
+  62:
+    topic: s2-4
+    question: 'Find \(\lim_{h\to 0^{+}} \frac{\sqrt{h^{2} + 4 h + 5} - \sqrt{5}}{h}\).'
+    A: '\(- \frac{2 \sqrt{5}}{5}\)'
+    B: '\(\frac{4 \sqrt{5}}{5}\)'
+    C: '\(\frac{2 \sqrt{5}}{5}\)'
+    D: does not exist
+    answer: C
+    hint: 'This is the derivative of \(\sqrt{h^2+4h+5}\) at \(h=0\).'
+    explanation: '\(\dfrac{4}{2\sqrt5}=\dfrac{2}{\sqrt5}\).'
+  63:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to -2^{+}} \frac{\left(x + 3\right) \left|{x + 2}\right|}{x + 2}\).'
+    A: '\(-1\)'
+    B: '\(2\)'
+    C: does not exist
+    D: '\(1\)'
+    answer: D
+    hint: 'For \(x>-2\), \(|x+2|=x+2\).'
+    explanation: 'The factor \(|x+2|/(x+2)=1\) on the right, so the limit is \(1\cdot1=1\).'
+  64:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to -2^{-}} \frac{\left(x + 3\right) \left|{x + 2}\right|}{x + 2}\).'
+    A: '\(1\)'
+    B: '\(-2\)'
+    C: does not exist
+    D: '\(-1\)'
+    answer: D
+    hint: 'For \(x<-2\), \(|x+2|=-(x+2)\).'
+    explanation: 'The factor \(|x+2|/(x+2)=-1\) on the left, so the limit is \(-1\).'
+  65:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to 1^{-}} \frac{\sqrt{2} \sqrt{x} \left(x - 1\right)}{\left|{x - 1}\right|}\).'
+    A: does not exist
+    B: '\(- 2 \sqrt{2}\)'
+    C: '\(- \sqrt{2}\)'
+    D: '\(\sqrt{2}\)'
+    answer: C
+    hint: 'For \(x<1\), \(|x-1|=1-x\).'
+    explanation: 'The sign factor is \(-1\) on the left, so the limit is \(-\sqrt2\).'
+  66:
+    topic: s2-4
+    question: '\(\displaystyle\lim_{\theta\to3^+}\dfrac{\lfloor\theta\rfloor}{\theta}\) equals'
+    A: It does not exist
+    B: '\(\dfrac23\)'
+    C: '\(3\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'Just to the right of 3, \(\lfloor\theta\rfloor=3\).'
+    explanation: '\(\lfloor\theta\rfloor=3\) for \(3\le\theta<4\), so the ratio is \(3/\theta\to1\). (From the left it is \(2/\theta\to\tfrac23\).)'
+  67:
+    topic: s2-4
+    question: '\(\displaystyle\lim_{t\to4^-}\bigl(t-\lfloor t\rfloor\bigr)\) equals'
+    A: '\(1\)'
+    B: '\(4\)'
+    C: '\(0\)'
+    D: '\(3\)'
+    answer: A
+    hint: 'Just to the left of 4, \(\lfloor t\rfloor=3\).'
+    explanation: 'For \(3\le t<4\), \(t-3\to1\). (From the right the limit is 0.)'
+  68:
+    topic: s2-4
+    question: 'Find \(\lim_{\theta\to 0^{+}} \frac{\sqrt{2} \sin{\left(\sqrt{2} \sqrt{\theta} \right)}}{2 \sqrt{\theta}}\).'
+    A: does not exist
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(-1\)'
+    answer: B
+    hint: 'Let \(u=\sqrt{2\theta}\). Then \(u\to0\).'
+    explanation: 'This is \(\dfrac{\sin u}{u}\to1\).'
+  69:
+    topic: s2-4
+    question: 'Find \(\lim_{y\to 0} \frac{\sin{\left(3 y \right)}}{4 y}\).'
+    A: '\(\frac{3}{2}\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(- \frac{3}{4}\)'
+    D: does not exist
+    answer: B
+    hint: 'Rewrite as \(\dfrac34\cdot\dfrac{\sin3y}{3y}\).'
+    explanation: '\(\dfrac34\cdot1=\dfrac34\).'
+  70:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to 0} \frac{\tan{\left(2 x \right)}}{x}\).'
+    A: '\(4\)'
+    B: does not exist
+    C: '\(-2\)'
+    D: '\(2\)'
+    answer: D
+    hint: '\(\tan2x=\sin2x/\cos2x\).'
+    explanation: '\(\dfrac{\sin2x}{2x}\cdot\dfrac{2}{\cos2x}\to1\cdot2=2\).'
+  71:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to 0} \frac{\sin{\left(5 x \right)}}{\sin{\left(4 x \right)}}\).'
+    A: does not exist
+    B: '\(- \frac{5}{4}\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(\frac{5}{4}\)'
+    answer: D
+    hint: 'Divide top and bottom by \(x\).'
+    explanation: '\(\dfrac{5\cdot\frac{\sin5x}{5x}}{4\cdot\frac{\sin4x}{4x}}\to\dfrac54\).'
+  72:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to 0} 6 x^{2} \cot{\left(x \right)} \csc{\left(2 x \right)}\).'
+    A: '\(-3\)'
+    B: does not exist
+    C: '\(3\)'
+    D: '\(6\)'
+    answer: C
+    hint: 'Write \(\cot x=\cos x/\sin x\) and \(\csc2x=1/\sin2x\).'
+    explanation: 'Near 0 this behaves like \(\dfrac{6x^2}{x\cdot2x}=3\).'
+  73:
+    topic: s2-4
+    question: '\(\displaystyle\lim_{x\to\infty}\left(\dfrac2x-3\right)\) equals'
+    A: '\(-3\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(\infty\)'
+    answer: A
+    hint: '\(2/x\to0\).'
+    explanation: 'The term \(2/x\) vanishes, leaving \(-3\).'
+  74:
+    topic: s2-4
+    question: '\(\displaystyle\lim_{x\to\infty}\dfrac{1}{2+(1/x)}\) equals'
+    A: '\(2\)'
+    B: '\(0\)'
+    C: '\(\dfrac12\)'
+    D: '\(\infty\)'
+    answer: C
+    hint: '\(1/x\to0\).'
+    explanation: The denominator tends to 2.
+  75:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to \infty} \frac{\sin{\left(2 x \right)}}{x}\).'
+    A: '\(-1\)'
+    B: '\(1\)'
+    C: does not exist
+    D: '\(0\)'
+    answer: D
+    hint: The numerator is bounded.
+    explanation: '\(|\sin2x|\le1\) while \(x\to\infty\), so the quotient tends to 0 (Sandwich Theorem).'
+  76:
+    topic: s2-4
+    question: 'Find \(\lim_{t\to \infty} \frac{- t + \sin{\left(t \right)} + 2}{t + \cos{\left(t \right)}}\).'
+    A: does not exist
+    B: '\(-1\)'
+    C: '\(-2\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'Divide numerator and denominator by \(t\).'
+    explanation: '\(\dfrac{2/t-1+\sin t/t}{1+\cos t/t}\to\dfrac{-1}{1}=-1\).'
+  77:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to \infty} \frac{e^{x} - e^{- x}}{e^{x} + e^{- x}}\).'
+    A: '\(2\)'
+    B: '\(-1\)'
+    C: '\(1\)'
+    D: does not exist
+    answer: C
+    hint: 'Divide by \(e^x\).'
+    explanation: '\(\dfrac{1-e^{-2x}}{1+e^{-2x}}\to1\).'
+  78:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to \infty} \frac{2 x + 3}{5 x + 7}\).'
+    A: '\(\frac{4}{5}\)'
+    B: '\(\frac{2}{5}\)'
+    C: '\(- \frac{2}{5}\)'
+    D: does not exist
+    answer: B
+    hint: 'Divide by the highest power of \(x\).'
+    explanation: 'The leading coefficients give \(\dfrac25\).'
+  79:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to \infty} \frac{9 x^{4} + x}{2 x^{4} + 5 x^{2} - x + 6}\).'
+    A: '\(9\)'
+    B: '\(- \frac{9}{2}\)'
+    C: does not exist
+    D: '\(\frac{9}{2}\)'
+    answer: D
+    hint: The numerator and denominator have the same degree.
+    explanation: 'The limit is the ratio of leading coefficients, \(\dfrac92\).'
+  80:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to \infty} \frac{x + 1}{x^{2} + 3}\).'
+    A: does not exist
+    B: '\(-1\)'
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: D
+    hint: The denominator has higher degree.
+    explanation: 'The quotient behaves like \(1/x\to0\).'
+  81:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to \infty} - \sqrt{x^{2} - x} + \sqrt{x^{2} + x}\).'
+    A: '\(2\)'
+    B: '\(-1\)'
+    C: does not exist
+    D: '\(1\)'
+    answer: D
+    hint: Multiply and divide by the conjugate.
+    explanation: '\(\dfrac{2x}{\sqrt{x^2+x}+\sqrt{x^2-x}}\to\dfrac{2x}{2x}=1\).'
+  82:
+    topic: s2-4
+    question: How many horizontal asymptotes can the graph of a rational function have?
+    A: At most two
+    B: Any number
+    C: At most one
+    D: Always two
+    answer: C
+    hint: 'Compare the limits as \(x\to\infty\) and as \(x\to-\infty\) of \(\dfrac{p(x)}{q(x)}\).'
+    explanation: 'The limits at \(+\infty\) and \(-\infty\) of a rational function are always equal (or both infinite), so there is at most one horizontal asymptote.'
+  83:
+    topic: s2-4
+    question: 'Find \(\lim_{x\to 400^{-}} \left\lfloor{x}\right\rfloor\).'
+    A: '\(399\)'
+    B: '\(-399\)'
+    C: '\(798\)'
+    D: does not exist
+    answer: A
+    hint: Just to the left of 400 the floor is 399.
+    explanation: 'For \(399\le x<400\), \(\lfloor x\rfloor=399\), so the limit is 399.'
+  84:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 0^{+}} \frac{1}{3 x}\).'
+    A: '\(\infty\)'
+    B: '\(1\)'
+    C: does not exist
+    D: '\(0\)'
+    answer: A
+    hint: Is the denominator positive or negative just to the right of 0?
+    explanation: 'For \(x>0\) small, \(3x\) is a small positive number.'
+  85:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 2^{-}} \frac{3}{x - 2}\).'
+    A: '\(1\)'
+    B: does not exist
+    C: '\(0\)'
+    D: '\(-\infty\)'
+    answer: D
+    hint: 'The sign of \(x-2\) just to the left of 2 is negative.'
+    explanation: Positive numerator over a tiny negative number is a large negative number.
+  86:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 7} \frac{4}{\left(x - 7\right)^{2}}\).'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: does not exist
+    D: '\(\infty\)'
+    answer: D
+    hint: A square is never negative.
+    explanation: 'The denominator is a tiny positive number from both sides, so the quotient is \(+\infty\).'
+  87:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 0} - \frac{1}{x^{2} \left(x + 1\right)}\).'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(-\infty\)'
+    D: does not exist
+    answer: C
+    hint: 'Near 0, \(x^2>0\) and \(x+1\approx1\).'
+    explanation: 'The quotient is \(-1\) divided by a tiny positive number.'
+  88:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to -8^{+}} \frac{2 x}{x + 8}\).'
+    A: does not exist
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(-\infty\)'
+    answer: D
+    hint: 'Check the sign of numerator and denominator just to the right of \(-8\).'
+    explanation: 'The numerator is near \(-16\), the denominator is a tiny positive number, so the quotient tends to \(-\infty\).'
+  89:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to -5^{-}} \frac{3 x}{2 x + 10}\).'
+    A: does not exist
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(\infty\)'
+    answer: D
+    hint: 'Just left of \(-5\): \(2x+10<0\) and \(3x<0\).'
+    explanation: A negative over a tiny negative is a large positive.
+  90:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 0^{+}} \frac{2}{3 \sqrt[3]{x}}\).'
+    A: '\(\infty\)'
+    B: does not exist
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'The cube root is positive for \(x>0\).'
+    explanation: A positive constant over a tiny positive number.
+  91:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 0} \frac{1}{x^{\frac{2}{3}}}\).'
+    A: does not exist
+    B: '\(1\)'
+    C: '\(\infty\)'
+    D: '\(0\)'
+    answer: A
+    hint: '\(x^{2/3}=(\sqrt[3]{x})^2\ge0\).'
+    explanation: 'The denominator is a tiny positive number from both sides, so the limit is \(\infty\).'
+  92:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to \frac{\pi}{2}^{-}} \tan{\left(x \right)}\).'
+    A: '\(\infty\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: does not exist
+    answer: A
+    hint: Think of the graph of tangent approaching its asymptote from the left.
+    explanation: '\(\tan x\to+\infty\) as \(x\to(\pi/2)^-\).'
+  93:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 2^{+}} \frac{1}{x^{2} - 4}\).'
+    A: '\(\infty\)'
+    B: '\(1\)'
+    C: '\(0\)'
+    D: does not exist
+    answer: A
+    hint: '\(x^2-4=(x-2)(x+2)\); just right of 2, \(x-2>0\) and \(x+2>0\).'
+    explanation: 'The denominator is a tiny positive number, so the quotient is \(+\infty\).'
+  94:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to -2^{-}} \frac{1}{x^{2} - 4}\).'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(\infty\)'
+    D: does not exist
+    answer: C
+    hint: 'Just left of \(-2\), \(x-2<0\) and \(x+2<0\).'
+    explanation: 'The product \((x-2)(x+2)\) is a tiny positive number, so the quotient is \(+\infty\).'
+  95:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 0} \frac{x^{2} - 3 x + 2}{x^{3} - 2 x^{2}}\).'
+    A: '\(-\infty\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: does not exist
+    answer: A
+    hint: 'Factor: \(\dfrac{(x-1)(x-2)}{x^2(x-2)}\).'
+    explanation: 'It simplifies to \(\dfrac{x-1}{x^2}\), which is a negative number over a tiny positive number: \(-\infty\).'
+  96:
+    topic: s2-5
+    question: 'Find \(\lim_{x\to 2} \frac{x^{2} - 3 x + 2}{x^{3} - 2 x^{2}}\).'
+    A: '\(- \frac{1}{4}\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(\frac{1}{2}\)'
+    D: does not exist
+    answer: B
+    hint: 'Cancel the common factor \(x-2\) first.'
+    explanation: 'The simplified form \(\dfrac{x-1}{x^2}\) is continuous at 2, giving \(\tfrac14\).'
+  97:
+    topic: s2-5
+    question: 'What can be said about \(\displaystyle\lim_{x\to0}\dfrac{x^2-3x+2}{x^3-4x}\)?'
+    A: 'It equals \(+\infty\)'
+    B: 'It equals \(-\infty\)'
+    C: It equals 0
+    D: 'It does not exist: the one-sided limits are \(-\infty\) and \(+\infty\)'
+    answer: D
+    hint: 'Simplify to \(\dfrac{x-1}{x(x+2)}\) and check the sign on each side of 0.'
+    explanation: 'Just right of 0 the quotient is negative over a tiny positive number: \(-\infty\). Just left it is negative over a tiny negative: \(+\infty\).'
+  98:
+    topic: s2-5
+    question: 'The graph of \(y=\dfrac{x^2-4}{x-1}\) has'
+    A: 'only a horizontal asymptote \(y=0\)'
+    B: 'vertical asymptote \(x=1\) and oblique asymptote \(y=x+1\)'
+    C: 'vertical asymptotes \(x=\pm2\)'
+    D: 'vertical asymptote \(x=1\) and horizontal asymptote \(y=1\)'
+    answer: B
+    hint: 'Do the long division of \(x^2-4\) by \(x-1\).'
+    explanation: '\(\dfrac{x^2-4}{x-1}=x+1-\dfrac{3}{x-1}\).'
+  99:
+    topic: s2-5
+    question: 'The graph of \(y=\dfrac{x^3+1}{x^2}\) has asymptotes'
+    A: '\(x=0\) (vertical) and \(y=1\) (horizontal)'
+    B: '\(y=x^3\) only'
+    C: '\(x=0\) (vertical) and \(y=x\) (oblique)'
+    D: '\(x=-1\) (vertical) and \(y=x\) (oblique)'
+    answer: C
+    hint: 'Divide term by term: \(\dfrac{x^3}{x^2}+\dfrac1{x^2}\).'
+    explanation: '\(y=x+\dfrac1{x^2}\): the second term blows up at \(x=0\) and vanishes at \(\pm\infty\).'
+  100:
+    topic: s2-5
+    question: 'The graph of \(y=\dfrac{x+3}{x+2}\) has'
+    A: 'vertical asymptote \(x=-2\) and horizontal asymptote \(y=3\)'
+    B: 'vertical asymptote \(x=2\) and horizontal asymptote \(y=1\)'
+    C: no vertical asymptote
+    D: 'vertical asymptote \(x=-2\) and horizontal asymptote \(y=1\)'
+    answer: D
+    hint: 'The denominator vanishes at \(x=-2\); compare leading coefficients for the horizontal asymptote.'
+    explanation: '\(\dfrac{x+3}{x+2}=1+\dfrac1{x+2}\).'
+  101:
+    topic: s2-5
+    question: 'For \(f(x)=e^x-2x\), a right end behavior model and a left end behavior model are'
+    A: '\(e^x\) on both ends'
+    B: '\(-2x\) on the right and \(e^x\) on the left'
+    C: '\(e^x\) on the right and \(-2x\) on the left'
+    D: '\(-2x\) on both ends'
+    answer: C
+    hint: 'Compare the sizes of \(e^x\) and \(2x\) as \(x\to+\infty\) and \(x\to-\infty\).'
+    explanation: 'As \(x\to\infty\), \(e^x\) dominates; as \(x\to-\infty\), \(e^x\to0\) and \(-2x\) dominates.'
+  102:
+    topic: s2-5
+    question: 'A right end behavior model for \(y=\dfrac{2x^3-3x^2+1}{x+3}\) is'
+    A: '\(x^2\)'
+    B: '\(2x^3\)'
+    C: '\(2x^2\)'
+    D: '\(2\)'
+    answer: C
+    hint: 'Divide the leading terms: \(\dfrac{2x^3}{x}\).'
+    explanation: 'The leading-term ratio is \(2x^2\); the same model works on the left.'
+  103:
+    topic: s2-5
+    question: '\(\displaystyle\lim_{x\to\infty}\dfrac{2x^{5/3}-x^{1/3}+7}{x^{8/5}+3x+\sqrt x}\) equals'
+    A: '\(0\)'
+    B: '\(2\)'
+    C: '\(\tfrac23\)'
+    D: '\(\infty\)'
+    answer: D
+    hint: 'Compare the exponents: \(\tfrac53\) versus \(\tfrac85\).'
+    explanation: '\(\tfrac53>\tfrac85\), so the numerator grows faster than the denominator and the quotient behaves like \(2x^{1/15}\to\infty\).'
+  104:
+    topic: s2-6
+    question: 'At what points is \(y=\dfrac{x+1}{x^2-4x+3}\) discontinuous?'
+    A: '\(x=1\) only'
+    B: '\(x=-1\) and \(x=3\)'
+    C: '\(x=-1\) only'
+    D: '\(x=1\) and \(x=3\)'
+    answer: D
+    hint: A rational function is discontinuous exactly where the denominator is zero.
+    explanation: '\(x^2-4x+3=(x-1)(x-3)\).'
+  105:
+    topic: s2-6
+    question: 'The function \(y=\dfrac{x+2}{\cos x}\) is continuous at all points except'
+    A: '\(x=k\pi\) for integers \(k\)'
+    B: '\(x=2k\pi\) for integers \(k\)'
+    C: '\(x=\dfrac{\pi}{2}+k\pi\) for integers \(k\)'
+    D: '\(x=-2\)'
+    answer: C
+    hint: 'Where is \(\cos x=0\)?'
+    explanation: 'The quotient is undefined where the denominator \(\cos x\) vanishes.'
+  106:
+    topic: s2-6
+    question: 'The function \(y=\tan\dfrac{\pi x}{2}\) is discontinuous at'
+    A: every integer
+    B: every odd integer
+    C: every even integer
+    D: '\(x=\pi k\)'
+    answer: B
+    hint: 'Where is \(\tan\theta\) undefined? Set \(\theta=\pi x/2\).'
+    explanation: '\(\tan\theta\) is undefined at \(\theta=\tfrac\pi2+k\pi\), i.e. \(x=1+2k\).'
+  107:
+    topic: s2-6
+    question: 'The function \(y=\csc2x\) is discontinuous at'
+    A: '\(x=\dfrac{\pi}{2}+k\pi\)'
+    B: '\(x=\dfrac{k\pi}{2}\) for integers \(k\)'
+    C: '\(x=k\pi\) for integers \(k\)'
+    D: no points
+    answer: B
+    hint: '\(\csc u=1/\sin u\) is undefined when \(\sin u=0\).'
+    explanation: '\(\sin2x=0\) when \(2x=k\pi\).'
+  108:
+    topic: s2-6
+    question: 'The function \(y=\sqrt{2x+3}\) is continuous on'
+    A: '\((0,\infty)\)'
+    B: '\(\left[-\tfrac32,\infty\right)\)'
+    C: '\((-\infty,\infty)\)'
+    D: '\((-\tfrac32,\infty)\)'
+    answer: B
+    hint: Its domain is where the radicand is nonnegative. Continuous on the whole domain, including the endpoint (right-continuous there).
+    explanation: '\(2x+3\ge0\) gives \(x\ge-\tfrac32\).'
+  109:
+    topic: s2-6
+    question: 'The function \(y=(2x-1)^{1/3}\) is continuous'
+    A: 'only for \(x\ge\tfrac12\)'
+    B: 'for all real \(x\)'
+    C: 'for all \(x\ne\tfrac12\)'
+    D: 'only for \(x>\tfrac12\)'
+    answer: B
+    hint: Odd roots are defined for negative inputs too.
+    explanation: 'The cube root is continuous everywhere, and so is its composition with \(2x-1\).'
+  110:
+    topic: s2-6
+    question: 'Find \(\lim_{x\to \pi} \sin{\left(x - \sin{\left(x \right)} \right)}\).'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(-1\)'
+    D: does not exist
+    answer: B
+    hint: The function is continuous, so substitute.
+    explanation: '\(\sin(\pi-\sin\pi)=\sin\pi=0\).'
+  111:
+    topic: s2-6
+    question: 'Find \(\lim_{t\to 0} \sin{\left(\frac{\pi \cos{\left(\tan{\left(t \right)} \right)}}{2} \right)}\).'
+    A: '\(1\)'
+    B: '\(2\)'
+    C: '\(-1\)'
+    D: does not exist
+    answer: A
+    hint: 'Substitute \(t=0\): \(\tan0=0\) and \(\cos0=1\).'
+    explanation: '\(\sin(\tfrac\pi2\cdot1)=1\).'
+  112:
+    topic: s2-6
+    question: 'Find \(\lim_{x\to 1} \operatorname{acos}{\left(\log{\left(\sqrt{x} \right)} \right)}\).'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(- \frac{\pi}{2}\)'
+    C: does not exist
+    D: '\(\pi\)'
+    answer: A
+    hint: 'Substitute \(x=1\): \(\ln\sqrt1=0\).'
+    explanation: '\(\cos^{-1}(0)=\tfrac\pi2\).'
+  113:
+    topic: s2-6
+    question: 'How should \(g(3)\) be defined so that \(g(x)=\dfrac{x^2-9}{x-3}\) is continuous at \(x=3\)?'
+    A: '\(g(3)=6\)'
+    B: '\(g(3)=3\)'
+    C: '\(g(3)=0\)'
+    D: '\(g(3)=9\)'
+    answer: A
+    hint: 'Find \(\displaystyle\lim_{x\to3}g(x)\).'
+    explanation: '\(\dfrac{x^2-9}{x-3}=x+3\to6\).'
+  114:
+    topic: s2-6
+    question: 'How should \(f(1)\) be defined so that \(f(s)=\dfrac{s^3-1}{s^2-1}\) is continuous at \(s=1\)?'
+    A: '\(0\)'
+    B: '\(\dfrac23\)'
+    C: '\(1\)'
+    D: '\(\dfrac32\)'
+    answer: D
+    hint: Factor numerator and denominator.
+    explanation: '\(\dfrac{(s-1)(s^2+s+1)}{(s-1)(s+1)}=\dfrac{s^2+s+1}{s+1}\to\dfrac32\).'
+  115:
+    topic: s2-6
+    question: 'For which value of \(a\) is \(f(x)=\begin{cases}x^2-1,&x<3\\ 2ax,&x\ge3\end{cases}\) continuous at every \(x\)?'
+    A: '\(a=\dfrac43\)'
+    B: '\(a=\dfrac83\)'
+    C: '\(a=4\)'
+    D: '\(a=\dfrac34\)'
+    answer: A
+    hint: 'Match the two pieces at \(x=3\).'
+    explanation: '\(3^2-1=8\) must equal \(2a\cdot3=6a\), so \(a=\tfrac43\).'
+  116:
+    topic: s2-6
+    question: 'For which value of \(b\) is \(g(x)=\begin{cases}x,&x<-2\\ bx^2,&x\ge-2\end{cases}\) continuous at every \(x\)?'
+    A: '\(b=2\)'
+    B: '\(b=-2\)'
+    C: '\(b=\dfrac12\)'
+    D: '\(b=-\dfrac12\)'
+    answer: D
+    hint: 'Match the pieces at \(x=-2\).'
+    explanation: '\(-2=b\cdot4\) gives \(b=-\tfrac12\).'
+  117:
+    topic: s2-6
+    question: 'A continuous function \(y=f(x)\) is negative at \(x=0\) and positive at \(x=1\). Why must \(f(x)=0\) have a solution between 0 and 1?'
+    A: By the Mean Value Theorem
+    B: By the Intermediate Value Theorem
+    C: By the Sandwich Theorem
+    D: 'Because \(f\) is differentiable'
+    answer: B
+    hint: Continuous functions cannot skip values.
+    explanation: 'On \([0,1]\), \(f\) takes every value between \(f(0)<0\) and \(f(1)>0\), including 0.'
+  118:
+    topic: s2-6
+    question: 'The equation \(x^3-15x+1=0\) has how many solutions in \([-4,4]\)?'
+    A: two
+    B: one
+    C: none
+    D: three
+    answer: D
+    hint: 'Evaluate \(p(x)=x^3-15x+1\) at \(-4,0,1,4\) and look for sign changes.'
+    explanation: '\(p(-4)=-3<0\), \(p(0)=1>0\), \(p(1)=-13<0\), \(p(4)=5>0\): three sign changes, so at least 3 roots; a cubic has at most 3.'
+  119:
+    topic: s2-6
+    question: 'Suppose \(f\) is continuous on \([0,1]\) and \(0\le f(x)\le1\) for every \(x\). A fixed point (a number \(c\) with \(f(c)=c\)) must exist because'
+    A: '\(f(x)-x\) is continuous and has opposite signs (or zero) at the endpoints, so the Intermediate Value Theorem applies'
+    B: '\(f(0)=0\) and \(f(1)=1\)'
+    C: '\(f\) is increasing'
+    D: '\(f\) is differentiable'
+    answer: A
+    hint: 'Study \(g(x)=f(x)-x\) at \(x=0\) and \(x=1\).'
+    explanation: '\(g(0)=f(0)\ge0\) and \(g(1)=f(1)-1\le0\). A continuous \(g\) with these signs has a zero.'
+  120:
+    topic: s2-6
+    question: 'The function \(f(x)=\begin{cases}1,&x\text{ rational}\\ 0,&x\text{ irrational}\end{cases}\) is'
+    A: 'continuous only at \(x=0\)'
+    B: continuous only at the integers
+    C: discontinuous at every point
+    D: continuous at every point
+    answer: C
+    hint: Every interval contains both rational and irrational numbers.
+    explanation: 'Near any point \(f\) takes both values 0 and 1 arbitrarily close, so no limit exists anywhere.'
+  121:
+    topic: s2-6
+    question: 'Find \(\lim_{x\to 0^{+}} \left(2 x + 1\right)^{\frac{1}{x}}\).'
+    A: '\(e\)'
+    B: '\(e^{2}\)'
+    C: '\(0\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Take logs: \(\dfrac{\ln(1+2x)}{x}\).'
+    explanation: '\(\dfrac{\ln(1+2x)}{x}\to2\), so the limit is \(e^2\).'
+  122:
+    topic: s2-7
+    question: 'Find an equation of the tangent line to the curve \(y=4-x^2\) at \((-1,3)\).'
+    A: '\(y=5 - 2 x\)'
+    B: '\(y=2 x + 5\)'
+    C: '\(y=3 x + 5\)'
+    D: '\(y=2 x - 5\)'
+    answer: B
+    hint: The slope is the derivative at the point; then use point-slope form.
+    explanation: 'Slope \(=2\) at \(x=-1\), so \(y=2 x + 5\).'
+  123:
+    topic: s2-7
+    question: 'Find an equation of the tangent line to the curve \(y=2\sqrt{x}\) at \((1,2)\).'
+    A: '\(y=x - 1\)'
+    B: '\(y=1 - x\)'
+    C: '\(y=2 x + 1\)'
+    D: '\(y=x + 1\)'
+    answer: D
+    hint: The slope is the derivative at the point; then use point-slope form.
+    explanation: 'Slope \(=1\) at \(x=1\), so \(y=x + 1\).'
+  124:
+    topic: s2-7
+    question: 'Find an equation of the tangent line to the curve \(y=x^3\) at \((-2,-8)\).'
+    A: '\(y=13 x + 16\)'
+    B: '\(y=12 x + 16\)'
+    C: '\(y=16 - 12 x\)'
+    D: '\(y=12 x - 16\)'
+    answer: B
+    hint: The slope is the derivative at the point; then use point-slope form.
+    explanation: 'Slope \(=12\) at \(x=-2\), so \(y=12 x + 16\).'
+  125:
+    topic: s2-7
+    question: 'Find an equation of the tangent line to the curve \(y=\dfrac1{x^2}\) at \((-1,1)\).'
+    A: '\(y=3 - 2 x\)'
+    B: '\(y=2 x + 3\)'
+    C: '\(y=3 x + 3\)'
+    D: '\(y=2 x - 3\)'
+    answer: B
+    hint: The slope is the derivative at the point; then use point-slope form.
+    explanation: 'Slope \(=2\) at \(x=-1\), so \(y=2 x + 3\).'
+  126:
+    topic: s2-7
+    question: 'Find an equation of the tangent line to the curve \(g(x)=\dfrac{x}{x-2}\) at \((3,3)\).'
+    A: '\(y=9 - x\)'
+    B: '\(y=- 2 x - 9\)'
+    C: '\(y=2 x + 9\)'
+    D: '\(y=9 - 2 x\)'
+    answer: D
+    hint: The slope is the derivative at the point; then use point-slope form.
+    explanation: 'Slope \(=-2\) at \(x=3\), so \(y=9 - 2 x\).'
+  127:
+    topic: s2-7
+    question: 'Find an equation of the tangent line to the curve \(f(x)=\sqrt{x+1}\) at \((8,3)\).'
+    A: '\(y=\frac{5}{3} - \frac{x}{6}\)'
+    B: '\(y=\frac{x}{6} + \frac{5}{3}\)'
+    C: '\(y=\frac{7 x}{6} + \frac{5}{3}\)'
+    D: '\(y=\frac{x}{6} - \frac{5}{3}\)'
+    answer: B
+    hint: The slope is the derivative at the point; then use point-slope form.
+    explanation: 'Slope \(=\frac{1}{6}\) at \(x=8\), so \(y=\frac{x}{6} + \frac{5}{3}\).'
+  128:
+    topic: s2-7
+    question: 'What is the slope of \(y=5x^2\) at \(x=-1\)?'
+    A: '\(-10\)'
+    B: '\(10\)'
+    C: '\(-5\)'
+    D: '\(5\)'
+    answer: A
+    hint: 'The derivative of \(5x^2\) is \(10x\).'
+    explanation: '\(10(-1)=-10\).'
+  129:
+    topic: s2-7
+    question: 'What is the slope of \(y=\dfrac{1}{x-1}\) at \(x=3\)?'
+    A: '\(- \frac{1}{4}\)'
+    B: '\(- \frac{1}{2}\)'
+    C: '\(\frac{1}{4}\)'
+    D: '\(-1\)'
+    answer: A
+    hint: '\(\dfrac{d}{dx}\dfrac1{x-1}=-\dfrac1{(x-1)^2}\).'
+    explanation: '\(-\dfrac14\).'
+  130:
+    topic: s2-7
+    question: 'What is the slope of \(y=\dfrac{x-1}{x+1}\) at \(x=0\)?'
+    A: '\(1\)'
+    B: '\(-1\)'
+    C: '\(-2\)'
+    D: '\(2\)'
+    answer: D
+    hint: 'Use the quotient rule or rewrite \(y=1-\dfrac2{x+1}\).'
+    explanation: '\(y''=\dfrac{2}{(x+1)^2}\), so the slope at 0 is 2.'
+  131:
+    topic: s2-7
+    question: 'At what point does the graph of \(f(x)=x^2+4x-1\) have a horizontal tangent?'
+    A: '\(x=-2\)'
+    B: '\(x=-4\)'
+    C: '\(x=0\)'
+    D: '\(x=2\)'
+    answer: A
+    hint: 'Find where \(f''(x)=0\).'
+    explanation: '\(f''(x)=2x+4=0\) gives \(x=-2\).'
+  132:
+    topic: s2-7
+    question: 'At which \(x\)-values does \(g(x)=x^3-3x\) have a horizontal tangent?'
+    A: '\(x=\pm\sqrt3\)'
+    B: '\(x=0\) only'
+    C: '\(x=\pm1\)'
+    D: '\(x=\pm3\)'
+    answer: C
+    hint: 'Solve \(g''(x)=0\).'
+    explanation: '\(3x^2-3=0\) gives \(x=\pm1\).'
+  133:
+    topic: s2-7
+    question: 'An object dropped from a 100-m tower has height \(y=100-4.9t^2\) m after \(t\) seconds. How fast is it falling at \(t=2\) s?'
+    A: '\(19.6\) m/s'
+    B: '\(80.4\) m/s'
+    C: '\(9.8\) m/s'
+    D: '\(4.9\) m/s'
+    answer: A
+    hint: Differentiate the height with respect to time.
+    explanation: '\(y''=-9.8t\), so at \(t=2\) the velocity is \(-19.6\) m/s (downward).'
+  134:
+    topic: s2-7
+    question: 'The area of a circle is \(A=\pi r^2\). Its rate of change with respect to \(r\) at \(r=3\) is'
+    A: '\(9\pi\)'
+    B: '\(\pi\)'
+    C: '\(6\pi\)'
+    D: '\(3\pi\)'
+    answer: C
+    hint: '\(\dfrac{dA}{dr}=2\pi r\).'
+    explanation: '\(2\pi\cdot3=6\pi\), the circumference.'
+  135:
+    topic: s2-7
+    question: 'The volume of a ball is \(V=\tfrac43\pi r^3\). Its rate of change with respect to \(r\) when \(r=2\) is'
+    A: '\(16\pi\)'
+    B: '\(\tfrac{32\pi}{3}\)'
+    C: '\(32\pi\)'
+    D: '\(8\pi\)'
+    answer: A
+    hint: '\(\dfrac{dV}{dr}=4\pi r^2\).'
+    explanation: '\(4\pi\cdot4=16\pi\), the surface area.'
+  136:
+    topic: s2-7
+    question: Which of these graphs has a vertical tangent at the origin?
+    A: '\(y=x^{4/5}\)'
+    B: '\(y=|x|\)'
+    C: '\(y=x^{2/5}\)'
+    D: '\(y=x^{1/5}\)'
+    answer: D
+    hint: 'A vertical tangent means \(\dfrac{f(h)-f(0)}{h}\to\pm\infty\) with the same sign from both sides.'
+    explanation: 'For \(x^{1/5}\), \(\dfrac{h^{1/5}}{h}=h^{-4/5}\to+\infty\) from both sides. For \(x^{2/5}\) and \(x^{4/5}\) the slopes have opposite signs on the two sides (a cusp or a corner with finite slope).'
+  137:
+    topic: s2-7
+    question: 'Does \(f(x)=\begin{cases}x^2\sin(1/x),&x\ne0\\ 0,&x=0\end{cases}\) have a tangent at the origin?'
+    A: 'Yes, the horizontal line \(y=0\)'
+    B: 'No, because \(\sin(1/x)\) oscillates'
+    C: 'Yes, the line \(y=x\)'
+    D: 'Yes, the vertical line \(x=0\)'
+    answer: A
+    hint: 'Compute \(\dfrac{f(h)-f(0)}{h}=h\sin(1/h)\).'
+    explanation: '\(h\sin(1/h)\to0\) by the Sandwich Theorem, so the slope at the origin is 0.'
+  138:
+    topic: s2-7
+    question: 'Does \(g(x)=\begin{cases}x\sin(1/x),&x\ne0\\ 0,&x=0\end{cases}\) have a tangent at the origin?'
+    A: 'No, \(\sin(1/h)\) oscillates so the slope limit does not exist'
+    B: Yes, a vertical tangent
+    C: Yes, with slope 1
+    D: Yes, with slope 0
+    answer: A
+    hint: 'Compute \(\dfrac{g(h)-g(0)}{h}=\sin(1/h)\).'
+    explanation: '\(\sin(1/h)\) has no limit as \(h\to0\), so there is no tangent line.'
+  139:
+    topic: s2-7
+    question: 'The slope of the tangent to \(f(x)=x+\dfrac5x\) at \(x_0=1\) is'
+    A: '\(6\)'
+    B: '\(-4\)'
+    C: '\(4\)'
+    D: '\(-5\)'
+    answer: B
+    hint: '\(f''(x)=1-\dfrac5{x^2}\).'
+    explanation: '\(1-5=-4\).'

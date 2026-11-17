@@ -7,6 +7,7 @@ Quizzes and flashcards to share with classmates. It's a plain static site (HTML,
 | Class | Quizzes | Flashcards |
 | --- | --- | --- |
 | **APUSH – Williams** (`classes/apush-williams/`) | Enduring Vision Quiz, Early Republic Quiz, Road to the Civil War Quiz | Terms quiz flashcards (230 terms), Enduring Vision flashcards (111 cards) |
+| **Calculus AB** (`classes/calculus-ab/`) | One quiz per chapter of *Thomas' Calculus: Early Transcendentals* (11th ed.), chapters 1–16 as they are added | |
 
 ## Publish with GitHub Pages
 
@@ -60,6 +61,8 @@ questions:                   # keyed by question number
     shuffle: false           # optional: keep the choices in this order (for "All of the above")
 ```
 
+Math is written in LaTeX between `\(` and `\)` (display math between `\[` and `\]`) and rendered with KaTeX. Dollar signs are left alone, so prices like `$5` are fine.
+
 Use 2 to 6 choices (`A`, `B`, `C`, ...). Put quotes around any text that has a `:` followed by a space, starts with a quote or symbol, or is `True`/`False`/a number. If a quiz has a mistake, the page shows exactly which question to fix.
 
 ## Adding things
@@ -84,6 +87,7 @@ assets/js/fuzzy.js               fuzzy search used by quiz mode
 assets/js/flashcards.js          flashcard + quiz app (reusable for any deck)
 assets/js/quiz.js                multiple-choice quiz app (reads the YAML files)
 assets/js/vendor/js-yaml.min.js  YAML parser (js-yaml 4.1.0, MIT license)
+assets/js/vendor/katex/          math rendering (KaTeX 0.16.11, MIT license)
 classes/apush-williams/
   index.html                     class page
   quizzes/                       enduring-vision.yml, early-republic.yml, road-to-civil-war.yml

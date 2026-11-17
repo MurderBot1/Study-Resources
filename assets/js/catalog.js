@@ -44,6 +44,38 @@ window.CATALOG = {
           href: "flashcards/enduring-vision/"
         }
       ]
+    },
+    {
+      id: "calculus-ab",
+      title: "Calculus AB",
+      subtitle: "Thomas' Calculus: Early Transcendentals, 11th ed.",
+      quizzes: [
+        {
+          title: "Chapter 1: Functions",
+          description: "Sections 1.1–1.6: Functions and their graphs, combining and transforming functions, exponentials, inverses and logarithms.",
+          meta: "119 questions · hints",
+          quiz: "chapter-01"
+        },
+        {
+          title: "Chapter 2: Limits and Continuity",
+          description: "Sections 2.1–2.7: Rates of change, limit laws, the epsilon-delta definition, one-sided and infinite limits, continuity, and tangents.",
+          meta: "139 questions · hints",
+          quiz: "chapter-02"
+        },
+        {
+          title: "Chapter 3: Differentiation",
+          description: "Sections 3.1–3.10: The derivative as a function, differentiation rules, rates of change, trig/chain/implicit/inverse derivatives, related rates, and linearization.",
+          meta: "242 questions · hints",
+          quiz: "chapter-03"
+        },
+        {
+          title: "Chapter 4: Applications of Derivatives",
+          description: "Sections 4.1–4.8: Extreme values, the Mean Value Theorem, monotonicity, concavity, optimization, L'Hôpital's Rule, Newton's method, and antiderivatives.",
+          meta: "249 questions · hints",
+          quiz: "chapter-04"
+        }
+      ],
+      flashcards: []
     }
   ]
 };
