@@ -1,0 +1,16 @@
+title: Math render test
+description: 'Inline \(\int_0^1 x^2\,dx\) and display below.'
+topics:
+  t:
+    title: Test
+questions:
+  1:
+    topic: t
+    question: 'Find \(\dfrac{d}{dx}\left[x^2\sin x\right]\). It costs $5 and $7 too.'
+    A: '\(2x\sin x + x^2\cos x\)'
+    B: '\(2x\cos x\)'
+    C: '\(\lim_{x\to 0}\dfrac{\sin x}{x}=1\)'
+    D: '\[\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}\]'
+    answer: A
+    hint: 'Product rule: \((uv)^\prime = u^\prime v + uv^\prime\).'
+    explanation: 'So \(f^\prime(x) = 2x\sin x + x^2\cos x\).'

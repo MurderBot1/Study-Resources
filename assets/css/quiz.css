@@ -58,3 +58,9 @@
 .miss .why { color: var(--muted); font-size: .92rem; }
 .miss .hinted { color: var(--muted); font-size: .85rem; }
 .kbd-tip { color: var(--muted); font-size: .8rem; }
+
+/* math (KaTeX) */
+.choice .katex, .q-text .katex { font-size: 1.08em; }
+.choice { min-width: 0; }
+.choice > span:last-child { min-width: 0; overflow-x: auto; overflow-y: hidden; }
+.q-text .katex-display, .choice .katex-display { margin: .4em 0; }

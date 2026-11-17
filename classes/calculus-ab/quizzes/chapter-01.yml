@@ -1,0 +1,1211 @@
+# Chapter 1: Functions
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 1.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 1: Functions"
+description: Functions and their graphs, combining and transforming functions, exponentials, inverses and logarithms.
+topics:
+  s1-1:
+    title: 1.1 Functions and Their Graphs
+  s1-2:
+    title: 1.2 Identifying Functions; Mathematical Models
+  s1-3:
+    title: 1.3 Combining Functions; Shifting and Scaling Graphs
+  s1-4:
+    title: 1.4 Graphing with Calculators and Computers
+  s1-5:
+    title: 1.5 Exponential Functions
+  s1-6:
+    title: 1.6 Inverse Functions and Logarithms
+questions:
+  1:
+    topic: s1-1
+    question: 'Find the domain and range of \(f(x)=1+x^2\).'
+    A: '\(\text{Domain }(-\infty,\infty),\ \text{range }(-\infty,1]\)'
+    B: '\(\text{Domain }(-\infty,\infty),\ \text{range }[1,\infty)\)'
+    C: '\(\text{Domain }(-\infty,\infty),\ \text{range }(1,\infty)\)'
+    D: '\(\text{Domain }[1,\infty),\ \text{range }(-\infty,\infty)\)'
+    answer: B
+    hint: 'Any real number can be squared. What is the smallest value \(x^2\) can take?'
+    explanation: '\(x^2\ge 0\) with equality at \(x=0\), so \(1+x^2\ge 1\). Every value from 1 upward is reached.'
+  2:
+    topic: s1-1
+    question: 'Find the domain and range of \(f(x)=1-\sqrt{x}\).'
+    A: '\(\text{Domain }(0,\infty),\ \text{range }(-\infty,1)\)'
+    B: '\(\text{Domain }[0,\infty),\ \text{range }[1,\infty)\)'
+    C: '\(\text{Domain }[0,\infty),\ \text{range }(-\infty,1]\)'
+    D: '\(\text{Domain }(-\infty,\infty),\ \text{range }(-\infty,1]\)'
+    answer: C
+    hint: 'The square root needs a nonnegative input. Then think about what subtracting \(\sqrt{x}\) from 1 does as \(\sqrt{x}\) grows.'
+    explanation: '\(\sqrt{x}\) is defined for \(x\ge0\) and takes all values in \([0,\infty)\), so \(1-\sqrt{x}\) takes all values in \((-\infty,1]\).'
+  3:
+    topic: s1-1
+    question: 'Find the domain and range of \(g(z)=\sqrt{4-z^2}\).'
+    A: '\(\text{Domain }[-2,2],\ \text{range }[0,2]\)'
+    B: '\(\text{Domain }(-2,2),\ \text{range }(0,2)\)'
+    C: '\(\text{Domain }[-2,2],\ \text{range }[-2,2]\)'
+    D: '\(\text{Domain }(-\infty,\infty),\ \text{range }[0,2]\)'
+    answer: A
+    hint: 'Require \(4-z^2\ge 0\). The radicand is largest when \(z=0\).'
+    explanation: '\(4-z^2\ge0\) gives \(-2\le z\le 2\). The radicand ranges over \([0,4]\), so \(g\) ranges over \([0,2]\) (the upper half of a circle of radius 2).'
+  4:
+    topic: s1-1
+    question: 'Find the domain and range of \(g(z)=\dfrac{1}{\sqrt{4-z^2}}\).'
+    A: '\(\text{Domain }(-2,2),\ \text{range }(0,\tfrac12]\)'
+    B: '\(\text{Domain }(-2,2),\ \text{range }(0,\infty)\)'
+    C: '\(\text{Domain }(-2,2),\ \text{range }[\tfrac12,\infty)\)'
+    D: '\(\text{Domain }[-2,2],\ \text{range }[\tfrac12,\infty)\)'
+    answer: C
+    hint: The radicand must be positive (not just nonnegative) because it is in a denominator. The denominator is at most 2.
+    explanation: '\(\sqrt{4-z^2}\in(0,2]\) for \(-2<z<2\), so its reciprocal takes all values in \([\tfrac12,\infty)\).'
+  5:
+    topic: s1-1
+    question: 'What is the domain of \(y=\sqrt{\dfrac1x-1}\)?'
+    A: '\(x\ge 1\)'
+    B: '\(x>0\)'
+    C: '\(0\le x\le 1\)'
+    D: '\(0<x\le 1\)'
+    answer: D
+    hint: 'You need \(\tfrac1x-1\ge 0\), and \(x\) cannot be 0.'
+    explanation: '\(\tfrac1x\ge1\) with \(x>0\) forces \(x\le 1\). So the domain is \((0,1]\).'
+  6:
+    topic: s1-1
+    question: 'A curve in the \(xy\)-plane is the graph of a function of \(x\) exactly when'
+    A: 'the curve is symmetric about the \(y\)-axis'
+    B: every horizontal line meets the curve at most once
+    C: the curve passes through the origin
+    D: every vertical line meets the curve at most once
+    answer: D
+    hint: Think about the vertical line test.
+    explanation: 'A function assigns exactly one output to each input, so no vertical line may cross the graph twice. Circles and \(y^2=x^2\) fail the test.'
+  7:
+    topic: s1-1
+    question: 'Express the area of an equilateral triangle as a function of its side length \(x\).'
+    A: '\(A(x)=\dfrac{\sqrt3}{2}x^2\)'
+    B: '\(A(x)=\dfrac{\sqrt3}{4}x^2\)'
+    C: '\(A(x)=\sqrt3\,x^2\)'
+    D: '\(A(x)=\dfrac12x^2\)'
+    answer: B
+    hint: 'The height of an equilateral triangle with side \(x\) is \(\tfrac{\sqrt3}{2}x\). Then use \(\tfrac12\,\text{base}\cdot\text{height}\).'
+    explanation: '\(A=\tfrac12\cdot x\cdot\tfrac{\sqrt3}{2}x=\tfrac{\sqrt3}{4}x^2\).'
+  8:
+    topic: s1-1
+    question: 'Express the area of a square as a function of the length \(d\) of its diagonal.'
+    A: '\(A=\dfrac{d^2}{4}\)'
+    B: '\(A=2d^2\)'
+    C: '\(A=d^2\)'
+    D: '\(A=\dfrac{d^2}{2}\)'
+    answer: D
+    hint: 'If the side is \(s\), the diagonal satisfies \(d^2=s^2+s^2\).'
+    explanation: '\(d^2=2s^2\), so \(s=d/\sqrt2\) and \(A=s^2=d^2/2\).'
+  9:
+    topic: s1-1
+    question: 'An open box is made from a \(14\text{ in.}\times 22\text{ in.}\) sheet by cutting equal squares of side \(x\) from each corner and folding up the sides. Its volume is'
+    A: '\(V(x)=x(14-x)(22-x)\)'
+    B: '\(V(x)=(14-2x)(22-2x)\)'
+    C: '\(V(x)=x(14-2x)(22-x)\)'
+    D: '\(V(x)=x(14-2x)(22-2x)\)'
+    answer: D
+    hint: 'The height of the box is \(x\). Each side of the base loses \(x\) from both ends.'
+    explanation: 'The base is \((14-2x)\) by \((22-2x)\) and the height is \(x\), so \(V=x(14-2x)(22-2x)\).'
+  10:
+    topic: s1-1
+    question: 'A cone is formed from a circular piece of paper of radius 4 in. by cutting out a sector with arc length \(x\). The radius \(r\) of the cone''s base, as a function of \(x\), is'
+    A: '\(r=4-\dfrac{x}{\pi}\)'
+    B: '\(r=4-\dfrac{x}{2\pi}\)'
+    C: '\(r=8\pi-x\)'
+    D: '\(r=\dfrac{8\pi-x}{\pi}\)'
+    answer: B
+    hint: 'The base circumference is the arc left over: \(8\pi-x\). Use \(C=2\pi r\).'
+    explanation: '\(2\pi r=8\pi-x\), so \(r=4-\dfrac{x}{2\pi}\).'
+  11:
+    topic: s1-1
+    question: 'Does \(\lfloor -x\rfloor=-\lfloor x\rfloor\) hold for all real \(x\)?'
+    A: Yes, because the floor function is odd
+    B: 'No: for \(x=\tfrac12\), \(\lfloor-\tfrac12\rfloor=-1\) but \(-\lfloor\tfrac12\rfloor=0\)'
+    C: 'Yes, for every \(x\) except negative integers'
+    D: 'No: it fails only when \(x\) is an integer'
+    answer: B
+    hint: 'Try a number that is not an integer, such as \(x=0.5\).'
+    explanation: 'It holds for integers but fails otherwise, so it is not true for all \(x\).'
+  12:
+    topic: s1-1
+    question: 'For which real numbers \(x\) is \(\lfloor x\rfloor=\lceil x\rceil\)?'
+    A: Exactly the integers
+    B: Exactly the rationals
+    C: No real numbers
+    D: Exactly the nonnegative reals
+    answer: A
+    hint: The floor rounds down and the ceiling rounds up. When do they agree?
+    explanation: 'They differ by 1 for any non-integer and agree exactly when \(x\) is an integer.'
+  13:
+    topic: s1-1
+    question: 'Dayton Power plans a cable from a plant on one bank of a river 800 ft wide to a point \(Q\) on the opposite bank, \(x\) ft downstream from the point \(P\) directly across, then along the land to Dayton, 2 mi (10,560 ft) downstream of \(P\). Across the river costs $180 per foot and along the land $100 per foot. The cost function is \(C(x)=\)'
+    A: '\(- 180 x + 100 \sqrt{x^{2} + 640000} + 1900800\)'
+    B: '\(- 100 x + 180 \sqrt{x^{2} + 640000} + 1056000\)'
+    C: '\(100 x + 180 \sqrt{x^{2} + 640000}\)'
+    D: '\(80 x + 1200000\)'
+    answer: B
+    hint: 'The river crossing is the hypotenuse of a right triangle with legs 800 and \(x\). The land part is what remains of the 10,560 ft.'
+    explanation: 'Across the river: \(\sqrt{x^2+800^2}\) ft at $180/ft. Along the land: \(10560-x\) ft at $100/ft.'
+  14:
+    topic: s1-2
+    question: 'Which kind of function is \(h(x)=\dfrac{x^2-1}{x^2+1}\)?'
+    A: A rational function
+    B: An exponential function
+    C: A power function
+    D: A polynomial of degree 2
+    answer: A
+    hint: It is a quotient of two polynomials.
+    explanation: A ratio of polynomials is a rational function (it is also algebraic).
+  15:
+    topic: s1-2
+    question: 'Which kind of function is \(r(x)=8^x\)?'
+    A: A polynomial of degree 8
+    B: A logarithmic function
+    C: A power function
+    D: An exponential function
+    answer: D
+    hint: Is the variable in the base or in the exponent?
+    explanation: 'A constant base raised to a variable exponent is exponential, unlike the power function \(x^8\).'
+  16:
+    topic: s1-2
+    question: Which of these functions is a polynomial?
+    A: '\(f(t)=t^4-t\)'
+    B: '\(G(t)=5^t\)'
+    C: '\(g(z)=\sqrt{z^3+1}\)'
+    D: '\(y=x^{5/2}-2x+1\)'
+    answer: A
+    hint: A polynomial has only nonnegative whole-number powers of the variable.
+    explanation: '\(t^4-t\) is a polynomial of degree 4. \(x^{5/2}\) and the square root are not whole-number powers, and \(5^t\) is exponential.'
+  17:
+    topic: s1-2
+    question: Which function is odd?
+    A: '\(y=x^4+x^2\)'
+    B: '\(y=x^4\)'
+    C: '\(y=x^{10}\)'
+    D: '\(y=x^7\)'
+    answer: D
+    hint: 'An odd function satisfies \(f(-x)=-f(x)\).'
+    explanation: 'Odd powers of \(x\) are odd functions; even powers are even.'
+  18:
+    topic: s1-2
+    question: 'Which statement about \(y=-\dfrac{1}{x^2}\) is correct?'
+    A: 'It is even, decreasing on \((0,\infty)\) and increasing on \((-\infty,0)\)'
+    B: 'It is even, increasing on \((0,\infty)\) and decreasing on \((-\infty,0)\)'
+    C: 'It is odd and increasing on both \((-\infty,0)\) and \((0,\infty)\)'
+    D: It is neither even nor odd
+    answer: B
+    hint: 'Check values: \(x=1\) gives \(-1\) and \(x=2\) gives \(-\tfrac14\).'
+    explanation: '\(f(-x)=f(x)\), so it is even. For \(x>0\) the value rises toward 0 as \(x\) grows, so it increases. Mirror this for \(x<0\).'
+  19:
+    topic: s1-2
+    question: 'Which statement about \(y=-\dfrac1x\) is correct?'
+    A: 'It is odd and increasing on \((-\infty,0)\) and on \((0,\infty)\)'
+    B: 'It is odd and increasing on \((-\infty,\infty)\)'
+    C: 'It is odd and decreasing on \((-\infty,0)\) and on \((0,\infty)\)'
+    D: 'It is even and increasing on \((0,\infty)\)'
+    answer: A
+    hint: 'Its derivative is \(1/x^2\), which is positive wherever the function is defined.'
+    explanation: '\(f(-x)=-f(x)\), so it is odd. The slope is positive on each piece, but the function is not defined at \(x=0\), so it is not increasing over all of \(\mathbb{R}\).'
+  20:
+    topic: s1-2
+    question: 'The function \(y=\sqrt{-x}\) is'
+    A: 'defined for \(x\ge0\) and decreasing'
+    B: 'defined for \(x\le0\) and decreasing on \((-\infty,0]\)'
+    C: 'defined for \(x\le0\) and increasing on \((-\infty,0]\)'
+    D: 'defined for all \(x\) and even'
+    answer: B
+    hint: 'What must \(-x\) satisfy? Then compare \(x=-4\) with \(x=-1\).'
+    explanation: 'It is the graph of \(\sqrt{x}\) reflected across the \(y\)-axis. As \(x\) increases toward 0, \(\sqrt{-x}\) falls toward 0.'
+  21:
+    topic: s1-2
+    question: 'Say whether \(g(x)=x^3+x\) is even, odd, or neither.'
+    A: Neither
+    B: Even
+    C: Odd
+    D: Both even and odd
+    answer: C
+    hint: 'Compute \(g(-x)\) and compare with \(g(x)\) and \(-g(x)\).'
+    explanation: '\(g(-x)=-x^3-x=-g(x)\), so it is odd.'
+  22:
+    topic: s1-2
+    question: 'Say whether \(h(t)=\dfrac{1}{t-1}\) is even, odd, or neither.'
+    A: Even
+    B: Neither
+    C: Odd
+    D: Both even and odd
+    answer: B
+    hint: 'Compute \(h(-t)\) and compare with \(h(t)\) and \(-h(t)\).'
+    explanation: '\(h(-t)=\dfrac{1}{-t-1}=-\dfrac{1}{t+1}\), which is not \(h(t)\) and not \(-h(t)\). The domain is not even symmetric about 0.'
+  23:
+    topic: s1-2
+    question: 'Say whether \(h(t)=|t^3|\) is even, odd, or neither.'
+    A: Even
+    B: Odd
+    C: Both even and odd
+    D: Neither
+    answer: A
+    hint: 'The absolute value ignores the sign of \(t^3\).'
+    explanation: '\(|(-t)^3|=|t^3|\), so \(h(-t)=h(t)\).'
+  24:
+    topic: s1-2
+    question: 'Say whether \(g(x)=\dfrac{x}{x^2-1}\) is even, odd, or neither.'
+    A: Neither
+    B: Both even and odd
+    C: Even
+    D: Odd
+    answer: D
+    hint: 'Replace \(x\) by \(-x\): the numerator changes sign, the denominator does not.'
+    explanation: '\(g(-x)=\dfrac{-x}{x^2-1}=-g(x)\).'
+  25:
+    topic: s1-2
+    question: 'Data pairs \((x,y)\): \((5.9,1),(12.1,2),(17.9,3),(23.9,4),(29.9,5),(36.2,6),(41.8,7),(48.2,8)\). If \(y\) is proportional to \(x\), the constant \(k\) in \(y=kx\) is about'
+    A: '\(k\approx 0.167\) (that is, \(\tfrac16\))'
+    B: '\(k\approx 1.2\)'
+    C: '\(k\approx 0.33\)'
+    D: '\(k\approx 6\)'
+    answer: A
+    hint: 'Compute \(y/x\) for a few pairs; for proportional data it is nearly constant.'
+    explanation: '\(y/x\) is about \(1/5.9,\ 2/12.1,\ 3/17.9,\dots\approx0.167\). (\(x/y\approx 6\) is the reciprocal.)'
+  26:
+    topic: s1-2
+    question: 'The data \((x,y)=(0,5),(1,15),(2,45),(3,135),(4,405),\dots\) support the assumption that \(y\) is proportional to \(3^x\). What is the constant of proportionality?'
+    A: '\(\tfrac13\)'
+    B: '\(5\)'
+    C: '\(3\)'
+    D: '\(15\)'
+    answer: B
+    hint: 'Compute \(y/3^x\) at \(x=0\).'
+    explanation: '\(y/3^x=5\) for every pair, so \(y=5\cdot 3^x\).'
+  27:
+    topic: s1-2
+    question: 'A car''s reaction distance (ft) is recorded at speeds from 20 to 80 mph: \(22\) ft at 20, \(55\) ft at 50, \(88\) ft at 80. If reaction distance is proportional to speed, the constant is about'
+    A: '\(11\) ft per mph'
+    B: '\(0.9\) ft per mph'
+    C: '\(1.1\) ft per mph'
+    D: '\(1.6\) ft per mph'
+    answer: C
+    hint: Divide distance by speed at several speeds.
+    explanation: '\(22/20=1.1,\ 55/50=1.1,\ 88/80=1.1\).'
+  28:
+    topic: s1-2
+    question: 'For Ponderosa pines, usable board feet \(y\) was recorded against girth \(x\) (e.g. \((17,19),(28,113),(41,294)\)). Which model fits the data better?'
+    A: '\(y\) proportional to the square of the girth'
+    B: '\(y\) proportional to the cube of the girth'
+    C: '\(y\) proportional to the girth itself'
+    D: Both fit equally well
+    answer: B
+    hint: 'Compute \(y/x^2\) and \(y/x^3\) for the smallest and largest trees and see which ratio stays more nearly constant.'
+    explanation: '\(y/x^2\) climbs from about 0.07 to 0.17, while \(y/x^3\) stays between roughly 0.0036 and 0.0052, so the cube model is more nearly proportional.'
+  29:
+    topic: s1-2
+    question: 'By Kepler''s third law, the time \(T\) a planet takes to orbit the sun is proportional to'
+    A: the cube root of its average distance
+    B: 'the \(\tfrac32\) power of its average distance from the sun'
+    C: the square of its average distance
+    D: its average distance from the sun
+    answer: B
+    hint: 'The law relates \(T^2\) to a cube.'
+    explanation: '\(T^2\propto a^3\), so \(T\propto a^{3/2}\).'
+  30:
+    topic: s1-3
+    question: 'If \(f(x)=x\) and \(g(x)=\sqrt{x-1}\), the domain and range of \(f+g\) are'
+    A: 'domain \([0,\infty)\), range \([0,\infty)\)'
+    B: 'domain \([1,\infty)\), range \([0,\infty)\)'
+    C: 'domain \((1,\infty)\), range \((1,\infty)\)'
+    D: 'domain \([1,\infty)\), range \([1,\infty)\)'
+    answer: D
+    hint: '\(f+g\) is defined only where both are. Evaluate \(f+g\) at its left endpoint.'
+    explanation: '\(g\) needs \(x\ge1\). Then \(x+\sqrt{x-1}\) starts at 1 (when \(x=1\)) and increases without bound.'
+  31:
+    topic: s1-3
+    question: 'If \(f(x)=1\) and \(g(x)=1+\sqrt{x}\), the range of \(f/g\) is'
+    A: '\((0,1]\)'
+    B: '\([0,1]\)'
+    C: '\([1,\infty)\)'
+    D: '\((0,\infty)\)'
+    answer: A
+    hint: '\(g\ge1\), so the quotient is at most 1. Can it reach 0?'
+    explanation: '\(\dfrac{1}{1+\sqrt x}\) equals 1 at \(x=0\) and decreases toward 0 without reaching it, so the range is \((0,1]\).'
+  32:
+    topic: s1-3
+    question: 'If \(f(x)=x+5\) and \(g(x)=x^2-3\), find \((f\circ g)(x)=f(g(x))\).'
+    A: '\(x^{2} + 2\)'
+    B: '\(x^{2} - x + 2\)'
+    C: '\(\left(x + 5\right)^{2} - 3\)'
+    D: '\(\left(x + 5\right) \left(x^{2} - 3\right)\)'
+    answer: A
+    hint: 'Substitute \(g(x)\) wherever \(f\) has an \(x\).'
+    explanation: '\(f(g(x))=g(x)+5=(x^2-3)+5\).'
+  33:
+    topic: s1-3
+    question: 'With the same \(f(x)=x+5\) and \(g(x)=x^2-3\), find \((g\circ f)(x)=g(f(x))\).'
+    A: '\(x^{2} + 22\)'
+    B: '\(\left(x + 5\right) \left(x^{2} - 3\right)\)'
+    C: '\(x^{2} + 2\)'
+    D: '\(\left(x + 5\right)^{2} - 3\)'
+    answer: D
+    hint: 'This time \(f\) goes inside \(g\).'
+    explanation: '\(g(f(x))=(x+5)^2-3=x^2+10x+22\).'
+  34:
+    topic: s1-3
+    question: 'With \(f(x)=x+5\) and \(g(x)=x^2-3\), what is \(g(g(2))\)?'
+    A: '\(6\)'
+    B: '\(-2\)'
+    C: '\(-3\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'First compute \(g(2)\), then apply \(g\) to that.'
+    explanation: '\(g(2)=1\) and \(g(1)=1-3=-2\).'
+  35:
+    topic: s1-3
+    question: 'If \(f(x)=x-1\) and \(g(x)=\dfrac{1}{x+1}\), then \(g(f(x))=\)'
+    A: '\(\frac{x - 1}{x + 1}\)'
+    B: '\(\frac{1}{x}\)'
+    C: '\(-1 + \frac{1}{x + 1}\)'
+    D: '\(\frac{1}{x - 1}\)'
+    answer: B
+    hint: 'Replace \(x\) in \(g\) by \(x-1\).'
+    explanation: '\(g(f(x))=\dfrac{1}{(x-1)+1}=\dfrac1x\).'
+  36:
+    topic: s1-3
+    question: 'If \(f(x)=x-1\) and \(g(x)=\dfrac1{x+1}\), what is \(f(g(1/2))\)?'
+    A: '\(-\dfrac13\)'
+    B: '\(2\)'
+    C: '\(\dfrac13\)'
+    D: '\(-\dfrac23\)'
+    answer: A
+    hint: 'Compute \(g(1/2)\) first.'
+    explanation: '\(g(\tfrac12)=\dfrac{1}{3/2}=\tfrac23\), and \(f(\tfrac23)=\tfrac23-1=-\tfrac13\).'
+  37:
+    topic: s1-3
+    question: 'If \(u(x)=4x-5\), \(v(x)=x^2\) and \(f(x)=1/x\), find \(u(v(f(x)))\).'
+    A: '\(\left(-5 + \frac{4}{x}\right)^{2}\)'
+    B: '\(-5 + \frac{4}{x^{2}}\)'
+    C: '\(\frac{1}{4 x^{2} - 5}\)'
+    D: '\(-4 + \frac{4}{x^{2}}\)'
+    answer: B
+    hint: 'Work from the inside out: \(f\) first, then \(v\), then \(u\).'
+    explanation: '\(f(x)=1/x\), \(v(1/x)=1/x^2\), \(u(1/x^2)=4/x^2-5\).'
+  38:
+    topic: s1-3
+    question: 'With the same \(u,v,f\), find \(f(u(v(x)))\).'
+    A: '\(4 x^{2} - 5\)'
+    B: '\(\frac{1}{4 x^{2} - 5}\)'
+    C: '\(-5 + \frac{4}{x^{2}}\)'
+    D: '\(\frac{1}{\left(4 x - 5\right)^{2}}\)'
+    answer: B
+    hint: 'Now \(v\) goes first, then \(u\), then \(f\).'
+    explanation: '\(v(x)=x^2\), \(u(x^2)=4x^2-5\), \(f(4x^2-5)=\dfrac{1}{4x^2-5}\).'
+  39:
+    topic: s1-3
+    question: 'Let \(f(x)=x-3\), \(g(x)=\sqrt{x}\), \(h(x)=x^3\), \(j(x)=2x\). Which composite gives \(y=\sqrt{x-3}\)?'
+    A: '\(h\circ g\)'
+    B: '\(g\circ f\)'
+    C: '\(j\circ g\circ f\)'
+    D: '\(f\circ g\)'
+    answer: B
+    hint: Subtract 3 first, then take the square root.
+    explanation: '\(g(f(x))=\sqrt{x-3}\). The order matters: \(f(g(x))=\sqrt{x}-3\).'
+  40:
+    topic: s1-3
+    question: 'With \(f(x)=x-3\), \(g(x)=\sqrt{x}\), \(h(x)=x^3\), \(j(x)=2x\), the function \(y=(2x-6)^3\) equals'
+    A: '\(f\circ j\circ h\)'
+    B: '\(h\circ f\circ j\)'
+    C: '\(h\circ j\circ f\)'
+    D: '\(j\circ h\circ f\)'
+    answer: C
+    hint: '\(2x-6=2(x-3)\). Subtract, double, then cube.'
+    explanation: '\(f(x)=x-3\), then \(j\) gives \(2(x-3)=2x-6\), then \(h\) cubes it.'
+  41:
+    topic: s1-3
+    question: 'For \(f(x)=\sqrt{x+1}\) and \(g(x)=\dfrac1x\), the domain of \(g\circ f\) is'
+    A: '\([-1,\infty)\)'
+    B: '\((-\infty,-1]\cup(0,\infty)\)'
+    C: '\((0,\infty)\)'
+    D: '\((-1,\infty)\)'
+    answer: D
+    hint: '\(g(f(x))=\dfrac{1}{\sqrt{x+1}}\). The radicand must be positive.'
+    explanation: '\(x+1>0\) gives \(x>-1\).'
+  42:
+    topic: s1-3
+    question: 'For \(f(x)=\sqrt{x+1}\) and \(g(x)=\dfrac1x\), the domain of \(f\circ g\) is'
+    A: '\([-1,\infty)\)'
+    B: '\((-1,\infty)\)'
+    C: '\((0,\infty)\)'
+    D: '\((-\infty,-1]\cup(0,\infty)\)'
+    answer: D
+    hint: '\(f(g(x))=\sqrt{\tfrac1x+1}\). Need \(x\neq0\) and \(\tfrac{1+x}{x}\ge0\).'
+    explanation: '\(\dfrac{x+1}{x}\ge0\) when \(x>0\) or \(x\le-1\).'
+  43:
+    topic: s1-3
+    question: 'If \(f(x)=x^2\) and \(g(x)=1-\sqrt{x}\), then \((g\circ f)(x)\) simplifies to'
+    A: '\((1-\sqrt x)^2\)'
+    B: '\(1+|x|\)'
+    C: '\(1-x\)'
+    D: '\(1-|x|\)'
+    answer: D
+    hint: '\(\sqrt{x^2}\) is not simply \(x\).'
+    explanation: '\(g(f(x))=1-\sqrt{x^2}=1-|x|\), defined for all real \(x\).'
+  44:
+    topic: s1-3
+    question: 'The graph of \(y=-x^2\) is shifted so its vertex is at \((-7,0)\) (and it still opens downward). Its equation is'
+    A: '\(y=-(x-7)^2\)'
+    B: '\(y=-x^2-7\)'
+    C: '\(y=-(x+7)^2\)'
+    D: '\(y=-x^2+7\)'
+    answer: C
+    hint: 'Shifting left by \(a\) replaces \(x\) by \(x+a\).'
+    explanation: 'A left shift of 7 gives \(y=-(x+7)^2\).'
+  45:
+    topic: s1-3
+    question: 'The graph of \(y=x^2\) is shifted up 3 units. Which equation describes it?'
+    A: '\(y=(x-3)^2\)'
+    B: '\(y=x^2+3\)'
+    C: '\(y=x^2-3\)'
+    D: '\(y=(x+3)^2\)'
+    answer: B
+    hint: Vertical shifts change the output directly.
+    explanation: Adding 3 to every output moves the graph up 3.
+  46:
+    topic: s1-3
+    question: 'What is the vertex of the parabola \(y=(x+3)^2-2\)?'
+    A: '\((-3,2)\)'
+    B: '\((3,2)\)'
+    C: '\((-3,-2)\)'
+    D: '\((3,-2)\)'
+    answer: C
+    hint: 'The form is \(y=(x-h)^2+k\) with vertex \((h,k)\).'
+    explanation: '\(x+3=x-(-3)\) gives \(h=-3\), and \(k=-2\).'
+  47:
+    topic: s1-3
+    question: 'The graph of \(y=-x^2\) is shifted to a parabola opening downward with vertex \((-2,3)\). Its equation is'
+    A: '\(y=-(x+2)^2+3\)'
+    B: '\(y=(x+2)^2+3\)'
+    C: '\(y=-(x+2)^2-3\)'
+    D: '\(y=-(x-2)^2+3\)'
+    answer: A
+    hint: 'Use \(y=-(x-h)^2+k\) with \((h,k)=(-2,3)\).'
+    explanation: 'Left 2 and up 3 give \(y=-(x+2)^2+3\).'
+  48:
+    topic: s1-3
+    question: 'Shift the circle \(x^2+y^2=49\) down 3 and left 2. The new equation is'
+    A: '\((x+2)^2+(y+3)^2=49\)'
+    B: '\((x-2)^2+(y+3)^2=49\)'
+    C: '\((x-2)^2+(y-3)^2=49\)'
+    D: '\((x+2)^2+(y-3)^2=49\)'
+    answer: A
+    hint: 'Left 2 means \(x\to x+2\). Down 3 means \(y\to y+3\).'
+    explanation: 'The new center is \((-2,-3)\); the radius is still 7.'
+  49:
+    topic: s1-3
+    question: 'Shift \(y=\tfrac12(x+1)+5\) down 5 and left 1. The new equation is'
+    A: '\(y=\tfrac12(x+1)\)'
+    B: '\(y=\tfrac12(x+2)\)'
+    C: '\(y=\tfrac12 x\)'
+    D: '\(y=\tfrac12(x+2)+10\)'
+    answer: B
+    hint: 'Left 1 replaces \(x\) by \(x+1\). Then subtract 5.'
+    explanation: '\(\tfrac12(x+1+1)+5-5=\tfrac12(x+2)\).'
+  50:
+    topic: s1-3
+    question: 'Shift \(y=1/x\) up 1 and right 1. The new equation is'
+    A: '\(y=\dfrac{1}{x+1}-1\)'
+    B: '\(y=\dfrac{1}{x-1}-1\)'
+    C: '\(y=\dfrac{1}{x+1}+1\)'
+    D: '\(y=\dfrac{1}{x-1}+1\)'
+    answer: D
+    hint: 'Right 1 replaces \(x\) by \(x-1\).'
+    explanation: 'The new asymptotes are \(x=1\) and \(y=1\).'
+  51:
+    topic: s1-3
+    question: 'The function \(f\) has domain \([0,2]\) and range \([0,1]\). What are the domain and range of \(g(x)=f(x+2)\)?'
+    A: 'domain \([-2,0]\), range \([2,3]\)'
+    B: 'domain \([-2,0]\), range \([0,1]\)'
+    C: 'domain \([2,4]\), range \([0,1]\)'
+    D: 'domain \([0,2]\), range \([2,3]\)'
+    answer: B
+    hint: 'Replace \(x\) by \(x+2\): the input must satisfy \(0\le x+2\le 2\).'
+    explanation: 'A horizontal shift left by 2 changes the domain to \([-2,0]\) and leaves the range alone.'
+  52:
+    topic: s1-3
+    question: '\(f\) has domain \([0,2]\) and range \([0,1]\). What are the domain and range of \(g(x)=-f(x+1)+1\)?'
+    A: 'domain \([-1,1]\), range \([-1,0]\)'
+    B: 'domain \([-1,1]\), range \([1,2]\)'
+    C: 'domain \([-1,1]\), range \([0,1]\)'
+    D: 'domain \([1,3]\), range \([0,1]\)'
+    answer: C
+    hint: 'Handle the input and output separately: \(0\le x+1\le2\), and \(f\in[0,1]\to -f\to -f+1\).'
+    explanation: 'Domain: \(-1\le x\le1\). Range: \(f\in[0,1]\) gives \(-f\in[-1,0]\) and \(-f+1\in[0,1]\).'
+  53:
+    topic: s1-3
+    question: '\(g(t)\) has domain \([-4,0]\) and range \([-3,0]\). What is the domain of \(g(1-t)\)?'
+    A: '\([1,5]\)'
+    B: '\([0,4]\)'
+    C: '\([-3,1]\)'
+    D: '\([-5,-1]\)'
+    answer: A
+    hint: 'Need \(-4\le 1-t\le 0\).'
+    explanation: '\(-4\le1-t\le0\) gives \(1\le t\le 5\).'
+  54:
+    topic: s1-3
+    question: '\(g(t)\) has domain \([-4,0]\) and range \([-3,0]\). What is the range of \(1-g(t)\)?'
+    A: '\([-2,1]\)'
+    B: '\([-4,-1]\)'
+    C: '\([0,3]\)'
+    D: '\([1,4]\)'
+    answer: D
+    hint: Negate the range, then add 1.
+    explanation: '\(-g\in[0,3]\), so \(1-g\in[1,4]\).'
+  55:
+    topic: s1-3
+    question: 'To stretch the graph of \(y=x^2-1\) vertically by a factor of 3, the new equation is'
+    A: '\(y=(3x)^2-1\)'
+    B: '\(y=\tfrac13(x^2-1)\)'
+    C: '\(y=3(x^2-1)\)'
+    D: '\(y=(x/3)^2-1\)'
+    answer: C
+    hint: A vertical stretch multiplies the outputs.
+    explanation: 'Multiply the whole function by 3: \(y=3x^2-3\).'
+  56:
+    topic: s1-3
+    question: 'To compress the graph of \(y=x^2-1\) horizontally by a factor of 2, the new equation is'
+    A: '\(y=(2x)^2-1=4x^2-1\)'
+    B: '\(y=2(x^2-1)\)'
+    C: '\(y=\tfrac12(x^2-1)\)'
+    D: '\(y=(x/2)^2-1\)'
+    answer: A
+    hint: 'Horizontal changes act on the input: replace \(x\) by \(cx\) with \(c>1\) to compress.'
+    explanation: 'Compressing by 2 means \(x\to 2x\).'
+  57:
+    topic: s1-3
+    question: 'Stretching the graph of \(y=1-x^3\) horizontally by a factor of 2 gives'
+    A: '\(y=1-\left(\dfrac{x}{2}\right)^3\)'
+    B: '\(y=1-2x^3\)'
+    C: '\(y=2(1-x^3)\)'
+    D: '\(y=1-(2x)^3\)'
+    answer: A
+    hint: 'A horizontal stretch by \(c\) replaces \(x\) by \(x/c\).'
+    explanation: '\(x\to x/2\) gives \(1-(x/2)^3\).'
+  58:
+    topic: s1-3
+    question: 'Which function is odd if \(f\) is even and \(g\) is odd (both defined on all of \(\mathbb{R}\))?'
+    A: '\(g\circ f\)'
+    B: '\(fg\)'
+    C: '\(g^2\)'
+    D: '\(f^2\)'
+    answer: B
+    hint: 'Test the sign: \((fg)(-x)=f(-x)g(-x)\).'
+    explanation: '\((fg)(-x)=f(x)(-g(x))=-(fg)(x)\), so \(fg\) is odd. The other three are even.'
+  59:
+    topic: s1-3
+    question: Which function is both even and odd?
+    A: '\(f(x)=0\) for all \(x\)'
+    B: '\(f(x)=1\)'
+    C: '\(f(x)=x\)'
+    D: '\(f(x)=|x|\)'
+    answer: A
+    hint: 'Both \(f(-x)=f(x)\) and \(f(-x)=-f(x)\) must hold, so \(f(x)=-f(x)\).'
+    explanation: '\(f(x)=-f(x)\) forces \(f(x)=0\) for every \(x\).'
+  60:
+    topic: s1-3
+    question: 'For \(f(x)=A\sin\!\left(\dfrac{2\pi}{B}(x-C)\right)+D\), the period of \(f\) is'
+    A: '\(|A|\)'
+    B: '\(2\pi/B\)'
+    C: '\(|B|\)'
+    D: '\(|C|\)'
+    answer: C
+    hint: 'The sine completes a cycle when its argument increases by \(2\pi\).'
+    explanation: 'Increasing \(x\) by \(B\) adds \(2\pi\) to the argument, so the period is \(|B|\).'
+  61:
+    topic: s1-3
+    question: 'For \(y=2\sin(x+\pi)-1\), written as \(A\sin\!\big(\tfrac{2\pi}{B}(x-C)\big)+D\), the values of \(B\) and \(C\) are'
+    A: '\(B=1,\ C=-\pi\)'
+    B: '\(B=2\pi,\ C=\pi\)'
+    C: '\(B=2\pi,\ C=-\pi\)'
+    D: '\(B=\pi,\ C=\pi\)'
+    answer: C
+    hint: 'The coefficient of \(x\) inside is \(1=2\pi/B\). Write \(x+\pi\) as \(x-C\).'
+    explanation: '\(2\pi/B=1\) gives \(B=2\pi\), and \(x+\pi=x-(-\pi)\) gives \(C=-\pi\).'
+  62:
+    topic: s1-3
+    question: 'What is the period of \(y=\tfrac12\sin(\pi x-\pi)+\tfrac12\)?'
+    A: '\(\pi\)'
+    B: '\(\tfrac12\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: C
+    hint: 'Period \(=2\pi/(\text{coefficient of }x)\).'
+    explanation: 'The coefficient of \(x\) is \(\pi\), so the period is \(2\pi/\pi=2\).'
+  63:
+    topic: s1-3
+    question: 'As \(C\) increases through positive values in \(f(x)=A\sin\!\left(\frac{2\pi}{B}(x-C)\right)\), the graph'
+    A: stretches vertically
+    B: shifts to the right
+    C: shifts to the left
+    D: shifts upward
+    answer: B
+    hint: 'Compare \(x-C\) with \(x\): when does the argument reach a given value?'
+    explanation: 'Replacing \(x\) with \(x-C\) slides the graph \(C\) units to the right.'
+  64:
+    topic: s1-4
+    question: 'Which viewing window best displays the graph of \(f(x)=x^4-7x^2+6x\)?'
+    A: '\([-5,5]\text{ by }[-25,15]\)'
+    B: '\([-1,1]\text{ by }[-1,1]\)'
+    C: '\([-2,2]\text{ by }[-5,5]\)'
+    D: '\([-10,10]\text{ by }[-10,10]\)'
+    answer: A
+    hint: 'Factor: \(f(x)=x(x-1)(x-2)(x+3)\). The window must show all the zeros and the lowest point (near \(x\approx-2.2\), where \(f\approx-23.7\)).'
+    explanation: 'The zeros are \(-3,0,1,2\) and the local minimum near \(x=-2.2\) is about \(-23.7\), so \([-5,5]\) by \([-25,15]\) shows every feature. The others cut off zeros or the minimum.'
+  65:
+    topic: s1-4
+    question: 'Which viewing window best displays \(f(x)=x^3-4x^2-4x+16\)?'
+    A: '\([-20,20]\text{ by }[-100,100]\)'
+    B: '\([-3,3]\text{ by }[-10,10]\)'
+    C: '\([-5,5]\text{ by }[-10,20]\)'
+    D: '\([-5,5]\text{ by }[-10,10]\)'
+    answer: C
+    hint: 'The zeros are \(-2,2,4\) and the local maximum is a bit above 16 (near \(x\approx-0.4\)).'
+    explanation: '\(f=(x-4)(x-2)(x+2)\). The local max is about 16.9 and the local min about \(-5.0\), so \(y\) must reach at least 17. The window \([-20,20]\) by \([-100,100]\) is so large the curve looks flat.'
+  66:
+    topic: s1-4
+    question: 'For \(f(x)=\sqrt{5+4x-x^2}\), which viewing window is most appropriate?'
+    A: '\([-2,6]\text{ by }[-1,4]\)'
+    B: '\([-10,10]\text{ by }[-10,10]\)'
+    C: '\([-3,7]\text{ by }[0,10]\)'
+    D: '\([-2,2]\text{ by }[-2,2]\)'
+    answer: A
+    hint: 'Write \(5+4x-x^2=9-(x-2)^2\): this is the upper half of a circle.'
+    explanation: 'The graph is the upper half of the circle with center \((2,0)\) and radius 3: \(x\in[-1,5]\), \(y\in[0,3]\).'
+  67:
+    topic: s1-4
+    question: 'Graphing \(y=\dfrac{1}{x-3}\) on a calculator, the two branches are joined by a near-vertical line at \(x=3\). In dot mode this disappears because'
+    A: dot mode graphs the inverse function
+    B: dot mode plots only the computed points and does not connect them
+    C: 'dot mode changes the domain to \(x\ge3\)'
+    D: dot mode removes the asymptote from the function
+    answer: B
+    hint: A vertical asymptote is not part of the graph. What does connect-the-dots do?
+    explanation: In connected mode the calculator draws a line between points on either side of the asymptote; dot mode shows only the plotted points.
+  68:
+    topic: s1-4
+    question: 'The circle \(x^2+2x=4+4y-y^2\) has center and radius'
+    A: 'center \((-1,2)\), radius \(9\)'
+    B: 'center \((1,-2)\), radius \(3\)'
+    C: 'center \((-1,2)\), radius \(3\)'
+    D: 'center \((-1,-2)\), radius \(3\)'
+    answer: C
+    hint: 'Move everything to one side and complete the square in \(x\) and \(y\).'
+    explanation: '\(x^2+2x+y^2-4y=4\) becomes \((x+1)^2+(y-2)^2=9\).'
+  69:
+    topic: s1-4
+    question: 'To graph the lower half of the circle \((x+1)^2+(y-2)^2=9\), use'
+    A: '\(y=-2-\sqrt{9-(x+1)^2}\)'
+    B: '\(y=2+\sqrt{9-(x+1)^2}\)'
+    C: '\(y=\sqrt{9-(x+1)^2}\)'
+    D: '\(y=2-\sqrt{9-(x+1)^2}\)'
+    answer: D
+    hint: 'Solve for \(y\) and choose the minus sign.'
+    explanation: '\((y-2)^2=9-(x+1)^2\) gives \(y=2\pm\sqrt{9-(x+1)^2}\); the lower half takes \(-\).'
+  70:
+    topic: s1-4
+    question: 'To graph the upper branch of the hyperbola \(y^2-16x^2=1\) as a function, use'
+    A: '\(y=\sqrt{16x^2-1}\)'
+    B: '\(y=\sqrt{1+16x^2}\)'
+    C: '\(y=\sqrt{1-16x^2}\)'
+    D: '\(y=-\sqrt{1+16x^2}\)'
+    answer: B
+    hint: 'Solve for \(y\) and keep the positive root.'
+    explanation: '\(y^2=1+16x^2\), so the upper branch is \(y=\sqrt{1+16x^2}\).'
+  71:
+    topic: s1-4
+    question: "A linear regression of construction workers' mean annual compensation (1980: $22,033 up to 2002: $45,413) against the year has a slope of about 1059. This slope represents"
+    A: the average yearly increase in compensation (dollars per year)
+    B: the percent growth per year
+    C: the compensation in year 0
+    D: the correlation between year and pay
+    answer: A
+    hint: 'Slope is the change in \(y\) per unit change in \(x\).'
+    explanation: 'For \(y=mx+b\), \(m\) is the change in \(y\) per unit of \(x\), so here pay rises about $1059 per year on average.'
+  72:
+    topic: s1-4
+    question: 'A power regression \(y=ax^b\) is fit to the stern-wave data (wavelength \(x\) in m, boat speed \(y\) in km/h), e.g. \((0.2,1.8),\,(4.0,9.0),\,(18.4,19.8)\). The exponent \(b\) is closest to'
+    A: '\(0.1\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(0.5\)'
+    answer: D
+    hint: "Speed grows slowly: wavelength goes up about 90-fold while speed goes up only about 11-fold."
+    explanation: '\(\ln(19.8/1.8)/\ln(18.4/0.2)\approx0.53\). Physically the speed is proportional to the square root of the wavelength.'
+  73:
+    topic: s1-5
+    question: 'Simplify \(16^{2}\cdot16^{-1.75}\).'
+    A: '\(4\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(2\)'
+    D: '\(8\)'
+    answer: C
+    hint: 'Use the laws of exponents: \(a^m a^n=a^{m+n}\), \(a^m/a^n=a^{m-n}\), \((a^m)^n=a^{mn}\).'
+    explanation: 'Add exponents: \(16^{2-1.75}=16^{0.25}=\sqrt[4]{16}=2\).'
+  74:
+    topic: s1-5
+    question: 'Simplify \(\dfrac{4^{4.2}}{4^{3.7}}\).'
+    A: '\(16\)'
+    B: '\(2\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(4\)'
+    answer: B
+    hint: 'Use the laws of exponents: \(a^m a^n=a^{m+n}\), \(a^m/a^n=a^{m-n}\), \((a^m)^n=a^{mn}\).'
+    explanation: 'Subtract exponents: \(4^{0.5}=2\).'
+  75:
+    topic: s1-5
+    question: 'Simplify \(\left(25^{1/8}\right)^4\).'
+    A: '\(\frac{1}{5}\)'
+    B: '\(5\)'
+    C: '\(25\)'
+    D: '\(125\)'
+    answer: B
+    hint: 'Use the laws of exponents: \(a^m a^n=a^{m+n}\), \(a^m/a^n=a^{m-n}\), \((a^m)^n=a^{mn}\).'
+    explanation: 'Multiply exponents: \(25^{1/2}=5\).'
+  76:
+    topic: s1-5
+    question: 'Simplify \(\left(\dfrac{2}{\sqrt2}\right)^4\).'
+    A: '\(2\)'
+    B: '\(4\)'
+    C: '\(16\)'
+    D: '\(8\)'
+    answer: B
+    hint: 'Use the laws of exponents: \(a^m a^n=a^{m+n}\), \(a^m/a^n=a^{m-n}\), \((a^m)^n=a^{mn}\).'
+    explanation: '\(\dfrac{2}{\sqrt2}=\sqrt2\), so \((\sqrt2)^4=4\).'
+  77:
+    topic: s1-5
+    question: 'Simplify \(\left(\dfrac{\sqrt6}{3}\right)^2\).'
+    A: '\(\frac{2}{3}\)'
+    B: '\(\frac{5}{3}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(\frac{3}{2}\)'
+    answer: A
+    hint: 'Use the laws of exponents: \(a^m a^n=a^{m+n}\), \(a^m/a^n=a^{m-n}\), \((a^m)^n=a^{mn}\).'
+    explanation: '\(\dfrac{6}{9}=\dfrac23\).'
+  78:
+    topic: s1-5
+    question: 'Simplify \(2^{\sqrt3}\cdot7^{\sqrt3}\).'
+    A: '\(9^{\sqrt3}\)'
+    B: '\(14^{\sqrt3}\)'
+    C: '\(14^{3}\)'
+    D: '\(14^{2\sqrt3}\)'
+    answer: B
+    hint: 'Same exponent, different bases: \(a^cb^c=(ab)^c\).'
+    explanation: '\(2^{\sqrt3}7^{\sqrt3}=(2\cdot7)^{\sqrt3}=14^{\sqrt3}\).'
+  79:
+    topic: s1-5
+    question: 'Simplify \(\left(\sqrt3\right)^{1/2}\cdot\left(\sqrt{12}\right)^{1/2}\).'
+    A: '\(6\)'
+    B: '\(36\)'
+    C: '\(\sqrt{15}\)'
+    D: '\(\sqrt6\)'
+    answer: D
+    hint: 'Combine under one exponent: \(\left(\sqrt3\cdot\sqrt{12}\right)^{1/2}\).'
+    explanation: '\(\sqrt3\cdot\sqrt{12}=\sqrt{36}=6\), and \(6^{1/2}=\sqrt6\).'
+  80:
+    topic: s1-5
+    question: 'Find the range of \(f(x)=\dfrac{1}{2+e^{x}}\).'
+    A: '\(\left(0,\tfrac12\right]\)'
+    B: '\((0,\infty)\)'
+    C: '\(\left[\tfrac12,\infty\right)\)'
+    D: '\(\left(0,\tfrac12\right)\)'
+    answer: D
+    hint: '\(e^x\) takes every positive value but never 0.'
+    explanation: '\(2+e^x\in(2,\infty)\), so its reciprocal lies in \((0,\tfrac12)\); neither endpoint is reached.'
+  81:
+    topic: s1-5
+    question: 'Find the range of \(g(t)=\sqrt{1+3^{-t}}\).'
+    A: '\((0,\infty)\)'
+    B: '\((1,\infty)\)'
+    C: '\([0,\infty)\)'
+    D: '\([1,\infty)\)'
+    answer: B
+    hint: '\(3^{-t}>0\) for every \(t\).'
+    explanation: '\(1+3^{-t}\in(1,\infty)\), and the square root keeps the range \((1,\infty)\).'
+  82:
+    topic: s1-5
+    question: 'Find the range of \(f(x)=\dfrac{3}{1-e^{2x}}\).'
+    A: '\((-\infty,0)\cup(3,\infty)\)'
+    B: '\((-\infty,0)\cup(0,\infty)\)'
+    C: '\((-\infty,3)\)'
+    D: '\((0,3)\)'
+    answer: A
+    hint: 'The domain excludes \(x=0\). Look at \(1-e^{2x}\) separately for \(x<0\) and \(x>0\).'
+    explanation: 'For \(x<0\), \(1-e^{2x}\in(0,1)\) so \(f\in(3,\infty)\). For \(x>0\), \(1-e^{2x}\in(-\infty,0)\) so \(f\in(-\infty,0)\).'
+  83:
+    topic: s1-5
+    question: The population of Knoxville is 500,000 and grows 3.75% per year. About how many years until it reaches 1 million?
+    A: 'about \(18.8\) years'
+    B: 'about \(37.5\) years'
+    C: 'about \(26.7\) years'
+    D: 'about \(9.4\) years'
+    answer: A
+    hint: 'Solve \(500000(1.0375)^t=1000000\), i.e. \((1.0375)^t=2\).'
+    explanation: '\(t=\dfrac{\ln2}{\ln1.0375}\approx18.8\) years.'
+  84:
+    topic: s1-5
+    question: Phosphorus-32 has a half-life of about 14 days. Starting with 6.6 g, about when will 1 g remain?
+    A: 'about \(92\) days'
+    B: 'about \(7\) days'
+    C: 'about \(14\) days'
+    D: 'about \(38\) days'
+    answer: D
+    hint: '\(A(t)=6.6\,(1/2)^{t/14}\). Set \(A=1\).'
+    explanation: '\(\left(\tfrac12\right)^{t/14}=\tfrac1{6.6}\) gives \(t=14\log_2 6.6\approx38.1\) days.'
+  85:
+    topic: s1-5
+    question: John invests $2300 at 6% interest compounded annually. About how long until the balance is $4150?
+    A: 'about \(7.8\) years'
+    B: 'about \(13.0\) years'
+    C: 'about \(10.1\) years'
+    D: 'about \(17.2\) years'
+    answer: C
+    hint: 'Solve \(2300(1.06)^t=4150\).'
+    explanation: '\(t=\dfrac{\ln(4150/2300)}{\ln1.06}\approx10.1\) years.'
+  86:
+    topic: s1-5
+    question: How long does it take an investment to double at 6.25% interest compounded continuously?
+    A: '\(\dfrac{\ln 0.0625}{\ln2}\approx-4.0\) years'
+    B: '\(\dfrac{\ln2}{\ln1.0625}\approx11.4\) years'
+    C: '\(\dfrac{\ln2}{0.0625}\approx11.1\) years'
+    D: '\(\dfrac{2}{0.0625}=32\) years'
+    answer: C
+    hint: 'Continuous compounding means \(A=Pe^{rt}\).'
+    explanation: '\(e^{0.0625t}=2\) gives \(t=\ln2/0.0625\approx11.09\) years. (Compounding annually gives \(\ln2/\ln1.0625\approx11.4\).)'
+  87:
+    topic: s1-5
+    question: A colony of bacteria starts with 1 bacterium and doubles every half hour. How many bacteria are there after 24 hours?
+    A: '\(48^2\)'
+    B: '\(24^2\)'
+    C: '\(2^{24}\)'
+    D: '\(2^{48}\)'
+    answer: D
+    hint: How many half-hour periods are in 24 hours?
+    explanation: 'There are 48 doublings, so the count is \(2^{48}\approx2.8\times10^{14}\).'
+  88:
+    topic: s1-5
+    question: The number of cases of a disease falls 20% each year, starting from 10,000. About how many years until there are 1000 cases?
+    A: 'about \(12.5\) years'
+    B: 'about \(10.3\) years'
+    C: 'about \(20\) years'
+    D: 'about \(5\) years'
+    answer: B
+    hint: 'Cases after \(t\) years: \(10000(0.8)^t\).'
+    explanation: '\((0.8)^t=0.1\) gives \(t=\dfrac{\ln0.1}{\ln0.8}\approx10.3\) years.'
+  89:
+    topic: s1-5
+    question: 'The graph of \(y=2^{-t}\) is obtained from the graph of \(y=2^t\) by reflecting it across'
+    A: 'the \(x\)-axis'
+    B: 'the line \(y=x\)'
+    C: 'the \(y\)-axis'
+    D: the origin
+    answer: C
+    hint: 'Replacing \(t\) by \(-t\) changes the sign of the input.'
+    explanation: '\(f(-t)\) is the mirror image of \(f(t)\) across the \(y\)-axis.'
+  90:
+    topic: s1-6
+    question: Which of these functions is one-to-one?
+    A: '\(y=\lfloor x\rfloor\)'
+    B: '\(y=2|x|\)'
+    C: '\(y=x^4-x^2\)'
+    D: '\(y=-3x^3\)'
+    answer: D
+    hint: A function is one-to-one if every horizontal line meets its graph at most once.
+    explanation: '\(-3x^3\) is strictly decreasing. The other three take some value more than once (for example \(2|x|\) is even).'
+  91:
+    topic: s1-6
+    question: 'If \(f(x)=\dfrac{1}{x^2+1}\) for \(x\ge0\), the domain of \(f^{-1}\) is'
+    A: '\([0,\infty)\)'
+    B: '\((0,1]\)'
+    C: '\([0,1]\)'
+    D: '\((0,\infty)\)'
+    answer: B
+    hint: 'The domain of \(f^{-1}\) is the range of \(f\).'
+    explanation: 'For \(x\ge0\), \(x^2+1\ge1\), so \(f\in(0,1]\).'
+  92:
+    topic: s1-6
+    question: 'The inverse of \(f(x)=1-\dfrac1x\) for \(x>0\) is'
+    A: '\(f^{-1}(x)=1-x\)'
+    B: '\(f^{-1}(x)=\dfrac{1}{1-x}\)'
+    C: '\(f^{-1}(x)=\dfrac{1}{x-1}\)'
+    D: '\(f^{-1}(x)=1+\dfrac1x\)'
+    answer: B
+    hint: 'Solve \(y=1-\tfrac1x\) for \(x\).'
+    explanation: '\(\tfrac1x=1-y\) so \(x=\dfrac1{1-y}\).'
+  93:
+    topic: s1-6
+    question: 'Find the inverse of \(f(x)=x^2+1\), \(x\ge0\).'
+    A: '\(- \sqrt{x - 1}\)'
+    B: '\(x^{2} - 1\)'
+    C: '\(\sqrt{x + 1}\)'
+    D: '\(\sqrt{x - 1}\)'
+    answer: D
+    hint: 'Solve \(y=x^2+1\) for \(x\) and keep the nonnegative root.'
+    explanation: '\(x=\sqrt{y-1}\), so \(f^{-1}(x)=\sqrt{x-1}\), with domain \([1,\infty)\).'
+  94:
+    topic: s1-6
+    question: 'Find the inverse of \(f(x)=x^2\), \(x\le0\).'
+    A: '\(\frac{1}{x}\)'
+    B: '\(\sqrt{x}\)'
+    C: '\(- x^{2}\)'
+    D: '\(- \sqrt{x}\)'
+    answer: D
+    hint: The original domain is negative, so the inverse must give negative outputs.
+    explanation: '\(y=x^2\) with \(x\le0\) gives \(x=-\sqrt y\), so \(f^{-1}(x)=-\sqrt x\).'
+  95:
+    topic: s1-6
+    question: 'Find the inverse of \(f(x)=x^3-1\).'
+    A: '\(\sqrt[3]{x - 1}\)'
+    B: '\(x^{3} + 1\)'
+    C: '\(\left(x + 1\right)^{3}\)'
+    D: '\(\sqrt[3]{x + 1}\)'
+    answer: D
+    hint: Add 1, then take the cube root.
+    explanation: '\(y=x^3-1\) gives \(x=\sqrt[3]{y+1}\).'
+  96:
+    topic: s1-6
+    question: 'Find the inverse of \(f(x)=x^2-2x+1\), \(x\ge1\).'
+    A: '\(\sqrt{x} + 1\)'
+    B: '\(\left(x + 1\right)^{2}\)'
+    C: '\(\sqrt{x} - 1\)'
+    D: '\(1 - \sqrt{x}\)'
+    answer: A
+    hint: 'Write \(f(x)=(x-1)^2\).'
+    explanation: '\(y=(x-1)^2\) with \(x\ge1\) gives \(x=1+\sqrt y\).'
+  97:
+    topic: s1-6
+    question: 'Find the inverse of \(f(x)=(x+1)^2\), \(x\ge-1\).'
+    A: '\(\sqrt{x} + 1\)'
+    B: '\(\sqrt{x - 1}\)'
+    C: '\(\sqrt{x} - 1\)'
+    D: '\(- \sqrt{x} - 1\)'
+    answer: C
+    hint: 'Take the square root and subtract 1 (keep the branch that is \(\ge -1\)).'
+    explanation: '\(x+1=\sqrt y\) so \(f^{-1}(x)=\sqrt x-1\).'
+  98:
+    topic: s1-6
+    question: The graph of a function and the graph of its inverse are symmetric about
+    A: the origin
+    B: 'the line \(y=x\)'
+    C: 'the \(y\)-axis'
+    D: 'the \(x\)-axis'
+    answer: B
+    hint: Inverses swap the roles of input and output.
+    explanation: 'Swapping \((a,b)\) and \((b,a)\) reflects points across \(y=x\).'
+  99:
+    topic: s1-6
+    question: 'If \(f(x)=mx+b\) with \(m\ne0\), the slope of the graph of \(f^{-1}\) is'
+    A: '\(b/m\)'
+    B: '\(1/m\)'
+    C: '\(-m\)'
+    D: '\(m\)'
+    answer: B
+    hint: 'Solve \(y=mx+b\) for \(x\).'
+    explanation: '\(f^{-1}(x)=\dfrac{x-b}{m}\), with slope \(1/m\).'
+  100:
+    topic: s1-6
+    question: 'Express \(\ln0.75\) in terms of \(\ln2\) and \(\ln3\).'
+    A: '\(\ln3-2\ln2\)'
+    B: '\(\ln3+2\ln2\)'
+    C: '\(2\ln2-\ln3\)'
+    D: '\(\ln3-\ln2\)'
+    answer: A
+    hint: '\(0.75=\tfrac34\).'
+    explanation: '\(\ln\tfrac34=\ln3-\ln4=\ln3-2\ln2\).'
+  101:
+    topic: s1-6
+    question: 'Express \(\ln1225\) in terms of \(\ln5\) and \(\ln7\).'
+    A: '\(2\ln5+2\ln7\)'
+    B: '\(5\ln5+7\ln7\)'
+    C: '\(\ln5+2\ln7\)'
+    D: '\(2\ln5+\ln7\)'
+    answer: A
+    hint: 'Factor \(1225\) into primes.'
+    explanation: '\(1225=5^2\cdot7^2\), so \(\ln1225=2\ln5+2\ln7\).'
+  102:
+    topic: s1-6
+    question: 'Simplify \(\ln(3x^2-9x)+\ln\dfrac{1}{3x}\).'
+    A: '\(\ln(3x^2-9x-3x)\)'
+    B: '\(\ln(3x-9)\)'
+    C: '\(\ln(x-3)\)'
+    D: '\(\ln\dfrac{x-3}{x}\)'
+    answer: C
+    hint: 'Combine: \(\ln a+\ln b=\ln ab\).'
+    explanation: '\(\dfrac{3x^2-9x}{3x}=x-3\).'
+  103:
+    topic: s1-6
+    question: 'Simplify \(\ln(8x+4)-2\ln2\).'
+    A: '\(\ln(8x)\)'
+    B: '\(\ln(8x+2)\)'
+    C: '\(\ln(2x+1)\)'
+    D: '\(\ln(4x+2)\)'
+    answer: C
+    hint: '\(2\ln2=\ln4\), then use the quotient rule.'
+    explanation: '\(\ln\dfrac{8x+4}{4}=\ln(2x+1)\).'
+  104:
+    topic: s1-6
+    question: 'Simplify \(e^{-\ln x^2}\) (for \(x\ne0\)).'
+    A: '\(\dfrac1x\)'
+    B: '\(x^2\)'
+    C: '\(-x^2\)'
+    D: '\(\dfrac{1}{x^2}\)'
+    answer: D
+    hint: '\(e^{-a}=1/e^{a}\) and \(e^{\ln u}=u\).'
+    explanation: '\(e^{-\ln x^2}=\dfrac{1}{e^{\ln x^2}}=\dfrac{1}{x^2}\).'
+  105:
+    topic: s1-6
+    question: 'Solve \(\ln(y-40)=5t\) for \(y\).'
+    A: '\(y=40+e^{5t}\)'
+    B: '\(y=40e^{5t}\)'
+    C: '\(y=e^{5t}-40\)'
+    D: '\(y=40+5e^{t}\)'
+    answer: A
+    hint: Exponentiate both sides.
+    explanation: '\(y-40=e^{5t}\).'
+  106:
+    topic: s1-6
+    question: 'Solve \(\ln(y^2-1)-\ln(y+1)=\ln(\sin x)\) for \(y\).'
+    A: '\(y=\sin x-1\)'
+    B: '\(y=1-\sin x\)'
+    C: '\(y=1+\sin x\)'
+    D: '\(y=\sin x\)'
+    answer: C
+    hint: 'Combine the left side into one log and factor \(y^2-1\).'
+    explanation: '\(\ln\dfrac{y^2-1}{y+1}=\ln(y-1)\), so \(y-1=\sin x\).'
+  107:
+    topic: s1-6
+    question: 'Solve \(e^{2k}=4\) for \(k\).'
+    A: '\(k=\ln2\)'
+    B: '\(k=2\ln 2\)'
+    C: '\(k=\ln 4\)'
+    D: '\(k=\tfrac12\)'
+    answer: A
+    hint: Take natural logs of both sides.
+    explanation: '\(2k=\ln4=2\ln2\), so \(k=\ln2\).'
+  108:
+    topic: s1-6
+    question: 'Solve \(100e^{10k}=200\) for \(k\).'
+    A: '\(k=\dfrac{\ln 100}{10}\)'
+    B: '\(k=\ln 20\)'
+    C: '\(k=10\ln2\)'
+    D: '\(k=\dfrac{\ln2}{10}\)'
+    answer: D
+    hint: Divide by 100 first.
+    explanation: '\(e^{10k}=2\) gives \(10k=\ln2\).'
+  109:
+    topic: s1-6
+    question: 'Solve \(e^{-0.3t}=27\) for \(t\).'
+    A: '\(t=-10\ln3\)'
+    B: '\(t=10\ln 3\)'
+    C: '\(t=-\tfrac{\ln 27}{3}\)'
+    D: '\(t=-0.3\ln 27\)'
+    answer: A
+    hint: '\(\ln 27=3\ln3\).'
+    explanation: '\(-0.3t=\ln27=3\ln3\), so \(t=-10\ln3\).'
+  110:
+    topic: s1-6
+    question: 'Solve \(e^{\sqrt t}=x^2\) for \(t\) (with \(x>0\)).'
+    A: '\(t=2\ln x\)'
+    B: '\(t=x^4\)'
+    C: '\(t=4(\ln x)^2\)'
+    D: '\(t=\sqrt{2\ln x}\)'
+    answer: C
+    hint: Take logs, then square both sides.
+    explanation: '\(\sqrt t=2\ln x\), so \(t=4(\ln x)^2\).'
+  111:
+    topic: s1-6
+    question: 'Simplify \(5^{\log_5 7}\).'
+    A: '\(5\)'
+    B: '\(\log_5 7\)'
+    C: '\(7\)'
+    D: '\(35\)'
+    answer: C
+    hint: '\(a^{\log_a u}=u\).'
+    explanation: Exponentials and logs with the same base undo each other.
+  112:
+    topic: s1-6
+    question: 'Simplify \(\log_4\!\left(\dfrac14\right)\).'
+    A: '\(-4\)'
+    B: '\(1\)'
+    C: '\(-1\)'
+    D: '\(\tfrac14\)'
+    answer: C
+    hint: '\(4^{?}=\tfrac14\).'
+    explanation: '\(4^{-1}=\tfrac14\).'
+  113:
+    topic: s1-6
+    question: 'Simplify \(2^{\log_4 x}\) for \(x>0\).'
+    A: '\(\dfrac x2\)'
+    B: '\(\log_2 x\)'
+    C: '\(x^2\)'
+    D: '\(\sqrt x\)'
+    answer: D
+    hint: 'Write \(2=4^{1/2}\).'
+    explanation: '\(2^{\log_4x}=(4^{1/2})^{\log_4x}=(4^{\log_4x})^{1/2}=\sqrt x\).'
+  114:
+    topic: s1-6
+    question: 'Write \(\dfrac{\log_2x}{\log_8x}\) as a ratio of natural logs and simplify.'
+    A: '\(2\)'
+    B: '\(\tfrac13\)'
+    C: '\(3\)'
+    D: '\(\dfrac{\ln2}{\ln 8}\)'
+    answer: C
+    hint: 'Use \(\log_a x=\ln x/\ln a\).'
+    explanation: '\(\dfrac{\ln x/\ln2}{\ln x/\ln8}=\dfrac{\ln8}{\ln2}=3\).'
+  115:
+    topic: s1-6
+    question: 'Find the exact value of \(\sin^{-1}\!\left(-\dfrac{1}{2}\right)\).'
+    A: '\(\dfrac{11\pi}{6}\)'
+    B: '\(\dfrac{\pi}{6}\)'
+    C: '\(-\dfrac{\pi}{6}\)'
+    D: '\(-\dfrac{\pi}{3}\)'
+    answer: C
+    hint: 'The range of \(\sin^{-1}\) is \([-\pi/2,\pi/2]\).'
+    explanation: '\(\sin(-\pi/6)=-\tfrac12\) and \(-\pi/6\) lies in the range.'
+  116:
+    topic: s1-6
+    question: 'Find the exact value of \(\cos^{-1}\!\left(-\dfrac{1}{\sqrt2}\right)\).'
+    A: '\(\dfrac{3\pi}{4}\)'
+    B: '\(\dfrac{\pi}{4}\)'
+    C: '\(\dfrac{5\pi}{4}\)'
+    D: '\(-\dfrac{\pi}{4}\)'
+    answer: A
+    hint: 'The range of \(\cos^{-1}\) is \([0,\pi]\).'
+    explanation: '\(\cos(3\pi/4)=-\tfrac{\sqrt2}{2}\) and \(3\pi/4\in[0,\pi]\).'
+  117:
+    topic: s1-6
+    question: A radioactive substance has half-life 12 hours and 8 g are present initially. When will 1 g remain?
+    A: 'after \(48\) hours'
+    B: 'after \(36\) hours'
+    C: 'after \(12\) hours'
+    D: 'after \(24\) hours'
+    answer: B
+    hint: 8 g to 1 g is three halvings.
+    explanation: '\(8\to4\to2\to1\) takes 3 half-lives, \(3\cdot12=36\) hours.'
+  118:
+    topic: s1-6
+    question: 'Starting with the graph of \(y=\ln x\), which equation gives the graph shifted left 1 and up 3?'
+    A: '\(y=\ln(x-1)+3\)'
+    B: '\(y=\ln(x+1)-3\)'
+    C: '\(y=\ln(x-3)+1\)'
+    D: '\(y=\ln(x+1)+3\)'
+    answer: D
+    hint: 'Left 1 replaces \(x\) with \(x+1\).'
+    explanation: Shift the input for horizontal moves, the output for vertical.
+  119:
+    topic: s1-6
+    question: 'Reflecting the graph of \(y=\ln x\) about the line \(y=x\) gives the graph of'
+    A: '\(y=-\ln x\)'
+    B: '\(y=\ln(-x)\)'
+    C: '\(y=\sqrt{x}\)'
+    D: '\(y=e^x\)'
+    answer: D
+    hint: 'Reflection about \(y=x\) forms an inverse.'
+    explanation: '\(e^x\) is the inverse of \(\ln x\).'

@@ -44,6 +44,20 @@ window.CATALOG = {
           href: "flashcards/enduring-vision/"
         }
       ]
+    },
+    {
+      id: "calculus-ab",
+      title: "Calculus AB",
+      subtitle: "Thomas' Calculus: Early Transcendentals, 11th ed.",
+      quizzes: [
+        {
+          title: "TEMP math test",
+          description: "temp",
+          meta: "temp",
+          quiz: "test-math"
+        }
+      ],
+      flashcards: []
     }
   ]
 };
