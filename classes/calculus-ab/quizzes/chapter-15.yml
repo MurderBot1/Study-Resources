@@ -1,0 +1,3733 @@
+# Chapter 15: Multiple Integrals
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 15.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 15: Multiple Integrals"
+description: Double integrals and their regions, area, moments and centers of mass, polar form, triple integrals, masses and moments in three dimensions, cylindrical and spherical coordinates, and substitutions with Jacobians.
+topics:
+  s15-1:
+    title: 15.1 Double Integrals
+  s15-2:
+    title: 15.2 Areas, Moments, and Centers of Mass
+  s15-3:
+    title: 15.3 Double Integrals in Polar Form
+  s15-4:
+    title: 15.4 Triple Integrals in Rectangular Coordinates
+  s15-5:
+    title: 15.5 Masses and Moments in Three Dimensions
+  s15-6:
+    title: 15.6 Triple Integrals in Cylindrical and Spherical Coordinates
+  s15-7:
+    title: 15.7 Substitutions in Multiple Integrals
+questions:
+  1:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{0}^{3}\int_{0}^{2}4 - y^{2}\,dy\,dx\).'
+    A: '\(32\)'
+    B: '\(17\)'
+    C: '\(16\)'
+    D: '\(-16\)'
+    answer: C
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  2:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{0}^{3}\int_{-2}^{0}x^{2} y - 2 x y\,dy\,dx\).'
+    A: '\(3\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: C
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  3:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{-1}^{0}\int_{-1}^{1}x + y + 1\,dx\,dy\).'
+    A: '\(-1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: D
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  4:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{\pi}^{2 \pi}\int_{0}^{\pi}\sin{\left(x \right)} + \cos{\left(y \right)}\,dx\,dy\).'
+    A: '\(- 2 \pi\)'
+    B: '\(4 \pi\)'
+    C: '\(2 \pi\)'
+    D: '\(1 + 2 \pi\)'
+    answer: C
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  5:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{0}^{\pi}\int_{0}^{x}x \sin{\left(y \right)}\,dy\,dx\).'
+    A: '\(2 + \frac{\pi^{2}}{2}\)'
+    B: '\(4 + \pi^{2}\)'
+    C: '\(- \frac{\pi^{2}}{2} - 2\)'
+    D: '\(3 + \frac{\pi^{2}}{2}\)'
+    answer: A
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  6:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{0}^{\pi}\int_{0}^{\sin{\left(x \right)}}y\,dy\,dx\).'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(- \frac{\pi}{4}\)'
+    D: '\(\frac{\pi}{4} + 1\)'
+    answer: A
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  7:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{1}^{\ln{\left(8 \right)}}\int_{0}^{\ln{\left(y \right)}}e^{x + y}\,dx\,dy\).'
+    A: '\(- 24 \ln{\left(2 \right)} - e + 16\)'
+    B: '\(-32 + 2 e + 48 \ln{\left(2 \right)}\)'
+    C: '\(-16 + e + 24 \ln{\left(2 \right)}\)'
+    D: '\(-15 + e + 24 \ln{\left(2 \right)}\)'
+    answer: C
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  8:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{1}^{2}\int_{y}^{y^{2}}\,dx\,dy\).'
+    A: '\(\frac{5}{3}\)'
+    B: '\(\frac{5}{6}\)'
+    C: '\(- \frac{5}{6}\)'
+    D: '\(\frac{11}{6}\)'
+    answer: B
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  9:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{0}^{1}\int_{0}^{y^{2}}3 y^{3} e^{x y}\,dx\,dy\).'
+    A: '\(-2 + e\)'
+    B: '\(2 - e\)'
+    C: '\(-4 + 2 e\)'
+    D: '\(-1 + e\)'
+    answer: A
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  10:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{1}^{4}\int_{0}^{\sqrt{x}}\frac{3 e^{\frac{y}{\sqrt{x}}}}{2}\,dy\,dx\).'
+    A: '\(-7 + 7 e\)'
+    B: '\(-14 + 14 e\)'
+    C: '\(-6 + 7 e\)'
+    D: '\(7 - 7 e\)'
+    answer: A
+    hint: Integrate with respect to the inner variable first, treating the other as a constant.
+    explanation: Evaluate the inner integral, then integrate the result over the outer limits.
+  11:
+    topic: s15-1
+    question: 'Integrate \(f(x,y)=x/y\) over the region in the first quadrant bounded by \(y=x\), \(y=2x\), \(x=1\), \(x=2\).'
+    A: '\(1 + \frac{3 \ln{\left(2 \right)}}{2}\)'
+    B: '\(\frac{3 \ln{\left(2 \right)}}{2}\)'
+    C: '\(- \frac{3 \ln{\left(2 \right)}}{2}\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
+    answer: B
+    hint: 'Integrate in \(y\) from \(x\) to \(2x\) first.'
+    explanation: '\(\int_1^2x\ln2\,dx\).'
+  12:
+    topic: s15-1
+    question: 'Integrate \(f(x,y)=\dfrac1{xy}\) over the square \(1\le x\le2\), \(1\le y\le2\).'
+    A: '\(\ln{\left(2 \right)}^{2}\)'
+    B: '\(- \ln{\left(2 \right)}^{2}\)'
+    C: '\(\ln{\left(2 \right)}^{2} + 1\)'
+    D: '\(2 \ln{\left(2 \right)}^{2}\)'
+    answer: A
+    hint: The integrand separates.
+    explanation: '\((\ln2)^2\).'
+  13:
+    topic: s15-1
+    question: 'Integrate \(f(x,y)=x^2+y^2\) over the triangle with vertices \((0,0)\), \((1,0)\), \((0,1)\).'
+    A: '\(\frac{1}{6}\)'
+    B: '\(- \frac{1}{6}\)'
+    C: '\(\frac{7}{6}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: A
+    hint: 'The hypotenuse is \(y=1-x\).'
+    explanation: 'Integrate \(y\) from \(0\) to \(1-x\).'
+  14:
+    topic: s15-1
+    question: 'Integrate \(f(x,y)=y\cos xy\) over the rectangle \(0\le x\le\pi\), \(0\le y\le1\).'
+    A: '\(\frac{2 + \pi}{\pi}\)'
+    B: '\(\frac{2}{\pi}\)'
+    C: '\(- \frac{2}{\pi}\)'
+    D: '\(\frac{4}{\pi}\)'
+    answer: B
+    hint: 'Integrate in \(x\) first.'
+    explanation: 'The inner integral is \(\sin\pi y\).'
+  15:
+    topic: s15-1
+    question: 'Integrate \(f(u,v)=v-\sqrt u\) over the triangle cut from the first quadrant of the \(uv\)-plane by \(u+v=1\).'
+    A: '\(\frac{1}{10}\)'
+    B: '\(\frac{9}{10}\)'
+    C: '\(- \frac{1}{10}\)'
+    D: '\(- \frac{1}{5}\)'
+    answer: C
+    hint: 'The region is \(0\le u\le1\), \(0\le v\le1-u\).'
+    explanation: 'Integrate in \(v\) first.'
+  16:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{-2}^0\int_v^{-v}2\,dp\,dv\).'
+    A: '\(16\)'
+    B: '\(8\)'
+    C: '\(9\)'
+    D: '\(-8\)'
+    answer: B
+    hint: Integrate the inner variable first.
+    explanation: The integrand is constant in the inner variable.
+  17:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_{-\pi/3}^{\pi/3}\int_0^{\sec t}3\cos t\,du\,dt\).'
+    A: '\(4 \pi\)'
+    B: '\(1 + 2 \pi\)'
+    C: '\(- 2 \pi\)'
+    D: '\(2 \pi\)'
+    answer: D
+    hint: Integrate the inner variable first.
+    explanation: The integrand is constant in the inner variable.
+  18:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^{\sqrt{1-s^2}}8t\,dt\,ds\).'
+    A: '\(\frac{16}{3}\)'
+    B: '\(4\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{4}{3}\)'
+    answer: C
+    hint: 'Inner integral: \(4(1-s^2)\).'
+    explanation: '\(\int_0^14(1-s^2)ds=\tfrac83\).'
+  19:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^1\int_2^{4-2x}dy\,dx\) gives'
+    A: '\(\displaystyle\int_2^4\int_0^{4-2y}dx\,dy\)'
+    B: '\(\displaystyle\int_0^1\int_0^{(4-y)/2}dx\,dy\)'
+    C: '\(\displaystyle\int_2^4\int_0^{(4-y)/2}dx\,dy\)'
+    D: '\(\displaystyle\int_0^2\int_0^{(4-y)/2}dx\,dy\)'
+    answer: C
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  20:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^2\int_{y-2}^0dx\,dy\) gives'
+    A: '\(\displaystyle\int_{-2}^0\int_0^{x+2}dy\,dx\)'
+    B: '\(\displaystyle\int_{-2}^0\int_0^{x-2}dy\,dx\)'
+    C: '\(\displaystyle\int_0^2\int_0^{x+2}dy\,dx\)'
+    D: '\(\displaystyle\int_{-2}^0\int_{x+2}^2dy\,dx\)'
+    answer: A
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  21:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^1\int_y^{\sqrt y}dx\,dy\) gives'
+    A: '\(\displaystyle\int_0^1\int_x^{x^2}dy\,dx\)'
+    B: '\(\displaystyle\int_0^1\int_{x^2}^{x}dy\,dx\)'
+    C: '\(\displaystyle\int_0^1\int_{x^2}^{\sqrt x}dy\,dx\)'
+    D: '\(\displaystyle\int_0^1\int_{\sqrt x}^{x}dy\,dx\)'
+    answer: B
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  22:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^1\int_{1-x}^{1-x^2}dy\,dx\) gives'
+    A: '\(\displaystyle\int_0^1\int_{1-y}^{\sqrt{1-y}}dx\,dy\)'
+    B: '\(\displaystyle\int_0^1\int_{y-1}^{\sqrt{1-y}}dx\,dy\)'
+    C: '\(\displaystyle\int_0^1\int_{1-y}^{1-y^2}dx\,dy\)'
+    D: '\(\displaystyle\int_0^1\int_{\sqrt{1-y}}^{1-y}dx\,dy\)'
+    answer: A
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  23:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^1\int_1^{e^x}dy\,dx\) gives'
+    A: '\(\displaystyle\int_0^1\int_{\ln y}^{1}dx\,dy\)'
+    B: '\(\displaystyle\int_1^e\int_0^{\ln y}dx\,dy\)'
+    C: '\(\displaystyle\int_1^e\int_{e^y}^{1}dx\,dy\)'
+    D: '\(\displaystyle\int_1^e\int_{\ln y}^{1}dx\,dy\)'
+    answer: D
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  24:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^{\ln2}\int_{e^x}^2dy\,dx\) gives'
+    A: '\(\displaystyle\int_1^2\int_0^{e^y}dx\,dy\)'
+    B: '\(\displaystyle\int_1^2\int_{\ln y}^{\ln2}dx\,dy\)'
+    C: '\(\displaystyle\int_1^2\int_0^{\ln y}dx\,dy\)'
+    D: '\(\displaystyle\int_0^{\ln 2}\int_0^{\ln y}dx\,dy\)'
+    answer: C
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  25:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^{3/2}\int_0^{9-4x^2}16x\,dy\,dx\) gives'
+    A: '\(\displaystyle\int_0^9\int_0^{\sqrt{9-y}/2}16x\,dx\,dy\)'
+    B: '\(\displaystyle\int_0^{3/2}\int_0^{\sqrt{9-y}/2}16x\,dx\,dy\)'
+    C: '\(\displaystyle\int_0^9\int_0^{\sqrt{9-y}}16x\,dx\,dy\)'
+    D: '\(\displaystyle\int_0^9\int_{\sqrt{9-y}/2}^{3/2}16x\,dx\,dy\)'
+    answer: A
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  26:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^2\int_0^{4-y^2}y\,dx\,dy\) gives'
+    A: '\(\displaystyle\int_0^2\int_0^{\sqrt{4-x}}y\,dy\,dx\)'
+    B: '\(\displaystyle\int_0^4\int_0^{4-x^2}y\,dy\,dx\)'
+    C: '\(\displaystyle\int_0^4\int_0^{\sqrt{4-x}}y\,dy\,dx\)'
+    D: '\(\displaystyle\int_0^4\int_{\sqrt{4-x}}^2y\,dy\,dx\)'
+    answer: C
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  27:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_{-1}^1\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}3y\,dx\,dy\) gives'
+    A: '\(\displaystyle\int_{-1}^1\int_{0}^{\sqrt{1-x^2}}3y\,dy\,dx\)'
+    B: '\(\displaystyle\int_{-1}^1\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}3x\,dy\,dx\)'
+    C: '\(\displaystyle\int_{-1}^1\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}3y\,dy\,dx\)'
+    D: '\(\displaystyle\int_0^1\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}3y\,dy\,dx\)'
+    answer: C
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  28:
+    topic: s15-1
+    question: 'Reversing the order of integration in \(\displaystyle\int_0^2\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}6x\,dy\,dx\) gives'
+    A: '\(\displaystyle\int_{-2}^2\int_0^{\sqrt{4-y^2}}6x\,dx\,dy\)'
+    B: '\(\displaystyle\int_0^2\int_0^{\sqrt{4-y^2}}6x\,dx\,dy\)'
+    C: '\(\displaystyle\int_{-2}^2\int_{-\sqrt{4-y^2}}^{\sqrt{4-y^2}}6x\,dx\,dy\)'
+    D: '\(\displaystyle\int_{-2}^2\int_0^{\sqrt{4-y^2}}6y\,dx\,dy\)'
+    answer: A
+    hint: Sketch the region and describe it with the other variable on the outside.
+    explanation: The region is the same; only the description of its boundary changes.
+  29:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_0^1\int_2^{4-2x}dy\,dx\) is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(4\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: D
+    hint: It is the area of a triangle.
+    explanation: '\(\int_0^1(2-2x)dx=1\).'
+  30:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_0^1\int_y^{\sqrt y}dx\,dy\) is'
+    A: '\(\frac{1}{3}\)'
+    B: '\(\frac{1}{12}\)'
+    C: '\(\frac{1}{6}\)'
+    D: '\(\frac{1}{2}\)'
+    answer: C
+    hint: 'The area between \(y=x\) and \(y=x^2\).'
+    explanation: '\(\int_0^1(x-x^2)dx=\tfrac16\).'
+  31:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_0^{\ln2}\int_{e^x}^2dy\,dx\) is'
+    A: '\(2 \ln{\left(2 \right)}\)'
+    B: '\(\ln{\left(2 \right)}\)'
+    C: '\(-1 + 2 \ln{\left(2 \right)}\)'
+    D: '\(1 - \ln{\left(2 \right)}\)'
+    answer: C
+    hint: '\(\int_0^{\ln2}(2-e^x)dx\).'
+    explanation: '\(2\ln2-1\).'
+  32:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_0^{3/2}\int_0^{9-4x^2}16x\,dy\,dx\) is'
+    A: '\(36\)'
+    B: '\(72\)'
+    C: '\(27\)'
+    D: '\(18\)'
+    answer: A
+    hint: 'Integrate in \(y\) first: \(16x(9-4x^2)\).'
+    explanation: '\(\int_0^{3/2}(144x-64x^3)dx=36\).'
+  33:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_0^2\int_0^{4-y^2}y\,dx\,dy\) is'
+    A: '\(8\)'
+    B: '\(2\)'
+    C: '\(4\)'
+    D: '\(16\)'
+    answer: C
+    hint: 'Integrate in \(x\) first.'
+    explanation: '\(\int_0^2y(4-y^2)dy=8-4=4\).'
+  34:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_0^2\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}6x\,dy\,dx\) is'
+    A: '\(32\)'
+    B: '\(8\)'
+    C: '\(16\)'
+    D: '\(12\)'
+    answer: C
+    hint: 'Integrate in \(y\) first.'
+    explanation: '\(\int_0^212x\sqrt{4-x^2}\,dx=16\).'
+  35:
+    topic: s15-1
+    question: 'The value of \(\displaystyle\int_{-1}^1\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}3y\,dx\,dy\) is'
+    A: '\(0\)'
+    B: '\(\pi\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(3\)'
+    answer: A
+    hint: 'The integrand is odd in \(y\) over a region symmetric about the \(x\)-axis.'
+    explanation: 'The region is the unit disk and \(3y\) is odd.'
+  36:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^\pi\int_x^\pi\frac{\sin y}{y}\,dy\,dx\) by reversing the order of integration.'
+    A: '\(-2\)'
+    B: '\(2\)'
+    C: '\(4\)'
+    D: '\(3\)'
+    answer: B
+    hint: 'Reverse: \(0\le x\le y\), \(0\le y\le\pi\).'
+    explanation: '\(\int_0^\pi\sin y\,dy=2\).'
+  37:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^2\int_x^22y^2\sin xy\,dy\,dx\) by reversing the order of integration.'
+    A: '\(5 - \sin{\left(4 \right)}\)'
+    B: '\(-4 + \sin{\left(4 \right)}\)'
+    C: '\(8 - 2 \sin{\left(4 \right)}\)'
+    D: '\(4 - \sin{\left(4 \right)}\)'
+    answer: D
+    hint: 'Reverse: \(0\le x\le y\), \(0\le y\le2\); integrate in \(x\) first.'
+    explanation: '\(\int_0^22y(1-\cos y^2)dy=4-\sin4\).'
+  38:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^1\int_y^1x^2e^{xy}\,dx\,dy\) by reversing the order of integration.'
+    A: '\(-1 + \frac{e}{2}\)'
+    B: '\(\frac{e}{2}\)'
+    C: '\(1 - \frac{e}{2}\)'
+    D: '\(-2 + e\)'
+    answer: A
+    hint: 'Reverse: \(0\le y\le x\), \(0\le x\le1\).'
+    explanation: '\(\int_0^1x(e^{x^2}-1)dx=\tfrac e2-1\).'
+  39:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^2\int_0^{4-x^2}\frac{xe^{2y}}{4-y}\,dy\,dx\) by reversing the order of integration.'
+    A: '\(- \frac{1}{2} + \frac{e^{8}}{2}\)'
+    B: '\(\frac{1}{4} - \frac{e^{8}}{4}\)'
+    C: '\(\frac{3}{4} + \frac{e^{8}}{4}\)'
+    D: '\(- \frac{1}{4} + \frac{e^{8}}{4}\)'
+    answer: D
+    hint: 'Reverse: \(0\le x\le\sqrt{4-y}\), \(0\le y\le4\).'
+    explanation: '\(\int_0^4\tfrac12e^{2y}dy=\tfrac{e^8-1}4\).'
+  40:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^{2\sqrt{\ln3}}\int_{y/2}^{\sqrt{\ln3}}e^{x^2}\,dx\,dy\) by reversing the order of integration.'
+    A: '\(3\)'
+    B: '\(2\)'
+    C: '\(-2\)'
+    D: '\(4\)'
+    answer: B
+    hint: 'Reverse: \(0\le y\le2x\), \(0\le x\le\sqrt{\ln3}\).'
+    explanation: '\(\int_0^{\sqrt{\ln3}}2xe^{x^2}dx=3-1=2\).'
+  41:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^3\int_{\sqrt{x/3}}^1e^{y^3}\,dy\,dx\) by reversing the order of integration.'
+    A: '\(e\)'
+    B: '\(-1 + e\)'
+    C: '\(1 - e\)'
+    D: '\(-2 + 2 e\)'
+    answer: B
+    hint: 'Reverse: \(0\le x\le3y^2\), \(0\le y\le1\).'
+    explanation: '\(\int_0^13y^2e^{y^3}dy=e-1\).'
+  42:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^{1/16}\int_{y^{1/4}}^{1/2}\cos(16\pi x^5)\,dx\,dy\) by reversing the order of integration.'
+    A: '\(\frac{1}{80 \pi}\)'
+    B: '\(- \frac{1}{80 \pi}\)'
+    C: '\(\frac{1}{40 \pi}\)'
+    D: '\(\frac{\frac{1}{80} + \pi}{\pi}\)'
+    answer: A
+    hint: 'Reverse: \(0\le y\le x^4\), \(0\le x\le\tfrac12\).'
+    explanation: '\(\int_0^{1/2}x^4\cos(16\pi x^5)dx=\dfrac{1}{80\pi}\).'
+  43:
+    topic: s15-1
+    question: 'Evaluate \(\displaystyle\int_0^8\int_{\sqrt[3]x}^2\frac{dy\,dx}{y^4+1}\) by reversing the order of integration.'
+    A: '\(\frac{\ln{\left(17 \right)}}{4} + 1\)'
+    B: '\(- \frac{\ln{\left(17 \right)}}{4}\)'
+    C: '\(\frac{\ln{\left(17 \right)}}{2}\)'
+    D: '\(\frac{\ln{\left(17 \right)}}{4}\)'
+    answer: D
+    hint: 'Reverse: \(0\le x\le y^3\), \(0\le y\le2\).'
+    explanation: '\(\int_0^2\dfrac{y^3}{y^4+1}dy=\tfrac14\ln17\).'
+  44:
+    topic: s15-1
+    question: '\(\displaystyle\iint_R(y-2x^2)\,dA\) where \(R\) is the square bounded by \(|x|+|y|=1\) is'
+    A: '\(- \frac{2}{3}\)'
+    B: '\(- \frac{1}{3}\)'
+    C: '\(0\)'
+    D: '\(\frac{2}{3}\)'
+    answer: A
+    hint: 'The term \(y\) integrates to zero by symmetry.'
+    explanation: '\(-2\iint x^2dA=-2\cdot\tfrac13=-\tfrac23\).'
+  45:
+    topic: s15-1
+    question: '\(\displaystyle\iint_Rxy\,dA\) where \(R\) is bounded by \(y=x\), \(y=2x\), and \(x+y=2\) is'
+    A: '\(\frac{26}{81}\)'
+    B: '\(- \frac{13}{81}\)'
+    C: '\(\frac{13}{81}\)'
+    D: '\(\frac{94}{81}\)'
+    answer: C
+    hint: 'Split at \(x=\tfrac23\) where \(y=2x\) meets \(x+y=2\).'
+    explanation: 'Add the integrals over \([0,\tfrac23]\) and \([\tfrac23,1]\).'
+  46:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the paraboloid \(z=x^2+y^2\) and below by the triangle bounded by \(y=x\), \(x=0\), \(x+y=2\) is'
+    A: '\(\frac{2}{3}\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{7}{3}\)'
+    answer: B
+    hint: 'Describe the base as \(0\le x\le1\), \(x\le y\le2-x\).'
+    explanation: 'Integrate \(x^2+y^2\) over the triangle.'
+  47:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the cylinder \(z=x^2\) and below by the region between the parabola \(y=2-x^2\) and the line \(y=x\) is'
+    A: '\(\frac{63}{10}\)'
+    B: '\(\frac{63}{20}\)'
+    C: '\(\frac{83}{20}\)'
+    D: '\(\frac{63}{40}\)'
+    answer: B
+    hint: 'The curves meet at \(x=-2\) and \(x=1\).'
+    explanation: '\(\int_{-2}^1x^2(2-x^2-x)dx\).'
+  48:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the plane \(z=x+4\) and below by the region bounded by \(y=4-x^2\) and \(y=3x\) is'
+    A: '\(\frac{625}{6}\)'
+    B: '\(\frac{637}{12}\)'
+    C: '\(\frac{625}{12}\)'
+    D: '\(\frac{625}{24}\)'
+    answer: C
+    hint: 'The curves meet at \(x=-4\) and \(x=1\).'
+    explanation: '\(\int_{-4}^1(x+4)(4-x^2-3x)dx\).'
+  49:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the plane \(z=3-y\) in the first octant inside \(x^2+y^2=4\) is'
+    A: '\(- \frac{5}{3} + 3 \pi\)'
+    B: '\(- \frac{16}{3} + 6 \pi\)'
+    C: '\(- \frac{4}{3} + \frac{3 \pi}{2}\)'
+    D: '\(- \frac{8}{3} + 3 \pi\)'
+    answer: D
+    hint: The base is the quarter disk.
+    explanation: '\(\int_0^2\int_0^{\sqrt{4-x^2}}(3-y)dy\,dx\).'
+  50:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the parabolic cylinder \(z=4-y^2\), the plane \(x=3\), and the coordinate planes (first octant) is'
+    A: '\(17\)'
+    B: '\(32\)'
+    C: '\(16\)'
+    D: '\(8\)'
+    answer: C
+    hint: '\(0\le x\le3\), \(0\le y\le2\).'
+    explanation: '\(3\int_0^2(4-y^2)dy\).'
+  51:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by \(z=4-x^2-y\) cut from the first octant is'
+    A: '\(\frac{143}{15}\)'
+    B: '\(\frac{64}{15}\)'
+    C: '\(\frac{256}{15}\)'
+    D: '\(\frac{128}{15}\)'
+    answer: D
+    hint: 'The base is \(0\le y\le4-x^2\).'
+    explanation: '\(\int_0^2\tfrac12(4-x^2)^2dx\).'
+  52:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the cylinder \(z=12-3y^2\) and the plane \(x+y=2\) in the first octant is'
+    A: '\(20\)'
+    B: '\(40\)'
+    C: '\(10\)'
+    D: '\(21\)'
+    answer: A
+    hint: 'The base is \(0\le y\le2\), \(0\le x\le2-y\).'
+    explanation: '\(\int_0^2(2-y)(12-3y^2)dy\).'
+  53:
+    topic: s15-1
+    question: 'The volume of the solid bounded above by the plane \(z=3-3x-3y\) over the square \(|x|+|y|\le1\) is'
+    A: '\(3\)'
+    B: '\(7\)'
+    C: '\(12\)'
+    D: '\(6\)'
+    answer: D
+    hint: 'The terms in \(x\) and \(y\) integrate to zero by symmetry.'
+    explanation: '\(3\cdot\text{Area}=3\cdot2=6\).'
+  54:
+    topic: s15-1
+    question: 'The volume of the solid bounded by \(x=1\), \(x=2\), \(y=\pm1/x\), \(z=0\), and \(z=x+1\) is'
+    A: '\(1 + 2 \ln{\left(2 \right)}\)'
+    B: '\(\ln{\left(2 \right)} + 2\)'
+    C: '\(4 \ln{\left(2 \right)}\)'
+    D: '\(2 \ln{\left(2 \right)} + 2\)'
+    answer: D
+    hint: 'Height \(x+1\), base \(|y|\le1/x\).'
+    explanation: '\(\int_1^2\dfrac2x(x+1)\,dx=2+2\ln2\).'
+  55:
+    topic: s15-1
+    question: 'The volume of the solid bounded by \(x=\pm\pi/3\), \(y=\pm\sec x\), \(z=1+y^2\), and \(z=0\) is'
+    A: '\(1 + \frac{4 \sqrt{3}}{3} - \frac{7 \ln{\left(2 - \sqrt{3} \right)}}{3} + \frac{7 \ln{\left(\sqrt{3} + 2 \right)}}{3}\)'
+    B: '\(\frac{7 \ln{\left(\frac{\sqrt{3}}{2} + 1 \right)}}{3} + \frac{4 \sqrt{3}}{3} - \frac{7 \ln{\left(1 - \frac{\sqrt{3}}{2} \right)}}{3}\)'
+    C: '\(\frac{14 \ln{\left(\frac{\sqrt{3}}{2} + 1 \right)}}{3} + \frac{8 \sqrt{3}}{3} - \frac{14 \ln{\left(1 - \frac{\sqrt{3}}{2} \right)}}{3}\)'
+    D: '\(\frac{7 \ln{\left(\frac{\sqrt{3}}{2} + 1 \right)}}{6} + \frac{2 \sqrt{3}}{3} - \frac{7 \ln{\left(1 - \frac{\sqrt{3}}{2} \right)}}{6}\)'
+    answer: B
+    hint: '\(\int_{-\pi/3}^{\pi/3}\int_{-\sec x}^{\sec x}(1+y^2)dy\,dx\).'
+    explanation: 'The inner integral is \(2\sec x+\tfrac23\sec^3x\).'
+  56:
+    topic: s15-1
+    question: 'The improper integral \(\displaystyle\int_1^\infty\int_{e^{-x}}^1\frac1{x^3y}\,dy\,dx\) equals'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(0.5\)'
+    D: '\(2\)'
+    answer: A
+    hint: Evaluate the inner integral, then take limits in the outer.
+    explanation: Each iterated integral converges.
+  57:
+    topic: s15-1
+    question: 'The improper integral \(\displaystyle\int_{-1}^1\int_{-1/\sqrt{1-x^2}}^{1/\sqrt{1-x^2}}(2y+1)\,dy\,dx\) equals'
+    A: '\(1 + 2 \pi\)'
+    B: '\(2 \pi\)'
+    C: '\(4 \pi\)'
+    D: '\(\pi\)'
+    answer: B
+    hint: Evaluate the inner integral, then take limits in the outer.
+    explanation: Each iterated integral converges.
+  58:
+    topic: s15-1
+    question: 'The improper integral \(\displaystyle\int_{-\infty}^\infty\int_{-\infty}^\infty\frac{dx\,dy}{(x^2+1)(y^2+1)}\) equals'
+    A: '\(\frac{\pi^{2}}{2}\)'
+    B: '\(\pi^{2}\)'
+    C: '\(2 \pi^{2}\)'
+    D: '\(1 + \pi^{2}\)'
+    answer: B
+    hint: Evaluate the inner integral, then take limits in the outer.
+    explanation: Each iterated integral converges.
+  59:
+    topic: s15-1
+    question: 'The improper integral \(\displaystyle\int_0^\infty\int_0^\infty xe^{-(x+2y)}\,dy\,dx\) equals'
+    A: '\(\frac{1}{2}\)'
+    B: '\(\frac{3}{2}\)'
+    C: '\(\frac{1}{4}\)'
+    D: '\(1\)'
+    answer: A
+    hint: Evaluate the inner integral, then take limits in the outer.
+    explanation: Each iterated integral converges.
+  60:
+    topic: s15-1
+    question: '\(\displaystyle\int_0^1\int_0^3\frac{x^2}{(y-1)^{2/3}}\,dy\,dx\) equals'
+    A: '\(\sqrt[3]{2}\)'
+    B: '\(1 + 2 \sqrt[3]{2}\)'
+    C: '\(3 + 3 \sqrt[3]{2}\)'
+    D: '\(1 + \sqrt[3]{2}\)'
+    answer: D
+    hint: 'It is an improper integral in \(y\) at \(y=1\); it separates.'
+    explanation: '\(\tfrac13\cdot3\left(1+\sqrt[3]2\right)\).'
+  61:
+    topic: s15-1
+    question: '\(\displaystyle\iint\frac{dA}{(x^2-x)(y-1)^{2/3}}\) over \(2\le x<\infty\), \(0\le y\le2\) equals'
+    A: '\(6 \ln{\left(2 \right)}\)'
+    B: '\(2 \ln{\left(2 \right)}\)'
+    C: '\(6\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
+    answer: A
+    hint: 'The integral separates into \(\int_2^\infty\frac{dx}{x^2-x}\int_0^2\frac{dy}{(y-1)^{2/3}}\).'
+    explanation: '\(\ln2\cdot6\).'
+  62:
+    topic: s15-1
+    question: '\(\displaystyle\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}e^{-x^2-y^2}\,dx\,dy\) equals'
+    A: '\(\sqrt{\pi}\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(\pi\)'
+    D: '\(2 \pi\)'
+    answer: C
+    hint: Convert to polar coordinates.
+    explanation: '\(2\pi\int_0^\infty re^{-r^2}dr=\pi\).'
+  63:
+    topic: s15-1
+    question: 'Approximate \(\iint_R(x+y)\,dA\) for \(R:\ 0\le y\le\sqrt{1-x^2}\) using the partition \(x=-1,-\tfrac12,0,\tfrac14,\tfrac12,1\), \(y=0,\tfrac12,1\), the lower left corner of each subrectangle that lies in \(R\), giving'
+    A: '\(- \frac{3}{64}\)'
+    B: '\(\frac{3}{32}\)'
+    C: '\(- \frac{3}{32}\)'
+    D: '\(\frac{5}{32}\)'
+    answer: C
+    hint: 'Sum \(f(x_k,y_k)\Delta A_k\) over subrectangles contained in \(R\).'
+    explanation: Only subrectangles with their top edge below the semicircle are used.
+  64:
+    topic: s15-1
+    question: 'Approximate \(\iint_R(x+2y)\,dA\) over the disk \((x-2)^2+(y-3)^2\le1\) using the partition \(x=1,\tfrac32,2,\tfrac52,3\), \(y=2,\tfrac52,3,\tfrac72,4\) and the center of each subrectangle lying in \(R\) (subrectangles with all corners in \(R\)): the sum is'
+    A: '\(9\)'
+    B: '\(4\)'
+    C: '\(8\)'
+    D: '\(16\)'
+    answer: C
+    hint: 'Use \(f(x_k,y_k)\Delta A\) with \(\Delta A=\tfrac14\).'
+    explanation: Only subrectangles that lie entirely in the disk are used.
+  65:
+    topic: s15-1
+    question: '\(\displaystyle\iint\sqrt{4-x^2}\,dA\) over the smaller sector of \(x^2+y^2\le4\) between \(\theta=\pi/6\) and \(\theta=\pi/2\) is'
+    A: '\(1 + \frac{20 \sqrt{3}}{9}\)'
+    B: '\(\frac{20 \sqrt{3}}{9}\)'
+    C: '\(\frac{40 \sqrt{3}}{9}\)'
+    D: '\(\frac{10 \sqrt{3}}{9}\)'
+    answer: B
+    hint: 'The sector is \(0\le x\le\sqrt3\), \(x/\sqrt3\le y\le\sqrt{4-x^2}\).'
+    explanation: 'Integrate \(\sqrt{4-x^2}\) times the vertical length.'
+  66:
+    topic: s15-1
+    question: 'A solid right cylinder has base \(R\) in the \(xy\)-plane bounded above by \(z=x^2+y^2\). With \(V=\int_0^1\int_0^y(x^2+y^2)\,dx\,dy+\int_1^2\int_0^{2-y}(x^2+y^2)\,dx\,dy\), the volume equals'
+    A: '\(2\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{2}{3}\)'
+    answer: B
+    hint: 'Describe the base as \(0\le x\le1\), \(x\le y\le2-x\).'
+    explanation: '\(\int_0^1\int_x^{2-x}(x^2+y^2)dy\,dx=\tfrac43\).'
+  67:
+    topic: s15-1
+    question: '\(\displaystyle\int_0^2\left(\tan^{-1}\pi x-\tan^{-1}x\right)dx\) equals (write the integrand as an integral in a second variable)'
+    A: '\(- 4 \tan^{-1}{\left(2 \right)} - \frac{\ln{\left(1 + 4 \pi^{2} \right)}}{\pi} + \ln{\left(5 \right)} + 4 \tan^{-1}{\left(2 \pi \right)}\)'
+    B: '\(- \tan^{-1}{\left(2 \right)} - \frac{\ln{\left(1 + 4 \pi^{2} \right)}}{4 \pi} + \frac{\ln{\left(5 \right)}}{4} + \tan^{-1}{\left(2 \pi \right)}\)'
+    C: '\(\frac{- \ln{\left(1 + 4 \pi^{2} \right)} + \pi \left(- 4 \tan^{-1}{\left(2 \right)} + \ln{\left(5 \right)} + 2 + 4 \tan^{-1}{\left(2 \pi \right)}\right)}{2 \pi}\)'
+    D: '\(\frac{- \ln{\left(1 + 4 \pi^{2} \right)} + \pi \left(- 4 \tan^{-1}{\left(2 \right)} + \ln{\left(5 \right)} + 4 \tan^{-1}{\left(2 \pi \right)}\right)}{2 \pi}\)'
+    answer: D
+    hint: '\(\tan^{-1}\pi x-\tan^{-1}x=\int_1^\pi\dfrac{x}{1+x^2y^2}dy\).'
+    explanation: 'Evaluate directly: \(\int\tan^{-1}(ax)dx=x\tan^{-1}(ax)-\dfrac{\ln(1+a^2x^2)}{2a}\).'
+  68:
+    topic: s15-1
+    question: 'The region \(R\) maximizing \(\iint_R(4-x^2-2y^2)\,dA\) is'
+    A: the whole plane
+    B: 'the ellipse \(x^2+2y^2\le4\)'
+    C: 'the rectangle \(|x|\le2\), \(|y|\le2\)'
+    D: 'the disk \(x^2+y^2\le4\)'
+    answer: B
+    hint: Include exactly the points where the integrand is positive.
+    explanation: 'The integrand is \(\ge0\) iff \(x^2+2y^2\le4\).'
+  69:
+    topic: s15-1
+    question: 'The region \(R\) minimizing \(\iint_R(x^2+y^2-9)\,dA\) is'
+    A: 'the disk \(x^2+y^2\le9^2\)'
+    B: 'the disk \(x^2+y^2\le3^2\)'
+    C: the unit disk
+    D: the whole plane
+    answer: B
+    hint: Include exactly the points where the integrand is negative.
+    explanation: '\(x^2+y^2-9<0\) inside the circle of radius \(3\).'
+  70:
+    topic: s15-1
+    question: 'Can the double integral of a continuous function \(f(x,y)\) over a rectangle give different answers depending on the order of integration?'
+    A: "No; Fubini's theorem says both orders give the same value"
+    B: Yes, if the rectangle is not a square
+    C: Only for improper integrals
+    D: 'Yes, whenever \(f\) is not symmetric'
+    answer: A
+    hint: "Fubini's theorem."
+    explanation: The iterated integrals of a continuous function over a rectangle agree.
+  71:
+    topic: s15-1
+    question: 'Fubini''s theorem for \(f(x,y)\) continuous on a rectangle \(R=[a,b]\times[c,d]\) states'
+    A: '\(\displaystyle\iint_Rf\,dA=\left(\int_a^bf\,dx\right)\left(\int_c^df\,dy\right)\)'
+    B: '\(\displaystyle\iint_Rf\,dA=\int_a^b\int_c^df\,dy\,dx=\int_c^d\int_a^bf\,dx\,dy\)'
+    C: '\(\displaystyle\iint_Rf\,dA=\int_a^b\int_c^df\,dy\,dx+\int_c^d\int_a^bf\,dx\,dy\)'
+    D: '\(\displaystyle\iint_Rf\,dA=\int_a^bf(x,c)\,dx\)'
+    answer: B
+    hint: Either order of iteration may be used.
+    explanation: The two iterated integrals are equal to the double integral.
+  72:
+    topic: s15-1
+    question: '\(\displaystyle\iint_Re^{-x^2-y^2}dA\) over the plane equals \(\lim_{b\to\infty}\int_{-b}^b\int_{-b}^be^{-x^2-y^2}dx\,dy\) which equals'
+    A: '\(2\displaystyle\int_0^\infty e^{-x^2}dx\)'
+    B: '\(\displaystyle\int_0^\infty e^{-x^2}dx\)'
+    C: '\(4\left(\displaystyle\int_0^\infty e^{-x^2}dx\right)^2\)'
+    D: '\(\left(\displaystyle\int_0^\infty e^{-x^2}dx\right)^2\)'
+    answer: C
+    hint: The integrand separates; the integral over the whole plane is four times that over the quadrant.
+    explanation: 'Hence \(\int_0^\infty e^{-x^2}dx=\dfrac{\sqrt\pi}2\).'
+  73:
+    topic: s15-1
+    question: 'To integrate \(f\) over the triangle with vertices \((0,1)\), \((2,0)\), \((1,2)\), the easiest approach is'
+    A: the triangle cannot be integrated over
+    B: 'to split the region into pieces with a common description of \(y\) (or \(x\)) boundaries, since no single pair of boundary functions describes it'
+    C: to integrate over the unit square
+    D: to use polar coordinates
+    answer: B
+    hint: Draw the triangle and find where the upper or lower boundary changes formula.
+    explanation: Split at the middle vertex.
+  74:
+    topic: s15-2
+    question: 'The area of the region bounded by the coordinate axes and the line \(x+y=2\) is'
+    A: '\(3\)'
+    B: '\(1\)'
+    C: '\(4\)'
+    D: '\(2\)'
+    answer: D
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(2\).'
+  75:
+    topic: s15-2
+    question: 'The area of the region bounded by the lines \(x=0\), \(y=2x\), and \(y=4\) is'
+    A: '\(8\)'
+    B: '\(4\)'
+    C: '\(2\)'
+    D: '\(5\)'
+    answer: B
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(4\).'
+  76:
+    topic: s15-2
+    question: 'The area of the region bounded by the parabola \(x=-y^2\) and the line \(y=x+2\) is'
+    A: '\(9\)'
+    B: '\(\frac{11}{2}\)'
+    C: '\(\frac{9}{4}\)'
+    D: '\(\frac{9}{2}\)'
+    answer: D
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(\frac{9}{2}\).'
+  77:
+    topic: s15-2
+    question: 'The area of the region bounded by the parabola \(x=y-y^2\) and the line \(y=-x\) is'
+    A: '\(\frac{2}{3}\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{7}{3}\)'
+    answer: B
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(\frac{4}{3}\).'
+  78:
+    topic: s15-2
+    question: 'The area of the region bounded by the curve \(y=e^x\) and the lines \(y=0\), \(x=0\), and \(x=\ln2\) is'
+    A: '\(1\)'
+    B: '\(\frac{2}{3}\)'
+    C: '\(2\)'
+    D: '\(\frac{1}{2}\)'
+    answer: A
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(1\).'
+  79:
+    topic: s15-2
+    question: 'The area of the region bounded by the curves \(y=\ln x\), \(y=2\ln x\) and the line \(x=e\) in the first quadrant is'
+    A: '\(1\)'
+    B: '\(\frac{2}{3}\)'
+    C: '\(2\)'
+    D: '\(\frac{1}{2}\)'
+    answer: A
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(1\).'
+  80:
+    topic: s15-2
+    question: 'The area of the region bounded by the parabolas \(x=y^2\) and \(x=2y-y^2\) is'
+    A: '\(\frac{1}{6}\)'
+    B: '\(\frac{1}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(\frac{4}{3}\)'
+    answer: B
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(\frac{1}{3}\).'
+  81:
+    topic: s15-2
+    question: 'The area of the region bounded by the parabolas \(x=y^2-1\) and \(x=2y^2-2\) is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{7}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(\frac{8}{3}\)'
+    answer: A
+    hint: 'Sketch the region and set up \(\iint dA\).'
+    explanation: 'Integrate \(1\) over the region; the area is \(\frac{4}{3}\).'
+  82:
+    topic: s15-2
+    question: 'The area of the region described by \(\displaystyle\int_0^6\int_{y^2/3}^{2y}dx\,dy\) is'
+    A: '\(12\)'
+    B: '\(6\)'
+    C: '\(24\)'
+    D: '\(13\)'
+    answer: A
+    hint: 'Integrate the constant \(1\); this is the area of the region.'
+    explanation: Evaluate the iterated integral.
+  83:
+    topic: s15-2
+    question: 'The area of the region described by \(\displaystyle\int_0^3\int_{-x}^{x(2-x)}dy\,dx\) is'
+    A: '\(9\)'
+    B: '\(\frac{9}{2}\)'
+    C: '\(\frac{9}{4}\)'
+    D: '\(\frac{11}{2}\)'
+    answer: B
+    hint: 'Integrate the constant \(1\); this is the area of the region.'
+    explanation: Evaluate the iterated integral.
+  84:
+    topic: s15-2
+    question: 'The area of the region described by \(\displaystyle\int_0^{\pi/4}\int_{\sin x}^{\cos x}dy\,dx\) is'
+    A: '\(\sqrt{2}\)'
+    B: '\(- \frac{1}{2} + \frac{\sqrt{2}}{2}\)'
+    C: '\(-1 + \sqrt{2}\)'
+    D: '\(-2 + 2 \sqrt{2}\)'
+    answer: C
+    hint: 'Integrate the constant \(1\); this is the area of the region.'
+    explanation: Evaluate the iterated integral.
+  85:
+    topic: s15-2
+    question: 'The area of the region described by \(\displaystyle\int_{-1}^2\int_{y^2}^{y+2}dx\,dy\) is'
+    A: '\(9\)'
+    B: '\(\frac{9}{2}\)'
+    C: '\(\frac{9}{4}\)'
+    D: '\(\frac{11}{2}\)'
+    answer: B
+    hint: 'Integrate the constant \(1\); this is the area of the region.'
+    explanation: Evaluate the iterated integral.
+  86:
+    topic: s15-2
+    question: 'The area of the region given by \(\displaystyle\int_{-1}^0\int_{-2x}^{1-x}dy\,dx+\int_0^2\int_{-x/2}^{1-x}dy\,dx\) is'
+    A: '\(\frac{3}{2}\)'
+    B: '\(\frac{5}{2}\)'
+    C: '\(3\)'
+    D: '\(\frac{3}{4}\)'
+    answer: A
+    hint: 'The sum of the two areas (a triangle with vertices \((-1,2)\), \((0,0)\), \((2,-1)\), ...).'
+    explanation: Evaluate both iterated integrals.
+  87:
+    topic: s15-2
+    question: 'The average value of \(f(x,y)=\sin(x+y)\) over \(0\le x\le\pi\), \(0\le y\le\pi\) is'
+    A: '\(0\)'
+    B: '\(\frac{4}{\pi^{2}}\)'
+    C: '\(\frac{1}{\pi}\)'
+    D: '\(\frac{2}{\pi}\)'
+    answer: A
+    hint: '\(\text{avg}=\dfrac1{\text{Area}}\iint f\,dA\).'
+    explanation: '\(\iint\sin(x+y)dA=0\).'
+  88:
+    topic: s15-2
+    question: 'The average value of \(f(x,y)=\sin(x+y)\) over \(0\le x\le\pi\), \(0\le y\le\pi/2\) is'
+    A: '\(\frac{4}{\pi^{2}}\)'
+    B: '\(\frac{4}{\pi}\)'
+    C: '\(\frac{2}{\pi^{2}}\)'
+    D: '\(\frac{2}{\pi}\)'
+    answer: A
+    hint: '\(\text{avg}=\dfrac1{\text{Area}}\iint f\,dA\).'
+    explanation: 'The integral is \(2\); the area is \(\pi^2/2\).'
+  89:
+    topic: s15-2
+    question: 'Which is larger: the average of \(f(x,y)=xy\) over the square \(0\le x,y\le1\), or over the quarter disk \(x^2+y^2\le1\) in the first quadrant?'
+    A: They are equal
+    B: 'The quarter disk: \(\tfrac12\) versus \(\tfrac14\)'
+    C: 'The quarter disk: \(\tfrac14\) versus \(\tfrac1{2\pi}\)'
+    D: 'The square: \(\tfrac14\) versus \(\tfrac1{2\pi}\approx0.159\)'
+    answer: D
+    hint: 'Compute \(\iint xy\,dA\) and divide by each area.'
+    explanation: 'Square: \(\tfrac14/1\); quarter disk: \(\tfrac18/\tfrac\pi4=\tfrac1{2\pi}\).'
+  90:
+    topic: s15-2
+    question: 'The average height of the paraboloid \(z=x^2+y^2\) over the square \(0\le x,y\le2\) is'
+    A: '\(4\)'
+    B: '\(\frac{16}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{4}{3}\)'
+    answer: C
+    hint: '\(\text{avg}=\dfrac14\iint(x^2+y^2)dA\).'
+    explanation: '\(\iint=\tfrac{32}3\), area \(4\).'
+  91:
+    topic: s15-2
+    question: 'The average value of \(f(x,y)=\dfrac1{xy}\) over the square \(\ln2\le x,y\le2\ln2\) is'
+    A: '\(\ln{\left(2 \right)}^{2}\)'
+    B: '\(\ln{\left(2 \right)}\)'
+    C: '\(1\)'
+    D: '\(\frac{1}{\ln{\left(2 \right)}}\)'
+    answer: C
+    hint: '\(\iint\dfrac{dA}{xy}=\left(\int\dfrac{dx}{x}\right)^2=(\ln2)^2\).'
+    explanation: 'Divide by the area \((\ln2)^2\).'
+  92:
+    topic: s15-2
+    question: 'The center of mass of the plate of density \(\delta=3\) bounded by \(x=0\), \(y=x\), and \(y^2=2-x\) in the first quadrant is'
+    A: '\((- \frac{246}{395} + \frac{16 \sqrt{2}}{79}, \frac{49}{158} + \frac{28 \sqrt{2}}{79})\)'
+    B: '\((\frac{246}{395} - \frac{16 \sqrt{2}}{79}, - \frac{28 \sqrt{2}}{79} - \frac{49}{158})\)'
+    C: '\((\frac{246}{395} - \frac{16 \sqrt{2}}{79}, \frac{49}{158} + \frac{28 \sqrt{2}}{79})\)'
+    D: '\((\frac{49}{158} + \frac{28 \sqrt{2}}{79}, \frac{246}{395} - \frac{16 \sqrt{2}}{79})\)'
+    answer: C
+    hint: '\(\bar x=M_y/M\), \(\bar y=M_x/M\); the region is \(0\le x\le1\), \(x\le y\le\sqrt{2-x}\).'
+    explanation: 'Compute \(M\), \(M_x\), \(M_y\) with \(\delta=3\).'
+  93:
+    topic: s15-2
+    question: 'A rectangular plate of density \(\delta\) occupies \(0\le x,y\le3\). Its radius of gyration about the \(x\)-axis \(R_x=\sqrt{I_x/M}\) is'
+    A: '\(3\)'
+    B: '\(27\)'
+    C: '\(\sqrt{6}\)'
+    D: '\(\sqrt{3}\)'
+    answer: D
+    hint: '\(I_x=\delta\iint y^2dA=27\delta\), \(M=9\delta\).'
+    explanation: '\(R_x=\sqrt{27\delta/9\delta}=\sqrt3\).'
+  94:
+    topic: s15-2
+    question: 'A rectangular plate of density \(\delta\) occupies \(0\le x,y\le3\). Its polar moment of inertia \(I_0=I_x+I_y\) is'
+    A: '\(54 \delta\)'
+    B: '\(81 \delta\)'
+    C: '\(18 \delta\)'
+    D: '\(27 \delta\)'
+    answer: A
+    hint: '\(I_x=I_y=27\delta\).'
+    explanation: '\(I_0=54\delta\).'
+  95:
+    topic: s15-2
+    question: 'The centroid of the region in the first quadrant bounded by the parabola \(y^2=2x\), the \(x\)-axis, and the line \(x+y=4\) is'
+    A: '\((\frac{64}{35}, \frac{5}{7})\)'
+    B: '\((\frac{64}{35}, - \frac{5}{7})\)'
+    C: '\((- \frac{64}{35}, \frac{5}{7})\)'
+    D: '\((\frac{5}{7}, \frac{64}{35})\)'
+    answer: A
+    hint: 'The parabola meets the line at \((2,2)\); describe the region as \(0\le y\le2\), \(\tfrac{y^2}2\le x\le4-y\).'
+    explanation: Compute the area and first moments.
+  96:
+    topic: s15-2
+    question: 'The centroid of the triangular region cut from the first quadrant by the line \(x+y=3\) is'
+    A: '\((1, 1)\)'
+    B: '\((-1, 1)\)'
+    C: '\((1, -1)\)'
+    D: '\((2, 1)\)'
+    answer: A
+    hint: The centroid of a triangle is one third of the way from each side.
+    explanation: 'The vertices are \((0,0)\), \((3,0)\), \((0,3)\).'
+  97:
+    topic: s15-2
+    question: 'The centroid of the semicircular region bounded by the \(x\)-axis and \(y=\sqrt{1-x^2}\) is'
+    A: '\((0, \frac{4}{3 \pi})\)'
+    B: '\((\frac{4}{3 \pi}, 0)\)'
+    C: '\((0, - \frac{4}{3 \pi})\)'
+    D: '\((1, \frac{4}{3 \pi})\)'
+    answer: A
+    hint: 'By symmetry \(\bar x=0\).'
+    explanation: '\(\bar y=\dfrac{M_x}{M}=\dfrac{2/3}{\pi/2}=\dfrac4{3\pi}\).'
+  98:
+    topic: s15-2
+    question: 'The region in the first quadrant bounded by \(y=6x-x^2\) and \(y=x\) has area \(\tfrac{125}6\). Its centroid is'
+    A: '\((\frac{5}{2}, 5)\)'
+    B: '\((- \frac{5}{2}, 5)\)'
+    C: '\((\frac{5}{2}, -5)\)'
+    D: '\((5, \frac{5}{2})\)'
+    answer: A
+    hint: 'The curves meet at \(x=0\) and \(x=5\).'
+    explanation: Compute the first moments.
+  99:
+    topic: s15-2
+    question: 'The centroid of the region cut from the first quadrant by the circle \(x^2+y^2=a^2\) is'
+    A: '\((\frac{4 a}{3 \pi}, \frac{4 a}{3 \pi})\)'
+    B: '\((\frac{\frac{4 a}{3} + \pi}{\pi}, \frac{4 a}{3 \pi})\)'
+    C: '\((- \frac{4 a}{3 \pi}, \frac{4 a}{3 \pi})\)'
+    D: '\((\frac{4 a}{3 \pi}, - \frac{4 a}{3 \pi})\)'
+    answer: A
+    hint: 'By symmetry \(\bar x=\bar y\).'
+    explanation: 'The quarter disk has area \(\pi a^2/4\) and \(M_y=a^3/3\).'
+  100:
+    topic: s15-2
+    question: 'The centroid of the region between the \(x\)-axis and one arch \(y=\sin x\), \(0\le x\le\pi\), is'
+    A: '\((\frac{\pi}{2}, \frac{\pi}{8})\)'
+    B: '\((\frac{\pi}{8}, \frac{\pi}{2})\)'
+    C: '\((\frac{\pi}{2}, - \frac{\pi}{8})\)'
+    D: '\((- \frac{\pi}{2}, \frac{\pi}{8})\)'
+    answer: A
+    hint: 'By symmetry \(\bar x=\pi/2\).'
+    explanation: '\(M_x=\iint y\,dA=\tfrac\pi4\), area \(2\).'
+  101:
+    topic: s15-2
+    question: 'The moment of inertia \(I_x\) of a thin plate of density \(\delta=1\) bounded by the circle \(x^2+y^2=4\) is'
+    A: '\(2 \pi\)'
+    B: '\(8 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(4 \pi\)'
+    answer: D
+    hint: '\(I_x=\iint y^2dA=\int_0^{2\pi}\int_0^2r^3\sin^2\theta\,dr\,d\theta\).'
+    explanation: '\(4\cdot\pi=4\pi\).'
+  102:
+    topic: s15-2
+    question: 'The polar moment \(I_0\) of a plate of density \(1\) bounded by \(x^2+y^2=4\) is'
+    A: '\(2 \pi\)'
+    B: '\(8 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(4 \pi\)'
+    answer: B
+    hint: '\(I_0=I_x+I_y\).'
+    explanation: '\(4\pi+4\pi\).'
+  103:
+    topic: s15-2
+    question: 'The moment of inertia \(I_y\) of a sheet of density \(1\) bounded by \(y=\dfrac{\sin^2x}{x^2}\) and \(\pi\le x\le2\pi\) is'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(\pi\)'
+    C: '\(1\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: D
+    hint: '\(I_y=\int_\pi^{2\pi}\int_0^{\sin^2x/x^2}x^2\,dy\,dx\).'
+    explanation: '\(\int_\pi^{2\pi}\sin^2x\,dx=\tfrac\pi2\).'
+  104:
+    topic: s15-2
+    question: 'The centroid of the infinite region in the second quadrant enclosed by the coordinate axes and \(y=e^x\) is'
+    A: '\((\frac{1}{4}, -1)\)'
+    B: '\((-1, - \frac{1}{4})\)'
+    C: '\((-1, \frac{1}{4})\)'
+    D: '\((1, \frac{1}{4})\)'
+    answer: C
+    hint: 'Use improper integrals: area \(=\int_{-\infty}^0e^xdx=1\).'
+    explanation: '\(M_y=\int xe^xdx=-1\), \(M_x=\tfrac12\int e^{2x}dx=\tfrac14\).'
+  105:
+    topic: s15-2
+    question: 'The first moment about the \(y\)-axis of the infinite plate (density \(1\)) in the first quadrant under \(y=e^{-x^2/2}\) is'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\frac{\sqrt{2} \sqrt{\pi}}{2}\)'
+    D: '\(2\)'
+    answer: A
+    hint: '\(M_y=\int_0^\infty\int_0^{e^{-x^2/2}}x\,dy\,dx\).'
+    explanation: '\(\int_0^\infty xe^{-x^2/2}dx=1\).'
+  106:
+    topic: s15-2
+    question: 'A thin plate bounded by \(x=y-y^2\) and \(x+y=0\) has density \(\delta=x+y\). Its moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{32}{105}\)'
+    B: '\(\frac{169}{105}\)'
+    C: '\(\frac{64}{105}\)'
+    D: '\(\frac{128}{105}\)'
+    answer: C
+    hint: '\(I_x=\iint y^2\delta\,dA\) with \(0\le y\le2\), \(-y\le x\le y-y^2\).'
+    explanation: 'Integrate in \(x\) first.'
+  107:
+    topic: s15-2
+    question: 'The mass of the smaller region cut from the ellipse \(x^2+4y^2=12\) by the parabola \(x=4y^2\), with density \(\delta=5x\), is'
+    A: '\(46 \sqrt{3}\)'
+    B: '\(1 + 23 \sqrt{3}\)'
+    C: '\(23 \sqrt{3}\)'
+    D: '\(\frac{23 \sqrt{3}}{2}\)'
+    answer: C
+    hint: 'The curves meet where \(x=3\), \(y=\pm\tfrac{\sqrt3}2\).'
+    explanation: 'Integrate \(5x\) from \(x=4y^2\) to \(x=\sqrt{12-4y^2}\).'
+  108:
+    topic: s15-2
+    question: 'The center of mass of the triangular plate bounded by \(y=x\), the \(y\)-axis, and \(y=2-x\) with density \(\delta=6x+3y+3\) is'
+    A: '\((\frac{17}{16}, \frac{3}{8})\)'
+    B: '\((\frac{3}{8}, \frac{17}{16})\)'
+    C: '\((\frac{3}{8}, - \frac{17}{16})\)'
+    D: '\((- \frac{3}{8}, \frac{17}{16})\)'
+    answer: B
+    hint: 'The triangle has vertices \((0,0)\), \((0,2)\), \((1,1)\).'
+    explanation: 'Compute \(M\), \(M_x\), \(M_y\).'
+  109:
+    topic: s15-2
+    question: 'The center of mass of the plate bounded by \(x=y^2\) and \(x=2y-y^2\) with density \(\delta=y+1\) is'
+    A: '\((\frac{8}{15}, - \frac{8}{15})\)'
+    B: '\((\frac{23}{15}, \frac{8}{15})\)'
+    C: '\((- \frac{8}{15}, \frac{8}{15})\)'
+    D: '\((\frac{8}{15}, \frac{8}{15})\)'
+    answer: D
+    hint: 'Use \(0\le y\le1\), \(y^2\le x\le2y-y^2\).'
+    explanation: 'Compute \(M\), \(M_x\), \(M_y\).'
+  110:
+    topic: s15-2
+    question: 'The moment of inertia \(I_x\) of the plate bounded by \(x=y^2\) and \(x=2y-y^2\) with density \(y+1\) is'
+    A: '\(\frac{1}{12}\)'
+    B: '\(\frac{7}{6}\)'
+    C: '\(\frac{1}{6}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: C
+    hint: '\(I_x=\iint y^2\delta\,dA\).'
+    explanation: 'Integrate over \(y^2\le x\le2y-y^2\).'
+  111:
+    topic: s15-2
+    question: 'The center of mass of the rectangular plate \(0\le x\le6\), \(0\le y\le1\) with density \(\delta=x+y+1\) is'
+    A: '\((\frac{11}{3}, \frac{14}{27})\)'
+    B: '\((- \frac{11}{3}, \frac{14}{27})\)'
+    C: '\((\frac{14}{27}, \frac{11}{3})\)'
+    D: '\((\frac{11}{3}, - \frac{14}{27})\)'
+    answer: A
+    hint: 'Compute \(M\), \(M_x\), \(M_y\).'
+    explanation: '\(M=\iint\delta\,dA\).'
+  112:
+    topic: s15-2
+    question: 'The moment of inertia \(I_y\) of the plate \(0\le x\le6\), \(0\le y\le1\) with density \(x+y+1\) is'
+    A: '\(432\)'
+    B: '\(433\)'
+    C: '\(864\)'
+    D: '\(216\)'
+    answer: A
+    hint: '\(I_y=\iint x^2\delta\,dA\).'
+    explanation: Integrate over the rectangle.
+  113:
+    topic: s15-2
+    question: 'The center of mass of the plate bounded by \(y=1\) and \(y=x^2\) with density \(\delta=y+1\) is'
+    A: '\((0, \frac{9}{14})\)'
+    B: '\((\frac{9}{14}, 0)\)'
+    C: '\((0, - \frac{9}{14})\)'
+    D: '\((1, \frac{9}{14})\)'
+    answer: A
+    hint: 'By symmetry \(\bar x=0\).'
+    explanation: '\(M=\int_{-1}^1\int_{x^2}^1(y+1)dy\,dx\).'
+  114:
+    topic: s15-2
+    question: 'The center of mass of the rectangular plate \(0\le x\le20\), \(-1\le y\le1\) with density \(\delta=1+\dfrac x{20}\) is'
+    A: '\((- \frac{100}{9}, 0)\)'
+    B: '\((\frac{109}{9}, 0)\)'
+    C: '\((0, \frac{100}{9})\)'
+    D: '\((\frac{100}{9}, 0)\)'
+    answer: D
+    hint: 'By symmetry \(\bar y=0\).'
+    explanation: '\(M=\int_0^{20}2(1+x/20)dx=60\).'
+  115:
+    topic: s15-2
+    question: 'The center of mass of the triangular plate bounded by \(y=x\), \(y=-x\), and \(y=1\) with density \(\delta=y+1\) is'
+    A: '\((\frac{7}{10}, 0)\)'
+    B: '\((0, \frac{7}{10})\)'
+    C: '\((0, - \frac{7}{10})\)'
+    D: '\((1, \frac{7}{10})\)'
+    answer: B
+    hint: 'By symmetry \(\bar x=0\).'
+    explanation: 'The triangle is \(0\le y\le1\), \(-y\le x\le y\).'
+  116:
+    topic: s15-2
+    question: 'For that triangular plate (\(\delta=y+1\)), the moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{9}{20}\)'
+    B: '\(\frac{9}{10}\)'
+    C: '\(\frac{19}{10}\)'
+    D: '\(\frac{9}{5}\)'
+    answer: B
+    hint: '\(I_x=\iint y^2\delta\,dA\).'
+    explanation: 'Integrate over \(0\le y\le1\), \(-y\le x\le y\).'
+  117:
+    topic: s15-2
+    question: 'For that triangular plate (\(\delta=y+1\)), the radius of gyration about the \(x\)-axis is'
+    A: '\(\frac{27}{50}\)'
+    B: '\(\frac{3 \sqrt{10}}{10}\)'
+    C: '\(1\)'
+    D: '\(\frac{3 \sqrt{6}}{10}\)'
+    answer: D
+    hint: '\(R_x=\sqrt{I_x/M}\).'
+    explanation: Divide the moment of inertia by the mass.
+  118:
+    topic: s15-2
+    question: 'With density \(\delta=3x^2+1\) on the same triangle (\(y=\pm x\), \(y=1\)), the center of mass is'
+    A: '\((1, \frac{32}{45})\)'
+    B: '\((\frac{32}{45}, 0)\)'
+    C: '\((0, - \frac{32}{45})\)'
+    D: '\((0, \frac{32}{45})\)'
+    answer: D
+    hint: 'By symmetry \(\bar x=0\).'
+    explanation: 'Compute \(M\) and \(M_x\).'
+  119:
+    topic: s15-2
+    question: 'The population density of a bacterium is \(f(x,y)=\dfrac{10{,}000e^y}{1+|x|/2}\). The total population in \(-5\le x\le5\), \(-2\le y\le0\) is about (to the nearest integer)'
+    A: '\(21664\)'
+    B: '\(43329\)'
+    C: '\(86657\)'
+    D: '\(48328\)'
+    answer: B
+    hint: 'The integrand is even in \(x\); double the integral over \(0\le x\le5\).'
+    explanation: '\(40000(1-e^{-2})\ln\tfrac72\approx43329\).'
+  120:
+    topic: s15-2
+    question: 'If the population density is \(f(x,y)=100(y+1)\), the number of people in the region bounded by \(x=y^2\) and \(x=2y-y^2\) is'
+    A: '\(50\)'
+    B: '\(60\)'
+    C: '\(25\)'
+    D: '\(100\)'
+    answer: A
+    hint: 'Integrate \(100(y+1)\) over the region.'
+    explanation: 'Use \(0\le y\le1\), \(y^2\le x\le2y-y^2\).'
+  121:
+    topic: s15-2
+    question: 'A parabolic-profile appliance fills \(0\le y\le a(1-x^2)\), \(-1\le x\le1\). Its centroid has height \(\bar y=\)'
+    A: '\(\frac{a}{2}\)'
+    B: '\(\frac{4 a}{5}\)'
+    C: '\(\frac{a}{3}\)'
+    D: '\(\frac{2 a}{5}\)'
+    answer: D
+    hint: '\(\bar y=\dfrac{M_x}{M}\) with \(M=\tfrac43a\), \(M_x=\tfrac{8}{15}a^2\).'
+    explanation: '\(\bar y=\tfrac{8a^2/15}{4a/3}=\tfrac25a\).'
+  122:
+    topic: s15-2
+    question: 'The appliance of the previous question (centroid at \((0,\tfrac25a)\), fulcrum at \((1,0)\)) must be tipped more than \(45^\circ\) to fall over when'
+    A: '\(a<\tfrac52\)'
+    B: '\(a>\tfrac52\)'
+    C: '\(a>1\)'
+    D: '\(a<\tfrac25\)'
+    answer: A
+    hint: 'It tips \(45^\circ\) when the centroid is at height \(1\) above the fulcrum.'
+    explanation: '\(\tfrac25a<1\Rightarrow a<\tfrac52\).'
+  123:
+    topic: s15-2
+    question: 'A rectangular plate \(0\le x\le4\), \(0\le y\le2\) (density \(1\)) has moment \(I_a=\int_0^4\int_0^2(y-a)^2dy\,dx\) about the line \(y=a\). The value of \(a\) minimizing \(I_a\) is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'Expand \((y-a)^2\), integrate, and set \(dI_a/da=0\); the minimum is at the centroid height.'
+    explanation: '\(I_a=4\left(\tfrac83-4a+2a^2\right)\), minimized at \(a=1\).'
+  124:
+    topic: s15-2
+    question: 'The centroid of the infinite region between \(y=\pm\dfrac1{\sqrt{1-x^2}}\) and the lines \(x=0\), \(x=1\) is'
+    A: '\((- \frac{2}{\pi}, 0)\)'
+    B: '\((\frac{2 + \pi}{\pi}, 0)\)'
+    C: '\((\frac{2}{\pi}, 0)\)'
+    D: '\((0, \frac{2}{\pi})\)'
+    answer: C
+    hint: 'Use improper integrals; \(\bar y=0\) by symmetry.'
+    explanation: 'Area \(=\int_0^1\dfrac2{\sqrt{1-x^2}}dx=\pi\); \(M_y=\int_0^1\dfrac{2x}{\sqrt{1-x^2}}dx=2\).'
+  125:
+    topic: s15-2
+    question: 'The radius of gyration of a slender rod of length \(L\) about an axis perpendicular to the rod through its center of mass is'
+    A: '\(\dfrac{L}{\sqrt3}\)'
+    B: '\(\dfrac{L}{2}\)'
+    C: '\(\dfrac{L}{\sqrt{12}}\)'
+    D: '\(\dfrac{L}{\sqrt6}\)'
+    answer: C
+    hint: '\(I=\tfrac1{12}mL^2\).'
+    explanation: '\(R=\sqrt{I/m}\).'
+  126:
+    topic: s15-2
+    question: 'The radius of gyration of a slender rod of length \(L\) about an axis perpendicular to the rod at one end is'
+    A: '\(\dfrac{L}{\sqrt3}\)'
+    B: '\(L\)'
+    C: '\(\dfrac L2\)'
+    D: '\(\dfrac{L}{\sqrt{12}}\)'
+    answer: A
+    hint: '\(I=\tfrac13mL^2\).'
+    explanation: '\(R=\sqrt{I/m}\).'
+  127:
+    topic: s15-2
+    question: 'The Parallel Axis Theorem states that \(I_L=\)'
+    A: '\(I_{c.m.}\cdot mh^2\)'
+    B: '\(I_{c.m.}+mh^2\), where \(h\) is the distance between the parallel lines'
+    C: '\(I_{c.m.}+mh\)'
+    D: '\(I_{c.m.}-mh^2\)'
+    answer: B
+    hint: It relates the moment about any line to that about the parallel line through the center of mass.
+    explanation: The correction term is the mass times the squared distance.
+  128:
+    topic: s15-2
+    question: The first moment of a thin plate about any line in its plane through its center of mass is
+    A: zero
+    B: equal to its moment of inertia
+    C: equal to its mass
+    D: negative
+    answer: A
+    hint: 'Put the center of mass at the origin: \(\bar x=M_y/M=0\).'
+    explanation: 'Therefore \(M_y=0\).'
+  129:
+    topic: s15-2
+    question: 'Pappus''s formula for the center of mass of two nonoverlapping plates of masses \(m_1\), \(m_2\) with centers of mass \(\mathbf c_1\), \(\mathbf c_2\) is \(\mathbf c=\)'
+    A: '\(\dfrac{\mathbf c_1+\mathbf c_2}{2}\)'
+    B: '\(\dfrac{m_1\mathbf c_2+m_2\mathbf c_1}{m_1+m_2}\)'
+    C: '\(m_1\mathbf c_1+m_2\mathbf c_2\)'
+    D: '\(\dfrac{m_1\mathbf c_1+m_2\mathbf c_2}{m_1+m_2}\)'
+    answer: D
+    hint: It is the mass-weighted average of the centers.
+    explanation: The union lies on the segment joining the two centers.
+  130:
+    topic: s15-2
+    question: 'A carpenter''s square consists of a vertical arm \(1.5\) in. wide, \(0\le y\le12\), and a horizontal arm \(2\) in. wide, \(0\le x\le24\), meeting at the origin (overlap counted once, vertical arm occupying \(2\le y\le12\)). Its center of mass is at about'
+    A: '\((9.3,\ 2.4)\) in., which lies outside the metal'
+    B: '\((12,\ 6)\) in., inside the square'
+    C: '\((0.75,\ 7)\) in.'
+    D: '\((9.3,\ 1)\) in., inside the horizontal arm'
+    answer: A
+    hint: 'Use Pappus''s formula with the two rectangles (areas \(15\) and \(48\)).'
+    explanation: '\(\bar x=\dfrac{15(0.75)+48(12)}{63}\approx9.32\), \(\bar y=\dfrac{15(7)+48(1)}{63}\approx2.43\).'
+  131:
+    topic: s15-2
+    question: 'An isosceles triangle with base \(2a\) and altitude \(h\) lies on the diameter of a semicircle of radius \(a\) (the triangle above, the semicircle below). The centroid of the union lies on the common boundary when'
+    A: '\(h=a\)'
+    B: '\(h=\sqrt2\,a\)'
+    C: '\(h=\sqrt3\,a\)'
+    D: '\(h=2a\)'
+    answer: B
+    hint: 'Balance the moments about the common base: triangle \((ah)(h/3)\) against semicircle \(\left(\tfrac{\pi a^2}2\right)\left(\tfrac{4a}{3\pi}\right)\).'
+    explanation: '\(\tfrac{ah^2}3=\tfrac{2a^3}3\Rightarrow h^2=2a^2\).'
+  132:
+    topic: s15-2
+    question: 'An isosceles triangle of altitude \(h\) has as its base one side of a square of side \(s\) (the triangle above, the square below, not overlapping). The centroid of the union lies on the base when'
+    A: '\(h=s\)'
+    B: '\(h=2s\)'
+    C: '\(h=\sqrt3\,s\)'
+    D: '\(h=\sqrt2\,s\)'
+    answer: C
+    hint: 'Balance moments about the base: triangle \(\left(\tfrac{sh}2\right)\left(\tfrac h3\right)\) against square \(s^2\cdot\tfrac s2\).'
+    explanation: '\(\tfrac{sh^2}6=\tfrac{s^3}2\Rightarrow h^2=3s^2\).'
+  133:
+    topic: s15-2
+    question: 'The centroid of the union \(P_1\cup P_2\) of two nonoverlapping plates lies'
+    A: on the line segment joining their individual centroids
+    B: outside the segment, beyond the heavier plate
+    C: at the centroid of the larger plate
+    D: at the midpoint of the segment between the centroids
+    answer: A
+    hint: It is a weighted average of the two centers.
+    explanation: "Pappus's formula expresses a convex combination."
+  134:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^1\int_0^{\sqrt{1-x^2}}dy\,dx\) equals'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(1 + \frac{\pi}{2}\)'
+    C: '\(\pi\)'
+    D: '\(- \frac{\pi}{2}\)'
+    answer: A
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  135:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^1\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}dy\,dx\) equals'
+    A: '\(2 \pi\)'
+    B: '\(- \pi\)'
+    C: '\(1 + \pi\)'
+    D: '\(\pi\)'
+    answer: D
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  136:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^1\int_0^{\sqrt{1-y^2}}(x^2+y^2)\,dx\,dy\) equals'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(\frac{\pi}{8}\)'
+    C: '\(\frac{\pi}{8} + 1\)'
+    D: '\(- \frac{\pi}{8}\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  137:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^1\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}(x^2+y^2)\,dy\,dx\) equals'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(- \frac{\pi}{2}\)'
+    C: '\(1 + \frac{\pi}{2}\)'
+    D: '\(\pi\)'
+    answer: A
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  138:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^2\int_0^{\sqrt{4-y^2}}(x^2+y^2)\,dx\,dy\) equals'
+    A: '\(4 \pi\)'
+    B: '\(1 + 2 \pi\)'
+    C: '\(2 \pi\)'
+    D: '\(- 2 \pi\)'
+    answer: C
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  139:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^6\int_0^yx\,dx\,dy\) equals'
+    A: '\(37\)'
+    B: '\(-36\)'
+    C: '\(72\)'
+    D: '\(36\)'
+    answer: D
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  140:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^2\int_0^xy\,dy\,dx\) equals'
+    A: '\(- \frac{4}{3}\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{7}{3}\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  141:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^0\int_{-\sqrt{1-x^2}}^0\frac2{1+\sqrt{x^2+y^2}}\,dy\,dx\) equals'
+    A: '\(\pi \left(1 - \ln{\left(2 \right)}\right) + 1\)'
+    B: '\(2 \pi \left(1 - \ln{\left(2 \right)}\right)\)'
+    C: '\(\pi \left(1 - \ln{\left(2 \right)}\right)\)'
+    D: '\(\pi \left(-1 + \ln{\left(2 \right)}\right)\)'
+    answer: C
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  142:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^0\int_{-\sqrt{1-y^2}}^0\frac{4\sqrt{x^2+y^2}}{1+x^2+y^2}\,dx\,dy\) equals'
+    A: '\(1 + \frac{\pi \left(4 - \pi\right)}{2}\)'
+    B: '\(\frac{\pi \left(-4 + \pi\right)}{2}\)'
+    C: '\(\frac{\pi \left(4 - \pi\right)}{2}\)'
+    D: '\(\pi \left(4 - \pi\right)\)'
+    answer: C
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  143:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^{\ln2}\int_0^{\sqrt{(\ln2)^2-y^2}}e^{\sqrt{x^2+y^2}}\,dx\,dy\) equals'
+    A: '\(- \pi + 2 \pi \ln{\left(2 \right)}\)'
+    B: '\(\pi \left(- \frac{1}{2} + \ln{\left(2 \right)}\right)\)'
+    C: '\(- \frac{\pi}{2} + 1 + \pi \ln{\left(2 \right)}\)'
+    D: '\(\pi \left(\frac{1}{2} - \ln{\left(2 \right)}\right)\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  144:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^1\int_0^{\sqrt{1-x^2}}e^{-(x^2+y^2)}\,dy\,dx\) equals'
+    A: '\(- \frac{\pi}{2 e} + \frac{\pi}{2}\)'
+    B: '\(- \frac{\pi}{4 e} + \frac{\pi}{4}\)'
+    C: '\(- \frac{\pi}{4 e} + \frac{\pi}{4} + 1\)'
+    D: '\(- \frac{\pi}{4} + \frac{\pi}{4 e}\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  145:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_0^2\int_0^{\sqrt{1-(x-1)^2}}\frac{x+y}{x^2+y^2}\,dy\,dx\) equals'
+    A: '\(2 + \pi\)'
+    B: '\(1 + \frac{\pi}{2}\)'
+    C: '\(- \frac{\pi}{2} - 1\)'
+    D: '\(\frac{\pi}{2} + 2\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  146:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^{1}\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}\ln(x^2+y^2+1)\,dx\,dy\) equals'
+    A: '\(1 - \pi \left(1 - 2 \ln{\left(2 \right)}\right)\)'
+    B: '\(\pi \left(-1 + 2 \ln{\left(2 \right)}\right)\)'
+    C: '\(\pi \left(1 - 2 \ln{\left(2 \right)}\right)\)'
+    D: '\(- 2 \pi \left(1 - 2 \ln{\left(2 \right)}\right)\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  147:
+    topic: s15-3
+    question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^1\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}\frac2{(1+x^2+y^2)^2}\,dy\,dx\) equals'
+    A: '\(- \pi\)'
+    B: '\(\pi\)'
+    C: '\(2 \pi\)'
+    D: '\(1 + \pi\)'
+    answer: B
+    hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
+    explanation: Evaluate the equivalent polar integral.
+  148:
+    topic: s15-3
+    question: 'In polar coordinates the region \(0\le y\le\sqrt{1-x^2}\), \(-1\le x\le1\) is described by'
+    A: '\(0\le r\le1\), \(0\le\theta\le\pi/2\)'
+    B: '\(0\le r\le1\), \(0\le\theta\le2\pi\)'
+    C: '\(0\le r\le1\), \(0\le\theta\le\pi\)'
+    D: '\(0\le r\le2\), \(0\le\theta\le\pi\)'
+    answer: C
+    hint: It is the upper half of the unit disk.
+    explanation: '\(y\ge0\) means \(0\le\theta\le\pi\).'
+  149:
+    topic: s15-3
+    question: 'In polar coordinates, the integral \(\displaystyle\int_0^6\int_0^yx\,dx\,dy\) becomes'
+    A: '\(\displaystyle\int_{0}^{\pi/4}\int_0^{6\csc\theta}r^2\cos\theta\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{6\csc\theta}r^2\cos\theta\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{6\csc\theta}r\cos\theta\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{6\sec\theta}r^2\cos\theta\,dr\,d\theta\)'
+    answer: B
+    hint: 'The region is the triangle \(0\le x\le y\le6\); the top boundary \(y=6\) is \(r=6\csc\theta\).'
+    explanation: '\(x\,dx\,dy=r\cos\theta\cdot r\,dr\,d\theta\), and \(\theta\) runs from the ray \(y=x\) to the \(y\)-axis.'
+  150:
+    topic: s15-3
+    question: 'The disk \(x^2+(y-1)^2\le1\) is described in polar coordinates by'
+    A: '\(0\le r\le2\sin\theta\), \(0\le\theta\le\pi\)'
+    B: '\(0\le r\le2\sin\theta\), \(0\le\theta\le2\pi\)'
+    C: '\(0\le r\le\sin\theta\), \(0\le\theta\le\pi\)'
+    D: '\(0\le r\le2\cos\theta\), \(0\le\theta\le\pi\)'
+    answer: A
+    hint: 'Substitute \(x=r\cos\theta\), \(y=r\sin\theta\): \(r^2=2r\sin\theta\).'
+    explanation: 'The circle passes through the origin and is tangent to the \(x\)-axis.'
+  151:
+    topic: s15-3
+    question: 'The disk \((x-1)^2+y^2\le1\) is described in polar coordinates by'
+    A: '\(0\le r\le2\cos\theta\), \(-\pi/2\le\theta\le\pi/2\)'
+    B: '\(0\le r\le2\sin\theta\), \(0\le\theta\le\pi\)'
+    C: '\(0\le r\le2\cos\theta\), \(0\le\theta\le\pi\)'
+    D: '\(0\le r\le\cos\theta\), \(-\pi/2\le\theta\le\pi/2\)'
+    answer: A
+    hint: '\(r^2=2r\cos\theta\).'
+    explanation: 'The circle is tangent to the \(y\)-axis.'
+  152:
+    topic: s15-3
+    question: 'The area of the region cut from the first quadrant by the curve \(r=2(2-\sin2\theta)^{1/2}\) is'
+    A: '\(-1 + 2 \pi\)'
+    B: '\(-2 + 2 \pi\)'
+    C: '\(-4 + 4 \pi\)'
+    D: '\(-1 + \pi\)'
+    answer: B
+    hint: '\(A=\iint r\,dr\,d\theta=\tfrac12\int r^2d\theta\).'
+    explanation: Set up the polar limits and integrate.
+  153:
+    topic: s15-3
+    question: 'The area of the region inside the cardioid \(r=1+\cos\theta\) and outside the circle \(r=1\) is'
+    A: '\(\frac{\pi}{8} + 1\)'
+    B: '\(\frac{\pi}{4} + 2\)'
+    C: '\(\frac{\pi}{4} + 3\)'
+    D: '\(\frac{\pi}{2} + 4\)'
+    answer: B
+    hint: '\(A=\iint r\,dr\,d\theta=\tfrac12\int r^2d\theta\).'
+    explanation: Set up the polar limits and integrate.
+  154:
+    topic: s15-3
+    question: 'The area of one leaf of the rose \(r=12\cos3\theta\) is'
+    A: '\(24 \pi\)'
+    B: '\(6 \pi\)'
+    C: '\(1 + 12 \pi\)'
+    D: '\(12 \pi\)'
+    answer: D
+    hint: '\(A=\iint r\,dr\,d\theta=\tfrac12\int r^2d\theta\).'
+    explanation: Set up the polar limits and integrate.
+  155:
+    topic: s15-3
+    question: 'The area of the region enclosed by the positive \(x\)-axis and the spiral \(r=4\theta/3\), \(0\le\theta\le2\pi\) is'
+    A: '\(\frac{32 \pi^{3}}{27}\)'
+    B: '\(\frac{64 \pi^{3}}{27}\)'
+    C: '\(1 + \frac{64 \pi^{3}}{27}\)'
+    D: '\(\frac{128 \pi^{3}}{27}\)'
+    answer: B
+    hint: '\(A=\iint r\,dr\,d\theta=\tfrac12\int r^2d\theta\).'
+    explanation: Set up the polar limits and integrate.
+  156:
+    topic: s15-3
+    question: 'The area of the region cut from the first quadrant by the cardioid \(r=1+\sin\theta\) is'
+    A: '\(\frac{3 \pi}{8} + 2\)'
+    B: '\(2 + \frac{3 \pi}{4}\)'
+    C: '\(1 + \frac{3 \pi}{8}\)'
+    D: '\(\frac{1}{2} + \frac{3 \pi}{16}\)'
+    answer: C
+    hint: '\(A=\iint r\,dr\,d\theta=\tfrac12\int r^2d\theta\).'
+    explanation: Set up the polar limits and integrate.
+  157:
+    topic: s15-3
+    question: 'The area of the region common to the interiors of the cardioids \(r=1+\cos\theta\) and \(r=1-\cos\theta\) is'
+    A: '\(-8 + 3 \pi\)'
+    B: '\(-3 + \frac{3 \pi}{2}\)'
+    C: '\(-4 + \frac{3 \pi}{2}\)'
+    D: '\(-2 + \frac{3 \pi}{4}\)'
+    answer: C
+    hint: '\(A=\iint r\,dr\,d\theta=\tfrac12\int r^2d\theta\).'
+    explanation: Set up the polar limits and integrate.
+  158:
+    topic: s15-3
+    question: 'The first moment about the \(x\)-axis of a plate of density \(\delta=3\) bounded below by the \(x\)-axis and above by the cardioid \(r=1-\cos\theta\) is'
+    A: '\(8\)'
+    B: '\(4\)'
+    C: '\(2\)'
+    D: '\(5\)'
+    answer: B
+    hint: '\(M_x=\iint y\,\delta\,dA\), \(0\le\theta\le\pi\).'
+    explanation: '\(\int_0^\pi\sin\theta(1-\cos\theta)^3d\theta=4\).'
+  159:
+    topic: s15-3
+    question: 'A disk \(x^2+y^2\le a^2\) has density \(\delta=k(x^2+y^2)\). Its moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{\pi a^{6} k}{6}\)'
+    B: '\(\frac{\pi a^{6} k}{3}\)'
+    C: '\(\frac{\pi a^{6} k}{12}\)'
+    D: '\(\frac{2 \pi a^{6} k}{3}\)'
+    answer: A
+    hint: '\(I_x=\iint y^2\delta\,dA\) in polar coordinates.'
+    explanation: '\(k\int_0^{2\pi}\sin^2\theta\int_0^ar^5dr\,d\theta=\tfrac{\pi ka^6}6\).'
+  160:
+    topic: s15-3
+    question: 'A disk \(x^2+y^2\le a^2\) has density \(\delta=k(x^2+y^2)\). Its polar moment of inertia \(I_0\) is'
+    A: '\(\frac{2 \pi a^{6} k}{3}\)'
+    B: '\(\frac{\pi a^{6} k}{4}\)'
+    C: '\(\frac{\pi a^{6} k}{6}\)'
+    D: '\(\frac{\pi a^{6} k}{3}\)'
+    answer: D
+    hint: '\(I_0=\iint r^2\delta\,dA\).'
+    explanation: '\(k\cdot2\pi\int_0^ar^5dr=\tfrac{\pi ka^6}3\).'
+  161:
+    topic: s15-3
+    question: 'The mass of a plate occupying the region inside the circle \(r=6\sin\theta\) and outside \(r=3\), with density \(\delta=1/r\), is'
+    A: '\(6 \sqrt{3}\)'
+    B: '\(2 \pi\)'
+    C: '\(- \pi + 6 \sqrt{3}\)'
+    D: '\(- 2 \pi + 6 \sqrt{3}\)'
+    answer: D
+    hint: 'The circles meet at \(\theta=\pi/6,5\pi/6\); \(M=\iint\tfrac1r\,r\,dr\,d\theta\).'
+    explanation: '\(\int_{\pi/6}^{5\pi/6}(6\sin\theta-3)d\theta=6\sqrt3-2\pi\).'
+  162:
+    topic: s15-3
+    question: 'The polar moment of inertia about the origin of a plate covering the region inside the cardioid \(r=1-\cos\theta\) and outside \(r=1\), with density \(\delta=1/r^2\), is'
+    A: '\(\frac{\pi}{2} + 2\)'
+    B: '\(\frac{\pi}{8} + 1\)'
+    C: '\(\frac{\pi}{2} + 4\)'
+    D: '\(\frac{\pi}{4} + 2\)'
+    answer: D
+    hint: '\(I_0=\iint r^2\cdot\tfrac1{r^2}\,r\,dr\,d\theta\), \(\tfrac\pi2\le\theta\le\tfrac{3\pi}2\).'
+    explanation: 'This equals the area of the region: \(2+\tfrac\pi4\).'
+  163:
+    topic: s15-3
+    question: 'The centroid of the region enclosed by the cardioid \(r=1+\cos\theta\) is'
+    A: '\(\left(\dfrac56,0\right)\)'
+    B: '\(\left(\dfrac23,0\right)\)'
+    C: '\(\left(\dfrac56,\dfrac56\right)\)'
+    D: '\(\left(\dfrac12,0\right)\)'
+    answer: A
+    hint: 'By symmetry \(\bar y=0\); \(\bar x=M_y/M\) with \(M=\tfrac{3\pi}2\).'
+    explanation: '\(M_y=\iint r\cos\theta\cdot r\,dr\,d\theta=\tfrac{5\pi}4\), so \(\bar x=\tfrac56\).'
+  164:
+    topic: s15-3
+    question: 'The polar moment of inertia about the origin of the plate (density \(1\)) enclosed by \(r=1+\cos\theta\) is'
+    A: '\(\frac{35 \pi}{8}\)'
+    B: '\(\frac{35 \pi}{16}\)'
+    C: '\(\frac{35 \pi}{32}\)'
+    D: '\(\frac{3 \pi}{2}\)'
+    answer: B
+    hint: '\(I_0=\iint r^2\,r\,dr\,d\theta=\tfrac14\int_0^{2\pi}(1+\cos\theta)^4d\theta\).'
+    explanation: 'Expand and use the average values of powers of \(\cos\).'
+  165:
+    topic: s15-3
+    question: 'The average height of the hemisphere \(z=\sqrt{a^2-x^2-y^2}\) above the disk \(x^2+y^2\le a^2\) is'
+    A: '\(\frac{a}{2}\)'
+    B: '\(\frac{3 a}{4}\)'
+    C: '\(a\)'
+    D: '\(\frac{2 a}{3}\)'
+    answer: D
+    hint: '\(\text{avg}=\dfrac{\text{volume}}{\text{area}}=\dfrac{2\pi a^3/3}{\pi a^2}\).'
+    explanation: 'The volume of a hemisphere is \(\tfrac23\pi a^3\).'
+  166:
+    topic: s15-3
+    question: 'The average height of the cone \(z=\sqrt{x^2+y^2}\) above the disk \(x^2+y^2\le a^2\) is'
+    A: '\(\frac{a}{3}\)'
+    B: '\(\frac{a}{2}\)'
+    C: '\(\frac{2 a}{3}\)'
+    D: '\(a\)'
+    answer: C
+    hint: '\(\text{avg}=\dfrac{\text{volume}}{\text{area}}=\dfrac{\pi a^3/3}{\pi a^2}\)? Compute \(\tfrac{1}{\pi a^2}\iint r\,r\,dr\,d\theta\).'
+    explanation: '\(\dfrac{2\pi a^3/3}{\pi a^2}=\dfrac{2a}3\).'
+  167:
+    topic: s15-3
+    question: 'The average distance from a point \(P(x,y)\) in the disk \(x^2+y^2\le a^2\) to the center is'
+    A: '\(\frac{2 a}{3}\)'
+    B: '\(a\)'
+    C: '\(\frac{3 a}{4}\)'
+    D: '\(\frac{a}{2}\)'
+    answer: A
+    hint: '\(\text{avg}=\dfrac1{\pi a^2}\iint r\cdot r\,dr\,d\theta\).'
+    explanation: '\(\dfrac{2\pi a^3/3}{\pi a^2}\).'
+  168:
+    topic: s15-3
+    question: 'The average value of the square of the distance from \(P(x,y)\) in the unit disk to the boundary point \(A(1,0)\) is'
+    A: '\(\frac{3}{2}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: A
+    hint: '\(d^2=(x-1)^2+y^2=r^2-2r\cos\theta+1\).'
+    explanation: 'The \(\cos\theta\) term averages to zero: \(\tfrac12+1=\tfrac32\).'
+  169:
+    topic: s15-3
+    question: '\(\displaystyle\iint_{1\le x^2+y^2\le e^2}\dfrac{\ln(x^2+y^2)}{\sqrt{x^2+y^2}}\,dA=\)'
+    A: '\(4 \pi\)'
+    B: '\(\pi\)'
+    C: '\(2 \pi\)'
+    D: '\(8 \pi\)'
+    answer: A
+    hint: 'In polar coordinates the integrand times \(r\) is \(2\ln r\).'
+    explanation: '\(2\pi\int_1^e2\ln r\,dr=4\pi\).'
+  170:
+    topic: s15-3
+    question: '\(\displaystyle\iint_{1\le x^2+y^2\le e^2}\dfrac{\ln(x^2+y^2)}{x^2+y^2}\,dA=\)'
+    A: '\(2 e \pi\)'
+    B: '\(4 \pi\)'
+    C: '\(2 \pi\)'
+    D: '\(\pi\)'
+    answer: C
+    hint: 'In polar form: \(2\pi\int_1^e\dfrac{2\ln r}{r}dr\).'
+    explanation: '\(2\pi[(\ln r)^2]_1^e=2\pi\).'
+  171:
+    topic: s15-3
+    question: 'The volume of the solid right cylinder with base inside the cardioid \(r=1+\cos\theta\) and outside \(r=1\), and top in the plane \(z=x\), is'
+    A: '\(\frac{4}{3} + \frac{5 \pi}{8}\)'
+    B: '\(\frac{5 \pi}{8} + \frac{7}{3}\)'
+    C: '\(\frac{8}{3} + \frac{5 \pi}{4}\)'
+    D: '\(\frac{2}{3} + \frac{5 \pi}{16}\)'
+    answer: A
+    hint: '\(V=\iint x\,dA=\int\int r\cos\theta\cdot r\,dr\,d\theta\).'
+    explanation: 'Integrate \(\theta\) over \([-\pi/2,\pi/2]\), where \(x>0\).'
+  172:
+    topic: s15-3
+    question: 'The standard proof that \(\displaystyle\int_0^\infty e^{-x^2}dx=\dfrac{\sqrt\pi}2\) squares the integral and evaluates \(\displaystyle\int_0^\infty\int_0^\infty e^{-(x^2+y^2)}dx\,dy\) in polar coordinates, which equals'
+    A: '\(\dfrac\pi4\)'
+    B: '\(\pi\)'
+    C: '\(\dfrac\pi2\)'
+    D: '\(\dfrac{\sqrt\pi}2\)'
+    answer: A
+    hint: 'The region is the first quadrant: \(0\le\theta\le\pi/2\).'
+    explanation: '\(\int_0^{\pi/2}\int_0^\infty re^{-r^2}dr\,d\theta=\tfrac\pi2\cdot\tfrac12=\tfrac\pi4\).'
+  173:
+    topic: s15-3
+    question: '\(\displaystyle\lim_{x\to\infty}\operatorname{erf}(x)=\lim_{x\to\infty}\int_0^x\dfrac{2e^{-t^2}}{\sqrt\pi}dt\) equals'
+    A: '\(\sqrt\pi\)'
+    B: '\(1\)'
+    C: '\(\dfrac12\)'
+    D: '\(\dfrac2{\sqrt\pi}\)'
+    answer: B
+    hint: 'Use \(\int_0^\infty e^{-t^2}dt=\tfrac{\sqrt\pi}2\).'
+    explanation: '\(\dfrac2{\sqrt\pi}\cdot\dfrac{\sqrt\pi}2=1\).'
+  174:
+    topic: s15-3
+    question: '\(\displaystyle\int_0^\infty\int_0^\infty\dfrac{dx\,dy}{(1+x^2+y^2)^2}\) equals'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(\frac{\pi}{8}\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(\pi\)'
+    answer: A
+    hint: Use polar coordinates over the first quadrant.
+    explanation: '\(\tfrac\pi2\int_0^\infty\dfrac{r\,dr}{(1+r^2)^2}=\tfrac\pi2\cdot\tfrac12\).'
+  175:
+    topic: s15-3
+    question: 'The integral of \(f(x,y)=\dfrac1{1-x^2-y^2}\) over the disk \(x^2+y^2\le\tfrac34\) is'
+    A: '\(2 \pi\)'
+    B: '\(\pi \ln{\left(3 \right)}\)'
+    C: '\(2 \pi \ln{\left(2 \right)}\)'
+    D: '\(\pi \ln{\left(2 \right)}\)'
+    answer: C
+    hint: '\(2\pi\int_0^{\sqrt3/2}\dfrac{r}{1-r^2}dr\).'
+    explanation: '\(2\pi\cdot\left[-\tfrac12\ln(1-r^2)\right]=\pi\ln4\).'
+  176:
+    topic: s15-3
+    question: 'The integral of \(f(x,y)=\dfrac1{1-x^2-y^2}\) over the disk \(x^2+y^2\le1\)'
+    A: 'equals \(\pi\)'
+    B: 'does not exist (it diverges as \(r\to1\))'
+    C: 'equals \(2\pi\)'
+    D: 'equals \(\pi\ln2\)'
+    answer: B
+    hint: 'The inner integral \(\int_0^1\dfrac{r\,dr}{1-r^2}\) diverges.'
+    explanation: '\(-\tfrac12\ln(1-r^2)\to\infty\) as \(r\to1\).'
+  177:
+    topic: s15-3
+    question: 'The area of a fan-shaped region between the origin and the polar curve \(r=f(\theta)\), \(\alpha\le\theta\le\beta\), is'
+    A: '\(\displaystyle\int_\alpha^\beta\tfrac12r^2\,d\theta\)'
+    B: '\(\displaystyle\int_\alpha^\beta r\,d\theta\)'
+    C: '\(\displaystyle\int_\alpha^\beta r^2\,d\theta\)'
+    D: '\(\displaystyle\int_\alpha^\beta\tfrac12r\,d\theta\)'
+    answer: A
+    hint: '\(A=\iint r\,dr\,d\theta\).'
+    explanation: 'Integrate \(r\) from \(0\) to \(f(\theta)\) first.'
+  178:
+    topic: s15-3
+    question: 'The average value of the square of the distance from a point \(P\) in a disk of radius \(a\) to a point \(P_0\) on its boundary is'
+    A: '\(a^{2}\)'
+    B: '\(2 a^{2}\)'
+    C: '\(\frac{a^{2}}{2}\)'
+    D: '\(\frac{3 a^{2}}{2}\)'
+    answer: D
+    hint: 'Place the center at the origin and \(P_0=(a,0)\); then \(d^2=r^2-2ar\cos\theta+a^2\).'
+    explanation: 'The cross term averages to zero: \(\tfrac{a^2}2+a^2=\tfrac32a^2\).'
+  179:
+    topic: s15-3
+    question: 'The area of the region \(\displaystyle A=\int_{\pi/4}^{3\pi/4}\int_{\csc\theta}^{2\sin\theta}r\,dr\,d\theta\) is'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(2\)'
+    C: '\(\pi\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: D
+    hint: 'The region lies inside \(r=2\sin\theta\) and above the line \(y=1\).'
+    explanation: '\(\tfrac12\int(4\sin^2\theta-\csc^2\theta)d\theta=\tfrac\pi2\).'
+  180:
+    topic: s15-3
+    question: 'In polar coordinates, \(\displaystyle\int_0^1\int_x^1\frac y{x^2+y^2}\,dy\,dx\) becomes \(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{\csc\theta}\sin\theta\,dr\,d\theta\), whose value is'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(\frac{\pi}{4}\)'
+    C: '\(1\)'
+    D: '\(\frac{\pi}{8}\)'
+    answer: B
+    hint: 'The integrand times \(r\) is \(\sin\theta\).'
+    explanation: '\(\int_{\pi/4}^{\pi/2}\sin\theta\csc\theta\,d\theta=\tfrac\pi4\).'
+  181:
+    topic: s15-3
+    question: '\(\displaystyle\int_0^1\int_0^{x/2}\frac{x}{x^2+y^2}\,dy\,dx\) equals'
+    A: '\(\tan^{-1}{\left(2 \right)}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\tan^{-1}{\left(\frac{1}{2} \right)}\)'
+    D: '\(\frac{\pi}{4}\)'
+    answer: C
+    hint: 'In polar form: \(0\le\theta\le\tan^{-1}\tfrac12\), \(0\le r\le\sec\theta\).'
+    explanation: '\(\int_0^{\tan^{-1}(1/2)}\cos\theta\sec\theta\,d\theta=\tan^{-1}\tfrac12\).'
+  182:
+    topic: s15-4
+    question: 'The volume of the tetrahedron in the first octant bounded by the coordinate planes and \(x+y+z=1\) is'
+    A: '\(\frac{7}{6}\)'
+    B: '\(\frac{1}{12}\)'
+    C: '\(\frac{1}{6}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: C
+    hint: 'Set up \(V=\iiint dV\) with suitable limits (or use known formulas).'
+    explanation: Integrate and check the geometry.
+  183:
+    topic: s15-4
+    question: 'The volume of the rectangular solid in the first octant bounded by the coordinate planes and \(x=1\), \(y=2\), \(z=3\) is'
+    A: '\(7\)'
+    B: '\(12\)'
+    C: '\(3.0\)'
+    D: '\(6\)'
+    answer: D
+    hint: 'Set up \(V=\iiint dV\) with suitable limits (or use known formulas).'
+    explanation: Integrate and check the geometry.
+  184:
+    topic: s15-4
+    question: 'The volume of the tetrahedron cut from the first octant by the plane \(6x+3y+2z=6\) is'
+    A: '\(0.5\)'
+    B: '\(1\)'
+    C: '\(3\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Set up \(V=\iiint dV\) with suitable limits (or use known formulas).'
+    explanation: Integrate and check the geometry.
+  185:
+    topic: s15-4
+    question: 'The volume of the solid in the first octant bounded by \(x^2+z^2=4\) and \(y=3\) is'
+    A: '\(6 \pi\)'
+    B: '\(3 \pi\)'
+    C: '\(1 + 3 \pi\)'
+    D: '\(\frac{3 \pi}{2}\)'
+    answer: B
+    hint: 'Set up \(V=\iiint dV\) with suitable limits (or use known formulas).'
+    explanation: Integrate and check the geometry.
+  186:
+    topic: s15-4
+    question: 'The volume of the region bounded by the paraboloids \(z=8-x^2-y^2\) and \(z=x^2+y^2\) is'
+    A: '\(32 \pi\)'
+    B: '\(8 \pi\)'
+    C: '\(1 + 16 \pi\)'
+    D: '\(16 \pi\)'
+    answer: D
+    hint: 'Set up \(V=\iiint dV\) with suitable limits (or use known formulas).'
+    explanation: Integrate and check the geometry.
+  187:
+    topic: s15-4
+    question: 'The volume of the region inside \(z=x^2+y^2\) below the plane \(z=2y\) is'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(1 + \frac{\pi}{2}\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(\pi\)'
+    answer: C
+    hint: 'Set up \(V=\iiint dV\) with suitable limits (or use known formulas).'
+    explanation: Integrate and check the geometry.
+  188:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^1\int_0^1(x^2+y^2+z^2)\,dz\,dy\,dx\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(-1\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  189:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_1^e\int_1^e\int_1^e\frac1{xyz}\,dx\,dy\,dz\).'
+    A: '\(2\)'
+    B: '\(1\)'
+    C: '\(-1\)'
+    D: '\(\frac{1}{2}\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  190:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^{3-3x}\int_0^{3-3x-y}dz\,dy\,dx\).'
+    A: '\(3\)'
+    B: '\(\frac{5}{2}\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(- \frac{3}{2}\)'
+    answer: C
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  191:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^\pi\int_0^\pi\int_0^\pi y\sin z\,dx\,dy\,dz\).'
+    A: '\(- \pi^{3}\)'
+    B: '\(\pi^{3}\)'
+    C: '\(2 \pi^{3}\)'
+    D: '\(1 + \pi^{3}\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  192:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_{-1}^1\int_{-1}^1\int_{-1}^1(x+y+z)\,dy\,dx\,dz\).'
+    A: '\(2\)'
+    B: '\(3\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: C
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  193:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^3\int_0^{\sqrt{9-x^2}}\int_0^{\sqrt{9-x^2}}dz\,dy\,dx\).'
+    A: '\(19\)'
+    B: '\(36\)'
+    C: '\(18\)'
+    D: '\(-18\)'
+    answer: C
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  194:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^2\int_{-\sqrt{4-y^2}}^{\sqrt{4-y^2}}\int_0^{2x+y}dz\,dx\,dy\).'
+    A: '\(\frac{32}{3}\)'
+    B: '\(\frac{16}{3}\)'
+    C: '\(\frac{19}{3}\)'
+    D: '\(- \frac{16}{3}\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  195:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^{2-x}\int_0^{2-x-y}dz\,dy\,dx\).'
+    A: '\(- \frac{7}{6}\)'
+    B: '\(\frac{7}{6}\)'
+    C: '\(\frac{7}{3}\)'
+    D: '\(\frac{13}{6}\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  196:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^{1-x^2}\int_3^{4-x^2-y}x\,dz\,dy\,dx\).'
+    A: '\(- \frac{1}{12}\)'
+    B: '\(\frac{13}{12}\)'
+    C: '\(\frac{1}{12}\)'
+    D: '\(\frac{1}{6}\)'
+    answer: C
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  197:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^\pi\int_0^\pi\int_0^\pi\cos(u+v+w)\,du\,dv\,dw\).'
+    A: '\(1\)'
+    B: '\(3\)'
+    C: '\(2\)'
+    D: '\(0\)'
+    answer: D
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  198:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^7\int_0^2\int_0^{\sqrt{4-q^2}}\frac q{r+1}\,dp\,dq\,dr\).'
+    A: '\(1 + 8 \ln{\left(2 \right)}\)'
+    B: '\(8 \ln{\left(2 \right)}\)'
+    C: '\(16 \ln{\left(2 \right)}\)'
+    D: '\(- 8 \ln{\left(2 \right)}\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  199:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_1^e\int_1^e\int_1^e\ln r\ln s\ln t\,dt\,dr\,ds\).'
+    A: '\(2\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(-1\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Evaluate each of the three integrals in turn.
+  200:
+    topic: s15-4
+    question: 'The volume of the solid in the first octant bounded by the plane \(6x+3y+2z=6\) is given by \(\displaystyle\int_0^1\int_0^{2-2x}\int_0^{(6-6x-3y)/2}dz\,dy\,dx\). A different order (\(dx\,dy\,dz\)) uses'
+    A: '\(\displaystyle\int_0^3\int_0^{2-2z/3}\int_0^{(6-3y-2z)/3}dx\,dy\,dz\)'
+    B: '\(\displaystyle\int_0^3\int_0^{2-2z}\int_0^{(6-3y-2z)/6}dx\,dy\,dz\)'
+    C: '\(\displaystyle\int_0^1\int_0^{2-2z/3}\int_0^{(6-3y-2z)/6}dx\,dy\,dz\)'
+    D: '\(\displaystyle\int_0^3\int_0^{2-2z/3}\int_0^{(6-3y-2z)/6}dx\,dy\,dz\)'
+    answer: D
+    hint: 'Solve the plane for \(x\); find the ranges of \(y\) and \(z\) in the triangular projection.'
+    explanation: 'The intercepts are \(x=1\), \(y=2\), \(z=3\).'
+  201:
+    topic: s15-4
+    question: 'The volume enclosed between the paraboloids \(z=8-x^2-y^2\) and \(z=x^2+y^2\) projects onto the disk'
+    A: '\(x^2+y^2\le8\)'
+    B: '\(x^2+y^2\le2\)'
+    C: '\(x^2+y^2\le4\)'
+    D: '\(x^2+y^2\le16\)'
+    answer: C
+    hint: 'Set the two heights equal: \(8-r^2=r^2\).'
+    explanation: '\(r^2=4\).'
+  202:
+    topic: s15-4
+    question: 'The region bounded by \(z=x^2+y^2\) and the plane \(z=2y\) projects onto the disk'
+    A: '\(x^2+(y-1)^2\le1\)'
+    B: '\(x^2+y^2\le1\)'
+    C: '\(x^2+(y-1)^2\le2\)'
+    D: '\(x^2+y^2\le2\)'
+    answer: A
+    hint: 'Set \(x^2+y^2=2y\) and complete the square.'
+    explanation: '\(x^2+(y-1)^2=1\).'
+  203:
+    topic: s15-4
+    question: 'In the triple integral \(\displaystyle\int_{-1}^1\int_{x^2}^1\int_0^{1-y}dz\,dy\,dx\), the same region in the order \(dy\,dz\,dx\) is'
+    A: '\(\displaystyle\int_{-1}^1\int_0^{1-x^2}\int_{x^2}^{z}dy\,dz\,dx\)'
+    B: '\(\displaystyle\int_{-1}^1\int_0^{1-x^2}\int_{1-z}^{x^2}dy\,dz\,dx\)'
+    C: '\(\displaystyle\int_{-1}^1\int_0^{1}\int_{x^2}^{1-z}dy\,dz\,dx\)'
+    D: '\(\displaystyle\int_{-1}^1\int_0^{1-x^2}\int_{x^2}^{1-z}dy\,dz\,dx\)'
+    answer: D
+    hint: 'For fixed \(x\) and \(z\), \(y\) runs from \(x^2\) up to the top plane \(y+z=1\).'
+    explanation: '\(z\) ranges from \(0\) to \(1-x^2\).'
+  204:
+    topic: s15-4
+    question: 'The volume of the region between the cylinder \(z=y^2\) and the \(xy\)-plane bounded by \(x=0\), \(x=1\), \(y=-1\), \(y=1\) is'
+    A: '\(\frac{2}{3}\)'
+    B: '\(\frac{5}{3}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(\frac{4}{3}\)'
+    answer: A
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  205:
+    topic: s15-4
+    question: 'The volume of the first-octant region bounded by the coordinate planes and the planes \(x+z=1\), \(y+2z=2\) is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{5}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: C
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  206:
+    topic: s15-4
+    question: 'The volume of the first-octant region bounded by the coordinate planes, \(y+z=2\) and \(x=4-y^2\) is'
+    A: '\(\frac{10}{3}\)'
+    B: '\(\frac{40}{3}\)'
+    C: '\(\frac{20}{3}\)'
+    D: '\(\frac{23}{3}\)'
+    answer: C
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  207:
+    topic: s15-4
+    question: 'The volume of the wedge cut from the cylinder \(x^2+y^2=1\) by the planes \(z=-y\) and \(z=0\) is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{2}{3}\)'
+    C: '\(\frac{5}{3}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: B
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  208:
+    topic: s15-4
+    question: 'The volume of the tetrahedron in the first octant bounded by the coordinate planes and the plane through \((1,0,0)\), \((0,2,0)\), \((0,0,3)\) is'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(0.5\)'
+    answer: B
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  209:
+    topic: s15-4
+    question: 'The volume of the region common to the interiors of the cylinders \(x^2+y^2=1\) and \(x^2+z^2=1\) is'
+    A: '\(\frac{16}{3}\)'
+    B: '\(\frac{8}{3}\)'
+    C: '\(\frac{32}{3}\)'
+    D: '\(\frac{19}{3}\)'
+    answer: A
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  210:
+    topic: s15-4
+    question: 'The volume of the region cut from the cylinder \(x^2+y^2=4\) by the plane \(z=0\) and the plane \(x+z=3\) is'
+    A: '\(12 \pi\)'
+    B: '\(1 + 12 \pi\)'
+    C: '\(24 \pi\)'
+    D: '\(6 \pi\)'
+    answer: A
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  211:
+    topic: s15-4
+    question: 'The volume of the region cut from the solid elliptical cylinder \(x^2+4y^2\le4\) by the \(xy\)-plane and \(z=x+2\) is'
+    A: '\(4 \pi\)'
+    B: '\(2 \pi\)'
+    C: '\(8 \pi\)'
+    D: '\(1 + 4 \pi\)'
+    answer: A
+    hint: Sketch the solid and choose a convenient order of integration.
+    explanation: Integrate the height over the base region.
+  212:
+    topic: s15-4
+    question: 'The volume of the first-octant region bounded by the coordinate planes, \(y=1-x\), and \(z=\cos(\pi x/2)\), \(0\le x\le1\), is'
+    A: '\(\frac{2}{\pi^{2}}\)'
+    B: '\(\frac{2}{\pi}\)'
+    C: '\(\frac{4}{\pi^{2}}\)'
+    D: '\(\frac{8}{\pi^{2}}\)'
+    answer: C
+    hint: '\(V=\int_0^1(1-x)\cos(\pi x/2)\,dx\).'
+    explanation: Integrate by parts.
+  213:
+    topic: s15-4
+    question: 'The volume of the first-octant region bounded by the coordinate planes and \(z=4-x^2-y\) is'
+    A: '\(\frac{128}{15}\)'
+    B: '\(\frac{64}{15}\)'
+    C: '\(\frac{256}{15}\)'
+    D: '\(\frac{143}{15}\)'
+    answer: A
+    hint: 'The base is \(0\le x\le2\), \(0\le y\le4-x^2\).'
+    explanation: '\(\int_0^2\tfrac12(4-x^2)^2dx\).'
+  214:
+    topic: s15-4
+    question: 'The volume of the first-octant region bounded by the coordinate planes, \(x+y=4\), and the cylinder \(y^2+4z^2=16\) is'
+    A: '\(- \frac{32}{3} + 8 \pi\)'
+    B: '\(- \frac{64}{3} + 16 \pi\)'
+    C: '\(- \frac{29}{3} + 8 \pi\)'
+    D: '\(- \frac{16}{3} + 4 \pi\)'
+    answer: A
+    hint: '\(z\) runs from \(0\) to \(\tfrac12\sqrt{16-y^2}\); \(x\) from \(0\) to \(4-y\).'
+    explanation: '\(\int_0^4\tfrac12(4-y)\sqrt{16-y^2}\,dy\).'
+  215:
+    topic: s15-4
+    question: 'The average value of \(F(x,y,z)=x^2+9\) over the cube in the first octant bounded by the coordinate planes and \(x=2\), \(y=2\), \(z=2\) is'
+    A: '\(\frac{35}{3}\)'
+    B: '\(9\)'
+    C: '\(\frac{28}{3}\)'
+    D: '\(\frac{31}{3}\)'
+    answer: D
+    hint: 'The average of \(x^2\) over \([0,2]\) is \(\tfrac43\).'
+    explanation: '\(\tfrac43+9=\tfrac{31}3\).'
+  216:
+    topic: s15-4
+    question: 'The average value of \(F(x,y,z)=x+y-z\) over the box \(0\le x\le1\), \(0\le y\le1\), \(0\le z\le2\) is'
+    A: '\(0\)'
+    B: '\(-1\)'
+    C: '\(1\)'
+    D: '\(\frac{1}{2}\)'
+    answer: A
+    hint: 'Average the three terms separately: \(\tfrac12+\tfrac12-1\).'
+    explanation: 'The mean of \(z\) over \([0,2]\) is \(1\).'
+  217:
+    topic: s15-4
+    question: 'The average value of \(F(x,y,z)=x^2+y^2+z^2\) over the unit cube \(0\le x,y,z\le1\) is'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(3\)'
+    D: '\(\frac{1}{3}\)'
+    answer: A
+    hint: 'Each of \(x^2,y^2,z^2\) has average \(\tfrac13\).'
+    explanation: '\(3\cdot\tfrac13=1\).'
+  218:
+    topic: s15-4
+    question: 'The average value of \(F(x,y,z)=xyz\) over the cube \(0\le x,y,z\le2\) is'
+    A: '\(\frac{1}{8}\)'
+    B: '\(2\)'
+    C: '\(8\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'The integral separates: each factor averages to \(1\).'
+    explanation: '\(1\cdot1\cdot1=1\).'
+  219:
+    topic: s15-4
+    question: 'Evaluate \(\displaystyle\int_0^4\int_0^1\int_{2y}^2\frac{4\cos(x^2)}{2\sqrt z}\,dx\,dy\,dz\) by changing the order of integration.'
+    A: '\(4 \sin{\left(4 \right)}\)'
+    B: '\(2 \sin{\left(4 \right)}\)'
+    C: '\(\sin{\left(4 \right)}\)'
+    D: '\(\sin{\left(2 \right)}\)'
+    answer: B
+    hint: 'Integrate in \(y\) first (\(0\le y\le x/2\)), then \(x\), then \(z\).'
+    explanation: '\(\int_0^4\tfrac{dz}{2\sqrt z}\cdot\int_0^22x\cos(x^2)dx=2\sin4\).'
+  220:
+    topic: s15-4
+    question: '\(\displaystyle\int_0^1\int_0^1\int_{x^2}^1 12xze^{zy^2}\,dy\,dx\,dz\) equals'
+    A: '\(-3 + \frac{3 e}{2}\)'
+    B: '\(-12 + 6 e\)'
+    C: '\(-6 + 3 e\)'
+    D: '\(-5 + 3 e\)'
+    answer: C
+    hint: 'Change the order so that \(z\) is integrated first, or \(x\) first.'
+    explanation: 'Integrate in \(x\) first (\(0\le x\le\sqrt y\)), which turns \(12xze^{zy^2}\) into \(6yze^{zy^2}\); then integrate in \(z\) and \(y\).'
+  221:
+    topic: s15-4
+    question: '\(\displaystyle\int_0^1\int_{\sqrt[3]z}^1\int_0^{\ln3}\frac{\pi e^{2x}\sin\pi y^2}{y^2}\,dx\,dy\,dz\) equals'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(8\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'Integrate over \(z\) first: \(0\le z\le y^3\).'
+    explanation: '\(\int_0^{\ln3}e^{2x}dx=4\) and \(\int_0^1\pi y\sin\pi y^2dy=1\).'
+  222:
+    topic: s15-4
+    question: '\(\displaystyle\int_0^2\int_0^{4-x^2}\int_0^x\frac{\sin2z}{4-z}\,dy\,dz\,dx\) equals'
+    A: '\(\frac{1}{4} - \frac{\cos{\left(8 \right)}}{4}\)'
+    B: '\(\frac{\cos{\left(8 \right)}}{4} + \frac{1}{4}\)'
+    C: '\(\frac{\sin{\left(8 \right)}}{4}\)'
+    D: '\(\frac{1}{2} - \frac{\cos{\left(8 \right)}}{2}\)'
+    answer: A
+    hint: 'The region is \(0\le y\le x\), \(0\le z\le4-x^2\); integrate in \(x\) first.'
+    explanation: '\(\int_0^4\tfrac12\sin2z\,dz=\tfrac{1-\cos8}4\).'
+  223:
+    topic: s15-4
+    question: 'The value of \(a\) for which \(\displaystyle\int_0^1\int_0^{4-a-x^2}\int_a^{4-x^2-y}dz\,dy\,dx=\dfrac4{15}\) is'
+    A: '\(a=4\)'
+    B: '\(a=2\)'
+    C: '\(a=3\)'
+    D: '\(a=1\)'
+    answer: C
+    hint: 'The integral is \(\tfrac12\int_0^1(4-a-x^2)^2dx\).'
+    explanation: 'At \(a=3\): \(\tfrac12\int_0^1(1-x^2)^2dx=\tfrac4{15}\).'
+  224:
+    topic: s15-4
+    question: 'The volume of the ellipsoid \(x^2+(y/2)^2+(z/c)^2=1\) equals \(8\pi\) when \(c=\)'
+    A: '\(6\)'
+    B: '\(3\)'
+    C: '\(4\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'The volume of an ellipsoid with semi-axes \(a,b,c\) is \(\tfrac43\pi abc\).'
+    explanation: '\(\tfrac43\pi(1)(2)c=8\pi\Rightarrow c=3\).'
+  225:
+    topic: s15-4
+    question: 'The domain \(D\) that minimizes \(\displaystyle\iiint_D(4x^2+4y^2+z^2-4)\,dV\) is'
+    A: 'the solid ellipsoid \(4x^2+4y^2+z^2\le4\)'
+    B: 'the solid ball of radius \(2\)'
+    C: 'the cube \(|x|,|y|,|z|\le1\)'
+    D: all of space
+    answer: A
+    hint: Include exactly the points where the integrand is negative.
+    explanation: The integrand is negative inside the ellipsoid.
+  226:
+    topic: s15-4
+    question: 'The domain \(D\) that maximizes \(\displaystyle\iiint_D(1-x^2-y^2-z^2)\,dV\) is'
+    A: 'the ball of radius \(2\)'
+    B: all of space
+    C: 'the unit ball \(x^2+y^2+z^2\le1\)'
+    D: the unit cube
+    answer: C
+    hint: Include exactly the points where the integrand is positive.
+    explanation: The integrand is positive inside the unit sphere.
+  227:
+    topic: s15-4
+    question: 'The integral of \(F=x^2y^2z\) over the solid cylinder \(x^2+y^2\le1\), \(0\le z\le1\), is'
+    A: '\(\frac{\pi}{96}\)'
+    B: '\(\frac{\pi}{24}\)'
+    C: '\(\frac{\pi}{48}\)'
+    D: '\(\frac{\pi}{12}\)'
+    answer: C
+    hint: '\(\iint x^2y^2dA=\int_0^{2\pi}\cos^2\theta\sin^2\theta\,d\theta\int_0^1r^5dr=\tfrac\pi4\cdot\tfrac16\); then multiply by \(\int_0^1z\,dz=\tfrac12\).'
+    explanation: '\(\tfrac\pi{24}\cdot\tfrac12=\tfrac\pi{48}\).'
+  228:
+    topic: s15-4
+    question: 'The integral of \(F=|xyz|\) over the solid bounded below by \(z=x^2+y^2\) and above by \(z=1\) is'
+    A: '\(\frac{1}{4}\)'
+    B: '\(\frac{1}{8}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(\frac{1}{16}\)'
+    answer: B
+    hint: 'Use cylindrical coordinates: \(\int_0^{2\pi}|\cos\theta\sin\theta|d\theta=2\).'
+    explanation: '\(2\int_0^1r^3\cdot\tfrac{1-r^4}2dr=\tfrac18\).'
+  229:
+    topic: s15-4
+    question: 'The integral of \(F=\dfrac z{(x^2+y^2+z^2)^{3/2}}\) over the solid bounded below by the cone \(z=\sqrt{x^2+y^2}\) and above by \(z=1\) is'
+    A: '\(2 \pi\)'
+    B: '\(\sqrt{2} \pi\)'
+    C: '\(\pi \left(2 - \sqrt{2}\right)\)'
+    D: '\(\frac{\pi \left(2 - \sqrt{2}\right)}{2}\)'
+    answer: C
+    hint: 'In spherical coordinates \(F\,dV=\cos\varphi\sin\varphi\,d\rho\,d\varphi\,d\theta\) with \(\rho\le\sec\varphi\).'
+    explanation: '\(2\pi\int_0^{\pi/4}\sin\varphi\,d\varphi=\pi(2-\sqrt2)\).'
+  230:
+    topic: s15-4
+    question: 'The integral of \(F=x^4+y^2+z^2\) over the unit ball \(x^2+y^2+z^2\le1\) is'
+    A: '\(\frac{34 \pi}{105}\)'
+    B: '\(\frac{4 \pi}{3}\)'
+    C: '\(\frac{68 \pi}{105}\)'
+    D: '\(\frac{136 \pi}{105}\)'
+    answer: C
+    hint: Use spherical coordinates and symmetry.
+    explanation: '\(\iiint x^4=\tfrac{4\pi}{35}\), and \(\iiint(y^2+z^2)=\tfrac{8\pi}{15}\).'
+  231:
+    topic: s15-4
+    question: 'To integrate \(F(x,y,z)\) over a solid \(D\), the volume of \(D\) is obtained by taking \(F=\)'
+    A: '\(x+y+z\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(\rho\)'
+    answer: C
+    hint: 'The triple integral of \(1\) gives volume.'
+    explanation: '\(V=\iiint_D1\,dV\).'
+  232:
+    topic: s15-4
+    question: 'The six possible orders for a triple integral \(\iiint dV\) over a rectangular box are'
+    A: different in general
+    B: "all equivalent, by Fubini's theorem, when the integrand is continuous"
+    C: equal only for polynomial integrands
+    D: equal only when the box is a cube
+    answer: B
+    hint: "Think of Fubini's theorem in three variables."
+    explanation: The limits are constants, so the order does not matter.
+  233:
+    topic: s15-5
+    question: 'A solid rectangular box of constant density \(\delta=1\) occupies \(0\le x\le a\), \(0\le y\le b\), \(0\le z\le c\). The moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{a b c \left(b^{2} + c^{2}\right)}{12}\)'
+    B: '\(\frac{a b c \left(b + c\right)}{3}\)'
+    C: '\(\frac{a b c \left(b^{2} + c^{2}\right)}{3}\)'
+    D: '\(\frac{a b c \left(a^{2} + b^{2}\right)}{3}\)'
+    answer: C
+    hint: '\(I_x=\iiint(\text{distance to the axis})^2dV\).'
+    explanation: Integrate the sum of squares of the other two coordinates.
+  234:
+    topic: s15-5
+    question: 'A solid rectangular box of constant density \(\delta=1\) occupies \(0\le x\le a\), \(0\le y\le b\), \(0\le z\le c\). The moment of inertia about the \(y\)-axis is'
+    A: '\(\frac{a b c \left(a + c\right)}{3}\)'
+    B: '\(\frac{a b c \left(a^{2} + c^{2}\right)}{12}\)'
+    C: '\(\frac{a b c \left(a^{2} + c^{2}\right)}{3}\)'
+    D: '\(\frac{a b c \left(a^{2} + b^{2}\right)}{3}\)'
+    answer: C
+    hint: '\(I_y=\iiint(\text{distance to the axis})^2dV\).'
+    explanation: Integrate the sum of squares of the other two coordinates.
+  235:
+    topic: s15-5
+    question: 'A solid rectangular box of constant density \(\delta=1\) occupies \(0\le x\le a\), \(0\le y\le b\), \(0\le z\le c\). The moment of inertia about the \(z\)-axis is'
+    A: '\(\frac{a b c \left(a^{2} + b^{2}\right)}{12}\)'
+    B: '\(\frac{a b c \left(a^{2} + b^{2}\right)}{3}\)'
+    C: '\(\frac{a b c \left(a^{2} + c^{2}\right)}{3}\)'
+    D: '\(\frac{a b c \left(a + b\right)}{3}\)'
+    answer: B
+    hint: '\(I_z=\iiint(\text{distance to the axis})^2dV\).'
+    explanation: Integrate the sum of squares of the other two coordinates.
+  236:
+    topic: s15-5
+    question: 'The tetrahedron with vertices \((0,0,0)\), \((1,0,0)\), \((0,1,0)\), \((0,0,1)\) (density \(\delta=1\)) has moment of inertia \(I_x\) equal to'
+    A: '\(\frac{1}{15}\)'
+    B: '\(\frac{1}{60}\)'
+    C: '\(\frac{1}{6}\)'
+    D: '\(\frac{1}{30}\)'
+    answer: D
+    hint: '\(I_x=\iiint(y^2+z^2)dV\) over \(x+y+z\le1\).'
+    explanation: 'By symmetry \(\iiint y^2dV=\iiint z^2dV=\tfrac1{60}\).'
+  237:
+    topic: s15-5
+    question: 'The tetrahedron with vertices \((0,0,0)\), \((1,0,0)\), \((0,1,0)\), \((0,0,1)\) (density \(1\)) has radius of gyration about the \(x\)-axis'
+    A: '\(\frac{\sqrt{2}}{4}\)'
+    B: '\(\frac{1}{5}\)'
+    C: '\(\frac{1}{30}\)'
+    D: '\(\frac{\sqrt{5}}{5}\)'
+    answer: D
+    hint: '\(R_x=\sqrt{I_x/M}\) with \(M=\tfrac16\).'
+    explanation: '\(\sqrt{\tfrac{1/30}{1/6}}=\tfrac1{\sqrt5}\approx0.447\), larger than the centroid''s distance \(\tfrac{\sqrt2}4\approx0.354\) to the \(x\)-axis.'
+  238:
+    topic: s15-5
+    question: 'The centroid of the tetrahedron with vertices \((0,0,0)\), \((1,0,0)\), \((0,1,0)\), \((0,0,1)\) is'
+    A: '\(\left(\tfrac12,\tfrac12,\tfrac12\right)\)'
+    B: '\(\left(\tfrac13,\tfrac13,\tfrac13\right)\)'
+    C: '\(\left(\tfrac14,\tfrac14,\tfrac14\right)\)'
+    D: '\(\left(\tfrac16,\tfrac16,\tfrac16\right)\)'
+    answer: C
+    hint: The centroid of a tetrahedron is the average of its four vertices.
+    explanation: '\(\tfrac14(0+1+0+0)\) in each coordinate.'
+  239:
+    topic: s15-5
+    question: 'A trough of constant density \(1\) is bounded below by \(z=4y^2\), above by \(z=4\), and on the ends by \(x=\pm1\). Its center of mass is'
+    A: '\(\left(0,0,\tfrac{12}5\right)\)'
+    B: '\(\left(0,0,2\right)\)'
+    C: '\(\left(0,0,\tfrac{16}5\right)\)'
+    D: '\(\left(0,0,\tfrac85\right)\)'
+    answer: A
+    hint: 'By symmetry \(\bar x=\bar y=0\); \(\bar z=M_{xy}/M\).'
+    explanation: '\(M=\tfrac{32}3\), \(M_{xy}=\tfrac{128}5\).'
+  240:
+    topic: s15-5
+    question: 'For the trough \(4y^2\le z\le4\), \(-1\le x\le1\) (density \(1\)), the moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{7904}{105}\)'
+    B: '\(\frac{15808}{105}\)'
+    C: '\(\frac{8009}{105}\)'
+    D: '\(\frac{3952}{105}\)'
+    answer: A
+    hint: '\(I_x=\iiint(\text{sum of squares of the other two coordinates})dV\).'
+    explanation: 'Integrate over \(-1\le x,y\le1\), \(4y^2\le z\le4\).'
+  241:
+    topic: s15-5
+    question: 'For the trough \(4y^2\le z\le4\), \(-1\le x\le1\) (density \(1\)), the moment of inertia about the \(y\)-axis is'
+    A: '\(\frac{9664}{63}\)'
+    B: '\(\frac{2416}{63}\)'
+    C: '\(\frac{4895}{63}\)'
+    D: '\(\frac{4832}{63}\)'
+    answer: D
+    hint: '\(I_y=\iiint(\text{sum of squares of the other two coordinates})dV\).'
+    explanation: 'Integrate over \(-1\le x,y\le1\), \(4y^2\le z\le4\).'
+  242:
+    topic: s15-5
+    question: 'For the trough \(4y^2\le z\le4\), \(-1\le x\le1\) (density \(1\)), the moment of inertia about the \(z\)-axis is'
+    A: '\(\frac{512}{45}\)'
+    B: '\(\frac{256}{45}\)'
+    C: '\(\frac{301}{45}\)'
+    D: '\(\frac{128}{45}\)'
+    answer: B
+    hint: '\(I_z=\iiint(\text{sum of squares of the other two coordinates})dV\).'
+    explanation: 'Integrate over \(-1\le x,y\le1\), \(4y^2\le z\le4\).'
+  243:
+    topic: s15-5
+    question: 'The solid bounded below by the paraboloid \(z=x^2+y^2\) and above by \(z=4\) (constant density) has center of mass'
+    A: '\(\left(0,0,3\right)\)'
+    B: '\(\left(0,0,\tfrac{10}3\right)\)'
+    C: '\(\left(0,0,\tfrac83\right)\)'
+    D: '\(\left(0,0,2\right)\)'
+    answer: C
+    hint: 'By symmetry \(\bar x=\bar y=0\); \(\bar z=\iiint z\,dV/V\).'
+    explanation: '\(V=8\pi\), \(\iiint z\,dV=\tfrac{64\pi}3\).'
+  244:
+    topic: s15-5
+    question: 'The plane \(z=c\) divides the solid between \(z=x^2+y^2\) and \(z=4\) into two parts of equal volume when \(c=\)'
+    A: '\(2\)'
+    B: '\(\sqrt2\)'
+    C: '\(2\sqrt2\)'
+    D: '\(\tfrac83\)'
+    answer: C
+    hint: 'The part above \(z=c\) has volume \(\tfrac\pi2(16-c^2)\); the total is \(8\pi\).'
+    explanation: '\(\tfrac\pi2(16-c^2)=4\pi\Rightarrow c^2=8\).'
+  245:
+    topic: s15-5
+    question: 'The solid cube bounded by \(x=\pm1\), \(z=\pm1\), \(y=3\), \(y=5\) (density \(1\)) has center of mass'
+    A: '\((0,4,1)\)'
+    B: '\((0,4,0)\)'
+    C: '\((0,3,0)\)'
+    D: '\((0,5,0)\)'
+    answer: B
+    hint: It is the geometric center of the cube.
+    explanation: 'The midpoint of \(y\in[3,5]\) is \(4\).'
+  246:
+    topic: s15-5
+    question: 'For the cube \(|x|\le1\), \(|z|\le1\), \(3\le y\le5\) (density \(1\)), the moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{400}{3}\)'
+    B: '\(\frac{200}{3}\)'
+    C: '\(\frac{403}{3}\)'
+    D: '\(\frac{800}{3}\)'
+    answer: A
+    hint: '\(I_x\) integrates the sum of squares of the other two coordinates.'
+    explanation: Integrate over the cube.
+  247:
+    topic: s15-5
+    question: 'For the cube \(|x|\le1\), \(|z|\le1\), \(3\le y\le5\) (density \(1\)), the moment of inertia about the \(y\)-axis is'
+    A: '\(\frac{8}{3}\)'
+    B: '\(\frac{16}{3}\)'
+    C: '\(\frac{19}{3}\)'
+    D: '\(\frac{32}{3}\)'
+    answer: B
+    hint: '\(I_y\) integrates the sum of squares of the other two coordinates.'
+    explanation: Integrate over the cube.
+  248:
+    topic: s15-5
+    question: 'For the cube \(|x|\le1\), \(|z|\le1\), \(3\le y\le5\) (density \(1\)), the moment of inertia about the \(z\)-axis is'
+    A: '\(\frac{800}{3}\)'
+    B: '\(\frac{400}{3}\)'
+    C: '\(\frac{200}{3}\)'
+    D: '\(\frac{403}{3}\)'
+    answer: B
+    hint: '\(I_z\) integrates the sum of squares of the other two coordinates.'
+    explanation: Integrate over the cube.
+  249:
+    topic: s15-5
+    question: 'For that cube, the radius of gyration about the \(y\)-axis is'
+    A: '\(\frac{\sqrt{6}}{3} + 1\)'
+    B: '\(\frac{4 \sqrt{3}}{3}\)'
+    C: '\(\frac{\sqrt{6}}{3}\)'
+    D: '\(\frac{2}{3}\)'
+    answer: C
+    hint: '\(R_y=\sqrt{I_y/M}\) with \(M=8\).'
+    explanation: '\(I_y=\tfrac{32}3\).'
+  250:
+    topic: s15-5
+    question: 'The first-octant solid bounded by the coordinate planes and \(x+y+z=2\) has density \(\delta=2x\). Its mass is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{7}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(\frac{2}{3}\)'
+    answer: A
+    hint: '\(M=\iiint2x\,dV\).'
+    explanation: 'Integrate \(2x\) over the tetrahedron.'
+  251:
+    topic: s15-5
+    question: 'For that solid (density \(\delta=2x\)), the center of mass is'
+    A: '\(\left(\frac{2}{5},\frac{4}{5},\frac{2}{5}\right)\)'
+    B: '\(\left(\frac{4}{5},\frac{2}{5},\frac{2}{5}\right)\)'
+    C: '\(\left(1,\frac{2}{5},\frac{2}{5}\right)\)'
+    D: '\(\left(\tfrac12,\tfrac12,\tfrac12\right)\)'
+    answer: B
+    hint: '\(\bar x=\iiint x\delta\,dV/M\), etc.'
+    explanation: Compute the three first moments.
+  252:
+    topic: s15-5
+    question: 'A cube \(0\le x,y,z\le1\) has density \(\delta=x+y+z+1\). Its mass is'
+    A: '\(\frac{5}{2}\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(3\)'
+    answer: A
+    hint: '\(M=\iiint(x+y+z+1)dV\).'
+    explanation: 'Each of \(x,y,z\) averages \(\tfrac12\) over the cube.'
+  253:
+    topic: s15-5
+    question: 'For the cube \(0\le x,y,z\le1\) with density \(x+y+z+1\), the center of mass coordinate \(\bar x\) equals'
+    A: '\(\tfrac{8}{16}\)'
+    B: '\(\tfrac12\)'
+    C: '\(\tfrac{8}{15}\)'
+    D: '\(\tfrac{9}{15}\)'
+    answer: C
+    hint: '\(\bar x=\iiint x\delta\,dV/M\).'
+    explanation: Compute the first moment and divide by the mass.
+  254:
+    topic: s15-5
+    question: 'For that cube, the moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{17}{6}\)'
+    B: '\(\frac{11}{3}\)'
+    C: '\(\frac{11}{6}\)'
+    D: '\(\frac{11}{12}\)'
+    answer: C
+    hint: '\(I_x=\iiint(y^2+z^2)\delta\,dV\).'
+    explanation: Integrate over the unit cube.
+  255:
+    topic: s15-5
+    question: 'The mass of the solid bounded by \(z=16-2x^2-2y^2\) and \(z=2x^2+2y^2\) with density \(\delta=\sqrt{x^2+y^2}\) is'
+    A: '\(\frac{1024 \pi}{15}\)'
+    B: '\(\frac{256 \pi}{15}\)'
+    C: '\(\frac{512 \pi}{15}\)'
+    D: '\(\frac{128 \pi}{5}\)'
+    answer: C
+    hint: 'Use cylindrical coordinates: the surfaces meet at \(r=2\); \(M=\iiint r\cdot r\,dz\,dr\,d\theta\).'
+    explanation: '\(2\pi\int_0^2r^2(16-4r^2)dr=\tfrac{512\pi}{15}\).'
+  256:
+    topic: s15-5
+    question: 'A cubic container \(0\le x,y,z\le1\) is filled with liquid of density \(\delta=x+y+z+1\). The work done by gravity moving the liquid to the \(xy\)-plane is \(g\) times'
+    A: '\(\frac{8}{3}\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(\frac{5}{4}\)'
+    answer: B
+    hint: '\(W=g\iiint z\,\delta\,dV\).'
+    explanation: 'Each small element of weight \(g\delta\,\Delta V\) drops a distance \(z\).'
+  257:
+    topic: s15-5
+    question: 'The work done by gravity in moving the liquid of mass \(M\), with center of mass at height \(\bar z\), down to the \(xy\)-plane equals'
+    A: '\(M\bar z\)'
+    B: '\(Mg\bar z^2\)'
+    C: '\(Mg\bar z\)'
+    D: '\(Mg/\bar z\)'
+    answer: C
+    hint: Work equals the weight times the vertical drop of the center of mass.
+    explanation: '\(g\iiint z\delta\,dV=g\cdot M\bar z\).'
+  258:
+    topic: s15-5
+    question: 'The moment of inertia of a solid sphere of constant density and radius \(a\) about a diameter is \(\tfrac25ma^2\). About a line tangent to the sphere it is'
+    A: '\(\frac{7 a^{2} m}{5}\)'
+    B: '\(\frac{9 a^{2} m}{5}\)'
+    C: '\(\frac{2 a^{2} m}{5}\)'
+    D: '\(\frac{3 a^{2} m}{5}\)'
+    answer: A
+    hint: 'Use the Parallel Axis Theorem with \(h=a\).'
+    explanation: '\(\tfrac25ma^2+ma^2=\tfrac75ma^2\).'
+  259:
+    topic: s15-5
+    question: 'For the rectangular solid \(a\times b\times c\), the moment of inertia about the \(z\)-axis is \(I_z=abc(a^2+b^2)/3\). About the parallel line through the center of mass it is'
+    A: '\(\dfrac{abc(a+b)}{12}\)'
+    B: '\(\dfrac{abc(a^2+b^2)}{4}\)'
+    C: '\(\dfrac{abc(a^2+b^2)}{6}\)'
+    D: '\(\dfrac{abc(a^2+b^2)}{12}\)'
+    answer: D
+    hint: '\(I_{c.m.}=I_z-mh^2\) with \(h^2=\tfrac{a^2+b^2}4\) and \(m=abc\).'
+    explanation: '\(\tfrac13-\tfrac14=\tfrac1{12}\).'
+  260:
+    topic: s15-5
+    question: 'For the rectangular solid \(a\times b\times c\), the radius of gyration about the line through its center of mass parallel to the \(z\)-axis is'
+    A: '\(\dfrac{a+b}{12}\)'
+    B: '\(\sqrt{\dfrac{a^2+b^2}{12}}\)'
+    C: '\(\sqrt{\dfrac{a^2+b^2}{4}}\)'
+    D: '\(\sqrt{\dfrac{a^2+b^2}{3}}\)'
+    answer: B
+    hint: '\(R=\sqrt{I_{c.m.}/m}\).'
+    explanation: '\(I_{c.m.}=abc(a^2+b^2)/12\).'
+  261:
+    topic: s15-5
+    question: 'Suppose a solid right circular cone of base radius \(a\) and altitude \(h\) is built on the base of a solid hemisphere of radius \(a\) (cone vertex up). Using that the cone''s centroid is \(\tfrac14h\) above its base and the hemisphere''s is \(\tfrac38a\) below it, the centroid of the union lies in the common base when'
+    A: '\(h=\sqrt2\,a\)'
+    B: '\(h=\sqrt3\,a\)'
+    C: '\(h=a\)'
+    D: '\(h=2a\)'
+    answer: B
+    hint: 'Balance the first moments: \(\tfrac{\pi a^2h}3\cdot\tfrac h4=\tfrac{2\pi a^3}3\cdot\tfrac{3a}8\).'
+    explanation: '\(\tfrac{h^2}{12}=\tfrac{a^2}4\).'
+  262:
+    topic: s15-5
+    question: 'A solid pyramid with height \(h\) and a square base is built on a face of a solid cube of edge \(s\) (centroid of the pyramid \(\tfrac14h\) above the base). The centroid of the union lies in the common base when'
+    A: '\(h=2s\)'
+    B: '\(h=\sqrt2\,s\)'
+    C: '\(h=\sqrt3\,s\)'
+    D: '\(h=\sqrt6\,s\)'
+    answer: D
+    hint: 'Balance first moments about the base: \(\tfrac{s^2h}3\cdot\tfrac h4=s^3\cdot\tfrac s2\).'
+    explanation: '\(h^2=6s^2\).'
+  263:
+    topic: s15-5
+    question: 'Pappus''s formula in three dimensions for bodies \(B_1,\dots,B_n\) with masses \(m_i\) and centers of mass \(\mathbf c_i\) gives the center of mass of the union as \(\mathbf c=\)'
+    A: '\(\sum m_i\mathbf c_i\)'
+    B: '\(\dfrac{\sum m_i}{\sum\mathbf c_i}\)'
+    C: '\(\dfrac{\sum\mathbf c_i}{n}\)'
+    D: '\(\dfrac{\sum m_i\mathbf c_i}{\sum m_i}\)'
+    answer: D
+    hint: It is the mass-weighted average.
+    explanation: Moments add.
+  264:
+    topic: s15-5
+    question: The first moment of a solid about any plane through its center of mass is
+    A: its mass
+    B: its volume
+    C: its moment of inertia
+    D: zero
+    answer: D
+    hint: 'Put the center of mass at the origin and use \(\bar x=M_{yz}/M\).'
+    explanation: 'Then \(M_{yz}=0\).'
+  265:
+    topic: s15-5
+    question: 'The solid in the first octant bounded by \(y=0\), \(z=0\), \(z=4-x^2\) and \(x=y^2\) has density \(\delta=kxy\). Its mass is'
+    A: '\(\frac{32 k}{15}\)'
+    B: '\(\frac{16 k}{15}\)'
+    C: '\(\frac{16 k}{5}\)'
+    D: '\(\frac{64 k}{15}\)'
+    answer: A
+    hint: 'For fixed \(x\): \(0\le y\le\sqrt x\), \(0\le z\le4-x^2\).'
+    explanation: '\(M=k\int_0^2\tfrac{x^2}2(4-x^2)dx=\tfrac{32k}{15}\).'
+  266:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^1\int_r^{\sqrt{2-r^2}}dz\,r\,dr\,d\theta\).'
+    A: '\(1 - \frac{4 \pi \left(1 - \sqrt{2}\right)}{3}\)'
+    B: '\(\frac{8 \pi \left(-1 + \sqrt{2}\right)}{3}\)'
+    C: '\(\frac{4 \pi \left(-1 + \sqrt{2}\right)}{3}\)'
+    D: '\(\frac{4 \pi \left(1 - \sqrt{2}\right)}{3}\)'
+    answer: C
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  267:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^3\int_{r^2/3}^{\sqrt{18-r^2}}dz\,r\,dr\,d\theta\).'
+    A: '\(1 - \frac{9 \pi \left(7 - 8 \sqrt{2}\right)}{2}\)'
+    B: '\(9 \pi \left(-7 + 8 \sqrt{2}\right)\)'
+    C: '\(\frac{9 \pi \left(7 - 8 \sqrt{2}\right)}{2}\)'
+    D: '\(\frac{9 \pi \left(-7 + 8 \sqrt{2}\right)}{2}\)'
+    answer: D
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  268:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^{\theta/2\pi}\int_0^{3+24r^2}dz\,r\,dr\,d\theta\).'
+    A: '\(1 + 12 \pi\)'
+    B: '\(24 \pi\)'
+    C: '\(12 \pi\)'
+    D: '\(- 12 \pi\)'
+    answer: C
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  269:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^\pi\int_0^{\theta/\pi}\int_{-\sqrt{4-r^2}}^{3\sqrt{4-r^2}}z\,dz\,r\,dr\,d\theta\).'
+    A: '\(1 + \frac{37 \pi}{15}\)'
+    B: '\(\frac{37 \pi}{15}\)'
+    C: '\(\frac{74 \pi}{15}\)'
+    D: '\(- \frac{37 \pi}{15}\)'
+    answer: B
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  270:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^1\int_r^{1/\sqrt{2-r^2}}3\,dz\,r\,dr\,d\theta\).'
+    A: '\(2 \pi \left(4 - 3 \sqrt{2}\right)\)'
+    B: '\(1 - 2 \pi \left(4 - 3 \sqrt{2}\right)\)'
+    C: '\(4 \pi \left(-4 + 3 \sqrt{2}\right)\)'
+    D: '\(2 \pi \left(-4 + 3 \sqrt{2}\right)\)'
+    answer: D
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  271:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^1\int_{-1/2}^{1/2}(r^2\sin^2\theta+z^2)\,dz\,r\,dr\,d\theta\).'
+    A: '\(- \frac{\pi}{3}\)'
+    B: '\(1 + \frac{\pi}{3}\)'
+    C: '\(\frac{\pi}{3}\)'
+    D: '\(\frac{2 \pi}{3}\)'
+    answer: C
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  272:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^3\int_0^{z/3}r^3\,dr\,dz\,d\theta\).'
+    A: '\(\frac{3 \pi}{10}\)'
+    B: '\(\frac{3 \pi}{5}\)'
+    C: '\(\frac{3 \pi}{10} + 1\)'
+    D: '\(- \frac{3 \pi}{10}\)'
+    answer: A
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  273:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_{-1}^1\int_0^{2\pi}\int_0^{1+\cos\theta}4r\,dr\,d\theta\,dz\).'
+    A: '\(12 \pi\)'
+    B: '\(24 \pi\)'
+    C: '\(1 + 12 \pi\)'
+    D: '\(- 12 \pi\)'
+    answer: A
+    hint: 'Integrate in the order given (innermost first); remember the extra factor \(r\) is already in the integrand.'
+    explanation: Evaluate each iterated integral.
+  274:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^{\sqrt z}\int_0^{2\pi}(r^2\cos^2\theta+z^2)\,r\,d\theta\,dr\,dz\).'
+    A: '\(\frac{\pi}{3}\)'
+    B: '\(1 + \frac{\pi}{3}\)'
+    C: '\(\frac{\pi}{6}\)'
+    D: '\(\frac{2 \pi}{3}\)'
+    answer: A
+    hint: 'Integrate over \(\theta\) first: \(\int_0^{2\pi}\cos^2\theta\,d\theta=\pi\).'
+    explanation: 'Then integrate in \(r\) and \(z\).'
+  275:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^2\int_{r-2}^{\sqrt{4-r^2}}\int_0^{2\pi}(r\sin\theta+1)\,r\,d\theta\,dz\,dr\).'
+    A: '\(1 + 8 \pi\)'
+    B: '\(4 \pi\)'
+    C: '\(8 \pi\)'
+    D: '\(16 \pi\)'
+    answer: C
+    hint: 'The \(\sin\theta\) term integrates to zero over a full period.'
+    explanation: 'Remaining: \(2\pi\int_0^2r(\sqrt{4-r^2}-r+2)dr\).'
+  276:
+    topic: s15-6
+    question: 'The volume of the region bounded below by \(z=0\), above by the sphere \(x^2+y^2+z^2=4\), and on the sides by the cylinder \(x^2+y^2=1\) is'
+    A: '\(\frac{4 \pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    B: '\(\frac{\pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    C: '\(\frac{2 \pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    D: '\(\frac{8 \pi}{3}\)'
+    answer: C
+    hint: '\(V=\int_0^{2\pi}\int_0^1\int_0^{\sqrt{4-r^2}}r\,dz\,dr\,d\theta\).'
+    explanation: '\(2\pi\int_0^1r\sqrt{4-r^2}dr=\tfrac{2\pi}3(8-3\sqrt3)\).'
+  277:
+    topic: s15-6
+    question: 'For the region of the previous question, the volume integral in the order \(dr\,dz\,d\theta\) is'
+    A: '\(\displaystyle\int_0^{2\pi}\int_0^{\sqrt3}\int_0^1 dr\,dz\,d\theta\)'
+    B: '\(\displaystyle\int_0^{2\pi}\left[\int_0^{\sqrt3}\int_0^1r\,dr\,dz+\int_{\sqrt3}^2\int_0^{\sqrt{4-z^2}}r\,dr\,dz\right]d\theta\)'
+    C: '\(\displaystyle\int_0^{2\pi}\int_0^{2}\int_0^{1}r\,dr\,dz\,d\theta\)'
+    D: '\(\displaystyle\int_0^{2\pi}\int_0^{\sqrt3}\int_0^{\sqrt{4-z^2}}r\,dr\,dz\,d\theta\)'
+    answer: B
+    hint: 'For \(0\le z\le\sqrt3\) the cylinder \(r=1\) bounds the solid; above \(\sqrt3\) the sphere does.'
+    explanation: 'The sphere meets the cylinder where \(z=\sqrt3\).'
+  278:
+    topic: s15-6
+    question: 'The volume of the region bounded below by the cone \(z=\sqrt{x^2+y^2}\) and above by the paraboloid \(z=2-x^2-y^2\) is'
+    A: '\(\frac{5 \pi}{12}\)'
+    B: '\(\frac{5 \pi}{3}\)'
+    C: '\(\pi\)'
+    D: '\(\frac{5 \pi}{6}\)'
+    answer: D
+    hint: 'The surfaces meet at \(r=1\).'
+    explanation: '\(2\pi\int_0^1r(2-r^2-r)dr=\tfrac{5\pi}6\).'
+  279:
+    topic: s15-6
+    question: 'The limits for \(\displaystyle\iiint f\,dz\,r\,dr\,d\theta\) over the region bounded below by \(z=0\), on the side by \(r=\cos\theta\), and above by \(z=3r^2\) are'
+    A: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{1}\int_0^{3r^2}\)'
+    B: '\(\displaystyle\int_0^{\pi}\int_0^{\cos\theta}\int_0^{3r^2}\)'
+    C: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{\cos\theta}\int_0^{3r^2}\)'
+    D: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{\cos\theta}\int_{3r^2}^{0}\)'
+    answer: C
+    hint: 'The circle \(r=\cos\theta\) is traced for \(-\pi/2\le\theta\le\pi/2\).'
+    explanation: '\(z\) runs from the plane \(z=0\) to the paraboloid.'
+  280:
+    topic: s15-6
+    question: '\(\displaystyle\int_{-1}^1\int_0^{\sqrt{1-y^2}}\int_0^x(x^2+y^2)\,dz\,dx\,dy\) equals'
+    A: '\(\frac{1}{5}\)'
+    B: '\(\frac{2}{5}\)'
+    C: '\(1\)'
+    D: '\(\frac{4}{5}\)'
+    answer: B
+    hint: 'Convert to cylindrical coordinates: \(0\le z\le r\cos\theta\).'
+    explanation: '\(\int_{-\pi/2}^{\pi/2}\int_0^1r^4\cos\theta\,dr\,d\theta=\tfrac25\).'
+  281:
+    topic: s15-6
+    question: 'In cylindrical coordinates, an iterated integral for \(\iiint_Df(r,\theta,z)\,dz\,r\,dr\,d\theta\) where \(D\) is the right circular cylinder whose base is the circle \(r=2\sin\theta\) and whose top lies in the plane \(z=4-y\) is'
+    A: '\(\displaystyle\int_0^\pi\int_0^{2\sin\theta}\int_0^{4}f\,dz\,r\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_0^\pi\int_0^{2\sin\theta}\int_0^{4-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_0^{2\pi}\int_0^{2\sin\theta}\int_0^{4-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_0^\pi\int_0^{2\sin\theta}\int_0^{4-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    answer: D
+    hint: Describe the base in polar coordinates, then the vertical limits.
+    explanation: 'Replace \(x=r\cos\theta\), \(y=r\sin\theta\) in the top plane.'
+  282:
+    topic: s15-6
+    question: 'In cylindrical coordinates, an iterated integral for \(\iiint_Df(r,\theta,z)\,dz\,r\,dr\,d\theta\) where \(D\) is the right circular cylinder whose base is the circle \(r=3\cos\theta\) and whose top lies in the plane \(z=5-x\) is'
+    A: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{3\cos\theta}\int_0^{5-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{3\cos\theta}\int_0^{5}f\,dz\,r\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{3\cos\theta}\int_0^{5-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_{0}^{\pi}\int_0^{3\cos\theta}\int_0^{5-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    answer: C
+    hint: Describe the base in polar coordinates, then the vertical limits.
+    explanation: 'Replace \(x=r\cos\theta\), \(y=r\sin\theta\) in the top plane.'
+  283:
+    topic: s15-6
+    question: 'In cylindrical coordinates, an iterated integral for \(\iiint_Df(r,\theta,z)\,dz\,r\,dr\,d\theta\) where \(D\) is the solid right cylinder whose base lies inside the cardioid \(r=1+\cos\theta\) and outside the circle \(r=1\), with top in the plane \(z=4\) is'
+    A: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_1^{1+\cos\theta}\int_0^4f\,dz\,r\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_{-\pi}^{\pi}\int_1^{1+\cos\theta}\int_0^4f\,dz\,r\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_0^{1+\cos\theta}\int_0^4f\,dz\,r\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_1^{1+\cos\theta}\int_0^{1}f\,dz\,r\,dr\,d\theta\)'
+    answer: A
+    hint: Describe the base in polar coordinates, then the vertical limits.
+    explanation: 'Replace \(x=r\cos\theta\), \(y=r\sin\theta\) in the top plane.'
+  284:
+    topic: s15-6
+    question: 'In cylindrical coordinates, an iterated integral for \(\iiint_Df(r,\theta,z)\,dz\,r\,dr\,d\theta\) where \(D\) is the solid right cylinder whose base lies between the circles \(r=\cos\theta\) and \(r=2\cos\theta\), with top in the plane \(z=3-y\) is'
+    A: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_{0}^{2\cos\theta}\int_0^{3-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_{\cos\theta}^{2\cos\theta}\int_0^{3-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_{0}^{\pi}\int_{\cos\theta}^{2\cos\theta}\int_0^{3-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_{-\pi/2}^{\pi/2}\int_{\cos\theta}^{2\cos\theta}\int_0^{3-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    answer: D
+    hint: Describe the base in polar coordinates, then the vertical limits.
+    explanation: 'Replace \(x=r\cos\theta\), \(y=r\sin\theta\) in the top plane.'
+  285:
+    topic: s15-6
+    question: 'In cylindrical coordinates, an iterated integral for \(\iiint_Df(r,\theta,z)\,dz\,r\,dr\,d\theta\) where \(D\) is the prism whose base is the triangle bounded by the \(x\)-axis, \(y=x\), and \(x=1\), with top in the plane \(z=2-y\) is'
+    A: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{\sec\theta}\int_0^{2-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_0^{\pi/4}\int_0^{\sec\theta}\int_0^{2-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_0^{\pi/4}\int_0^{\csc\theta}\int_0^{2-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_0^{\pi/4}\int_0^{\sec\theta}\int_0^{2-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    answer: B
+    hint: Describe the base in polar coordinates, then the vertical limits.
+    explanation: 'Replace \(x=r\cos\theta\), \(y=r\sin\theta\) in the top plane.'
+  286:
+    topic: s15-6
+    question: 'In cylindrical coordinates, an iterated integral for \(\iiint_Df(r,\theta,z)\,dz\,r\,dr\,d\theta\) where \(D\) is the prism whose base is the triangle bounded by the \(y\)-axis, \(y=x\), and \(y=1\), with top in the plane \(z=2-x\) is'
+    A: '\(\displaystyle\int_0^{\pi/4}\int_0^{\csc\theta}\int_0^{2-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    B: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{\csc\theta}\int_0^{2-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    C: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{\csc\theta}\int_0^{2-r\sin\theta}f\,dz\,r\,dr\,d\theta\)'
+    D: '\(\displaystyle\int_{\pi/4}^{\pi/2}\int_0^{\sec\theta}\int_0^{2-r\cos\theta}f\,dz\,r\,dr\,d\theta\)'
+    answer: B
+    hint: Describe the base in polar coordinates, then the vertical limits.
+    explanation: 'Replace \(x=r\cos\theta\), \(y=r\sin\theta\) in the top plane.'
+  287:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^\pi\int_0^\pi\int_0^{2\sin\phi}\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+    A: '\(1 + \pi^{2}\)'
+    B: '\(\pi^{2}\)'
+    C: '\(2 \pi^{2}\)'
+    D: '\(- \pi^{2}\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  288:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^{\pi/4}\int_0^2(\rho\cos\phi)\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+    A: '\(2 \pi\)'
+    B: '\(1 + 2 \pi\)'
+    C: '\(- 2 \pi\)'
+    D: '\(4 \pi\)'
+    answer: A
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  289:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^\pi\int_0^{(1-\cos\phi)/2}\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+    A: '\(\frac{\pi}{3}\)'
+    B: '\(\frac{2 \pi}{3}\)'
+    C: '\(1 + \frac{\pi}{3}\)'
+    D: '\(- \frac{\pi}{3}\)'
+    answer: A
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  290:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{3\pi/2}\int_0^\pi\int_0^15\rho^3\sin^3\phi\,d\rho\,d\phi\,d\theta\).'
+    A: '\(1 + \frac{5 \pi}{2}\)'
+    B: '\(\frac{5 \pi}{2}\)'
+    C: '\(- \frac{5 \pi}{2}\)'
+    D: '\(5 \pi\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  291:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^{\pi/3}\int_{\sec\phi}^23\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+    A: '\(1 + 5 \pi\)'
+    B: '\(5 \pi\)'
+    C: '\(- 5 \pi\)'
+    D: '\(10 \pi\)'
+    answer: B
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  292:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\int_0^{\pi/4}\int_0^{\sec\phi}(\rho\cos\phi)\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+    A: '\(\frac{\pi}{4} + 1\)'
+    B: '\(- \frac{\pi}{4}\)'
+    C: '\(\frac{\pi}{4}\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: C
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  293:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^2\int_{-\pi}^0\int_{\pi/4}^{\pi/2}\rho^3\sin2\phi\,d\phi\,d\theta\,d\rho\).'
+    A: '\(2 \pi\)'
+    B: '\(4 \pi\)'
+    C: '\(- 2 \pi\)'
+    D: '\(1 + 2 \pi\)'
+    answer: A
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  294:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_{\pi/6}^{\pi/3}\int_{\csc\phi}^{2\csc\phi}\int_0^{2\pi}\rho^2\sin\phi\,d\theta\,d\rho\,d\phi\).'
+    A: '\(- \frac{28 \sqrt{3} \pi}{9}\)'
+    B: '\(\frac{56 \sqrt{3} \pi}{9}\)'
+    C: '\(1 + \frac{28 \sqrt{3} \pi}{9}\)'
+    D: '\(\frac{28 \sqrt{3} \pi}{9}\)'
+    answer: D
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  295:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_0^1\int_0^\pi\int_0^{\pi/4}12\rho\sin^3\phi\,d\phi\,d\theta\,d\rho\).'
+    A: '\(\frac{\pi \left(-8 + 5 \sqrt{2}\right)}{2}\)'
+    B: '\(\pi \left(8 - 5 \sqrt{2}\right)\)'
+    C: '\(1 + \frac{\pi \left(8 - 5 \sqrt{2}\right)}{2}\)'
+    D: '\(\frac{\pi \left(8 - 5 \sqrt{2}\right)}{2}\)'
+    answer: D
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  296:
+    topic: s15-6
+    question: 'Evaluate \(\displaystyle\int_{\pi/6}^{\pi/2}\int_{-\pi/2}^{\pi/2}\int_{\csc\phi}^25\rho^4\sin^3\phi\,d\rho\,d\theta\,d\phi\).'
+    A: '\(11 \sqrt{3} \pi\)'
+    B: '\(22 \sqrt{3} \pi\)'
+    C: '\(- 11 \sqrt{3} \pi\)'
+    D: '\(1 + 11 \sqrt{3} \pi\)'
+    answer: A
+    hint: Integrate the innermost variable first and work outward.
+    explanation: Each limit is a function of the variables outside it.
+  297:
+    topic: s15-6
+    question: 'The volume of the solid between the sphere \(\rho=\cos\phi\) and the hemisphere \(\rho=2\), \(z\ge0\) is'
+    A: '\(\frac{31 \pi}{12}\)'
+    B: '\(1 + \frac{31 \pi}{6}\)'
+    C: '\(\frac{31 \pi}{6}\)'
+    D: '\(\frac{31 \pi}{3}\)'
+    answer: C
+    hint: '\(V=\iiint\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\), \(\cos\phi\le\rho\le2\), \(0\le\phi\le\pi/2\).'
+    explanation: '\(\tfrac{16\pi}3-\tfrac\pi6\).'
+  298:
+    topic: s15-6
+    question: 'The volume of the solid enclosed by the cardioid of revolution \(\rho=1-\cos\phi\) is'
+    A: '\(\frac{4 \pi}{3}\)'
+    B: '\(\frac{16 \pi}{3}\)'
+    C: '\(1 + \frac{8 \pi}{3}\)'
+    D: '\(\frac{8 \pi}{3}\)'
+    answer: D
+    hint: '\(V=2\pi\int_0^\pi\int_0^{1-\cos\phi}\rho^2\sin\phi\,d\rho\,d\phi\).'
+    explanation: '\(\tfrac{2\pi}3\int_0^\pi(1-\cos\phi)^3\sin\phi\,d\phi=\tfrac{2\pi}3\cdot4\).'
+  299:
+    topic: s15-6
+    question: 'The volume of the upper portion (\(z\ge0\)) of the cardioid-of-revolution solid \(\rho=1-\cos\phi\) is'
+    A: '\(\frac{\pi}{3}\)'
+    B: '\(\frac{\pi}{6}\)'
+    C: '\(\frac{\pi}{6} + 1\)'
+    D: '\(\frac{\pi}{12}\)'
+    answer: B
+    hint: '\(0\le\phi\le\pi/2\).'
+    explanation: '\(\tfrac{2\pi}3\cdot\tfrac14=\tfrac\pi6\).'
+  300:
+    topic: s15-6
+    question: 'The volume of the solid bounded below by the \(xy\)-plane, on the sides by the sphere \(\rho=2\), and above by the cone \(\phi=\pi/3\) is'
+    A: '\(\frac{4 \pi}{3}\)'
+    B: '\(\frac{8 \pi}{3}\)'
+    C: '\(\frac{16 \pi}{3}\)'
+    D: '\(1 + \frac{8 \pi}{3}\)'
+    answer: B
+    hint: '\(\pi/3\le\phi\le\pi/2\).'
+    explanation: '\(2\pi\cdot\tfrac83\cdot\tfrac12\).'
+  301:
+    topic: s15-6
+    question: 'The volume of the sphere \(\rho=2\) is'
+    A: '\(1 + \frac{32 \pi}{3}\)'
+    B: '\(\frac{32 \pi}{3}\)'
+    C: '\(\frac{16 \pi}{3}\)'
+    D: '\(\frac{64 \pi}{3}\)'
+    answer: B
+    hint: '\(V=\int_0^{2\pi}\int_0^\pi\int_0^2\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+    explanation: '\(2\pi\cdot2\cdot\tfrac83=\tfrac{32\pi}3\).'
+  302:
+    topic: s15-6
+    question: 'The volume of the part of the first octant that lies above the cone \(\phi=\pi/4\) and inside the sphere \(\rho=3\) is'
+    A: '\(1 + \frac{9 \pi \left(2 - \sqrt{2}\right)}{4}\)'
+    B: '\(\frac{9 \pi \left(2 - \sqrt{2}\right)}{2}\)'
+    C: '\(\frac{9 \pi \left(2 - \sqrt{2}\right)}{4}\)'
+    D: '\(\frac{9 \pi \left(2 - \sqrt{2}\right)}{8}\)'
+    answer: C
+    hint: 'Above the cone means \(0\le\phi\le\pi/4\); the first octant means \(0\le\theta\le\pi/2\).'
+    explanation: '\(\tfrac\pi2\cdot\tfrac{27}3\cdot\left(1-\tfrac{\sqrt2}2\right)=\tfrac94\pi\left(2-\sqrt2\right)\).'
+  303:
+    topic: s15-6
+    question: 'The volume of the smaller cap cut from a solid ball of radius \(2\) by a plane \(1\) unit from the center is'
+    A: '\(1 + \frac{5 \pi}{3}\)'
+    B: '\(\frac{5 \pi}{6}\)'
+    C: '\(\frac{10 \pi}{3}\)'
+    D: '\(\frac{5 \pi}{3}\)'
+    answer: D
+    hint: 'Use the cap formula \(V=\tfrac{\pi h^2(3R-h)}3\) with \(h=1\), \(R=2\).'
+    explanation: '\(\tfrac{\pi(1)(5)}3\).'
+  304:
+    topic: s15-6
+    question: 'The volume of the portion of the solid sphere \(\rho\le a\) between the cones \(\phi=\pi/3\) and \(\phi=2\pi/3\) is'
+    A: '\(\frac{2 \pi a^{3}}{3} + 1\)'
+    B: '\(\frac{2 \pi a^{3}}{3}\)'
+    C: '\(\frac{\pi a^{3}}{3}\)'
+    D: '\(\frac{4 \pi a^{3}}{3}\)'
+    answer: B
+    hint: '\(V=2\pi\cdot\tfrac{a^3}3\int_{\pi/3}^{2\pi/3}\sin\phi\,d\phi\).'
+    explanation: 'The integral is \(1\).'
+  305:
+    topic: s15-6
+    question: 'The volume of the region cut from the solid sphere \(\rho\le a\) by the half-planes \(\theta=0\) and \(\theta=\pi/6\) in the first octant is'
+    A: '\(\frac{\pi a^{3}}{36}\)'
+    B: '\(\frac{\pi a^{3}}{9}\)'
+    C: '\(\frac{\pi a^{3}}{18}\)'
+    D: '\(\frac{\pi a^{3}}{18} + 1\)'
+    answer: C
+    hint: '\(0\le\theta\le\pi/6\), \(0\le\phi\le\pi/2\).'
+    explanation: '\(\tfrac\pi6\cdot\tfrac{a^3}3\cdot1\).'
+  306:
+    topic: s15-6
+    question: 'The volume of the cylinder \(x^2+y^2\le1\) between the plane \(z=0\) and the paraboloid \(z=x^2+y^2\) is'
+    A: '\(\pi\)'
+    B: '\(1 + \frac{\pi}{2}\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(\frac{\pi}{4}\)'
+    answer: C
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  307:
+    topic: s15-6
+    question: 'The volume of the region bounded below by \(z=x^2+y^2\), laterally by \(x^2+y^2=1\), above by \(z=x^2+y^2+1\) is'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(1 + \pi\)'
+    C: '\(\pi\)'
+    D: '\(2 \pi\)'
+    answer: C
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  308:
+    topic: s15-6
+    question: 'The volume of the solid cut from the thick-walled cylinder \(1\le x^2+y^2\le2\) by the cones \(z=\pm\sqrt{x^2+y^2}\) is'
+    A: '\(\frac{56 \pi}{3}\)'
+    B: '\(\frac{28 \pi}{3}\)'
+    C: '\(1 + \frac{28 \pi}{3}\)'
+    D: '\(\frac{14 \pi}{3}\)'
+    answer: B
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  309:
+    topic: s15-6
+    question: 'The volume of the region inside the sphere \(x^2+y^2+z^2=2\) and outside the cylinder \(x^2+y^2=1\) is'
+    A: '\(\frac{2 \pi}{3}\)'
+    B: '\(\frac{8 \pi}{3}\)'
+    C: '\(\frac{4 \pi}{3}\)'
+    D: '\(1 + \frac{4 \pi}{3}\)'
+    answer: C
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  310:
+    topic: s15-6
+    question: 'The volume of the region enclosed by the cylinder \(x^2+y^2=4\) between the planes \(z=0\) and \(y+z=4\) is'
+    A: '\(8 \pi\)'
+    B: '\(32 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(1 + 16 \pi\)'
+    answer: C
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  311:
+    topic: s15-6
+    question: 'The volume of the region bounded above by \(z=5-x^2-y^2\) and below by \(z=4x^2+4y^2\) is'
+    A: '\(\frac{5 \pi}{4}\)'
+    B: '\(1 + \frac{5 \pi}{2}\)'
+    C: '\(\frac{5 \pi}{2}\)'
+    D: '\(5 \pi\)'
+    answer: C
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  312:
+    topic: s15-6
+    question: 'The volume of the region bounded above by \(z=9-x^2-y^2\), below by the \(xy\)-plane, and lying outside the cylinder \(x^2+y^2=1\) is'
+    A: '\(1 + 32 \pi\)'
+    B: '\(16 \pi\)'
+    C: '\(64 \pi\)'
+    D: '\(32 \pi\)'
+    answer: D
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  313:
+    topic: s15-6
+    question: 'The volume of the region cut from the solid cylinder \(x^2+y^2\le1\) by the sphere \(x^2+y^2+z^2=4\) is'
+    A: '\(\frac{4 \pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    B: '\(1 + \frac{4 \pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    C: '\(\frac{2 \pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    D: '\(\frac{8 \pi \left(8 - 3 \sqrt{3}\right)}{3}\)'
+    answer: A
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  314:
+    topic: s15-6
+    question: 'The volume of the region bounded above by the sphere \(x^2+y^2+z^2=2\) and below by the paraboloid \(z=x^2+y^2\) is'
+    A: '\(\frac{\pi \left(-7 + 8 \sqrt{2}\right)}{6}\)'
+    B: '\(\frac{\pi \left(-7 + 8 \sqrt{2}\right)}{12}\)'
+    C: '\(\frac{\pi \left(-7 + 8 \sqrt{2}\right)}{3}\)'
+    D: '\(1 - \frac{\pi \left(7 - 8 \sqrt{2}\right)}{6}\)'
+    answer: A
+    hint: 'Use cylindrical coordinates: \(V=\iiint r\,dz\,dr\,d\theta\).'
+    explanation: 'Integrate the height times \(r\) over the radial range.'
+  315:
+    topic: s15-6
+    question: 'The average value of \(f(r,\theta,z)=r\) over the region bounded by the cylinder \(r=1\) between \(z=-1\) and \(z=1\) is'
+    A: '\(\frac{1}{3}\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(\frac{2}{3}\)'
+    answer: D
+    hint: '\(\text{avg}=\iiint r\,dV/V\) with \(V=2\pi\).'
+    explanation: '\(\iiint r\cdot r\,dz\,dr\,d\theta=\tfrac{4\pi}3\).'
+  316:
+    topic: s15-6
+    question: 'The average value of \(f(r,\theta,z)=r\) over the solid unit ball \(r^2+z^2\le1\) is'
+    A: '\(\frac{3}{4}\)'
+    B: '\(\frac{\pi}{4}\)'
+    C: '\(\frac{3}{\pi}\)'
+    D: '\(\frac{3 \pi}{16}\)'
+    answer: D
+    hint: '\(\iiint r\,dV=\tfrac{\pi^2}4\); \(V=\tfrac{4\pi}3\).'
+    explanation: '\(\dfrac{\pi^2/4}{4\pi/3}=\dfrac{3\pi}{16}\).'
+  317:
+    topic: s15-6
+    question: 'The average value of \(f(\rho,\phi,\theta)=\rho\) over the solid unit ball is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(1\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(\frac{3}{4}\)'
+    answer: D
+    hint: '\(\iiint\rho\cdot\rho^2\sin\phi\,d\rho\,d\phi\,d\theta=\pi\).'
+    explanation: '\(\dfrac{\pi}{4\pi/3}=\dfrac34\).'
+  318:
+    topic: s15-6
+    question: 'The average value of \(f(\rho,\phi,\theta)=\rho\cos\phi\) over the solid upper unit ball (\(0\le\phi\le\pi/2\)) is'
+    A: '\(\frac{3}{4}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\frac{3}{8}\)'
+    D: '\(\frac{1}{4}\)'
+    answer: C
+    hint: '\(\iiint\rho\cos\phi\,dV=\tfrac\pi4\); \(V=\tfrac{2\pi}3\).'
+    explanation: '\(\dfrac{\pi/4}{2\pi/3}=\dfrac38\).'
+  319:
+    topic: s15-6
+    question: 'The centroid of the solid bounded below by \(z=0\), above by the cone \(z=r\), and on the sides by \(r=1\) is on the \(z\)-axis at \(\bar z=\)'
+    A: '\(\dfrac14\)'
+    B: '\(\dfrac38\)'
+    C: '\(\dfrac13\)'
+    D: '\(\dfrac12\)'
+    answer: B
+    hint: '\(\bar z=\iiint z\,dV/V\), with \(V=\tfrac{2\pi}3\).'
+    explanation: '\(\iiint z\,dV=\tfrac\pi4\), so \(\bar z=\tfrac38\).'
+  320:
+    topic: s15-6
+    question: 'The centroid of the solid bounded above by \(z=\sqrt r\), below by \(z=0\), and on the sides by \(r=4\) has \(\bar z=\)'
+    A: '\(\dfrac12\)'
+    B: '\(\dfrac56\)'
+    C: '\(\dfrac13\)'
+    D: '\(\dfrac56\cdot2\)'
+    answer: B
+    hint: '\(V=\tfrac{128\pi}5\), \(\iiint z\,dV=\tfrac{64\pi}3\).'
+    explanation: '\(\bar z=\tfrac{64/3}{128/5}=\tfrac56\).'
+  321:
+    topic: s15-6
+    question: 'A thick-walled cylinder (density \(1\)) has inner radius \(1\), outer radius \(2\), and height from \(z=0\) to \(z=4\). Its moment of inertia about the \(z\)-axis is'
+    A: '\(15 \pi\)'
+    B: '\(30 \pi\)'
+    C: '\(12 \pi\)'
+    D: '\(60 \pi\)'
+    answer: B
+    hint: '\(I_z=\iiint r^2\,dV=\int_0^{2\pi}\int_1^2\int_0^4r^3\,dz\,dr\,d\theta\).'
+    explanation: '\(2\pi\cdot4\cdot\tfrac{15}4=30\pi\).'
+  322:
+    topic: s15-6
+    question: 'The radius of gyration of the thick-walled cylinder (\(1\le r\le2\), \(0\le z\le4\), density \(1\)) about the \(z\)-axis is'
+    A: '\(\sqrt{30}\)'
+    B: '\(\frac{\sqrt{10}}{2}\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(\sqrt{5}\)'
+    answer: B
+    hint: '\(R=\sqrt{I_z/M}\) with \(M=12\pi\).'
+    explanation: '\(\sqrt{30\pi/12\pi}=\sqrt{5/2}\).'
+  323:
+    topic: s15-6
+    question: 'A solid circular cylinder of radius \(1\) and height \(2\) (density \(1\)) has moment of inertia about its axis equal to'
+    A: '\(4 \pi\)'
+    B: '\(2 \pi\)'
+    C: '\(\pi\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: C
+    hint: '\(I=\tfrac12Mr^2\) with \(M=2\pi\).'
+    explanation: '\(\tfrac12(2\pi)(1)^2=\pi\).'
+  324:
+    topic: s15-6
+    question: 'The same cylinder (radius \(1\), height \(2\), density \(1\)) has moment of inertia about a line through its centroid perpendicular to its axis equal to'
+    A: '\(\frac{7 \pi}{12}\)'
+    B: '\(\pi\)'
+    C: '\(\frac{7 \pi}{6}\)'
+    D: '\(\frac{2 \pi}{3}\)'
+    answer: C
+    hint: '\(I=M\left(\tfrac{r^2}4+\tfrac{h^2}{12}\right)\) with \(M=2\pi\).'
+    explanation: '\(2\pi\left(\tfrac14+\tfrac13\right)=\tfrac{7\pi}6\).'
+  325:
+    topic: s15-6
+    question: 'The moment of inertia of a solid sphere of radius \(a\) (density \(1\)) about a diameter is'
+    A: '\(\frac{2 \pi a^{5}}{5}\)'
+    B: '\(\frac{8 \pi a^{5}}{15}\)'
+    C: '\(\frac{4 \pi a^{5}}{15}\)'
+    D: '\(\frac{4 \pi a^{5}}{3}\)'
+    answer: B
+    hint: '\(I=\iiint\rho^2\sin^2\phi\,dV\).'
+    explanation: '\(\tfrac25Ma^2\) with \(M=\tfrac43\pi a^3\).'
+  326:
+    topic: s15-6
+    question: 'The moment of inertia of a solid right circular cone of base radius \(a\) and height \(h\) (density \(1\)) about its axis is'
+    A: '\(\frac{\pi a^{4} h}{4}\)'
+    B: '\(\frac{\pi a^{4} h}{5}\)'
+    C: '\(\frac{\pi a^{4} h}{20}\)'
+    D: '\(\frac{\pi a^{4} h}{10}\)'
+    answer: D
+    hint: '\(I=\iiint r^2\,dV\) with \(z\) from the cone \(z=hr/a\) to \(h\).'
+    explanation: '\(\tfrac3{10}Ma^2\) with \(M=\tfrac13\pi a^2h\).'
+  327:
+    topic: s15-6
+    question: 'In spherical coordinates the cylinder \(x^2+y^2=a^2\) has equation'
+    A: '\(\rho=a\)'
+    B: '\(\rho=a\csc\phi\)'
+    C: '\(\rho=a\sin\phi\)'
+    D: '\(\rho=a\sec\phi\)'
+    answer: B
+    hint: '\(x^2+y^2=\rho^2\sin^2\phi\).'
+    explanation: '\(\rho\sin\phi=a\).'
+  328:
+    topic: s15-6
+    question: 'In cylindrical coordinates, planes perpendicular to the \(x\)-axis (\(x=a\)) have equations of the form'
+    A: '\(r=a\cos\theta\)'
+    B: '\(r=a\sec\theta\)'
+    C: '\(r=a\csc\theta\)'
+    D: '\(\theta=a\)'
+    answer: B
+    hint: '\(x=r\cos\theta\).'
+    explanation: '\(r\cos\theta=a\).'
+  329:
+    topic: s15-6
+    question: 'In cylindrical coordinates, planes perpendicular to the \(y\)-axis (\(y=b\)) have equations of the form'
+    A: '\(r=b\csc\theta\)'
+    B: '\(r=b\sec\theta\)'
+    C: '\(r=b\sin\theta\)'
+    D: '\(\theta=b\)'
+    answer: A
+    hint: '\(y=r\sin\theta\).'
+    explanation: '\(r\sin\theta=b\).'
+  330:
+    topic: s15-6
+    question: 'In cylindrical coordinates the plane \(ax+by=c\) (\(c\ne0\)) has an equation \(r=\)'
+    A: '\(\dfrac{c}{a\sin\theta+b\cos\theta}\)'
+    B: '\(\dfrac{c}{a\cos\theta+b\sin\theta}\)'
+    C: '\(\dfrac{a\cos\theta+b\sin\theta}{c}\)'
+    D: '\(c(a\cos\theta+b\sin\theta)\)'
+    answer: B
+    hint: 'Substitute \(x=r\cos\theta\), \(y=r\sin\theta\).'
+    explanation: '\(r(a\cos\theta+b\sin\theta)=c\).'
+  331:
+    topic: s15-6
+    question: 'A surface with an equation of the form \(r=f(z)\) in cylindrical coordinates is symmetric'
+    A: 'about the \(z\)-axis (a surface of revolution)'
+    B: 'about the \(x\)-axis'
+    C: about the origin only
+    D: 'about the \(xy\)-plane only'
+    answer: A
+    hint: '\(\theta\) does not appear in the equation.'
+    explanation: 'Rotating about the \(z\)-axis preserves \(r\) and \(z\).'
+  332:
+    topic: s15-6
+    question: 'A surface with an equation of the form \(\rho=f(\phi)\) in spherical coordinates is symmetric'
+    A: 'about the \(x\)-axis'
+    B: about the origin
+    C: 'about the \(z\)-axis (rotation invariant)'
+    D: 'about the \(xy\)-plane'
+    answer: C
+    hint: '\(\theta\) does not appear in the equation.'
+    explanation: 'It is a surface of revolution about the \(z\)-axis.'
+  333:
+    topic: s15-6
+    question: The Jacobian factor (volume element) for spherical coordinates is
+    A: '\(\rho\,d\rho\,d\phi\,d\theta\)'
+    B: '\(\rho^2\cos\phi\,d\rho\,d\phi\,d\theta\)'
+    C: '\(\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\)'
+    D: '\(\rho\sin\phi\,d\rho\,d\phi\,d\theta\)'
+    answer: C
+    hint: 'It comes from the Jacobian of \((\rho,\phi,\theta)\mapsto(x,y,z)\).'
+    explanation: '\(dV=\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+  334:
+    topic: s15-6
+    question: The volume element in cylindrical coordinates is
+    A: '\(dz\,dr\,d\theta\)'
+    B: '\(r\,dz\,dr\,d\theta\)'
+    C: '\(r^2\,dz\,dr\,d\theta\)'
+    D: '\(\dfrac1r\,dz\,dr\,d\theta\)'
+    answer: B
+    hint: 'The \(xy\)-area element in polar form is \(r\,dr\,d\theta\).'
+    explanation: 'Multiply by \(dz\).'
+  335:
+    topic: s15-6
+    question: 'In spherical coordinates, the equation \(\phi=\pi/3\) describes'
+    A: 'a cylinder about the \(z\)-axis'
+    B: a cone with vertex at the origin opening upward
+    C: 'a sphere of radius \(\pi/3\)'
+    D: a horizontal plane
+    answer: B
+    hint: '\(\phi\) is the angle from the positive \(z\)-axis.'
+    explanation: 'All points whose position vector makes angle \(\pi/3\) with the \(z\)-axis.'
+  336:
+    topic: s15-6
+    question: 'In spherical coordinates, the equation \(\rho=2\cos\phi\) describes'
+    A: 'a sphere of radius \(2\) centered at the origin'
+    B: a cylinder
+    C: 'a sphere of radius \(1\) centered at \((0,0,1)\)'
+    D: a cone
+    answer: C
+    hint: 'Multiply by \(\rho\): \(\rho^2=2\rho\cos\phi\).'
+    explanation: '\(x^2+y^2+z^2=2z\).'
+  337:
+    topic: s15-6
+    question: 'In spherical coordinates, the cone \(z=\sqrt{x^2+y^2}\) has equation'
+    A: '\(\rho=1\)'
+    B: '\(\phi=\pi/4\)'
+    C: '\(\phi=\pi/3\)'
+    D: '\(\phi=\pi/2\)'
+    answer: B
+    hint: 'On the cone \(\tan\phi=r/z=1\).'
+    explanation: '\(\phi=\pi/4\).'
+  338:
+    topic: s15-7
+    question: 'Solving \(u=x-y\), \(v=2x+y\) for \(x,y\) gives'
+    A: '\(x=u+v\), \(y=-2u+v\)'
+    B: '\(x=\dfrac{u+v}2\), \(y=\dfrac{-2u+v}2\)'
+    C: '\(x=\dfrac{u+v}3\), \(y=\dfrac{-2u+v}3\)'
+    D: '\(x=\dfrac{u-v}3\), \(y=\dfrac{2u+v}3\)'
+    answer: C
+    hint: 'Add the equations to eliminate \(y\).'
+    explanation: '\(u+v=3x\); \(v-2u=3y\).'
+  339:
+    topic: s15-7
+    question: 'For \(u=x-y\), \(v=2x+y\), the Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) equals'
+    A: '\(3\)'
+    B: '\(\frac{1}{9}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(- \frac{1}{3}\)'
+    answer: C
+    hint: 'Use \(x=\tfrac{u+v}3\), \(y=\tfrac{-2u+v}3\).'
+    explanation: '\(\tfrac13\cdot\tfrac13-\tfrac13\cdot\left(-\tfrac23\right)=\tfrac13\).'
+  340:
+    topic: s15-7
+    question: 'Under \(u=x-y\), \(v=2x+y\), the triangle with vertices \((0,0)\), \((1,1)\), \((1,-2)\) is mapped to the triangle in the \(uv\)-plane with vertices'
+    A: '\((0,0)\), \((3,3)\), \((3,0)\)'
+    B: '\((0,0)\), \((0,3)\), \((3,0)\)'
+    C: '\((0,0)\), \((0,1)\), \((1,0)\)'
+    D: '\((0,0)\), \((0,-3)\), \((3,0)\)'
+    answer: B
+    hint: 'Evaluate \(u\) and \(v\) at each vertex.'
+    explanation: '\((1,1)\mapsto(0,3)\) and \((1,-2)\mapsto(3,0)\).'
+  341:
+    topic: s15-7
+    question: 'For \(u=x+2y\), \(v=x-y\), solving for \(x,y\) gives'
+    A: '\(x=\dfrac{u-2v}3\), \(y=\dfrac{u+v}3\)'
+    B: '\(x=u+2v\), \(y=u-v\)'
+    C: '\(x=\dfrac{u+2v}3\), \(y=\dfrac{u-v}3\)'
+    D: '\(x=\dfrac{2u+v}3\), \(y=\dfrac{u-v}3\)'
+    answer: C
+    hint: 'Subtract the second equation from the first to find \(y\).'
+    explanation: '\(u-v=3y\).'
+  342:
+    topic: s15-7
+    question: 'For \(u=x+2y\), \(v=x-y\), the Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) is'
+    A: '\(- \frac{1}{9}\)'
+    B: '\(- \frac{1}{3}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(-3\)'
+    answer: B
+    hint: 'Differentiate \(x=\tfrac{u+2v}3\), \(y=\tfrac{u-v}3\).'
+    explanation: '\(\tfrac13(-\tfrac13)-\tfrac23\cdot\tfrac13=-\tfrac13\).'
+  343:
+    topic: s15-7
+    question: 'Under \(u=x+2y\), \(v=x-y\), the triangle bounded by \(y=0\), \(y=x\), and \(x+2y=2\) is mapped to the triangle in the \(uv\)-plane with vertices'
+    A: '\((0,0)\), \((2,0)\), \((0,2)\)'
+    B: '\((0,0)\), \((1,1)\), \((2,0)\)'
+    C: '\((0,0)\), \((2,2)\), \((2,0)\)'
+    D: '\((0,0)\), \((2,-2)\), \((2,0)\)'
+    answer: C
+    hint: 'The vertices are \((0,0)\), \((2,0)\), \(\left(\tfrac23,\tfrac23\right)\).'
+    explanation: '\((2,0)\mapsto(2,2)\); \(\left(\tfrac23,\tfrac23\right)\mapsto(2,0)\).'
+  344:
+    topic: s15-7
+    question: 'For \(u=3x+2y\), \(v=x+4y\), solving gives'
+    A: '\(x=\dfrac{2u-v}5\), \(y=\dfrac{-u+3v}{10}\)'
+    B: '\(x=\dfrac{4u-2v}{10}\), \(y=\dfrac{-u+3v}{5}\)'
+    C: '\(x=\dfrac{2u+v}5\), \(y=\dfrac{u+3v}{10}\)'
+    D: '\(x=\dfrac{u-2v}5\), \(y=\dfrac{3u-v}{10}\)'
+    answer: A
+    hint: 'Eliminate \(y\): \(2u-v=5x\).'
+    explanation: 'And \(3v-u=10y\).'
+  345:
+    topic: s15-7
+    question: 'For \(u=3x+2y\), \(v=x+4y\), the Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) is'
+    A: '\(\frac{1}{10}\)'
+    B: '\(\frac{1}{5}\)'
+    C: '\(\frac{1}{50}\)'
+    D: '\(10\)'
+    answer: A
+    hint: 'Differentiate \(x=\tfrac{2u-v}5\), \(y=\tfrac{3v-u}{10}\).'
+    explanation: '\(\tfrac25\cdot\tfrac3{10}-\left(-\tfrac15\right)\left(-\tfrac1{10}\right)=\tfrac{6}{50}-\tfrac1{50}=\tfrac1{10}\).'
+  346:
+    topic: s15-7
+    question: 'For \(u=2x-3y\), \(v=-x+y\), solving gives'
+    A: '\(x=-u-3v\), \(y=u+2v\)'
+    B: '\(x=u+3v\), \(y=u+2v\)'
+    C: '\(x=-u-3v\), \(y=-u-2v\)'
+    D: '\(x=-u+3v\), \(y=-u-2v\)'
+    answer: C
+    hint: 'Add \(2\times\)second equation to the first.'
+    explanation: '\(u+2v=-y\).'
+  347:
+    topic: s15-7
+    question: 'For \(u=2x-3y\), \(v=-x+y\), the Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) is'
+    A: '\(1\)'
+    B: '\(5\)'
+    C: '\(-5\)'
+    D: '\(-1\)'
+    answer: D
+    hint: '\(x=-u-3v\), \(y=-u-2v\).'
+    explanation: '\((-1)(-2)-(-3)(-1)=2-3=-1\).'
+  348:
+    topic: s15-7
+    question: '\(\displaystyle\iint_R(2x^2-xy-y^2)\,dx\,dy\) over the first-quadrant region bounded by \(y=-2x+4\), \(y=-2x+7\), \(y=x-2\), \(y=x+1\), using \(u=x-y\), \(v=2x+y\), equals'
+    A: '\(33\)'
+    B: '\(\frac{33}{2}\)'
+    C: '\(\frac{33}{4}\)'
+    D: '\(\frac{11}{4}\)'
+    answer: C
+    hint: 'Note \(2x^2-xy-y^2=(2x+y)(x-y)=uv\), and \(|J|=\tfrac13\).'
+    explanation: 'The region becomes \(-1\le u\le2\), \(4\le v\le7\): \(\tfrac13\cdot\tfrac32\cdot\tfrac{33}2\).'
+  349:
+    topic: s15-7
+    question: '\(\displaystyle\iint_R(3x^2+14xy+8y^2)\,dx\,dy\) over the first-quadrant region bounded by \(y=-\tfrac32x+1\), \(y=-\tfrac32x+3\), \(y=-\tfrac14x\), \(y=-\tfrac14x+1\), using \(u=3x+2y\), \(v=x+4y\), equals'
+    A: '\(\frac{128}{5}\)'
+    B: '\(\frac{32}{5}\)'
+    C: '\(\frac{64}{5}\)'
+    D: '\(128\)'
+    answer: C
+    hint: '\(3x^2+14xy+8y^2=(3x+2y)(x+4y)=uv\), \(|J|=\tfrac1{10}\).'
+    explanation: 'The region is \(2\le u\le6\), \(0\le v\le4\): \(\tfrac1{10}\cdot16\cdot8\).'
+  350:
+    topic: s15-7
+    question: '\(\displaystyle\iint_R2(x-y)\,dx\,dy\) over the parallelogram bounded by \(x=-3\), \(x=0\), \(y=x\), \(y=x+1\), using \(u=2x-3y\), \(v=-x+y\), equals'
+    A: '\(3\)'
+    B: '\(-6\)'
+    C: '\(-3\)'
+    D: '\(6\)'
+    answer: C
+    hint: '\(x-y=-v\) and \(|J|=1\); the region is \(0\le v\le1\), \(-3v\le u\le3-3v\).'
+    explanation: '\(\int_0^1(-2v)(3)\,dv=-3\).'
+  351:
+    topic: s15-7
+    question: '\(\displaystyle\iint_R\left(\sqrt{y/x}+\sqrt{xy}\right)dx\,dy\) over the first-quadrant region bounded by \(xy=1\), \(xy=9\), \(y=x\), \(y=4x\), with \(x=u/v\), \(y=uv\), equals'
+    A: '\(16 + \frac{104 \ln{\left(2 \right)}}{3}\)'
+    B: '\(\frac{26 \ln{\left(2 \right)}}{3} + 8\)'
+    C: '\(4 + \frac{26 \ln{\left(2 \right)}}{3}\)'
+    D: '\(8 + \frac{52 \ln{\left(2 \right)}}{3}\)'
+    answer: D
+    hint: '\(J=\dfrac{2u}{v}\), \(\sqrt{y/x}=v\), \(\sqrt{xy}=u\); the region is \(1\le u\le3\), \(1\le v\le2\).'
+    explanation: '\(\int_1^3\int_1^2(u+v)\dfrac{2u}v\,dv\,du=8+\tfrac{52}3\ln2\).'
+  352:
+    topic: s15-7
+    question: 'For \(x=u\), \(y=uv\), the Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) is'
+    A: '\(v\)'
+    B: '\(u v\)'
+    C: '\(1\)'
+    D: '\(u\)'
+    answer: D
+    hint: '\(\begin{vmatrix}1&0\\v&u\end{vmatrix}\).'
+    explanation: '\(1\cdot u-0\cdot v=u\).'
+  353:
+    topic: s15-7
+    question: 'With \(x=u\), \(y=uv\), the integral \(\displaystyle\int_1^2\int_1^2\frac yx\,dx\,dy\) equals'
+    A: '\(\frac{3 \ln{\left(2 \right)}}{4}\)'
+    B: '\(\frac{3 \ln{\left(2 \right)}}{2}\)'
+    C: '\(\ln{\left(2 \right)}\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
+    answer: B
+    hint: 'In the \(uv\)-plane \(y/x=v\) and the region is \(1\le u\le2\), \(\tfrac1u\le v\le\tfrac2u\).'
+    explanation: 'Directly: \(\int_1^2y\,dy\int_1^2\tfrac{dx}x=\tfrac32\ln2\).'
+  354:
+    topic: s15-7
+    question: 'A thin elliptical plate \(x^2/a^2+y^2/b^2\le1\) (density \(1\)) has polar moment of inertia \(I_0=\) (use \(x=ar\cos\theta\), \(y=br\sin\theta\))'
+    A: '\(\frac{\pi a b \left(a^{2} + b^{2}\right)}{4}\)'
+    B: '\(\frac{\pi a b \left(a^{2} + b^{2}\right)}{2}\)'
+    C: '\(\frac{\pi a b \left(a + b\right)}{4}\)'
+    D: '\(\frac{\pi a^{2} b^{2}}{4}\)'
+    answer: A
+    hint: '\(J=abr\) and \(x^2+y^2=r^2(a^2\cos^2\theta+b^2\sin^2\theta)\).'
+    explanation: '\(ab\cdot\tfrac14\cdot\pi(a^2+b^2)\).'
+  355:
+    topic: s15-7
+    question: 'The Jacobian of the transformation \(x=ar\cos\theta\), \(y=br\sin\theta\) is'
+    A: '\(ab\)'
+    B: '\(r\)'
+    C: '\(a^2b^2r\)'
+    D: '\(abr\)'
+    answer: D
+    hint: '\(\begin{vmatrix}a\cos\theta&-ar\sin\theta\\b\sin\theta&br\cos\theta\end{vmatrix}\).'
+    explanation: '\(abr\cos^2\theta+abr\sin^2\theta\).'
+  356:
+    topic: s15-7
+    question: 'The area of the ellipse \(x^2/a^2+y^2/b^2=1\) found by the substitution \(x=au\), \(y=bv\) over the unit disk \(u^2+v^2\le1\) is'
+    A: '\(\pi(a^2+b^2)\)'
+    B: '\(\pi a^2b^2\)'
+    C: '\(\pi(a+b)\)'
+    D: '\(\pi ab\)'
+    answer: D
+    hint: '\(J=ab\).'
+    explanation: '\(ab\cdot\pi(1)^2\).'
+  357:
+    topic: s15-7
+    question: '\(\displaystyle\int_0^{2/3}\int_y^{2-2y}(x+2y)e^{(y-x)}\,dx\,dy\), using \(u=x+2y\), \(v=x-y\), equals'
+    A: '\(e^{-2} + \frac{1}{3}\)'
+    B: '\(\frac{2}{3}\)'
+    C: '\(\frac{3 + e^{2}}{6 e^{2}}\)'
+    D: '\(\frac{3}{e^{2}} + 1\)'
+    answer: A
+    hint: '\(|J|=\tfrac13\), \(e^{y-x}=e^{-v}\); the region is the triangle \(0\le v\le u\le2\).'
+    explanation: '\(\tfrac13\int_0^2u(1-e^{-u})du=\tfrac13(1+3e^{-2})\).'
+  358:
+    topic: s15-7
+    question: 'To evaluate \(\displaystyle\int_0^2\int_{y/2}^{(y+4)/2}y^3(2x-y)e^{(2x-y)^2}dx\,dy\), the substitution \(x=u+\tfrac12v\), \(y=v\) has Jacobian'
+    A: '\(1\)'
+    B: '\(u\)'
+    C: '\(\tfrac12\)'
+    D: '\(2\)'
+    answer: A
+    hint: '\(\begin{vmatrix}1&1/2\\0&1\end{vmatrix}\).'
+    explanation: 'The determinant is \(1\).'
+  359:
+    topic: s15-7
+    question: 'Using \(x=u+\tfrac12v\), \(y=v\), the integral \(\displaystyle\int_0^2\int_{y/2}^{(y+4)/2}y^3(2x-y)e^{(2x-y)^2}dx\,dy\) equals'
+    A: '\(-1 + e^{16}\)'
+    B: '\(- \frac{1}{4} + \frac{e^{16}}{4}\)'
+    C: '\(-4 + 4 e^{16}\)'
+    D: '\(e^{16}\)'
+    answer: A
+    hint: '\(2x-y=2u\); the region is \(0\le u\le2\), \(0\le v\le2\).'
+    explanation: '\(\int_0^2v^3dv\cdot\int_0^22ue^{4u^2}du=4\cdot\tfrac{e^{16}-1}4\).'
+  360:
+    topic: s15-7
+    question: 'The Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) of \(x=u\cos v\), \(y=u\sin v\) is'
+    A: '\(-u\)'
+    B: '\(u\)'
+    C: '\(1\)'
+    D: '\(u^2\)'
+    answer: B
+    hint: '\(\begin{vmatrix}\cos v&-u\sin v\\\sin v&u\cos v\end{vmatrix}\).'
+    explanation: '\(u\cos^2v+u\sin^2v=u\).'
+  361:
+    topic: s15-7
+    question: 'The Jacobian \(\dfrac{\partial(x,y)}{\partial(u,v)}\) of \(x=u\sin v\), \(y=u\cos v\) is'
+    A: '\(u\)'
+    B: '\(-u\)'
+    C: '\(1\)'
+    D: '\(-u^2\)'
+    answer: B
+    hint: '\(\begin{vmatrix}\sin v&u\cos v\\\cos v&-u\sin v\end{vmatrix}\).'
+    explanation: '\(-u\sin^2v-u\cos^2v=-u\).'
+  362:
+    topic: s15-7
+    question: 'The Jacobian \(\dfrac{\partial(x,y,z)}{\partial(u,v,w)}\) for \(x=u\cos v\), \(y=u\sin v\), \(z=w\) is'
+    A: '\(1\)'
+    B: '\(u^2\)'
+    C: '\(-u\)'
+    D: '\(u\)'
+    answer: D
+    hint: Expand the determinant along the third column.
+    explanation: 'It reduces to the \(2\times2\) polar Jacobian.'
+  363:
+    topic: s15-7
+    question: 'The Jacobian \(\dfrac{\partial(x,y,z)}{\partial(u,v,w)}\) for \(x=2u-1\), \(y=3v-4\), \(z=\tfrac12(w-4)\) is'
+    A: '\(6\)'
+    B: '\(3\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'The matrix is diagonal with entries \(2,3,\tfrac12\).'
+    explanation: '\(2\cdot3\cdot\tfrac12=3\).'
+  364:
+    topic: s15-7
+    question: 'The Jacobian of the transformation from spherical coordinates \((\rho,\phi,\theta)\) to Cartesian coordinates is'
+    A: '\(\rho\sin\phi\)'
+    B: '\(\rho^2\sin\phi\)'
+    C: '\(\rho^2\)'
+    D: '\(\rho^2\cos\phi\)'
+    answer: B
+    hint: 'Compute the \(3\times3\) determinant of partial derivatives.'
+    explanation: 'This explains the volume element \(\rho^2\sin\phi\,d\rho\,d\phi\,d\theta\).'
+  365:
+    topic: s15-7
+    question: 'The volume of the ellipsoid \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}\le1\) is (use \(x=au\), \(y=bv\), \(z=cw\))'
+    A: '\(\frac{4 \pi a b c}{3}\)'
+    B: '\(2 \pi a b c\)'
+    C: '\(\pi a b c\)'
+    D: '\(\frac{4 \pi a^{2} b^{2} c^{2}}{3}\)'
+    answer: A
+    hint: '\(J=abc\) and the \(uvw\)-region is the unit ball.'
+    explanation: '\(abc\cdot\tfrac43\pi\).'
+  366:
+    topic: s15-7
+    question: '\(\displaystyle\iiint|xyz|\,dx\,dy\,dz\) over the solid ellipsoid \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}\le1\) equals'
+    A: '\(\frac{a b c}{6}\)'
+    B: '\(\frac{a^{2} b^{2} c^{2}}{6}\)'
+    C: '\(\frac{a^{2} b^{2} c^{2}}{12}\)'
+    D: '\(\frac{a^{2} b^{2} c^{2}}{3}\)'
+    answer: B
+    hint: 'With \(x=au\), \(y=bv\), \(z=cw\): \(J=abc\) and \(|xyz|=abc|uvw|\); \(\iiint|uvw|dV=\tfrac16\) over the unit ball.'
+    explanation: '\((abc)^2\cdot\tfrac16\).'
+  367:
+    topic: s15-7
+    question: 'For the region \(1\le x\le2\), \(0\le xy\le2\), \(0\le z\le1\), the transformation \(u=x\), \(v=xy\), \(w=3z\) maps \(D\) to'
+    A: 'the box \(1\le u\le2\), \(0\le v\le2\), \(0\le w\le3\)'
+    B: 'the box \(1\le u\le2\), \(0\le v\le2\), \(0\le w\le1\)'
+    C: 'the box \(1\le u\le2\), \(0\le v\le1\), \(0\le w\le3\)'
+    D: 'the box \(0\le u\le1\), \(0\le v\le2\), \(0\le w\le3\)'
+    answer: A
+    hint: Transform each inequality.
+    explanation: '\(z\in[0,1]\Rightarrow w=3z\in[0,3]\).'
+  368:
+    topic: s15-7
+    question: 'Under \(u=x\), \(v=xy\), \(w=3z\), the Jacobian \(\dfrac{\partial(x,y,z)}{\partial(u,v,w)}\) is'
+    A: '\(\frac{u}{3}\)'
+    B: '\(\frac{1}{u}\)'
+    C: '\(\frac{1}{3 u}\)'
+    D: '\(3 u\)'
+    answer: C
+    hint: 'Solve: \(x=u\), \(y=v/u\), \(z=w/3\).'
+    explanation: '\(1\cdot\tfrac1u\cdot\tfrac13=\tfrac1{3u}\).'
+  369:
+    topic: s15-7
+    question: '\(\displaystyle\iiint_D(x^2y+3xyz)\,dx\,dy\,dz\) over \(1\le x\le2\), \(0\le xy\le2\), \(0\le z\le1\), using \(u=x\), \(v=xy\), \(w=3z\), equals'
+    A: '\(3 \ln{\left(2 \right)} + 4\)'
+    B: '\(2 + 3 \ln{\left(2 \right)}\)'
+    C: '\(\ln{\left(2 \right)} + 2\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
+    answer: B
+    hint: 'The integrand becomes \(uv+vw\) and \(|J|=\tfrac1{3u}\).'
+    explanation: '\(\int_1^2\int_0^2\int_0^3\dfrac{uv+vw}{3u}dw\,dv\,du=2+3\ln2\).'
+  370:
+    topic: s15-7
+    question: 'A substitution \(x=g(u)\) in a single definite integral can be viewed as a transformation from the \(u\)-axis to the \(x\)-axis whose Jacobian is'
+    A: '\(g(u)\)'
+    B: '\(\dfrac{dx}{du}=g''(u)\)'
+    C: '\(\dfrac{1}{g''(u)}\)'
+    D: '\(\dfrac{du}{dx}\)'
+    answer: B
+    hint: 'The one-variable change of variables formula is \(\int f(x)dx=\int f(g(u))g''(u)du\).'
+    explanation: The Jacobian is the derivative of the transformation.
+  371:
+    topic: s15-7
+    question: 'In a change of variables for a double integral, \(\displaystyle\iint_Rf(x,y)\,dx\,dy=\iint_Gf(g(u,v),h(u,v))\,\cdot\)'
+    A: '\(\left|\dfrac{\partial(x,y)}{\partial(u,v)}\right|\,du\,dv\)'
+    B: '\(du\,dv\)'
+    C: '\(\dfrac{\partial(x,y)}{\partial(u,v)}\,du\,dv\) (signed)'
+    D: '\(\left|\dfrac{\partial(u,v)}{\partial(x,y)}\right|\,du\,dv\)'
+    answer: A
+    hint: Area scales by the absolute value of the Jacobian.
+    explanation: 'The factor is \(|J(u,v)|\).'

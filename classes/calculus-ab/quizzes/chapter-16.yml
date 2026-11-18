@@ -1,0 +1,3605 @@
+# Chapter 16: Integration in Vector Fields
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 16.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 16: Integration in Vector Fields"
+description: "Line integrals, vector fields, work, circulation and flux, path independence and potential functions, Green's Theorem, surface area and surface integrals, parametrized surfaces, Stokes' Theorem, and the Divergence Theorem."
+topics:
+  s16-1:
+    title: 16.1 Line Integrals
+  s16-2:
+    title: 16.2 Vector Fields, Work, Circulation, and Flux
+  s16-3:
+    title: 16.3 Path Independence, Potential Functions, and Conservative Fields
+  s16-4:
+    title: "16.4 Green's Theorem in the Plane"
+  s16-5:
+    title: 16.5 Surface Area and Surface Integrals
+  s16-6:
+    title: 16.6 Parametrized Surfaces
+  s16-7:
+    title: "16.7 Stokes' Theorem"
+  s16-8:
+    title: 16.8 The Divergence Theorem and a Unified Theory
+questions:
+  1:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=t\mathbf i+(1-t)\mathbf j,\ 0\le t\le1\) is'
+    A: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    B: 'the segment of the \(x\)-axis from \((-1,0,0)\) to \((1,0,0)\)'
+    C: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    D: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    answer: A
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  2:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=\mathbf i+\mathbf j+t\mathbf k,\ -1\le t\le1\) is'
+    A: 'the segment of the \(x\)-axis from \((-1,0,0)\) to \((1,0,0)\)'
+    B: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    C: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    D: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    answer: B
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  3:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=(2\cos t)\mathbf i+(2\sin t)\mathbf j,\ 0\le t\le2\pi\) is'
+    A: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    B: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    C: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    D: 'the segment of the \(x\)-axis from \((-1,0,0)\) to \((1,0,0)\)'
+    answer: C
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  4:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=t\mathbf i,\ -1\le t\le1\) is'
+    A: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    B: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    C: 'the segment of the \(x\)-axis from \((-1,0,0)\) to \((1,0,0)\)'
+    D: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    answer: C
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  5:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=t\mathbf i+t\mathbf j+t\mathbf k,\ 0\le t\le2\) is'
+    A: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    B: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    C: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    D: 'the segment from the origin to \((2,2,2)\)'
+    answer: D
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  6:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=t\mathbf j+(2-2t)\mathbf k,\ 0\le t\le1\) is'
+    A: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    B: 'the segment in the \(yz\)-plane from \((0,0,2)\) to \((0,1,0)\)'
+    C: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    D: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    answer: B
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  7:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=(t^2-1)\mathbf j+2t\mathbf k,\ -1\le t\le1\) is'
+    A: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    B: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    C: 'the parabolic arc in the \(yz\)-plane from \((0,0,-2)\) to \((0,0,2)\) bulging toward \(y<0\)'
+    D: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    answer: C
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  8:
+    topic: s16-1
+    question: 'The path \(\mathbf r(t)=(2\cos t)\mathbf i+(2\sin t)\mathbf j,\ 0\le t\le\pi\) is'
+    A: 'the segment in the \(xy\)-plane from \((0,1,0)\) to \((1,0,0)\)'
+    B: 'the circle of radius \(2\) in the \(xy\)-plane, counterclockwise'
+    C: 'the upper semicircle of radius \(2\) in the \(xy\)-plane, from \((2,0)\) to \((-2,0)\)'
+    D: 'the vertical segment from \((1,1,-1)\) to \((1,1,1)\)'
+    answer: C
+    hint: 'Evaluate \(\mathbf r\) at the endpoints and identify the shape.'
+    explanation: Substitute the parameter values to find the start and end points.
+  9:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=x + y\) over the straight segment \(x=t\), \(y=1-t\), \(z=0\), from \((0,1,0)\) to \((1,0,0)\) is'
+    A: '\(1 + \sqrt{2}\)'
+    B: '\(\frac{\sqrt{2}}{2}\)'
+    C: '\(2 \sqrt{2}\)'
+    D: '\(\sqrt{2}\)'
+    answer: D
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=\sqrt{2}\) and integrate.'
+  10:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=x - y + z - 2\) over the segment \(x=t\), \(y=1-t\), \(z=1\), from \((0,1,1)\) to \((1,0,1)\) is'
+    A: '\(1 - \sqrt{2}\)'
+    B: '\(- 2 \sqrt{2}\)'
+    C: '\(- \sqrt{2}\)'
+    D: '\(- \frac{\sqrt{2}}{2}\)'
+    answer: C
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=\sqrt{2}\) and integrate.'
+  11:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=x y + y + z\) over the curve \(\mathbf r(t)=2t\mathbf i+t\mathbf j+(2-2t)\mathbf k\), \(0\le t\le1\) is'
+    A: '\(\frac{13}{2}\)'
+    B: '\(\frac{15}{2}\)'
+    C: '\(13\)'
+    D: '\(\frac{13}{4}\)'
+    answer: A
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=3\) and integrate.'
+  12:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=\sqrt{x^{2} + y^{2}}\) over the curve \(\mathbf r(t)=(4\cos t)\mathbf i+(4\sin t)\mathbf j+3t\mathbf k\), \(-2\pi\le t\le2\pi\) is'
+    A: '\(1 + 80 \pi\)'
+    B: '\(40 \pi\)'
+    C: '\(160 \pi\)'
+    D: '\(80 \pi\)'
+    answer: D
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=5\) and integrate.'
+  13:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=x + y + z\) over the straight segment from \((1,2,3)\) to \((0,-1,0)\) is'
+    A: '\(4 \sqrt{14}\)'
+    B: '\(2 \sqrt{14}\)'
+    C: '\(\sqrt{14}\)'
+    D: '\(1 + 2 \sqrt{14}\)'
+    answer: B
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=\sqrt{14}\) and integrate.'
+  14:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=\frac{\sqrt{3}}{x^{2} + y^{2} + z^{2}}\) over the curve \(\mathbf r(t)=t\mathbf i+t\mathbf j+t\mathbf k\), \(1\le t\le2\) is'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(\frac{1}{4}\)'
+    answer: B
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=\sqrt{3}\) and integrate.'
+  15:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=x + \sqrt{y} - z^{2}\) over the parabolic arc \(\mathbf r(t)=t\mathbf i+t^2\mathbf j\), \(0\le t\le1\) is'
+    A: '\(- \frac{1}{3} + \frac{5 \sqrt{5}}{3}\)'
+    B: '\(\frac{5}{6} + \frac{5 \sqrt{5}}{6}\)'
+    C: '\(- \frac{1}{6} + \frac{5 \sqrt{5}}{6}\)'
+    D: '\(- \frac{1}{12} + \frac{5 \sqrt{5}}{12}\)'
+    answer: C
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=\sqrt{4 t^{2} + 1}\) and integrate.'
+  16:
+    topic: s16-1
+    question: 'The line integral \(\displaystyle\int_Cf\,ds\) of \(f(x,y,z)=- \sqrt{x^{2} + y^{2}}\) over the circle \(\mathbf r(t)=3\cos t\,\mathbf i+3\sin t\,\mathbf j\), \(0\le t\le2\pi\) is'
+    A: '\(1 - 18 \pi\)'
+    B: '\(- 36 \pi\)'
+    C: '\(- 18 \pi\)'
+    D: '\(- 9 \pi\)'
+    answer: C
+    hint: '\(\int_Cf\,ds=\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\).'
+    explanation: 'Compute \(|\mathbf v|=3\) and integrate.'
+  17:
+    topic: s16-1
+    question: 'The integral of \(f(x,y,z)=x+\sqrt y-z^2\) over \(C_1:\mathbf r=t\mathbf i+t^2\mathbf j\) (\(0\le t\le1\)) followed by \(C_2:\mathbf r=\mathbf i+\mathbf j+t\mathbf k\) (\(0\le t\le1\)) is'
+    A: '\(\frac{3}{2} + \frac{5 \sqrt{5}}{6}\)'
+    B: '\(\frac{5}{3}\)'
+    C: '\(\frac{5 \sqrt{5}}{6} + \frac{5}{2}\)'
+    D: '\(- \frac{1}{6} + \frac{5 \sqrt{5}}{6}\)'
+    answer: A
+    hint: Integrate over each piece and add.
+    explanation: '\(C_1\) contributes \(\int_0^1(2t)\sqrt{1+4t^2}\,dt\); \(C_2\) contributes \(\int_0^1(2-t^2)dt\).'
+  18:
+    topic: s16-1
+    question: 'The integral of \(f(x,y,z)=\dfrac{x+y+z}{x^2+y^2+z^2}\) over \(\mathbf r(t)=t\mathbf i+t\mathbf j+t\mathbf k\), \(0<a\le t\le b\), is'
+    A: '\(\sqrt{3} \left(- \ln{\left(a \right)} + \ln{\left(b \right)}\right)\)'
+    B: '\(\sqrt{3} \left(\ln{\left(a \right)} - \ln{\left(b \right)}\right)\)'
+    C: '\(- \ln{\left(a \right)} + \ln{\left(b \right)}\)'
+    D: '\(- 3 \ln{\left(a \right)} + 3 \ln{\left(b \right)}\)'
+    answer: A
+    hint: '\(|\mathbf v|=\sqrt3\) and \(f=\dfrac{3t}{3t^2}=\dfrac1t\).'
+    explanation: '\(\sqrt3\int_a^b\dfrac{dt}t=\sqrt3\ln\dfrac ba\).'
+  19:
+    topic: s16-1
+    question: 'The integral of \(f(x,y,z)=-\sqrt{x^2+z^2}\) over the circle \(\mathbf r(t)=(a\cos t)\mathbf j+(a\sin t)\mathbf k\), \(0\le t\le2\pi\), \(a>0\), is'
+    A: '\(- 2 a^{2}\)'
+    B: '\(- 2 \pi a^{2}\)'
+    C: '\(4 a^{2}\)'
+    D: '\(- 4 a^{2}\)'
+    answer: D
+    hint: 'On the circle \(\sqrt{x^2+z^2}=|a\sin t|\) and \(|\mathbf v|=a\).'
+    explanation: '\(-a^2\int_0^{2\pi}|\sin t|\,dt=-4a^2\).'
+  20:
+    topic: s16-1
+    question: 'The integral of \(f(x,y)=x^3/y\) over \(C:\ y=x^2/2\), \(0\le x\le2\), is'
+    A: '\(\frac{1}{3} + \frac{10 \sqrt{5}}{3}\)'
+    B: '\(- \frac{1}{3} + \frac{5 \sqrt{5}}{3}\)'
+    C: '\(- \frac{4}{3} + \frac{20 \sqrt{5}}{3}\)'
+    D: '\(- \frac{2}{3} + \frac{10 \sqrt{5}}{3}\)'
+    answer: D
+    hint: 'Parametrize \(x=t\), \(y=t^2/2\); \(ds=\sqrt{1+t^2}\,dt\).'
+    explanation: '\(\int_0^22t\sqrt{1+t^2}dt\).'
+  21:
+    topic: s16-1
+    question: 'The integral of \(f(x,y)=(x+y^2)/\sqrt{1+x^2}\) over \(C:\ y=x^2/2\) from \((1,\tfrac12)\) to \((0,0)\) is'
+    A: '\(\frac{3}{4}\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(\frac{11}{20}\)'
+    answer: D
+    hint: 'Parametrize \(x=t\), \(y=t^2/2\); \(ds=\sqrt{1+t^2}\,dt\). Direction does not matter for a scalar line integral.'
+    explanation: '\(\int_0^1\left(t+\tfrac{t^4}4\right)dt=\tfrac12+\tfrac1{20}=\tfrac{11}{20}\).'
+  22:
+    topic: s16-1
+    question: 'The integral of \(f(x,y)=x+y\) over the quarter circle \(x^2+y^2=4\) in the first quadrant is'
+    A: '\(4\)'
+    B: '\(8\)'
+    C: '\(16\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Parametrize \(x=2\cos t\), \(y=2\sin t\); \(ds=2\,dt\).'
+    explanation: '\(4\int_0^{\pi/2}(\cos t+\sin t)dt=8\).'
+  23:
+    topic: s16-1
+    question: 'The integral of \(f(x,y)=x^2-y\) over the part of the circle \(x^2+y^2=4\) in the first quadrant from \((0,2)\) to \((\sqrt2,\sqrt2)\) is'
+    A: '\(- 4 \sqrt{2} - 4 + 2 \pi\)'
+    B: '\(- 2 \sqrt{2} - 2 + \pi\)'
+    C: '\(- \sqrt{2} - 1 + \frac{\pi}{2}\)'
+    D: '\(- 2 \sqrt{2} - 1 + \pi\)'
+    answer: B
+    hint: 'Parametrize the arc \(\tfrac\pi4\le t\le\tfrac\pi2\); \(ds=2\,dt\).'
+    explanation: '\(\int_{\pi/4}^{\pi/2}\left(8\cos^2t-4\sin t\right)dt=\pi-2-2\sqrt2\).'
+  24:
+    topic: s16-1
+    question: 'The mass of a wire along \(\mathbf r(t)=(t^2-1)\mathbf j+2t\mathbf k\), \(0\le t\le1\), with density \(\delta=\tfrac32t\) is'
+    A: '\(-3 + 6 \sqrt{2}\)'
+    B: '\(-1 + 2 \sqrt{2}\)'
+    C: '\(2 \sqrt{2}\)'
+    D: '\(-1 + \sqrt{2}\)'
+    answer: B
+    hint: '\(|\mathbf v|=2\sqrt{t^2+1}\); \(M=\int\delta\,|\mathbf v|dt\).'
+    explanation: '\(3\int_0^1t\sqrt{t^2+1}dt=\left(2\sqrt2-1\right)\).'
+  25:
+    topic: s16-1
+    question: 'A wire along \(\mathbf r(t)=(t^2-1)\mathbf j+2t\mathbf k\), \(-1\le t\le1\), has density \(\delta=15\sqrt{y+2}\). Its mass is'
+    A: '\(160\)'
+    B: '\(80\)'
+    C: '\(40\)'
+    D: '\(60\)'
+    answer: B
+    hint: '\(y+2=t^2+1\) and \(|\mathbf v|=2\sqrt{t^2+1}\).'
+    explanation: '\(30\int_{-1}^1(t^2+1)dt=30\cdot\tfrac83=80\).'
+  26:
+    topic: s16-1
+    question: 'The center of mass of that wire (\(\mathbf r(t)=(t^2-1)\mathbf j+2t\mathbf k\), \(\delta=15\sqrt{y+2}\)) has \(\bar z=\)'
+    A: '\(1\)'
+    B: '\(\tfrac12\)'
+    C: '\(\tfrac43\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'The integrand for \(M_{xy}\) is odd in \(t\).'
+    explanation: '\(z=2t\) is odd and the density is even in \(t\).'
+  27:
+    topic: s16-1
+    question: 'A thin wire along \(\mathbf r(t)=\sqrt2t\,\mathbf i+\sqrt2t\,\mathbf j+(4-t^2)\mathbf k\), \(0\le t\le1\), has density \(\delta=3t\). Its mass is'
+    A: '\(6 \sqrt{2}\)'
+    B: '\(-2 + 4 \sqrt{2}\)'
+    C: '\(-1 + 2 \sqrt{2}\)'
+    D: '\(4 \sqrt{2}\)'
+    answer: B
+    hint: '\(|\mathbf v|=\sqrt{4+4t^2}=2\sqrt{1+t^2}\).'
+    explanation: '\(6\int_0^1t\sqrt{1+t^2}dt=2(2\sqrt2-1)\).'
+  28:
+    topic: s16-1
+    question: 'The same wire (\(\mathbf r(t)=\sqrt2t\,\mathbf i+\sqrt2t\,\mathbf j+(4-t^2)\mathbf k\), \(0\le t\le1\)) with constant density \(\delta=1\) has mass'
+    A: '\(\ln{\left(1 + \sqrt{2} \right)}\)'
+    B: '\(\ln{\left(1 + \sqrt{2} \right)} + \sqrt{2}\)'
+    C: '\(2 \sqrt{2}\)'
+    D: '\(\sqrt{2}\)'
+    answer: B
+    hint: '\(M=\int_0^12\sqrt{1+t^2}dt\).'
+    explanation: '\(\left[t\sqrt{1+t^2}+\ln\left(t+\sqrt{1+t^2}\right)\right]_0^1=\sqrt2+\ln\left(1+\sqrt2\right)\).'
+  29:
+    topic: s16-1
+    question: 'The center of mass of a wire with constant density and the shape of the curve \(\mathbf r(t)=(\cos t)\mathbf i+(\sin t)\mathbf j\), \(0\le t\le\pi\), has \(\bar y=\)'
+    A: '\(\dfrac1\pi\)'
+    B: '\(\dfrac4{3\pi}\)'
+    C: '\(\dfrac12\)'
+    D: '\(\dfrac2\pi\)'
+    answer: D
+    hint: '\(\bar y=\dfrac{\int y\,ds}{\int ds}\).'
+    explanation: '\(\dfrac{\int_0^\pi\sin t\,dt}{\pi}=\dfrac2\pi\).'
+  30:
+    topic: s16-1
+    question: 'A circular hoop of constant density \(\delta\) lies on \(x^2+y^2=a^2\). Its moment of inertia about the \(z\)-axis is'
+    A: '\(2 \pi a^{2} \delta\)'
+    B: '\(4 \pi a^{3} \delta\)'
+    C: '\(2 \pi a^{3} \delta\)'
+    D: '\(\pi a^{3} \delta\)'
+    answer: C
+    hint: '\(I_z=\int(x^2+y^2)\delta\,ds\).'
+    explanation: '\(a^2\delta\cdot2\pi a=2\pi\delta a^3\).'
+  31:
+    topic: s16-1
+    question: 'The radius of gyration of the hoop about the \(z\)-axis is'
+    A: '\(\frac{a}{2}\)'
+    B: '\(\sqrt{2} a\)'
+    C: '\(a^{2}\)'
+    D: '\(a\)'
+    answer: D
+    hint: '\(R_z=\sqrt{I_z/M}\) with \(M=2\pi a\delta\).'
+    explanation: '\(\sqrt{a^2}=a\).'
+  32:
+    topic: s16-1
+    question: 'A rod of constant density \(\delta\) lies along \(\mathbf r(t)=t\mathbf j+(2-2t)\mathbf k\), \(0\le t\le1\). Its moment of inertia about the \(x\)-axis is'
+    A: '\(\frac{5 \sqrt{5} \delta}{6}\)'
+    B: '\(\sqrt{5} \delta\)'
+    C: '\(\frac{5 \sqrt{5} \delta}{3}\)'
+    D: '\(\frac{5 \delta}{3}\)'
+    answer: C
+    hint: '\(I_x=\int(y^2+z^2)\delta\,ds\) with \(ds=\sqrt5\,dt\).'
+    explanation: '\(\sqrt5\delta\int_0^1\left[t^2+(2-2t)^2\right]dt=\sqrt5\delta\cdot\tfrac53\).'
+  33:
+    topic: s16-1
+    question: 'A spring of constant density \(\delta\) lies along the helix \(\mathbf r(t)=(\cos t)\mathbf i+(\sin t)\mathbf j+t\mathbf k\), \(0\le t\le2\pi\). Its moment of inertia \(I_z\) is'
+    A: '\(4 \sqrt{2} \pi \delta\)'
+    B: '\(\sqrt{2} \pi \delta\)'
+    C: '\(2 \sqrt{2} \pi \delta\)'
+    D: '\(2 \pi \delta\)'
+    answer: C
+    hint: '\(I_z=\int(x^2+y^2)\delta\,ds\) with \(ds=\sqrt2\,dt\).'
+    explanation: '\(2\sqrt2\pi\delta\).'
+  34:
+    topic: s16-1
+    question: 'The radius of gyration \(R_z\) of the helical spring above is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(\sqrt{2}\)'
+    answer: B
+    hint: '\(R_z=\sqrt{I_z/M}\) with \(M=2\sqrt2\pi\delta\).'
+    explanation: '\(x^2+y^2=1\) along the whole spring.'
+  35:
+    topic: s16-1
+    question: 'A second spring twice as long lies along the same helix for \(0\le t\le4\pi\). Compared with the first spring, its radius of gyration \(R_z\) is'
+    A: 'doubled, while \(I_z\) is the same'
+    B: 'doubled, and \(I_z\) is also doubled'
+    C: 'halved, while \(I_z\) is doubled'
+    D: 'the same, while \(I_z\) is doubled'
+    answer: D
+    hint: '\(R_z=\sqrt{I_z/M}\); both \(I_z\) and \(M\) double.'
+    explanation: The ratio is unchanged.
+  36:
+    topic: s16-1
+    question: 'A wire of constant density \(\delta=1\) has the shape of the curve with \(\mathbf r(t)=t\cos t\,\mathbf i+t\sin t\,\mathbf j+\tfrac{2\sqrt2}3t^{3/2}\mathbf k\), \(0\le t\le1\). Its speed \(|\mathbf v|\) is'
+    A: '\(1+t\)'
+    B: '\(t\)'
+    C: '\(\sqrt{1+t}\)'
+    D: '\(1+t^2\)'
+    answer: A
+    hint: '\(|\mathbf v|^2=\left(\cos t-t\sin t\right)^2+\left(\sin t+t\cos t\right)^2+2t\).'
+    explanation: '\(|\mathbf v|^2=1+t^2+2t=(1+t)^2\).'
+  37:
+    topic: s16-1
+    question: 'For that wire the center of mass has \(\bar z=\)'
+    A: '\(\frac{1}{5} + \frac{32 \sqrt{2}}{105}\)'
+    B: '\(\frac{16 \sqrt{2}}{105}\)'
+    C: '\(\frac{64 \sqrt{2}}{105}\)'
+    D: '\(\frac{32 \sqrt{2}}{105}\)'
+    answer: D
+    hint: '\(\bar z=\dfrac{\int z\,ds}{\int ds}\) with \(ds=(1+t)\,dt\) and \(M=\tfrac32\).'
+    explanation: '\(\int_0^1\tfrac{2\sqrt2}3\left(t^{3/2}+t^{5/2}\right)dt=\tfrac{2\sqrt2}3\cdot\tfrac{24}{35}\).'
+  38:
+    topic: s16-1
+    question: 'For that wire (\(\delta=1\)), the moment of inertia about the \(z\)-axis is'
+    A: '\(\frac{7}{12}\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(\frac{7}{6}\)'
+    answer: A
+    hint: '\(I_z=\int(x^2+y^2)\,ds=\int_0^1t^2(1+t)dt\).'
+    explanation: '\(\tfrac13+\tfrac14=\tfrac7{12}\).'
+  39:
+    topic: s16-1
+    question: 'The line integral \(\int_Cf\,ds\) of a scalar function over a smooth curve \(C:\mathbf r(t)\), \(a\le t\le b\), is computed as'
+    A: '\(\displaystyle\int_a^bf(\mathbf r(t))\,dt\)'
+    B: '\(\displaystyle\int_a^bf(\mathbf r(t))\cdot\mathbf r''(t)\,dt\)'
+    C: '\(\displaystyle\int_a^b|\mathbf r''(t)|\,dt\)'
+    D: '\(\displaystyle\int_a^bf(\mathbf r(t))\,|\mathbf r''(t)|\,dt\)'
+    answer: D
+    hint: '\(ds=|\mathbf v|\,dt\).'
+    explanation: 'The arc-length element is \(ds=|\mathbf v|dt\).'
+  40:
+    topic: s16-1
+    question: 'If \(f\equiv1\), the line integral \(\int_Cf\,ds\) equals'
+    A: 'the length of \(C\)'
+    B: zero
+    C: 'the mass of \(C\)'
+    D: 'the area under \(C\)'
+    answer: A
+    hint: '\(\int_Cds\) adds up the infinitesimal lengths.'
+    explanation: It is the arc length.
+  41:
+    topic: s16-1
+    question: 'For a scalar function, \(\displaystyle\int_{-C}f\,ds\) (the curve traversed backwards) equals'
+    A: '\(-\displaystyle\int_Cf\,ds\)'
+    B: '\(0\)'
+    C: '\(\displaystyle\int_Cf\,ds\)'
+    D: '\(2\displaystyle\int_Cf\,ds\)'
+    answer: C
+    hint: Arc length is positive regardless of direction.
+    explanation: The scalar line integral is independent of orientation.
+  42:
+    topic: s16-1
+    question: 'If \(C=C_1\cup C_2\) is made of two smooth pieces, then \(\displaystyle\int_Cf\,ds=\)'
+    A: '\(\displaystyle\int_{C_1}f\,ds\cdot\int_{C_2}f\,ds\)'
+    B: '\(\displaystyle\int_{C_1}f\,ds\)'
+    C: '\(\displaystyle\int_{C_1}f\,ds-\int_{C_2}f\,ds\)'
+    D: '\(\displaystyle\int_{C_1}f\,ds+\int_{C_2}f\,ds\)'
+    answer: D
+    hint: The integral is additive over pieces of the path.
+    explanation: Integrate piece by piece.
+  43:
+    topic: s16-1
+    question: 'The mass of a thin wire with density \(\delta(x,y,z)\) along a curve \(C\) is'
+    A: '\(\displaystyle M=\int_C\delta\,d\mathbf r\)'
+    B: '\(\displaystyle M=\int_C\delta\,dt\)'
+    C: '\(\displaystyle M=\int_C\delta\,ds\)'
+    D: '\(\displaystyle M=\int_C|\mathbf r|\,ds\)'
+    answer: C
+    hint: Sum density times small arc length.
+    explanation: '\(dm=\delta\,ds\).'
+  44:
+    topic: s16-1
+    question: 'The moment of inertia of a wire about the \(z\)-axis is \(I_z=\)'
+    A: '\(\displaystyle\int_C(y^2+z^2)\,\delta\,ds\)'
+    B: '\(\displaystyle\int_C(x+y)\,\delta\,ds\)'
+    C: '\(\displaystyle\int_C(x^2+y^2)\,\delta\,ds\)'
+    D: '\(\displaystyle\int_Cz^2\,\delta\,ds\)'
+    answer: C
+    hint: 'Use the squared distance to the \(z\)-axis.'
+    explanation: 'The distance from \((x,y,z)\) to the \(z\)-axis is \(\sqrt{x^2+y^2}\).'
+  45:
+    topic: s16-1
+    question: 'The center of mass coordinate \(\bar x\) of a wire is'
+    A: '\(\displaystyle\bar x=\frac{\int_Cx^2\,\delta\,ds}{\int_C\delta\,ds}\)'
+    B: '\(\displaystyle\bar x=\int_Cx\,ds\)'
+    C: '\(\displaystyle\bar x=\frac{\int_Cx\,\delta\,ds}{\int_C\delta\,ds}\)'
+    D: '\(\displaystyle\bar x=\frac{\int_C\delta\,ds}{\int_Cx\,\delta\,ds}\)'
+    answer: C
+    hint: It is the first moment divided by mass.
+    explanation: '\(\bar x=M_{yz}/M\).'
+  46:
+    topic: s16-2
+    question: 'The gradient field of \(f(x,y,z)=\frac{1}{\sqrt{x^{2} + y^{2} + z^{2}}}\) is'
+    A: '\(-\frac{y}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{i}-\frac{x}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{j}-\frac{z}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{k}\)'
+    B: '\(-\frac{x}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{i}-\frac{y}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{j}-\frac{z}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{k}\)'
+    C: '\(\frac{x}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{i}+\frac{y}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{j}+\frac{z}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{k}\)'
+    D: '\(-\frac{2 x}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{i}-\frac{2 y}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{j}-\frac{2 z}{\left(x^{2} + y^{2} + z^{2}\right)^{\frac{3}{2}}}\mathbf{k}\)'
+    answer: B
+    hint: '\(\nabla f=f_x\mathbf i+f_y\mathbf j+f_z\mathbf k\).'
+    explanation: Differentiate with respect to each variable.
+  47:
+    topic: s16-2
+    question: 'The gradient field of \(f(x,y,z)=\ln{\left(\sqrt{x^{2} + y^{2} + z^{2}} \right)}\) is'
+    A: '\(\frac{y}{x^{2} + y^{2} + z^{2}}\mathbf{i}+\frac{x}{x^{2} + y^{2} + z^{2}}\mathbf{j}+\frac{z}{x^{2} + y^{2} + z^{2}}\mathbf{k}\)'
+    B: '\(-\frac{x}{x^{2} + y^{2} + z^{2}}\mathbf{i}-\frac{y}{x^{2} + y^{2} + z^{2}}\mathbf{j}-\frac{z}{x^{2} + y^{2} + z^{2}}\mathbf{k}\)'
+    C: '\(\frac{x}{x^{2} + y^{2} + z^{2}}\mathbf{i}+\frac{y}{x^{2} + y^{2} + z^{2}}\mathbf{j}+\frac{z}{x^{2} + y^{2} + z^{2}}\mathbf{k}\)'
+    D: '\(\frac{2 x}{x^{2} + y^{2} + z^{2}}\mathbf{i}+\frac{2 y}{x^{2} + y^{2} + z^{2}}\mathbf{j}+\frac{2 z}{x^{2} + y^{2} + z^{2}}\mathbf{k}\)'
+    answer: C
+    hint: '\(\nabla f=f_x\mathbf i+f_y\mathbf j+f_z\mathbf k\).'
+    explanation: Differentiate with respect to each variable.
+  48:
+    topic: s16-2
+    question: 'The gradient field of \(f(x,y,z)=e^{z} - \ln{\left(x^{2} + y^{2} \right)}\) is'
+    A: '\(-\frac{2 y}{x^{2} + y^{2}}\mathbf{i}-\frac{2 x}{x^{2} + y^{2}}\mathbf{j}+e^{z}\mathbf{k}\)'
+    B: '\(\frac{2 x}{x^{2} + y^{2}}\mathbf{i}+\frac{2 y}{x^{2} + y^{2}}\mathbf{j}-e^{z}\mathbf{k}\)'
+    C: '\(-\frac{2 x}{x^{2} + y^{2}}\mathbf{i}-\frac{2 y}{x^{2} + y^{2}}\mathbf{j}+e^{z}\mathbf{k}\)'
+    D: '\(-\frac{4 x}{x^{2} + y^{2}}\mathbf{i}-\frac{4 y}{x^{2} + y^{2}}\mathbf{j}+2 e^{z}\mathbf{k}\)'
+    answer: C
+    hint: '\(\nabla f=f_x\mathbf i+f_y\mathbf j+f_z\mathbf k\).'
+    explanation: Differentiate with respect to each variable.
+  49:
+    topic: s16-2
+    question: 'The gradient field of \(f(x,y,z)=x y + x z + y z\) is'
+    A: '\(\left(y + z\right)\mathbf{i}+\left(x + z\right)\mathbf{j}+\left(x + y\right)\mathbf{k}\)'
+    B: '\(\left(2 y + 2 z\right)\mathbf{i}+\left(2 x + 2 z\right)\mathbf{j}+\left(2 x + 2 y\right)\mathbf{k}\)'
+    C: '\(\left(x + z\right)\mathbf{i}+\left(y + z\right)\mathbf{j}+\left(x + y\right)\mathbf{k}\)'
+    D: '\(-\left(y + z\right)\mathbf{i}-\left(x + z\right)\mathbf{j}-\left(x + y\right)\mathbf{k}\)'
+    answer: A
+    hint: '\(\nabla f=f_x\mathbf i+f_y\mathbf j+f_z\mathbf k\).'
+    explanation: Differentiate with respect to each variable.
+  50:
+    topic: s16-2
+    question: 'A vector field in the plane that points toward the origin with magnitude inversely proportional to the square of the distance is (for a constant \(k>0\))'
+    A: '\(\mathbf F=-k\dfrac{x\mathbf i+y\mathbf j}{(x^2+y^2)^{1/2}}\)'
+    B: '\(\mathbf F=-k\dfrac{x\mathbf i+y\mathbf j}{x^2+y^2}\)'
+    C: '\(\mathbf F=k\dfrac{x\mathbf i+y\mathbf j}{(x^2+y^2)^{3/2}}\)'
+    D: '\(\mathbf F=-k\dfrac{x\mathbf i+y\mathbf j}{(x^2+y^2)^{3/2}}\)'
+    answer: D
+    hint: 'The unit vector toward the origin is \(-\tfrac{x\mathbf i+y\mathbf j}{\sqrt{x^2+y^2}}\); divide the magnitude \(k/r^2\).'
+    explanation: '\(|\mathbf F|=k/r^2\).'
+  51:
+    topic: s16-2
+    question: 'The vector field that is tangent to the circle \(x^2+y^2=a^2+b^2\) at \((a,b)\), points clockwise, and has magnitude \(\sqrt{a^2+b^2}\) is'
+    A: '\(\mathbf F=-y\mathbf i+x\mathbf j\)'
+    B: '\(\mathbf F=\dfrac{y\mathbf i-x\mathbf j}{\sqrt{x^2+y^2}}\)'
+    C: '\(\mathbf F=y\mathbf i-x\mathbf j\)'
+    D: '\(\mathbf F=x\mathbf i+y\mathbf j\)'
+    answer: C
+    hint: '\((y,-x)\) is perpendicular to \((x,y)\), clockwise, with magnitude \(r\).'
+    explanation: 'At \((a,b)\): \(\langle b,-a\rangle\).'
+  52:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=3y\mathbf i+2x\mathbf j+4z\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the line \(C_1\): \(\mathbf r=t\mathbf i+t\mathbf j+t\mathbf k\), \(0\le t\le1\), is'
+    A: '\(\frac{9}{2}\)'
+    B: '\(- \frac{9}{2}\)'
+    C: '\(9\)'
+    D: '\(\frac{11}{2}\)'
+    answer: A
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  53:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=3y\mathbf i+2x\mathbf j+4z\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the curve \(C_2\): \(\mathbf r=t\mathbf i+t^2\mathbf j+t^4\mathbf k\), \(0\le t\le1\), is'
+    A: '\(\frac{13}{3}\)'
+    B: '\(\frac{26}{3}\)'
+    C: '\(\frac{16}{3}\)'
+    D: '\(- \frac{13}{3}\)'
+    answer: A
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  54:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=3y\mathbf i+2x\mathbf j+4z\mathbf k\) along the path from \((0,0,0)\) to \((1,1,0)\) (straight line) followed by the vertical segment from \((1,1,0)\) to \((1,1,1)\) is'
+    A: '\(\frac{9}{2}\)'
+    B: '\(9\)'
+    C: '\(\frac{11}{2}\)'
+    D: '\(- \frac{9}{2}\)'
+    answer: A
+    hint: Add the work along the two straight segments.
+    explanation: 'Parametrize \((t,t,0)\) and \((1,1,t)\).'
+  55:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\dfrac1{x^2+1}\mathbf j\) from \((0,0,0)\) to \((1,1,1)\) over the line \(C_1\): \(\mathbf r=t\mathbf i+t\mathbf j+t\mathbf k\), \(0\le t\le1\), is'
+    A: '\(\frac{\pi}{4} + 1\)'
+    B: '\(\frac{\pi}{4}\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(- \frac{\pi}{4}\)'
+    answer: B
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  56:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\dfrac1{x^2+1}\mathbf j\) from \((0,0,0)\) to \((1,1,1)\) over the curve \(C_2\): \(\mathbf r=t\mathbf i+t^2\mathbf j+t^4\mathbf k\), \(0\le t\le1\), is'
+    A: '\(2 \ln{\left(2 \right)}\)'
+    B: '\(- \ln{\left(2 \right)}\)'
+    C: '\(\ln{\left(2 \right)} + 1\)'
+    D: '\(\ln{\left(2 \right)}\)'
+    answer: D
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  57:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\dfrac1{x^2+1}\mathbf j\) along the path from \((0,0,0)\) to \((1,1,0)\) (straight line) followed by the vertical segment from \((1,1,0)\) to \((1,1,1)\) is'
+    A: '\(\frac{\pi}{4} + 1\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(- \frac{\pi}{4}\)'
+    D: '\(\frac{\pi}{4}\)'
+    answer: D
+    hint: Add the work along the two straight segments.
+    explanation: 'Parametrize \((t,t,0)\) and \((1,1,t)\).'
+  58:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\sqrt z\,\mathbf i-2x\mathbf j+\sqrt y\,\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the line \(C_1\): \(\mathbf r=t\mathbf i+t\mathbf j+t\mathbf k\), \(0\le t\le1\), is'
+    A: '\(- \frac{1}{3}\)'
+    B: '\(\frac{1}{3}\)'
+    C: '\(\frac{4}{3}\)'
+    D: '\(\frac{2}{3}\)'
+    answer: B
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  59:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\sqrt z\,\mathbf i-2x\mathbf j+\sqrt y\,\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the curve \(C_2\): \(\mathbf r=t\mathbf i+t^2\mathbf j+t^4\mathbf k\), \(0\le t\le1\), is'
+    A: '\(\frac{1}{5}\)'
+    B: '\(- \frac{1}{5}\)'
+    C: '\(- \frac{2}{5}\)'
+    D: '\(\frac{4}{5}\)'
+    answer: B
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  60:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\sqrt z\,\mathbf i-2x\mathbf j+\sqrt y\,\mathbf k\) along the path from \((0,0,0)\) to \((1,1,0)\) (straight line) followed by the vertical segment from \((1,1,0)\) to \((1,1,1)\) is'
+    A: '\(3\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(0\)'
+    answer: D
+    hint: Add the work along the two straight segments.
+    explanation: 'Parametrize \((t,t,0)\) and \((1,1,t)\).'
+  61:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=xy\mathbf i+yz\mathbf j+xz\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the line \(C_1\): \(\mathbf r=t\mathbf i+t\mathbf j+t\mathbf k\), \(0\le t\le1\), is'
+    A: '\(1\)'
+    B: '\(2\)'
+    C: '\(-1\)'
+    D: '\(\frac{1}{2}\)'
+    answer: A
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  62:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=xy\mathbf i+yz\mathbf j+xz\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the curve \(C_2\): \(\mathbf r=t\mathbf i+t^2\mathbf j+t^4\mathbf k\), \(0\le t\le1\), is'
+    A: '\(- \frac{17}{18}\)'
+    B: '\(\frac{35}{18}\)'
+    C: '\(\frac{17}{9}\)'
+    D: '\(\frac{17}{18}\)'
+    answer: D
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  63:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=xy\mathbf i+yz\mathbf j+xz\mathbf k\) along the path from \((0,0,0)\) to \((1,1,0)\) (straight line) followed by the vertical segment from \((1,1,0)\) to \((1,1,1)\) is'
+    A: '\(- \frac{5}{6}\)'
+    B: '\(\frac{11}{6}\)'
+    C: '\(\frac{5}{6}\)'
+    D: '\(\frac{5}{3}\)'
+    answer: C
+    hint: Add the work along the two straight segments.
+    explanation: 'Parametrize \((t,t,0)\) and \((1,1,t)\).'
+  64:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=(3x^2-3x)\mathbf i+3z\mathbf j+\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the line \(C_1\): \(\mathbf r=t\mathbf i+t\mathbf j+t\mathbf k\), \(0\le t\le1\), is'
+    A: '\(3\)'
+    B: '\(-2\)'
+    C: '\(4\)'
+    D: '\(2\)'
+    answer: D
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  65:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=(3x^2-3x)\mathbf i+3z\mathbf j+\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the curve \(C_2\): \(\mathbf r=t\mathbf i+t^2\mathbf j+t^4\mathbf k\), \(0\le t\le1\), is'
+    A: '\(- \frac{3}{2}\)'
+    B: '\(\frac{3}{2}\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(3\)'
+    answer: B
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  66:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=(3x^2-3x)\mathbf i+3z\mathbf j+\mathbf k\) along the path from \((0,0,0)\) to \((1,1,0)\) (straight line) followed by the vertical segment from \((1,1,0)\) to \((1,1,1)\) is'
+    A: '\(\frac{3}{2}\)'
+    B: '\(1\)'
+    C: '\(- \frac{1}{2}\)'
+    D: '\(\frac{1}{2}\)'
+    answer: D
+    hint: Add the work along the two straight segments.
+    explanation: 'Parametrize \((t,t,0)\) and \((1,1,t)\).'
+  67:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=(y+z)\mathbf i+(z+x)\mathbf j+(x+y)\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the line \(C_1\): \(\mathbf r=t\mathbf i+t\mathbf j+t\mathbf k\), \(0\le t\le1\), is'
+    A: '\(-3\)'
+    B: '\(3\)'
+    C: '\(4\)'
+    D: '\(6\)'
+    answer: B
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  68:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=(y+z)\mathbf i+(z+x)\mathbf j+(x+y)\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) over the curve \(C_2\): \(\mathbf r=t\mathbf i+t^2\mathbf j+t^4\mathbf k\), \(0\le t\le1\), is'
+    A: '\(6\)'
+    B: '\(3\)'
+    C: '\(4\)'
+    D: '\(-3\)'
+    answer: B
+    hint: '\(W=\int_C\mathbf F\cdot d\mathbf r=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: Substitute and integrate.
+  69:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=(y+z)\mathbf i+(z+x)\mathbf j+(x+y)\mathbf k\) along the path from \((0,0,0)\) to \((1,1,0)\) (straight line) followed by the vertical segment from \((1,1,0)\) to \((1,1,1)\) is'
+    A: '\(3\)'
+    B: '\(6\)'
+    C: '\(4\)'
+    D: '\(-3\)'
+    answer: A
+    hint: Add the work along the two straight segments.
+    explanation: 'Parametrize \((t,t,0)\) and \((1,1,t)\).'
+  70:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=xy\mathbf i+y\mathbf j-yz\mathbf k\) along \(\mathbf r=t\mathbf i+t^2\mathbf j+t\mathbf k\), \(0\le t\le1\) is'
+    A: '\(- \frac{1}{2}\)'
+    B: '\(1\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(\frac{1}{2}\)'
+    answer: D
+    hint: '\(W=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: 'Substitute \(x,y,z\) in terms of \(t\) and integrate.'
+  71:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=2y\mathbf i+3x\mathbf j+(x+y)\mathbf k\) along \(\mathbf r=\cos t\,\mathbf i+\sin t\,\mathbf j+\tfrac t6\mathbf k\), \(0\le t\le2\pi\) is'
+    A: '\(\pi\)'
+    B: '\(- \pi\)'
+    C: '\(1 + \pi\)'
+    D: '\(2 \pi\)'
+    answer: A
+    hint: '\(W=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: 'Substitute \(x,y,z\) in terms of \(t\) and integrate.'
+  72:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=z\mathbf i+x\mathbf j+y\mathbf k\) along \(\mathbf r=\sin t\,\mathbf i+\cos t\,\mathbf j+t\mathbf k\), \(0\le t\le2\pi\) is'
+    A: '\(- 2 \pi\)'
+    B: '\(\pi\)'
+    C: '\(- \pi\)'
+    D: '\(1 - \pi\)'
+    answer: C
+    hint: '\(W=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: 'Substitute \(x,y,z\) in terms of \(t\) and integrate.'
+  73:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=6z\mathbf i+y^2\mathbf j+12x\mathbf k\) along \(\mathbf r=\sin t\,\mathbf i+\cos t\,\mathbf j+\tfrac t6\mathbf k\), \(0\le t\le2\pi\) is'
+    A: '\(3\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(W=\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\).'
+    explanation: 'Substitute \(x,y,z\) in terms of \(t\) and integrate.'
+  74:
+    topic: s16-2
+    question: '\(\displaystyle\int_Cxy\,dx+(x+y)\,dy\) along \(y=x^2\) from \((-1,1)\) to \((2,4)\) is'
+    A: '\(\frac{73}{4}\)'
+    B: '\(- \frac{69}{4}\)'
+    C: '\(\frac{69}{2}\)'
+    D: '\(\frac{69}{4}\)'
+    answer: D
+    hint: 'Use \(x=t\), \(y=t^2\), \(dy=2t\,dt\).'
+    explanation: '\(\int_{-1}^2\left[t^3+(t+t^2)2t\right]dt=\int_{-1}^2(3t^3+2t^2)dt\).'
+  75:
+    topic: s16-2
+    question: '\(\displaystyle\oint_C(x-y)\,dx+(x+y)\,dy\) counterclockwise around the triangle with vertices \((0,0)\), \((1,0)\), \((0,1)\) is'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(2\)'
+    answer: B
+    hint: Add the integrals over the three edges.
+    explanation: 'By Green''s Theorem the circulation is \(\iint\left(N_x-M_y\right)dA=\iint2\,dA=2\cdot\tfrac12=1\); equivalently add the three edge integrals.'
+  76:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=x^2\mathbf i-y\mathbf j\) along \(x=y^2\) from \((4,2)\) to \((1,-1)\) is'
+    A: '\(-39\)'
+    B: '\(- \frac{37}{2}\)'
+    C: '\(- \frac{39}{2}\)'
+    D: '\(\frac{39}{2}\)'
+    answer: C
+    hint: 'Parametrize \(x=t^2\), \(y=t\) with \(t\) from \(2\) to \(-1\).'
+    explanation: '\(\int_2^{-1}\left(2t^5-t\right)dt\).'
+  77:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=y\mathbf i-x\mathbf j\) counterclockwise around the unit circle from \((1,0)\) to \((0,1)\) (a quarter circle) is'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(\pi\)'
+    C: '\(- \pi\)'
+    D: '\(- \frac{\pi}{2}\)'
+    answer: D
+    hint: 'On \(\mathbf r=(\cos t,\sin t)\): \(\mathbf F\cdot\mathbf r''=-\sin^2t-\cos^2t=-1\).'
+    explanation: '\(\int_0^{\pi/2}(-1)dt=-\tfrac\pi2\).'
+  78:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=xy\mathbf i+(y-x)\mathbf j\) over the straight line from \((1,1)\) to \((2,3)\) is'
+    A: '\(\frac{25}{3}\)'
+    B: '\(- \frac{25}{6}\)'
+    C: '\(\frac{25}{6}\)'
+    D: '\(\frac{31}{6}\)'
+    answer: C
+    hint: '\(x=1+t\), \(y=1+2t\).'
+    explanation: 'Integrate \(\mathbf F\cdot\mathbf r''\) over \(0\le t\le1\).'
+  79:
+    topic: s16-2
+    question: 'The work done by the gradient field of \(f(x,y)=(x+y)^2\) counterclockwise around the circle \(x^2+y^2=4\) from \((2,0)\) back to itself is'
+    A: '\(8\pi\)'
+    B: '\(4\pi\)'
+    C: '\(-8\pi\)'
+    D: '\(0\)'
+    answer: D
+    hint: A gradient field does zero work around a closed path.
+    explanation: '\(\oint\nabla f\cdot d\mathbf r=f(\text{end})-f(\text{start})=0\).'
+  80:
+    topic: s16-2
+    question: 'The circulation of \(\mathbf F_1=x\mathbf i+y\mathbf j\) around the unit circle \(\mathbf r=\cos t\,\mathbf i+\sin t\,\mathbf j\) (counterclockwise) is'
+    A: '\(\pi\)'
+    B: '\(2 \pi\)'
+    C: '\(0\)'
+    D: '\(4 \pi\)'
+    answer: C
+    hint: '\(\oint\mathbf F\cdot\mathbf T\,ds=\oint M\,dx+N\,dy\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  81:
+    topic: s16-2
+    question: 'The flux of \(\mathbf F_1=x\mathbf i+y\mathbf j\) around the unit circle (counterclockwise) is'
+    A: '\(4 \pi\)'
+    B: '\(3 \pi\)'
+    C: '\(2 \pi\)'
+    D: '\(- 2 \pi\)'
+    answer: C
+    hint: '\(\oint\mathbf F\cdot\mathbf n\,ds=\oint M\,dy-N\,dx\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  82:
+    topic: s16-2
+    question: 'The circulation of \(\mathbf F_1=x\mathbf i+y\mathbf j\) around the ellipse \(\mathbf r=\cos t\,\mathbf i+4\sin t\,\mathbf j\) (counterclockwise) is'
+    A: '\(2 \pi\)'
+    B: '\(0\)'
+    C: '\(4 \pi\)'
+    D: '\(\pi\)'
+    answer: B
+    hint: '\(\oint\mathbf F\cdot\mathbf T\,ds=\oint M\,dx+N\,dy\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  83:
+    topic: s16-2
+    question: 'The flux of \(\mathbf F_1=x\mathbf i+y\mathbf j\) around the ellipse \(\mathbf r=\cos t\,\mathbf i+4\sin t\,\mathbf j\) (counterclockwise) is'
+    A: '\(16 \pi\)'
+    B: '\(- 8 \pi\)'
+    C: '\(8 \pi\)'
+    D: '\(9 \pi\)'
+    answer: C
+    hint: '\(\oint\mathbf F\cdot\mathbf n\,ds=\oint M\,dy-N\,dx\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  84:
+    topic: s16-2
+    question: 'The circulation of \(\mathbf F_2=-y\mathbf i+x\mathbf j\) around the unit circle \(\mathbf r=\cos t\,\mathbf i+\sin t\,\mathbf j\) (counterclockwise) is'
+    A: '\(3 \pi\)'
+    B: '\(2 \pi\)'
+    C: '\(- 2 \pi\)'
+    D: '\(4 \pi\)'
+    answer: B
+    hint: '\(\oint\mathbf F\cdot\mathbf T\,ds=\oint M\,dx+N\,dy\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  85:
+    topic: s16-2
+    question: 'The flux of \(\mathbf F_2=-y\mathbf i+x\mathbf j\) around the unit circle (counterclockwise) is'
+    A: '\(\pi\)'
+    B: '\(0\)'
+    C: '\(2 \pi\)'
+    D: '\(4 \pi\)'
+    answer: B
+    hint: '\(\oint\mathbf F\cdot\mathbf n\,ds=\oint M\,dy-N\,dx\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  86:
+    topic: s16-2
+    question: 'The circulation of \(\mathbf F_2=-y\mathbf i+x\mathbf j\) around the ellipse \(\mathbf r=\cos t\,\mathbf i+4\sin t\,\mathbf j\) (counterclockwise) is'
+    A: '\(8 \pi\)'
+    B: '\(- 8 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(9 \pi\)'
+    answer: A
+    hint: '\(\oint\mathbf F\cdot\mathbf T\,ds=\oint M\,dx+N\,dy\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  87:
+    topic: s16-2
+    question: 'The flux of \(\mathbf F_2=-y\mathbf i+x\mathbf j\) around the ellipse \(\mathbf r=\cos t\,\mathbf i+4\sin t\,\mathbf j\) (counterclockwise) is'
+    A: '\(4 \pi\)'
+    B: '\(0\)'
+    C: '\(\pi\)'
+    D: '\(2 \pi\)'
+    answer: B
+    hint: '\(\oint\mathbf F\cdot\mathbf n\,ds=\oint M\,dy-N\,dx\)'
+    explanation: 'Substitute the parametrization and integrate over \([0,2\pi]\).'
+  88:
+    topic: s16-2
+    question: 'The flux of \(\mathbf F_1=2x\mathbf i-3y\mathbf j\) across the circle \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le2\pi\), is'
+    A: '\(\pi a^{2}\)'
+    B: '\(- 5 \pi a^{2}\)'
+    C: '\(- \pi a^{2}\)'
+    D: '\(2 \pi a^{2}\)'
+    answer: C
+    hint: '\(\text{flux}=\oint M\,dy-N\,dx\).'
+    explanation: '\(\int_0^{2\pi}\left(2a^2\cos^2t-3a^2\sin^2t\right)dt=-\pi a^2\).'
+  89:
+    topic: s16-2
+    question: 'The flux of \(\mathbf F_2=2x\mathbf i+(x-y)\mathbf j\) across the circle \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le2\pi\), is'
+    A: '\(\pi a^{2}\)'
+    B: '\(4 \pi a^{2}\)'
+    C: '\(0\)'
+    D: '\(3 \pi a^{2}\)'
+    answer: A
+    hint: '\(\text{flux}=\oint M\,dy-N\,dx\).'
+    explanation: '\(2a^2\pi+0\cdot\ldots\): the \(\cos t\sin t\) terms integrate to zero.'
+  90:
+    topic: s16-2
+    question: 'The counterclockwise circulation of \(\mathbf F=x\mathbf i+y\mathbf j\) around the closed semicircular path (upper arch \(\mathbf r_1=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le\pi\), then the segment \(\mathbf r_2=t\mathbf i\), \(-a\le t\le a\)) is'
+    A: '\(\pi a^{2}\)'
+    B: '\(2 a^{3}\)'
+    C: '\(a^{2}\)'
+    D: '\(0\)'
+    answer: D
+    hint: Add the integrals over the arch and the segment.
+    explanation: 'Circulation \(=\oint M\,dx+N\,dy\).'
+  91:
+    topic: s16-2
+    question: 'The outward flux of \(\mathbf F=x\mathbf i+y\mathbf j\) across the same closed semicircular path is'
+    A: '\(\pi a^{2}\)'
+    B: '\(- \pi a^{2}\)'
+    C: '\(2 \pi a^{2}\)'
+    D: '\(\frac{\pi a^{2}}{2}\)'
+    answer: A
+    hint: 'Flux \(=\oint M\,dy-N\,dx\).'
+    explanation: Add the arch and the segment.
+  92:
+    topic: s16-2
+    question: 'The counterclockwise circulation of \(\mathbf F=x^2\mathbf i+y^2\mathbf j\) around the closed semicircular path (upper arch \(\mathbf r_1=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le\pi\), then the segment \(\mathbf r_2=t\mathbf i\), \(-a\le t\le a\)) is'
+    A: '\(2 a^{3}\)'
+    B: '\(\pi a^{2}\)'
+    C: '\(a^{2}\)'
+    D: '\(0\)'
+    answer: D
+    hint: Add the integrals over the arch and the segment.
+    explanation: 'Circulation \(=\oint M\,dx+N\,dy\).'
+  93:
+    topic: s16-2
+    question: 'The outward flux of \(\mathbf F=x^2\mathbf i+y^2\mathbf j\) across the same closed semicircular path is'
+    A: '\(- \frac{4 a^{3}}{3}\)'
+    B: '\(a^{2} \left(\frac{4 a}{3} + \pi\right)\)'
+    C: '\(\frac{4 a^{3}}{3}\)'
+    D: '\(\frac{8 a^{3}}{3}\)'
+    answer: C
+    hint: 'Flux \(=\oint M\,dy-N\,dx\).'
+    explanation: Add the arch and the segment.
+  94:
+    topic: s16-2
+    question: 'The counterclockwise circulation of \(\mathbf F=-y\mathbf i+x\mathbf j\) around the closed semicircular path (upper arch \(\mathbf r_1=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le\pi\), then the segment \(\mathbf r_2=t\mathbf i\), \(-a\le t\le a\)) is'
+    A: '\(2 \pi a^{2}\)'
+    B: '\(- \pi a^{2}\)'
+    C: '\(\pi a^{2}\)'
+    D: '\(\frac{\pi a^{2}}{2}\)'
+    answer: C
+    hint: Add the integrals over the arch and the segment.
+    explanation: 'Circulation \(=\oint M\,dx+N\,dy\).'
+  95:
+    topic: s16-2
+    question: 'The outward flux of \(\mathbf F=-y\mathbf i+x\mathbf j\) across the same closed semicircular path is'
+    A: '\(a^{2}\)'
+    B: '\(0\)'
+    C: '\(2 a^{3}\)'
+    D: '\(\pi a^{2}\)'
+    answer: B
+    hint: 'Flux \(=\oint M\,dy-N\,dx\).'
+    explanation: Add the arch and the segment.
+  96:
+    topic: s16-2
+    question: 'The counterclockwise circulation of \(\mathbf F=-y^2\mathbf i+x^2\mathbf j\) around the closed semicircular path (upper arch \(\mathbf r_1=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le\pi\), then the segment \(\mathbf r_2=t\mathbf i\), \(-a\le t\le a\)) is'
+    A: '\(\frac{8 a^{3}}{3}\)'
+    B: '\(- \frac{4 a^{3}}{3}\)'
+    C: '\(\frac{4 a^{3}}{3}\)'
+    D: '\(a^{2} \left(\frac{4 a}{3} + \pi\right)\)'
+    answer: C
+    hint: Add the integrals over the arch and the segment.
+    explanation: 'Circulation \(=\oint M\,dx+N\,dy\).'
+  97:
+    topic: s16-2
+    question: 'The outward flux of \(\mathbf F=-y^2\mathbf i+x^2\mathbf j\) across the same closed semicircular path is'
+    A: '\(\pi a^{2}\)'
+    B: '\(0\)'
+    C: '\(a^{2}\)'
+    D: '\(2 a^{3}\)'
+    answer: B
+    hint: 'Flux \(=\oint M\,dy-N\,dx\).'
+    explanation: Add the arch and the segment.
+  98:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=(x+y)\mathbf i-(x^2+y^2)\mathbf j\) along the upper half of the unit circle from \((1,0)\) to \((-1,0)\) is'
+    A: '\(0\)'
+    B: '\(- \pi\)'
+    C: '\(- \frac{\pi}{2}\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: C
+    hint: '\(\mathbf r=(\cos t,\sin t)\), \(0\le t\le\pi\).'
+    explanation: '\(\int_0^\pi\left[-(\cos t+\sin t)\sin t-\cos t\right]dt=-\tfrac\pi2\).'
+  99:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=(x+y)\mathbf i-(x^2+y^2)\mathbf j\) along the straight segment from \((1,0)\) to \((-1,0)\) is'
+    A: '\(0\)'
+    B: '\(2\)'
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'Along \(y=0\): \(\mathbf F\cdot d\mathbf r=x\,dx\).'
+    explanation: '\(\int_1^{-1}x\,dx=0\).'
+  100:
+    topic: s16-2
+    question: 'The outward flux of \(\mathbf F=(x+y)\mathbf i-(x^2+y^2)\mathbf j\) across the triangle with vertices \((1,0)\), \((0,1)\), \((-1,0)\) is'
+    A: '\(1\)'
+    B: '\(\frac{2}{3}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(- \frac{1}{3}\)'
+    answer: C
+    hint: 'By Green''s Theorem \(\text{flux}=\iint(M_x+N_y)\,dA=\iint(1-2y)\,dA\).'
+    explanation: 'The triangle has area \(1\) and \(\bar y=\tfrac13\): \(1-2\cdot\tfrac13=\tfrac13\).'
+  101:
+    topic: s16-2
+    question: 'The spin field \(\mathbf F=-\dfrac{y}{\sqrt{x^2+y^2}}\mathbf i+\dfrac{x}{\sqrt{x^2+y^2}}\mathbf j\) has, at every point \((x,y)\ne(0,0)\),'
+    A: 'magnitude \(r\), pointing away from the origin'
+    B: 'magnitude \(1\), tangent to the circle, clockwise'
+    C: 'magnitude \(1\), pointing away from the origin'
+    D: 'magnitude \(1\), tangent to the circle through the point, counterclockwise'
+    answer: D
+    hint: '\(\mathbf F\cdot(x\mathbf i+y\mathbf j)=0\).'
+    explanation: '\(|\mathbf F|^2=\dfrac{y^2+x^2}{x^2+y^2}=1\).'
+  102:
+    topic: s16-2
+    question: 'The radial field \(\mathbf F=x\mathbf i+y\mathbf j\) on the circle \(x^2+y^2=1\) is'
+    A: perpendicular to the circle, pointing inward
+    B: 'perpendicular to the circle, pointing outward, with magnitude \(1\)'
+    C: zero everywhere on the circle
+    D: tangent to the circle, counterclockwise
+    answer: B
+    hint: '\(\mathbf F=\mathbf r\).'
+    explanation: Position vectors point radially outward.
+  103:
+    topic: s16-2
+    question: 'A field \(\mathbf F=M\mathbf i+N\mathbf j\) whose vectors at every point are unit vectors pointing toward the origin is'
+    A: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{x^2+y^2}\)'
+    B: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{\sqrt{x^2+y^2}}\)'
+    C: '\(\mathbf F=\dfrac{x\mathbf i+y\mathbf j}{\sqrt{x^2+y^2}}\)'
+    D: '\(\mathbf F=-(x\mathbf i+y\mathbf j)\)'
+    answer: B
+    hint: Divide the inward vector by its length.
+    explanation: '\(|\mathbf F|=1\) and \(\mathbf F\) is a negative multiple of \(\mathbf r\).'
+  104:
+    topic: s16-2
+    question: 'The field \(\mathbf F=M(x,y)\mathbf i+N(x,y)\mathbf j\) with \(\mathbf F\) pointing toward the origin and \(|\mathbf F|\) equal to the distance from \((x,y)\) to the origin is'
+    A: '\(\mathbf F=-x\mathbf i-y\mathbf j\)'
+    B: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{x^2+y^2}\)'
+    C: '\(\mathbf F=x\mathbf i+y\mathbf j\)'
+    D: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{\sqrt{x^2+y^2}}\)'
+    answer: A
+    hint: 'Magnitude \(r\) times unit vector \(-\mathbf r/r\).'
+    explanation: '\(-\mathbf r\).'
+  105:
+    topic: s16-2
+    question: 'The field \(\mathbf F\) pointing toward the origin with \(|\mathbf F|\) inversely proportional to the distance (\(|\mathbf F|=1/r\)) is'
+    A: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{\sqrt{x^2+y^2}}\)'
+    B: '\(\mathbf F=\dfrac{x\mathbf i+y\mathbf j}{x^2+y^2}\)'
+    C: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{(x^2+y^2)^{3/2}}\)'
+    D: '\(\mathbf F=-\dfrac{x\mathbf i+y\mathbf j}{x^2+y^2}\)'
+    answer: D
+    hint: 'Magnitude \(1/r\) times unit vector \(-\mathbf r/r\).'
+    explanation: '\(-\dfrac{\mathbf r}{r^2}\).'
+  106:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=-4xy\mathbf i+8y\mathbf j+2\mathbf k\) along \(\mathbf r=t\mathbf i+t^2\mathbf j+\mathbf k\), \(0\le t\le2\) is'
+    A: '\(96\)'
+    B: '\(49\)'
+    C: '\(-48\)'
+    D: '\(48\)'
+    answer: D
+    hint: 'Flow \(=\int\mathbf F\cdot\mathbf r''\,dt\).'
+    explanation: Substitute and integrate.
+  107:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=x^2\mathbf i+yz\mathbf j+y^2\mathbf k\) along \(\mathbf r=3t\mathbf j+4t\mathbf k\), \(0\le t\le1\) is'
+    A: '\(24\)'
+    B: '\(-24\)'
+    C: '\(48\)'
+    D: '\(25\)'
+    answer: A
+    hint: 'Flow \(=\int\mathbf F\cdot\mathbf r''\,dt\).'
+    explanation: Substitute and integrate.
+  108:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=(x-z)\mathbf i+x\mathbf k\) along \(\mathbf r=\cos t\,\mathbf i+\sin t\,\mathbf k\), \(0\le t\le\pi\) is'
+    A: '\(2 \pi\)'
+    B: '\(- \pi\)'
+    C: '\(\pi\)'
+    D: '\(1 + \pi\)'
+    answer: C
+    hint: 'Flow \(=\int\mathbf F\cdot\mathbf r''\,dt\).'
+    explanation: Substitute and integrate.
+  109:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=-y\mathbf i+x\mathbf j+2\mathbf k\) along \(\mathbf r=-2\cos t\,\mathbf i+2\sin t\,\mathbf j+2t\mathbf k\), \(0\le t\le2\pi\) is'
+    A: '\(0\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(3\)'
+    answer: A
+    hint: 'Flow \(=\int\mathbf F\cdot\mathbf r''\,dt\).'
+    explanation: Substitute and integrate.
+  110:
+    topic: s16-2
+    question: 'The circulation of \(\mathbf F=2x\mathbf i+2z\mathbf j+2y\mathbf k\) around the closed path \(C_1:(\cos t,\sin t,t)\), \(0\le t\le\tfrac\pi2\); \(C_2:\mathbf j+\tfrac\pi2(1-t)\mathbf k\); \(C_3:t\mathbf i+(1-t)\mathbf j\), is'
+    A: '\(\pi\)'
+    B: '\(- \pi\)'
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: D
+    hint: '\(\mathbf F=\nabla(x^2+2yz)\) is a gradient field.'
+    explanation: 'The circulation of a gradient field around a closed path is \(0\).'
+  111:
+    topic: s16-2
+    question: 'The circulation of \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\) around the ellipse in which the plane \(2x+3y-z=0\) meets the cylinder \(x^2+y^2=12\) is'
+    A: '\(0\)'
+    B: '\(-12\pi\)'
+    C: '\(12\pi\)'
+    D: '\(24\pi\)'
+    answer: A
+    hint: '\(\mathbf F=\nabla\left(\tfrac12(x^2+y^2+z^2)\right)\) is conservative.'
+    explanation: The circulation of a gradient field around any closed curve is zero.
+  112:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=xy\mathbf i+y\mathbf j-yz\mathbf k\) from \((0,0,0)\) to \((1,1,1)\) along the curve of intersection of \(y=x^2\) and \(z=x\) (with \(t=x\)) is'
+    A: '\(\frac{3}{2}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(- \frac{1}{2}\)'
+    D: '\(1\)'
+    answer: B
+    hint: '\(\mathbf r=t\mathbf i+t^2\mathbf j+t\mathbf k\).'
+    explanation: '\(\int_0^1\left(t^3\cdot1+t^2\cdot2t-t^3\cdot1\cdot t^{0}\right)\ldots\) evaluate.'
+  113:
+    topic: s16-2
+    question: 'For the gradient field \(\mathbf F=\nabla(xy^2z^3)\), the flow once around any closed curve is'
+    A: nonzero in general
+    B: '\(2\pi\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(\oint\nabla f\cdot d\mathbf r=0\).'
+    explanation: 'The line integral of \(\nabla f\) depends only on endpoints.'
+  114:
+    topic: s16-2
+    question: 'The flow of \(\mathbf F=\nabla(xy^2z^3)\) along the line segment from \((1,1,1)\) to \((2,1,-1)\) is'
+    A: '\(3\)'
+    B: '\(1\)'
+    C: '\(-1\)'
+    D: '\(-3\)'
+    answer: D
+    hint: '\(\int_C\nabla f\cdot d\mathbf r=f(2,1,-1)-f(1,1,1)\).'
+    explanation: '\(2(1)(-1)-1=-3\).'
+  115:
+    topic: s16-2
+    question: 'If \(f\) is differentiable and positive on \([a,b]\), and \(C\) is the path \(\mathbf r(t)=t\mathbf i+f(t)\mathbf j\), \(a\le t\le b\), then the work of \(\mathbf F=y\mathbf i\) along \(C\) equals'
+    A: the negative of the area under the graph
+    B: zero
+    C: 'the length of the graph of \(f\)'
+    D: 'the area of the region under the graph of \(f\) from \(a\) to \(b\)'
+    answer: D
+    hint: '\(\int\mathbf F\cdot d\mathbf r=\int y\,dx\).'
+    explanation: '\(\int_a^bf(t)\,dt\).'
+  116:
+    topic: s16-2
+    question: 'A particle moves along \(y=f(x)\) from \((a,f(a))\) to \((b,f(b))\) under a force of constant magnitude \(k\) pointing away from the origin. The work done is'
+    A: '\(k\left[\left(b^2+f(b)^2\right)^{1/2}-\left(a^2+f(a)^2\right)^{1/2}\right]\)'
+    B: '\(k\,(b-a)\)'
+    C: '\(\dfrac{k}{2}\left[b^2-a^2\right]\)'
+    D: '\(k\left[b^2+f(b)^2-a^2-f(a)^2\right]\)'
+    answer: A
+    hint: '\(\mathbf F=k\mathbf r/|\mathbf r|=\nabla\left(k|\mathbf r|\right)\).'
+    explanation: 'The work is the change in \(k|\mathbf r|\).'
+  117:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=xy^6\mathbf i+3x(xy^5+2)\mathbf j\) along \(\mathbf r=2\cos t\,\mathbf i+\sin t\,\mathbf j\), \(0\le t\le2\pi\) is about'
+    A: '\(-37.699\)'
+    B: '\(75.398\)'
+    C: '\(18.85\)'
+    D: '\(37.699\)'
+    answer: D
+    hint: 'Evaluate \(\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\) numerically.'
+    explanation: Substitute and integrate.
+  118:
+    topic: s16-2
+    question: 'The work done by \(\mathbf F=\dfrac3{1+x^2}\mathbf i+\dfrac2{1+y^2}\mathbf j\) along \(\mathbf r=\cos t\,\mathbf i+\sin t\,\mathbf j\), \(0\le t\le\pi\) is about'
+    A: '\(-2.356\)'
+    B: '\(4.712\)'
+    C: '\(-9.425\)'
+    D: '\(-4.712\)'
+    answer: D
+    hint: 'Evaluate \(\int\mathbf F(\mathbf r(t))\cdot\mathbf r''(t)\,dt\) numerically.'
+    explanation: Substitute and integrate.
+  119:
+    topic: s16-3
+    question: 'Is \(\mathbf F=y z\mathbf{i}+x z\mathbf{j}+x y\mathbf{k}\) conservative (on all of space)?'
+    A: "Yes"
+    B: 'Only if the domain is simply connected and \(\mathbf F\) is bounded'
+    C: "No"
+    D: 'Only on the \(xy\)-plane'
+    answer: A
+    hint: 'Compute \(\nabla\times\mathbf F\); the field is conservative on a simply connected domain iff the curl is zero.'
+    explanation: 'The curl is \(0\).'
+  120:
+    topic: s16-3
+    question: 'Is \(\mathbf F=y \sin{\left(z \right)}\mathbf{i}+x \sin{\left(z \right)}\mathbf{j}+x y \cos{\left(z \right)}\mathbf{k}\) conservative (on all of space)?'
+    A: "No"
+    B: 'Only if the domain is simply connected and \(\mathbf F\) is bounded'
+    C: "Yes"
+    D: 'Only on the \(xy\)-plane'
+    answer: C
+    hint: 'Compute \(\nabla\times\mathbf F\); the field is conservative on a simply connected domain iff the curl is zero.'
+    explanation: 'The curl is \(0\).'
+  121:
+    topic: s16-3
+    question: 'Is \(\mathbf F=y\mathbf{i}+\left(x + z\right)\mathbf{j}-y\mathbf{k}\) conservative (on all of space)?'
+    A: 'Only if the domain is simply connected and \(\mathbf F\) is bounded'
+    B: "No"
+    C: 'Only on the \(xy\)-plane'
+    D: "Yes"
+    answer: B
+    hint: 'Compute \(\nabla\times\mathbf F\); the field is conservative on a simply connected domain iff the curl is zero.'
+    explanation: 'The curl is \(-2\mathbf{i}\).'
+  122:
+    topic: s16-3
+    question: 'Is \(\mathbf F=-y\mathbf{i}+x\mathbf{j}\) conservative (on all of space)?'
+    A: 'Only on the \(xy\)-plane'
+    B: 'Only if the domain is simply connected and \(\mathbf F\) is bounded'
+    C: "Yes"
+    D: "No"
+    answer: D
+    hint: 'Compute \(\nabla\times\mathbf F\); the field is conservative on a simply connected domain iff the curl is zero.'
+    explanation: 'The curl is \(2\mathbf{k}\).'
+  123:
+    topic: s16-3
+    question: 'Is \(\mathbf F=\left(y + z\right)\mathbf{i}+z\mathbf{j}+\left(x + y\right)\mathbf{k}\) conservative (on all of space)?'
+    A: "Yes"
+    B: 'Only if the domain is simply connected and \(\mathbf F\) is bounded'
+    C: 'Only on the \(xy\)-plane'
+    D: "No"
+    answer: D
+    hint: 'Compute \(\nabla\times\mathbf F\); the field is conservative on a simply connected domain iff the curl is zero.'
+    explanation: 'The curl is \(-\mathbf{k}\).'
+  124:
+    topic: s16-3
+    question: 'Is \(\mathbf F=e^{x} \cos{\left(y \right)}\mathbf{i}-e^{x} \sin{\left(y \right)}\mathbf{j}+z\mathbf{k}\) conservative (on all of space)?'
+    A: "No"
+    B: 'Only if the domain is simply connected and \(\mathbf F\) is bounded'
+    C: "Yes"
+    D: 'Only on the \(xy\)-plane'
+    answer: C
+    hint: 'Compute \(\nabla\times\mathbf F\); the field is conservative on a simply connected domain iff the curl is zero.'
+    explanation: 'The curl is \(0\).'
+  125:
+    topic: s16-3
+    question: 'A potential function for \(\mathbf F=2 x\mathbf{i}+3 y\mathbf{j}+4 z\mathbf{k}\) is'
+    A: '\(2 x^{2} + 3 y^{2} + 4 z^{2}+C\)'
+    B: '\(x^{2} + x + \frac{3 y^{2}}{2} + 2 z^{2}+C\)'
+    C: '\(- x^{2} - \frac{3 y^{2}}{2} - 2 z^{2}+C\)'
+    D: '\(x^{2} + \frac{3 y^{2}}{2} + 2 z^{2}+C\)'
+    answer: D
+    hint: 'Integrate \(f_x=M\) in \(x\), then match \(f_y\) and \(f_z\).'
+    explanation: 'Check: \(\nabla f=\mathbf F\).'
+  126:
+    topic: s16-3
+    question: 'A potential function for \(\mathbf F=\left(y + z\right)\mathbf{i}+\left(x + z\right)\mathbf{j}+\left(x + y\right)\mathbf{k}\) is'
+    A: '\(- x y - x z - y z+C\)'
+    B: '\(2 x y + 2 x z + 2 y z+C\)'
+    C: '\(x y + x z + y z+C\)'
+    D: '\(x y + x z + x + y z+C\)'
+    answer: C
+    hint: 'Integrate \(f_x=M\) in \(x\), then match \(f_y\) and \(f_z\).'
+    explanation: 'Check: \(\nabla f=\mathbf F\).'
+  127:
+    topic: s16-3
+    question: 'A potential function for \(\mathbf F=y \sin{\left(z \right)}\mathbf{i}+x \sin{\left(z \right)}\mathbf{j}+x y \cos{\left(z \right)}\mathbf{k}\) is'
+    A: '\(2 x y \sin{\left(z \right)}+C\)'
+    B: '\(- x y \sin{\left(z \right)}+C\)'
+    C: '\(x y \sin{\left(z \right)} + x+C\)'
+    D: '\(x y \sin{\left(z \right)}+C\)'
+    answer: D
+    hint: 'Integrate \(f_x=M\) in \(x\), then match \(f_y\) and \(f_z\).'
+    explanation: 'Check: \(\nabla f=\mathbf F\).'
+  128:
+    topic: s16-3
+    question: 'A potential function for \(\mathbf F=e^{y+2z}(\mathbf i+x\mathbf j+2x\mathbf k)\) is'
+    A: '\(f=x^2e^{y+2z}\)'
+    B: '\(f=e^{y+2z}\)'
+    C: '\(f=xe^{y+2z}\)'
+    D: '\(f=xye^{2z}\)'
+    answer: C
+    hint: '\(f_x=e^{y+2z}\) gives \(f=xe^{y+2z}+g(y,z)\).'
+    explanation: '\(f_y=xe^{y+2z}\) and \(f_z=2xe^{y+2z}\) check.'
+  129:
+    topic: s16-3
+    question: 'The (exact) integral \(\displaystyle\int_{(0, 0, 0)}^{(2, 3, -6)}2 x\,dx + 2 y\,dy + 2 z\,dz\) equals'
+    A: '\(49\)'
+    B: '\(-49\)'
+    C: '\(50\)'
+    D: '\(98\)'
+    answer: A
+    hint: 'The form is exact: \(\int=f(B)-f(A)\) for a potential \(f\).'
+    explanation: 'A potential is \(f=x^{2} + y^{2} + z^{2}\).'
+  130:
+    topic: s16-3
+    question: 'The (exact) integral \(\displaystyle\int_{(1, 1, 2)}^{(3, 5, 0)}y z\,dx + x z\,dy + x y\,dz\) equals'
+    A: '\(2\)'
+    B: '\(-1\)'
+    C: '\(-2\)'
+    D: '\(-4\)'
+    answer: C
+    hint: 'The form is exact: \(\int=f(B)-f(A)\) for a potential \(f\).'
+    explanation: 'A potential is \(f=x y z\).'
+  131:
+    topic: s16-3
+    question: 'The (exact) integral \(\displaystyle\int_{(0, 0, 0)}^{(1, 2, 3)}2 x y\,dx + \left(x^{2} - z^{2}\right)\,dy -  2 y z\,dz\) equals'
+    A: '\(16\)'
+    B: '\(-32\)'
+    C: '\(-16\)'
+    D: '\(-15\)'
+    answer: C
+    hint: 'The form is exact: \(\int=f(B)-f(A)\) for a potential \(f\).'
+    explanation: 'A potential is \(f=x^{2} y - y z^{2}\).'
+  132:
+    topic: s16-3
+    question: 'The (exact) integral \(\displaystyle\int_{(0, 0, 0)}^{(3, 3, 1)}2 x\,dx -  y^{2}\,dy -  \frac{4}{z^{2} + 1}\,dz\) equals'
+    A: '\(1 - \pi\)'
+    B: '\(- 2 \pi\)'
+    C: '\(- \pi\)'
+    D: '\(\pi\)'
+    answer: C
+    hint: 'The form is exact: \(\int=f(B)-f(A)\) for a potential \(f\).'
+    explanation: 'A potential is \(f=x^{2} - \frac{y^{3}}{3} - 4 \tan^{-1}{\left(z \right)}\).'
+  133:
+    topic: s16-3
+    question: 'The (exact) integral \(\displaystyle\int_{(1, 0, 0)}^{(0, 1, 1)}\sin{\left(y \right)} \cos{\left(x \right)}\,dx + \sin{\left(x \right)} \cos{\left(y \right)}\,dy + \,dz\) equals'
+    A: '\(-1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: C
+    hint: 'The form is exact: \(\int=f(B)-f(A)\) for a potential \(f\).'
+    explanation: 'A potential is \(f=z + \sin{\left(x \right)} \sin{\left(y \right)}\).'
+  134:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=2 \cos{\left(y \right)}\mathbf{i}-\left(2 x \sin{\left(y \right)} - \frac{1}{y}\right)\mathbf{j}+\frac{1}{z}\mathbf{k}\) from \((0, 2, 1)\) to \((1, \frac{\pi}{2}, 2)\) is'
+    A: '\(- \ln{\left(\pi \right)} + \ln{\left(2 \right)}\)'
+    B: '\(- 2 \ln{\left(2 \right)} + 2 \ln{\left(\pi \right)}\)'
+    C: '\(- \ln{\left(2 \right)} + 1 + \ln{\left(\pi \right)}\)'
+    D: '\(- \ln{\left(2 \right)} + \ln{\left(\pi \right)}\)'
+    answer: D
+    hint: 'Find a potential function \(f\) and compute \(f(B)-f(A)\).'
+    explanation: 'A potential is \(f=2 x \cos{\left(y \right)} + \ln{\left(y \right)} + \ln{\left(z \right)}\).'
+  135:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=3 x^{2}\mathbf{i}+\frac{z^{2}}{y}\mathbf{j}+2 z \ln{\left(y \right)}\mathbf{k}\) from \((1, 1, 1)\) to \((1, 2, 3)\) is'
+    A: '\(9 \ln{\left(2 \right)}\)'
+    B: '\(18 \ln{\left(2 \right)}\)'
+    C: '\(1 + 9 \ln{\left(2 \right)}\)'
+    D: '\(- 9 \ln{\left(2 \right)}\)'
+    answer: A
+    hint: 'Find a potential function \(f\) and compute \(f(B)-f(A)\).'
+    explanation: 'A potential is \(f=x^{3} + z^{2} \ln{\left(y \right)}\).'
+  136:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=\left(2 x \ln{\left(y \right)} - y z\right)\mathbf{i}+\frac{x \left(x - y z\right)}{y}\mathbf{j}-x y\mathbf{k}\) from \((1, 2, 1)\) to \((2, 1, 1)\) is'
+    A: '\(- 2 \ln{\left(2 \right)}\)'
+    B: '\(\ln{\left(2 \right)}\)'
+    C: '\(1 - \ln{\left(2 \right)}\)'
+    D: '\(- \ln{\left(2 \right)}\)'
+    answer: D
+    hint: 'Find a potential function \(f\) and compute \(f(B)-f(A)\).'
+    explanation: 'A potential is \(f=x^{2} \ln{\left(y \right)} - x y z\).'
+  137:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=\frac{1}{y}\mathbf{i}-\left(\frac{x}{y^{2}} - \frac{1}{z}\right)\mathbf{j}-\frac{y}{z^{2}}\mathbf{k}\) from \((1, 1, 1)\) to \((2, 2, 2)\) is'
+    A: '\(0\)'
+    B: '\(3\)'
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: A
+    hint: 'Find a potential function \(f\) and compute \(f(B)-f(A)\).'
+    explanation: 'A potential is \(f=\frac{x}{y} + \frac{y}{z}\).'
+  138:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=\frac{2 x}{x^{2} + y^{2} + z^{2}}\mathbf{i}+\frac{2 y}{x^{2} + y^{2} + z^{2}}\mathbf{j}+\frac{2 z}{x^{2} + y^{2} + z^{2}}\mathbf{k}\) from \((-1, -1, -1)\) to \((2, 2, 2)\) is'
+    A: '\(4 \ln{\left(2 \right)}\)'
+    B: '\(2 \ln{\left(2 \right)}\)'
+    C: '\(- 2 \ln{\left(2 \right)}\)'
+    D: '\(1 + 2 \ln{\left(2 \right)}\)'
+    answer: B
+    hint: 'Find a potential function \(f\) and compute \(f(B)-f(A)\).'
+    explanation: 'A potential is \(f=\ln{\left(x^{2} + y^{2} + z^{2} \right)}\).'
+  139:
+    topic: s16-3
+    question: 'The integral \(\displaystyle\int_{(1,1,1)}^{(2,3,-1)}y\,dx+x\,dy+4\,dz\) evaluated along the segment \(x=1+t\), \(y=1+2t\), \(z=1-2t\) is'
+    A: '\(2\)'
+    B: '\(3\)'
+    C: '\(-3\)'
+    D: '\(-2\)'
+    answer: C
+    hint: 'The form is exact with potential \(xy+4z\).'
+    explanation: '\(f(2,3,-1)-f(1,1,1)=(6-4)-(1+4)=-3\).'
+  140:
+    topic: s16-3
+    question: 'The integral \(\displaystyle\int_Cx^2dx+yz\,dy+\tfrac{y^2}2dz\) along the segment \(C\) from \((0,0,0)\) to \((0,3,4)\) is'
+    A: '\(9\)'
+    B: '\(12\)'
+    C: '\(36\)'
+    D: '\(18\)'
+    answer: D
+    hint: 'The form is exact with potential \(\tfrac{x^3}3+\tfrac{y^2z}2\).'
+    explanation: '\(\tfrac{9\cdot4}2-0=18\).'
+  141:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=z^{2}\mathbf{i}+2 y\mathbf{j}+2 x z\mathbf{k}\) from \(A\) to \(B\)'
+    A: cannot be evaluated
+    B: 'depends on the path chosen from \(A\) to \(B\)'
+    C: 'is independent of the path, since \(\nabla\times\mathbf F=\mathbf0\) and a potential is \(f=x z^{2} + y^{2}\)'
+    D: 'is zero for every \(A\) and \(B\)'
+    answer: C
+    hint: Compute the curl.
+    explanation: '\(\nabla\times\mathbf F=\mathbf0\).'
+  142:
+    topic: s16-3
+    question: 'The line integral of \(\mathbf F=\frac{x}{\sqrt{x^{2} + y^{2} + z^{2}}}\mathbf{i}+\frac{y}{\sqrt{x^{2} + y^{2} + z^{2}}}\mathbf{j}+\frac{z}{\sqrt{x^{2} + y^{2} + z^{2}}}\mathbf{k}\) from \(A\) to \(B\)'
+    A: 'is independent of the path, since \(\nabla\times\mathbf F=\mathbf0\) and a potential is \(f=\sqrt{x^{2} + y^{2} + z^{2}}\)'
+    B: 'depends on the path chosen from \(A\) to \(B\)'
+    C: 'is zero for every \(A\) and \(B\)'
+    D: cannot be evaluated
+    answer: A
+    hint: Compute the curl.
+    explanation: '\(\nabla\times\mathbf F=\mathbf0\).'
+  143:
+    topic: s16-3
+    question: 'A potential function for \(\mathbf F=\dfrac{2x}y\mathbf i+\dfrac{1-x^2}{y^2}\mathbf j\) is'
+    A: '\(f=\dfrac{x^2}{y}\)'
+    B: '\(f=\dfrac{x^2-1}{y^2}\)'
+    C: '\(f=\dfrac{1-x^2}{y}\)'
+    D: '\(f=\dfrac{x^2-1}{y}\)'
+    answer: D
+    hint: '\(f_x=\dfrac{2x}y\) gives \(f=\dfrac{x^2}y+g(y)\).'
+    explanation: '\(f_y=-\dfrac{x^2}{y^2}+g''(y)=\dfrac{1-x^2}{y^2}\Rightarrow g=-\tfrac1y\).'
+  144:
+    topic: s16-3
+    question: 'A potential function for \(\mathbf F=e^x\ln y\,\mathbf i+\left(\dfrac{e^x}y+\sin z\right)\mathbf j+y\cos z\,\mathbf k\) is'
+    A: '\(f=e^x\ln y-y\sin z\)'
+    B: '\(f=e^x\ln y+y\sin z\)'
+    C: '\(f=\dfrac{e^x}y+y\sin z\)'
+    D: '\(f=e^x\ln y+\sin z\)'
+    answer: B
+    hint: '\(f_x=e^x\ln y\) gives \(f=e^x\ln y+g(y,z)\).'
+    explanation: 'Then \(g_y=\sin z\) and \(g_z=y\cos z\).'
+  145:
+    topic: s16-3
+    question: 'The work done by \(\mathbf F=(x^2+y)\mathbf i+(y^2+x)\mathbf j+ze^z\mathbf k\) over any path from \((1,0,0)\) to \((1,0,1)\) is'
+    A: '\(0\)'
+    B: '\(-1\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: D
+    hint: '\(\mathbf F\) is conservative with potential \(\tfrac{x^3}3+xy+\tfrac{y^3}3+(z-1)e^z\).'
+    explanation: '\(f(1,0,1)-f(1,0,0)=0-(-1)=1\).'
+  146:
+    topic: s16-3
+    question: 'The work done by \(\mathbf F=e^{yz}\mathbf i+(xze^{yz}+z\cos yz)\mathbf j+(xye^{yz}+y\cos yz)\mathbf k\) from \((1,0,1)\) to \((1,\tfrac\pi2,0)\) along any path is'
+    A: '\(\tfrac\pi2\)'
+    B: '\(0\)'
+    C: '\(e\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'A potential is \(f=xe^{yz}+\sin yz\).'
+    explanation: '\(f(1,\tfrac\pi2,0)-f(1,0,1)=(1+0)-(1+0)=0\).'
+  147:
+    topic: s16-3
+    question: 'Let \(\mathbf F=\nabla(x^3y^2)\) and \(C\) the path from \((-1,1)\) to \((1,1)\) along the segment to the origin and then to \((1,1)\). Then \(\int_C\mathbf F\cdot d\mathbf r=\)'
+    A: '\(-2\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: B
+    hint: '\(\int\nabla f\cdot d\mathbf r=f(1,1)-f(-1,1)\).'
+    explanation: '\(1-(-1)=2\).'
+  148:
+    topic: s16-3
+    question: '\(\displaystyle\int_C2x\cos y\,dx-x^2\sin y\,dy\) along the parabola \(y=(x-1)^2\) from \((1,0)\) to \((0,1)\) equals'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(-1\)'
+    D: '\(2\)'
+    answer: C
+    hint: 'The form is exact with potential \(x^2\cos y\).'
+    explanation: '\(f(0,1)-f(1,0)=0-1\).'
+  149:
+    topic: s16-3
+    question: '\(\displaystyle\int_C2x\cos y\,dx-x^2\sin y\,dy\) along the straight segment from \((-1,\pi)\) to \((1,0)\) equals'
+    A: '\(2\)'
+    B: '\(1\)'
+    C: '\(0\)'
+    D: '\(-2\)'
+    answer: A
+    hint: '\(f(1,0)-f(-1,\pi)=1-(-1)\).'
+    explanation: '\(2\).'
+  150:
+    topic: s16-3
+    question: 'In a conservative field, if the work along \(C_1\) from \(A\) to \(B\) is \(W\), then the work along any other path \(C_2\) from \(A\) to \(B\) is'
+    A: '\(W\)'
+    B: '\(-W\)'
+    C: '\(2W\)'
+    D: '\(0\)'
+    answer: A
+    hint: Work is path independent.
+    explanation: 'It equals \(f(B)-f(A)\).'
+  151:
+    topic: s16-3
+    question: 'For the form \((ay^2+2czx)\,dx+y(bx+cz)\,dy+(ay^2+cx^2)\,dz\) to be exact, the constants must satisfy'
+    A: '\(b=2a\) and \(c=2a\)'
+    B: '\(b=2a\) and \(c=a\)'
+    C: '\(b=c=a\)'
+    D: '\(b=a\) and \(c=2a\)'
+    answer: A
+    hint: 'Require \(M_y=N_x\), \(M_z=P_x\), \(N_z=P_y\).'
+    explanation: '\(M_y=2ay\), \(N_x=by\Rightarrow b=2a\); \(N_z=cy\), \(P_y=2ay\Rightarrow c=2a\); \(M_z=P_x=2cx\).'
+  152:
+    topic: s16-3
+    question: 'If \(\mathbf F=\nabla f\) is conservative and \(g(x,y,z)=\displaystyle\int_{(0,0,0)}^{(x,y,z)}\mathbf F\cdot d\mathbf r\), then \(\nabla g=\)'
+    A: '\(\nabla\times\mathbf F\)'
+    B: '\(\mathbf 0\)'
+    C: '\(f\)'
+    D: '\(\mathbf F\)'
+    answer: D
+    hint: '\(g=f-f(0,0,0)\).'
+    explanation: Differentiate.
+  153:
+    topic: s16-3
+    question: 'A force field \(\mathbf F\) is found by experiment to do half as much work along path \(C_2\) as along path \(C_1\) between the same two points \(A\) and \(B\). One can conclude that'
+    A: '\(\mathbf F\) is not conservative'
+    B: '\(\mathbf F=\mathbf0\)'
+    C: the paths have equal length
+    D: '\(\mathbf F\) is conservative'
+    answer: A
+    hint: Conservative fields do the same work along every path.
+    explanation: 'The works differ, so \(\mathbf F\) is not conservative.'
+  154:
+    topic: s16-3
+    question: 'The work done by a constant force field \(\mathbf F=a\mathbf i+b\mathbf j+c\mathbf k\) moving a particle along any path from \(A\) to \(B\) is'
+    A: zero
+    B: '\(\mathbf F\times\overrightarrow{AB}\)'
+    C: '\(\mathbf F\cdot\overrightarrow{AB}\)'
+    D: '\(|\mathbf F||\overrightarrow{AB}|\)'
+    answer: C
+    hint: '\(\mathbf F=\nabla(ax+by+cz)\).'
+    explanation: '\(f(B)-f(A)=\mathbf F\cdot(B-A)\).'
+  155:
+    topic: s16-3
+    question: 'A potential function for the gravitational field \(\mathbf F=-GmM\dfrac{x\mathbf i+y\mathbf j+z\mathbf k}{(x^2+y^2+z^2)^{3/2}}\) is'
+    A: '\(f=GmM\sqrt{x^2+y^2+z^2}\)'
+    B: '\(f=\dfrac{GmM}{x^2+y^2+z^2}\)'
+    C: '\(f=\dfrac{GmM}{\sqrt{x^2+y^2+z^2}}\)'
+    D: '\(f=-\dfrac{GmM}{\sqrt{x^2+y^2+z^2}}\)'
+    answer: C
+    hint: '\(\nabla\dfrac1\rho=-\dfrac{\mathbf r}{\rho^3}\).'
+    explanation: '\(f_x=-GmM\dfrac{x}{\rho^3}\) matches \(F_x\).'
+  156:
+    topic: s16-3
+    question: 'The work done by the gravitational field of the previous question in moving a particle from a point \(P_1\) at distance \(s_1\) from the origin to \(P_2\) at distance \(s_2\) is'
+    A: '\(GmM\left(\dfrac1{s_2^2}-\dfrac1{s_1^2}\right)\)'
+    B: '\(GmM\left(\dfrac1{s_2}-\dfrac1{s_1}\right)\)'
+    C: '\(GmM(s_2-s_1)\)'
+    D: '\(GmM\left(\dfrac1{s_1}-\dfrac1{s_2}\right)\)'
+    answer: B
+    hint: '\(W=f(P_2)-f(P_1)\).'
+    explanation: 'Substitute \(\rho=s_i\).'
+  157:
+    topic: s16-3
+    question: The Component Test for conservative fields in space requires
+    A: '\(\dfrac{\partial M}{\partial x}=\dfrac{\partial N}{\partial y}=\dfrac{\partial P}{\partial z}\)'
+    B: '\(\dfrac{\partial P}{\partial y}=\dfrac{\partial N}{\partial z}\), \(\dfrac{\partial M}{\partial z}=\dfrac{\partial P}{\partial x}\), \(\dfrac{\partial N}{\partial x}=\dfrac{\partial M}{\partial y}\)'
+    C: '\(\dfrac{\partial P}{\partial x}=\dfrac{\partial N}{\partial y}\) only'
+    D: '\(M=N=P\)'
+    answer: B
+    hint: 'It is equivalent to \(\nabla\times\mathbf F=\mathbf0\).'
+    explanation: Mixed partials must agree.
+  158:
+    topic: s16-4
+    question: 'For \(\mathbf F=-y\mathbf i+x\mathbf j\) on the disk \(x^2+y^2\le a^2\) with boundary \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), the counterclockwise circulation \(\oint M\,dx+N\,dy\) is'
+    A: '\(4 \pi a^{2}\)'
+    B: '\(- 2 \pi a^{2}\)'
+    C: '\(2 \pi a^{2}\)'
+    D: '\(3 \pi a^{2}\)'
+    answer: C
+    hint: 'Evaluate the line integral, or use \(\iint(N_x-M_y)\,dA\) (Green''s Theorem).'
+    explanation: "Both sides of the circulation form of Green's Theorem agree."
+  159:
+    topic: s16-4
+    question: 'For \(\mathbf F=-y\mathbf i+x\mathbf j\) on the same disk, the outward flux \(\oint M\,dy-N\,dx\) is'
+    A: '\(0\)'
+    B: '\(3 \pi a^{2}\)'
+    C: '\(\pi a^{2}\)'
+    D: '\(a^{2}\)'
+    answer: A
+    hint: 'Evaluate the line integral, or use \(\iint(M_x+N_y)\,dA\).'
+    explanation: "Both sides of the flux form of Green's Theorem agree."
+  160:
+    topic: s16-4
+    question: 'For \(\mathbf F=y\mathbf i\) on the disk \(x^2+y^2\le a^2\) with boundary \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), the counterclockwise circulation \(\oint M\,dx+N\,dy\) is'
+    A: '\(0\)'
+    B: '\(- 2 \pi a^{2}\)'
+    C: '\(- \pi a^{2}\)'
+    D: '\(\pi a^{2}\)'
+    answer: C
+    hint: 'Evaluate the line integral, or use \(\iint(N_x-M_y)\,dA\) (Green''s Theorem).'
+    explanation: "Both sides of the circulation form of Green's Theorem agree."
+  161:
+    topic: s16-4
+    question: 'For \(\mathbf F=y\mathbf i\) on the same disk, the outward flux \(\oint M\,dy-N\,dx\) is'
+    A: '\(3 \pi a^{2}\)'
+    B: '\(\pi a^{2}\)'
+    C: '\(0\)'
+    D: '\(a^{2}\)'
+    answer: C
+    hint: 'Evaluate the line integral, or use \(\iint(M_x+N_y)\,dA\).'
+    explanation: "Both sides of the flux form of Green's Theorem agree."
+  162:
+    topic: s16-4
+    question: 'For \(\mathbf F=2x\mathbf i-3y\mathbf j\) on the disk \(x^2+y^2\le a^2\) with boundary \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), the counterclockwise circulation \(\oint M\,dx+N\,dy\) is'
+    A: '\(3 \pi a^{2}\)'
+    B: '\(0\)'
+    C: '\(\pi a^{2}\)'
+    D: '\(a^{2}\)'
+    answer: B
+    hint: 'Evaluate the line integral, or use \(\iint(N_x-M_y)\,dA\) (Green''s Theorem).'
+    explanation: "Both sides of the circulation form of Green's Theorem agree."
+  163:
+    topic: s16-4
+    question: 'For \(\mathbf F=2x\mathbf i-3y\mathbf j\) on the same disk, the outward flux \(\oint M\,dy-N\,dx\) is'
+    A: '\(- 2 \pi a^{2}\)'
+    B: '\(0\)'
+    C: '\(- \pi a^{2}\)'
+    D: '\(\pi a^{2}\)'
+    answer: C
+    hint: 'Evaluate the line integral, or use \(\iint(M_x+N_y)\,dA\).'
+    explanation: "Both sides of the flux form of Green's Theorem agree."
+  164:
+    topic: s16-4
+    question: 'For \(\mathbf F=-x^2y\mathbf i+xy^2\mathbf j\) on the disk \(x^2+y^2\le a^2\) with boundary \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), the counterclockwise circulation \(\oint M\,dx+N\,dy\) is'
+    A: '\(\pi a^{4}\)'
+    B: '\(\frac{\pi a^{2} \left(a^{2} + 2\right)}{2}\)'
+    C: '\(- \frac{\pi a^{4}}{2}\)'
+    D: '\(\frac{\pi a^{4}}{2}\)'
+    answer: D
+    hint: 'Evaluate the line integral, or use \(\iint(N_x-M_y)\,dA\) (Green''s Theorem).'
+    explanation: "Both sides of the circulation form of Green's Theorem agree."
+  165:
+    topic: s16-4
+    question: 'For \(\mathbf F=-x^2y\mathbf i+xy^2\mathbf j\) on the same disk, the outward flux \(\oint M\,dy-N\,dx\) is'
+    A: '\(3 \pi a^{2}\)'
+    B: '\(0\)'
+    C: '\(\pi a^{2}\)'
+    D: '\(a^{2}\)'
+    answer: B
+    hint: 'Evaluate the line integral, or use \(\iint(M_x+N_y)\,dA\).'
+    explanation: "Both sides of the flux form of Green's Theorem agree."
+  166:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=\left(x - y\right)\mathbf{i}-\left(x - y\right)\mathbf{j}\) around the boundary of the unit square \(0\le x,y\le1\) is'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(3\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Green''s Theorem: \(\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA\).'
+    explanation: 'Compute \(N_x-M_y\) and integrate over the region.'
+  167:
+    topic: s16-4
+    question: 'The outward flux of \(\mathbf F=\left(x - y\right)\mathbf{i}-\left(x - y\right)\mathbf{j}\) across the boundary of the unit square \(0\le x,y\le1\) is'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(-2\)'
+    D: '\(3\)'
+    answer: B
+    hint: 'Green''s Theorem: \(\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA\).'
+    explanation: 'Compute \(M_x+N_y\) and integrate over the region.'
+  168:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=\left(x^{2} + 4 y\right)\mathbf{i}+\left(x + y^{2}\right)\mathbf{j}\) around the boundary of the unit square \(0\le x,y\le1\) is'
+    A: '\(-2\)'
+    B: '\(-3\)'
+    C: '\(-6\)'
+    D: '\(3\)'
+    answer: B
+    hint: 'Green''s Theorem: \(\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA\).'
+    explanation: 'Compute \(N_x-M_y\) and integrate over the region.'
+  169:
+    topic: s16-4
+    question: 'The outward flux of \(\mathbf F=\left(x^{2} + 4 y\right)\mathbf{i}+\left(x + y^{2}\right)\mathbf{j}\) across the boundary of the unit square \(0\le x,y\le1\) is'
+    A: '\(2\)'
+    B: '\(4\)'
+    C: '\(-2\)'
+    D: '\(3\)'
+    answer: A
+    hint: 'Green''s Theorem: \(\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA\).'
+    explanation: 'Compute \(M_x+N_y\) and integrate over the region.'
+  170:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=-\left(x^{2} - y^{2}\right)\mathbf{i}+\left(x^{2} + y^{2}\right)\mathbf{j}\) around the boundary of the triangle bounded by \(y=0\), \(x=3\), \(y=x\) is'
+    A: '\(9\)'
+    B: '\(-9\)'
+    C: '\(10\)'
+    D: '\(18\)'
+    answer: A
+    hint: 'Green''s Theorem: \(\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA\).'
+    explanation: 'Compute \(N_x-M_y\) and integrate over the region.'
+  171:
+    topic: s16-4
+    question: 'The outward flux of \(\mathbf F=-\left(x^{2} - y^{2}\right)\mathbf{i}+\left(x^{2} + y^{2}\right)\mathbf{j}\) across the boundary of the triangle bounded by \(y=0\), \(x=3\), \(y=x\) is'
+    A: '\(-18\)'
+    B: '\(-9\)'
+    C: '\(-8\)'
+    D: '\(9\)'
+    answer: B
+    hint: 'Green''s Theorem: \(\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA\).'
+    explanation: 'Compute \(M_x+N_y\) and integrate over the region.'
+  172:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=\left(x + y\right)\mathbf{i}-\left(x^{2} + y^{2}\right)\mathbf{j}\) around the boundary of the triangle bounded by \(y=0\), \(x=1\), \(y=x\) is'
+    A: '\(- \frac{7}{3}\)'
+    B: '\(- \frac{7}{6}\)'
+    C: '\(- \frac{1}{6}\)'
+    D: '\(\frac{7}{6}\)'
+    answer: B
+    hint: 'Green''s Theorem: \(\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA\).'
+    explanation: 'Compute \(N_x-M_y\) and integrate over the region.'
+  173:
+    topic: s16-4
+    question: 'The outward flux of \(\mathbf F=\left(x + y\right)\mathbf{i}-\left(x^{2} + y^{2}\right)\mathbf{j}\) across the boundary of the triangle bounded by \(y=0\), \(x=1\), \(y=x\) is'
+    A: '\(\frac{7}{6}\)'
+    B: '\(\frac{1}{6}\)'
+    C: '\(\frac{1}{3}\)'
+    D: '\(- \frac{1}{6}\)'
+    answer: B
+    hint: 'Green''s Theorem: \(\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA\).'
+    explanation: 'Compute \(M_x+N_y\) and integrate over the region.'
+  174:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=x y\mathbf{i}+y^{2}\mathbf{j}\) around the boundary of the region between \(y=x^2\) and \(y=x\) in the first quadrant is'
+    A: '\(- \frac{1}{6}\)'
+    B: '\(\frac{11}{12}\)'
+    C: '\(- \frac{1}{12}\)'
+    D: '\(\frac{1}{12}\)'
+    answer: C
+    hint: 'Green''s Theorem: \(\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA\).'
+    explanation: 'Compute \(N_x-M_y\) and integrate over the region.'
+  175:
+    topic: s16-4
+    question: 'The outward flux of \(\mathbf F=x y\mathbf{i}+y^{2}\mathbf{j}\) across the boundary of the region between \(y=x^2\) and \(y=x\) in the first quadrant is'
+    A: '\(\frac{1}{5}\)'
+    B: '\(\frac{2}{5}\)'
+    C: '\(\frac{6}{5}\)'
+    D: '\(- \frac{1}{5}\)'
+    answer: A
+    hint: 'Green''s Theorem: \(\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA\).'
+    explanation: 'Compute \(M_x+N_y\) and integrate over the region.'
+  176:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=-\sin{\left(y \right)}\mathbf{i}+x \cos{\left(y \right)}\mathbf{j}\) around the boundary of the square \(0\le x,y\le\tfrac\pi2\) is'
+    A: '\(2 \pi\)'
+    B: '\(1 + \pi\)'
+    C: '\(\pi\)'
+    D: '\(- \pi\)'
+    answer: C
+    hint: 'Green''s Theorem: \(\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA\).'
+    explanation: 'Compute \(N_x-M_y\) and integrate over the region.'
+  177:
+    topic: s16-4
+    question: 'The outward flux of \(\mathbf F=-\sin{\left(y \right)}\mathbf{i}+x \cos{\left(y \right)}\mathbf{j}\) across the boundary of the square \(0\le x,y\le\tfrac\pi2\) is'
+    A: '\(- \frac{\pi^{2}}{8}\)'
+    B: '\(\frac{\pi^{2}}{8}\)'
+    C: '\(1 - \frac{\pi^{2}}{8}\)'
+    D: '\(- \frac{\pi^{2}}{4}\)'
+    answer: A
+    hint: 'Green''s Theorem: \(\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA\).'
+    explanation: 'Compute \(M_x+N_y\) and integrate over the region.'
+  178:
+    topic: s16-4
+    question: 'For \(\mathbf F=(x+e^x\sin y)\mathbf i+(x+e^x\cos y)\mathbf j\), the counterclockwise circulation around the right-hand loop of the lemniscate \(r^2=\cos2\theta\) equals \(\iint\left(N_x-M_y\right)dA=\)'
+    A: '\(1\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(\frac{\pi}{4}\)'
+    D: '\(\frac{1}{2}\)'
+    answer: D
+    hint: '\(N_x-M_y=1\), so the circulation is the area of the loop.'
+    explanation: '\(\int_{-\pi/4}^{\pi/4}\tfrac12\cos2\theta\,d\theta=\tfrac12\).'
+  179:
+    topic: s16-4
+    question: 'For \(\mathbf F=\left(\tan^{-1}\dfrac yx\right)\mathbf i+\ln(x^2+y^2)\,\mathbf j\), the counterclockwise circulation around the boundary of \(1\le r\le2\), \(0\le\theta\le\pi\) is'
+    A: '\(0\)'
+    B: '\(\ln2\)'
+    C: '\(\pi\ln2\)'
+    D: '\(2\)'
+    answer: A
+    hint: '\(N_x-M_y=\dfrac{2x}{x^2+y^2}-\dfrac{x}{x^2+y^2}=\dfrac{\cos\theta}r\).'
+    explanation: '\(\iint\dfrac{\cos\theta}r\,r\,dr\,d\theta=\int_0^\pi\cos\theta\,d\theta=0\).'
+  180:
+    topic: s16-4
+    question: 'For \(\mathbf F=xy\mathbf i+y^2\mathbf j\) around the boundary of the region between \(y=x^2\) and \(y=x\), the counterclockwise circulation is'
+    A: '\(\dfrac14\)'
+    B: '\(-\dfrac1{12}\)'
+    C: '\(-\dfrac1{4}\)'
+    D: '\(\dfrac1{12}\)'
+    answer: B
+    hint: '\(N_x-M_y=0-x\).'
+    explanation: '\(-\int_0^1x(x-x^2)\,dx=-\tfrac1{12}\).'
+  181:
+    topic: s16-4
+    question: 'For \(\mathbf F=xy\mathbf i+y^2\mathbf j\) around the same region, the outward flux is'
+    A: '\(- \frac{1}{5}\)'
+    B: '\(\frac{1}{12}\)'
+    C: '\(\frac{1}{4}\)'
+    D: '\(\frac{1}{5}\)'
+    answer: D
+    hint: '\(M_x+N_y=y+2y=3y\).'
+    explanation: '\(\int_0^1\tfrac32(x^2-x^4)dx=\tfrac15\).'
+  182:
+    topic: s16-4
+    question: 'For \(\mathbf F=(-\sin y)\mathbf i+(x\cos y)\mathbf j\) around the square cut from the first quadrant by \(x=\tfrac\pi2\), \(y=\tfrac\pi2\), the counterclockwise circulation is'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(2 \pi\)'
+    C: '\(2\)'
+    D: '\(\pi\)'
+    answer: D
+    hint: '\(N_x-M_y=\cos y+\cos y=2\cos y\).'
+    explanation: '\(\int_0^{\pi/2}\int_0^{\pi/2}2\cos y\,dy\,dx=\pi\).'
+  183:
+    topic: s16-4
+    question: For the same field and square, the outward flux is
+    A: '\(0\)'
+    B: '\(- \frac{\pi^{2}}{4}\)'
+    C: '\(\frac{\pi^{2}}{8}\)'
+    D: '\(- \frac{\pi^{2}}{8}\)'
+    answer: D
+    hint: '\(M_x+N_y=0-x\sin y\).'
+    explanation: '\(-\int_0^{\pi/2}x\,dx\int_0^{\pi/2}\sin y\,dy=-\tfrac{\pi^2}8\).'
+  184:
+    topic: s16-4
+    question: 'The work done by \(\mathbf F=2xy^3\mathbf i+4x^2y^2\mathbf j\) once counterclockwise around the boundary of the region in the first quadrant enclosed by the \(x\)-axis, the line \(x=1\), and the curve \(y=x^3\) is'
+    A: '\(\frac{1}{33}\)'
+    B: '\(\frac{2}{33}\)'
+    C: '\(- \frac{2}{33}\)'
+    D: '\(\frac{4}{33}\)'
+    answer: B
+    hint: '\(N_x-M_y=8xy^2-6xy^2=2xy^2\).'
+    explanation: '\(\int_0^1\int_0^{x^3}2xy^2\,dy\,dx=\tfrac23\int_0^1x^{10}dx\).'
+  185:
+    topic: s16-4
+    question: 'The work done by \(\mathbf F=(4x-2y)\mathbf i+(2x-4y)\mathbf j\) once counterclockwise around the circle \((x-2)^2+(y-2)^2=4\) is'
+    A: '\(4\pi\)'
+    B: '\(0\)'
+    C: '\(16\pi\)'
+    D: '\(8\pi\)'
+    answer: C
+    hint: '\(N_x-M_y=2-(-2)=4\).'
+    explanation: '\(4\times\text{Area}=4\cdot4\pi\).'
+  186:
+    topic: s16-4
+    question: '\(\displaystyle\oint_Cy^2dx+x^2dy\) around the triangle bounded by \(x=0\), \(x+y=1\), \(y=0\) (counterclockwise) is'
+    A: '\(0\)'
+    B: '\(\frac{1}{3}\)'
+    C: '\(\frac{1}{6}\)'
+    D: '\(- \frac{1}{3}\)'
+    answer: A
+    hint: '\(N_x-M_y=2x-2y\).'
+    explanation: '\(\iint(2x-2y)\,dA=0\) by symmetry in \(x\) and \(y\).'
+  187:
+    topic: s16-4
+    question: '\(\displaystyle\oint_C3y\,dx+2x\,dy\) around the boundary of \(0\le x\le\pi\), \(0\le y\le\sin x\) (counterclockwise) is'
+    A: '\(2\)'
+    B: '\(-2\)'
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: B
+    hint: '\(N_x-M_y=2-3=-1\).'
+    explanation: '\(-\text{Area}=-\int_0^\pi\sin x\,dx=-2\).'
+  188:
+    topic: s16-4
+    question: '\(\displaystyle\oint_C(6y+x)\,dx+(y+2x)\,dy\) around the circle \((x-2)^2+(y-3)^2=4\) is'
+    A: '\(- 4 \pi\)'
+    B: '\(- 16 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(- 8 \pi\)'
+    answer: B
+    hint: '\(N_x-M_y=2-6=-4\).'
+    explanation: '\(-4\cdot4\pi=-16\pi\).'
+  189:
+    topic: s16-4
+    question: 'For any simple closed curve \(C\) enclosing a region \(R\), \(\displaystyle\oint_C(2x+y^2)\,dx+(2xy+3y)\,dy\) equals'
+    A: 'the area of \(R\)'
+    B: '\(0\)'
+    C: 'the perimeter of \(C\)'
+    D: '\(2\cdot\text{Area of }R\)'
+    answer: B
+    hint: 'The form is exact (\(N_x=2y=M_y\)).'
+    explanation: 'Green''s Theorem gives \(\iint0\,dA=0\).'
+  190:
+    topic: s16-4
+    question: 'The area enclosed by \(\mathbf r=a\cos t\,\mathbf i+a\sin t\,\mathbf j\), \(0\le t\le2\pi\), by the formula \(\tfrac12\oint x\,dy-y\,dx\) is'
+    A: '\(\pi a^{2}\)'
+    B: '\(\pi a\)'
+    C: '\(2 \pi a^{2}\)'
+    D: '\(\frac{\pi a^{2}}{2}\)'
+    answer: A
+    hint: '\(x\,dy-y\,dx=a^2dt\).'
+    explanation: '\(\tfrac12\int_0^{2\pi}a^2dt\).'
+  191:
+    topic: s16-4
+    question: 'The area enclosed by the ellipse \(\mathbf r=a\cos t\,\mathbf i+b\sin t\,\mathbf j\) by \(\tfrac12\oint x\,dy-y\,dx\) is'
+    A: '\(\pi a^{2} b^{2}\)'
+    B: '\(2 \pi a b\)'
+    C: '\(\pi a b\)'
+    D: '\(\pi \left(a + b\right)\)'
+    answer: C
+    hint: '\(x\,dy-y\,dx=ab\,dt\).'
+    explanation: '\(\tfrac12\int_0^{2\pi}ab\,dt\).'
+  192:
+    topic: s16-4
+    question: 'The area enclosed by the astroid \(\mathbf r=(\cos^3t)\mathbf i+(\sin^3t)\mathbf j\), \(0\le t\le2\pi\), is'
+    A: '\(\frac{3 \pi}{8}\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(\frac{3 \pi}{16}\)'
+    D: '\(\frac{3 \pi}{4}\)'
+    answer: A
+    hint: '\(x\,dy-y\,dx=3\sin^2t\cos^2t\,dt\).'
+    explanation: '\(\tfrac32\int_0^{2\pi}\sin^2t\cos^2t\,dt=\tfrac{3\pi}8\).'
+  193:
+    topic: s16-4
+    question: 'For the curve \(\mathbf r=t^2\mathbf i+\left(\tfrac{t^3}3-t\right)\mathbf j\), \(-\sqrt3\le t\le\sqrt3\), the area of the loop is'
+    A: '\(\frac{4 \sqrt{3}}{5}\)'
+    B: '\(1 + \frac{8 \sqrt{3}}{5}\)'
+    C: '\(\frac{8 \sqrt{3}}{5}\)'
+    D: '\(\frac{16 \sqrt{3}}{5}\)'
+    answer: C
+    hint: '\(\tfrac12\oint x\,dy-y\,dx\) with \(dx=2t\,dt\), \(dy=(t^2-1)\,dt\).'
+    explanation: '\(\tfrac12\int\left[t^2(t^2-1)-2t\left(\tfrac{t^3}3-t\right)\right]dt\).'
+  194:
+    topic: s16-4
+    question: 'Green''s Theorem (circulation form) states that for a region \(R\) bounded by a simple closed curve \(C\) (counterclockwise), \(\displaystyle\oint_CM\,dx+N\,dy=\)'
+    A: '\(\displaystyle\iint_R\left(M+N\right)dx\,dy\)'
+    B: '\(\displaystyle\iint_R\left(\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}\right)dx\,dy\)'
+    C: '\(\displaystyle\iint_R\left(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right)dx\,dy\)'
+    D: '\(\displaystyle\iint_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)dx\,dy\)'
+    answer: D
+    hint: 'The integrand is the \(z\)-component of the curl.'
+    explanation: Circulation equals the double integral of the curl.
+  195:
+    topic: s16-4
+    question: 'Green''s Theorem (flux form) states \(\displaystyle\oint_CM\,dy-N\,dx=\)'
+    A: '\(\displaystyle\iint_R\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)dx\,dy\)'
+    B: '\(\displaystyle\iint_R\left(\frac{\partial M}{\partial y}+\frac{\partial N}{\partial x}\right)dx\,dy\)'
+    C: '\(\displaystyle\iint_R\left(\frac{\partial M}{\partial x}+\frac{\partial N}{\partial y}\right)dx\,dy\)'
+    D: '\(\displaystyle\iint_R\left(M-N\right)dx\,dy\)'
+    answer: C
+    hint: The integrand is the divergence.
+    explanation: Flux equals the double integral of the divergence.
+  196:
+    topic: s16-4
+    question: 'The area of a region \(R\) bounded by a simple closed curve \(C\) (counterclockwise) is \(A=\)'
+    A: '\(\dfrac12\displaystyle\oint_Cx\,dy-y\,dx\)'
+    B: '\(\dfrac12\displaystyle\oint_Cy\,dy-x\,dx\)'
+    C: '\(\displaystyle\oint_C\dfrac{x\,dy-y\,dx}{x^2+y^2}\)'
+    D: '\(\displaystyle\oint_Cx\,dy+y\,dx\)'
+    answer: A
+    hint: 'Take \(N=x/2\), \(M=-y/2\) in Green''s Theorem.'
+    explanation: 'Then \(N_x-M_y=1\).'
+  197:
+    topic: s16-4
+    question: 'Also, \(A=\displaystyle\oint_Cx\,dy=\)'
+    A: '\(2\displaystyle\oint_Cy\,dx\)'
+    B: '\(-\displaystyle\oint_Cy\,dx\)'
+    C: '\(\displaystyle\oint_Cy\,dx\)'
+    D: '\(\displaystyle\oint_C(x\,dy+y\,dx)\)'
+    answer: B
+    hint: 'Take \(N=x\), \(M=0\), or \(M=-y\), \(N=0\).'
+    explanation: 'Both give \(\iint1\,dA\).'
+  198:
+    topic: s16-4
+    question: 'The integral \(\displaystyle\oint_C4x^3y\,dx+x^4dy\) around any simple closed curve \(C\) is'
+    A: '\(4\) times the area'
+    B: 'zero, since \(4x^3y\,dx+x^4dy=d(x^4y)\) is exact'
+    C: 'not determined by \(C\)'
+    D: 'the area enclosed by \(C\)'
+    answer: B
+    hint: 'Check \(N_x-M_y\).'
+    explanation: '\(4x^3-4x^3=0\).'
+  199:
+    topic: s16-4
+    question: 'The integral \(\displaystyle\oint_C-y^3dy+x^3dx\) around any simple closed curve \(C\) is'
+    A: not determined
+    B: '\(3\) times the area enclosed'
+    C: 'the length of \(C\)'
+    D: zero (the form is exact)
+    answer: D
+    hint: 'Here \(M=x^3\), \(N=-y^3\).'
+    explanation: '\(N_x-M_y=0\).'
+  200:
+    topic: s16-4
+    question: 'If \(f(x,y)\) satisfies Laplace''s equation \(f_{xx}+f_{yy}=0\), then for every closed curve \(C\) to which Green''s Theorem applies, \(\displaystyle\oint_Cf_y\,dx-f_x\,dy=\)'
+    A: '\(0\)'
+    B: '\(\text{Area}\)'
+    C: '\(f_{xy}\)'
+    D: '\(2\pi\)'
+    answer: A
+    hint: 'Apply Green''s Theorem with \(M=f_y\), \(N=-f_x\).'
+    explanation: '\(N_x-M_y=-f_{xx}-f_{yy}=0\).'
+  201:
+    topic: s16-4
+    question: 'Among all smooth simple closed curves oriented counterclockwise, the one maximizing the work done by \(\mathbf F=\left(\tfrac14x^2y+\tfrac13y^3\right)\mathbf i+x\mathbf j\) is the curve bounding the region where \(\mathbf k\cdot\nabla\times\mathbf F\) is positive, i.e.'
+    A: 'the ellipse \(4x^2+y^2=4\)'
+    B: 'the circle \(x^2+y^2=4\)'
+    C: 'the circle \(x^2+y^2=1\)'
+    D: 'the ellipse \(x^2+4y^2=4\)'
+    answer: D
+    hint: '\(N_x-M_y=1-\tfrac14x^2-y^2\).'
+    explanation: 'It is positive exactly when \(x^2+4y^2<4\).'
+  202:
+    topic: s16-4
+    question: "Green's Theorem extends to regions with finitely many holes, provided each boundary curve"
+    A: is a circle
+    B: is oriented counterclockwise (all of them)
+    C: is traversed clockwise
+    D: is oriented so that the region lies on the left as one traverses it
+    answer: D
+    hint: Outer boundary counterclockwise, inner boundaries clockwise.
+    explanation: The region must stay on the immediate left.
+  203:
+    topic: s16-4
+    question: 'For a conservative field \(\mathbf F\) in a simply connected plane region, the curl component \(\partial N/\partial x-\partial M/\partial y\) is'
+    A: '\(0\)'
+    B: undefined
+    C: positive
+    D: '\(1\)'
+    answer: A
+    hint: '\(\mathbf F=\nabla f\) has equal mixed partials.'
+    explanation: '\(f_{yx}-f_{xy}=0\).'
+  204:
+    topic: s16-4
+    question: 'Bendixson''s criterion says that if \(M_x+N_y\ne0\) throughout a simply connected region \(R\), then'
+    A: the field is conservative
+    B: the flow is irrotational
+    C: every streamline is closed
+    D: 'no streamline of the flow in \(R\) is a closed curve'
+    answer: D
+    hint: If a streamline were closed, the flux across it would be zero.
+    explanation: 'By Green''s Theorem the flux would equal \(\iint(M_x+N_y)\,dA\ne0\).'
+  205:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=(2x-y)\mathbf i+(x+3y)\mathbf j\) around the ellipse \(x^2+4y^2=4\) is'
+    A: '\(4 \pi\)'
+    B: '\(\pi\)'
+    C: '\(8 \pi\)'
+    D: '\(2 \pi\)'
+    answer: A
+    hint: '\(N_x-M_y=1-(-1)=2\).'
+    explanation: '\(2\cdot\text{Area}=2\cdot2\pi\).'
+  206:
+    topic: s16-4
+    question: 'The counterclockwise circulation of \(\mathbf F=(2x^3-y^3)\mathbf i+(x^3+y^3)\mathbf j\) around the ellipse \(\tfrac{x^2}4+\tfrac{y^2}9=1\) is'
+    A: '\(\frac{117 \pi}{2}\)'
+    B: '\(\frac{119 \pi}{2}\)'
+    C: '\(117 \pi\)'
+    D: '\(\frac{117 \pi}{4}\)'
+    answer: A
+    hint: '\(N_x-M_y=3x^2+3y^2\).'
+    explanation: '\(3\iint(x^2+y^2)\,dA\) over the ellipse with semi-axes \(2\) and \(3\): \(3\cdot\tfrac{\pi ab(a^2+b^2)}4\).'
+  207:
+    topic: s16-5
+    question: 'The area of the surface cut from the paraboloid \(x^2+y^2-z=0\) by the plane \(z=2\) is'
+    A: '\(\frac{26 \pi}{3}\)'
+    B: '\(\frac{13 \pi}{3}\)'
+    C: '\(\frac{13 \pi}{6}\)'
+    D: '\(\frac{16 \pi}{3}\)'
+    answer: B
+    hint: 'Parametrize \(\mathbf r=(u\cos v,u\sin v,u^2)\); \(|\mathbf r_u\times\mathbf r_v|=u\sqrt{1+4u^2}\).'
+    explanation: '\(2\pi\int_0^{\sqrt2}u\sqrt{1+4u^2}\,du=\tfrac{13\pi}3\).'
+  208:
+    topic: s16-5
+    question: 'The area of the band cut from the paraboloid \(x^2+y^2-z=0\) by the planes \(z=2\) and \(z=6\) is'
+    A: '\(\frac{49 \pi}{6}\)'
+    B: '\(\frac{49 \pi}{3}\)'
+    C: '\(\frac{196 \pi}{3}\)'
+    D: '\(\frac{98 \pi}{3}\)'
+    answer: B
+    hint: '\(\int_{\sqrt2}^{\sqrt6}2\pi u\sqrt{1+4u^2}\,du\).'
+    explanation: '\(\tfrac\pi6\left[(1+4u^2)^{3/2}\right]_{\sqrt2}^{\sqrt6}=\tfrac{\pi}6(125-27)\).'
+  209:
+    topic: s16-5
+    question: 'The area of the region cut from the plane \(x+2y+2z=5\) by the cylinder whose walls are \(x=y^2\) and \(x=2-y^2\) is'
+    A: '\(6\)'
+    B: '\(2\)'
+    C: '\(4\)'
+    D: '\(\frac{8}{3}\)'
+    answer: C
+    hint: '\(z=\tfrac{5-x-2y}2\) so \(\sqrt{f_x^2+f_y^2+1}=\tfrac32\); the base area is \(\tfrac83\).'
+    explanation: '\(\tfrac32\cdot\tfrac83=4\).'
+  210:
+    topic: s16-5
+    question: 'The area of the portion of \(x^2-2z=0\) above the triangle bounded by \(x=\sqrt3\), \(y=0\), and \(y=x\) is'
+    A: '\(\frac{7}{3}\)'
+    B: '\(\frac{7}{6}\)'
+    C: '\(7\)'
+    D: '\(\frac{14}{3}\)'
+    answer: A
+    hint: '\(z=x^2/2\): \(\sqrt{1+x^2}\,dy\,dx\).'
+    explanation: '\(\int_0^{\sqrt3}x\sqrt{1+x^2}\,dx=\tfrac13\left(8-1\right)=\tfrac73\).'
+  211:
+    topic: s16-5
+    question: 'The area of the portion of the plane \(x-2y-2z=0\) above the triangle bounded by \(x=2\), \(y=0\), \(y=3x\) is'
+    A: '\(9\)'
+    B: '\(4\)'
+    C: '\(18\)'
+    D: '\(6\)'
+    answer: A
+    hint: '\(z=\tfrac{x-2y}2\) so \(\sqrt{f_x^2+f_y^2+1}=\tfrac32\); the base triangle has legs \(2\) and \(6\).'
+    explanation: '\(\tfrac32\cdot6=9\).'
+  212:
+    topic: s16-5
+    question: 'The area of the cap cut from the sphere \(x^2+y^2+z^2=2\) by the cone \(z=\sqrt{x^2+y^2}\) is'
+    A: '\(\pi \left(2 - \sqrt{2}\right)\)'
+    B: '\(4 \pi\)'
+    C: '\(2 \sqrt{2} \pi\)'
+    D: '\(2 \pi \left(2 - \sqrt{2}\right)\)'
+    answer: D
+    hint: 'Use \(z=\sqrt{2-x^2-y^2}\): \(dS=\dfrac{\sqrt2}{\sqrt{2-r^2}}\,r\,dr\,d\theta\) over \(r\le1\).'
+    explanation: '\(2\pi\sqrt2\left(\sqrt2-1\right)\) \(=2\pi(2-\sqrt2)\).'
+  213:
+    topic: s16-5
+    question: 'The area of the ellipse cut from the plane \(z=cx\) by the cylinder \(x^2+y^2=1\) is'
+    A: '\(\pi \left(c^{2} + 1\right)\)'
+    B: '\(2 \pi \sqrt{c^{2} + 1}\)'
+    C: '\(\pi \sqrt{c^{2} + 1}\)'
+    D: '\(\pi c\)'
+    answer: C
+    hint: '\(\sqrt{f_x^2+f_y^2+1}=\sqrt{1+c^2}\) over the unit disk.'
+    explanation: '\(\pi\sqrt{1+c^2}\).'
+  214:
+    topic: s16-5
+    question: 'The area of the upper portion of the cylinder \(x^2+z^2=1\) lying between the planes \(x=\pm\tfrac12\) and \(y=\pm\tfrac12\) is'
+    A: '\(\pi\)'
+    B: '\(\frac{2 \pi}{3}\)'
+    C: '\(\frac{\pi}{6}\)'
+    D: '\(\frac{\pi}{3}\)'
+    answer: D
+    hint: '\(z=\sqrt{1-x^2}\); \(dS=\dfrac{dx\,dy}{\sqrt{1-x^2}}\).'
+    explanation: '\(\int_{-1/2}^{1/2}\dfrac{dx}{\sqrt{1-x^2}}=2\sin^{-1}\tfrac12=\tfrac\pi3\).'
+  215:
+    topic: s16-5
+    question: 'The area of the portion of \(x=4-y^2-z^2\) above the ring \(1\le y^2+z^2\le4\) in the \(yz\)-plane is'
+    A: '\(\frac{\pi \left(- 5 \sqrt{5} + 17 \sqrt{17}\right)}{3}\)'
+    B: '\(\frac{\pi \left(- 5 \sqrt{5} + 17 \sqrt{17}\right)}{6}\)'
+    C: '\(12 \pi\)'
+    D: '\(\frac{\pi \left(- 5 \sqrt{5} + 17 \sqrt{17}\right)}{12}\)'
+    answer: B
+    hint: '\(f_y^2+f_z^2+1=1+4r^2\).'
+    explanation: '\(2\pi\int_1^2r\sqrt{1+4r^2}dr=\tfrac\pi6\left(17^{3/2}-5^{3/2}\right)\).'
+  216:
+    topic: s16-5
+    question: 'The area of the surface cut from the paraboloid \(x^2+y+z^2=2\) by the plane \(y=0\) is'
+    A: '\(2 \pi\)'
+    B: '\(\frac{26 \pi}{3}\)'
+    C: '\(\frac{13 \pi}{6}\)'
+    D: '\(\frac{13 \pi}{3}\)'
+    answer: D
+    hint: '\(y=2-x^2-z^2\), \(r^2=x^2+z^2\le2\); \(dS=\sqrt{1+4r^2}\,r\,dr\,d\theta\).'
+    explanation: '\(2\pi\cdot\tfrac1{12}\left(27-1\right)=\tfrac{13\pi}3\).'
+  217:
+    topic: s16-5
+    question: 'The integral of \(g=x+y+z\) over the part of the surface of the first-octant cube (side \(a\)) lying on the planes \(x=a\), \(y=a\), \(z=a\) is'
+    A: '\(2 a^{3}\)'
+    B: '\(3 a^{3}\)'
+    C: '\(6 a^{3}\)'
+    D: '\(9 a^{3}\)'
+    answer: C
+    hint: 'Each face contributes \(\iint(a+u+v)\,dA\) over a square of side \(a\).'
+    explanation: '\(3\left(a^3+\tfrac{a^3}2+\tfrac{a^3}2\right)=6a^3\).'
+  218:
+    topic: s16-5
+    question: 'The integral of \(g=xyz\) over the surface of the rectangular solid cut from the first octant by the planes \(x=a\), \(y=b\), \(z=c\) is'
+    A: '\(\frac{a b c \left(a b + a c + b c\right)}{4}\)'
+    B: '\(\frac{a b c \left(a + b + c\right)}{4}\)'
+    C: '\(\frac{a^{2} b^{2} c^{2}}{4}\)'
+    D: '\(\frac{a b c \left(a b + a c + b c\right)}{2}\)'
+    answer: A
+    hint: 'Only the three faces \(x=a\), \(y=b\), \(z=c\) contribute (on the others \(xyz=0\)).'
+    explanation: '\(\tfrac{abc}4\left(ab+ac+bc\right)\).'
+  219:
+    topic: s16-5
+    question: 'The integral of \(g=xyz\) over the surface of the rectangular solid bounded by \(x=\pm a\), \(y=\pm b\), \(z=\pm c\) is'
+    A: '\(0\)'
+    B: '\(8abc\)'
+    C: '\(\dfrac{abc(ab+bc+ca)}4\)'
+    D: '\(a^2b^2c^2\)'
+    answer: A
+    hint: Opposite faces give integrals of opposite sign.
+    explanation: 'On \(x=a\) and \(x=-a\) the integrand \(\pm ayz\) cancels, etc.'
+  220:
+    topic: s16-5
+    question: 'The integral of \(g=x+y+z\) over the portion of the plane \(2x+2y+z=2\) in the first octant is'
+    A: '\(4\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(3\)'
+    answer: C
+    hint: '\(z=2-2x-2y\), \(dS=3\,dy\,dx\), base the triangle \(0\le y\le1-x\).'
+    explanation: '\(3\iint(2-x-y)\,dA=3\left(1-\tfrac13\right)=2\).'
+  221:
+    topic: s16-5
+    question: 'The integral of \(g=x\sqrt{y^2+4}\) over the surface cut from the parabolic cylinder \(y^2+4z=16\) by the planes \(x=0\), \(x=1\), and \(z=0\) is'
+    A: '\(\frac{56}{3}\)'
+    B: '\(\frac{68}{3}\)'
+    C: '\(\frac{112}{3}\)'
+    D: '\(\frac{28}{3}\)'
+    answer: A
+    hint: '\(dS=\tfrac12\sqrt{y^2+4}\,dy\,dx\), so \(g\,dS=\tfrac12x(y^2+4)\,dy\,dx\).'
+    explanation: '\(\tfrac12\cdot\tfrac12\int_{-4}^4(y^2+4)dy=\tfrac14\left(\tfrac{128}3+32\right)\).'
+  222:
+    topic: s16-5
+    question: 'The upward flux of \(\mathbf F=-\mathbf i+2\mathbf j+3\mathbf k\) across the rectangle \(z=0\), \(0\le x\le2\), \(0\le y\le3\) is'
+    A: '\(18\)'
+    B: '\(36\)'
+    C: '\(6\)'
+    D: '\(12\)'
+    answer: A
+    hint: '\(\mathbf n=\mathbf k\); flux \(=\iint F_z\,dA\).'
+    explanation: '\(3\cdot6=18\).'
+  223:
+    topic: s16-5
+    question: 'The flux of \(\mathbf F=yx^2\mathbf i-2\mathbf j+xz\mathbf k\) across the rectangle \(y=0\), \(-1\le x\le2\), \(2\le z\le7\), in the direction \(-\mathbf j\) is'
+    A: '\(30\)'
+    B: '\(60\)'
+    C: '\(-30\)'
+    D: '\(15\)'
+    answer: A
+    hint: '\(\mathbf n=-\mathbf j\); flux \(=\iint(-F_y)\,dA\).'
+    explanation: '\(\iint2\,dA=2\cdot15=30\).'
+  224:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=z\mathbf k\) across the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant is'
+    A: '\(\frac{\pi a^{3}}{12}\)'
+    B: '\(- \frac{\pi a^{3}}{6}\)'
+    C: '\(\frac{\pi a^{3}}{3}\)'
+    D: '\(\frac{\pi a^{3}}{6}\)'
+    answer: D
+    hint: 'Use \(\mathbf n=\mathbf r/a\) and the area element \(a^2\sin\varphi\,d\varphi\,d\theta\).'
+    explanation: 'Compute \(\mathbf F\cdot\mathbf n\) and integrate over the first octant of the sphere.'
+  225:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=-y\mathbf i+x\mathbf j\) across the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant is'
+    A: '\(0\)'
+    B: '\(\dfrac{\pi a^2}{2}\)'
+    C: '\(\dfrac{\pi a^3}{2}\)'
+    D: '\(\pi a^2\)'
+    answer: A
+    hint: 'Compute \(\mathbf F\cdot\mathbf n\) with \(\mathbf n=\mathbf r/a\).'
+    explanation: '\(\mathbf F\cdot\mathbf r=0\), so the field is tangent to the sphere.'
+  226:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=y\mathbf i-x\mathbf j+\mathbf k\) across the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant is'
+    A: '\(\frac{\pi a^{2}}{2}\)'
+    B: '\(\frac{\pi a^{2}}{8}\)'
+    C: '\(\frac{\pi a^{2}}{4}\)'
+    D: '\(- \frac{\pi a^{2}}{4}\)'
+    answer: C
+    hint: 'Use \(\mathbf n=\mathbf r/a\) and the area element \(a^2\sin\varphi\,d\varphi\,d\theta\).'
+    explanation: 'Compute \(\mathbf F\cdot\mathbf n\) and integrate over the first octant of the sphere.'
+  227:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=zx\mathbf i+zy\mathbf j+z^2\mathbf k\) across the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant is'
+    A: '\(- \frac{\pi a^{4}}{4}\)'
+    B: '\(\frac{\pi a^{4}}{8}\)'
+    C: '\(\frac{\pi a^{4}}{2}\)'
+    D: '\(\frac{\pi a^{4}}{4}\)'
+    answer: D
+    hint: 'Use \(\mathbf n=\mathbf r/a\) and the area element \(a^2\sin\varphi\,d\varphi\,d\theta\).'
+    explanation: 'Compute \(\mathbf F\cdot\mathbf n\) and integrate over the first octant of the sphere.'
+  228:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\) across the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant is'
+    A: '\(\frac{\pi a^{3}}{4}\)'
+    B: '\(- \frac{\pi a^{3}}{2}\)'
+    C: '\(\pi a^{3}\)'
+    D: '\(\frac{\pi a^{3}}{2}\)'
+    answer: D
+    hint: 'Use \(\mathbf n=\mathbf r/a\) and the area element \(a^2\sin\varphi\,d\varphi\,d\theta\).'
+    explanation: 'Compute \(\mathbf F\cdot\mathbf n\) and integrate over the first octant of the sphere.'
+  229:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=z^2\mathbf i+x\mathbf j-3z\mathbf k\) through the parabolic cylinder \(z=4-y^2\) cut by \(x=0\), \(x=1\), and \(z=0\) is'
+    A: '\(-32\)'
+    B: '\(32\)'
+    C: '\(-16\)'
+    D: '\(16\)'
+    answer: A
+    hint: 'With \(G=z+y^2-4\), \(\mathbf n\,dS=(0,2y,1)\,dx\,dy\) (upward).'
+    explanation: '\(\int_0^1\int_{-2}^2\left[2xy-3(4-y^2)\right]dy\,dx=-32\).'
+  230:
+    topic: s16-5
+    question: 'The flux of \(\mathbf F=4x\mathbf i+4y\mathbf j+2\mathbf k\) outward (away from the \(z\)-axis) through the part of the paraboloid \(z=x^2+y^2\) below \(z=1\) is'
+    A: '\(\pi\)'
+    B: '\(- 2 \pi\)'
+    C: '\(2 \pi\)'
+    D: '\(- \pi\)'
+    answer: B
+    hint: 'Outward (away from the \(z\)-axis) means the normal \(\mathbf n\,dS=(2x,2y,-1)\,dx\,dy\).'
+    explanation: '\(\iint\left(-8r^2+2\right)\,dA=2\pi\left(-2+1\right)=-2\pi\).'
+  231:
+    topic: s16-5
+    question: 'The outward flux of \(\mathbf F=2xy\mathbf i+2yz\mathbf j+2xz\mathbf k\) across the surface of the cube cut from the first octant by \(x=a\), \(y=a\), \(z=a\) is'
+    A: '\(3 a^{4}\)'
+    B: '\(a^{4}\)'
+    C: '\(2 a^{4}\)'
+    D: '\(6 a^{4}\)'
+    answer: A
+    hint: 'By the Divergence Theorem: \(\iiint2(x+y+z)\,dV\).'
+    explanation: '\(2\cdot3\cdot\tfrac{a}{2}\cdot a^3=3a^4\).'
+  232:
+    topic: s16-5
+    question: 'The centroid of the portion of the sphere \(x^2+y^2+z^2=a^2\) that lies in the first octant is'
+    A: '\(\left(\dfrac a2,\dfrac a2,\dfrac a2\right)\)'
+    B: '\(\left(\dfrac{2a}3,\dfrac{2a}3,\dfrac{2a}3\right)\)'
+    C: '\(\left(\dfrac{a}{3},\dfrac a3,\dfrac a3\right)\)'
+    D: '\(\left(\dfrac{3a}8,\dfrac{3a}8,\dfrac{3a}8\right)\)'
+    answer: A
+    hint: '\(\bar z=\iint z\,dS/\iint dS\) with \(dS=a^2\sin\varphi\,d\varphi\,d\theta\).'
+    explanation: '\(\bar z=\dfrac{a\cdot a^2\cdot\tfrac\pi2\cdot\tfrac12}{\tfrac\pi2a^2}=\tfrac a2\).'
+  233:
+    topic: s16-5
+    question: 'The centroid of the surface cut from the cylinder \(y^2+z^2=9\), \(z\ge0\), by the planes \(x=0\) and \(x=3\) is at \(\bar x=\) and \(\bar z=\)'
+    A: '\(\bar x=\dfrac32\), \(\bar z=\dfrac{4\cdot3}{3\pi}\cdot\tfrac12\)'
+    B: '\(\bar x=\dfrac32\), \(\bar z=\dfrac6\pi\)'
+    C: '\(\bar x=\dfrac32\), \(\bar z=\dfrac3\pi\)'
+    D: '\(\bar x=3\), \(\bar z=\dfrac6\pi\)'
+    answer: B
+    hint: '\(\bar x\) is the midpoint; \(\bar z=\dfrac{\int_0^\pi3\sin\theta\,d\theta}{\pi}\).'
+    explanation: '\(\bar z=\dfrac{2\cdot3}\pi=\dfrac6\pi\).'
+  234:
+    topic: s16-5
+    question: 'The moment of inertia about the \(z\)-axis of a thin shell of constant density \(\delta\) cut from the cone \(x^2+y^2-z^2=0\) by the planes \(z=1\) and \(z=2\) is'
+    A: '\(\frac{15 \sqrt{2} \pi \delta}{4}\)'
+    B: '\(15 \sqrt{2} \pi \delta\)'
+    C: '\(\frac{15 \pi \delta}{2}\)'
+    D: '\(\frac{15 \sqrt{2} \pi \delta}{2}\)'
+    answer: D
+    hint: 'The cone is \(z=r\), \(dS=\sqrt2\,r\,dr\,d\theta\); \(I_z=\iint r^2\delta\,dS\).'
+    explanation: '\(\sqrt2\,\delta\cdot2\pi\int_1^2r^3dr=\tfrac{15\sqrt2\pi}2\delta\).'
+  235:
+    topic: s16-5
+    question: 'The mass of the shell cut from the cone \(x^2+y^2-z^2=0\) between \(z=1\) and \(z=2\) with constant density \(\delta\) is'
+    A: '\(3 \pi \delta\)'
+    B: '\(\frac{3 \sqrt{2} \pi \delta}{2}\)'
+    C: '\(3 \sqrt{2} \pi \delta\)'
+    D: '\(6 \sqrt{2} \pi \delta\)'
+    answer: C
+    hint: '\(M=\delta\cdot\text{surface area}\).'
+    explanation: '\(\delta\sqrt2\pi(4-1)=3\sqrt2\pi\delta\).'
+  236:
+    topic: s16-5
+    question: 'The moment of inertia of a thin spherical shell of radius \(a\) and constant density \(\delta\) about a diameter is'
+    A: '\(\dfrac{8\pi}{15}\delta a^5\)'
+    B: '\(\dfrac{2\pi}3\delta a^4\)'
+    C: '\(\dfrac{4\pi}3\delta a^4\)'
+    D: '\(\dfrac{8\pi}3\delta a^4\)'
+    answer: D
+    hint: 'Use a hemisphere and double: \(\iint(x^2+y^2)\delta\,dS\).'
+    explanation: '\(\delta a^4\cdot2\pi\int_0^\pi\sin^3\varphi\,d\varphi=\tfrac{8\pi}3\delta a^4\).'
+  237:
+    topic: s16-5
+    question: 'The moment of inertia of a thin spherical shell of radius \(a\) (density \(\delta\)) about a line tangent to the sphere is'
+    A: '\(\dfrac{20\pi}3\delta a^4\)'
+    B: '\(\dfrac{16\pi}3\delta a^4\)'
+    C: '\(\dfrac{8\pi}3\delta a^4\)'
+    D: '\(4\pi\delta a^4\)'
+    answer: A
+    hint: 'Apply the Parallel Axis Theorem with \(m=4\pi a^2\delta\), \(h=a\).'
+    explanation: '\(I_L=I_{c.m.}+mh^2\).'
+  238:
+    topic: s16-5
+    question: 'The centroid of the lateral surface of a solid right circular cone of base radius \(a\) and height \(h\) lies on the axis at a height above the base equal to'
+    A: '\(\dfrac h2\)'
+    B: '\(\dfrac{2h}3\)'
+    C: '\(\dfrac h3\)'
+    D: '\(\dfrac h4\)'
+    answer: C
+    hint: 'The lateral surface is an ice-cream-cone shell; surface area is proportional to \(r\) times slant length.'
+    explanation: The centroid is one third of the way from the base to the vertex.
+  239:
+    topic: s16-5
+    question: 'The area of the surface cut from the bottom of the paraboloid \(z=x^2+y^2\) by the plane \(z=3\) is'
+    A: '\(\frac{\pi \left(-1 + 13 \sqrt{13}\right)}{6}\)'
+    B: '\(\frac{\pi \left(-1 + 13 \sqrt{13}\right)}{12}\)'
+    C: '\(12 \pi\)'
+    D: '\(\frac{\pi \left(-1 + 13 \sqrt{13}\right)}{3}\)'
+    answer: A
+    hint: '\(A=\iint\sqrt{f_x^2+f_y^2+1}\,dx\,dy\) over the disk \(r\le\sqrt3\).'
+    explanation: '\(2\pi\int_0^{\sqrt3}r\sqrt{1+4r^2}dr=\tfrac{\pi}6\left(13^{3/2}-1\right)\).'
+  240:
+    topic: s16-5
+    question: 'The area of the "nose" of the paraboloid \(x=1-y^2-z^2\) cut off by the \(yz\)-plane is'
+    A: '\(\frac{5 \pi \left(1 + \sqrt{5}\right)}{6}\)'
+    B: '\(\frac{\pi \left(-1 + 5 \sqrt{5}\right)}{12}\)'
+    C: '\(\frac{\pi \left(-1 + 5 \sqrt{5}\right)}{3}\)'
+    D: '\(\frac{\pi \left(-1 + 5 \sqrt{5}\right)}{6}\)'
+    answer: D
+    hint: 'Over the unit disk in the \(yz\)-plane: \(\sqrt{4r^2+1}\,r\,dr\,d\theta\).'
+    explanation: '\(\tfrac\pi6\left(5^{3/2}-1\right)\).'
+  241:
+    topic: s16-5
+    question: 'The area of the portion of the cone \(z=\sqrt{x^2+y^2}\) over the region between the circle \(x^2+y^2=1\) and the ellipse \(9x^2+4y^2=36\) is'
+    A: '\(5 \sqrt{2} \pi\)'
+    B: '\(\frac{5 \sqrt{2} \pi}{2}\)'
+    C: '\(6 \sqrt{2} \pi\)'
+    D: '\(5 \pi\)'
+    answer: A
+    hint: '\(dS=\sqrt2\,dA\); the region has area \(\pi\cdot2\cdot3-\pi\cdot1^2=5\pi\).'
+    explanation: '\(5\sqrt2\pi\).'
+  242:
+    topic: s16-5
+    question: 'The area of the triangle cut from the plane \(2x+6y+3z=6\) by the first-octant boundary planes is'
+    A: '\(7\)'
+    B: '\(\frac{3}{2}\)'
+    C: '\(\frac{7}{3}\)'
+    D: '\(\frac{7}{2}\)'
+    answer: D
+    hint: '\(z=\tfrac{6-2x-6y}3\): \(\sqrt{f_x^2+f_y^2+1}=\tfrac73\); the base has area \(\tfrac32\).'
+    explanation: '\(\tfrac73\cdot\tfrac32=\tfrac72\).'
+  243:
+    topic: s16-5
+    question: 'The area of the first-octant surface cut from the cylinder \(y=\tfrac23z^{3/2}\) by the planes \(x=1\) and \(y=\tfrac{16}3\) is'
+    A: '\(- \frac{1}{3} + \frac{5 \sqrt{5}}{3}\)'
+    B: '\(- \frac{4}{3} + \frac{20 \sqrt{5}}{3}\)'
+    C: '\(- \frac{2}{3} + \frac{10 \sqrt{5}}{3}\)'
+    D: '\(\frac{1}{3} + \frac{10 \sqrt{5}}{3}\)'
+    answer: C
+    hint: '\(y=g(z)\): \(dS=\sqrt{1+g''(z)^2}\,dz\,dx=\sqrt{1+z}\,dz\,dx\), \(0\le z\le4\).'
+    explanation: '\(\tfrac23\left(5^{3/2}-1\right)\).'
+  244:
+    topic: s16-5
+    question: 'If a surface is the graph \(z=f(x,y)\) over a region \(R_{xy}\), its surface area is'
+    A: '\(\displaystyle\iint_{R_{xy}}\left(f_x^2+f_y^2+1\right)dx\,dy\)'
+    B: '\(\displaystyle\iint_{R_{xy}}\sqrt{f^2+1}\,dx\,dy\)'
+    C: '\(\displaystyle\iint_{R_{xy}}\sqrt{f_x^2+f_y^2}\,dx\,dy\)'
+    D: '\(\displaystyle\iint_{R_{xy}}\sqrt{f_x^2+f_y^2+1}\,dx\,dy\)'
+    answer: D
+    hint: '\(\dfrac{|\nabla F|}{|\nabla F\cdot\mathbf p|}\) with \(F=f(x,y)-z\), \(\mathbf p=\mathbf k\).'
+    explanation: '\(|\nabla F|=\sqrt{f_x^2+f_y^2+1}\) and \(|\nabla F\cdot\mathbf k|=1\).'
+  245:
+    topic: s16-5
+    question: 'The surface integral of \(g\) over a surface \(S\) given implicitly by \(F(x,y,z)=c\) with \(\mathbf p\) a unit vector normal to the projection region \(R\) is'
+    A: '\(\displaystyle\iint_Rg\,\dfrac{|\nabla F\cdot\mathbf p|}{|\nabla F|}\,dA\)'
+    B: '\(\displaystyle\iint_Rg\,dA\)'
+    C: '\(\displaystyle\iint_Rg\,\dfrac{|\nabla F|}{|\nabla F\cdot\mathbf p|}\,dA\)'
+    D: '\(\displaystyle\iint_Rg\,|\nabla F|\,dA\)'
+    answer: C
+    hint: 'The element of surface area is \(d\sigma=\dfrac{|\nabla F|}{|\nabla F\cdot\mathbf p|}dA\).'
+    explanation: 'Project \(S\) onto \(R\).'
+  246:
+    topic: s16-5
+    question: 'The flux of a vector field \(\mathbf F\) across an oriented surface \(S\) with unit normal \(\mathbf n\) is'
+    A: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma\)'
+    B: '\(\displaystyle\iint_S|\mathbf F|\,d\sigma\)'
+    C: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf T\,d\sigma\)'
+    D: '\(\displaystyle\iint_S\mathbf F\times\mathbf n\,d\sigma\)'
+    answer: A
+    hint: Flux measures the net flow through the surface.
+    explanation: 'The normal component of \(\mathbf F\) integrated over the surface.'
+  247:
+    topic: s16-6
+    question: 'A parametrization of the paraboloid \(z=x^2+y^2\), \(z\le4\) is'
+    A: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+\left(u^{2} + 1\right)\mathbf{k}\), with \(0\le u\le2\), \(0\le v\le2\pi\)'
+    B: '\(\mathbf r(u,v)=u \sin{\left(v \right)}\mathbf{i}+u \cos{\left(v \right)}\mathbf{j}+u^{2}\mathbf{k}\), with \(0\le u\le2\), \(0\le v\le2\pi\)'
+    C: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+u^{2}\mathbf{k}\), with \(0\le u\le2\), \(0\le v\le2\pi\)'
+    D: '\(\mathbf r(u,v)=2 u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+u^{2}\mathbf{k}\), with \(0\le u\le2\), \(0\le v\le2\pi\)'
+    answer: C
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  248:
+    topic: s16-6
+    question: 'A parametrization of the paraboloid \(z=9-x^2-y^2\), \(z\ge0\) is'
+    A: '\(\mathbf r(u,v)=u \sin{\left(v \right)}\mathbf{i}+u \cos{\left(v \right)}\mathbf{j}+\left(9 - u^{2}\right)\mathbf{k}\), with \(0\le u\le3\), \(0\le v\le2\pi\)'
+    B: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+\left(10 - u^{2}\right)\mathbf{k}\), with \(0\le u\le3\), \(0\le v\le2\pi\)'
+    C: '\(\mathbf r(u,v)=2 u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+\left(9 - u^{2}\right)\mathbf{k}\), with \(0\le u\le3\), \(0\le v\le2\pi\)'
+    D: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+\left(9 - u^{2}\right)\mathbf{k}\), with \(0\le u\le3\), \(0\le v\le2\pi\)'
+    answer: D
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  249:
+    topic: s16-6
+    question: 'A parametrization of the cone \(z=\sqrt{x^2+y^2}\) between \(z=1\) and \(z=3\) is'
+    A: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+u\mathbf{k}\), with \(1\le u\le3\), \(0\le v\le2\pi\)'
+    B: '\(\mathbf r(u,v)=u \sin{\left(v \right)}\mathbf{i}+u \cos{\left(v \right)}\mathbf{j}+u\mathbf{k}\), with \(1\le u\le3\), \(0\le v\le2\pi\)'
+    C: '\(\mathbf r(u,v)=2 u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+u\mathbf{k}\), with \(1\le u\le3\), \(0\le v\le2\pi\)'
+    D: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+\left(u + 1\right)\mathbf{k}\), with \(1\le u\le3\), \(0\le v\le2\pi\)'
+    answer: A
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  250:
+    topic: s16-6
+    question: 'A parametrization of the cone \(z=2\sqrt{x^2+y^2}\) between \(z=2\) and \(z=4\) is'
+    A: '\(\mathbf r(u,v)=u \sin{\left(v \right)}\mathbf{i}+u \cos{\left(v \right)}\mathbf{j}+2 u\mathbf{k}\), with \(1\le u\le2\), \(0\le v\le2\pi\)'
+    B: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+2 u\mathbf{k}\), with \(1\le u\le2\), \(0\le v\le2\pi\)'
+    C: '\(\mathbf r(u,v)=2 u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+2 u\mathbf{k}\), with \(1\le u\le2\), \(0\le v\le2\pi\)'
+    D: '\(\mathbf r(u,v)=u \cos{\left(v \right)}\mathbf{i}+u \sin{\left(v \right)}\mathbf{j}+\left(2 u + 1\right)\mathbf{k}\), with \(1\le u\le2\), \(0\le v\le2\pi\)'
+    answer: B
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  251:
+    topic: s16-6
+    question: 'A parametrization of the sphere \(x^2+y^2+z^2=9\) is'
+    A: '\(\mathbf r(u,v)=3 \sin{\left(u \right)} \cos{\left(v \right)}\mathbf{i}+3 \sin{\left(u \right)} \sin{\left(v \right)}\mathbf{j}+\left(3 \cos{\left(u \right)} + 1\right)\mathbf{k}\), with \(0\le u\le\pi\), \(0\le v\le2\pi\)'
+    B: '\(\mathbf r(u,v)=3 \sin{\left(u \right)} \cos{\left(v \right)}\mathbf{i}+3 \sin{\left(u \right)} \sin{\left(v \right)}\mathbf{j}+3 \cos{\left(u \right)}\mathbf{k}\), with \(0\le u\le\pi\), \(0\le v\le2\pi\)'
+    C: '\(\mathbf r(u,v)=3 \sin{\left(u \right)} \sin{\left(v \right)}\mathbf{i}+3 \sin{\left(u \right)} \cos{\left(v \right)}\mathbf{j}+3 \cos{\left(u \right)}\mathbf{k}\), with \(0\le u\le\pi\), \(0\le v\le2\pi\)'
+    D: '\(\mathbf r(u,v)=6 \sin{\left(u \right)} \cos{\left(v \right)}\mathbf{i}+3 \sin{\left(u \right)} \sin{\left(v \right)}\mathbf{j}+3 \cos{\left(u \right)}\mathbf{k}\), with \(0\le u\le\pi\), \(0\le v\le2\pi\)'
+    answer: B
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  252:
+    topic: s16-6
+    question: 'A parametrization of the cylinder \(y^2+z^2=9\) is'
+    A: '\(\mathbf r(u,v)=u\mathbf{i}+3 \cos{\left(v \right)}\mathbf{j}+\left(3 \sin{\left(v \right)} + 1\right)\mathbf{k}\), with \(0\le v\le2\pi\), \(u\) in the given range'
+    B: '\(\mathbf r(u,v)=u\mathbf{i}+3 \cos{\left(v \right)}\mathbf{j}+3 \sin{\left(v \right)}\mathbf{k}\), with \(0\le v\le2\pi\), \(u\) in the given range'
+    C: '\(\mathbf r(u,v)=2 u\mathbf{i}+3 \cos{\left(v \right)}\mathbf{j}+3 \sin{\left(v \right)}\mathbf{k}\), with \(0\le v\le2\pi\), \(u\) in the given range'
+    D: '\(\mathbf r(u,v)=3 \cos{\left(v \right)}\mathbf{i}+u\mathbf{j}+3 \sin{\left(v \right)}\mathbf{k}\), with \(0\le v\le2\pi\), \(u\) in the given range'
+    answer: B
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  253:
+    topic: s16-6
+    question: 'A parametrization of the plane \(x+y+z=1\) is'
+    A: '\(\mathbf r(u,v)=u\mathbf{i}+v\mathbf{j}-\left(u + v - 2\right)\mathbf{k}\), with \((u,v)\) in the region over which the plane is taken'
+    B: '\(\mathbf r(u,v)=u\mathbf{i}+v\mathbf{j}-\left(u + v - 1\right)\mathbf{k}\), with \((u,v)\) in the region over which the plane is taken'
+    C: '\(\mathbf r(u,v)=2 u\mathbf{i}+v\mathbf{j}-\left(u + v - 1\right)\mathbf{k}\), with \((u,v)\) in the region over which the plane is taken'
+    D: '\(\mathbf r(u,v)=v\mathbf{i}+u\mathbf{j}-\left(u + v - 1\right)\mathbf{k}\), with \((u,v)\) in the region over which the plane is taken'
+    answer: B
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  254:
+    topic: s16-6
+    question: 'A parametrization of the cylinder \(x^2+z^2=4\) is'
+    A: '\(\mathbf r(u,v)=2 \cos{\left(u \right)}\mathbf{i}+v\mathbf{j}+\left(2 \sin{\left(u \right)} + 1\right)\mathbf{k}\), with \(0\le u\le2\pi\), \(v\) in the given range'
+    B: '\(\mathbf r(u,v)=4 \cos{\left(u \right)}\mathbf{i}+v\mathbf{j}+2 \sin{\left(u \right)}\mathbf{k}\), with \(0\le u\le2\pi\), \(v\) in the given range'
+    C: '\(\mathbf r(u,v)=v\mathbf{i}+2 \cos{\left(u \right)}\mathbf{j}+2 \sin{\left(u \right)}\mathbf{k}\), with \(0\le u\le2\pi\), \(v\) in the given range'
+    D: '\(\mathbf r(u,v)=2 \cos{\left(u \right)}\mathbf{i}+v\mathbf{j}+2 \sin{\left(u \right)}\mathbf{k}\), with \(0\le u\le2\pi\), \(v\) in the given range'
+    answer: D
+    hint: Choose parameters that match the symmetry, then check the surface equation.
+    explanation: 'Substituting \(x,y,z\) into the surface equation gives an identity.'
+  255:
+    topic: s16-6
+    question: 'The area of the portion of the plane \(x+y+z=1\) inside the cylinder \(x^2+y^2=9\) is'
+    A: '\(\pi \left(1 + 9 \sqrt{3}\right)\)'
+    B: '\(\frac{9 \sqrt{3} \pi}{2}\)'
+    C: '\(9 \sqrt{3} \pi\)'
+    D: '\(18 \sqrt{3} \pi\)'
+    answer: C
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  256:
+    topic: s16-6
+    question: 'The area of the portion of the plane \(z=-x\) inside the cylinder \(x^2+y^2=4\) is'
+    A: '\(2 \sqrt{2} \pi\)'
+    B: '\(8 \sqrt{2} \pi\)'
+    C: '\(\pi \left(1 + 4 \sqrt{2}\right)\)'
+    D: '\(4 \sqrt{2} \pi\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  257:
+    topic: s16-6
+    question: 'The area of the cone \(z=2\sqrt{x^2+y^2}\) between \(z=2\) and \(z=6\) is'
+    A: '\(4 \sqrt{5} \pi\)'
+    B: '\(16 \sqrt{5} \pi\)'
+    C: '\(8 \sqrt{5} \pi\)'
+    D: '\(\pi \left(1 + 8 \sqrt{5}\right)\)'
+    answer: C
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  258:
+    topic: s16-6
+    question: 'The area of the cone \(z=\sqrt{x^2+y^2}/3\) between \(z=1\) and \(z=4/3\) is'
+    A: '\(\frac{14 \sqrt{10} \pi}{3}\)'
+    B: '\(\frac{\pi \left(3 + 7 \sqrt{10}\right)}{3}\)'
+    C: '\(\frac{7 \sqrt{10} \pi}{6}\)'
+    D: '\(\frac{7 \sqrt{10} \pi}{3}\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  259:
+    topic: s16-6
+    question: 'The area of the cylinder \(x^2+y^2=1\) between \(z=1\) and \(z=4\) is'
+    A: '\(12 \pi\)'
+    B: '\(3 \pi\)'
+    C: '\(7 \pi\)'
+    D: '\(6 \pi\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  260:
+    topic: s16-6
+    question: 'The area of the cylinder \(x^2+z^2=10\) between \(y=-1\) and \(y=1\) is'
+    A: '\(8 \sqrt{10} \pi\)'
+    B: '\(\pi \left(1 + 4 \sqrt{10}\right)\)'
+    C: '\(2 \sqrt{10} \pi\)'
+    D: '\(4 \sqrt{10} \pi\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  261:
+    topic: s16-6
+    question: 'The area of the cap cut from the paraboloid \(z=2-x^2-y^2\) by the cone \(z=\sqrt{x^2+y^2}\) is'
+    A: '\(\frac{5 \pi \left(1 + \sqrt{5}\right)}{6}\)'
+    B: '\(\frac{\pi \left(-1 + 5 \sqrt{5}\right)}{12}\)'
+    C: '\(\frac{\pi \left(-1 + 5 \sqrt{5}\right)}{3}\)'
+    D: '\(\frac{\pi \left(-1 + 5 \sqrt{5}\right)}{6}\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  262:
+    topic: s16-6
+    question: 'The area of the paraboloid band \(z=x^2+y^2\) between \(z=1\) and \(z=4\) is'
+    A: '\(\frac{\pi \left(- 5 \sqrt{5} + 6 + 17 \sqrt{17}\right)}{6}\)'
+    B: '\(\frac{\pi \left(- 5 \sqrt{5} + 17 \sqrt{17}\right)}{12}\)'
+    C: '\(\frac{\pi \left(- 5 \sqrt{5} + 17 \sqrt{17}\right)}{3}\)'
+    D: '\(\frac{\pi \left(- 5 \sqrt{5} + 17 \sqrt{17}\right)}{6}\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  263:
+    topic: s16-6
+    question: 'The area of the part of the sphere \(x^2+y^2+z^2=2\) lying below the cone \(z=\sqrt{x^2+y^2}\) is'
+    A: '\(\pi \left(\sqrt{2} + 2\right)\)'
+    B: '\(\pi \left(2 \sqrt{2} + 5\right)\)'
+    C: '\(4 \pi \left(\sqrt{2} + 2\right)\)'
+    D: '\(2 \pi \left(\sqrt{2} + 2\right)\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  264:
+    topic: s16-6
+    question: 'The area of the spherical band \(x^2+y^2+z^2=4\) between \(z=-1\) and \(z=\sqrt3\) is'
+    A: '\(8 \pi \left(1 + \sqrt{3}\right)\)'
+    B: '\(2 \pi \left(1 + \sqrt{3}\right)\)'
+    C: '\(\pi \left(5 + 4 \sqrt{3}\right)\)'
+    D: '\(4 \pi \left(1 + \sqrt{3}\right)\)'
+    answer: D
+    hint: '\(A=\iint|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: 'Compute \(\mathbf r_u\times\mathbf r_v\), its length, and integrate.'
+  265:
+    topic: s16-6
+    question: 'The surface integral of \(G=x\) over the parabolic cylinder \(y=x^2\), \(0\le x\le2\), \(0\le z\le3\) is'
+    A: '\(\frac{3}{4} + \frac{17 \sqrt{17}}{4}\)'
+    B: '\(- \frac{1}{2} + \frac{17 \sqrt{17}}{2}\)'
+    C: '\(- \frac{1}{8} + \frac{17 \sqrt{17}}{8}\)'
+    D: '\(- \frac{1}{4} + \frac{17 \sqrt{17}}{4}\)'
+    answer: D
+    hint: '\(\iint_SG\,d\sigma=\iint G(\mathbf r(u,v))\,|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: Substitute the parametrization, multiply by the area factor, and integrate.
+  266:
+    topic: s16-6
+    question: 'The surface integral of \(G=x^2\) over the unit sphere is'
+    A: '\(\frac{8 \pi}{3}\)'
+    B: '\(1 + \frac{4 \pi}{3}\)'
+    C: '\(\frac{4 \pi}{3}\)'
+    D: '\(\frac{2 \pi}{3}\)'
+    answer: C
+    hint: '\(\iint_SG\,d\sigma=\iint G(\mathbf r(u,v))\,|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: Substitute the parametrization, multiply by the area factor, and integrate.
+  267:
+    topic: s16-6
+    question: 'The surface integral of \(G=z^2\) over the hemisphere \(x^2+y^2+z^2=a^2\), \(z\ge0\) is'
+    A: '\(\frac{2 \pi a^{4}}{3} + 1\)'
+    B: '\(\frac{4 \pi a^{4}}{3}\)'
+    C: '\(\frac{\pi a^{4}}{3}\)'
+    D: '\(\frac{2 \pi a^{4}}{3}\)'
+    answer: D
+    hint: '\(\iint_SG\,d\sigma=\iint G(\mathbf r(u,v))\,|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: Substitute the parametrization, multiply by the area factor, and integrate.
+  268:
+    topic: s16-6
+    question: 'The surface integral of \(F=z-x\) over the cone \(z=\sqrt{x^2+y^2}\), \(0\le z\le1\) is'
+    A: '\(1 + \frac{2 \sqrt{2} \pi}{3}\)'
+    B: '\(\frac{4 \sqrt{2} \pi}{3}\)'
+    C: '\(\frac{2 \sqrt{2} \pi}{3}\)'
+    D: '\(\frac{\sqrt{2} \pi}{3}\)'
+    answer: C
+    hint: '\(\iint_SG\,d\sigma=\iint G(\mathbf r(u,v))\,|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: Substitute the parametrization, multiply by the area factor, and integrate.
+  269:
+    topic: s16-6
+    question: 'The surface integral of \(G=z\) over the paraboloid \(z=2-x^2-y^2\), \(z\ge0\) is'
+    A: '\(\frac{37 \pi}{5}\)'
+    B: '\(\frac{37 \pi}{20}\)'
+    C: '\(1 + \frac{37 \pi}{10}\)'
+    D: '\(\frac{37 \pi}{10}\)'
+    answer: D
+    hint: '\(\iint_SG\,d\sigma=\iint G(\mathbf r(u,v))\,|\mathbf r_u\times\mathbf r_v|\,du\,dv\).'
+    explanation: Substitute the parametrization, multiply by the area factor, and integrate.
+  270:
+    topic: s16-6
+    question: 'The outward flux of \(\mathbf F=z^2\mathbf i+x\mathbf j-3z\mathbf k\) through the parabolic cylinder \(z=4-y^2\), \(0\le x\le1\), \(z\ge0\) (normal away from the \(x\)-axis), using \(\mathbf r=u\mathbf i+v\mathbf j+(4-v^2)\mathbf k\), is'
+    A: '\(16\)'
+    B: '\(-16\)'
+    C: '\(-32\)'
+    D: '\(32\)'
+    answer: C
+    hint: '\(\mathbf r_u\times\mathbf r_v=2v\mathbf j+\mathbf k\); \(\mathbf F\cdot\mathbf n\,dA=\left[2uv-3(4-v^2)\right]du\,dv\).'
+    explanation: '\(\int_0^1\int_{-2}^2\left[2uv-12+3v^2\right]dv\,du=-32\).'
+  271:
+    topic: s16-6
+    question: 'The outward (away from the \(yz\)-plane) flux of \(\mathbf F=x^2\mathbf j-xz\mathbf k\) through the parabolic cylinder \(y=x^2\), \(-1\le x\le1\), \(0\le z\le2\), is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{8}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(- \frac{4}{3}\)'
+    answer: A
+    hint: 'Parametrize \(\mathbf r=u\mathbf i+u^2\mathbf j+v\mathbf k\); the normal away from the \(yz\)-plane is \(\mathbf n\,dS=(-2u,1,0)\,du\,dv\).'
+    explanation: '\(\mathbf F\cdot\mathbf n=u^2\); \(\int_{-1}^1\int_0^2u^2dv\,du=\tfrac43\).'
+  272:
+    topic: s16-6
+    question: 'The outward flux of \(\mathbf F=z\mathbf k\) across the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant is'
+    A: '\(\frac{\pi a^{3}}{6}\)'
+    B: '\(\frac{\pi a^{3}}{3}\)'
+    C: '\(\frac{\pi a^{3}}{2}\)'
+    D: '\(\frac{\pi a^{3}}{12}\)'
+    answer: A
+    hint: 'Use \(\mathbf r=a(\sin u\cos v,\sin u\sin v,\cos u)\); \(\mathbf r_u\times\mathbf r_v\) points outward.'
+    explanation: '\(\mathbf F\cdot\mathbf n=a^3\cos^2u\sin u\); integrate over \(0\le u,v\le\tfrac\pi2\).'
+  273:
+    topic: s16-6
+    question: 'The outward flux of \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\) across the sphere \(x^2+y^2+z^2=a^2\) is'
+    A: '\(4 \pi a^{3}\)'
+    B: '\(2 \pi a^{3}\)'
+    C: '\(\frac{4 \pi a^{3}}{3}\)'
+    D: '\(8 \pi a^{3}\)'
+    answer: A
+    hint: 'On the sphere \(\mathbf F\cdot\mathbf n=a\); multiply by the area \(4\pi a^2\).'
+    explanation: '\(a\cdot4\pi a^2=4\pi a^3\).'
+  274:
+    topic: s16-6
+    question: 'The upward flux of \(\mathbf F=2xy\mathbf i+2yz\mathbf j+2xz\mathbf k\) across the portion of the plane \(x+y+z=2a\) above the square \(0\le x\le a\), \(0\le y\le a\) is'
+    A: '\(\frac{13 a^{4}}{3}\)'
+    B: '\(\frac{13 a^{4}}{6}\)'
+    C: '\(\frac{19 a^{4}}{6}\)'
+    D: '\(\frac{13 a^{4}}{12}\)'
+    answer: B
+    hint: 'With \(\mathbf r=u\mathbf i+v\mathbf j+(2a-u-v)\mathbf k\), \(\mathbf n\,dA=(1,1,1)\,du\,dv\).'
+    explanation: '\(\iint(2uv+2v(2a-u-v)+2u(2a-u-v))\,du\,dv\).'
+  275:
+    topic: s16-6
+    question: 'The outward flux of \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\) through the portion of the cylinder \(x^2+y^2=1\) cut by \(z=0\) and \(z=a\) is'
+    A: '\(4 \pi a\)'
+    B: '\(2 \pi a^{2}\)'
+    C: '\(2 \pi a\)'
+    D: '\(\pi a\)'
+    answer: C
+    hint: 'On the cylinder \(\mathbf F\cdot\mathbf n=x^2+y^2=1\) (the \(z\)-component does not contribute on the side).'
+    explanation: 'The flux is the lateral area \(2\pi a\).'
+  276:
+    topic: s16-6
+    question: 'The outward (normal away from the \(z\)-axis) flux of \(\mathbf F=xy\mathbf i-z\mathbf k\) through the cone \(z=\sqrt{x^2+y^2}\), \(0\le z\le1\), is'
+    A: '\(\frac{2 \pi}{3}\)'
+    B: '\(- \frac{2 \pi}{3}\)'
+    C: '\(\frac{4 \pi}{3}\)'
+    D: '\(\frac{\pi}{3}\)'
+    answer: A
+    hint: 'With \(\mathbf r=(u\cos v,u\sin v,u)\), \(\mathbf r_u\times\mathbf r_v=(-u\cos v,-u\sin v,u)\); take the opposite orientation.'
+    explanation: '\(\mathbf F\cdot\mathbf n\,dA=\left[u^3\cos^2v\sin v\cdots+u^2\right]\).'
+  277:
+    topic: s16-6
+    question: 'The outward flux of \(\mathbf F=y^2\mathbf i+xz\mathbf j-\mathbf k\) through the cone \(z=2\sqrt{x^2+y^2}\), \(2\le z\le4\) (normal away from the \(z\)-axis), is'
+    A: '\(- 3 \pi\)'
+    B: '\(3 \pi\)'
+    C: '\(\frac{3 \pi}{2}\)'
+    D: '\(6 \pi\)'
+    answer: B
+    hint: 'Use \(\mathbf r=(u\cos v,u\sin v,2u)\) with \(1\le u\le2\); \(\mathbf r_u\times\mathbf r_v=(-2u\cos v,-2u\sin v,u)\) points inward, so reverse it.'
+    explanation: 'The \(\mathbf k\) component contributes \(-1\cdot(-u)\) after reversing.'
+  278:
+    topic: s16-6
+    question: 'The outward flux of \(\mathbf F=-x\mathbf i-y\mathbf j+z^2\mathbf k\) through the cone frustum \(z=\sqrt{x^2+y^2}\), \(1\le z\le2\) (normal away from the \(z\)-axis), is'
+    A: '\(\frac{73 \pi}{6}\)'
+    B: '\(- \frac{73 \pi}{6}\)'
+    C: '\(- \frac{73 \pi}{3}\)'
+    D: '\(- \frac{73 \pi}{12}\)'
+    answer: B
+    hint: 'Reverse the orientation of \(\mathbf r_u\times\mathbf r_v=(-u\cos v,-u\sin v,u)\).'
+    explanation: 'With the outward normal \((u\cos v,u\sin v,-u)\): \(\mathbf F\cdot\mathbf n=-(u^2+u^3)\); integrate over \(1\le u\le2\), \(0\le v\le2\pi\).'
+  279:
+    topic: s16-6
+    question: 'The outward (away from the \(z\)-axis) flux of \(\mathbf F=4x\mathbf i+4y\mathbf j+2\mathbf k\) through the paraboloid \(z=x^2+y^2\), \(0\le z\le1\), is'
+    A: '\(\pi\)'
+    B: '\(4 \pi\)'
+    C: '\(- 2 \pi\)'
+    D: '\(2 \pi\)'
+    answer: D
+    hint: 'With \(\mathbf r=(u\cos v,u\sin v,u^2)\) take \(\mathbf n\,dA=(2u^2\cos v,2u^2\sin v,-u)\,du\,dv\).'
+    explanation: '\(\iint\left(8u^3-2u\right)du\,dv=2\pi(2-1)=2\pi\).'
+  280:
+    topic: s16-6
+    question: 'The centroid of the portion of the sphere \(x^2+y^2+z^2=a^2\) in the first octant lies at \((\bar x,\bar y,\bar z)=\)'
+    A: '\(\left(\dfrac a3,\dfrac a3,\dfrac a3\right)\)'
+    B: '\(\left(\dfrac{3a}8,\dfrac{3a}8,\dfrac{3a}8\right)\)'
+    C: '\(\left(\dfrac a2,\dfrac a2,\dfrac a2\right)\)'
+    D: '\(\left(\dfrac{a}{\sqrt3},\dfrac a{\sqrt3},\dfrac a{\sqrt3}\right)\)'
+    answer: C
+    hint: '\(\bar z=\iint z\,d\sigma/\iint d\sigma\).'
+    explanation: '\(\iint a\cos u\cdot a^2\sin u\,du\,dv=\tfrac{\pi a^3}4\), area \(\tfrac{\pi a^2}2\).'
+  281:
+    topic: s16-6
+    question: 'The moment of inertia about the \(z\)-axis of a thin spherical shell \(x^2+y^2+z^2=a^2\) of constant density \(\delta\) is'
+    A: '\(\frac{16 \pi a^{4} \delta}{3}\)'
+    B: '\(\frac{8 \pi a^{4} \delta}{3}\)'
+    C: '\(\frac{8 \pi a^{5} \delta}{15}\)'
+    D: '\(\frac{4 \pi a^{4} \delta}{3}\)'
+    answer: B
+    hint: '\(I_z=\iint(x^2+y^2)\delta\,d\sigma\) with \(d\sigma=a^2\sin u\,du\,dv\).'
+    explanation: '\(2\pi\delta a^4\int_0^\pi\sin^3u\,du=\tfrac{8\pi}3\delta a^4\).'
+  282:
+    topic: s16-6
+    question: 'The moment of inertia about the \(z\)-axis of the thin conical shell \(z=\sqrt{x^2+y^2}\), \(0\le z\le1\), of constant density \(\delta\) is'
+    A: '\(\frac{\pi \delta}{2}\)'
+    B: '\(\frac{\sqrt{2} \pi \delta}{4}\)'
+    C: '\(\sqrt{2} \pi \delta\)'
+    D: '\(\frac{\sqrt{2} \pi \delta}{2}\)'
+    answer: D
+    hint: '\(\mathbf r=(u\cos v,u\sin v,u)\), \(|\mathbf r_u\times\mathbf r_v|=\sqrt2u\); \(I_z=\iint u^2\delta\,\sqrt2u\,du\,dv\).'
+    explanation: '\(2\pi\sqrt2\delta\cdot\tfrac14=\tfrac{\sqrt2\pi}2\delta\).'
+  283:
+    topic: s16-6
+    question: 'An equation of the plane tangent to the cone \(\mathbf r=(r\cos\theta)\mathbf i+(r\sin\theta)\mathbf j+r\mathbf k\) at \(P_0(\sqrt2,\sqrt2,2)\) (\(r=2\), \(\theta=\pi/4\)) is (normal \(=\mathbf r_u\times\mathbf r_v\) at the point, up to a scalar)'
+    A: '\(- \sqrt{2} x - \sqrt{2} y + 2 z=0\)'
+    B: '\(- \sqrt{2} x - \sqrt{2} y + 2 z + 1=0\)'
+    C: '\(\sqrt{2} x - \sqrt{2} y + 2 z - 4=0\)'
+    D: '\(- \sqrt{2} x - \sqrt{2} y - 2 z + 8=0\)'
+    answer: A
+    hint: 'The tangent plane is normal to \(\mathbf r_u\times\mathbf r_v\) at \(P_0\) and passes through \(P_0\).'
+    explanation: '\(\mathbf r_u\times\mathbf r_v(P_0)=-\sqrt{2}\mathbf{i}-\sqrt{2}\mathbf{j}+2\mathbf{k}\).'
+  284:
+    topic: s16-6
+    question: 'An equation of the plane tangent to the sphere \(\mathbf r=(4\sin\phi\cos\theta)\mathbf i+(4\sin\phi\sin\theta)\mathbf j+(4\cos\phi)\mathbf k\) at \(P_0\left(\sqrt2,\sqrt2,2\sqrt3\right)\) (\(\phi=\pi/6\), \(\theta=\pi/4\)) is (normal \(=\mathbf r_u\times\mathbf r_v\) at the point, up to a scalar)'
+    A: '\(- 2 \sqrt{2} x + 2 \sqrt{2} y + 4 \sqrt{3} z - 24=0\)'
+    B: '\(2 \sqrt{2} x + 2 \sqrt{2} y - 4 \sqrt{3} z + 16=0\)'
+    C: '\(2 \sqrt{2} x + 2 \sqrt{2} y + 4 \sqrt{3} z - 32=0\)'
+    D: '\(2 \sqrt{2} x + 2 \sqrt{2} y + 4 \sqrt{3} z + 32=0\)'
+    answer: C
+    hint: 'The tangent plane is normal to \(\mathbf r_u\times\mathbf r_v\) at \(P_0\) and passes through \(P_0\).'
+    explanation: '\(\mathbf r_u\times\mathbf r_v(P_0)=2 \sqrt{2}\mathbf{i}+2 \sqrt{2}\mathbf{j}+4 \sqrt{3}\mathbf{k}\).'
+  285:
+    topic: s16-6
+    question: 'An equation of the plane tangent to the parabolic cylinder \(\mathbf r=x\mathbf i+y\mathbf j-x^2\mathbf k\) at \(P_0(1,2,-1)\) is (normal \(=\mathbf r_u\times\mathbf r_v\) at the point, up to a scalar)'
+    A: '\(2 x - z - 3=0\)'
+    B: '\(2 x + z - 1=0\)'
+    C: '\(- 2 x + z + 3=0\)'
+    D: '\(2 y + z - 3=0\)'
+    answer: B
+    hint: 'The tangent plane is normal to \(\mathbf r_u\times\mathbf r_v\) at \(P_0\) and passes through \(P_0\).'
+    explanation: '\(\mathbf r_u\times\mathbf r_v(P_0)=2\mathbf{i}+\mathbf{k}\).'
+  286:
+    topic: s16-6
+    question: 'The surface area of the torus \(\mathbf r(u,v)=\left((R+r\cos u)\cos v,(R+r\cos u)\sin v,r\sin u\right)\), \(0\le u,v\le2\pi\), is'
+    A: '\(4 \pi^{2} R r\)'
+    B: '\(4 \pi^{2} R^{2} r\)'
+    C: '\(2 \pi^{2} R r\)'
+    D: '\(2 \pi R r\)'
+    answer: A
+    hint: '\(|\mathbf r_u\times\mathbf r_v|=r(R+r\cos u)\).'
+    explanation: '\(\int_0^{2\pi}\int_0^{2\pi}r(R+r\cos u)\,du\,dv=4\pi^2Rr\).'
+  287:
+    topic: s16-6
+    question: 'For a surface of revolution obtained by revolving the curve \((f(u),g(u))\) (with \(g>0\)) about the \(x\)-axis, a parametrization is'
+    A: '\(\mathbf r(u,v)=f(u)\cos v\,\mathbf i+g(u)\sin v\,\mathbf j\)'
+    B: '\(\mathbf r(u,v)=g(u)\mathbf i+f(u)\cos v\,\mathbf j+f(u)\sin v\,\mathbf k\)'
+    C: '\(\mathbf r(u,v)=f(u)\mathbf i+g(u)\cos v\,\mathbf j+g(u)\sin v\,\mathbf k\), \(0\le v\le2\pi\)'
+    D: '\(\mathbf r(u,v)=f(u)\mathbf i+g(u)\mathbf j+v\mathbf k\)'
+    answer: C
+    hint: '\(f(u)\) measures distance along the axis; \(g(u)\) measures distance from it.'
+    explanation: 'The angle \(v\) rotates the point about the \(x\)-axis.'
+  288:
+    topic: s16-6
+    question: 'An ellipsoid \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1\) can be parametrized by'
+    A: '\(\mathbf r=a\sin\theta\sin\phi\,\mathbf i+b\sin\theta\cos\phi\,\mathbf j+c\cos\phi\,\mathbf k\cdot\cos\theta\)'
+    B: '\(\mathbf r=a\cos\phi\,\mathbf i+b\cos\theta\,\mathbf j+c\sin\theta\,\mathbf k\)'
+    C: '\(\mathbf r=a\cos\theta\,\mathbf i+b\sin\theta\,\mathbf j+c\phi\,\mathbf k\)'
+    D: '\(\mathbf r(\theta,\phi)=a\cos\theta\cos\phi\,\mathbf i+b\sin\theta\cos\phi\,\mathbf j+c\sin\phi\,\mathbf k\)'
+    answer: D
+    hint: 'Mimic spherical coordinates with scale factors \(a,b,c\).'
+    explanation: 'Substituting gives \(\cos^2\phi+\sin^2\phi=1\).'
+  289:
+    topic: s16-6
+    question: 'A hyperboloid of one sheet \(x^2+y^2-z^2=1\) can be parametrized by'
+    A: '\(\mathbf r=\cosh u\,\mathbf i+\sinh u\,\mathbf j+\theta\,\mathbf k\)'
+    B: '\(\mathbf r=\sinh u\cos\theta\,\mathbf i+\sinh u\sin\theta\,\mathbf j+\cosh u\,\mathbf k\)'
+    C: '\(\mathbf r(\theta,u)=\cosh u\cos\theta\,\mathbf i+\cosh u\sin\theta\,\mathbf j+\sinh u\,\mathbf k\)'
+    D: '\(\mathbf r=\cos u\cos\theta\,\mathbf i+\cos u\sin\theta\,\mathbf j+\sin u\,\mathbf k\)'
+    answer: C
+    hint: 'Use \(\cosh^2u-\sinh^2u=1\).'
+    explanation: '\(r^2-z^2=1\) with \(r=\cosh u\), \(z=\sinh u\).'
+  290:
+    topic: s16-6
+    question: 'A hyperboloid of two sheets \(\dfrac{z^2}{c^2}-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) can be parametrized (upper sheet) by'
+    A: '\(\mathbf r=a\sinh u\,\mathbf i+b\cosh u\,\mathbf j+c\theta\,\mathbf k\)'
+    B: '\(\mathbf r=a\cosh u\cos\theta\,\mathbf i+b\cosh u\sin\theta\,\mathbf j+c\sinh u\,\mathbf k\)'
+    C: '\(\mathbf r=a\cos u\cos\theta\,\mathbf i+b\cos u\sin\theta\,\mathbf j+c\sin u\,\mathbf k\)'
+    D: '\(\mathbf r=a\sinh u\cos\theta\,\mathbf i+b\sinh u\sin\theta\,\mathbf j+c\cosh u\,\mathbf k\)'
+    answer: D
+    hint: 'Use \(\cosh^2u-\sinh^2u=1\).'
+    explanation: '\(\dfrac{z^2}{c^2}-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=\cosh^2u-\sinh^2u\).'
+  291:
+    topic: s16-6
+    question: 'The tangent plane to a parametrized surface \(\mathbf r(u,v)\) at \(P_0=\mathbf r(u_0,v_0)\) is the plane through \(P_0\) with normal vector'
+    A: '\(\mathbf r(u_0,v_0)\)'
+    B: '\(\mathbf r_u\cdot\mathbf r_v\)'
+    C: '\(\mathbf r_u+\mathbf r_v\)'
+    D: '\(\mathbf r_u(u_0,v_0)\times\mathbf r_v(u_0,v_0)\)'
+    answer: D
+    hint: '\(\mathbf r_u\) and \(\mathbf r_v\) are tangent to the surface.'
+    explanation: Their cross product is normal.
+  292:
+    topic: s16-6
+    question: 'The area of a smooth parametrized surface \(\mathbf r(u,v)\), \(a\le u\le b\), \(c\le v\le d\), is'
+    A: '\(\displaystyle\int_c^d\int_a^b|\mathbf r_u+\mathbf r_v|\,du\,dv\)'
+    B: '\(\displaystyle\int_c^d\int_a^b\mathbf r_u\cdot\mathbf r_v\,du\,dv\)'
+    C: '\(\displaystyle\int_c^d\int_a^b|\mathbf r_u\times\mathbf r_v|\,du\,dv\)'
+    D: '\(\displaystyle\int_c^d\int_a^b|\mathbf r_u|\,|\mathbf r_v|\,du\,dv\)'
+    answer: C
+    hint: '\(|\mathbf r_u\times\mathbf r_v|\,du\,dv\) is the area of a small parallelogram.'
+    explanation: Add up the parallelogram areas.
+  293:
+    topic: s16-7
+    question: 'The counterclockwise circulation of \(\mathbf F=x^2\mathbf i+2x\mathbf j+z^2\mathbf k\) around the ellipse \(4x^2+y^2=4\) in the \(xy\)-plane (viewed from above) is'
+    A: '\(\pi\)'
+    B: '\(8 \pi\)'
+    C: '\(4 \pi\)'
+    D: '\(2 \pi\)'
+    answer: C
+    hint: '\(\nabla\times\mathbf F=2\mathbf k\); with \(\mathbf n=\mathbf k\) the circulation is \(2\cdot\text{Area}\).'
+    explanation: 'The ellipse has semi-axes \(1\) and \(2\): area \(2\pi\).'
+  294:
+    topic: s16-7
+    question: 'The counterclockwise circulation of \(\mathbf F=2y\mathbf i+3x\mathbf j-z^2\mathbf k\) around the circle \(x^2+y^2=9\) in the \(xy\)-plane is'
+    A: '\(3 \pi\)'
+    B: '\(27 \pi\)'
+    C: '\(18 \pi\)'
+    D: '\(9 \pi\)'
+    answer: D
+    hint: '\(\nabla\times\mathbf F=(3-2)\mathbf k=\mathbf k\); circulation \(=\text{Area}\).'
+    explanation: '\(\pi\cdot3^2=9\pi\).'
+  295:
+    topic: s16-7
+    question: 'Stokes'' Theorem states that the circulation of \(\mathbf F\) around the boundary \(C\) of an oriented surface \(S\) is'
+    A: '\(\displaystyle\oint_C\mathbf F\cdot d\mathbf r=\iiint_D\nabla\times\mathbf F\,dV\)'
+    B: '\(\displaystyle\oint_C\mathbf F\cdot d\mathbf r=\iint_S\nabla\times\mathbf F\cdot\mathbf n\,d\sigma\)'
+    C: '\(\displaystyle\oint_C\mathbf F\cdot d\mathbf r=\iint_S\mathbf F\cdot\mathbf n\,d\sigma\)'
+    D: '\(\displaystyle\oint_C\mathbf F\cdot d\mathbf r=\iint_S\nabla\cdot\mathbf F\,d\sigma\)'
+    answer: B
+    hint: Circulation around the edge equals the flux of the curl through the surface.
+    explanation: "This generalizes the circulation form of Green's Theorem."
+  296:
+    topic: s16-7
+    question: 'The circulation of \(\mathbf F=(y^2+z^2)\mathbf i+(x^2+z^2)\mathbf j+(x^2+y^2)\mathbf k\) around the boundary of the triangle cut from \(x+y+z=1\) by the first octant (counterclockwise from above) is'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(- \frac{1}{3}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: B
+    hint: '\(\nabla\times\mathbf F=(2y-2z,\,2z-2x,\,2x-2y)\); \(\mathbf n\,dS=(1,1,1)\,dA\).'
+    explanation: The sum of the components of the curl is zero.
+  297:
+    topic: s16-7
+    question: 'The circulation of \(\mathbf F=(y^2+z^2)\mathbf i+(x^2+z^2)\mathbf j+(x^2+y^2)\mathbf k\) around the boundary of the triangle cut from \(x+y+z=1\) by the first octant is'
+    A: '\(1\)'
+    B: '\(\dfrac13\)'
+    C: '\(0\)'
+    D: '\(-\dfrac13\)'
+    answer: C
+    hint: '\(\nabla\times\mathbf F=(2y-2z,2z-2x,2x-2y)\) and \(\mathbf n\,dS\propto(1,1,1)\).'
+    explanation: '\((2y-2z)+(2z-2x)+(2x-2y)=0\).'
+  298:
+    topic: s16-7
+    question: 'The counterclockwise circulation of \(\mathbf F=(y^2+z^2)\mathbf i+(x^2+y^2)\mathbf j+(x^2+y^2)\mathbf k\) around the square bounded by \(x=\pm1\), \(y=\pm1\) in the \(xy\)-plane is'
+    A: '\(-4\)'
+    B: '\(8\)'
+    C: '\(0\)'
+    D: '\(4\)'
+    answer: C
+    hint: 'On the \(xy\)-plane \(\mathbf n=\mathbf k\); \((\nabla\times\mathbf F)\cdot\mathbf k=N_x-M_y=2x-2y\).'
+    explanation: '\(\iint(2x-2y)\,dA=0\) over a symmetric square.'
+  299:
+    topic: s16-7
+    question: 'The counterclockwise circulation of \(\mathbf F=x^2y^3\mathbf i+\mathbf j+z\mathbf k\) around the curve in which \(x^2+y^2=4\) meets the hemisphere \(x^2+y^2+z^2=16\), \(z\ge0\), is'
+    A: '\(- 8 \pi\)'
+    B: '\(8 \pi\)'
+    C: '\(- 16 \pi\)'
+    D: '\(- 4 \pi\)'
+    answer: A
+    hint: 'The curve is the circle of radius \(2\) at height \(z=\sqrt{12}\); \(\nabla\times\mathbf F=-3x^2y^2\mathbf k\); on the base disk the flux is \(\iint-3x^2y^2\,dA\).'
+    explanation: '\(-3\int_0^{2\pi}\cos^2\theta\sin^2\theta\,d\theta\int_0^2r^5dr=-3\cdot\tfrac\pi4\cdot\tfrac{64}6\).'
+  300:
+    topic: s16-7
+    question: 'The counterclockwise circulation of \(\mathbf F=x^2y^3\mathbf i+\mathbf j+z\mathbf k\) around the circle \(x^2+y^2=4\) in the \(xy\)-plane is'
+    A: '\(- 4 \pi\)'
+    B: '\(4 \pi\)'
+    C: '\(- 8 \pi\)'
+    D: '\(8 \pi\)'
+    answer: C
+    hint: '\(\nabla\times\mathbf F=-3x^2y^2\mathbf k\) and \(\mathbf n=\mathbf k\) on the flat disk.'
+    explanation: '\(-3\int_0^{2\pi}\cos^2\theta\sin^2\theta\,d\theta\int_0^2r^5dr=-3\cdot\tfrac\pi4\cdot\tfrac{32}3=-8\pi\).'
+  301:
+    topic: s16-7
+    question: 'If \(S\) is the upper half of the elliptical shell \(4x^2+9y^2+36z^2=36\), \(z\ge0\), and \(\mathbf F=y\mathbf i+x^2\mathbf j+(x^2+y^4)^{3/2}\sin e^{\sqrt{xyz}}\mathbf k\), then \(\iint_S\nabla\times\mathbf F\cdot\mathbf n\,d\sigma\) (outward normal) equals'
+    A: '\(0\)'
+    B: '\(- 3 \pi\)'
+    C: '\(6 \pi\)'
+    D: '\(- 6 \pi\)'
+    answer: D
+    hint: 'Apply Stokes'' Theorem to the base ellipse \(x=3\cos t\), \(y=2\sin t\) (\(z=0\)).'
+    explanation: 'On \(z=0\): \(\oint y\,dx+x^2dy=\iint(2x-1)\,dA=-\text{Area}=-6\pi\).'
+  302:
+    topic: s16-7
+    question: 'Let \(S\) be the cylinder \(x^2+y^2=a^2\), \(0\le z\le h\), together with its top \(x^2+y^2\le a^2\), \(z=h\). The outward flux of \(\nabla\times\mathbf F\) through \(S\) equals'
+    A: 'zero for every \(\mathbf F\)'
+    B: 'the circulation of \(\mathbf F\) around the top circle but with opposite sign'
+    C: the volume of the cylinder
+    D: 'the counterclockwise circulation of \(\mathbf F\) around the base circle \(x^2+y^2=a^2\), \(z=0\) (as seen from above)'
+    answer: D
+    hint: '\(S\) is a surface whose only boundary is the circle at \(z=0\).'
+    explanation: "By Stokes' Theorem the flux depends only on the boundary."
+  303:
+    topic: s16-7
+    question: '\(\displaystyle\iint_S\nabla\times(y\mathbf i)\cdot\mathbf n\,d\sigma\) over the upper unit hemisphere \(x^2+y^2+z^2=1\), \(z\ge0\), outward normal, equals'
+    A: '\(- 2 \pi\)'
+    B: '\(0\)'
+    C: '\(- \pi\)'
+    D: '\(\pi\)'
+    answer: C
+    hint: '\(\nabla\times(y\mathbf i)=-\mathbf k\); the flux equals that through the flat unit disk.'
+    explanation: '\(\iint-1\,dA=-\pi\).'
+  304:
+    topic: s16-7
+    question: 'If two oriented surfaces \(S_1\) and \(S_2\) span the same curve \(C\) and induce the same positive direction on \(C\), then \(\displaystyle\iint_{S_1}\nabla\times\mathbf F\cdot\mathbf n\,d\sigma\) and \(\displaystyle\iint_{S_2}\nabla\times\mathbf F\cdot\mathbf n\,d\sigma\) are'
+    A: negatives of each other
+    B: 'equal, since both equal the circulation around \(C\)'
+    C: equal only if the surfaces have equal area
+    D: unrelated
+    answer: B
+    hint: "Apply Stokes' Theorem to each."
+    explanation: 'Both equal \(\oint_C\mathbf F\cdot d\mathbf r\).'
+  305:
+    topic: s16-7
+    question: 'If a smooth closed oriented surface \(S\) is the union of two surfaces \(S_1\) and \(S_2\) joined along a smooth simple closed curve, then the outward flux of \(\nabla\times\mathbf F\) through \(S\) is'
+    A: not determined
+    B: '\(0\)'
+    C: 'twice the flux through \(S_1\)'
+    D: the volume enclosed
+    answer: B
+    hint: The circulation around the common curve cancels (opposite orientations).
+    explanation: '\(\oint_C\mathbf F\cdot d\mathbf r-\oint_C\mathbf F\cdot d\mathbf r=0\).'
+  306:
+    topic: s16-7
+    question: 'The flux of \(\nabla\times\mathbf F\) for \(\mathbf F=2z\mathbf i+3x\mathbf j+5y\mathbf k\) across the paraboloid \(\mathbf r=(r\cos\theta,r\sin\theta,4-r^2)\), \(0\le r\le2\), outward (upward), is'
+    A: '\(12 \pi\)'
+    B: '\(- 12 \pi\)'
+    C: '\(6 \pi\)'
+    D: '\(24 \pi\)'
+    answer: A
+    hint: '\(\nabla\times\mathbf F=(5,2,3)\) and \(\mathbf r_r\times\mathbf r_\theta=(2r^2\cos\theta,2r^2\sin\theta,r)\).'
+    explanation: '\(\iint(10r^2\cos\theta+4r^2\sin\theta+3r)\,dr\,d\theta=12\pi\).'
+  307:
+    topic: s16-7
+    question: 'The flux of \(\nabla\times\mathbf F\) for \(\mathbf F=(y-z)\mathbf i+(z-x)\mathbf j+(x+z)\mathbf k\) across the paraboloid \(\mathbf r=(r\cos\theta,r\sin\theta,9-r^2)\), \(0\le r\le3\), upward, is'
+    A: '\(18 \pi\)'
+    B: '\(- 36 \pi\)'
+    C: '\(- 18 \pi\)'
+    D: '\(- 9 \pi\)'
+    answer: C
+    hint: 'By Stokes'' Theorem it equals the circulation around the circle \(x^2+y^2=9\), \(z=0\).'
+    explanation: '\(\nabla\times\mathbf F=(-2,-2,-2)\); \(\mathbf n\,dA\) over the shell is equivalent to the flat disk \(\mathbf k\,dA\) with flux \(-2\cdot9\pi\).'
+  308:
+    topic: s16-7
+    question: 'The flux of \(\nabla\times\mathbf F\) for \(\mathbf F=3y\mathbf i+(5-2x)\mathbf j+(z^2-2)\mathbf k\) over the hemisphere \(\mathbf r=\sqrt3(\sin\phi\cos\theta,\sin\phi\sin\theta,\cos\phi)\), \(0\le\phi\le\tfrac\pi2\), outward is'
+    A: '\(15 \pi\)'
+    B: '\(- 15 \pi\)'
+    C: '\(- 30 \pi\)'
+    D: '\(- \frac{15 \pi}{2}\)'
+    answer: B
+    hint: 'Use Stokes'' Theorem: the flux equals the flux through the flat disk bounded by the same circle (normal \(\mathbf k\)).'
+    explanation: '\(\iint(N_x-M_y)\,dA\) over the disk of radius \(\sqrt3\) (or \(2\)).'
+  309:
+    topic: s16-7
+    question: 'The flux of \(\nabla\times\mathbf F\) for \(\mathbf F=y^2\mathbf i+z^2\mathbf j+x\mathbf k\) over the hemisphere \(\mathbf r=2(\sin\phi\cos\theta,\sin\phi\sin\theta,\cos\phi)\), \(0\le\phi\le\tfrac\pi2\), outward is'
+    A: '\(0\)'
+    B: '\(3\)'
+    C: '\(\pi\)'
+    D: '\(2\)'
+    answer: A
+    hint: 'Use Stokes'' Theorem: the flux equals the flux through the flat disk bounded by the same circle (normal \(\mathbf k\)).'
+    explanation: '\(\iint(N_x-M_y)\,dA\) over the disk of radius \(\sqrt3\) (or \(2\)).'
+  310:
+    topic: s16-7
+    question: 'The circulation of \(\mathbf F=2x\mathbf i+2y\mathbf j+2z\mathbf k\) around the boundary of any smooth orientable surface is'
+    A: not determined
+    B: '\(0\), since \(\mathbf F=\nabla(x^2+y^2+z^2)\)'
+    C: '\(2\) times the volume'
+    D: the area of the surface
+    answer: B
+    hint: '\(\nabla\times\nabla f=\mathbf0\).'
+    explanation: "Stokes' Theorem then gives zero."
+  311:
+    topic: s16-7
+    question: 'The circulation of \(\mathbf F=\nabla\times(x\mathbf i+y\mathbf j+z\mathbf k)\) around the boundary of any smooth orientable surface is'
+    A: '\(2\pi\)'
+    B: the surface area
+    C: '\(3\) times the volume'
+    D: '\(0\), since \(\nabla\times(x\mathbf i+y\mathbf j+z\mathbf k)=\mathbf0\)'
+    answer: D
+    hint: The position field is conservative.
+    explanation: The curl is zero.
+  312:
+    topic: s16-7
+    question: 'The identity \(\nabla\times\nabla f=\mathbf0\) and Stokes'' Theorem imply that'
+    A: the circulation of a gradient field around the boundary of any surface is zero
+    B: flux through any closed surface is zero
+    C: the divergence of a gradient field is zero
+    D: every vector field is a gradient field
+    answer: A
+    hint: 'Circulation \(=\) flux of the curl.'
+    explanation: '\(\nabla\times\nabla f=\mathbf0\).'
+  313:
+    topic: s16-7
+    question: 'For \(f=(x^2+y^2+z^2)^{-1/2}\), the clockwise circulation of \(\mathbf F=\nabla f\) around the circle \(x^2+y^2=a^2\) in the \(xy\)-plane is'
+    A: '\(0\)'
+    B: '\(\pi a^2\)'
+    C: '\(2\pi\)'
+    D: '\(-2\pi\)'
+    answer: A
+    hint: '\(\mathbf F\) is a gradient field.'
+    explanation: The circulation around a closed curve is zero.
+  314:
+    topic: s16-7
+    question: 'For the vector field \(\mathbf F=\dfrac{-y}{x^2+y^2}\mathbf i+\dfrac{x}{x^2+y^2}\mathbf j+z\mathbf k\), the curl is'
+    A: '\(\mathbf k\) everywhere'
+    B: '\(\mathbf 0\) (away from the \(z\)-axis), yet the circulation around the unit circle is \(2\pi\)'
+    C: 'nonzero away from the \(z\)-axis'
+    D: '\(\mathbf 0\) and the circulation around the unit circle is also \(0\)'
+    answer: B
+    hint: 'The domain excludes the \(z\)-axis and is not simply connected.'
+    explanation: '\(\oint\mathbf F\cdot d\mathbf r=\int_0^{2\pi}1\,dt=2\pi\) on the unit circle.'
+  315:
+    topic: s16-7
+    question: "Does Stokes' Theorem say anything special about circulation in a field whose curl is zero?"
+    A: 'Yes: the circulation is always \(2\pi\)'
+    B: No; the circulation can be anything
+    C: "Yes: the circulation around the boundary of any surface in the domain (on which the field is defined and differentiable) is zero"
+    D: Only for planar curves
+    answer: C
+    hint: 'Circulation \(=\) flux of the curl \(=0\).'
+    explanation: 'The surface integral of \(\mathbf 0\) is zero.'
+  316:
+    topic: s16-7
+    question: 'For \(r=\sqrt{x^2+y^2}\), the integral \(\displaystyle\oint_C\nabla(r^4)\cdot\mathbf n\,ds\) around a closed curve \(C\) bounding a plane region \(R\) (moments of inertia \(I_x,I_y\)) equals'
+    A: '\(8\left(I_x+I_y\right)\)'
+    B: '\(16\left(I_x+I_y\right)\)'
+    C: '\(4\left(I_x+I_y\right)\)'
+    D: '\(I_x+I_y\)'
+    answer: B
+    hint: 'By Green''s flux form it equals \(\iint\nabla^2(r^4)\,dA\).'
+    explanation: '\(\nabla^2(r^4)=16r^2\) and \(\iint r^2\,dA=I_x+I_y\).'
+  317:
+    topic: s16-7
+    question: 'For \(\mathbf F=\dfrac{-y}{x^2+y^2}\mathbf i+\dfrac x{x^2+y^2}\mathbf j+z\mathbf k\), Stokes'' Theorem does not give circulation zero around the unit circle in the \(xy\)-plane because'
+    A: '\(\nabla\times\mathbf F\ne\mathbf 0\)'
+    B: '\(\mathbf F\) is not continuous anywhere'
+    C: '\(\mathbf F\) is not defined on the \(z\)-axis, so no surface spanning the circle lies in the domain'
+    D: the unit circle is not closed
+    answer: C
+    hint: 'Any surface spanning the circle must cross the \(z\)-axis.'
+    explanation: "The hypotheses of Stokes' Theorem fail."
+  318:
+    topic: s16-7
+    question: 'For \(\oint_C2y\,dx+3z\,dy-x\,dz\) with \(C\) a closed curve in the plane \(2x+2y+z=2\), the value depends on \(C\) only through'
+    A: its shape only
+    B: its orientation only (not its size)
+    C: its position in the plane
+    D: 'the area enclosed (proportional to the area of its projection on the \(xy\)-plane)'
+    answer: D
+    hint: '\(\nabla\times\mathbf F\) is constant and \(\mathbf n\) is constant.'
+    explanation: The flux is a constant times the area.
+  319:
+    topic: s16-8
+    question: 'The divergence of the spin field \(\mathbf F=-\dfrac{y}{\sqrt{x^2+y^2}}\mathbf i+\dfrac{x}{\sqrt{x^2+y^2}}\mathbf j\) is'
+    A: '\(\dfrac{1}{\sqrt{x^2+y^2}}\)'
+    B: '\(\dfrac{2}{\sqrt{x^2+y^2}}\)'
+    C: '\(1\)'
+    D: '\(0\)'
+    answer: D
+    hint: '\(\nabla\cdot\mathbf F=M_x+N_y\).'
+    explanation: '\(M_x=\dfrac{xy}{(x^2+y^2)^{3/2}}\), \(N_y=-\dfrac{xy}{(x^2+y^2)^{3/2}}\); they cancel.'
+  320:
+    topic: s16-8
+    question: 'The divergence of the radial field \(\mathbf F=x\mathbf i+y\mathbf j\) is'
+    A: '\(0\)'
+    B: '\(x+y\)'
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: D
+    hint: '\(\nabla\cdot\mathbf F=M_x+N_y\).'
+    explanation: '\(1+1=2\).'
+  321:
+    topic: s16-8
+    question: 'The divergence of the gravitational field \(\mathbf F=\dfrac{x\mathbf i+y\mathbf j+z\mathbf k}{(x^2+y^2+z^2)^{3/2}}\) is'
+    A: '\(-3\)'
+    B: '\(1\)'
+    C: '\(3\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Compute \(\partial_x\dfrac{x}{\rho^3}+\partial_y\dfrac{y}{\rho^3}+\partial_z\dfrac{z}{\rho^3}\).'
+    explanation: '\(\dfrac{3}{\rho^3}-\dfrac{3(x^2+y^2+z^2)}{\rho^5}=0\) away from the origin.'
+  322:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=(y-x)\mathbf i+(z-y)\mathbf j+(y-x)\mathbf k\) across the cube bounded by \(x=\pm1\), \(y=\pm1\), \(z=\pm1\) is'
+    A: '\(-32\)'
+    B: '\(-8\)'
+    C: '\(-16\)'
+    D: '\(16\)'
+    answer: C
+    hint: 'Divergence Theorem: flux \(=\iiint\nabla\cdot\mathbf F\,dV\), with \(\nabla\cdot\mathbf F=-2\).'
+    explanation: Integrate the divergence over the solid.
+  323:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=x^2\mathbf i+y^2\mathbf j+z^2\mathbf k\) across the cube cut from the first octant by \(x=1\), \(y=1\), \(z=1\) is'
+    A: '\(-3\)'
+    B: '\(\frac{3}{2}\)'
+    C: '\(6\)'
+    D: '\(3\)'
+    answer: D
+    hint: 'Divergence Theorem: flux \(=\iiint\nabla\cdot\mathbf F\,dV\), with \(\nabla\cdot\mathbf F=2 x + 2 y + 2 z\).'
+    explanation: Integrate the divergence over the solid.
+  324:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=x^2\mathbf i+y^2\mathbf j+z^2\mathbf k\) across the cube bounded by \(x=\pm1\), \(y=\pm1\), \(z=\pm1\) is'
+    A: '\(0\)'
+    B: '\(4\)'
+    C: '\(3\)'
+    D: '\(6\)'
+    answer: A
+    hint: 'Divergence Theorem: flux \(=\iiint\nabla\cdot\mathbf F\,dV\), with \(\nabla\cdot\mathbf F=2 x + 2 y + 2 z\).'
+    explanation: Integrate the divergence over the solid.
+  325:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=x^2\mathbf i+y^2\mathbf j+z^2\mathbf k\) across the cylindrical can \(x^2+y^2\le1\), \(0\le z\le1\), is'
+    A: '\(2 \pi\)'
+    B: '\(0\)'
+    C: '\(\pi\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: C
+    hint: '\(\nabla\cdot\mathbf F=2x+2y+2z\); the \(x,y\) terms integrate to zero over the disk.'
+    explanation: '\(\iiint2z\,dV=2\cdot\tfrac12\cdot\pi=\pi\).'
+  326:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=y\mathbf i+xy\mathbf j-z\mathbf k\) across the boundary of the region inside \(x^2+y^2\le4\) between \(z=0\) and the paraboloid \(z=x^2+y^2\) is'
+    A: '\(- 4 \pi\)'
+    B: '\(8 \pi\)'
+    C: '\(- 8 \pi\)'
+    D: '\(- 16 \pi\)'
+    answer: C
+    hint: '\(\nabla\cdot\mathbf F=x-1\); the \(x\) term integrates to zero by symmetry.'
+    explanation: '\(-\text{Volume}=-8\pi\).'
+  327:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=x^2\mathbf i+xz\mathbf j+3z\mathbf k\) across the solid sphere \(x^2+y^2+z^2\le4\) is'
+    A: '\(64 \pi\)'
+    B: '\(8 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(32 \pi\)'
+    answer: D
+    hint: '\(\nabla\cdot\mathbf F=2x+3\); the \(x\) term integrates to zero.'
+    explanation: '\(3\cdot\text{Volume}=3\cdot\tfrac{32\pi}3=32\pi\).'
+  328:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=x^2\mathbf i-2xy\mathbf j+3xz\mathbf k\) across the boundary of the region cut from the first octant by the sphere \(x^2+y^2+z^2=4\) is'
+    A: '\(6 \pi\)'
+    B: '\(3 \pi\)'
+    C: '\(\frac{3 \pi}{2}\)'
+    D: '\(4 \pi\)'
+    answer: B
+    hint: '\(\nabla\cdot\mathbf F=2x-2x+3x=3x\).'
+    explanation: '\(3\iiint x\,dV=3\int\rho^3\sin^2\phi\cos\theta\,\ldots\) \(=3\pi\cdot\ldots\)'
+  329:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=(6x^2+2xy)\mathbf i+(2y+x^2z)\mathbf j+4x^2y^3\mathbf k\) across the boundary of the region cut from the first octant by \(x^2+y^2=4\) and \(z=3\) is'
+    A: '\(9 \pi + 112\)'
+    B: '\(12 \pi + 224\)'
+    C: '\(6 \pi + 112\)'
+    D: '\(3 \pi + 56\)'
+    answer: C
+    hint: 'Compute \(\nabla\cdot\mathbf F=12x+2y+2+2=12x+2y+4\) and integrate in cylindrical coordinates.'
+    explanation: 'Integrate \(\left(12r\cos\theta+2r\sin\theta+4\right)r\) over \(0\le r\le2\), \(0\le\theta\le\tfrac\pi2\), \(0\le z\le3\).'
+  330:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=x^3\mathbf i+y^3\mathbf j+z^3\mathbf k\) across the sphere \(x^2+y^2+z^2=a^2\) is'
+    A: '\(\frac{12 \pi a^{5}}{5}\)'
+    B: '\(\frac{4 \pi a^{5}}{5}\)'
+    C: '\(3 \pi a^{5}\)'
+    D: '\(\frac{12 \pi a^{4}}{5}\)'
+    answer: A
+    hint: '\(\nabla\cdot\mathbf F=3\rho^2\); integrate in spherical coordinates.'
+    explanation: '\(4\pi\cdot3\int_0^a\rho^4d\rho=\tfrac{12\pi a^5}5\).'
+  331:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=\sqrt{x^2+y^2+z^2}\,(x\mathbf i+y\mathbf j+z\mathbf k)\) across the boundary of the region \(1\le x^2+y^2+z^2\le2\) is'
+    A: '\(12 \pi\)'
+    B: '\(6 \pi\)'
+    C: '\(24 \pi\)'
+    D: '\(4 \pi\)'
+    answer: A
+    hint: '\(\nabla\cdot\mathbf F=4\rho\); integrate over \(1\le\rho\le\sqrt2\).'
+    explanation: '\(16\pi\int_1^{\sqrt2}\rho^3d\rho=4\pi\left(4-1\right)=12\pi\).'
+  332:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=\dfrac{x\mathbf i+y\mathbf j+z\mathbf k}{\sqrt{x^2+y^2+z^2}}\) across the boundary of \(1\le x^2+y^2+z^2\le2\) is'
+    A: '\(4 \pi\)'
+    B: '\(2 \pi\)'
+    C: '\(8 \pi\)'
+    D: '\(12 \pi\)'
+    answer: A
+    hint: '\(\nabla\cdot\mathbf F=\dfrac2\rho\).'
+    explanation: '\(8\pi\int_1^{\sqrt2}\rho\,d\rho=4\pi\).'
+  333:
+    topic: s16-8
+    question: 'The outward flux of \(\mathbf F=(5x^3+12xy^2)\mathbf i+(y^3+e^y\sin z)\mathbf j+(5z^3+e^y\cos z)\mathbf k\) across the boundary of the region between the spheres \(\rho=1\) and \(\rho=\sqrt2\) is'
+    A: '\(6 \pi \left(-1 + 4 \sqrt{2}\right)\)'
+    B: '\(12 \pi \left(-1 + 4 \sqrt{2}\right)\)'
+    C: '\(24 \pi \left(-1 + 4 \sqrt{2}\right)\)'
+    D: '\(\pi \left(-11 + 48 \sqrt{2}\right)\)'
+    answer: B
+    hint: 'Simplify the divergence first: \(\nabla\cdot\mathbf F=15x^2+12y^2+3y^2+15z^2=15\rho^2\).'
+    explanation: '\(\nabla\cdot\mathbf F=15\rho^2\); integrate \(15\rho^2\cdot\rho^2\sin\phi\).'
+  334:
+    topic: s16-8
+    question: 'The Divergence Theorem states that the outward flux of \(\mathbf F\) across a closed surface \(S\) bounding a solid \(D\) is'
+    A: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma=\iiint_D\nabla\times\mathbf F\,dV\)'
+    B: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma=\iiint_D\nabla\cdot\mathbf F\,dV\)'
+    C: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma=\iiint_D|\mathbf F|\,dV\)'
+    D: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma=\oint_{\partial S}\mathbf F\cdot d\mathbf r\)'
+    answer: B
+    hint: Flux out of a closed surface equals the total divergence inside.
+    explanation: "It generalizes the flux form of Green's Theorem."
+  335:
+    topic: s16-8
+    question: 'For any field \(\mathbf G=M\mathbf i+N\mathbf j+P\mathbf k\) with continuous second partials, \(\nabla\cdot(\nabla\times\mathbf G)=\)'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(\nabla\times(\nabla\cdot\mathbf G)\)'
+    D: '\(\nabla^2\mathbf G\)'
+    answer: B
+    hint: Mixed partial derivatives cancel.
+    explanation: '\((P_{yx}-N_{zx})+(M_{zy}-P_{xy})+(N_{xz}-M_{yz})=0\).'
+  336:
+    topic: s16-8
+    question: 'If \(\mathbf G\) is a field with continuous second partials, then the flux of \(\nabla\times\mathbf G\) across any closed surface is'
+    A: '\(0\)'
+    B: '\(2\pi\)'
+    C: positive
+    D: the enclosed volume
+    answer: A
+    hint: 'Apply the Divergence Theorem and \(\nabla\cdot(\nabla\times\mathbf G)=0\).'
+    explanation: The integrand is zero.
+  337:
+    topic: s16-8
+    question: 'For differentiable fields and constants \(a,b\), \(\nabla\cdot(a\mathbf F_1+b\mathbf F_2)=\)'
+    A: '\(a\nabla\cdot\mathbf F_1+b\nabla\cdot\mathbf F_2\)'
+    B: '\(\nabla\cdot\mathbf F_1+\nabla\cdot\mathbf F_2\)'
+    C: '\(a\nabla\times\mathbf F_1+b\nabla\times\mathbf F_2\)'
+    D: '\(ab\nabla\cdot\mathbf F_1\nabla\cdot\mathbf F_2\)'
+    answer: A
+    hint: Differentiation is linear.
+    explanation: Divergence is a linear operator.
+  338:
+    topic: s16-8
+    question: 'For a differentiable scalar function \(g\) and vector field \(\mathbf F\), \(\nabla\cdot(g\mathbf F)=\)'
+    A: '\(\nabla g\cdot\nabla\cdot\mathbf F\)'
+    B: '\(g\nabla\times\mathbf F\)'
+    C: '\(g\nabla\cdot\mathbf F-\nabla g\cdot\mathbf F\)'
+    D: '\(g\nabla\cdot\mathbf F+\nabla g\cdot\mathbf F\)'
+    answer: D
+    hint: Product rule.
+    explanation: 'Each component picks up \(g_xM+gM_x\), etc.'
+  339:
+    topic: s16-8
+    question: 'For a differentiable scalar \(g\) and field \(\mathbf F\), \(\nabla\times(g\mathbf F)=\)'
+    A: '\(g\nabla\times\mathbf F+\nabla g\times\mathbf F\)'
+    B: '\(g\nabla\cdot\mathbf F\)'
+    C: '\(g\nabla\times\mathbf F-\nabla g\times\mathbf F\)'
+    D: '\(\nabla g\cdot\nabla\times\mathbf F\)'
+    answer: A
+    hint: Product rule.
+    explanation: Apply the product rule to each component.
+  340:
+    topic: s16-8
+    question: 'The flux of the position vector field \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\) outward through a smooth closed surface \(S\) equals'
+    A: zero
+    B: 'the area of \(S\)'
+    C: the volume enclosed
+    D: three times the volume of the region enclosed
+    answer: D
+    hint: '\(\nabla\cdot\mathbf F=3\).'
+    explanation: '\(\iiint3\,dV\).'
+  341:
+    topic: s16-8
+    question: 'Using \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\), the volume of a solid \(D\) bounded by \(S\) is'
+    A: '\(\dfrac13\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma\)'
+    B: '\(\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma\)'
+    C: '\(3\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma\)'
+    D: '\(\dfrac12\displaystyle\iint_S\mathbf F\cdot\mathbf n\,d\sigma\)'
+    answer: A
+    hint: '\(\iint\mathbf F\cdot\mathbf n=3V\).'
+    explanation: 'Solve for \(V\).'
+  342:
+    topic: s16-8
+    question: 'The outward flux of a constant vector field \(\mathbf F=\mathbf C\) across any closed surface is'
+    A: '\(3|\mathbf C|\)'
+    B: '\(|\mathbf C|\) times the area'
+    C: '\(\mathbf C\) times the volume'
+    D: '\(0\)'
+    answer: D
+    hint: '\(\nabla\cdot\mathbf C=0\).'
+    explanation: The Divergence Theorem gives zero.
+  343:
+    topic: s16-8
+    question: 'A function \(f\) is called harmonic in a region \(D\) if'
+    A: '\(\nabla^2f=f_{xx}+f_{yy}+f_{zz}=0\) throughout \(D\)'
+    B: '\(\nabla\times\nabla f\ne\mathbf0\)'
+    C: '\(\nabla f=\mathbf0\)'
+    D: '\(f\) is linear'
+    answer: A
+    hint: "It satisfies Laplace's equation."
+    explanation: The Laplacian is zero.
+  344:
+    topic: s16-8
+    question: 'If \(f\) is harmonic throughout a solid region \(D\) bounded by a smooth closed surface \(S\) with outward normal \(\mathbf n\), then \(\displaystyle\iint_S\nabla f\cdot\mathbf n\,d\sigma=\)'
+    A: 'the volume of \(D\)'
+    B: '\(f\) integrated over \(D\)'
+    C: '\(\displaystyle\iiint_D|\nabla f|^2dV\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Apply the Divergence Theorem to \(\nabla f\).'
+    explanation: '\(\nabla\cdot\nabla f=0\).'
+  345:
+    topic: s16-8
+    question: 'If \(f\) is harmonic on \(D\), then \(\displaystyle\iint_Sf\nabla f\cdot\mathbf n\,d\sigma=\)'
+    A: '\(0\)'
+    B: '\(\displaystyle\iiint_Df\,dV\)'
+    C: '\(\displaystyle\iiint_D|\nabla f|^2\,dV\)'
+    D: '\(\displaystyle\iiint_D\nabla^2f\,dV\)'
+    answer: C
+    hint: '\(\nabla\cdot(f\nabla f)=f\nabla^2f+|\nabla f|^2\).'
+    explanation: 'With \(\nabla^2f=0\) only \(|\nabla f|^2\) remains.'
+  346:
+    topic: s16-8
+    question: 'Green''s first formula is \(\displaystyle\iint_Sf\nabla g\cdot\mathbf n\,d\sigma=\)'
+    A: '\(\displaystyle\iiint_D\nabla^2(fg)\,dV\)'
+    B: '\(\displaystyle\iiint_D\left(f\nabla^2g-\nabla f\cdot\nabla g\right)dV\)'
+    C: '\(\displaystyle\iiint_D\left(f\nabla^2g+\nabla f\cdot\nabla g\right)dV\)'
+    D: '\(\displaystyle\iiint_Df\nabla g\,dV\)'
+    answer: C
+    hint: 'Apply the Divergence Theorem to \(f\nabla g\).'
+    explanation: '\(\nabla\cdot(f\nabla g)=f\nabla^2g+\nabla f\cdot\nabla g\).'
+  347:
+    topic: s16-8
+    question: 'Green''s second formula is \(\displaystyle\iint_S\left(f\nabla g-g\nabla f\right)\cdot\mathbf n\,d\sigma=\)'
+    A: '\(\displaystyle\iiint_D\left(\nabla f\cdot\nabla g\right)dV\)'
+    B: '\(\displaystyle\iiint_D\left(f\nabla^2g-g\nabla^2f\right)dV\)'
+    C: '\(0\) always'
+    D: '\(\displaystyle\iiint_D\left(f\nabla^2g+g\nabla^2f\right)dV\)'
+    answer: B
+    hint: 'Subtract the first formula with \(f\) and \(g\) interchanged.'
+    explanation: 'The \(\nabla f\cdot\nabla g\) terms cancel.'
+  348:
+    topic: s16-8
+    question: 'The Law of Conservation of Mass for a fluid with velocity field \(\mathbf v\) and density \(\rho\) says \(\dfrac{d}{dt}\displaystyle\iiint_D\rho\,dV=\)'
+    A: '\(\displaystyle\iint_S\rho\mathbf v\cdot\mathbf n\,d\sigma\)'
+    B: '\(0\)'
+    C: '\(-\displaystyle\iint_S\rho\,d\sigma\)'
+    D: '\(-\displaystyle\iint_S\rho\mathbf v\cdot\mathbf n\,d\sigma\)'
+    answer: D
+    hint: The rate of change of mass equals minus the outward mass flux.
+    explanation: Mass leaves through the boundary.
+  349:
+    topic: s16-8
+    question: The continuity equation for a fluid is
+    A: '\(\nabla\cdot\rho\mathbf v+\dfrac{\partial\rho}{\partial t}=0\)'
+    B: '\(\nabla\cdot\rho\mathbf v=\dfrac{\partial\rho}{\partial t}\)'
+    C: '\(\nabla\rho\cdot\mathbf v=0\)'
+    D: '\(\nabla\times\rho\mathbf v=\dfrac{\partial\rho}{\partial t}\)'
+    answer: A
+    hint: Apply the Divergence Theorem to the conservation law.
+    explanation: It holds at every point of the fluid.
+  350:
+    topic: s16-8
+    question: 'The heat (diffusion) equation for the temperature \(T(t,x,y,z)\) is'
+    A: '\(\nabla^2T=K\)'
+    B: '\(\dfrac{\partial T}{\partial t}=K\nabla^2T\)'
+    C: '\(\dfrac{\partial T}{\partial t}=K\nabla T\)'
+    D: '\(\dfrac{\partial^2T}{\partial t^2}=K\nabla^2T\)'
+    answer: B
+    hint: 'Heat flows in the direction of \(-\nabla T\).'
+    explanation: It follows from conservation of energy and the divergence theorem.
+  351:
+    topic: s16-8
+    question: Heat flows in the direction of
+    A: '\(\nabla T\)'
+    B: '\(\nabla\times\nabla T\)'
+    C: a direction along level surfaces
+    D: '\(-\nabla T\) (from hot to cold)'
+    answer: D
+    hint: 'Temperature decreases most rapidly along \(-\nabla T\).'
+    explanation: The gradient points toward higher temperature.
+  352:
+    topic: s16-8
+    question: 'If \(|\mathbf F|\le1\) on a region \(D\) bounded by a smooth closed surface \(S\), can any bound be placed on \(\displaystyle\iiint_D\nabla\cdot\mathbf F\,dV\)?'
+    A: 'Yes: it is at most the volume of \(D\)'
+    B: No; the divergence can be arbitrarily large
+    C: 'Yes: it is exactly \(0\)'
+    D: 'Yes: it is at most the area of \(S\) in absolute value, since it equals the flux and \(|\mathbf F\cdot\mathbf n|\le1\)'
+    answer: D
+    hint: '\(\iiint\nabla\cdot\mathbf F\,dV=\iint\mathbf F\cdot\mathbf n\,d\sigma\).'
+    explanation: '\(|\mathbf F\cdot\mathbf n|\le1\), so the flux is at most the area of \(S\).'
+  353:
+    topic: s16-8
+    question: 'Let \(\mathbf F=x\mathbf i-2y\mathbf j+(z+3)\mathbf k\) and let the surface be the unit cube-like closed surface with sides \(x=0,1\), \(y=0,1\), \(z=0\) (base), and an unknown top. If the outward flux through side \(x=1\) is \(1\) and through side \(y=1\) is \(-3\) (flux through \(x=0\), \(y=0\) is \(0\) and through \(z=0\) is \(-3\)), then the outward flux through the top is'
+    A: '\(0\)'
+    B: '\(5\)'
+    C: '\(-5\)'
+    D: '\(3\)'
+    answer: B
+    hint: '\(\nabla\cdot\mathbf F=0\), so the total outward flux is \(0\).'
+    explanation: '\(1-3-3+\text{top}=0\Rightarrow\text{top}=5\).'
+  354:
+    topic: s16-8
+    question: 'Among all boxes \(0\le x\le a\), \(0\le y\le b\), \(0\le z\le1\), the outward flux of \(\mathbf F=(-x^2-4xy)\mathbf i-6yz\mathbf j+12z\mathbf k\) is largest for'
+    A: '\(a=4\), \(b=\frac{3}{2}\)'
+    B: '\(a=\frac{3}{2}\), \(b=3\)'
+    C: '\(a=3\), \(b=\frac{3}{2}\)'
+    D: '\(a=3\), \(b=\frac{5}{2}\)'
+    answer: C
+    hint: '\(\text{flux}=\iiint(12-2x-4y-6z)\,dV=ab\,(9-a-2b)\).'
+    explanation: 'Set the partial derivatives of \(ab(9-a-2b)\) with respect to \(a\) and \(b\) to zero.'
+  355:
+    topic: s16-8
+    question: The greatest possible outward flux through such a box (previous question) is
+    A: '\(\frac{27}{4}\)'
+    B: '\(\frac{27}{2}\)'
+    C: '\(\frac{29}{2}\)'
+    D: '\(27\)'
+    answer: B
+    hint: 'Substitute the optimal \(a,b\) into \(ab(9-a-2b)\).'
+    explanation: 'It is the maximum of \(ab(9-a-2b)\).'
+  356:
+    topic: s16-8
+    question: 'The flux \(\displaystyle\iint_S\nabla f\cdot\mathbf n\,d\sigma\) for \(f=\ln\sqrt{x^2+y^2+z^2}\) across the part of the sphere \(x^2+y^2+z^2=a^2\) in the first octant (outward) is'
+    A: '\(\frac{\pi a^{2}}{2}\)'
+    B: '\(\pi a\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(\frac{\pi a}{2}\)'
+    answer: D
+    hint: 'On the sphere \(\nabla f\cdot\mathbf n=\dfrac1a\); multiply by the area \(\tfrac{\pi a^2}2\).'
+    explanation: '\(\dfrac1a\cdot\dfrac{\pi a^2}2=\dfrac{\pi a}2\).'
+  357:
+    topic: s16-8
+    question: 'A solid has volume \(V\) and is bounded by a smooth surface \(S\). For the field \(\mathbf F=x\mathbf i+y\mathbf j+z\mathbf k\) the average value of \(\nabla\cdot\mathbf F\) over the solid is'
+    A: '\(3\)'
+    B: '\(\dfrac13\)'
+    C: '\(1\)'
+    D: '\(V\)'
+    answer: A
+    hint: '\(\nabla\cdot\mathbf F=1+1+1\).'
+    explanation: It is constant.
+  358:
+    topic: s16-8
+    question: "In the unified theory, the Fundamental Theorem of Calculus, Green's Theorem, Stokes' Theorem and the Divergence Theorem all say that"
+    A: the integral of a derivative-like quantity over a region equals the integral of the field over the boundary of that region
+    B: curl and divergence are always zero
+    C: every vector field is conservative
+    D: surface integrals equal line integrals only in the plane
+    answer: A
+    hint: 'Compare \(\int_a^bf''(x)dx=f(b)-f(a)\).'
+    explanation: Each relates an integral over a region to values on its boundary.
