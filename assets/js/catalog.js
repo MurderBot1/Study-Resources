@@ -73,6 +73,30 @@ window.CATALOG = {
           description: "Sections 4.1–4.8: Extreme values, the Mean Value Theorem, monotonicity, concavity, optimization, L'Hôpital's Rule, Newton's method, and antiderivatives.",
           meta: "249 questions · hints",
           quiz: "chapter-04"
+        },
+        {
+          title: "Chapter 5: Integration",
+          description: "Sections 5.1–5.6: Estimating with finite sums, sigma notation, the definite integral, the Fundamental Theorem of Calculus, substitution, and area between curves.",
+          meta: "269 questions · hints",
+          quiz: "chapter-05"
+        },
+        {
+          title: "Chapter 6: Applications of Definite Integrals",
+          description: "Sections 6.1–6.7: Volumes by slicing, disks, washers and shells; lengths of curves; centers of mass; surface area and Pappus; work; fluid forces.",
+          meta: "208 questions · hints",
+          quiz: "chapter-06"
+        },
+        {
+          title: "Chapter 7: Integrals and Transcendental Functions",
+          description: "Sections 7.1–7.4: Integrals of logarithmic and exponential expressions, exponential growth and decay, relative rates of growth, and hyperbolic functions.",
+          meta: "213 questions · hints",
+          quiz: "chapter-07"
+        },
+        {
+          title: "Chapter 8: Techniques of Integration",
+          description: "Sections 8.1–8.8: Basic integration formulas, integration by parts, partial fractions, trigonometric integrals and substitutions, integral tables, numerical integration, and improper integrals.",
+          meta: "465 questions · hints",
+          quiz: "chapter-08"
         }
       ],
       flashcards: []

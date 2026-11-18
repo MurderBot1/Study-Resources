@@ -1519,7 +1519,7 @@ questions:
     explanation: 'Reflecting across \(y=x\) inverts the slope.'
   150:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(3 x \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(3 x \right)}\right]\).'
     A: '\(\frac{1}{x^{2}}\)'
     B: '\(1\)'
     C: '\(\frac{1}{x}\)'
@@ -1529,7 +1529,7 @@ questions:
     explanation: 'Differentiating gives \(\frac{1}{x}\).'
   151:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dt}\left[\log{\left(t^{\frac{3}{2}} \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dt}\left[\ln{\left(t^{\frac{3}{2}} \right)}\right]\).'
     A: '\(\frac{3 t}{2}\)'
     B: '\(\frac{3}{t}\)'
     C: '\(\frac{3}{2 t}\)'
@@ -1539,7 +1539,7 @@ questions:
     explanation: 'Differentiating gives \(\frac{3}{2 t}\).'
   152:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(\frac{3}{x} \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(\frac{3}{x} \right)}\right]\).'
     A: '\(0\)'
     B: '\(- \frac{2}{x^{2}}\)'
     C: '\(- \frac{1}{x}\)'
@@ -1549,57 +1549,57 @@ questions:
     explanation: 'Differentiating gives \(- \frac{1}{x}\).'
   153:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(x \right)}^{3}\right]\).'
-    A: '\(\frac{3 \log{(x)}^{2}}{2 x}\)'
-    B: '\(\frac{3}{x \log{(x)}^{2}}\)'
-    C: '\(\frac{3 \log{(x)}^{2}}{x}\)'
-    D: '\(\frac{3 \log{(x)}^{2}}{\sqrt{x}}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(x \right)}^{3}\right]\).'
+    A: '\(\frac{3 \ln{(x)}^{2}}{2 x}\)'
+    B: '\(\frac{3}{x \ln{(x)}^{2}}\)'
+    C: '\(\frac{3 \ln{(x)}^{2}}{x}\)'
+    D: '\(\frac{3 \ln{(x)}^{2}}{\sqrt{x}}\)'
     answer: C
     hint: Chain rule with the cube.
-    explanation: 'Differentiating gives \(\frac{3 \log{\left(x \right)}^{2}}{x}\).'
+    explanation: 'Differentiating gives \(\frac{3 \ln{\left(x \right)}^{2}}{x}\).'
   154:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dt}\left[t \log{\left(t \right)}^{2}\right]\).'
-    A: '\(\log{\left(t \right)}^{4} + 4 \log{\left(t \right)}\)'
-    B: '\(\log{\left(t \right)}^{2}\)'
-    C: '\(\log{\left(t \right)}^{2} - 2 \log{\left(t \right)}\)'
-    D: '\(\log{\left(t \right)}^{2} + 2 \log{\left(t \right)}\)'
+    question: 'Find \(\dfrac{d}{dt}\left[t \ln{\left(t \right)}^{2}\right]\).'
+    A: '\(\ln{\left(t \right)}^{4} + 4 \ln{\left(t \right)}\)'
+    B: '\(\ln{\left(t \right)}^{2}\)'
+    C: '\(\ln{\left(t \right)}^{2} - 2 \ln{\left(t \right)}\)'
+    D: '\(\ln{\left(t \right)}^{2} + 2 \ln{\left(t \right)}\)'
     answer: D
     hint: Product rule.
-    explanation: 'Differentiating gives \(\log{\left(t \right)}^{2} + 2 \log{\left(t \right)}\).'
+    explanation: 'Differentiating gives \(\ln{\left(t \right)}^{2} + 2 \ln{\left(t \right)}\).'
   155:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dt}\left[\frac{\log{\left(t \right)}}{t}\right]\).'
-    A: '\(- \frac{\log{\left(t \right)}}{t} + \frac{1}{t}\)'
-    B: '\(- \frac{\log{\left(t \right)}}{t^{2}}\)'
-    C: '\(\frac{\log{\left(t \right)}}{t^{2}} - \frac{1}{t^{2}}\)'
-    D: '\(- \frac{\log{\left(t \right)}}{t^{2}} + \frac{1}{t^{2}}\)'
+    question: 'Find \(\dfrac{d}{dt}\left[\frac{\ln{\left(t \right)}}{t}\right]\).'
+    A: '\(- \frac{\ln{\left(t \right)}}{t} + \frac{1}{t}\)'
+    B: '\(- \frac{\ln{\left(t \right)}}{t^{2}}\)'
+    C: '\(\frac{\ln{\left(t \right)}}{t^{2}} - \frac{1}{t^{2}}\)'
+    D: '\(- \frac{\ln{\left(t \right)}}{t^{2}} + \frac{1}{t^{2}}\)'
     answer: D
     hint: Quotient rule.
-    explanation: 'Differentiating gives \(- \frac{\log{\left(t \right)}}{t^{2}} + \frac{1}{t^{2}}\).'
+    explanation: 'Differentiating gives \(- \frac{\ln{\left(t \right)}}{t^{2}} + \frac{1}{t^{2}}\).'
   156:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(\log{\left(x \right)} \right)}\right]\).'
-    A: '\(\frac{1}{x^{2} \log{(x)}^{2}}\)'
-    B: '\(- \frac{1}{x \log{(x)}}\)'
-    C: '\(\frac{1}{x \log{(x)}}\)'
-    D: '\(x \log{(x)}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(\ln{\left(x \right)} \right)}\right]\).'
+    A: '\(\frac{1}{x^{2} \ln{(x)}^{2}}\)'
+    B: '\(- \frac{1}{x \ln{(x)}}\)'
+    C: '\(\frac{1}{x \ln{(x)}}\)'
+    D: '\(x \ln{(x)}\)'
     answer: C
     hint: 'Chain rule: \(\dfrac{1}{\ln x}\cdot\dfrac1x\).'
-    explanation: 'Differentiating gives \(\frac{1}{x \log{\left(x \right)}}\).'
+    explanation: 'Differentiating gives \(\frac{1}{x \ln{\left(x \right)}}\).'
   157:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{d\theta}\left[\theta \left(\sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\right)\right]\).'
-    A: '\(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\)'
-    B: '\(\theta \left(- \frac{2 \sin{\left(\log{\left(\theta \right)} \right)}}{\theta^{2}} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta^{2}}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\)'
-    C: '\(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{2 \sqrt{\theta}} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\sqrt{\theta}}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\)'
-    D: '\(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\log{\left(\theta \right)} \right)} - \cos{\left(\log{\left(\theta \right)} \right)}\)'
+    question: 'Find \(\dfrac{d}{d\theta}\left[\theta \left(\sin{\left(\ln{\left(\theta \right)} \right)} + \cos{\left(\ln{\left(\theta \right)} \right)}\right)\right]\).'
+    A: '\(\theta \left(- \frac{\sin{\left(\ln{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\ln{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\ln{\left(\theta \right)} \right)} + \cos{\left(\ln{\left(\theta \right)} \right)}\)'
+    B: '\(\theta \left(- \frac{2 \sin{\left(\ln{\left(\theta \right)} \right)}}{\theta^{2}} + \frac{\cos{\left(\ln{\left(\theta \right)} \right)}}{\theta^{2}}\right) + \sin{\left(\ln{\left(\theta \right)} \right)} + \cos{\left(\ln{\left(\theta \right)} \right)}\)'
+    C: '\(\theta \left(- \frac{\sin{\left(\ln{\left(\theta \right)} \right)}}{2 \sqrt{\theta}} + \frac{\cos{\left(\ln{\left(\theta \right)} \right)}}{\sqrt{\theta}}\right) + \sin{\left(\ln{\left(\theta \right)} \right)} + \cos{\left(\ln{\left(\theta \right)} \right)}\)'
+    D: '\(\theta \left(- \frac{\sin{\left(\ln{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\ln{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\ln{\left(\theta \right)} \right)} - \cos{\left(\ln{\left(\theta \right)} \right)}\)'
     answer: A
     hint: 'Product rule; the \(\sin\) and \(\cos\) terms combine nicely.'
-    explanation: 'Differentiating gives \(\theta \left(- \frac{\sin{\left(\log{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\log{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\log{\left(\theta \right)} \right)} + \cos{\left(\log{\left(\theta \right)} \right)}\).'
+    explanation: 'Differentiating gives \(\theta \left(- \frac{\sin{\left(\ln{\left(\theta \right)} \right)}}{\theta} + \frac{\cos{\left(\ln{\left(\theta \right)} \right)}}{\theta}\right) + \sin{\left(\ln{\left(\theta \right)} \right)} + \cos{\left(\ln{\left(\theta \right)} \right)}\).'
   158:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{d\theta}\left[\log{\left(\tan{\left(\theta \right)} + \sec{\left(\theta \right)} \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{d\theta}\left[\ln{\left(\tan{\left(\theta \right)} + \sec{\left(\theta \right)} \right)}\right]\).'
     A: '\(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)}}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
     B: '\(\frac{\tan^{4}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 1}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
     C: '\(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 2}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\)'
@@ -1609,7 +1609,7 @@ questions:
     explanation: 'Differentiating gives \(\frac{\tan^{2}{\left(\theta \right)} + \tan{\left(\theta \right)} \sec{\left(\theta \right)} + 1}{\tan{\left(\theta \right)} + \sec{\left(\theta \right)}}\).'
   159:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dx}\left[\frac{\log{\left(\frac{x + 1}{1 - x} \right)}}{2}\right]\).'
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{\ln{\left(\frac{x + 1}{1 - x} \right)}}{2}\right]\).'
     A: '\(\frac{\left(1 - x\right) \left(\frac{1}{1 - x} + \frac{x + 1}{\left(1 - x\right)^{2}}\right)}{2 \left(x + 1\right)}\)'
     B: '\(\frac{\left(2 - x\right) \left(\frac{1}{2 - x} + \frac{x + 2}{\left(2 - x\right)^{2}}\right)}{2 \left(x + 2\right)}\)'
     C: '\(- \frac{\left(1 - x\right) \left(\frac{1}{1 - x} + \frac{x + 1}{\left(1 - x\right)^{2}}\right)}{2 \left(x + 1\right)}\)'
@@ -1620,23 +1620,23 @@ questions:
   160:
     topic: s3-7
     question: 'Find \(\dfrac{d}{dx}\left[2^{x}\right]\).'
-    A: '\(3^{x} \log{\left(3 \right)}\)'
-    B: '\(4^{x} \log{\left(4 \right)}\)'
-    C: '\(2^{x} \log{\left(2 \right)}\)'
-    D: '\(- 2^{x} \log{\left(2 \right)}\)'
+    A: '\(3^{x} \ln{\left(3 \right)}\)'
+    B: '\(4^{x} \ln{\left(4 \right)}\)'
+    C: '\(2^{x} \ln{\left(2 \right)}\)'
+    D: '\(- 2^{x} \ln{\left(2 \right)}\)'
     answer: C
     hint: '\(\dfrac{d}{dx}a^x=a^x\ln a\).'
-    explanation: 'Differentiating gives \(2^{x} \log{\left(2 \right)}\).'
+    explanation: 'Differentiating gives \(2^{x} \ln{\left(2 \right)}\).'
   161:
     topic: s3-7
     question: 'Find \(\dfrac{d}{ds}\left[5^{\sqrt{s}}\right]\).'
-    A: '\(\frac{\left(\frac{5}{2}\right)^{\sqrt{s}} \log{\left(\frac{5}{2} \right)}}{2 \sqrt{s}}\)'
-    B: '\(\frac{5^{\sqrt{s}} \log{\left(5 \right)}}{2 \sqrt{s}}\)'
-    C: '\(\frac{5^{\sqrt{s}} \log{\left(5 \right)}}{2 s^{\frac{3}{2}}}\)'
-    D: '\(\frac{6^{\sqrt{s}} \log{\left(6 \right)}}{2 \sqrt{s}}\)'
+    A: '\(\frac{\left(\frac{5}{2}\right)^{\sqrt{s}} \ln{\left(\frac{5}{2} \right)}}{2 \sqrt{s}}\)'
+    B: '\(\frac{5^{\sqrt{s}} \ln{\left(5 \right)}}{2 \sqrt{s}}\)'
+    C: '\(\frac{5^{\sqrt{s}} \ln{\left(5 \right)}}{2 s^{\frac{3}{2}}}\)'
+    D: '\(\frac{6^{\sqrt{s}} \ln{\left(6 \right)}}{2 \sqrt{s}}\)'
     answer: B
     hint: 'Chain rule with \(a^u\): \(a^u\ln a\cdot u''\).'
-    explanation: 'Differentiating gives \(\frac{5^{\sqrt{s}} \log{\left(5 \right)}}{2 \sqrt{s}}\).'
+    explanation: 'Differentiating gives \(\frac{5^{\sqrt{s}} \ln{\left(5 \right)}}{2 \sqrt{s}}\).'
   162:
     topic: s3-7
     question: 'Find \(\dfrac{d}{dx}\left[x^{\pi}\right]\).'
@@ -1649,44 +1649,44 @@ questions:
     explanation: 'Differentiating gives \(\frac{\pi x^{\pi}}{x}\).'
   163:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{d\theta}\left[\frac{\log{\left(5 \theta \right)}}{\log{\left(2 \right)}}\right]\).'
+    question: 'Find \(\dfrac{d}{d\theta}\left[\frac{\ln{\left(5 \theta \right)}}{\ln{\left(2 \right)}}\right]\).'
     A: '\(1\)'
-    B: '\(\frac{1}{\theta^{2} \log{\left(2 \right)}^{2}}\)'
-    C: '\(\frac{1}{\theta \log{\left(3 \right)}}\)'
-    D: '\(\frac{1}{\theta \log{\left(2 \right)}}\)'
+    B: '\(\frac{1}{\theta^{2} \ln{\left(2 \right)}^{2}}\)'
+    C: '\(\frac{1}{\theta \ln{\left(3 \right)}}\)'
+    D: '\(\frac{1}{\theta \ln{\left(2 \right)}}\)'
     answer: D
     hint: '\(\log_2 5\theta=\dfrac{\ln5\theta}{\ln2}\).'
-    explanation: 'Differentiating gives \(\frac{1}{\theta \log{\left(2 \right)}}\).'
+    explanation: 'Differentiating gives \(\frac{1}{\theta \ln{\left(2 \right)}}\).'
   164:
     topic: s3-7
     question: 'Find \(\dfrac{d}{dx}\left[\left(x + 1\right)^{x}\right]\).'
-    A: '\(\left(x + 1\right)^{x} \left(x \left(x + 1\right) + \log{\left(x + 1 \right)}\right)\)'
-    B: '\(\left(x + \frac{1}{2}\right)^{x} \left(\frac{x}{x + \frac{1}{2}} + \log{\left(x + \frac{1}{2} \right)}\right)\)'
-    C: '\(\left(x - 1\right)^{x} \left(\frac{x}{x - 1} + \log{\left(x - 1 \right)}\right)\)'
-    D: '\(\left(x + 1\right)^{x} \left(\frac{x}{x + 1} + \log{\left(x + 1 \right)}\right)\)'
+    A: '\(\left(x + 1\right)^{x} \left(x \left(x + 1\right) + \ln{\left(x + 1 \right)}\right)\)'
+    B: '\(\left(x + \frac{1}{2}\right)^{x} \left(\frac{x}{x + \frac{1}{2}} + \ln{\left(x + \frac{1}{2} \right)}\right)\)'
+    C: '\(\left(x - 1\right)^{x} \left(\frac{x}{x - 1} + \ln{\left(x - 1 \right)}\right)\)'
+    D: '\(\left(x + 1\right)^{x} \left(\frac{x}{x + 1} + \ln{\left(x + 1 \right)}\right)\)'
     answer: D
     hint: 'Logarithmic differentiation: \(\ln y=x\ln(x+1)\).'
-    explanation: 'Differentiating gives \(\left(x + 1\right)^{x} \left(\frac{x}{x + 1} + \log{\left(x + 1 \right)}\right)\).'
+    explanation: 'Differentiating gives \(\left(x + 1\right)^{x} \left(\frac{x}{x + 1} + \ln{\left(x + 1 \right)}\right)\).'
   165:
     topic: s3-7
     question: 'Find \(\dfrac{d}{dx}\left[\sin^{x}{\left(x \right)}\right]\).'
-    A: '\(\left(x \sin{(x)} \cos{(x)} + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
-    B: '\(\left(\frac{x \cos{(x)}}{\sin^{2}{(x)}} + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
-    C: '\(\left(x + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
-    D: '\(\left(\frac{x \cos{(x)}}{\sin{(x)}} + \log{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    A: '\(\left(x \sin{(x)} \cos{(x)} + \ln{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    B: '\(\left(\frac{x \cos{(x)}}{\sin^{2}{(x)}} + \ln{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    C: '\(\left(x + \ln{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
+    D: '\(\left(\frac{x \cos{(x)}}{\sin{(x)}} + \ln{\left(\sin{(x)} \right)}\right) \sin^{x}{(x)}\)'
     answer: D
     hint: 'Take logs: \(\ln y=x\ln\sin x\).'
-    explanation: 'Differentiating gives \(\left(\frac{x \cos{\left(x \right)}}{\sin{\left(x \right)}} + \log{\left(\sin{\left(x \right)} \right)}\right) \sin^{x}{\left(x \right)}\).'
+    explanation: 'Differentiating gives \(\left(\frac{x \cos{\left(x \right)}}{\sin{\left(x \right)}} + \ln{\left(\sin{\left(x \right)} \right)}\right) \sin^{x}{\left(x \right)}\).'
   166:
     topic: s3-7
-    question: 'Find \(\dfrac{d}{dx}\left[x^{\log{\left(x \right)}}\right]\).'
-    A: '\(\frac{2 x^{\log{(x)}} \log{(x)}}{x}\)'
-    B: '\(2 x^{\log{(x)}} \log{(x)}\)'
-    C: '\(- \frac{2 x^{\log{(x)}} \log{(x)}}{x}\)'
-    D: '\(\frac{2 x^{\log{(x)}} \log{(x)}}{\sqrt{x}}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[x^{\ln{\left(x \right)}}\right]\).'
+    A: '\(\frac{2 x^{\ln{(x)}} \ln{(x)}}{x}\)'
+    B: '\(2 x^{\ln{(x)}} \ln{(x)}\)'
+    C: '\(- \frac{2 x^{\ln{(x)}} \ln{(x)}}{x}\)'
+    D: '\(\frac{2 x^{\ln{(x)}} \ln{(x)}}{\sqrt{x}}\)'
     answer: A
     hint: '\(x^{\ln x}=e^{(\ln x)^2}\).'
-    explanation: 'Differentiating gives \(\frac{2 x^{\log{\left(x \right)}} \log{\left(x \right)}}{x}\).'
+    explanation: 'Differentiating gives \(\frac{2 x^{\ln{\left(x \right)}} \ln{\left(x \right)}}{x}\).'
   167:
     topic: s3-7
     question: 'By logarithmic differentiation, the derivative of \(y=\sqrt{x(x+1)}\) is'
@@ -1849,7 +1849,7 @@ questions:
     explanation: '\(\cos^{-1}0=\tfrac\pi2\).'
   183:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[\operatorname{acos}{\left(x^{2} \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dx}\left[\cos^{-1}{\left(x^{2} \right)}\right]\).'
     A: '\(- \frac{2 x}{\sqrt{1 - x^{4}}}\)'
     B: '\(- \frac{2 x}{\sqrt{- x^{4} - 1}}\)'
     C: '\(- \frac{2 x}{\sqrt{1 - \frac{x^{4}}{2}}}\)'
@@ -1859,7 +1859,7 @@ questions:
     explanation: 'Differentiating gives \(- \frac{2 x}{\sqrt{1 - x^{4}}}\).'
   184:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dt}\left[\operatorname{asin}{\left(\sqrt{2} t \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dt}\left[\sin^{-1}{\left(\sqrt{2} t \right)}\right]\).'
     A: '\(\frac{\sqrt{2}}{\sqrt{2 - 2 t^{2}}}\)'
     B: '\(\frac{2 \sqrt{2}}{\sqrt{1 - 2 t^{2}}}\)'
     C: '\(\frac{1}{\sqrt{1 - 2 t}}\)'
@@ -1869,44 +1869,44 @@ questions:
     explanation: 'Differentiating gives \(\frac{\sqrt{2}}{\sqrt{1 - 2 t^{2}}}\).'
   185:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[\operatorname{atan}{\left(\log{\left(x \right)} \right)}\right]\).'
-    A: '\(x \left(\log{(x)}^{2} + 1\right)\)'
-    B: '\(\frac{1}{x \left(\log{(x)} + 1\right)}\)'
-    C: '\(\frac{1}{x \left(\log{(x)}^{3} + 1\right)}\)'
-    D: '\(\frac{1}{x \left(\log{(x)}^{2} + 1\right)}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[\tan^{-1}{\left(\ln{\left(x \right)} \right)}\right]\).'
+    A: '\(x \left(\ln{(x)}^{2} + 1\right)\)'
+    B: '\(\frac{1}{x \left(\ln{(x)} + 1\right)}\)'
+    C: '\(\frac{1}{x \left(\ln{(x)}^{3} + 1\right)}\)'
+    D: '\(\frac{1}{x \left(\ln{(x)}^{2} + 1\right)}\)'
     answer: D
     hint: '\(\dfrac{d}{dx}\tan^{-1}u=\dfrac{u''}{1+u^2}\).'
-    explanation: 'Differentiating gives \(\frac{1}{x \left(\log{\left(x \right)}^{2} + 1\right)}\).'
+    explanation: 'Differentiating gives \(\frac{1}{x \left(\ln{\left(x \right)}^{2} + 1\right)}\).'
   186:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[\log{\left(\operatorname{atan}{\left(x \right)} \right)}\right]\).'
-    A: '\(\frac{1}{\left(x^{2} + \frac{1}{2}\right) \operatorname{atan}{(x)}}\)'
-    B: '\(\frac{1}{\sqrt{x^{2} + 1} \sqrt{\operatorname{atan}{(x)}}}\)'
-    C: '\(\left(x^{2} + 1\right) \operatorname{atan}{(x)}\)'
-    D: '\(\frac{1}{\left(x^{2} + 1\right) \operatorname{atan}{(x)}}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(\tan^{-1}{\left(x \right)} \right)}\right]\).'
+    A: '\(\frac{1}{\left(x^{2} + \frac{1}{2}\right) \tan^{-1}{(x)}}\)'
+    B: '\(\frac{1}{\sqrt{x^{2} + 1} \sqrt{\tan^{-1}{(x)}}}\)'
+    C: '\(\left(x^{2} + 1\right) \tan^{-1}{(x)}\)'
+    D: '\(\frac{1}{\left(x^{2} + 1\right) \tan^{-1}{(x)}}\)'
     answer: D
     hint: 'Chain rule with \(\ln u\).'
-    explanation: 'Differentiating gives \(\frac{1}{\left(x^{2} + 1\right) \operatorname{atan}{\left(x \right)}}\).'
+    explanation: 'Differentiating gives \(\frac{1}{\left(x^{2} + 1\right) \tan^{-1}{\left(x \right)}}\).'
   187:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}\right]\).'
-    A: '\(- \operatorname{asin}{(x)}\)'
-    B: '\(2 \operatorname{asin}{(x)}\)'
-    C: '\(\operatorname{asin}{(x)} + 1\)'
-    D: '\(\operatorname{asin}{(x)}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[x \sin^{-1}{\left(x \right)} + \sqrt{1 - x^{2}}\right]\).'
+    A: '\(- \sin^{-1}{(x)}\)'
+    B: '\(2 \sin^{-1}{(x)}\)'
+    C: '\(\sin^{-1}{(x)} + 1\)'
+    D: '\(\sin^{-1}{(x)}\)'
     answer: D
     hint: Product rule; watch the cancellation.
-    explanation: 'Differentiating gives \(\operatorname{asin}{\left(x \right)}\).'
+    explanation: 'Differentiating gives \(\sin^{-1}{\left(x \right)}\).'
   188:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[- x \operatorname{atan}{\left(\frac{x}{2} \right)} + \log{\left(x^{2} + 4 \right)}\right]\).'
-    A: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
-    B: '\(\frac{2 x}{x^{2} + 4} - \operatorname{atan}{\left(\frac{x}{2} \right)} - \frac{2}{x}\)'
-    C: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 2\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
-    D: '\(\frac{2 x}{x^{2} + 3} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[- x \tan^{-1}{\left(\frac{x}{2} \right)} + \ln{\left(x^{2} + 4 \right)}\right]\).'
+    A: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\)'
+    B: '\(\frac{2 x}{x^{2} + 4} - \tan^{-1}{\left(\frac{x}{2} \right)} - \frac{2}{x}\)'
+    C: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 2\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\)'
+    D: '\(\frac{2 x}{x^{2} + 3} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\)'
     answer: A
     hint: 'Product rule on \(x\tan^{-1}(x/2)\); terms cancel.'
-    explanation: 'Differentiating gives \(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\).'
+    explanation: 'Differentiating gives \(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\).'
   189:
     topic: s3-8
     question: 'The functions \(f(x)=\sin^{-1}\dfrac{x-1}{x+1}\) and \(g(x)=2\tan^{-1}\sqrt x\) (\(x\ge0\)) have the same derivative, so'

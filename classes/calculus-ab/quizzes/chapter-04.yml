@@ -205,14 +205,14 @@ questions:
     explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(e^{-1}\) (at \(x=1\)) and the smallest is \(- e\) (at \(x=-1\)).'
   19:
     topic: s4-1
-    question: 'Find the absolute maximum and minimum of \(f(x)=\log{\left(x \right)} + \frac{1}{x}\) on \([\frac{1}{2},4]\).'
-    A: '\(\max=\frac{5}{4} + \log{\left(4 \right)} \text{ at } x=4,\ \min=0 \text{ at } x=1\)'
-    B: '\(\max=\frac{1}{4} + \log{\left(4 \right)} \text{ at } x=1,\ \min=1 \text{ at } x=4\)'
-    C: '\(\max=1 \text{ at } x=1,\ \min=\frac{1}{4} + \log{\left(4 \right)} \text{ at } x=4\)'
-    D: '\(\max=\frac{1}{4} + \log{\left(4 \right)} \text{ at } x=4,\ \min=1 \text{ at } x=1\)'
+    question: 'Find the absolute maximum and minimum of \(f(x)=\ln{\left(x \right)} + \frac{1}{x}\) on \([\frac{1}{2},4]\).'
+    A: '\(\max=\frac{5}{4} + \ln{\left(4 \right)} \text{ at } x=4,\ \min=0 \text{ at } x=1\)'
+    B: '\(\max=\frac{1}{4} + \ln{\left(4 \right)} \text{ at } x=1,\ \min=1 \text{ at } x=4\)'
+    C: '\(\max=1 \text{ at } x=1,\ \min=\frac{1}{4} + \ln{\left(4 \right)} \text{ at } x=4\)'
+    D: '\(\max=\frac{1}{4} + \ln{\left(4 \right)} \text{ at } x=4,\ \min=1 \text{ at } x=1\)'
     answer: D
     hint: 'Set \(f''=-1/x^2+1/x=0\).'
-    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(\frac{1}{4} + \log{\left(4 \right)}\) (at \(x=4\)) and the smallest is \(1\) (at \(x=1\)).'
+    explanation: 'Compare \(f\) at the critical points and endpoints: the largest value is \(\frac{1}{4} + \ln{\left(4 \right)}\) (at \(x=4\)) and the smallest is \(1\) (at \(x=1\)).'
   20:
     topic: s4-1
     question: 'Find the absolute maximum and minimum of \(f(x)=e^{- x^{2}}\) on \([-2,1]\).'
@@ -385,14 +385,14 @@ questions:
     explanation: 'The average slope is \(1\), which equals \(f''(c)\) at \(c=\frac{8}{27}\).'
   37:
     topic: s4-2
-    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=\log{\left(x - 1 \right)}\) on \([2,4]\).'
+    question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=\ln{\left(x - 1 \right)}\) on \([2,4]\).'
     A: '\(3\)'
-    B: '\(1 + \frac{2}{\log{\left(3 \right)}}\)'
+    B: '\(1 + \frac{2}{\ln{\left(3 \right)}}\)'
     C: '\(6\)'
     D: '\(\frac{39}{10}\)'
     answer: B
     hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
-    explanation: 'The average slope is \(\frac{\log{\left(3 \right)}}{2}\), which equals \(f''(c)\) at \(c=1 + \frac{2}{\log{\left(3 \right)}}\).'
+    explanation: 'The average slope is \(\frac{\ln{\left(3 \right)}}{2}\), which equals \(f''(c)\) at \(c=1 + \frac{2}{\ln{\left(3 \right)}}\).'
   38:
     topic: s4-2
     question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=x + \frac{1}{x}\) on \([\frac{1}{2},2]\).'
@@ -428,11 +428,11 @@ questions:
     question: 'Find the value of \(c\) in the Mean Value Theorem conclusion \(\dfrac{f(b)-f(a)}{b-a}=f''(c)\) for \(f(x)=e^{x}\) on \([0,1]\).'
     A: '\(1\)'
     B: '\(\frac{1}{2}\)'
-    C: '\(\log{\left(-1 + e \right)}\)'
+    C: '\(\ln{\left(-1 + e \right)}\)'
     D: '\(\frac{9}{10}\)'
     answer: C
     hint: 'Compute the average slope \(\dfrac{f(b)-f(a)}{b-a}\) and solve \(f''(c)=\) that value in \((a,b)\).'
-    explanation: 'The average slope is \(-1 + e\), which equals \(f''(c)\) at \(c=\log{\left(-1 + e \right)}\).'
+    explanation: 'The average slope is \(-1 + e\), which equals \(f''(c)\) at \(c=\ln{\left(-1 + e \right)}\).'
   42:
     topic: s4-2
     question: 'Does \(f(x)=x^{2/3}\) satisfy the hypotheses of the Mean Value Theorem on \([-1,8]\)?'
@@ -1675,7 +1675,7 @@ questions:
     explanation: '\(\dfrac{\cos x-1}{3x^2}\to\dfrac{-\sin x}{6x}\to\dfrac{-\cos x}{6}\to-\dfrac16\).'
   166:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to 1} \frac{x - 1}{\log{\left(x \right)}}\).'
+    question: 'Evaluate \(\lim_{x\to 1} \frac{x - 1}{\ln{\left(x \right)}}\).'
     A: '\(2\)'
     B: '\(-1\)'
     C: does not exist
@@ -1685,7 +1685,7 @@ questions:
     explanation: '\(\dfrac{1}{1/x}=x\to1\).'
   167:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to 0} \frac{x^{2}}{\log{\left(\sec{\left(x \right)} \right)}}\).'
+    question: 'Evaluate \(\lim_{x\to 0} \frac{x^{2}}{\ln{\left(\sec{\left(x \right)} \right)}}\).'
     A: '\(-2\)'
     B: does not exist
     C: '\(4\)'
@@ -1697,9 +1697,9 @@ questions:
     topic: s4-6
     question: 'Evaluate \(\lim_{x\to 0} \frac{3^{x} - 1}{x}\).'
     A: '\(3\)'
-    B: '\(\frac{\log{\left(3 \right)}}{2}\)'
+    B: '\(\frac{\ln{\left(3 \right)}}{2}\)'
     C: '\(1\)'
-    D: '\(\log{\left(3 \right)}\)'
+    D: '\(\ln{\left(3 \right)}\)'
     answer: D
     hint: '\(\dfrac{d}{dx}3^x=3^x\ln3\).'
     explanation: 'The limit is \(\ln3\).'
@@ -1707,15 +1707,15 @@ questions:
     topic: s4-6
     question: 'Evaluate \(\lim_{x\to 0} \frac{2^{x} x}{2^{x} - 1}\).'
     A: '\(1\)'
-    B: '\(\frac{1}{\log{\left(2 \right)}}\)'
+    B: '\(\frac{1}{\ln{\left(2 \right)}}\)'
     C: '\(2\)'
-    D: '\(\log{\left(2 \right)}\)'
+    D: '\(\ln{\left(2 \right)}\)'
     answer: B
     hint: 'Apply L''Hôpital to \(\dfrac{x}{2^x-1}\).'
     explanation: 'Since \(2^x-1\approx x\ln2\), the quotient \(\dfrac{x\,2^x}{2^x-1}\to\dfrac{1}{\ln2}\).'
   170:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to \infty} \frac{\log{\left(x + 1 \right)}}{\log{\left(x \right)}}\).'
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{\ln{\left(x + 1 \right)}}{\ln{\left(x \right)}}\).'
     A: '\(1\)'
     B: does not exist
     C: '\(-1\)'
@@ -1725,7 +1725,7 @@ questions:
     explanation: '\(\dfrac{1/(x+1)}{1/x}=\dfrac{x}{x+1}\to1\).'
   171:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to 0^{+}} x \log{\left(x \right)}\).'
+    question: 'Evaluate \(\lim_{x\to 0^{+}} x \ln{\left(x \right)}\).'
     A: '\(1\)'
     B: '\(-1\)'
     C: '\(0\)'
@@ -1755,7 +1755,7 @@ questions:
     explanation: 'Applying L''Hôpital twice gives \(\dfrac{2}{e^x}\to0\).'
   174:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to \infty} \frac{\log{\left(x \right)}^{2}}{x}\).'
+    question: 'Evaluate \(\lim_{x\to \infty} \frac{\ln{\left(x \right)}^{2}}{x}\).'
     A: '\(0\)'
     B: does not exist
     C: '\(-1\)'
@@ -1765,7 +1765,7 @@ questions:
     explanation: '\(\dfrac{2\ln x/x}{1}\to0\).'
   175:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to 1^{+}} - \frac{1}{\log{\left(x \right)}} + \frac{1}{x - 1}\).'
+    question: 'Evaluate \(\lim_{x\to 1^{+}} - \frac{1}{\ln{\left(x \right)}} + \frac{1}{x - 1}\).'
     A: '\(\frac{1}{2}\)'
     B: does not exist
     C: '\(- \frac{1}{2}\)'
@@ -1815,7 +1815,7 @@ questions:
     explanation: '\(\dfrac{\ln(1+1/x)}{1/x}\to1\), so the limit is \(e\).'
   180:
     topic: s4-6
-    question: 'Evaluate \(\lim_{x\to \infty} \left(2 x + 1\right)^{\frac{1}{2 \log{\left(x \right)}}}\).'
+    question: 'Evaluate \(\lim_{x\to \infty} \left(2 x + 1\right)^{\frac{1}{2 \ln{\left(x \right)}}}\).'
     A: '\(0\)'
     B: '\(e\)'
     C: '\(1\)'
@@ -2129,7 +2129,7 @@ questions:
     A: '\(\frac{10}{x^{3}}\)'
     B: '\(2 x + 2 + \frac{5}{x} - \frac{5}{x^{2}}\)'
     C: '\(2 x + \frac{5}{x}\)'
-    D: '\(x^{2} + 5 \log{\left(x \right)}\)'
+    D: '\(x^{2} + 5 \ln{\left(x \right)}\)'
     answer: C
     hint: Reverse the power rule on each term.
     explanation: '\(\dfrac{d}{dx}\left[2 x + \frac{5}{x}\right]=2 - \frac{5}{x^{2}}\).'
@@ -2157,12 +2157,12 @@ questions:
     topic: s4-8
     question: 'An antiderivative of \(f(x)=1 - \frac{5}{x}\) is'
     A: '\(\frac{5}{x^{2}}\)'
-    B: '\(x - 5 \log{\left(x \right)}\)'
-    C: '\(x - 5 \log{\left(x \right)} + 1 - \frac{5}{x}\)'
-    D: '\(\frac{x^{2}}{2} - 5 x \log{\left(x \right)} + 5 x\)'
+    B: '\(x - 5 \ln{\left(x \right)}\)'
+    C: '\(x - 5 \ln{\left(x \right)} + 1 - \frac{5}{x}\)'
+    D: '\(\frac{x^{2}}{2} - 5 x \ln{\left(x \right)} + 5 x\)'
     answer: B
     hint: Reverse the power rule on each term.
-    explanation: '\(\dfrac{d}{dx}\left[x - 5 \log{\left(x \right)}\right]=1 - \frac{5}{x}\).'
+    explanation: '\(\dfrac{d}{dx}\left[x - 5 \ln{\left(x \right)}\right]=1 - \frac{5}{x}\).'
   215:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(7 \sin{\left(\frac{x}{3} \right)}\right)dx\) is'
@@ -2206,33 +2206,33 @@ questions:
   219:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(3^{x}\right)dx\) is'
-    A: '\(3^{x} \log{\left(3 \right)}+C\)'
-    B: '\(- \frac{3^{x}}{\log{\left(3 \right)}}+C\)'
-    C: '\(\frac{2 \cdot 3^{x}}{\log{\left(3 \right)}}+C\)'
-    D: '\(\frac{3^{x}}{\log{\left(3 \right)}}+C\)'
+    A: '\(3^{x} \ln{\left(3 \right)}+C\)'
+    B: '\(- \frac{3^{x}}{\ln{\left(3 \right)}}+C\)'
+    C: '\(\frac{2 \cdot 3^{x}}{\ln{\left(3 \right)}}+C\)'
+    D: '\(\frac{3^{x}}{\ln{\left(3 \right)}}+C\)'
     answer: D
     hint: '\(\int a^xdx=\dfrac{a^x}{\ln a}\).'
-    explanation: 'Differentiating \(\frac{3^{x}}{\log{\left(3 \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+    explanation: 'Differentiating \(\frac{3^{x}}{\ln{\left(3 \right)}}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
   220:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(\frac{2}{\sqrt{1 - x^{2}}}\right)dx\) is'
     A: '\(\frac{2 x}{\left(1 - x^{2}\right)^{\frac{3}{2}}}+C\)'
-    B: '\(2 \operatorname{asin}{\left(x \right)}+C\)'
-    C: '\(4 \operatorname{asin}{\left(x \right)}+C\)'
-    D: '\(- 2 \operatorname{asin}{\left(x \right)}+C\)'
+    B: '\(2 \sin^{-1}{\left(x \right)}+C\)'
+    C: '\(4 \sin^{-1}{\left(x \right)}+C\)'
+    D: '\(- 2 \sin^{-1}{\left(x \right)}+C\)'
     answer: B
     hint: '\(\dfrac{d}{dx}\sin^{-1}x=\dfrac1{\sqrt{1-x^2}}\).'
-    explanation: 'Differentiating \(2 \operatorname{asin}{\left(x \right)}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+    explanation: 'Differentiating \(2 \sin^{-1}{\left(x \right)}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
   221:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(\frac{1}{4 x^{2} + 1}\right)dx\) is'
-    A: '\(\operatorname{atan}{\left(2 x \right)}+C\)'
-    B: '\(- \frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    A: '\(\tan^{-1}{\left(2 x \right)}+C\)'
+    B: '\(- \frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
     C: '\(- \frac{8 x}{\left(4 x^{2} + 1\right)^{2}}+C\)'
-    D: '\(\frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    D: '\(\frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
     answer: D
     hint: '\(\int\dfrac{du}{1+u^2}=\tan^{-1}u\); let \(u=2x\).'
-    explanation: 'Differentiating \(\frac{\operatorname{atan}{\left(2 x \right)}}{2}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+    explanation: 'Differentiating \(\frac{\tan^{-1}{\left(2 x \right)}}{2}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
   222:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(4 \tan{\left(x \right)} \sec{\left(x \right)} - 2 \sec^{2}{\left(x \right)}\right)dx\) is'

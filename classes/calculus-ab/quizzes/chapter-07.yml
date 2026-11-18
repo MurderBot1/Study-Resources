@@ -1,0 +1,2080 @@
+# Chapter 7: Integrals and Transcendental Functions
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 7.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 7: Integrals and Transcendental Functions"
+description: Integrals of logarithmic and exponential expressions, exponential growth and decay, relative rates of growth, and hyperbolic functions.
+topics:
+  s7-1:
+    title: 7.1 The Logarithm Defined as an Integral
+  s7-2:
+    title: 7.2 Exponential Growth and Decay
+  s7-3:
+    title: 7.3 Relative Rates of Growth
+  s7-4:
+    title: 7.4 Hyperbolic Functions
+questions:
+  1:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_{-3}^{-2}\dfrac{dx}{x}\).'
+    A: '\(- \ln{\left(2 \right)}\)'
+    B: '\(\ln{\left(\frac{3}{2} \right)}\)'
+    C: '\(\ln{\left(\frac{2}{3} \right)}\)'
+    D: '\(\ln{\left(6 \right)}\)'
+    answer: C
+    hint: '\(\int\dfrac{dx}x=\ln|x|\).'
+    explanation: '\(\ln2-\ln3=\ln\tfrac23\) (negative, since the integrand is negative and the interval runs left to right).'
+  2:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_{-1}^{0}\dfrac{3\,dx}{3x-2}\).'
+    A: '\(\ln{\left(\frac{5}{2} \right)}\)'
+    B: '\(- \ln{\left(5 \right)} + \ln{\left(2 \right)} + 1\)'
+    C: '\(\ln{\left(3 \right)}\)'
+    D: '\(\ln{\left(\frac{2}{5} \right)}\)'
+    answer: D
+    hint: 'Let \(u=3x-2\); \(\int\dfrac{du}{u}=\ln|u|\).'
+    explanation: '\(\ln|3x-2|\Big|_{-1}^0=\ln2-\ln5=\ln\tfrac25\).'
+  3:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{2y\,dy}{y^2-25}\).'
+    A: '\(\ln{\left(\left|{y - 5}\right| \right)}+C\)'
+    B: '\(\ln{\left(\left|{y^{2} - 25}\right| \right)}+C\)'
+    C: '\(\frac{1}{y^{2} - 25}+C\)'
+    D: '\(2 y \ln{\left(\left|{y^{2} - 25}\right| \right)}+C\)'
+    answer: B
+    hint: The numerator is the derivative of the denominator.
+    explanation: 'Differentiating \(\ln{\left(\left|{y^{2} - 25}\right| \right)}\) gives \(\frac{2 y}{y^{2} - 25}\).'
+  4:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{8r\,dr}{4r^2-5}\).'
+    A: '\(8 \ln{\left(\left|{r}\right| \right)}+C\)'
+    B: '\(2 \ln{\left(\left|{4 r^{2} - 5}\right| \right)}+C\)'
+    C: '\(\ln{\left(\left|{4 r^{2} - 5}\right| \right)}+C\)'
+    D: '\(\frac{\ln{\left(\left|{4 r^{2} - 5}\right| \right)}}{2}+C\)'
+    answer: C
+    hint: '\(\dfrac{d}{dr}(4r^2-5)=8r\).'
+    explanation: 'Differentiating \(\ln{\left(\left|{4 r^{2} - 5}\right| \right)}\) gives \(\frac{8 r}{4 r^{2} - 5}\).'
+  5:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{3\sec^2t}{6+3\tan t}\,dt\).'
+    A: '\(\dfrac{\ln|\tan t|}{3}+C\)'
+    B: '\(\ln|2+\tan t|+C\)'
+    C: '\(3\ln|6+3\tan t|+C\)'
+    D: '\(\dfrac{1}{(6+3\tan t)^2}+C\)'
+    answer: B
+    hint: 'Cancel the common factor 3, then let \(u=2+\tan t\).'
+    explanation: 'The integrand is \(\dfrac{\sec^2t}{2+\tan t}\). (\(\ln|6+3\tan t|+C\) is equivalent because the two logs differ by the constant \(\ln3\).)'
+  6:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{\sec y\tan y}{2+\sec y}\,dy\).'
+    A: '\(\ln{\left(\sec{\left(y \right)} + 2 \right)} \sec{\left(y \right)}+C\)'
+    B: '\(\frac{1}{\sec{\left(y \right)} + 2}+C\)'
+    C: '\(\ln{\left(\sec{\left(y \right)} + 2 \right)}+C\)'
+    D: '\(\ln{\left(\left|{\sec{\left(y \right)}}\right| \right)}+C\)'
+    answer: C
+    hint: '\(\dfrac{d}{dy}(2+\sec y)=\sec y\tan y\).'
+    explanation: 'Differentiating \(\ln{\left(\sec{\left(y \right)} + 2 \right)}\) gives \(\frac{\tan{\left(y \right)} \sec{\left(y \right)}}{\sec{\left(y \right)} + 2}\).'
+  7:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{dx}{2\sqrt x+2x}\) (\(x>0\)).'
+    A: '\(\ln{\left(\sqrt{x} \right)}+C\)'
+    B: '\(\ln{\left(x + 1 \right)}+C\)'
+    C: '\(2 \ln{\left(\sqrt{x} + 1 \right)}+C\)'
+    D: '\(\ln{\left(\sqrt{x} + 1 \right)}+C\)'
+    answer: D
+    hint: 'Factor \(2\sqrt x\) out of the denominator and let \(u=1+\sqrt x\).'
+    explanation: 'Differentiating \(\ln{\left(\sqrt{x} + 1 \right)}\) gives \(\frac{1}{2 \sqrt{x} + 2 x}\).'
+  8:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int8e^{x+1}\,dx\).'
+    A: '\(\frac{e^{8 x + 8}}{8}+C\)'
+    B: '\(8 e^{x + 1}+C\)'
+    C: '\(8 x e^{x + 1}+C\)'
+    D: '\(4 e^{x + 1}+C\)'
+    answer: B
+    hint: '\(\int e^{u}du=e^u\) with \(u=x+1\).'
+    explanation: 'Differentiating \(8 e^{x + 1}\) gives \(8 e^{x + 1}\).'
+  9:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int2e^{2x-1}\,dx\).'
+    A: '\(2 e^{2 x - 1}+C\)'
+    B: '\(\frac{e^{2 x - 1}}{2}+C\)'
+    C: '\(e^{2 x - 1}+C\)'
+    D: '\(4 e^{2 x - 1}+C\)'
+    answer: C
+    hint: '\(\dfrac{d}{dx}e^{2x-1}=2e^{2x-1}\).'
+    explanation: 'Differentiating \(e^{2 x - 1}\) gives \(2 e^{2 x - 1}\).'
+  10:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{e^{\sqrt r}}{\sqrt r}\,dr\).'
+    A: '\(e^{\sqrt{r}}+C\)'
+    B: '\(2 \sqrt{r} e^{\sqrt{r}}+C\)'
+    C: '\(\frac{e^{\sqrt{r}}}{2}+C\)'
+    D: '\(2 e^{\sqrt{r}}+C\)'
+    answer: D
+    hint: 'Let \(u=\sqrt r\); then \(du=\dfrac{dr}{2\sqrt r}\).'
+    explanation: 'Differentiating \(2 e^{\sqrt{r}}\) gives \(\frac{e^{\sqrt{r}}}{\sqrt{r}}\).'
+  11:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int2te^{-t^2}\,dt\).'
+    A: '\(- \frac{e^{- t^{2}}}{2}+C\)'
+    B: '\(- e^{- t^{2}}+C\)'
+    C: '\(e^{- t^{2}}+C\)'
+    D: '\(- 2 e^{- t^{2}}+C\)'
+    answer: B
+    hint: 'Let \(u=-t^2\).'
+    explanation: 'Differentiating \(- e^{- t^{2}}\) gives \(2 t e^{- t^{2}}\).'
+  12:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{e^{1/x}}{x^2}\,dx\).'
+    A: '\(\frac{e^{\frac{1}{x}}}{x}+C\)'
+    B: '\(e^{\frac{1}{x}}+C\)'
+    C: '\(- \frac{e^{\frac{1}{x}}}{x}+C\)'
+    D: '\(- e^{\frac{1}{x}}+C\)'
+    answer: D
+    hint: 'Let \(u=1/x\); then \(du=-\dfrac{dx}{x^2}\).'
+    explanation: 'Differentiating \(- e^{\frac{1}{x}}\) gives \(\frac{e^{\frac{1}{x}}}{x^{2}}\).'
+  13:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{e^r}{1+e^r}\,dr\).'
+    A: '\(\frac{1}{e^{r} + 1}+C\)'
+    B: '\(e^{r} \ln{\left(e^{r} + 1 \right)}+C\)'
+    C: '\(\ln{\left(e^{r} + 1 \right)}+C\)'
+    D: '\(r+C\)'
+    answer: C
+    hint: The numerator is the derivative of the denominator.
+    explanation: 'Differentiating \(\ln{\left(e^{r} + 1 \right)}\) gives \(\frac{e^{r}}{e^{r} + 1}\).'
+  14:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int\dfrac{dx}{1+e^x}\).'
+    A: '\(\ln{\left(e^{x} + 1 \right)}+C\)'
+    B: '\(x + \ln{\left(e^{x} + 1 \right)}+C\)'
+    C: '\(x - \ln{\left(e^{x} + 1 \right)}+C\)'
+    D: '\(- \ln{\left(e^{x} + 1 \right)}+C\)'
+    answer: C
+    hint: 'Multiply top and bottom by \(e^{-x}\): \(\dfrac{e^{-x}}{e^{-x}+1}\).'
+    explanation: '\(\int\dfrac{e^{-x}}{1+e^{-x}}dx=-\ln(1+e^{-x})=x-\ln(1+e^x)\).'
+  15:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int x2^{x^2}\,dx\).'
+    A: '\(\frac{2^{x^{2}}}{\ln{\left(2 \right)}}+C\)'
+    B: '\(\frac{2^{x^{2}} x^{2}}{2}+C\)'
+    C: '\(2^{x^{2}}+C\)'
+    D: '\(\frac{2^{x^{2}}}{2 \ln{\left(2 \right)}}+C\)'
+    answer: D
+    hint: 'Let \(u=x^2\) and use \(\int a^udu=\dfrac{a^u}{\ln a}\).'
+    explanation: 'Differentiating \(\frac{2^{x^{2}}}{2 \ln{\left(2 \right)}}\) gives \(2^{x^{2}} x\).'
+  16:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int7^{\cos t}\sin t\,dt\).'
+    A: '\(- \frac{7^{\cos{\left(t \right)}}}{\ln{\left(7 \right)}}+C\)'
+    B: '\(\frac{7^{\cos{\left(t \right)}}}{\ln{\left(7 \right)}}+C\)'
+    C: '\(- 7^{\cos{\left(t \right)}}+C\)'
+    D: '\(- 7^{\cos{\left(t \right)}} \ln{\left(7 \right)}+C\)'
+    answer: A
+    hint: 'Let \(u=\cos t\).'
+    explanation: 'Differentiating \(- \frac{7^{\cos{\left(t \right)}}}{\ln{\left(7 \right)}}\) gives \(7^{\cos{\left(t \right)}} \sin{\left(t \right)}\).'
+  17:
+    topic: s7-1
+    question: 'Find \(\displaystyle\int x^{\sqrt2}\,dx\) (for \(x>0\)).'
+    A: '\(\frac{x^{1 + \sqrt{2}}}{1 + \sqrt{2}}+C\)'
+    B: '\(\sqrt{2} x^{-1 + \sqrt{2}}+C\)'
+    C: '\(\frac{x^{-1 + \sqrt{2}}}{-1 + \sqrt{2}}+C\)'
+    D: '\(x^{\sqrt{2}} \ln{\left(x \right)}+C\)'
+    answer: A
+    hint: "The exponent is just a constant: use the power rule."
+    explanation: 'Differentiating \(\frac{x^{1 + \sqrt{2}}}{1 + \sqrt{2}}\) gives \(x^{\sqrt{2}}\).'
+  18:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_{\ln2}^{\ln3}e^x\,dx\).'
+    A: '\(e\)'
+    B: '\(1\)'
+    C: '\(2\)'
+    D: '\(- \ln{\left(2 \right)} + \ln{\left(3 \right)}\)'
+    answer: B
+    hint: '\(\int e^xdx=e^x\).'
+    explanation: '\(e^{\ln3}-e^{\ln2}=3-2=1\).'
+  19:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_{-\ln2}^{0}e^{-x}\,dx\).'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(2\)'
+    answer: B
+    hint: '\(\int e^{-x}dx=-e^{-x}\).'
+    explanation: '\(-1+e^{\ln2}=-1+2=1\).'
+  20:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_{\ln4}^{\ln9}e^{x/2}\,dx\).'
+    A: '\(4\)'
+    B: '\(1\)'
+    C: '\(5\)'
+    D: '\(2\)'
+    answer: D
+    hint: '\(\int e^{x/2}dx=2e^{x/2}\).'
+    explanation: '\(2(3-2)=2\).'
+  21:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_0^{\ln16}e^{x/4}\,dx\).'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(8\)'
+    answer: A
+    hint: '\(\int e^{x/4}dx=4e^{x/4}\).'
+    explanation: '\(4(e^{\ln 2}-1)=4\).'
+  22:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_0^1 2^{-\theta}\,d\theta\).'
+    A: '\(\frac{1}{\ln{\left(2 \right)}}\)'
+    B: '\(\frac{1}{2 \ln{\left(2 \right)}}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(\frac{\ln{\left(2 \right)}}{2}\)'
+    answer: B
+    hint: '\(\int a^{u}du=\dfrac{a^u}{\ln a}\) with base \(\tfrac12\) in effect.'
+    explanation: '\(\left[-\dfrac{2^{-\theta}}{\ln2}\right]_0^1=\dfrac{1-\tfrac12}{\ln2}=\dfrac1{2\ln2}\).'
+  23:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_1^{4}\dfrac{\log_{2}x}{x}\,dx\).'
+    A: '\(2\)'
+    B: '\(\ln{\left(2 \right)}\)'
+    C: '\(4 \ln{\left(2 \right)}\)'
+    D: '\(2 \ln{\left(2 \right)}\)'
+    answer: D
+    hint: '\(\log_2x=\dfrac{\ln x}{\ln2}\); let \(u=\ln x\).'
+    explanation: '\(\dfrac{(\ln4)^2}{2\ln2}=\dfrac{4(\ln2)^2}{2\ln2}=2\ln2\).'
+  24:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_1^e\dfrac{2\ln10\,\log_{10}x}{x}\,dx\).'
+    A: '\(\ln{\left(10 \right)}\)'
+    B: '\(1\)'
+    C: '\(e\)'
+    D: '\(2\)'
+    answer: B
+    hint: '\(\ln10\cdot\log_{10}x=\ln x\).'
+    explanation: 'The integrand is \(\dfrac{2\ln x}{x}\); \(\left[(\ln x)^2\right]_1^e=1\).'
+  25:
+    topic: s7-1
+    question: 'Evaluate \(\displaystyle\int_0^{2}\dfrac{2\log_{2}(x+2)}{x+2}\,dx\) (a harder substitution).'
+    A: '\(4 \ln{\left(2 \right)}\)'
+    B: '\(3 \ln{\left(2 \right)}\)'
+    C: '\(2 \ln{\left(2 \right)}\)'
+    D: '\(\ln{\left(2 \right)}\)'
+    answer: B
+    hint: 'Let \(u=\ln(x+2)\) and recall \(\log_2=\ln/\ln2\).'
+    explanation: '\(\dfrac{[\ln(x+2)]^2}{\ln2}\Big|_0^2=\dfrac{(2\ln2)^2-(\ln2)^2}{\ln2}=3\ln2\).'
+  26:
+    topic: s7-1
+    question: 'Solve \(\dfrac{dy}{dt}=e^t\sin(e^t-2)\), \(y(\ln2)=0\).'
+    A: '\(y=-\sin(e^t-2)+1\)'
+    B: '\(y=\cos(e^t-2)\)'
+    C: '\(y=-\cos(e^t-2)\)'
+    D: '\(y=-\cos(e^t-2)+1\)'
+    answer: D
+    hint: 'Let \(u=e^t-2\); then \(y=-\cos u+C\).'
+    explanation: 'At \(t=\ln2\), \(u=0\) and \(-\cos0+C=0\) gives \(C=1\).'
+  27:
+    topic: s7-1
+    question: 'Solve \(\dfrac{d^2y}{dx^2}=2e^{-x}\), \(y(0)=1\), \(y''(0)=0\).'
+    A: '\(y=2e^{-x}+2x-1\)'
+    B: '\(y=2e^{-x}-2x+1\)'
+    C: '\(y=-2e^{-x}+2x+3\)'
+    D: '\(y=2e^{-x}+2x\)'
+    answer: A
+    hint: 'Integrate twice: \(y''=-2e^{-x}+C_1\), \(y=2e^{-x}+C_1x+C_2\).'
+    explanation: '\(y''(0)=0\) gives \(C_1=2\); \(y(0)=1\) gives \(C_2=-1\).'
+  28:
+    topic: s7-1
+    question: 'Solve \(\dfrac{dy}{dx}=1+\dfrac1x\), \(y(1)=3\).'
+    A: '\(y=x+\ln x+2\)'
+    B: '\(y=x+\ln x+3\)'
+    C: '\(y=x-\ln x+4\)'
+    D: '\(y=x+\ln x+1\)'
+    answer: A
+    hint: '\(y=x+\ln|x|+C\).'
+    explanation: '\(1+0+C=3\) gives \(C=2\).'
+  29:
+    topic: s7-1
+    question: 'The region between \(y=\dfrac1{x^2}\) and the \(x\)-axis from \(x=\tfrac12\) to \(x=2\) is revolved about the \(y\)-axis. The volume is'
+    A: '\(4\pi\ln4\)'
+    B: '\(\pi\ln4\)'
+    C: '\(2\pi\ln2\)'
+    D: '\(2\pi\ln4\)'
+    answer: D
+    hint: 'Shells: \(V=2\pi\int x\cdot\dfrac1{x^2}dx=2\pi\int\dfrac{dx}x\).'
+    explanation: '\(2\pi[\ln x]_{1/2}^2=2\pi(\ln2-\ln\tfrac12)=2\pi\ln4=4\pi\ln2\).'
+  30:
+    topic: s7-1
+    question: 'The linearization of \(\ln(1+x)\) at \(x=0\) is'
+    A: '\(1+x\)'
+    B: '\(x\)'
+    C: '\(\ln x\)'
+    D: '\(1\)'
+    answer: B
+    hint: '\(L(x)=f(0)+f''(0)x\) with \(f''=\dfrac1{1+x}\).'
+    explanation: '\(f(0)=0\) and \(f''(0)=1\), so \(L(x)=x\).'
+  31:
+    topic: s7-1
+    question: 'The linearization of \(e^x\) at \(x=0\) is'
+    A: '\(1+ex\)'
+    B: '\(x\)'
+    C: '\(e+x\)'
+    D: '\(1+x\)'
+    answer: D
+    hint: '\(f(0)=f''(0)=1\).'
+    explanation: '\(L(x)=1+x\); it overestimates nothing: \(e^x\ge1+x\) everywhere (the graph of \(e^x\) is concave up).'
+  32:
+    topic: s7-1
+    question: 'Because the graph of \(e^x\) is concave up everywhere, the approximation \(e^x\approx1+x\)'
+    A: 'underestimates \(e^x\) for every \(x\neq0\)'
+    B: 'is exact for \(x=1\)'
+    C: 'overestimates \(e^x\) for every \(x\neq0\)'
+    D: 'overestimates for \(x<0\) and underestimates for \(x>0\)'
+    answer: A
+    hint: A tangent line lies below a concave-up curve.
+    explanation: '\(e^x>1+x\) for all \(x\ne0\).'
+  33:
+    topic: s7-1
+    question: 'Show that for \(a>1\), \(\displaystyle\int_1^a\ln x\,dx+\int_0^{\ln a}e^y\,dy\) equals'
+    A: '\(a^2\ln a\)'
+    B: '\(a\)'
+    C: '\(a\ln a\)'
+    D: '\(\ln a\)'
+    answer: C
+    hint: 'The two regions fit together to form a rectangle of width \(a\) and height \(\ln a\).'
+    explanation: 'The area under \(y=\ln x\) and the area to its left (under \(x=e^y\)) fill the rectangle \([0,a]\times[0,\ln a]\) (minus nothing), giving \(a\ln a\).'
+  34:
+    topic: s7-1
+    question: 'The geometric, logarithmic and arithmetic means of \(0<a<b\) satisfy'
+    A: '\(\dfrac{a+b}{2}<\dfrac{b-a}{\ln b-\ln a}<\sqrt{ab}\)'
+    B: '\(\sqrt{ab}=\dfrac{b-a}{\ln b-\ln a}=\dfrac{a+b}{2}\)'
+    C: '\(\sqrt{ab}<\dfrac{b-a}{\ln b-\ln a}<\dfrac{a+b}2\)'
+    D: '\(\dfrac{b-a}{\ln b-\ln a}<\sqrt{ab}<\dfrac{a+b}2\)'
+    answer: C
+    hint: 'Compare areas under \(e^x\) with a tangent-line and a chord.'
+    explanation: 'Because \(e^x\) is concave up, the midpoint tangent rectangle underestimates the integral and the trapezoid overestimates it.'
+  35:
+    topic: s7-1
+    question: 'The curve \(y=\dfrac{x^2}8-\ln x\), \(4\le x\le8\), has length'
+    A: '\(5.31\)'
+    B: '\(6\)'
+    C: '\(6.69\)'
+    D: '\(12\)'
+    answer: C
+    hint: '\(1+(y'')^2=\left(\dfrac x4+\dfrac1x\right)^2\).'
+    explanation: '\(\int_4^8\left(\tfrac x4+\tfrac1x\right)dx=\left[\tfrac{x^2}8+\ln x\right]_4^8=6+\ln2\approx6.69\).'
+  36:
+    topic: s7-1
+    question: 'To five decimal places, how close is \(x\) to \(\ln(1+x)\) for \(0\le x\le0.1\)? The largest error occurs at \(x=0.1\) and equals about'
+    A: '\(0.00531\)'
+    B: '\(0.00047\)'
+    C: '\(0.00469\)'
+    D: '\(0.0100\)'
+    answer: C
+    hint: 'Error \(=x-\ln(1+x)\) at \(x=0.1\).'
+    explanation: '\(0.1-\ln1.1=0.1-0.09531=0.00469\).'
+  37:
+    topic: s7-1
+    question: 'Find the value of \(\log_3 8\) to four decimal places.'
+    A: '\(1.8928\)'
+    B: '\(2.6667\)'
+    C: '\(0.5283\)'
+    D: '\(1.3979\)'
+    answer: A
+    hint: '\(\log_ab=\dfrac{\ln b}{\ln a}\).'
+    explanation: '\(\dfrac{\ln8}{\ln3}=\dfrac{2.0794}{1.0986}\approx1.8928\).'
+  38:
+    topic: s7-1
+    question: 'Find \(\log_{0.5}7\) to four decimal places.'
+    A: '\(-0.3562\)'
+    B: '\(2.8074\)'
+    C: '\(0.3562\)'
+    D: '\(-2.8074\)'
+    answer: D
+    hint: '\(\log_{0.5}7=\dfrac{\ln7}{\ln0.5}\); \(\ln0.5<0\).'
+    explanation: '\(\dfrac{1.9459}{-0.6931}=-2.8074\).'
+  39:
+    topic: s7-1
+    question: 'If \(\log_{10}x=2.3\), then \(\ln x=\)'
+    A: '\(5.2959\)'
+    B: '\(2.3\)'
+    C: '\(0.9988\)'
+    D: '\(1.4291\)'
+    answer: A
+    hint: '\(\ln x=\ln10\cdot\log_{10}x\).'
+    explanation: '\(2.302585\times2.3\approx5.2959\).'
+  40:
+    topic: s7-1
+    question: 'If \(\log_2x=1.4\), then \(\ln x=\)'
+    A: '\(0.9704\)'
+    B: '\(2.0197\)'
+    C: '\(1.4427\)'
+    D: '\(1.4\)'
+    answer: A
+    hint: '\(\ln x=\ln2\cdot\log_2x\).'
+    explanation: '\(0.693147\times1.4\approx0.9704\).'
+  41:
+    topic: s7-1
+    question: 'The conversion between logarithm bases: \(\log_2x\) in terms of \(\log_{10}x\) is'
+    A: '\(\dfrac{\ln10}{\ln2}\log_{10}x\)'
+    B: '\(\ln2\cdot\log_{10}x\)'
+    C: '\(\dfrac{\ln2}{\ln10}\log_{10}x\)'
+    D: '\(\log_{10}x-\log_{10}2\)'
+    answer: A
+    hint: '\(\log_2x=\dfrac{\ln x}{\ln2}\) and \(\ln x=\ln10\cdot\log_{10}x\).'
+    explanation: Combine the two.
+  42:
+    topic: s7-1
+    question: 'Which is bigger, \(\pi^e\) or \(e^\pi\)?'
+    A: It cannot be decided without a calculator
+    B: They are equal
+    C: '\(e^\pi\)'
+    D: '\(\pi^e\)'
+    answer: C
+    hint: 'The tangent line to \(y=\ln x\) through the origin is \(y=x/e\), and \(\ln x<x/e\) for \(x\ne e\).'
+    explanation: '\(\ln\pi<\pi/e\) gives \(e\ln\pi<\pi\), i.e. \(\pi^e<e^\pi\).'
+  43:
+    topic: s7-1
+    question: 'The tangent line to \(y=\ln x\) through the origin has equation'
+    A: '\(y=x-1\)'
+    B: '\(y=ex\)'
+    C: '\(y=\dfrac{x}{e}\)'
+    D: '\(y=x\)'
+    answer: C
+    hint: 'The tangent at \((a,\ln a)\) has slope \(\tfrac1a\); require it to pass through \((0,0)\).'
+    explanation: '\(\ln a=1\), so \(a=e\) and the slope is \(\tfrac1e\).'
+  44:
+    topic: s7-1
+    question: 'The function \(\ln|\sin x|\) on \(0\le x\le22\), \(-2\le y\le0\) shows a series of arches that open'
+    A: 'only between 0 and \(\pi\)'
+    B: there are no arches
+    C: 'downward (hanging down to \(-\infty\) at the multiples of \(\pi\))'
+    D: upward
+    answer: C
+    hint: '\(0<|\sin x|\le1\) gives \(\ln|\sin x|\le0\).'
+    explanation: 'To turn the arches upside down, use \(-\ln|\sin x|\).'
+  45:
+    topic: s7-2
+    question: 'Tooth size decreases 1% per 1000 years, so \(y=y_0e^{kt}\) with \(k=\dfrac{\ln0.99}{1000}\approx-1.005\times10^{-5}\). In about how many years will teeth be 90% of their present size?'
+    A: 'about \(10{,}483\) years'
+    B: 'about \(100{,}000\) years'
+    C: 'about \(1000\) years'
+    D: 'about \(10{,}000\) years'
+    answer: A
+    hint: 'Solve \(e^{kt}=0.9\).'
+    explanation: '\(t=\dfrac{\ln0.9}{k}=\dfrac{1000\ln0.9}{\ln0.99}\approx10{,}483\).'
+  46:
+    topic: s7-2
+    question: "With tooth size decreasing 1% per 1000 years, what percent of today's size will our descendants' teeth be 20,000 years from now?"
+    A: '\(80\text{ \%}\)'
+    B: '\(99\text{ \%}\)'
+    C: '\(90\text{ \%}\)'
+    D: '\(81.8\text{ \%}\)'
+    answer: D
+    hint: '\(y=y_0(0.99)^{t/1000}\).'
+    explanation: '\(0.99^{20}\approx0.8179\), about 81.8%.'
+  47:
+    topic: s7-2
+    question: 'Atmospheric pressure satisfies \(dp/dh=kp\), \(p(0)=1013\) millibars and \(p(20\text{ km})=90\). The pressure at \(h=50\) km is about'
+    A: '\(2.38\text{ millibars}\)'
+    B: '\(0.24\text{ millibars}\)'
+    C: '\(5.5\text{ millibars}\)'
+    D: '\(23.8\text{ millibars}\)'
+    answer: A
+    hint: '\(p=1013e^{kh}\) with \(k=\dfrac{\ln(90/1013)}{20}\approx-0.1210\).'
+    explanation: '\(1013e^{50k}\approx2.38\) millibars.'
+  48:
+    topic: s7-2
+    question: 'For the same model (\(p=1013e^{kh}\), \(k\approx-0.1210\)), the altitude where the pressure is 900 millibars is about'
+    A: '\(1.96\text{ km}\)'
+    B: '\(0.98\text{ km}\)'
+    C: '\(0.1\text{ km}\)'
+    D: '\(9.8\text{ km}\)'
+    answer: B
+    hint: 'Solve \(1013e^{kh}=900\).'
+    explanation: '\(h=\dfrac{\ln(900/1013)}{k}\approx0.98\) km.'
+  49:
+    topic: s7-2
+    question: 'In a first-order chemical reaction, \(\dfrac{dy}{dt}=-0.6y\) with 100 g at \(t=0\). The amount left after the first hour is'
+    A: '\(54.88\text{ g}\)'
+    B: '\(60\text{ g}\)'
+    C: '\(40\text{ g}\)'
+    D: '\(45.12\text{ g}\)'
+    answer: A
+    hint: '\(y=100e^{-0.6t}\).'
+    explanation: '\(100e^{-0.6}\approx54.88\) g.'
+  50:
+    topic: s7-2
+    question: 'Raw sugar reduces from 1000 kg to 800 kg in 10 hours (\(y=1000e^{kt}\)). How much remains after 14 more hours (24 hours total)?'
+    A: '\(585\text{ kg}\)'
+    B: '\(640\text{ kg}\)'
+    C: '\(480\text{ kg}\)'
+    D: '\(700\text{ kg}\)'
+    answer: A
+    hint: '\(e^{10k}=0.8\), so \(y(24)=1000(0.8)^{2.4}\).'
+    explanation: '\(0.8^{2.4}\approx0.5853\); about 585 kg.'
+  51:
+    topic: s7-2
+    question: 'Light intensity beneath the ocean satisfies \(dL/dx=-kL\). Diving 18 ft halves the intensity. The depth at which intensity falls to one-tenth of the surface value is about'
+    A: '\(90\) ft'
+    B: '\(29.9\) ft'
+    C: '\(180\) ft'
+    D: '\(59.8\) ft'
+    answer: D
+    hint: '\(k=\dfrac{\ln2}{18}\); solve \(e^{-kx}=0.1\).'
+    explanation: '\(x=\dfrac{\ln10}{k}=18\log_210\approx59.8\) ft.'
+  52:
+    topic: s7-2
+    question: 'A capacitor discharges with \(\dfrac{dV}{dt}=-\dfrac1{40}V\). How long until the voltage drops to 10% of \(V_0\)?'
+    A: '\(40\ln2\approx27.7\) s'
+    B: '\(10\ln40\approx36.9\) s'
+    C: '\(\dfrac{\ln10}{40}\approx0.058\) s'
+    D: '\(40\ln10\approx92.1\) s'
+    answer: D
+    hint: '\(V=V_0e^{-t/40}\).'
+    explanation: '\(e^{-t/40}=0.1\) gives \(t=40\ln10\).'
+  53:
+    topic: s7-2
+    question: One cholera bacterium doubles every half hour. How many bacteria are there after 24 hours?
+    A: '\(48^2=2304\)'
+    B: '\(2^{48}\approx2.8\times10^{14}\)'
+    C: '\(24^2\)'
+    D: '\(2^{24}\approx1.7\times10^{7}\)'
+    answer: B
+    hint: 24 hours is 48 half-hours.
+    explanation: '\(2^{48}\approx2.81\times10^{14}\).'
+  54:
+    topic: s7-2
+    question: "A colony grows exponentially: 10,000 bacteria after 3 hours and 40,000 after 5 hours. How many were present initially?"
+    A: '\(5000\)'
+    B: '\(625\)'
+    C: '\(2500\)'
+    D: '\(1250\)'
+    answer: D
+    hint: The population quadruples in 2 hours, so it doubles each hour.
+    explanation: 'Going back 3 hours from 10,000 divides by \(2^3=8\).'
+  55:
+    topic: s7-2
+    question: A disease affects 10,000 people and the number of cases decreases by 25% each year. How many years until there are 1000 cases?
+    A: '\(10\text{ years}\)'
+    B: '\(6\text{ years}\)'
+    C: '\(12\text{ years}\)'
+    D: '\(8\text{ years}\)'
+    answer: D
+    hint: '\(10000(0.75)^t=1000\).'
+    explanation: '\(t=\dfrac{\ln0.1}{\ln0.75}\approx8.0\) years.'
+  56:
+    topic: s7-2
+    question: With 25% fewer cases each year from 10,000, how long until the disease is eradicated (fewer than 1 case)?
+    A: '\(40\text{ years}\)'
+    B: '\(8\text{ years}\)'
+    C: '\(24\text{ years}\)'
+    D: '\(32\text{ years}\)'
+    answer: D
+    hint: 'Solve \(10000(0.75)^t=1\).'
+    explanation: '\(t=\dfrac{\ln10^{-4}}{\ln0.75}\approx32.0\) years.'
+  57:
+    topic: s7-2
+    question: 'On May 11, 1993 the U.S. population was 257,313,431 and rising by 1 person every 14 s. Assuming exponential growth, the rate constant \(k\) (per year) is about'
+    A: '\(0.00438\)'
+    B: '\(0.0175\)'
+    C: '\(0.0875\)'
+    D: '\(0.00875\)'
+    answer: D
+    hint: '\(\dfrac{dP}{dt}=kP\); one person per 14 s is \(\tfrac{365\cdot24\cdot3600}{14}\approx2{,}252{,}571\) per year.'
+    explanation: '\(k=\dfrac{2{,}252{,}571}{257{,}313{,}431}\approx0.00875\).'
+  58:
+    topic: s7-2
+    question: Oil from a well declines continuously at 10% per year. When will its output fall to one-fifth of the present value?
+    A: '\(16.1\text{ years}\)'
+    B: '\(8\text{ years}\)'
+    C: '\(20\text{ years}\)'
+    D: '\(10\text{ years}\)'
+    answer: A
+    hint: '\(e^{-0.1t}=\tfrac15\).'
+    explanation: '\(t=10\ln5\approx16.1\) years.'
+  59:
+    topic: s7-2
+    question: 'A price function satisfies \(\dfrac{dp}{dx}=-\dfrac1{100}p\) with \(p(100)=20.09\). Then \(p(x)=\)'
+    A: '\(20.09\,e^{(100-x)/100}\)'
+    B: '\(20.09\,e^{-x/100}\)'
+    C: '\(100\,e^{-x/20.09}\)'
+    D: '\(20.09\,e^{(x-100)/100}\)'
+    answer: A
+    hint: '\(p=p_0e^{-x/100}\); use \(p(100)=20.09\).'
+    explanation: '\(p(x)=20.09e^{-(x-100)/100}\).'
+  60:
+    topic: s7-2
+    question: 'With \(p(x)=20.09e^{(100-x)/100}\), the unit price for a 10-unit order is'
+    A: '\(22.2\text{ dollars}\)'
+    B: '\(20.09\text{ dollars}\)'
+    C: '\(49.41\text{ dollars}\)'
+    D: '\(36\text{ dollars}\)'
+    answer: C
+    hint: 'Substitute \(x=10\).'
+    explanation: '\(20.09e^{0.9}\approx49.41\).'
+  61:
+    topic: s7-2
+    question: 'For revenue \(r(x)=x\,p(x)\) with \(p(x)=20.09e^{(100-x)/100}\), the maximum occurs at'
+    A: '\(x=100\)'
+    B: '\(x=200\)'
+    C: '\(x=50\)'
+    D: '\(x=10\)'
+    answer: A
+    hint: '\(r''=p\left(1-\dfrac x{100}\right)\).'
+    explanation: '\(r''>0\) for \(x<100\), \(r''<0\) for \(x>100\); so discounting never makes a larger order bring in less than a 100-unit order.'
+  62:
+    topic: s7-2
+    question: 'You place \(A_0\) dollars in an account paying 4% interest compounded continuously. After 5 years you have \(A_0\cdot\)'
+    A: '\(1.2167\)'
+    B: '\(1.2214\)'
+    C: '\(1.2\)'
+    D: '\(1.25\)'
+    answer: B
+    hint: '\(A=A_0e^{0.04t}\).'
+    explanation: '\(e^{0.2}\approx1.2214\).'
+  63:
+    topic: s7-2
+    question: At 4% compounded continuously, how long does it take money to double?
+    A: '\(12.5\text{ years}\)'
+    B: '\(34.7\text{ years}\)'
+    C: '\(17.3\text{ years}\)'
+    D: '\(25\text{ years}\)'
+    answer: C
+    hint: '\(e^{0.04t}=2\).'
+    explanation: '\(t=\dfrac{\ln2}{0.04}\approx17.3\) years.'
+  64:
+    topic: s7-2
+    question: At 4% compounded continuously, how long does it take money to triple?
+    A: '\(75\text{ years}\)'
+    B: '\(27.5\text{ years}\)'
+    C: '\(17.3\text{ years}\)'
+    D: '\(50\text{ years}\)'
+    answer: B
+    hint: '\(e^{0.04t}=3\).'
+    explanation: '\(t=\dfrac{\ln3}{0.04}\approx27.5\) years.'
+  65:
+    topic: s7-2
+    question: What happens to money invested at 100% interest compounded continuously for one year?
+    A: it triples
+    B: it doubles
+    C: 'it grows by a factor of \(e^2\)'
+    D: 'it grows by a factor of \(e\approx2.718\)'
+    answer: D
+    hint: '\(A=A_0e^{1\cdot1}\).'
+    explanation: 'This was Napier''s question; tripling takes \(\ln3\approx1.1\) years.'
+  66:
+    topic: s7-2
+    question: What continuous annual rate would multiply an investment by 90 in 100 years?
+    A: 'about \(90\%\)'
+    B: 'about \(4.5\%\)'
+    C: 'about \(0.9\%\)'
+    D: 'about \(9\%\)'
+    answer: B
+    hint: '\(e^{100r}=90\).'
+    explanation: '\(r=\dfrac{\ln90}{100}\approx0.0450\).'
+  67:
+    topic: s7-2
+    question: What continuous annual rate would multiply an investment by 131 in 100 years?
+    A: 'about \(5\%\) exactly'
+    B: 'about \(4.9\%\)'
+    C: 'about \(13.1\%\)'
+    D: 'about \(1.31\%\)'
+    answer: B
+    hint: '\(e^{100r}=131\).'
+    explanation: '\(r=\dfrac{\ln131}{100}\approx0.0488\).'
+  68:
+    topic: s7-2
+    question: 'Radon-222 decays by \(y=y_0e^{-0.18t}\) (\(t\) in days). About how long until 10% has decayed (90% remains)?'
+    A: '\(0.585\text{ days}\)'
+    B: '\(5.56\text{ days}\)'
+    C: '\(1.17\text{ days}\)'
+    D: '\(0.18\text{ days}\)'
+    answer: A
+    hint: '\(e^{-0.18t}=0.9\).'
+    explanation: '\(t=\dfrac{-\ln0.9}{0.18}\approx0.585\) days.'
+  69:
+    topic: s7-2
+    question: Polonium-210 has half-life 139 days. About how long until 95% of it has disintegrated (5% remains)?
+    A: '\(300\text{ days}\)'
+    B: '\(600.7\text{ days}\)'
+    C: '\(1{,}200\text{ days}\)'
+    D: '\(139\text{ days}\)'
+    answer: B
+    hint: '\(\left(\tfrac12\right)^{t/139}=0.05\).'
+    explanation: '\(t=139\log_220\approx600.7\) days.'
+  70:
+    topic: s7-2
+    question: 'For a radioactive nucleus \(y=y_0e^{-kt}\) with mean life \(1/k\), the fraction remaining after three mean lives is'
+    A: '\(e^{-1}\approx0.368\)'
+    B: '\(e^{-3}\approx0.0498\), so about 95% has decayed'
+    C: '\(\tfrac13\)'
+    D: '\(e^{-3}\approx0.95\)'
+    answer: B
+    hint: 'Set \(t=3/k\).'
+    explanation: '\(e^{-k\cdot3/k}=e^{-3}\).'
+  71:
+    topic: s7-2
+    question: 'Californium-252 has half-life 2.645 years. The decay constant \(k\) is about'
+    A: '\(0.524\)'
+    B: '\(1\)'
+    C: '\(0.262\)'
+    D: '\(0.131\)'
+    answer: C
+    hint: '\(k=\dfrac{\ln2}{\text{half-life}}\).'
+    explanation: '\(\dfrac{0.6931}{2.645}\approx0.262\) per year.'
+  72:
+    topic: s7-2
+    question: 'For californium-252 (\(k\approx0.262\)/yr), the time for 95% of a sample to disintegrate is about'
+    A: '\(5.7\text{ years}\)'
+    B: '\(22.8\text{ years}\)'
+    C: '\(11.4\text{ years}\)'
+    D: '\(3.8\text{ years}\)'
+    answer: C
+    hint: 'Solve \(e^{-kt}=0.05\).'
+    explanation: '\(t=\dfrac{\ln20}{k}\approx11.4\) years.'
+  73:
+    topic: s7-2
+    question: "Newton's law of cooling says the rate of change of an object's temperature is proportional to"
+    A: its temperature
+    B: "the difference between its temperature and the surroundings'"
+    C: the square of the time
+    D: "the surroundings' temperature"
+    answer: B
+    hint: '\(T-T_s=(T_0-T_s)e^{-kt}\).'
+    explanation: The difference decays exponentially.
+  74:
+    topic: s7-2
+    question: "Soup cools from 90°C to 60°C in 10 min in a 20°C room. How much longer (after the first 10 min) until it reaches 35°C?"
+    A: '\(35\text{ min}\)'
+    B: '\(8.8\text{ min}\)'
+    C: '\(27.5\text{ min}\)'
+    D: '\(17.5\text{ min}\)'
+    answer: D
+    hint: '\(T-20=70e^{-kt}\) with \(e^{-10k}=\tfrac{40}{70}\).'
+    explanation: '\(t=\dfrac{\ln(70/15)}{k}\approx27.5\) min total, so about 17.5 min longer.'
+  75:
+    topic: s7-2
+    question: 'If the same soup (90°C, with \(k\approx0.0560\) per min) is put in a \(-15^\circ\)C freezer, how long until it cools to 35°C?'
+    A: '\(20\text{ min}\)'
+    B: '\(27.5\text{ min}\)'
+    C: '\(13.3\text{ min}\)'
+    D: '\(6.6\text{ min}\)'
+    answer: C
+    hint: 'Now \(T+15=105e^{-kt}\).'
+    explanation: '\(t=\dfrac{\ln(105/50)}{k}\approx13.3\) min.'
+  76:
+    topic: s7-2
+    question: "An aluminum beam in a 65°F shop warmed from its unknown starting temperature to 35°F in 10 min and to 50°F 10 min later. Its initial temperature was"
+    A: '\(5^\circ\)F'
+    B: '\(-5^\circ\)F'
+    C: '\(20^\circ\)F'
+    D: '\(-25^\circ\)F'
+    answer: A
+    hint: '\(T-65=(T_0-65)e^{-kt}\): the differences \(-30\) and \(-15\) are in a ratio of 2.'
+    explanation: 'The difference halves every 10 min, so the starting difference was \(-60\) and \(T_0=5\).'
+  77:
+    topic: s7-2
+    question: "A pan of 46°C water in a refrigerator is 39°C after 10 min and 33°C after 20 min. The refrigerator's temperature is"
+    A: '\(3^\circ\)C'
+    B: '\(-10^\circ\)C'
+    C: '\(-3^\circ\)C'
+    D: '\(0^\circ\)C'
+    answer: C
+    hint: 'The temperature differences \(46-T_s\), \(39-T_s\), \(33-T_s\) form a geometric sequence.'
+    explanation: '\((39-T_s)^2=(46-T_s)(33-T_s)\) gives \(1521-78T_s=1518-79T_s\), so \(T_s=-3\).'
+  78:
+    topic: s7-2
+    question: "A silver ingot is 60°C above room temperature now and was 70°C above 20 minutes ago. How far above room temperature will it be 2 hours from now?"
+    A: 'about \(12^\circ\)C'
+    B: 'about \(40^\circ\)C'
+    C: 'about \(51^\circ\)C'
+    D: 'about \(23.8^\circ\)C'
+    answer: D
+    hint: '\(\Delta T\) is multiplied by \(\tfrac67\) every 20 min; 2 hours is 6 periods.'
+    explanation: '\(60\left(\tfrac67\right)^6\approx23.8\).'
+  79:
+    topic: s7-2
+    question: "For the same ingot, when will it be only 10°C above room temperature?"
+    A: '\(60\text{ min}\)'
+    B: '\(232.5\text{ min}\)'
+    C: '\(400\text{ min}\)'
+    D: '\(120\text{ min}\)'
+    answer: B
+    hint: 'Solve \(60\left(\tfrac67\right)^{t/20}=10\).'
+    explanation: '\(t=20\dfrac{\ln6}{\ln(7/6)}\approx232.5\) min.'
+  80:
+    topic: s7-2
+    question: Charcoal from the eruption that formed Crater Lake contained 44.5% of the carbon-14 of living matter (half-life 5730 years). The age is about
+    A: '\(3{,}300\text{ years}\)'
+    B: '\(6{,}693\text{ years}\)'
+    C: '\(13{,}400\text{ years}\)'
+    D: '\(10{,}000\text{ years}\)'
+    answer: B
+    hint: '\(\left(\tfrac12\right)^{t/5730}=0.445\).'
+    explanation: '\(t=5730\log_2\dfrac1{0.445}\approx6{,}693\) years.'
+  81:
+    topic: s7-2
+    question: A fossilized bone found in the year A.D. 2000 contains 17% of its original carbon-14. About how many years ago did the animal die?
+    A: '\(14{,}648\text{ years}\)'
+    B: '\(7{,}300\text{ years}\)'
+    C: '\(29{,}000\text{ years}\)'
+    D: '\(10{,}000\text{ years}\)'
+    answer: A
+    hint: '\(t=5730\log_2\dfrac{1}{0.17}\).'
+    explanation: '\(\approx14{,}600\) years, so around 12,600 B.C.'
+  82:
+    topic: s7-2
+    question: How sensitive is the carbon-dating answer to measurement error? Changing the measured fraction from 17% to 18% moves the estimated age by about
+    A: 47 years
+    B: 1000 years
+    C: 4700 years
+    D: 470 years
+    answer: D
+    hint: 'Compare \(5730\log_2(1/0.17)\) with \(5730\log_2(1/0.18)\).'
+    explanation: "About 14,650 versus about 14,180 years: a one-point change in the measurement shifts the date by nearly five centuries."
+  83:
+    topic: s7-2
+    question: "A painting claimed to be by Vermeer (1632–1675) contains 99.5% of its carbon-14. About how old is it?"
+    A: '\(400\text{ years}\)'
+    B: '\(41\text{ years}\)'
+    C: '\(4\text{ years}\)'
+    D: '\(4{,}100\text{ years}\)'
+    answer: B
+    hint: '\(t=5730\log_2\dfrac1{0.995}\).'
+    explanation: "About 41 years: far too young to be a Vermeer."
+  84:
+    topic: s7-2
+    question: 'If a quantity satisfies \(\dfrac{dy}{dt}=ky\), then the quantity \(y\) is'
+    A: '\(kty_0\)'
+    B: '\(y_0+kt\)'
+    C: '\(y_0e^{kt}\)'
+    D: '\(y_0\ln(kt)\)'
+    answer: C
+    hint: Separate variables or recognize the function equal to a multiple of its derivative.
+    explanation: 'Growth for \(k>0\), decay for \(k<0\).'
+  85:
+    topic: s7-2
+    question: 'The half-life of a substance with decay constant \(k>0\) is'
+    A: '\(k\ln2\)'
+    B: '\(\dfrac{k}{\ln2}\)'
+    C: '\(\dfrac{\ln2}{k}\)'
+    D: '\(\dfrac{1}{2k}\)'
+    answer: C
+    hint: '\(e^{-kT}=\tfrac12\).'
+    explanation: '\(T=\dfrac{\ln2}k\), independent of how much is present.'
+  86:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x+3\) grows'
+    A: 'slower than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'faster than \(e^x\)'
+    answer: A
+    hint: "Compare with the exponential: polynomials grow more slowly."
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  87:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^3+\sin^2x\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'slower than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: B
+    hint: Polynomial.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  88:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\sqrt x\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'slower than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: B
+    hint: Root.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  89:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=4^x\) grows'
+    A: 'at the same rate as \(e^x\)'
+    B: 'slower than \(e^x\)'
+    C: 'faster than \(e^x\)'
+    answer: C
+    hint: Larger exponential base.
+    explanation: 'The limit of \(f(x)/e^x\) is \(\infty\).'
+  90:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=(3/2)^x\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'slower than \(e^x\)'
+    answer: C
+    hint: Smaller exponential base.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  91:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=e^{x/2}\) grows'
+    A: 'slower than \(e^x\)'
+    B: 'faster than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: A
+    hint: Smaller exponent.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  92:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=e^x/2\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'slower than \(e^x\)'
+    answer: B
+    hint: A constant multiple.
+    explanation: 'The limit of \(f(x)/e^x\) is a finite nonzero constant.'
+  93:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\log_{10}x\) grows'
+    A: 'slower than \(e^x\)'
+    B: 'faster than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: A
+    hint: Logarithms grow very slowly.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  94:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=10x^4+30x+1\) grows'
+    A: 'slower than \(e^x\)'
+    B: 'faster than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: A
+    hint: Polynomial.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  95:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x\ln x-x\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'slower than \(e^x\)'
+    answer: C
+    hint: '\(x\ln x\) is smaller than any exponential.'
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  96:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\sqrt{1+x^4}\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'slower than \(e^x\)'
+    answer: C
+    hint: 'About \(x^2\).'
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  97:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=(5/2)^x\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'slower than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: B
+    hint: 'Base \(2.5<e\approx2.718\).'
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  98:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=e^{-x}\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'slower than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: B
+    hint: It decays.
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  99:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=xe^x\) grows'
+    A: 'slower than \(e^x\)'
+    B: 'faster than \(e^x\)'
+    C: 'at the same rate as \(e^x\)'
+    answer: B
+    hint: 'Extra factor of \(x\).'
+    explanation: 'The limit of \(f(x)/e^x\) is \(\infty\).'
+  100:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=e^{\cos x}\) grows'
+    A: 'faster than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'slower than \(e^x\)'
+    answer: C
+    hint: '\(e^{\cos x}\) is bounded.'
+    explanation: 'The limit of \(f(x)/e^x\) is \(0\).'
+  101:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=e^{x-1}\) grows'
+    A: 'slower than \(e^x\)'
+    B: 'at the same rate as \(e^x\)'
+    C: 'faster than \(e^x\)'
+    answer: B
+    hint: '\(e^{x-1}=e^{-1}e^x\).'
+    explanation: 'The limit of \(f(x)/e^x\) is a finite nonzero constant.'
+  102:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^2+4x\) grows'
+    A: 'slower than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'faster than \(x^2\)'
+    answer: B
+    hint: 'The leading term is \(x^2\).'
+    explanation: 'The limit of \(f(x)/x^2\) is a finite nonzero constant.'
+  103:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^5-x^2\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'slower than \(x^2\)'
+    answer: A
+    hint: Higher power.
+    explanation: 'The limit of \(f(x)/x^2\) is \(\infty\).'
+  104:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\sqrt{x^4+x^3}\) grows'
+    A: 'at the same rate as \(x^2\)'
+    B: 'slower than \(x^2\)'
+    C: 'faster than \(x^2\)'
+    answer: A
+    hint: 'Behaves like \(x^2\).'
+    explanation: 'The limit of \(f(x)/x^2\) is a finite nonzero constant.'
+  105:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=(x+3)^2\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'slower than \(x^2\)'
+    C: 'at the same rate as \(x^2\)'
+    answer: C
+    hint: 'Leading term \(x^2\).'
+    explanation: 'The limit of \(f(x)/x^2\) is a finite nonzero constant.'
+  106:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x\ln x\) grows'
+    A: 'slower than \(x^2\)'
+    B: 'faster than \(x^2\)'
+    C: 'at the same rate as \(x^2\)'
+    answer: A
+    hint: 'Compare with \(x^2\): \(\ln x\) vs \(x\).'
+    explanation: 'The limit of \(f(x)/x^2\) is \(0\).'
+  107:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=2^x\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'slower than \(x^2\)'
+    C: 'at the same rate as \(x^2\)'
+    answer: A
+    hint: Exponentials beat powers.
+    explanation: 'The limit of \(f(x)/x^2\) is \(\infty\).'
+  108:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^3e^{-x}\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'slower than \(x^2\)'
+    C: 'at the same rate as \(x^2\)'
+    answer: B
+    hint: It tends to 0.
+    explanation: 'The limit of \(f(x)/x^2\) is \(0\).'
+  109:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=8x^2\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'slower than \(x^2\)'
+    answer: B
+    hint: Constant multiple.
+    explanation: 'The limit of \(f(x)/x^2\) is a finite nonzero constant.'
+  110:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^2+\sqrt x\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'slower than \(x^2\)'
+    answer: B
+    hint: Lower-order term does not matter.
+    explanation: 'The limit of \(f(x)/x^2\) is a finite nonzero constant.'
+  111:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=10x^2\) grows'
+    A: 'slower than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'faster than \(x^2\)'
+    answer: B
+    hint: Constant multiple.
+    explanation: 'The limit of \(f(x)/x^2\) is a finite nonzero constant.'
+  112:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^2e^{-x}\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'slower than \(x^2\)'
+    C: 'at the same rate as \(x^2\)'
+    answer: B
+    hint: It decays to 0.
+    explanation: 'The limit of \(f(x)/x^2\) is \(0\).'
+  113:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\log_{10}(x^2)\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'slower than \(x^2\)'
+    answer: C
+    hint: Logarithm.
+    explanation: 'The limit of \(f(x)/x^2\) is \(0\).'
+  114:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x^3-x^2\) grows'
+    A: 'slower than \(x^2\)'
+    B: 'at the same rate as \(x^2\)'
+    C: 'faster than \(x^2\)'
+    answer: C
+    hint: Higher power.
+    explanation: 'The limit of \(f(x)/x^2\) is \(\infty\).'
+  115:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=(1.1)^x\) grows'
+    A: 'at the same rate as \(x^2\)'
+    B: 'faster than \(x^2\)'
+    C: 'slower than \(x^2\)'
+    answer: B
+    hint: Any exponential with base greater than 1 beats a polynomial.
+    explanation: 'The limit of \(f(x)/x^2\) is \(\infty\).'
+  116:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=(1/10)^x\) grows'
+    A: 'faster than \(x^2\)'
+    B: 'slower than \(x^2\)'
+    C: 'at the same rate as \(x^2\)'
+    answer: B
+    hint: It decays.
+    explanation: 'The limit of \(f(x)/x^2\) is \(0\).'
+  117:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\log_3x\) grows'
+    A: 'at the same rate as \(\ln x\)'
+    B: 'slower than \(\ln x\)'
+    C: 'faster than \(\ln x\)'
+    answer: A
+    hint: "Change of base: a constant multiple."
+    explanation: 'The limit of \(f(x)/\ln x\) is a finite nonzero constant.'
+  118:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\ln2x\) grows'
+    A: 'faster than \(\ln x\)'
+    B: 'slower than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: C
+    hint: '\(\ln2x=\ln2+\ln x\).'
+    explanation: 'The limit of \(f(x)/\ln x\) is a finite nonzero constant.'
+  119:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\ln\sqrt x\) grows'
+    A: 'faster than \(\ln x\)'
+    B: 'slower than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: C
+    hint: '\(\tfrac12\ln x\).'
+    explanation: 'The limit of \(f(x)/\ln x\) is a finite nonzero constant.'
+  120:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x\) grows'
+    A: 'slower than \(\ln x\)'
+    B: 'faster than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: B
+    hint: Powers beat logs.
+    explanation: 'The limit of \(f(x)/\ln x\) is \(\infty\).'
+  121:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=5\ln x\) grows'
+    A: 'slower than \(\ln x\)'
+    B: 'faster than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: C
+    hint: Constant multiple.
+    explanation: 'The limit of \(f(x)/\ln x\) is a finite nonzero constant.'
+  122:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=1/x\) grows'
+    A: 'faster than \(\ln x\)'
+    B: 'slower than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: B
+    hint: It tends to 0.
+    explanation: 'The limit of \(f(x)/\ln x\) is \(0\).'
+  123:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=e^x\) grows'
+    A: 'slower than \(\ln x\)'
+    B: 'at the same rate as \(\ln x\)'
+    C: 'faster than \(\ln x\)'
+    answer: C
+    hint: Exponentials beat logs.
+    explanation: 'The limit of \(f(x)/\ln x\) is \(\infty\).'
+  124:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\log_2(x^2)\) grows'
+    A: 'slower than \(\ln x\)'
+    B: 'at the same rate as \(\ln x\)'
+    C: 'faster than \(\ln x\)'
+    answer: B
+    hint: '\(2\log_2x\), a multiple of \(\ln x\).'
+    explanation: 'The limit of \(f(x)/\ln x\) is a finite nonzero constant.'
+  125:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=1/\sqrt x\) grows'
+    A: 'slower than \(\ln x\)'
+    B: 'faster than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: A
+    hint: It tends to 0.
+    explanation: 'The limit of \(f(x)/\ln x\) is \(0\).'
+  126:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=x-2\ln x\) grows'
+    A: 'faster than \(\ln x\)'
+    B: 'slower than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: A
+    hint: 'Dominated by \(x\).'
+    explanation: 'The limit of \(f(x)/\ln x\) is \(\infty\).'
+  127:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\ln(\ln x)\) grows'
+    A: 'faster than \(\ln x\)'
+    B: 'slower than \(\ln x\)'
+    C: 'at the same rate as \(\ln x\)'
+    answer: B
+    hint: Iterated logs grow even more slowly.
+    explanation: 'The limit of \(f(x)/\ln x\) is \(0\).'
+  128:
+    topic: s7-3
+    question: 'As \(x\to\infty\), the function \(f(x)=\ln(2x+5)\) grows'
+    A: 'at the same rate as \(\ln x\)'
+    B: 'faster than \(\ln x\)'
+    C: 'slower than \(\ln x\)'
+    answer: A
+    hint: '\(\ln(2x+5)=\ln x+\ln(2+5/x)\).'
+    explanation: 'The limit of \(f(x)/\ln x\) is a finite nonzero constant.'
+  129:
+    topic: s7-3
+    question: 'Order from slowest to fastest growing as \(x\to\infty\): \(e^x,\ x^x,\ (\ln x)^x,\ e^{x/2}\).'
+    A: '\(e^{x/2},\ e^x,\ x^x,\ (\ln x)^x\)'
+    B: '\(e^{x/2},\ e^x,\ (\ln x)^x,\ x^x\)'
+    C: '\((\ln x)^x,\ e^{x/2},\ e^x,\ x^x\)'
+    D: '\(e^x,\ e^{x/2},\ x^x,\ (\ln x)^x\)'
+    answer: B
+    hint: 'Write each as \(e^{(\cdot)}\): the exponents are \(\tfrac x2\), \(x\), \(x\ln\ln x\), \(x\ln x\).'
+    explanation: '\(\ln\ln x\to\infty\), so \((\ln x)^x\) eventually beats \(e^x\); \(\ln x>\ln\ln x\) puts \(x^x\) last.'
+  130:
+    topic: s7-3
+    question: 'Order from slowest to fastest growing as \(x\to\infty\): \(2^x,\ x^2,\ (\ln2)^x,\ e^x\).'
+    A: '\((\ln2)^x,\ 2^x,\ x^2,\ e^x\)'
+    B: '\(x^2,\ (\ln2)^x,\ 2^x,\ e^x\)'
+    C: '\((\ln2)^x,\ x^2,\ 2^x,\ e^x\)'
+    D: '\(x^2,\ 2^x,\ e^x,\ (\ln2)^x\)'
+    answer: C
+    hint: '\(\ln2\approx0.69<1\), so \((\ln2)^x\to0\).'
+    explanation: 'Powers beat decay, exponentials beat powers, and \(e>2\).'
+  131:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(x=o(x)\).'
+    A: "False"
+    B: "True"
+    answer: A
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(x/x=1\), not 0.'
+  132:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(x=O(x+5)\).'
+    A: "True"
+    B: "False"
+    answer: A
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(x\le1\cdot(x+5)\).'
+  133:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(x=O(2x)\).'
+    A: "False"
+    B: "True"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(x\le\tfrac12\cdot2x\).'
+  134:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(e^x=o(e^{2x})\).'
+    A: "False"
+    B: "True"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(e^x/e^{2x}=e^{-x}\to0\).'
+  135:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(x+\ln x=O(x)\).'
+    A: "True"
+    B: "False"
+    answer: A
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(x+\ln x\le2x\) for large \(x\).'
+  136:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(\ln x=o(\ln2x)\).'
+    A: "True"
+    B: "False"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: The ratio tends to 1.
+  137:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(\sqrt{x^2+5}=O(x)\).'
+    A: "False"
+    B: "True"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: The ratio tends to 1.
+  138:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(\dfrac1x-\dfrac1{x^2}=o\!\left(\dfrac1x\right)\).'
+    A: "False"
+    B: "True"
+    answer: A
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: 'The ratio \(1-\tfrac1x\to1\).'
+  139:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(2+\cos x=O(2)\).'
+    A: "False"
+    B: "True"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(|2+\cos x|\le3\le\tfrac32\cdot2\).'
+  140:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(x\ln x=o(x^2)\).'
+    A: "False"
+    B: "True"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(\dfrac{\ln x}{x}\to0\).'
+  141:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(\ln x=o(\ln(x^2+1))\).'
+    A: "False"
+    B: "True"
+    answer: A
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(\ln(x^2+1)\approx2\ln x\): same rate.'
+  142:
+    topic: s7-3
+    question: 'True or false as \(x\to\infty\): \(\dfrac1{x+3}=O\!\left(\dfrac1x\right)\).'
+    A: "False"
+    B: "True"
+    answer: B
+    hint: '\(f=O(g)\) means \(|f|\le M|g|\) for large \(x\); \(f=o(g)\) means \(f/g\to0\).'
+    explanation: '\(\dfrac{x}{x+3}\to1\).'
+  143:
+    topic: s7-3
+    question: 'If \(f=O(g)\) and \(g=O(f)\) for positive functions, then \(f\) and \(g\)'
+    A: both tend to 0
+    B: '\(f\) grows faster'
+    C: grow at the same rate
+    D: '\(g\) grows faster'
+    answer: C
+    hint: Each is bounded by a constant multiple of the other.
+    explanation: '\(f/g\) stays between two positive constants.'
+  144:
+    topic: s7-3
+    question: 'For a polynomial \(f(x)\) of smaller degree than the polynomial \(g(x)\), \(f\) is'
+    A: not comparable
+    B: 'of smaller order: \(f=o(g)\)'
+    C: 'of larger order than \(g\)'
+    D: 'of the same order as \(g\)'
+    answer: B
+    hint: Compare the leading terms.
+    explanation: '\(f(x)/g(x)\to0\).'
+  145:
+    topic: s7-3
+    question: 'What does \(\displaystyle\lim_{x\to\infty}\dfrac{\ln(x+999)}{\ln x}=1\) tell you?'
+    A: '\(\ln(x+999)\) grows slower'
+    B: '\(\ln(x+999)\) and \(\ln x\) grow at the same rate'
+    C: '\(\ln(x+999)\) grows 999 times faster'
+    D: The limit says nothing about growth
+    answer: B
+    hint: 'By L''Hôpital: \(\dfrac{1/(x+999)}{1/x}\to1\).'
+    explanation: 'The same is true of \(\ln(x+a)\) for any constant \(a\).'
+  146:
+    topic: s7-3
+    question: '\(\sqrt{10x+1}\) and \(\sqrt{x+1}\) grow at the same rate as \(\sqrt x\) as \(x\to\infty\) because'
+    A: both limits are infinite
+    B: their ratio does not exist
+    C: '\(\dfrac{\sqrt{10x+1}}{\sqrt x}\to\sqrt{10}\) and \(\dfrac{\sqrt{x+1}}{\sqrt x}\to1\)'
+    D: both tend to 0
+    answer: C
+    hint: 'Divide each by \(\sqrt x\).'
+    explanation: Both limits are finite and nonzero.
+  147:
+    topic: s7-3
+    question: 'To show \(e^x\) grows faster than \(x^n\) for any \(n\), apply L''Hôpital''s Rule'
+    A: '\(n\) times, since the \(n\)th derivative of \(x^n\) is the constant \(n!\)'
+    B: infinitely many times
+    C: once
+    D: never; use the Sandwich Theorem
+    answer: A
+    hint: Each application reduces the exponent by 1.
+    explanation: '\(\dfrac{x^n}{e^x}\to\dfrac{n!}{e^x}\to0\). In particular \(e^x\) outgrows \(x^{1{,}000{,}000}\).'
+  148:
+    topic: s7-3
+    question: 'The function \(e^x\) outgrows every polynomial \(a_nx^n+\dots+a_0\) because'
+    A: '\(\dfrac{a_nx^n+\dots+a_0}{e^x}\) is a sum of terms \(\dfrac{a_kx^k}{e^x}\), each tending to 0'
+    B: '\(e^x\) is a polynomial of infinite degree'
+    C: '\(a_n\) can be negative'
+    D: every polynomial is bounded
+    answer: A
+    hint: Split the quotient termwise.
+    explanation: 'Each term \(x^k/e^x\to0\).'
+  149:
+    topic: s7-3
+    question: 'Why does \(\ln x\) grow slower than \(x^{1/n}\) for every positive integer \(n\), even \(x^{1/1{,}000{,}000}\)?'
+    A: both tend to infinity at equal speed
+    B: '\(\ln x\) is bounded'
+    C: '\(x^{1/n}\) is constant'
+    D: '\(\dfrac{\ln x}{x^{1/n}}\to\dfrac{1/x}{(1/n)x^{1/n-1}}=\dfrac{n}{x^{1/n}}\to0\)'
+    answer: D
+    hint: "Use L'Hôpital's Rule once."
+    explanation: 'It still takes a huge \(x\) before \(x^{1/10^6}\) overtakes \(\ln x\), but eventually it does.'
+  150:
+    topic: s7-3
+    question: 'Three algorithms need \(n\log_2n\), \(n^{3/2}\) and \(n(\log_2n)^2\) steps. The most efficient in the long run is'
+    A: all three are equally efficient
+    B: '\(n(\log_2n)^2\)'
+    C: '\(n^{3/2}\)'
+    D: '\(n\log_2n\)'
+    answer: D
+    hint: 'Divide each by \(n\) and compare \(\ln n\), \(\sqrt n\), \((\ln n)^2\).'
+    explanation: '\(\ln n\) grows slowest; the roots and squares of logs grow faster.'
+  151:
+    topic: s7-3
+    question: 'Three algorithms need \(n\), \(\sqrt n\log_2n\) and \((\log_2n)^2\) steps. The most efficient in the long run is'
+    A: '\(n\)'
+    B: '\((\log_2n)^2\)'
+    C: '\(\sqrt n\log_2n\)'
+    D: '\(n\) and \(\sqrt n\log_2 n\) tie'
+    answer: B
+    hint: 'Compare \((\ln n)^2\) with \(\sqrt n\ln n\).'
+    explanation: '\(\dfrac{(\ln n)^2}{\sqrt n\ln n}=\dfrac{\ln n}{\sqrt n}\to0\).'
+  152:
+    topic: s7-3
+    question: To find an item in an ordered list of 1,000,000 items, a sequential search might take up to
+    A: 1,000,000 steps (a binary search about 20)
+    B: about 1000 steps for both
+    C: "about 20 steps (binary: 1,000,000)"
+    D: about 500,000 steps for both
+    answer: A
+    hint: A binary search halves the list at each step.
+    explanation: '\(\log_2(10^6)\approx19.9\), so at most about 20 steps.'
+  153:
+    topic: s7-3
+    question: "To find an item in an ordered list of 450,000 items (the length of Webster's Third), a binary search takes at most about"
+    A: 450,000 steps
+    B: 450 steps
+    C: 9 steps
+    D: 19 steps
+    answer: D
+    hint: '\(2^{18}=262{,}144\) and \(2^{19}=524{,}288\).'
+    explanation: '\(\lceil\log_2450{,}000\rceil=19\); a sequential search might take up to 450,000.'
+  154:
+    topic: s7-4
+    question: 'If \(\sinh x=-\dfrac34\), then \(\cosh x=\)'
+    A: '\(\frac{4}{5}\)'
+    B: '\(- \frac{5}{4}\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(\frac{5}{4}\)'
+    answer: D
+    hint: 'Use \(\cosh^2x-\sinh^2x=1\).'
+    explanation: 'The identity gives \(\cosh x=\frac{5}{4}\).'
+  155:
+    topic: s7-4
+    question: 'If \(\sinh x=\dfrac43\), then \(\tanh x=\)'
+    A: '\(- \frac{4}{5}\)'
+    B: '\(\frac{8}{5}\)'
+    C: '\(\frac{4}{5}\)'
+    D: '\(\frac{5}{4}\)'
+    answer: C
+    hint: 'Use \(\cosh^2x-\sinh^2x=1\).'
+    explanation: 'The identity gives \(\tanh x=\frac{4}{5}\).'
+  156:
+    topic: s7-4
+    question: 'If \(\cosh x=\dfrac{17}{15}\), \(x>0\), then \(\sinh x=\)'
+    A: '\(\frac{16}{15}\)'
+    B: '\(- \frac{8}{15}\)'
+    C: '\(\frac{8}{15}\)'
+    D: '\(\frac{15}{8}\)'
+    answer: C
+    hint: 'Use \(\cosh^2x-\sinh^2x=1\).'
+    explanation: 'The identity gives \(\sinh x=\frac{8}{15}\).'
+  157:
+    topic: s7-4
+    question: 'If \(\cosh x=\dfrac{13}5\), \(x>0\), then \(\coth x=\)'
+    A: '\(\frac{13}{6}\)'
+    B: '\(\frac{13}{12}\)'
+    C: '\(- \frac{13}{12}\)'
+    D: '\(\frac{12}{13}\)'
+    answer: B
+    hint: 'Use \(\cosh^2x-\sinh^2x=1\).'
+    explanation: 'The identity gives \(\coth x=\frac{13}{12}\).'
+  158:
+    topic: s7-4
+    question: 'If \(\sinh x=-\tfrac34\), then \(\tanh x=\)'
+    A: '\(-\dfrac35\)'
+    B: '\(\dfrac35\)'
+    C: '\(-\dfrac34\)'
+    D: '\(-\dfrac45\)'
+    answer: A
+    hint: '\(\cosh x=\sqrt{1+\sinh^2x}=\tfrac54\).'
+    explanation: '\(\tanh x=\dfrac{-3/4}{5/4}=-\dfrac35\).'
+  159:
+    topic: s7-4
+    question: 'If \(\cosh x=\dfrac{13}{5}\) with \(x>0\), then \(\sinh x=\)'
+    A: '\(\dfrac{5}{12}\)'
+    B: '\(-\dfrac{12}{5}\)'
+    C: '\(\dfrac{8}{5}\)'
+    D: '\(\dfrac{12}5\)'
+    answer: D
+    hint: '\(\sinh^2x=\cosh^2x-1=\tfrac{144}{25}\).'
+    explanation: 'Positive since \(x>0\).'
+  160:
+    topic: s7-4
+    question: 'Rewrite \(2\cosh(\ln x)\) in terms of exponentials and simplify.'
+    A: '\(x-\dfrac1x\)'
+    B: '\(x+\dfrac1x\)'
+    C: '\(\dfrac{2}{x}\)'
+    D: '\(2x\)'
+    answer: B
+    hint: '\(\cosh u=\dfrac{e^u+e^{-u}}2\) with \(e^{\ln x}=x\).'
+    explanation: 'After writing the hyperbolics as exponentials the result simplifies to x+\dfrac1x.'
+  161:
+    topic: s7-4
+    question: 'Rewrite \(\sinh(2\ln x)\) in terms of exponentials and simplify.'
+    A: '\(\dfrac{x^4+1}{2x^2}\)'
+    B: '\(2x\)'
+    C: '\(\dfrac{x^4-1}{2x^2}\)'
+    D: '\(\dfrac{x^2-1}{2x}\)'
+    answer: C
+    hint: '\(\sinh u=\dfrac{e^u-e^{-u}}2\) with \(e^{2\ln x}=x^2\).'
+    explanation: 'After writing the hyperbolics as exponentials the result simplifies to \dfrac{x^4-1}{2x^2}.'
+  162:
+    topic: s7-4
+    question: 'Rewrite \(\cosh5x+\sinh5x\) in terms of exponentials and simplify.'
+    A: '\(e^{-5x}\)'
+    B: '\(\cosh10x\)'
+    C: '\(e^{5x}\)'
+    D: '\(2e^{5x}\)'
+    answer: C
+    hint: The sum of the two definitions leaves only one exponential.
+    explanation: After writing the hyperbolics as exponentials the result simplifies to e^{5x}.
+  163:
+    topic: s7-4
+    question: 'Rewrite \(\cosh3x-\sinh3x\) in terms of exponentials and simplify.'
+    A: '\(1\)'
+    B: '\(\dfrac{e^{-3x}}{2}\)'
+    C: '\(e^{3x}\)'
+    D: '\(e^{-3x}\)'
+    answer: D
+    hint: Subtract the definitions.
+    explanation: After writing the hyperbolics as exponentials the result simplifies to e^{-3x}.
+  164:
+    topic: s7-4
+    question: 'Rewrite \((\sinh x+\cosh x)^4\) in terms of exponentials and simplify.'
+    A: '\(2e^{4x}\)'
+    B: '\(e^{x}\)'
+    C: '\(e^{4x}\)'
+    D: '\(\cosh4x\)'
+    answer: C
+    hint: '\(\sinh x+\cosh x=e^x\).'
+    explanation: After writing the hyperbolics as exponentials the result simplifies to e^{4x}.
+  165:
+    topic: s7-4
+    question: 'Rewrite \(\ln(\cosh x+\sinh x)+\ln(\cosh x-\sinh x)\) in terms of exponentials and simplify.'
+    A: '\(x\)'
+    B: '\(0\)'
+    C: '\(2x\)'
+    D: '\(\ln2\)'
+    answer: B
+    hint: '\(\ln e^x+\ln e^{-x}\).'
+    explanation: After writing the hyperbolics as exponentials the result simplifies to 0.
+  166:
+    topic: s7-4
+    question: 'Setting \(y=x\) in \(\sinh(x+y)=\sinh x\cosh y+\cosh x\sinh y\) gives'
+    A: '\(\sinh2x=\sinh^2x+\cosh^2x\)'
+    B: '\(\sinh2x=\cosh^2x-\sinh^2x\)'
+    C: '\(\sinh2x=2\sinh x\)'
+    D: '\(\sinh2x=2\sinh x\cosh x\)'
+    answer: D
+    hint: Substitute and combine the two equal terms.
+    explanation: 'The double-angle formula parallels \(\sin2x=2\sin x\cos x\).'
+  167:
+    topic: s7-4
+    question: 'Setting \(y=x\) in \(\cosh(x+y)=\cosh x\cosh y+\sinh x\sinh y\) gives'
+    A: '\(\cosh2x=2\cosh x\)'
+    B: '\(\cosh2x=\cosh^2x-\sinh^2x\)'
+    C: '\(\cosh2x=1\)'
+    D: '\(\cosh2x=\cosh^2x+\sinh^2x\)'
+    answer: D
+    hint: 'Substitute \(y=x\).'
+    explanation: 'Unlike \(\cos2x=\cos^2x-\sin^2x\), the sign is plus.'
+  168:
+    topic: s7-4
+    question: 'The identity \(\cosh^2x-\sinh^2x=1\) follows from the definitions because'
+    A: '\(\cosh x=\sinh x\)'
+    B: '\(e^x=0\)'
+    C: 'it is only true for \(x=0\)'
+    D: '\(\left(\dfrac{e^x+e^{-x}}2\right)^2-\left(\dfrac{e^x-e^{-x}}2\right)^2=\dfrac{4e^xe^{-x}}{4}=1\)'
+    answer: D
+    hint: Expand both squares.
+    explanation: 'The \(e^{2x}\) and \(e^{-2x}\) terms cancel, leaving \(\tfrac{2+2}{4}=1\).'
+  169:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dx}\left[6 \sinh{\left(\frac{x}{3} \right)}\right]\).'
+    A: '\(2 \cosh{\left(\frac{x}{3} \right)}\)'
+    B: '\(4 \cosh{\left(\frac{x}{3} \right)}\)'
+    C: '\(2 \cosh{\left(\frac{2 x}{3} \right)}\)'
+    D: '\(- 2 \cosh{\left(\frac{x}{3} \right)}\)'
+    answer: A
+    hint: '\(\dfrac{d}{dx}\sinh u=\cosh u\cdot u''\).'
+    explanation: 'Differentiating gives \(2 \cosh{\left(\frac{x}{3} \right)}\).'
+  170:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dx}\left[\frac{\sinh{\left(2 x + 1 \right)}}{2}\right]\).'
+    A: '\(\cosh{\left(2 x + 1 \right)}\)'
+    B: '\(\cosh{\left(2 x \right)}\)'
+    C: '\(\cosh{\left(3 x + 1 \right)}\)'
+    D: '\(\cosh{\left(2 x - 1 \right)}\)'
+    answer: A
+    hint: 'Chain rule: the 2 cancels the \(\tfrac12\).'
+    explanation: 'Differentiating gives \(\cosh{\left(2 x + 1 \right)}\).'
+  171:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dz}\left[\ln{\left(\sinh{\left(z \right)} \right)}\right]\).'
+    A: '\(\frac{\cosh{\left(z \right)}}{\sinh{\left(z \right)}}\)'
+    B: '\(- \frac{\cosh{\left(z \right)}}{\sinh{\left(z \right)}}\)'
+    C: '\(\cosh{\left(z \right)}\)'
+    D: '\(1\)'
+    answer: A
+    hint: '\(\dfrac{d}{dz}\ln u=\dfrac{u''}{u}\).'
+    explanation: 'Differentiating gives \(\frac{\cosh{\left(z \right)}}{\sinh{\left(z \right)}}\).'
+  172:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dx}\left[x^{2} \cosh{\left(x \right)}\right]\).'
+    A: '\(- x^{2} \sinh{(x)} + 2 x \cosh{(x)}\)'
+    B: '\(x^{4} \sinh{(x)} + 4 x \cosh{(x)}\)'
+    C: '\(x \sinh{(x)} + x \cosh{(x)}\)'
+    D: '\(x^{2} \sinh{(x)} + 2 x \cosh{(x)}\)'
+    answer: D
+    hint: Product rule.
+    explanation: 'Differentiating gives \(x^{2} \sinh{\left(x \right)} + 2 x \cosh{\left(x \right)}\).'
+  173:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dx}\tanh3x\).'
+    A: '\(\operatorname{sech}^23x\)'
+    B: '\(3\operatorname{csch}^23x\)'
+    C: '\(-3\operatorname{sech}^23x\)'
+    D: '\(3\operatorname{sech}^23x\)'
+    answer: D
+    hint: '\(\dfrac{d}{du}\tanh u=\operatorname{sech}^2u\), then multiply by \(u''=3\).'
+    explanation: 'Equivalently \(3-3\tanh^23x\), since \(\operatorname{sech}^2=1-\tanh^2\).'
+  174:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dx}\sinh^{-1}\sqrt x\) for \(x>0\).'
+    A: '\(\dfrac{1}{2\sqrt{x}\sqrt{x-1}}\)'
+    B: '\(\dfrac{1}{\sqrt x\sqrt{1+x}}\)'
+    C: '\(\dfrac{1}{2\sqrt x\sqrt{1+x}}\)'
+    D: '\(\dfrac{1}{\sqrt{1+x}}\)'
+    answer: C
+    hint: '\(\dfrac{d}{dx}\sinh^{-1}u=\dfrac{u''}{\sqrt{1+u^2}}\) with \(u=\sqrt x\).'
+    explanation: '\(\dfrac{1/(2\sqrt x)}{\sqrt{1+x}}\).'
+  175:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dx}\cosh^{-1}\!\left(2\sqrt{x+1}\right)\).'
+    A: '\(\dfrac{1}{\sqrt{x+1}\sqrt{4x+5}}\)'
+    B: '\(\dfrac{1}{\sqrt{4x+3}}\)'
+    C: '\(\dfrac{2}{\sqrt{x+1}\sqrt{4x+3}}\)'
+    D: '\(\dfrac{1}{\sqrt{x+1}\sqrt{4x+3}}\)'
+    answer: D
+    hint: '\(\dfrac{d}{dx}\cosh^{-1}u=\dfrac{u''}{\sqrt{u^2-1}}\); here \(u^2-1=4x+3\).'
+    explanation: '\(u''=\dfrac{1}{\sqrt{x+1}}\), so the derivative is \(\dfrac1{\sqrt{x+1}\sqrt{4x+3}}\).'
+  176:
+    topic: s7-4
+    question: 'Find \(\dfrac{d}{dt}\left[(1-t)\tanh^{-1}t\right]\) for \(|t|<1\).'
+    A: '\(\dfrac{1}{1+t}-\tanh^{-1}t\)'
+    B: '\(\dfrac{1}{1+t}+\tanh^{-1}t\)'
+    C: '\(\dfrac{1}{1-t}-\tanh^{-1}t\)'
+    D: '\(\dfrac{1-t}{1-t^2}\)'
+    answer: A
+    hint: 'Product rule; \(\dfrac{d}{dt}\tanh^{-1}t=\dfrac{1}{1-t^2}\).'
+    explanation: '\((1-t)\dfrac1{1-t^2}-\tanh^{-1}t=\dfrac{1}{1+t}-\tanh^{-1}t\).'
+  177:
+    topic: s7-4
+    question: 'The derivative of \(\sinh x\) is'
+    A: '\(-\cosh x\)'
+    B: '\(\cosh x\)'
+    C: '\(-\sinh x\)'
+    D: '\(\sinh x\)'
+    answer: B
+    hint: Compare with the circular functions; no sign change here.
+    explanation: '\(\dfrac{d}{dx}\dfrac{e^x-e^{-x}}2=\dfrac{e^x+e^{-x}}{2}\).'
+  178:
+    topic: s7-4
+    question: 'The derivative of \(\operatorname{sech}x\) is'
+    A: '\(-\operatorname{sech}^2x\)'
+    B: '\(-\operatorname{sech}x\tanh x\)'
+    C: '\(\operatorname{csch}x\coth x\)'
+    D: '\(\operatorname{sech}x\tanh x\)'
+    answer: B
+    hint: '\(\operatorname{sech}x=\dfrac1{\cosh x}\).'
+    explanation: '\(-\dfrac{\sinh x}{\cosh^2x}\).'
+  179:
+    topic: s7-4
+    question: 'The derivative of \(\coth x\) is'
+    A: '\(-\operatorname{csch}^2x\)'
+    B: '\(-\operatorname{sech}^2x\)'
+    C: '\(\operatorname{sech}^2x\)'
+    D: '\(\operatorname{csch}^2x\)'
+    answer: A
+    hint: '\(\coth x=\dfrac{\cosh x}{\sinh x}\); quotient rule.'
+    explanation: '\(\dfrac{\sinh^2x-\cosh^2x}{\sinh^2x}=-\operatorname{csch}^2x\).'
+  180:
+    topic: s7-4
+    question: 'Find \(\displaystyle\int\sinh2x\,dx\).'
+    A: '\(\cosh{\left(2 x \right)}+C\)'
+    B: '\(2 \cosh{\left(2 x \right)}+C\)'
+    C: '\(- \frac{\cosh{\left(2 x \right)}}{2}+C\)'
+    D: '\(\frac{\cosh{\left(2 x \right)}}{2}+C\)'
+    answer: D
+    hint: '\(\int\sinh u\,du=\cosh u\); divide by 2.'
+    explanation: 'Differentiating \(\frac{\cosh{\left(2 x \right)}}{2}\) gives \(\sinh{\left(2 x \right)}\).'
+  181:
+    topic: s7-4
+    question: 'Find \(\displaystyle\int\sinh\dfrac x5\,dx\).'
+    A: '\(- 5 \cosh{\left(\frac{x}{5} \right)}+C\)'
+    B: '\(\frac{\cosh{\left(\frac{x}{5} \right)}}{5}+C\)'
+    C: '\(5 \sinh{\left(\frac{x}{5} \right)}+C\)'
+    D: '\(5 \cosh{\left(\frac{x}{5} \right)}+C\)'
+    answer: D
+    hint: Multiply by the reciprocal of the inner derivative.
+    explanation: 'Differentiating \(5 \cosh{\left(\frac{x}{5} \right)}\) gives \(\sinh{\left(\frac{x}{5} \right)}\).'
+  182:
+    topic: s7-4
+    question: 'Find \(\displaystyle\int6\cosh\!\left(\dfrac x2-\ln3\right)dx\).'
+    A: '\(3 \sinh{\left(\frac{x}{2} - \ln{\left(3 \right)} \right)}+C\)'
+    B: '\(12 \cosh{\left(\frac{x}{2} - \ln{\left(3 \right)} \right)}+C\)'
+    C: '\(12 \sinh{\left(\frac{x}{2} - \ln{\left(3 \right)} \right)}+C\)'
+    D: '\(6 \sinh{\left(\frac{x}{2} - \ln{\left(3 \right)} \right)}+C\)'
+    answer: C
+    hint: 'The inner function has derivative \(\tfrac12\).'
+    explanation: 'Differentiating \(12 \sinh{\left(\frac{x}{2} - \ln{\left(3 \right)} \right)}\) gives \(6 \cosh{\left(\frac{x}{2} - \ln{\left(3 \right)} \right)}\).'
+  183:
+    topic: s7-4
+    question: 'Find \(\displaystyle\int4\cosh(3x-\ln2)\,dx\).'
+    A: '\(\frac{4 \cosh{\left(3 x - \ln{\left(2 \right)} \right)}}{3}+C\)'
+    B: '\(12 \sinh{\left(3 x - \ln{\left(2 \right)} \right)}+C\)'
+    C: '\(4 \sinh{\left(3 x - \ln{\left(2 \right)} \right)}+C\)'
+    D: '\(\frac{4 \sinh{\left(3 x - \ln{\left(2 \right)} \right)}}{3}+C\)'
+    answer: D
+    hint: Divide by the inner derivative 3.
+    explanation: 'Differentiating \(\frac{4 \sinh{\left(3 x - \ln{\left(2 \right)} \right)}}{3}\) gives \(4 \cosh{\left(3 x - \ln{\left(2 \right)} \right)}\).'
+  184:
+    topic: s7-4
+    question: 'Find \(\displaystyle\int\tanh\dfrac x7\,dx\).'
+    A: '\(\ln{\left(\cosh{\left(\frac{x}{7} \right)} \right)}+C\)'
+    B: '\(7 \ln{\left(\cosh{\left(\frac{x}{7} \right)} \right)}+C\)'
+    C: '\(\cosh{\left(\frac{x}{7} \right)}+C\)'
+    D: '\(7 \ln{\left(\sinh{\left(\frac{x}{7} \right)} \right)}+C\)'
+    answer: B
+    hint: '\(\tanh u=\dfrac{\sinh u}{\cosh u}\); the numerator is the derivative of the denominator.'
+    explanation: 'Differentiating \(7 \ln{\left(\cosh{\left(\frac{x}{7} \right)} \right)}\) gives \(\tanh{\left(\frac{x}{7} \right)}\).'
+  185:
+    topic: s7-4
+    question: 'Find \(\displaystyle\int\operatorname{sech}^2\!\left(x-\tfrac12\right)dx\).'
+    A: '\(\frac{1}{\cosh{\left(x - \frac{1}{2} \right)}}+C\)'
+    B: '\(- \tanh{\left(x - \frac{1}{2} \right)}+C\)'
+    C: '\(\tanh{\left(x - \frac{1}{2} \right)}+C\)'
+    D: '\(\coth{\left(x - \frac{1}{2} \right)}+C\)'
+    answer: C
+    hint: '\(\dfrac{d}{du}\tanh u=\operatorname{sech}^2u\).'
+    explanation: 'Differentiating \(\tanh{\left(x - \frac{1}{2} \right)}\) gives \(\frac{1}{\cosh^{2}{\left(x - \frac{1}{2} \right)}}\).'
+  186:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_{\ln2}^{\ln4}\coth x\,dx\).'
+    A: '\(\ln{\left(\frac{15}{8} \right)}\)'
+    B: '\(\ln{\left(\frac{5}{4} \right)}\)'
+    C: '\(\ln{\left(\frac{5}{2} \right)}\)'
+    D: '\(\ln{\left(2 \right)}\)'
+    answer: C
+    hint: '\(\int\coth x\,dx=\ln\sinh x\).'
+    explanation: '\(\sinh(\ln4)=\tfrac{15}8\) and \(\sinh(\ln2)=\tfrac34\), so the integral is \(\ln\dfrac{15/8}{3/4}=\ln\tfrac52\).'
+  187:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_0^{\ln2}\tanh2x\,dx\).'
+    A: '\(\frac{\ln{\left(\frac{17}{4} \right)}}{2}\)'
+    B: '\(\ln{\left(\frac{17}{8} \right)}\)'
+    C: '\(\frac{\ln{\left(\frac{17}{8} \right)}}{2}\)'
+    D: '\(\ln{\left(2 \right)}\)'
+    answer: C
+    hint: '\(\int\tanh2x\,dx=\tfrac12\ln\cosh2x\).'
+    explanation: '\(\cosh(2\ln2)=\tfrac{4+1/4}{2}=\tfrac{17}8\), so the value is \(\tfrac12\ln\tfrac{17}8\).'
+  188:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_{-\ln4}^{-\ln2}2e^{\theta}\cosh\theta\,d\theta\).'
+    A: '\(\frac{3}{32} + \ln{\left(2 \right)}\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(\ln{\left(2 \right)}\)'
+    D: '\(1\)'
+    answer: A
+    hint: '\(2e^\theta\cosh\theta=e^{2\theta}+1\).'
+    explanation: '\(\left[\tfrac12e^{2\theta}+\theta\right]_{-\ln4}^{-\ln2}=\left(\tfrac18-\ln2\right)-\left(\tfrac1{32}-\ln4\right)=\ln2+\tfrac3{32}\).'
+  189:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_0^{\ln2}4e^{-\theta}\sinh\theta\,d\theta\).'
+    A: '\(1\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(- \frac{3}{4} + 2 \ln{\left(2 \right)}\)'
+    D: '\(\ln{\left(2 \right)}\)'
+    answer: C
+    hint: '\(2e^{-\theta}\sinh\theta=1-e^{-2\theta}\), so the integrand is \(2-2e^{-2\theta}\).'
+    explanation: '\(\left[2\theta+e^{-2\theta}\right]_0^{\ln2}=2\ln2+\tfrac14-1=2\ln2-\tfrac34\).'
+  190:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_1^2\dfrac{\cosh(\ln t)}{t}\,dt\).'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(\frac{5}{4}\)'
+    D: '\(\frac{1}{2}\)'
+    answer: B
+    hint: 'Let \(u=\ln t\).'
+    explanation: '\(\int_0^{\ln2}\cosh u\,du=\sinh(\ln2)=\tfrac34\).'
+  191:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_0^{\ln10}4\sinh^2\dfrac x2\,dx\).'
+    A: '\(\frac{99}{5} - 2 \ln{\left(10 \right)}\)'
+    B: '\(\ln{\left(10 \right)}\)'
+    C: '\(\frac{99}{10} - \ln{\left(10 \right)}\)'
+    D: '\(\frac{99}{10} - 2 \ln{\left(10 \right)}\)'
+    answer: D
+    hint: '\(4\sinh^2\tfrac x2=2(\cosh x-1)\).'
+    explanation: '\(\left[2\sinh x-2x\right]_0^{\ln10}\), with \(\sinh(\ln10)=\tfrac{10-0.1}2=4.95\): the value is \(9.9-2\ln10\).'
+  192:
+    topic: s7-4
+    question: 'Express \(\sinh^{-1}\!\left(-\tfrac5{12}\right)\) in terms of natural logarithms.'
+    A: '\(- \ln{\left(3 \right)}\)'
+    B: '\(\ln{\left(\frac{5}{12} \right)}\)'
+    C: '\(\ln{\left(\frac{3}{2} \right)}\)'
+    D: '\(\ln{\left(\frac{2}{3} \right)}\)'
+    answer: D
+    hint: '\(\sinh^{-1}x=\ln\!\left(x+\sqrt{x^2+1}\right)\).'
+    explanation: '\(\sqrt{\tfrac{25}{144}+1}=\tfrac{13}{12}\), so \(\ln\!\left(-\tfrac5{12}+\tfrac{13}{12}\right)=\ln\tfrac23\).'
+  193:
+    topic: s7-4
+    question: 'Express \(\cosh^{-1}\!\left(\tfrac53\right)\) in terms of natural logarithms.'
+    A: '\(\ln{\left(\frac{8}{3} \right)}\)'
+    B: '\(\ln{\left(2 \right)}\)'
+    C: '\(\ln{\left(3 \right)}\)'
+    D: '\(- \ln{\left(3 \right)}\)'
+    answer: C
+    hint: '\(\cosh^{-1}x=\ln\!\left(x+\sqrt{x^2-1}\right)\).'
+    explanation: '\(\sqrt{\tfrac{25}9-1}=\tfrac43\), so \(\ln\tfrac{5+4}{3}=\ln3\).'
+  194:
+    topic: s7-4
+    question: 'Express \(\tanh^{-1}\!\left(-\tfrac12\right)\) in terms of natural logarithms.'
+    A: '\(- \ln{\left(3 \right)}\)'
+    B: '\(- \ln{\left(2 \right)}\)'
+    C: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    D: '\(- \frac{\ln{\left(3 \right)}}{2}\)'
+    answer: D
+    hint: '\(\tanh^{-1}x=\tfrac12\ln\dfrac{1+x}{1-x}\).'
+    explanation: '\(\tfrac12\ln\dfrac{1/2}{3/2}=\tfrac12\ln\tfrac13=-\tfrac12\ln3\).'
+  195:
+    topic: s7-4
+    question: 'Express \(\coth^{-1}\!\left(\tfrac54\right)\) in terms of natural logarithms.'
+    A: '\(- \ln{\left(3 \right)}\)'
+    B: '\(\ln{\left(3 \right)}\)'
+    C: '\(\frac{\ln{\left(9 \right)}}{4}\)'
+    D: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    answer: B
+    hint: '\(\coth^{-1}x=\tfrac12\ln\dfrac{x+1}{x-1}\).'
+    explanation: '\(\tfrac12\ln\dfrac{9/4}{1/4}=\tfrac12\ln9=\ln3\).'
+  196:
+    topic: s7-4
+    question: 'Express \(\operatorname{sech}^{-1}\!\left(\tfrac35\right)\) in terms of natural logarithms.'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(- \ln{\left(3 \right)}\)'
+    C: '\(\ln{\left(3 \right)}\)'
+    D: '\(\ln{\left(\frac{8}{3} \right)}\)'
+    answer: C
+    hint: '\(\operatorname{sech}^{-1}x=\ln\dfrac{1+\sqrt{1-x^2}}{x}\).'
+    explanation: '\(\sqrt{1-\tfrac9{25}}=\tfrac45\), so \(\ln\dfrac{9/5}{3/5}=\ln3\).'
+  197:
+    topic: s7-4
+    question: 'Express \(\operatorname{csch}^{-1}\!\left(-\tfrac1{\sqrt3}\right)\) in terms of natural logarithms.'
+    A: '\(\ln{\left(\sqrt{3} + 2 \right)}\)'
+    B: '\(\ln{\left(2 - \sqrt{3} \right)}\)'
+    C: '\(- \ln{\left(2 \right)}\)'
+    D: '\(\ln{\left(\sqrt{3} \right)}\)'
+    answer: B
+    hint: '\(\operatorname{csch}^{-1}x=\ln\!\left(\dfrac1x+\dfrac{\sqrt{1+x^2}}{|x|}\right)\).'
+    explanation: '\(\dfrac1x=-\sqrt3\) and \(\dfrac{\sqrt{4/3}}{1/\sqrt3}=2\), so \(\ln(2-\sqrt3)\).'
+  198:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_0^{2\sqrt3}\dfrac{dx}{\sqrt{4+x^2}}\) in natural logarithms.'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(\ln{\left(2 \sqrt{3} \right)}\)'
+    C: '\(\ln{\left(\sqrt{3} \right)}\)'
+    D: '\(\ln{\left(\sqrt{3} + 2 \right)}\)'
+    answer: D
+    hint: '\(\int\dfrac{dx}{\sqrt{a^2+x^2}}=\sinh^{-1}\dfrac xa\).'
+    explanation: '\(\sinh^{-1}\sqrt3=\ln(\sqrt3+2)\).'
+  199:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_0^{1/3}\dfrac{6\,dx}{\sqrt{1+9x^2}}\) in natural logarithms.'
+    A: '\(2 \ln{\left(1 + \sqrt{2} \right)}\)'
+    B: '\(6 \ln{\left(2 \right)}\)'
+    C: '\(\ln{\left(1 + \sqrt{2} \right)}\)'
+    D: '\(2 \ln{\left(2 \right)}\)'
+    answer: A
+    hint: 'Let \(u=3x\); \(\int\dfrac{du}{\sqrt{1+u^2}}=\sinh^{-1}u\).'
+    explanation: '\(2\sinh^{-1}1=2\ln(1+\sqrt2)\).'
+  200:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_0^{1/2}\dfrac{dx}{1-x^2}\).'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    C: '\(\frac{\ln{\left(3 \right)}}{4}\)'
+    D: '\(\ln{\left(3 \right)}\)'
+    answer: B
+    hint: '\(\int\dfrac{dx}{1-x^2}=\tanh^{-1}x\) for \(|x|<1\).'
+    explanation: '\(\tanh^{-1}\tfrac12=\tfrac12\ln3\).'
+  201:
+    topic: s7-4
+    question: 'Evaluate \(\displaystyle\int_{5/4}^{2}\dfrac{dx}{1-x^2}\).'
+    A: '\(- \ln{\left(3 \right)}\)'
+    B: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    C: '\(\ln{\left(3 \right)}\)'
+    D: '\(- \frac{\ln{\left(3 \right)}}{2}\)'
+    answer: D
+    hint: 'For \(|x|>1\), \(\int\dfrac{dx}{1-x^2}=\coth^{-1}x\).'
+    explanation: '\(\coth^{-1}2-\coth^{-1}\tfrac54=\tfrac12\ln3-\ln3=-\tfrac12\ln3\).'
+  202:
+    topic: s7-4
+    question: 'The velocity of a skydiver of mass \(m\) falling with air resistance \(kv^2\) is \(v=\sqrt{\dfrac{mg}k}\tanh\!\left(\sqrt{\dfrac{gk}m}\,t\right)\). The limiting velocity is'
+    A: '\(0\)'
+    B: '\(\sqrt{\dfrac{mg}{k}}\)'
+    C: '\(mg\)'
+    D: '\(\sqrt{\dfrac{gk}{m}}\)'
+    answer: B
+    hint: '\(\tanh\to1\) as \(t\to\infty\).'
+    explanation: The velocity approaches this value from below.
+  203:
+    topic: s7-4
+    question: 'For a 160-lb skydiver (\(mg=160\)) with \(k=0.005\), the limiting velocity (ft/s) is about'
+    A: '\(32\text{ ft/s}\)'
+    B: '\(357.8\text{ ft/s}\)'
+    C: '\(178.9\text{ ft/s}\)'
+    D: '\(89.4\text{ ft/s}\)'
+    answer: C
+    hint: '\(v_{\lim}=\sqrt{\dfrac{mg}k}\).'
+    explanation: '\(\sqrt{32{,}000}\approx178.9\) ft/s, about 122 mph.'
+  204:
+    topic: s7-4
+    question: 'A hanging cable lies along \(y=\dfrac Hw\cosh\dfrac wHx\). The slope of the cable at \(P(x,y)\) is'
+    A: '\(\dfrac Hw\sinh\dfrac wHx\)'
+    B: '\(\cosh\dfrac wHx\)'
+    C: '\(\tanh\dfrac wHx\)'
+    D: '\(\sinh\dfrac wHx\)'
+    answer: D
+    hint: 'Differentiate \(y\).'
+    explanation: '\(\dfrac{dy}{dx}=\tan\phi=\sinh\tfrac wHx\).'
+  205:
+    topic: s7-4
+    question: 'For a hanging cable \(y=\dfrac1a\cosh ax\), the length of arc from \(x=0\) to \(x\) is'
+    A: '\(a\sinh ax\)'
+    B: '\(\dfrac1a\cosh ax\)'
+    C: '\(\cosh ax\)'
+    D: '\(\dfrac1a\sinh ax\)'
+    answer: D
+    hint: '\(\sqrt{1+(y'')^2}=\sqrt{1+\sinh^2ax}=\cosh ax\).'
+    explanation: '\(\int_0^x\cosh at\,dt=\tfrac1a\sinh ax\).'
+  206:
+    topic: s7-4
+    question: 'A 32-ft cable weighing 2 lb/ft is fastened at the same level to posts 30 ft apart and models \(y=\dfrac1a\cosh ax\), \(-15\le x\le15\). The constant \(a\) satisfies \(16a=\sinh15a\). Its positive solution is about'
+    A: '\(0.0209\)'
+    B: '\(0.1253\)'
+    C: '\(0.0835\)'
+    D: '\(0.0418\)'
+    answer: D
+    hint: "Solve numerically (graph or Newton's method)."
+    explanation: '\(a\approx0.0418\).'
+  207:
+    topic: s7-4
+    question: 'For the cable above (\(a\approx0.0418\)), the sag at its center (the rise of the posts above the lowest point, \(\tfrac1a(\cosh15a-1)\)) is about'
+    A: '\(4.85\text{ ft}\)'
+    B: '\(9.71\text{ ft}\)'
+    C: '\(14.56\text{ ft}\)'
+    D: '\(2.43\text{ ft}\)'
+    answer: A
+    hint: 'Compare \(y(15)\) with \(y(0)\).'
+    explanation: '\(\tfrac1a(\cosh15a-1)\approx4.85\) ft.'
+  208:
+    topic: s7-4
+    question: 'The region under \(y=\dfrac1a\cosh ax\) from \(x=0\) to \(x=b\) has the same area as a rectangle of height \(\dfrac1a\) and base equal to'
+    A: '\(b\)'
+    B: '\(\dfrac{b}{a}\)'
+    C: 'the chord length from \((0,0)\) to \((b,y(b))\)'
+    D: 'the arc length \(s\) of the curve from \(0\) to \(b\)'
+    answer: D
+    hint: 'Area \(=\int_0^b\tfrac1a\cosh ax\,dx=\tfrac1{a^2}\sinh ab\) and \(s=\tfrac1a\sinh ab\).'
+    explanation: 'Area \(=\tfrac1a\cdot s\).'
+  209:
+    topic: s7-4
+    question: 'Why does \(\sinh^{-1}x=\ln\!\left(x+\sqrt{x^2+1}\right)\) use the plus sign in front of the square root?'
+    A: 'because \(\sqrt{x^2+1}\) is negative'
+    B: the minus sign gives the same result
+    C: 'because \(x\) is always positive'
+    D: 'because \(x-\sqrt{x^2+1}<0\) and the logarithm requires a positive argument'
+    answer: D
+    hint: 'Solve \(x=\tfrac{e^y-e^{-y}}2\) as a quadratic in \(e^y\).'
+    explanation: '\(e^y=x\pm\sqrt{x^2+1}\) and \(e^y>0\).'
+  210:
+    topic: s7-4
+    question: 'Every function \(f\) defined on an interval symmetric about 0 equals'
+    A: its odd part minus its even part
+    B: 'its even part plus its odd part: \(\dfrac{f(x)+f(-x)}{2}+\dfrac{f(x)-f(-x)}{2}\)'
+    C: twice its even part
+    D: '\(f(x)f(-x)\)'
+    answer: B
+    hint: Add the two fractions.
+    explanation: 'For \(f=e^x\) these are \(\cosh x\) and \(\sinh x\).'
+  211:
+    topic: s7-4
+    question: 'The even and odd parts of \(f(x)=e^x\) are'
+    A: '\(\sinh x\) and \(\cosh x\)'
+    B: '\(1\) and \(x\)'
+    C: '\(\cosh x\) and \(\sinh x\)'
+    D: '\(e^x\) and \(e^{-x}\)'
+    answer: C
+    hint: 'Use \(\tfrac{f(x)\pm f(-x)}{2}\).'
+    explanation: '\(\tfrac{e^x+e^{-x}}2=\cosh x\) is even; \(\tfrac{e^x-e^{-x}}2=\sinh x\) is odd.'
+  212:
+    topic: s7-4
+    question: 'The area of a surface generated by revolving \(y=4\cosh\tfrac x4\), \(-\ln16\le x\le\ln81\), is a minimal surface. The surface-area integrand \(2\pi y\sqrt{1+(y'')^2}\) simplifies to'
+    A: '\(8\pi\cosh^2\dfrac x4\)'
+    B: '\(8\pi\sinh^2\dfrac x4\)'
+    C: '\(2\pi\cosh^2\dfrac x4\)'
+    D: '\(8\pi\cosh\dfrac x4\)'
+    answer: A
+    hint: '\(y''=\sinh\tfrac x4\) so \(\sqrt{1+(y'')^2}=\cosh\tfrac x4\).'
+    explanation: '\(2\pi\cdot4\cosh\tfrac x4\cdot\cosh\tfrac x4\).'
+  213:
+    topic: s7-4
+    question: 'Each of the formulas \(\displaystyle\int\operatorname{sech}x\,dx=\tan^{-1}(\sinh x)+C\) and \(\displaystyle\int\operatorname{sech}x\,dx=\sin^{-1}(\tanh x)+C\) is verified by'
+    A: 'plugging in \(x=0\) only'
+    B: differentiating the right-hand side
+    C: integrating the left-hand side twice
+    D: comparing graphs at three points
+    answer: B
+    hint: 'Differentiate: \(\dfrac{\cosh x}{1+\sinh^2x}=\dfrac{1}{\cosh x}\).'
+    explanation: 'Both derivatives equal \(\operatorname{sech}x\), so the two antiderivatives differ by a constant (and both are 0 at \(x=0\)).'

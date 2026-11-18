@@ -1,0 +1,2711 @@
+# Chapter 5: Integration
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 5.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 5: Integration"
+description: Estimating with finite sums, sigma notation, the definite integral, the Fundamental Theorem of Calculus, substitution, and area between curves.
+topics:
+  s5-1:
+    title: 5.1 Estimating with Finite Sums
+  s5-2:
+    title: 5.2 Sigma Notation and Limits of Finite Sums
+  s5-3:
+    title: 5.3 The Definite Integral
+  s5-4:
+    title: 5.4 The Fundamental Theorem of Calculus
+  s5-5:
+    title: 5.5 Indefinite Integrals and the Substitution Rule
+  s5-6:
+    title: 5.6 Substitution and Area Between Curves
+questions:
+  1:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=x^2\) between \(x=0\) and \(x=1\) using a lower sum with two rectangles of equal width.'
+    A: '\(\frac{1}{8}\)'
+    B: '\(- \frac{1}{8}\)'
+    C: '\(\frac{1}{16}\)'
+    D: '\(\frac{1}{4}\)'
+    answer: A
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A lower sum uses the smaller function value on each subinterval.'
+    explanation: 'With \(\Delta x=\frac{1}{2}\) the sum is \(\frac{1}{8}\).'
+  2:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=x^2\) between \(x=0\) and \(x=1\) using an upper sum with four rectangles of equal width.'
+    A: '\(\frac{15}{16}\)'
+    B: '\(\frac{15}{64}\)'
+    C: '\(- \frac{15}{32}\)'
+    D: '\(\frac{15}{32}\)'
+    answer: D
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A upper sum uses the larger function value on each subinterval.'
+    explanation: 'With \(\Delta x=\frac{1}{4}\) the sum is \(\frac{15}{32}\).'
+  3:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=x^3\) between \(x=0\) and \(x=1\) using a lower sum with two rectangles of equal width.'
+    A: '\(- \frac{1}{16}\)'
+    B: '\(\frac{1}{8}\)'
+    C: '\(\frac{1}{32}\)'
+    D: '\(\frac{1}{16}\)'
+    answer: D
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A lower sum uses the smaller function value on each subinterval.'
+    explanation: 'With \(\Delta x=\frac{1}{2}\) the sum is \(\frac{1}{16}\).'
+  4:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=x^3\) between \(x=0\) and \(x=1\) using an upper sum with four rectangles of equal width.'
+    A: '\(\frac{25}{128}\)'
+    B: '\(\frac{25}{64}\)'
+    C: '\(- \frac{25}{64}\)'
+    D: '\(\frac{25}{32}\)'
+    answer: B
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A upper sum uses the larger function value on each subinterval.'
+    explanation: 'With \(\Delta x=\frac{1}{4}\) the sum is \(\frac{25}{64}\).'
+  5:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=1/x\) between \(x=1\) and \(x=5\) using a lower sum with two rectangles of equal width.'
+    A: '\(- \frac{16}{15}\)'
+    B: '\(\frac{16}{15}\)'
+    C: '\(\frac{32}{15}\)'
+    D: '\(\frac{8}{15}\)'
+    answer: B
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A lower sum uses the smaller function value on each subinterval.'
+    explanation: 'With \(\Delta x=2\) the sum is \(\frac{16}{15}\).'
+  6:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=1/x\) between \(x=1\) and \(x=5\) using an upper sum with four rectangles of equal width.'
+    A: '\(\frac{25}{24}\)'
+    B: '\(\frac{25}{6}\)'
+    C: '\(\frac{25}{12}\)'
+    D: '\(- \frac{25}{12}\)'
+    answer: C
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A upper sum uses the larger function value on each subinterval.'
+    explanation: 'With \(\Delta x=1\) the sum is \(\frac{25}{12}\).'
+  7:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=4-x^2\) between \(x=-2\) and \(x=2\) using a lower sum with two rectangles of equal width.'
+    A: '\(-1\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A lower sum uses the smaller function value on each subinterval.'
+    explanation: 'With \(\Delta x=2\) the sum is \(0\).'
+  8:
+    topic: s5-1
+    question: 'Estimate the area under the graph of \(f(x)=4-x^2\) between \(x=-2\) and \(x=2\) using an upper sum with four rectangles of equal width.'
+    A: '\(-14\)'
+    B: '\(28\)'
+    C: '\(14\)'
+    D: '\(7\)'
+    answer: C
+    hint: 'The width of each rectangle is \(\dfrac{b-a}{n}\). A upper sum uses the larger function value on each subinterval.'
+    explanation: 'With \(\Delta x=1\) the sum is \(14\).'
+  9:
+    topic: s5-1
+    question: 'Use the midpoint rule with four rectangles to estimate the area under \(f(x)=x^2\) between \(x=0\) and \(x=1\).'
+    A: '\(\frac{21}{64}\)'
+    B: '\(\frac{21}{128}\)'
+    C: '\(\frac{21}{32}\)'
+    D: '\(- \frac{21}{64}\)'
+    answer: A
+    hint: 'Evaluate \(f\) at the midpoint of each subinterval and multiply the sum by \(\Delta x\).'
+    explanation: 'With \(\Delta x=\frac{1}{4}\) the midpoint sum is \(\frac{21}{64}\).'
+  10:
+    topic: s5-1
+    question: 'Use the midpoint rule with four rectangles to estimate the area under \(f(x)=x^3\) between \(x=0\) and \(x=1\).'
+    A: '\(\frac{31}{256}\)'
+    B: '\(\frac{31}{64}\)'
+    C: '\(\frac{31}{128}\)'
+    D: '\(- \frac{31}{128}\)'
+    answer: C
+    hint: 'Evaluate \(f\) at the midpoint of each subinterval and multiply the sum by \(\Delta x\).'
+    explanation: 'With \(\Delta x=\frac{1}{4}\) the midpoint sum is \(\frac{31}{128}\).'
+  11:
+    topic: s5-1
+    question: 'Use the midpoint rule with four rectangles to estimate the area under \(f(x)=1/x\) between \(x=1\) and \(x=5\).'
+    A: '\(- \frac{496}{315}\)'
+    B: '\(\frac{992}{315}\)'
+    C: '\(\frac{248}{315}\)'
+    D: '\(\frac{496}{315}\)'
+    answer: D
+    hint: 'Evaluate \(f\) at the midpoint of each subinterval and multiply the sum by \(\Delta x\).'
+    explanation: 'With \(\Delta x=1\) the midpoint sum is \(\frac{496}{315}\).'
+  12:
+    topic: s5-1
+    question: 'Use the midpoint rule with four rectangles to estimate the area under \(f(x)=4-x^2\) between \(x=-2\) and \(x=2\).'
+    A: '\(22\)'
+    B: '\(\frac{11}{2}\)'
+    C: '\(11\)'
+    D: '\(-11\)'
+    answer: C
+    hint: 'Evaluate \(f\) at the midpoint of each subinterval and multiply the sum by \(\Delta x\).'
+    explanation: 'With \(\Delta x=1\) the midpoint sum is \(11\).'
+  13:
+    topic: s5-1
+    question: 'A model train''s velocity (in./s) at \(t=0,1,\dots,10\) s is \(0,12,22,10,5,13,11,6,2,6,0\). Using left-endpoint values with 10 subintervals of length 1, the distance traveled is about'
+    A: '\(92\)'
+    B: '\(77\)'
+    C: '\(87\)'
+    D: '\(97\)'
+    answer: C
+    hint: 'Add the first ten velocities and multiply by \(\Delta t=1\).'
+    explanation: '\(0+12+22+10+5+13+11+6+2+6=87\) inches.'
+  14:
+    topic: s5-1
+    question: For the same velocities, using right-endpoint values gives a distance estimate of
+    A: '\(100\)'
+    B: '\(87\)'
+    C: '\(79\)'
+    D: '\(94\)'
+    answer: B
+    hint: Add the last ten velocities.
+    explanation: '\(12+22+10+5+13+11+6+2+6+0=87\) inches, the same as the left-endpoint estimate because the velocity is 0 at both ends.'
+  15:
+    topic: s5-1
+    question: 'Tide-water velocity (m/s) is recorded every 5 min for an hour: \(1,1.2,1.7,2.0,1.8,1.6,1.4,1.2,1.0,1.8,1.5,1.2,0\). The distance a bottle travels upstream, by the left-endpoint estimate (12 intervals of 300 s), is about'
+    A: '\(87\text{ m}\)'
+    B: '\(5220\text{ m}\)'
+    C: '\(4920\text{ m}\)'
+    D: '\(10440\text{ m}\)'
+    answer: B
+    hint: 'Convert minutes to seconds: each subinterval is \(5\cdot60=300\) s.'
+    explanation: 'Left-endpoint sum \(=(1+1.2+1.7+2.0+1.8+1.6+1.4+1.2+1.0+1.8+1.5+1.2)\cdot300=5220\) m (right-endpoint estimate: 4920 m).'
+  16:
+    topic: s5-1
+    question: 'A falling object''s acceleration (ft/s\(^2\)) at \(t=0,\dots,5\) s is \(32.00,19.41,11.77,7.14,4.33,2.63\). Since acceleration is decreasing, an upper estimate for the speed at \(t=5\) uses'
+    A: 'right-endpoint values: about \(74.65\) ft/s'
+    B: 'left-endpoint values: about \(74.65\) ft/s'
+    C: 'right-endpoint values: about \(45.28\) ft/s'
+    D: 'left-endpoint values: about \(45.28\) ft/s'
+    answer: B
+    hint: For a decreasing function, left endpoints give the larger (upper) sum.
+    explanation: '\(32.00+19.41+11.77+7.14+4.33=74.65\) (the lower estimate with right endpoints is \(45.28\)).'
+  17:
+    topic: s5-1
+    question: 'A projectile is shot straight up at 400 ft/s with only gravity acting (\(g=32\) ft/s\(^2\)). Its velocity after 5 s is'
+    A: '\(400\) ft/s'
+    B: '\(240\) ft/s'
+    C: '\(560\) ft/s'
+    D: '\(160\) ft/s'
+    answer: B
+    hint: '\(v=400-32t\).'
+    explanation: '\(400-160=240\) ft/s. An upper estimate for the height uses the velocity at the start of each interval.'
+  18:
+    topic: s5-1
+    question: 'Use four midpoint rectangles to estimate the average value of \(f(x)=x^3\) on \([0,2]\).'
+    A: '\(\frac{31}{32}\)'
+    B: '\(\frac{31}{16}\)'
+    C: '\(- \frac{31}{16}\)'
+    D: '\(\frac{31}{8}\)'
+    answer: B
+    hint: The average is the sum of the function values divided by the number of subintervals.
+    explanation: 'Midpoints \(0.25,0.75,1.25,1.75\); the values sum to \(7.5\) when cubed (\(\tfrac1{64}+\tfrac{27}{64}+\tfrac{125}{64}+\tfrac{343}{64}=\tfrac{496}{64}\)), so the average is \(\dfrac{496/64}{4}=\dfrac{31}{16}\).'
+  19:
+    topic: s5-1
+    question: 'Use four midpoint subintervals to estimate the average value of \(f(x)=1/x\) on \([1,9]\).'
+    A: '\(\frac{25}{192}\)'
+    B: '\(- \frac{25}{96}\)'
+    C: '\(\frac{25}{96}\)'
+    D: '\(\frac{25}{48}\)'
+    answer: C
+    hint: Midpoints are 2, 4, 6, 8.
+    explanation: '\(\tfrac14\left(\tfrac12+\tfrac14+\tfrac16+\tfrac18\right)=\tfrac{25}{96}\).'
+  20:
+    topic: s5-1
+    question: 'A regular \(n\)-gon is inscribed in a circle of radius 1. As \(n\to\infty\), the area of the polygon'
+    A: 'approaches \(\pi\), the area of the circle'
+    B: grows without bound
+    C: 'approaches \(2\pi\)'
+    D: 'approaches \(1\)'
+    answer: A
+    hint: 'Each of the \(n\) triangles has area \(\tfrac12\sin\tfrac{2\pi}{n}\).'
+    explanation: '\(A_n=\tfrac n2\sin\tfrac{2\pi}n\to\pi\).'
+  21:
+    topic: s5-1
+    question: The area of a regular 4-gon inscribed in a circle of radius 1 is
+    A: '\(1\)'
+    B: '\(\pi\)'
+    C: '\(2\)'
+    D: '\(4\)'
+    answer: C
+    hint: 'It is \(n\) congruent triangles with two sides of length 1 and included angle \(2\pi/n\).'
+    explanation: '\(\tfrac n2\sin\tfrac{2\pi}n=2\approx2.0000\), a bit less than \(\pi\).'
+  22:
+    topic: s5-1
+    question: The area of a regular 8-gon inscribed in a circle of radius 1 is
+    A: '\(\pi\)'
+    B: '\(2 \sqrt{2}\)'
+    C: '\(4 \sqrt{2}\)'
+    D: '\(\sqrt{2}\)'
+    answer: B
+    hint: 'It is \(n\) congruent triangles with two sides of length 1 and included angle \(2\pi/n\).'
+    explanation: '\(\tfrac n2\sin\tfrac{2\pi}n=2 \sqrt{2}\approx2.8284\), a bit less than \(\pi\).'
+  23:
+    topic: s5-1
+    question: 'A lower sum and an upper sum for the same partition of an increasing function \(f\) on \([a,b]\) differ by'
+    A: '\(f(a)(b-a)\)'
+    B: '\(\Delta x^2\)'
+    C: '\(f(b)\,\Delta x\)'
+    D: '\([f(b)-f(a)]\,\Delta x\)'
+    answer: D
+    hint: The difference telescopes into a single rectangle.
+    explanation: 'The extra rectangles can be slid together into one of width \(\Delta x\) and height \(f(b)-f(a)\).'
+  24:
+    topic: s5-1
+    question: 'If \(f\) is decreasing on \([a,b]\), a left-endpoint Riemann sum is'
+    A: a midpoint sum
+    B: an upper sum (overestimate)
+    C: a lower sum (underestimate)
+    D: always exactly equal to the area
+    answer: B
+    hint: On each subinterval the left endpoint has the largest value.
+    explanation: Right endpoints give a lower sum for a decreasing function.
+  25:
+    topic: s5-1
+    question: 'If \(f\) is increasing on \([a,b]\), a right-endpoint Riemann sum is'
+    A: an upper sum (overestimate)
+    B: always exact
+    C: a lower sum (underestimate)
+    D: equal to the midpoint sum
+    answer: A
+    hint: On each subinterval the right endpoint has the largest value.
+    explanation: Left endpoints give a lower sum.
+  26:
+    topic: s5-1
+    question: 'A tanker''s leakage (gal/h) over hours 0–5 is \(50,70,97,136,190,265\). Because the rate is increasing, the total escaped in the first 5 hours is at least'
+    A: '\(265\) gallons'
+    B: '\(50\) gallons'
+    C: '\(758\) gallons'
+    D: '\(543\) gallons (left-endpoint sum)'
+    answer: D
+    hint: For an increasing rate, left endpoints give the lower estimate.
+    explanation: '\(50+70+97+136+190=543\); the upper (right-endpoint) estimate is \(70+97+136+190+265=758\).'
+  27:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{2}\frac{6 k}{k + 1}\).'
+    A: '\(14\)'
+    B: '\(7\)'
+    C: '\(8\)'
+    D: '\(-7\)'
+    answer: B
+    hint: Write out each term and add.
+    explanation: 'The terms are \(3\),\ \(4\), and their sum is \(7\).'
+  28:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{3}\frac{k - 1}{k}\).'
+    A: '\(\frac{13}{6}\)'
+    B: '\(- \frac{7}{6}\)'
+    C: '\(\frac{7}{3}\)'
+    D: '\(\frac{7}{6}\)'
+    answer: D
+    hint: Write out each term and add.
+    explanation: 'The terms are \(0\),\ \(\frac{1}{2}\),\ \(\frac{2}{3}\), and their sum is \(\frac{7}{6}\).'
+  29:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{4}\left(-1\right)^{k}\).'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(-1\)'
+    answer: A
+    hint: Write out each term and add.
+    explanation: 'The terms are \(-1\),\ \(1\),\ \(-1\),\ \(1\), and their sum is \(0\).'
+  30:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{5}0\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(0\)'
+    C: '\(1\)'
+    D: '\(-1\)'
+    answer: B
+    hint: Write out each term and add.
+    explanation: 'The terms are \(0\),\ \(0\),\ \(0\),\ \(0\),\ \(0\), and their sum is \(0\).'
+  31:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{3}\left(-1\right)^{k + 1} \sin{\left(\frac{\pi}{k} \right)}\).'
+    A: '\(-2 + \sqrt{3}\)'
+    B: '\(-1 + \frac{\sqrt{3}}{2}\)'
+    C: '\(1 - \frac{\sqrt{3}}{2}\)'
+    D: '\(\frac{\sqrt{3}}{2}\)'
+    answer: B
+    hint: Write out each term and add.
+    explanation: 'The terms are \(0\),\ \(-1\),\ \(\frac{\sqrt{3}}{2}\), and their sum is \(-1 + \frac{\sqrt{3}}{2}\).'
+  32:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{4}1\).'
+    A: '\(-4\)'
+    B: '\(5\)'
+    C: '\(4\)'
+    D: '\(8\)'
+    answer: C
+    hint: Write out each term and add.
+    explanation: 'The terms are \(1\),\ \(1\),\ \(1\),\ \(1\), and their sum is \(4\).'
+  33:
+    topic: s5-2
+    question: 'Which of these expresses \(1+2+4+8+16+32\) in sigma notation?'
+    A: '\(\displaystyle\sum_{k=0}^{5}2^k\)'
+    B: '\(\displaystyle\sum_{k=1}^{5}2^k\)'
+    C: '\(\displaystyle\sum_{k=1}^{6}2^{k}\)'
+    D: '\(\displaystyle\sum_{k=0}^{6}2^k\)'
+    answer: A
+    hint: 'The first term is \(2^0\) and the last is \(2^5\).'
+    explanation: 'Equivalent forms: \(\sum_{k=1}^{6}2^{k-1}\) and \(\sum_{k=-1}^{4}2^{k+1}\).'
+  34:
+    topic: s5-2
+    question: 'Which sum expresses \(1-2+4-8+16-32\)?'
+    A: '\(\displaystyle\sum_{k=1}^{6}(-2)^{k-1}\)'
+    B: '\(\displaystyle\sum_{k=0}^{6}(-2)^k\)'
+    C: '\(\displaystyle\sum_{k=1}^{6}2^{k-1}\)'
+    D: '\(\displaystyle\sum_{k=1}^{6}(-2)^{k}\)'
+    answer: A
+    hint: 'The first term is \((-2)^0=1\).'
+    explanation: 'Check: the terms are \(1,-2,4,-8,16,-32\).'
+  35:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=-5\) and \(\sum_{k=1}^{n}b_k=6\). Then \(\displaystyle\sum_{k=1}^n 3a_k=\)'
+    A: '\(- \frac{15}{2}\)'
+    B: '\(-30\)'
+    C: '\(15\)'
+    D: '\(-15\)'
+    answer: D
+    hint: Use the Sum, Difference and Constant Multiple rules for finite sums.
+    explanation: 'Substitute the totals: the value is \(-15\).'
+  36:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=-5\) and \(\sum_{k=1}^{n}b_k=6\). Then \(\displaystyle\sum_{k=1}^n \dfrac{b_k}{6}=\)'
+    A: '\(-1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: C
+    hint: Use the Sum, Difference and Constant Multiple rules for finite sums.
+    explanation: 'Substitute the totals: the value is \(1\).'
+  37:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=-5\) and \(\sum_{k=1}^{n}b_k=6\). Then \(\displaystyle\sum_{k=1}^n (a_k+b_k)=\)'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(2\)'
+    D: '\(-1\)'
+    answer: A
+    hint: Use the Sum, Difference and Constant Multiple rules for finite sums.
+    explanation: 'Substitute the totals: the value is \(1\).'
+  38:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=-5\) and \(\sum_{k=1}^{n}b_k=6\). Then \(\displaystyle\sum_{k=1}^n (a_k-b_k)=\)'
+    A: '\(11\)'
+    B: '\(-22\)'
+    C: '\(-11\)'
+    D: '\(- \frac{11}{2}\)'
+    answer: C
+    hint: Use the Sum, Difference and Constant Multiple rules for finite sums.
+    explanation: 'Substitute the totals: the value is \(-11\).'
+  39:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=-5\) and \(\sum_{k=1}^{n}b_k=6\). Then \(\displaystyle\sum_{k=1}^n (b_k-2a_k)=\)'
+    A: '\(8\)'
+    B: '\(-16\)'
+    C: '\(32\)'
+    D: '\(16\)'
+    answer: D
+    hint: Use the Sum, Difference and Constant Multiple rules for finite sums.
+    explanation: 'Substitute the totals: the value is \(16\).'
+  40:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=0\) and \(\sum_{k=1}^{n}b_k=1\). Then \(\displaystyle\sum_{k=1}^n 8a_k=\)'
+    A: '\(3\)'
+    B: '\(1\)'
+    C: '\(5\)'
+    D: '\(0\)'
+    answer: D
+    hint: Use the Constant Multiple rule.
+    explanation: 'The value is \(0\).'
+  41:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=0\) and \(\sum_{k=1}^{n}b_k=1\). Then \(\displaystyle\sum_{k=1}^n 250b_k=\)'
+    A: '\(250\)'
+    B: '\(-250\)'
+    C: '\(251\)'
+    D: '\(500\)'
+    answer: A
+    hint: Use the Constant Multiple rule.
+    explanation: 'The value is \(250\).'
+  42:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}a_k=0\) and \(\sum_{k=1}^{n}b_k=1\). Then \(\displaystyle\sum_{k=1}^{n}(a_k+1)=\)'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(n\)'
+    D: '\(n+1\)'
+    answer: C
+    hint: 'Split into \(\sum a_k+\sum1\).'
+    explanation: '\(0+n=n\).'
+  43:
+    topic: s5-2
+    question: 'Suppose \(\sum_{k=1}^{n}b_k=1\). Then \(\displaystyle\sum_{k=1}^{n}(b_k-1)=\)'
+    A: '\(0\)'
+    B: '\(1-n\)'
+    C: '\(n-1\)'
+    D: '\(-n\)'
+    answer: B
+    hint: '\(\sum_{k=1}^n1=n\).'
+    explanation: '\(1-n\).'
+  44:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{10}k\).'
+    A: '\(110\)'
+    B: '\(55\)'
+    C: '\(45\)'
+    D: '\(65\)'
+    answer: B
+    hint: 'Use the closed forms \(\dfrac{n(n+1)}2\), \(\dfrac{n(n+1)(2n+1)}6\), \(\left[\dfrac{n(n+1)}2\right]^2\).'
+    explanation: 'The value is \(55\).'
+  45:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{10}k^2\).'
+    A: '\(395\)'
+    B: '\(375\)'
+    C: '\(385\)'
+    D: '\(770\)'
+    answer: C
+    hint: 'Use the closed forms \(\dfrac{n(n+1)}2\), \(\dfrac{n(n+1)(2n+1)}6\), \(\left[\dfrac{n(n+1)}2\right]^2\).'
+    explanation: 'The value is \(385\).'
+  46:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{10}k^3\).'
+    A: '\(3015\)'
+    B: '\(3025\)'
+    C: '\(3035\)'
+    D: '\(6050\)'
+    answer: B
+    hint: 'Use the closed forms \(\dfrac{n(n+1)}2\), \(\dfrac{n(n+1)(2n+1)}6\), \(\left[\dfrac{n(n+1)}2\right]^2\).'
+    explanation: 'The value is \(3025\).'
+  47:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{13}k\).'
+    A: '\(182\)'
+    B: '\(81\)'
+    C: '\(101\)'
+    D: '\(91\)'
+    answer: D
+    hint: 'Use the closed forms \(\dfrac{n(n+1)}2\), \(\dfrac{n(n+1)(2n+1)}6\), \(\left[\dfrac{n(n+1)}2\right]^2\).'
+    explanation: 'The value is \(91\).'
+  48:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{13}k^2\).'
+    A: '\(809\)'
+    B: '\(819\)'
+    C: '\(1638\)'
+    D: '\(829\)'
+    answer: B
+    hint: 'Use the closed forms \(\dfrac{n(n+1)}2\), \(\dfrac{n(n+1)(2n+1)}6\), \(\left[\dfrac{n(n+1)}2\right]^2\).'
+    explanation: 'The value is \(819\).'
+  49:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{13}k^3\).'
+    A: '\(8281\)'
+    B: '\(8271\)'
+    C: '\(8291\)'
+    D: '\(16562\)'
+    answer: A
+    hint: 'Use the closed forms \(\dfrac{n(n+1)}2\), \(\dfrac{n(n+1)(2n+1)}6\), \(\left[\dfrac{n(n+1)}2\right]^2\).'
+    explanation: 'The value is \(8281\).'
+  50:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{7}(-2k)\).'
+    A: '\(-56\)'
+    B: '\(-58\)'
+    C: '\(-54\)'
+    D: '\(56\)'
+    answer: A
+    hint: 'Split the sum into sums of \(k\), \(k^2\) and constants.'
+    explanation: 'The value is \(-56\).'
+  51:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{5}\dfrac{\pi k}{15}\).'
+    A: '\(-2 + \pi\)'
+    B: '\(\pi\)'
+    C: '\(2 + \pi\)'
+    D: '\(- \pi\)'
+    answer: B
+    hint: 'Split the sum into sums of \(k\), \(k^2\) and constants.'
+    explanation: 'The value is \(\pi\).'
+  52:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{6}(3-k^2)\).'
+    A: '\(-75\)'
+    B: '\(73\)'
+    C: '\(-71\)'
+    D: '\(-73\)'
+    answer: D
+    hint: 'Split the sum into sums of \(k\), \(k^2\) and constants.'
+    explanation: 'The value is \(-73\).'
+  53:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{6}(k^2-5)\).'
+    A: '\(59\)'
+    B: '\(61\)'
+    C: '\(63\)'
+    D: '\(-61\)'
+    answer: B
+    hint: 'Split the sum into sums of \(k\), \(k^2\) and constants.'
+    explanation: 'The value is \(61\).'
+  54:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{5}k(3k+5)\).'
+    A: '\(-240\)'
+    B: '\(238\)'
+    C: '\(242\)'
+    D: '\(240\)'
+    answer: D
+    hint: 'Split the sum into sums of \(k\), \(k^2\) and constants.'
+    explanation: 'The value is \(240\).'
+  55:
+    topic: s5-2
+    question: 'Evaluate \(\displaystyle\sum_{k=1}^{7}k(2k+1)\).'
+    A: '\(-308\)'
+    B: '\(310\)'
+    C: '\(308\)'
+    D: '\(306\)'
+    answer: C
+    hint: 'Split the sum into sums of \(k\), \(k^2\) and constants.'
+    explanation: 'The value is \(308\).'
+  56:
+    topic: s5-2
+    question: 'The norm of the partition \(P=\{0,1.2,1.5,2.3,2.6,3\}\) of \([0,3]\) is'
+    A: '\(3\)'
+    B: '\(0.6\)'
+    C: '\(0.3\)'
+    D: '\(1.2\)'
+    answer: D
+    hint: The norm is the length of the longest subinterval.
+    explanation: 'The lengths are \(1.2,0.3,0.8,0.3,0.4\); the largest is \(1.2\).'
+  57:
+    topic: s5-2
+    question: 'The norm of the partition \(P=\{-2,-1.6,-0.5,0,0.8,1\}\) of \([-2,1]\) is'
+    A: '\(1.1\)'
+    B: '\(3\)'
+    C: '\(0.4\)'
+    D: '\(0.8\)'
+    answer: A
+    hint: Find the longest subinterval.
+    explanation: 'The lengths are \(0.4,1.1,0.5,0.8,0.2\).'
+  58:
+    topic: s5-2
+    question: 'For \(f(x)=1-x^2\) on \([0,1]\), an upper sum with \(n\) equal subintervals is \(\displaystyle\sum_{k=1}^{n}f\!\left(\tfrac{k-1}{n}\right)\dfrac1n\). Its limit as \(n\to\infty\) is'
+    A: '\(\dfrac12\)'
+    B: '\(\dfrac23\)'
+    C: '\(\dfrac13\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'The upper sum for a decreasing function uses left endpoints. Use \(\sum k^2=\tfrac{n(n+1)(2n+1)}6\).'
+    explanation: 'The upper sum is \(1-\tfrac{(n-1)(2n-1)}{6n^2}\to1-\tfrac13=\tfrac23\).'
+  59:
+    topic: s5-2
+    question: 'Taking the limit of the upper sums gives the area under \(f(x)=2 x\) over \([0,3]\) as'
+    A: '\(\frac{9}{2}\)'
+    B: '\(18\)'
+    C: '\(-9\)'
+    D: '\(9\)'
+    answer: D
+    hint: 'The limit of Riemann sums with \(n\to\infty\) equals the definite integral.'
+    explanation: 'The area is \(\displaystyle\int_{0}^{3}f(x)\,dx=9\).'
+  60:
+    topic: s5-2
+    question: 'Taking the limit of the upper sums gives the area under \(f(x)=x^{2} + 1\) over \([0,3]\) as'
+    A: '\(12\)'
+    B: '\(-12\)'
+    C: '\(6\)'
+    D: '\(24\)'
+    answer: A
+    hint: 'The limit of Riemann sums with \(n\to\infty\) equals the definite integral.'
+    explanation: 'The area is \(\displaystyle\int_{0}^{3}f(x)\,dx=12\).'
+  61:
+    topic: s5-2
+    question: 'Taking the limit of the upper sums gives the area under \(f(x)=3 x^{2}\) over \([0,1]\) as'
+    A: '\(1\)'
+    B: '\(2\)'
+    C: '\(-1\)'
+    D: '\(\frac{1}{2}\)'
+    answer: A
+    hint: 'The limit of Riemann sums with \(n\to\infty\) equals the definite integral.'
+    explanation: 'The area is \(\displaystyle\int_{0}^{1}f(x)\,dx=1\).'
+  62:
+    topic: s5-2
+    question: 'Taking the limit of the upper sums gives the area under \(f(x)=x^{2} + x\) over \([0,1]\) as'
+    A: '\(\frac{5}{6}\)'
+    B: '\(\frac{5}{12}\)'
+    C: '\(- \frac{5}{6}\)'
+    D: '\(\frac{5}{3}\)'
+    answer: A
+    hint: 'The limit of Riemann sums with \(n\to\infty\) equals the definite integral.'
+    explanation: 'The area is \(\displaystyle\int_{0}^{1}f(x)\,dx=\frac{5}{6}\).'
+  63:
+    topic: s5-2
+    question: 'Taking the limit of the upper sums gives the area under \(f(x)=2 x^{2} + 3 x\) over \([0,1]\) as'
+    A: '\(\frac{13}{3}\)'
+    B: '\(\frac{13}{6}\)'
+    C: '\(- \frac{13}{6}\)'
+    D: '\(\frac{13}{12}\)'
+    answer: B
+    hint: 'The limit of Riemann sums with \(n\to\infty\) equals the definite integral.'
+    explanation: 'The area is \(\displaystyle\int_{0}^{1}f(x)\,dx=\frac{13}{6}\).'
+  64:
+    topic: s5-2
+    question: 'If \(\displaystyle\sum_{k=1}^{n}c_k\) represents a Riemann sum for \(f\) over \([0,1]\), the area under \(y=x\) is \(\displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}\dfrac kn\cdot\dfrac1n=\)'
+    A: '\(\dfrac12\)'
+    B: '\(\dfrac13\)'
+    C: '\(1\)'
+    D: '\(\infty\)'
+    answer: A
+    hint: '\(\sum k=\tfrac{n(n+1)}2\).'
+    explanation: '\(\dfrac{n(n+1)}{2n^2}\to\dfrac12\).'
+  65:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}c_k^2\,\Delta x_k\), where \(P\) is a partition of \([0,2]\), as a definite integral.'
+    A: '\(\displaystyle\int_2^0x^2\,dx\)'
+    B: '\(\displaystyle\int_0^2x^2\,dx\)'
+    C: '\(\displaystyle\int_0^2 2x\,dx\)'
+    D: '\(\displaystyle\int_0^2x\,dx\)'
+    answer: B
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  66:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}2c_k^3\,\Delta x_k\), where \(P\) is a partition of \([-1,0]\), as a definite integral.'
+    A: '\(\displaystyle\int_{-1}^0 2x^3\,dx\)'
+    B: '\(\displaystyle\int_0^{-1}2x^3\,dx\)'
+    C: '\(\displaystyle\int_{-1}^0 6x^2\,dx\)'
+    D: '\(\displaystyle\int_{-1}^0 2x^2\,dx\)'
+    answer: A
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  67:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}\left(c_k^2-3c_k\right)\Delta x_k\), where \(P\) is a partition of \([-7,5]\), as a definite integral.'
+    A: '\(\displaystyle\int_{-7}^{5}(2x-3)\,dx\)'
+    B: '\(\displaystyle\int_{-7}^{5}(x^2-3x)\,dx\)'
+    C: '\(\displaystyle\int_{-7}^{5}(x^3-3x^2)\,dx\)'
+    D: '\(\displaystyle\int_{5}^{-7}(x^2-3x)\,dx\)'
+    answer: B
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  68:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}\dfrac1{c_k}\,\Delta x_k\), where \(P\) is a partition of \([1,4]\), as a definite integral.'
+    A: '\(\displaystyle\int_1^4 x\,dx\)'
+    B: '\(\displaystyle\int_1^4\dfrac1{x^2}\,dx\)'
+    C: '\(\displaystyle\int_1^4\dfrac1x\,dx\)'
+    D: '\(\displaystyle\int_0^1\dfrac1x\,dx\)'
+    answer: C
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  69:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}\dfrac{1}{1-c_k}\,\Delta x_k\), where \(P\) is a partition of \([2,3]\), as a definite integral.'
+    A: '\(\displaystyle\int_2^3\dfrac1{1-x}\,dx\)'
+    B: '\(\displaystyle\int_0^1\dfrac1{1-x}\,dx\)'
+    C: '\(\displaystyle\int_2^3(1-x)\,dx\)'
+    D: '\(\displaystyle\int_2^3\dfrac1{1+x}\,dx\)'
+    answer: A
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  70:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}\sqrt{4-c_k^2}\,\Delta x_k\), where \(P\) is a partition of \([0,1]\), as a definite integral.'
+    A: '\(\displaystyle\int_0^2\sqrt{4-x^2}\,dx\)'
+    B: '\(\displaystyle\int_0^1(4-x^2)\,dx\)'
+    C: '\(\displaystyle\int_0^1\sqrt{4-x}\,dx\)'
+    D: '\(\displaystyle\int_0^1\sqrt{4-x^2}\,dx\)'
+    answer: D
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  71:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}\sec(c_k)\,\Delta x_k\), where \(P\) is a partition of \([-\pi/4,0]\), as a definite integral.'
+    A: '\(\displaystyle\int_0^{\pi/4}\sec x\,dx\)'
+    B: '\(\displaystyle\int_{-\pi/4}^0\sec x\,dx\)'
+    C: '\(\displaystyle\int_{-\pi/4}^0\tan x\,dx\)'
+    D: '\(\displaystyle\int_{-\pi/4}^0\sec^2x\,dx\)'
+    answer: B
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  72:
+    topic: s5-3
+    question: 'Express \(\displaystyle\lim_{\|P\|\to0}\sum_{k=1}^{n}\tan(c_k)\,\Delta x_k\), where \(P\) is a partition of \([0,\pi/4]\), as a definite integral.'
+    A: '\(\displaystyle\int_0^{\pi/4}\cot x\,dx\)'
+    B: '\(\displaystyle\int_0^{\pi/4}\tan x\,dx\)'
+    C: '\(\displaystyle\int_{-\pi/4}^0\tan x\,dx\)'
+    D: '\(\displaystyle\int_0^{\pi/4}\sec x\,dx\)'
+    answer: B
+    hint: 'A Riemann sum becomes \(\int_a^bf(x)\,dx\): the partition gives the limits and the \(c_k\) expression gives \(f\).'
+    explanation: 'The partition interval gives the limits, and replacing \(c_k\) by \(x\) gives the integrand.'
+  73:
+    topic: s5-3
+    question: 'Suppose \(\int_1^2f=-4\), \(\int_1^5f=6\) and \(\int_1^5g=8\). Then \(\displaystyle\int_2^5f(x)\,dx=\)'
+    A: '\(-10\)'
+    B: '\(14\)'
+    C: '\(2\)'
+    D: '\(10\)'
+    answer: D
+    hint: 'Additivity: \(\int_1^5=\int_1^2+\int_2^5\).'
+    explanation: '\(6-(-4)=10\).'
+  74:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_1^5\left[f(x)-g(x)\right]dx=\)'
+    A: '\(-14\)'
+    B: '\(2\)'
+    C: '\(-2\)'
+    D: '\(14\)'
+    answer: C
+    hint: The integral of a difference is the difference of integrals.
+    explanation: '\(6-8=-2\).'
+  75:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_1^5\left[4f(x)-g(x)\right]dx=\)'
+    A: '\(32\)'
+    B: '\(14\)'
+    C: '\(-16\)'
+    D: '\(16\)'
+    answer: D
+    hint: Constant Multiple and Difference rules.
+    explanation: '\(4\cdot6-8=16\).'
+  76:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_5^1g(x)\,dx=\)'
+    A: '\(8\)'
+    B: '\(0\)'
+    C: '\(-8\)'
+    D: '\(-2\)'
+    answer: C
+    hint: Reversing the limits changes the sign.
+    explanation: '\(-8\).'
+  77:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_2^2g(x)\,dx=\)'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(8\)'
+    D: '\(-8\)'
+    answer: A
+    hint: The interval has no width.
+    explanation: An integral over a single point is 0.
+  78:
+    topic: s5-3
+    question: 'Suppose \(\int_1^9f=-1\), \(\int_7^9f=5\), \(\int_7^9h=4\). Then \(\displaystyle\int_1^9-2f(x)\,dx=\)'
+    A: '\(-2\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(4\)'
+    answer: B
+    hint: 'Constant Multiple Rule with \(-2\).'
+    explanation: '\(-2\cdot(-1)=2\).'
+  79:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_7^9\left[2f(x)-3h(x)\right]dx=\)'
+    A: '\(22\)'
+    B: '\(-22\)'
+    C: '\(-2\)'
+    D: '\(2\)'
+    answer: C
+    hint: '\(2\cdot5-3\cdot4\).'
+    explanation: '\(10-12=-2\).'
+  80:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_1^7f(x)\,dx=\)'
+    A: '\(-4\)'
+    B: '\(4\)'
+    C: '\(6\)'
+    D: '\(-6\)'
+    answer: D
+    hint: 'Additivity: \(\int_1^7=\int_1^9-\int_7^9\).'
+    explanation: '\(-1-5=-6\).'
+  81:
+    topic: s5-3
+    question: 'With the same values, \(\displaystyle\int_9^7\left[h(x)-f(x)\right]dx=\)'
+    A: '\(0\)'
+    B: '\(1\)'
+    C: '\(-1\)'
+    D: '\(9\)'
+    answer: B
+    hint: 'Reverse the limits: \(-\int_7^9(h-f)\).'
+    explanation: '\(-(4-5)=1\).'
+  82:
+    topic: s5-3
+    question: 'If \(\int_1^2f(x)\,dx=5\), then \(\displaystyle\int_1^2\sqrt3\,f(z)\,dz=\)'
+    A: '\(15\)'
+    B: '\(5\)'
+    C: '\(5 \sqrt{3}\)'
+    D: '\(\sqrt{3}\)'
+    answer: C
+    hint: The variable name does not matter, and constants factor out.
+    explanation: '\(\sqrt3\cdot5\).'
+  83:
+    topic: s5-3
+    question: 'If \(\int_0^3f=3\) and \(\int_0^4f=7\), then \(\displaystyle\int_3^4f(z)\,dz=\)'
+    A: '\(21\)'
+    B: '\(-4\)'
+    C: '\(10\)'
+    D: '\(4\)'
+    answer: D
+    hint: '\(\int_0^4=\int_0^3+\int_3^4\).'
+    explanation: '\(7-3=4\).'
+  84:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-2}^{4}\left(\tfrac x2+3\right)dx\).'
+    A: '\(\frac{21}{2}\)'
+    B: '\(21\)'
+    C: '\(-21\)'
+    D: '\(42\)'
+    answer: B
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(21\).'
+  85:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{1/2}^{3/2}(-2x+4)\,dx\).'
+    A: '\(2\)'
+    B: '\(4\)'
+    C: '\(-2\)'
+    D: '\(1\)'
+    answer: A
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(2\).'
+  86:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-3}^{3}\sqrt{9-x^2}\,dx\).'
+    A: '\(- \frac{9 \pi}{2}\)'
+    B: '\(9 \pi\)'
+    C: '\(\frac{9 \pi}{2}\)'
+    D: '\(\frac{9 \pi}{4}\)'
+    answer: C
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(\frac{9 \pi}{2}\).'
+  87:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-4}^{0}\sqrt{16-x^2}\,dx\).'
+    A: '\(4 \pi\)'
+    B: '\(- 4 \pi\)'
+    C: '\(8 \pi\)'
+    D: '\(2 \pi\)'
+    answer: A
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(4 \pi\).'
+  88:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-2}^{1}|x|\,dx\).'
+    A: '\(\frac{5}{4}\)'
+    B: '\(5\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(- \frac{5}{2}\)'
+    answer: C
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(\frac{5}{2}\).'
+  89:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-1}^{1}(1-|x|)\,dx\).'
+    A: '\(-1\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(2\)'
+    answer: B
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(1\).'
+  90:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-1}^{1}(2-|x|)\,dx\).'
+    A: '\(6\)'
+    B: '\(-3\)'
+    C: '\(3\)'
+    D: '\(\frac{3}{2}\)'
+    answer: C
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(3\).'
+  91:
+    topic: s5-3
+    question: 'Use areas of geometric shapes to evaluate \(\displaystyle\int_{-1}^{1}\left(1+\sqrt{1-x^2}\right)dx\).'
+    A: '\(\frac{\pi}{2} + 2\)'
+    B: '\(\pi + 4\)'
+    C: '\(\frac{\pi}{4} + 1\)'
+    D: '\(-2 - \frac{\pi}{2}\)'
+    answer: A
+    hint: Sketch the graph and recognize a triangle, trapezoid or part of a circle.
+    explanation: 'The signed area is \(\frac{\pi}{2} + 2\).'
+  92:
+    topic: s5-3
+    question: 'Use areas to evaluate \(\displaystyle\int_0^b\dfrac x2\,dx\) for \(b>0\).'
+    A: '\(\dfrac{b}{2}\)'
+    B: '\(\dfrac{b^2}{4}\)'
+    C: '\(\dfrac{b^2}{2}\)'
+    D: '\(\dfrac{b^2}{8}\)'
+    answer: B
+    hint: 'The graph is a triangle with base \(b\) and height \(b/2\).'
+    explanation: '\(\tfrac12\cdot b\cdot\tfrac b2=\tfrac{b^2}{4}\).'
+  93:
+    topic: s5-3
+    question: 'Use areas to evaluate \(\displaystyle\int_a^b2s\,ds\) for \(0<a<b\).'
+    A: '\(b^2-a^2\)'
+    B: '\(2(b-a)\)'
+    C: '\(b^2+a^2\)'
+    D: '\(\dfrac{b^2-a^2}{2}\)'
+    answer: A
+    hint: 'The region is a trapezoid with parallel sides \(2a\) and \(2b\).'
+    explanation: '\(\tfrac12(2a+2b)(b-a)=b^2-a^2\).'
+  94:
+    topic: s5-3
+    question: 'Use \(\displaystyle\int_a^bx\,dx=\dfrac{b^2-a^2}{2}\) and \(\displaystyle\int_a^bx^2\,dx=\dfrac{b^3-a^3}{3}\) to evaluate \(\displaystyle\int_{1}^{\sqrt{2}}x\,dx\).'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(- \frac{1}{2}\)'
+    D: '\(\frac{1}{4}\)'
+    answer: B
+    hint: Choose the matching formula and substitute the limits.
+    explanation: 'The value is \(\frac{1}{2}\).'
+  95:
+    topic: s5-3
+    question: 'Use \(\displaystyle\int_a^bx\,dx=\dfrac{b^2-a^2}{2}\) and \(\displaystyle\int_a^bx^2\,dx=\dfrac{b^3-a^3}{3}\) to evaluate \(\displaystyle\int_{0}^{3}x^{2}\,dx\).'
+    A: '\(9\)'
+    B: '\(-9\)'
+    C: '\(\frac{9}{2}\)'
+    D: '\(18\)'
+    answer: A
+    hint: Choose the matching formula and substitute the limits.
+    explanation: 'The value is \(9\).'
+  96:
+    topic: s5-3
+    question: 'Use \(\displaystyle\int_a^bx\,dx=\dfrac{b^2-a^2}{2}\) and \(\displaystyle\int_a^bx^2\,dx=\dfrac{b^3-a^3}{3}\) to evaluate \(\displaystyle\int_{\pi}^{2 \pi}\theta\,d\theta\).'
+    A: '\(\frac{3 \pi^{2}}{2}\)'
+    B: '\(3 \pi^{2}\)'
+    C: '\(- \frac{3 \pi^{2}}{2}\)'
+    D: '\(\frac{3 \pi^{2}}{4}\)'
+    answer: A
+    hint: Choose the matching formula and substitute the limits.
+    explanation: 'The value is \(\frac{3 \pi^{2}}{2}\).'
+  97:
+    topic: s5-3
+    question: 'Use \(\displaystyle\int_a^bx\,dx=\dfrac{b^2-a^2}{2}\) and \(\displaystyle\int_a^bx^2\,dx=\dfrac{b^3-a^3}{3}\) to evaluate \(\displaystyle\int_{0}^{\sqrt{7}}x^{2}\,dx\).'
+    A: '\(\frac{7 \sqrt{7}}{6}\)'
+    B: '\(\frac{14 \sqrt{7}}{3}\)'
+    C: '\(- \frac{7 \sqrt{7}}{3}\)'
+    D: '\(\frac{7 \sqrt{7}}{3}\)'
+    answer: D
+    hint: Choose the matching formula and substitute the limits.
+    explanation: 'The value is \(\frac{7 \sqrt{7}}{3}\).'
+  98:
+    topic: s5-3
+    question: 'Use \(\displaystyle\int_a^bx\,dx=\dfrac{b^2-a^2}{2}\) and \(\displaystyle\int_a^bx^2\,dx=\dfrac{b^3-a^3}{3}\) to evaluate \(\displaystyle\int_{0}^{\frac{1}{2}}t^{2}\,dt\).'
+    A: '\(\frac{1}{12}\)'
+    B: '\(\frac{1}{24}\)'
+    C: '\(- \frac{1}{24}\)'
+    D: '\(\frac{1}{48}\)'
+    answer: B
+    hint: Choose the matching formula and substitute the limits.
+    explanation: 'The value is \(\frac{1}{24}\).'
+  99:
+    topic: s5-3
+    question: 'Use \(\displaystyle\int_a^bx\,dx=\dfrac{b^2-a^2}{2}\) and \(\displaystyle\int_a^bx^2\,dx=\dfrac{b^3-a^3}{3}\) to evaluate \(\displaystyle\int_{1}^{5 \sqrt{2}}x\,dx\).'
+    A: '\(- \frac{49}{2}\)'
+    B: '\(49\)'
+    C: '\(\frac{49}{2}\)'
+    D: '\(\frac{49}{4}\)'
+    answer: C
+    hint: Choose the matching formula and substitute the limits.
+    explanation: 'The value is \(\frac{49}{2}\).'
+  100:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{1}^{3}7\,dx\) using the rules for definite integrals.'
+    A: '\(28\)'
+    B: '\(-14\)'
+    C: '\(14\)'
+    D: '\(7\)'
+    answer: C
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(14\).'
+  101:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{0}^{2}5 x\,dx\) using the rules for definite integrals.'
+    A: '\(20\)'
+    B: '\(-10\)'
+    C: '\(5\)'
+    D: '\(10\)'
+    answer: D
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(10\).'
+  102:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{3}^{5}\frac{x}{8}\,dx\) using the rules for definite integrals.'
+    A: '\(\frac{1}{2}\)'
+    B: '\(2\)'
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(1\).'
+  103:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{0}^{2}2 x - 3\,dx\) using the rules for definite integrals.'
+    A: '\(-4\)'
+    B: '\(-2\)'
+    C: '\(-1\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(-2\).'
+  104:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{0}^{2}3 x^{2} + x - 5\,dx\) using the rules for definite integrals.'
+    A: '\(0\)'
+    B: '\(-1\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(0\).'
+  105:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{\frac{1}{2}}^{1}24 x^{2}\,dx\) using the rules for definite integrals.'
+    A: '\(7\)'
+    B: '\(\frac{7}{2}\)'
+    C: '\(14\)'
+    D: '\(-7\)'
+    answer: A
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(7\).'
+  106:
+    topic: s5-3
+    question: 'Evaluate \(\displaystyle\int_{1}^{2}\frac{x}{2} + 1\,dx\) using the rules for definite integrals.'
+    A: '\(\frac{7}{4}\)'
+    B: '\(\frac{7}{8}\)'
+    C: '\(- \frac{7}{4}\)'
+    D: '\(\frac{7}{2}\)'
+    answer: A
+    hint: 'Split into powers of \(x\) and use \(\int_a^bx^n\,dx=\dfrac{b^{n+1}-a^{n+1}}{n+1}\).'
+    explanation: 'The value is \(\frac{7}{4}\).'
+  107:
+    topic: s5-3
+    question: 'Find the average value of \(f(x)=x^{2} - 1\) on \([0,\sqrt{3}]\).'
+    A: '\(1\)'
+    B: '\(-1\)'
+    C: '\(2\)'
+    D: '\(0\)'
+    answer: D
+    hint: 'Average value \(=\dfrac1{b-a}\displaystyle\int_a^bf\).'
+    explanation: 'The integral divided by the length gives \(0\).'
+  108:
+    topic: s5-3
+    question: 'Find the average value of \(f(x)=- \frac{x^{2}}{2}\) on \([0,3]\).'
+    A: '\(- \frac{3}{2}\)'
+    B: '\(- \frac{3}{4}\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(-3\)'
+    answer: A
+    hint: 'Average value \(=\dfrac1{b-a}\displaystyle\int_a^bf\).'
+    explanation: 'The integral divided by the length gives \(- \frac{3}{2}\).'
+  109:
+    topic: s5-3
+    question: 'Find the average value of \(f(x)=- 3 x^{2} - 1\) on \([0,1]\).'
+    A: '\(2\)'
+    B: '\(-2\)'
+    C: '\(-1\)'
+    D: '\(-4\)'
+    answer: B
+    hint: 'Average value \(=\dfrac1{b-a}\displaystyle\int_a^bf\).'
+    explanation: 'The integral divided by the length gives \(-2\).'
+  110:
+    topic: s5-3
+    question: 'Find the average value of \(f(x)=3 x^{2} - 3\) on \([0,1]\).'
+    A: '\(-2\)'
+    B: '\(-4\)'
+    C: '\(2\)'
+    D: '\(-1\)'
+    answer: A
+    hint: 'Average value \(=\dfrac1{b-a}\displaystyle\int_a^bf\).'
+    explanation: 'The integral divided by the length gives \(-2\).'
+  111:
+    topic: s5-3
+    question: 'Find the average value of \(f(x)=\left(x - 1\right)^{2}\) on \([0,3]\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(-1\)'
+    answer: C
+    hint: 'Average value \(=\dfrac1{b-a}\displaystyle\int_a^bf\).'
+    explanation: 'The integral divided by the length gives \(1\).'
+  112:
+    topic: s5-3
+    question: 'Find the average value of \(f(t)=t^{2} - t\) on \([-2,1]\).'
+    A: '\(\frac{3}{2}\)'
+    B: '\(- \frac{3}{2}\)'
+    C: '\(\frac{3}{4}\)'
+    D: '\(3\)'
+    answer: A
+    hint: 'Average value \(=\dfrac1{b-a}\displaystyle\int_a^bf\).'
+    explanation: 'The integral divided by the length gives \(\frac{3}{2}\).'
+  113:
+    topic: s5-3
+    question: 'The average value of \(g(x)=\left|{x}\right| - 1\) on \([-1,1]\) is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(- \frac{1}{4}\)'
+    C: '\(-1\)'
+    D: '\(- \frac{1}{2}\)'
+    answer: D
+    hint: Compute the signed area and divide by the length of the interval.
+    explanation: 'The signed area divided by \(2\) is \(- \frac{1}{2}\).'
+  114:
+    topic: s5-3
+    question: 'The average value of \(g(x)=\left|{x}\right| - 1\) on \([1,3]\) is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(2\)'
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: D
+    hint: Compute the signed area and divide by the length of the interval.
+    explanation: 'The signed area divided by \(2\) is \(1\).'
+  115:
+    topic: s5-3
+    question: 'The average value of \(g(x)=\left|{x}\right| - 1\) on \([-1,3]\) is'
+    A: '\(\frac{1}{4}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(- \frac{1}{4}\)'
+    D: '\(\frac{1}{8}\)'
+    answer: A
+    hint: Compute the signed area and divide by the length of the interval.
+    explanation: 'The signed area divided by \(4\) is \(\frac{1}{4}\).'
+  116:
+    topic: s5-3
+    question: 'The average value of \(g(x)=- \left|{x}\right|\) on \([-1,0]\) is'
+    A: '\(\frac{1}{2}\)'
+    B: '\(- \frac{1}{2}\)'
+    C: '\(-1\)'
+    D: '\(- \frac{1}{4}\)'
+    answer: B
+    hint: Compute the signed area and divide by the length of the interval.
+    explanation: 'The signed area divided by \(1\) is \(- \frac{1}{2}\).'
+  117:
+    topic: s5-3
+    question: 'The average value of \(g(x)=- \left|{x}\right|\) on \([0,1]\) is'
+    A: '\(- \frac{1}{4}\)'
+    B: '\(- \frac{1}{2}\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(-1\)'
+    answer: B
+    hint: Compute the signed area and divide by the length of the interval.
+    explanation: 'The signed area divided by \(1\) is \(- \frac{1}{2}\).'
+  118:
+    topic: s5-3
+    question: 'The average value of \(g(x)=- \left|{x}\right|\) on \([-1,1]\) is'
+    A: '\(- \frac{1}{4}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(- \frac{1}{2}\)'
+    D: '\(-1\)'
+    answer: C
+    hint: Compute the signed area and divide by the length of the interval.
+    explanation: 'The signed area divided by \(2\) is \(- \frac{1}{2}\).'
+  119:
+    topic: s5-3
+    question: 'What values of \(a\) and \(b\) (\(a\le b\)) maximize \(\displaystyle\int_a^b(x-x^2)\,dx\)?'
+    A: '\(a=0\), \(b=1\)'
+    B: '\(a=0\), \(b=2\)'
+    C: '\(a=\tfrac12\), \(b=1\)'
+    D: '\(a=-1\), \(b=1\)'
+    answer: A
+    hint: 'The integrand is positive exactly where \(0<x<1\).'
+    explanation: Include all of the positive part and none of the negative part.
+  120:
+    topic: s5-3
+    question: 'What values of \(a\) and \(b\) (\(a\le b\)) minimize \(\displaystyle\int_a^b(x^4-2x^2)\,dx\)?'
+    A: '\(a=0\), \(b=\sqrt2\)'
+    B: '\(a=-1\), \(b=1\)'
+    C: '\(a=-\sqrt2\), \(b=\sqrt2\)'
+    D: '\(a=-2\), \(b=2\)'
+    answer: C
+    hint: 'The integrand is negative exactly where \(x^4<2x^2\), i.e. \(|x|<\sqrt2\).'
+    explanation: Include all of the negative part.
+  121:
+    topic: s5-3
+    question: 'The Max-Min Inequality gives, for \(\displaystyle\int_0^1\dfrac{1}{1+x^2}\,dx\), the bounds'
+    A: '\(\dfrac12\le\displaystyle\int_0^1\dfrac1{1+x^2}\,dx\le1\)'
+    B: '\(0\le\int\le\tfrac12\)'
+    C: '\(1\le\int\le2\)'
+    D: '\(\tfrac14\le\int\le\tfrac12\)'
+    answer: A
+    hint: 'On \([0,1]\) the integrand is between \(\tfrac12\) and 1.'
+    explanation: '\(\min f\cdot(b-a)\le\int\le\max f\cdot(b-a)\).'
+  122:
+    topic: s5-3
+    question: 'Why can \(\displaystyle\int_0^1\sin(x^2)\,dx\) not equal 2?'
+    A: 'Because \(\sin\) is not integrable'
+    B: 'Since \(\sin(x^2)\le1\) on \([0,1]\), the integral is at most 1'
+    C: The integral must be negative
+    D: 'Because \(x^2\) is not continuous'
+    answer: B
+    hint: Bound the integrand.
+    explanation: '\(\int_0^1\sin(x^2)\,dx\le\int_0^11\,dx=1<2\).'
+  123:
+    topic: s5-3
+    question: 'If \(f(x)\ge0\) on \([a,b]\), then \(\displaystyle\int_a^bf(x)\,dx\)'
+    A: is less than or equal to 0
+    B: is greater than or equal to 0
+    C: 'equals \(f(b)-f(a)\)'
+    D: can be any real number
+    answer: B
+    hint: 'Max-Min Inequality with minimum value \(\ge0\).'
+    explanation: Every Riemann sum is nonnegative.
+  124:
+    topic: s5-3
+    question: 'Which statement about the average value \(\operatorname{av}(f)\) is true?'
+    A: '\(\operatorname{av}(f)\) is always \(\tfrac{f(a)+f(b)}2\)'
+    B: '\(\operatorname{av}(fg)=\operatorname{av}(f)\operatorname{av}(g)\)'
+    C: '\(\operatorname{av}(f)\) is always positive'
+    D: '\(\operatorname{av}(kf)=k\operatorname{av}(f)\) and \(\operatorname{av}(f+g)=\operatorname{av}(f)+\operatorname{av}(g)\)'
+    answer: D
+    hint: Average value is a constant multiple of an integral.
+    explanation: Both rules follow from the corresponding rules for integrals.
+  125:
+    topic: s5-3
+    question: If a car averages 30 mph over a 150-mile trip and returns over the same 150 miles at 50 mph, its average speed for the whole trip is
+    A: '\(40\) mph'
+    B: '\(80\) mph'
+    C: '\(37.5\) mph'
+    D: '\(35\) mph'
+    answer: C
+    hint: Average speed is total distance over total time.
+    explanation: 'Time \(=\tfrac{150}{30}+\tfrac{150}{50}=8\) h and distance \(=300\), so \(37.5\) mph.'
+  126:
+    topic: s5-3
+    question: 'If \(f\) is odd, then \(\displaystyle\int_{-1}^{0}f(x)\,dx\) equals'
+    A: '\(2\displaystyle\int_0^1f(x)\,dx\)'
+    B: '\(0\)'
+    C: '\(\displaystyle\int_0^1f(x)\,dx\)'
+    D: '\(-\displaystyle\int_0^1f(x)\,dx\)'
+    answer: D
+    hint: An odd function is symmetric through the origin.
+    explanation: 'The left half is the negative of the right half. (For an even \(f\) the two halves are equal.)'
+  127:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{-2}^{0} 2 x + 5\,dx\).'
+    A: '\(3\)'
+    B: '\(12\)'
+    C: '\(-6\)'
+    D: '\(6\)'
+    answer: D
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(x^{2} + 5 x\); then \(F(0)-F(-2)=6\).'
+  128:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{-3}^{4} 5 - \frac{x}{2}\,dx\).'
+    A: '\(- \frac{133}{4}\)'
+    B: '\(\frac{133}{2}\)'
+    C: '\(\frac{133}{8}\)'
+    D: '\(\frac{133}{4}\)'
+    answer: D
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(- \frac{x^{2}}{4} + 5 x\); then \(F(4)-F(-3)=\frac{133}{4}\).'
+  129:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{4} - \frac{x^{3}}{4} + 3 x\,dx\).'
+    A: '\(4\)'
+    B: '\(8\)'
+    C: '\(16\)'
+    D: '\(-8\)'
+    answer: B
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(- \frac{x^{4}}{16} + \frac{3 x^{2}}{2}\); then \(F(4)-F(0)=8\).'
+  130:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{-2}^{4} x^{2} - 2 x + 3\,dx\).'
+    A: '\(30\)'
+    B: '\(60\)'
+    C: '\(15\)'
+    D: '\(-30\)'
+    answer: A
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(\frac{x^{3}}{3} - x^{2} + 3 x\); then \(F(4)-F(-2)=30\).'
+  131:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} \sqrt{x} + x^{2}\,dx\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(-1\)'
+    answer: C
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(\frac{2 x^{\frac{3}{2}}}{3} + \frac{x^{3}}{3}\); then \(F(1)-F(0)=1\).'
+  132:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{4} x^{\frac{3}{2}}\,dx\).'
+    A: '\(- \frac{64}{5}\)'
+    B: '\(\frac{128}{5}\)'
+    C: '\(\frac{64}{5}\)'
+    D: '\(\frac{32}{5}\)'
+    answer: C
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(\frac{2 x^{\frac{5}{2}}}{5}\); then \(F(4)-F(0)=\frac{64}{5}\).'
+  133:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{1}^{32} \frac{1}{x^{\frac{6}{5}}}\,dx\).'
+    A: '\(\frac{5}{4}\)'
+    B: '\(5\)'
+    C: '\(\frac{5}{2}\)'
+    D: '\(- \frac{5}{2}\)'
+    answer: C
+    hint: 'Find an antiderivative, then evaluate \(F(b)-F(a)\).'
+    explanation: 'An antiderivative is \(- \frac{5}{\sqrt[5]{x}}\); then \(F(32)-F(1)=\frac{5}{2}\).'
+  134:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{\pi} \sin{\left(x \right)}\,dx\).'
+    A: '\(-2\)'
+    B: '\(2\)'
+    C: '\(4\)'
+    D: '\(1\)'
+    answer: B
+    hint: '\(\int\sin x\,dx=-\cos x\).'
+    explanation: 'An antiderivative is \(- \cos{\left(x \right)}\); then \(F(\pi)-F(0)=2\).'
+  135:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{\pi} \cos{\left(x \right)} + 1\,dx\).'
+    A: '\(- \pi\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(\pi\)'
+    D: '\(2 \pi\)'
+    answer: C
+    hint: Integrate term by term.
+    explanation: 'An antiderivative is \(x + \sin{\left(x \right)}\); then \(F(\pi)-F(0)=\pi\).'
+  136:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{3}} 2 \sec^{2}{\left(x \right)}\,dx\).'
+    A: '\(- 2 \sqrt{3}\)'
+    B: '\(2 \sqrt{3}\)'
+    C: '\(4 \sqrt{3}\)'
+    D: '\(\sqrt{3}\)'
+    answer: B
+    hint: '\(\int\sec^2x\,dx=\tan x\).'
+    explanation: 'An antiderivative is \(\frac{2 \sin{\left(x \right)}}{\cos{\left(x \right)}}\); then \(F(\frac{\pi}{3})-F(0)=2 \sqrt{3}\).'
+  137:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{\frac{\pi}{6}}^{\frac{5 \pi}{6}} \csc^{2}{\left(x \right)}\,dx\).'
+    A: '\(4 \sqrt{3}\)'
+    B: '\(\sqrt{3}\)'
+    C: '\(- 2 \sqrt{3}\)'
+    D: '\(2 \sqrt{3}\)'
+    answer: D
+    hint: '\(\int\csc^2x\,dx=-\cot x\).'
+    explanation: 'An antiderivative is \(- \frac{\cos{\left(x \right)}}{\sin{\left(x \right)}}\); then \(F(\frac{5 \pi}{6})-F(\frac{\pi}{6})=2 \sqrt{3}\).'
+  138:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{3}} 4 \tan{\left(x \right)} \sec{\left(x \right)}\,dx\).'
+    A: '\(4\)'
+    B: '\(-4\)'
+    C: '\(2\)'
+    D: '\(8\)'
+    answer: A
+    hint: '\(\int\sec x\tan x\,dx=\sec x\).'
+    explanation: 'An antiderivative is \(\frac{4}{\cos{\left(x \right)}}\); then \(F(\frac{\pi}{3})-F(0)=4\).'
+  139:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{- \frac{\pi}{2}}^{0} \frac{\cos{\left(2 t \right)}}{2} + \frac{1}{2}\,dt\).'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(- \frac{\pi}{4}\)'
+    D: '\(\frac{\pi}{8}\)'
+    answer: A
+    hint: '\(\cos^2t=\tfrac{1+\cos2t}{2}\), so integrate directly.'
+    explanation: 'An antiderivative is \(\frac{t}{2} + \frac{\sin{\left(2 t \right)}}{4}\); then \(F(0)-F(- \frac{\pi}{2})=\frac{\pi}{4}\).'
+  140:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{- \frac{\pi}{3}}^{\frac{\pi}{3}} \frac{1}{2} - \frac{\cos{\left(2 t \right)}}{2}\,dt\).'
+    A: '\(- \frac{\sqrt{3}}{2} + \frac{2 \pi}{3}\)'
+    B: '\(- \frac{\pi}{3} + \frac{\sqrt{3}}{4}\)'
+    C: '\(- \frac{\sqrt{3}}{8} + \frac{\pi}{6}\)'
+    D: '\(- \frac{\sqrt{3}}{4} + \frac{\pi}{3}\)'
+    answer: D
+    hint: '\(\sin^2t=\tfrac{1-\cos2t}{2}\).'
+    explanation: 'An antiderivative is \(\frac{t}{2} - \frac{\sin{\left(2 t \right)}}{4}\); then \(F(\frac{\pi}{3})-F(- \frac{\pi}{3})=- \frac{\sqrt{3}}{4} + \frac{\pi}{3}\).'
+  141:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{\ln{\left(2 \right)}} e^{3 x}\,dx\).'
+    A: '\(\frac{7}{3}\)'
+    B: '\(\frac{7}{6}\)'
+    C: '\(\frac{14}{3}\)'
+    D: '\(- \frac{7}{3}\)'
+    answer: A
+    hint: '\(\int e^{3x}dx=\tfrac13e^{3x}\).'
+    explanation: 'An antiderivative is \(\frac{e^{3 x}}{3}\); then \(F(\ln{\left(2 \right)})-F(0)=\frac{7}{3}\).'
+  142:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{1}^{2} - e^{- x} + \frac{1}{x}\,dx\).'
+    A: '\(- \frac{2}{e} + \frac{2}{e^{2}} + 2 \ln{\left(2 \right)}\)'
+    B: '\(- \frac{1}{e} + e^{-2} + \ln{\left(2 \right)}\)'
+    C: '\(- \frac{1}{2 e} + \frac{1}{2 e^{2}} + \frac{\ln{\left(2 \right)}}{2}\)'
+    D: '\(- \ln{\left(2 \right)} - e^{-2} + e^{-1}\)'
+    answer: B
+    hint: '\(\int\dfrac1x\,dx=\ln|x|\).'
+    explanation: 'An antiderivative is \(\ln{\left(x \right)} + e^{- x}\); then \(F(2)-F(1)=- \frac{1}{e} + e^{-2} + \ln{\left(2 \right)}\).'
+  143:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} \frac{4}{x^{2} + 1}\,dx\).'
+    A: '\(\pi\)'
+    B: '\(2 \pi\)'
+    C: '\(\frac{\pi}{2}\)'
+    D: '\(- \pi\)'
+    answer: A
+    hint: '\(\int\dfrac{dx}{1+x^2}=\tan^{-1}x\).'
+    explanation: 'An antiderivative is \(4 \tan^{-1}{\left(x \right)}\); then \(F(1)-F(0)=\pi\).'
+  144:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{2}^{5} \frac{x}{\sqrt{x^{2} + 1}}\,dx\).'
+    A: '\(- 2 \sqrt{5} + 2 \sqrt{26}\)'
+    B: '\(- \frac{\sqrt{5}}{2} + \frac{\sqrt{26}}{2}\)'
+    C: '\(- \sqrt{5} + \sqrt{26}\)'
+    D: '\(- \sqrt{26} + \sqrt{5}\)'
+    answer: C
+    hint: '\(\dfrac{d}{dx}\sqrt{1+x^2}=\dfrac{x}{\sqrt{1+x^2}}\).'
+    explanation: 'An antiderivative is \(\sqrt{x^{2} + 1}\); then \(F(5)-F(2)=- \sqrt{5} + \sqrt{26}\).'
+  145:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} x e^{x^{2}}\,dx\).'
+    A: '\(- \frac{1}{2} + \frac{e}{2}\)'
+    B: '\(\frac{1}{2} - \frac{e}{2}\)'
+    C: '\(-1 + e\)'
+    D: '\(- \frac{1}{4} + \frac{e}{4}\)'
+    answer: A
+    hint: 'Guess \(\tfrac12e^{x^2}\) and check by differentiating.'
+    explanation: 'An antiderivative is \(\frac{e^{x^{2}}}{2}\); then \(F(1)-F(0)=- \frac{1}{2} + \frac{e}{2}\).'
+  146:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{1}^{2} \frac{\ln{\left(x \right)}}{x}\,dx\).'
+    A: '\(\frac{\ln{\left(2 \right)}^{2}}{4}\)'
+    B: '\(\ln{\left(2 \right)}^{2}\)'
+    C: '\(\frac{\ln{\left(2 \right)}^{2}}{2}\)'
+    D: '\(- \frac{\ln{\left(2 \right)}^{2}}{2}\)'
+    answer: C
+    hint: 'Guess \(\tfrac12(\ln x)^2\).'
+    explanation: 'An antiderivative is \(\frac{\ln{\left(x \right)}^{2}}{2}\); then \(F(2)-F(1)=\frac{\ln{\left(2 \right)}^{2}}{2}\).'
+  147:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_{-4}^{4} \left|{x}\right|\,dx\).'
+    A: '\(-16\)'
+    B: '\(8\)'
+    C: '\(16\)'
+    D: '\(32\)'
+    answer: C
+    hint: Split at 0 or use symmetry.
+    explanation: 'An antiderivative is \(\begin{cases} - \frac{x^{2}}{2} & \text{for}\: x \leq 0 \\\frac{x^{2}}{2} & \text{otherwise} \end{cases}\); then \(F(4)-F(-4)=16\).'
+  148:
+    topic: s5-4
+    question: 'Evaluate \(\displaystyle\int_0^{\pi}\tfrac12\bigl(\cos x+|\cos x|\bigr)\,dx\).'
+    A: '\(2\)'
+    B: '\(0\)'
+    C: '\(\tfrac12\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'The integrand is \(\cos x\) on \([0,\pi/2]\) and 0 on \([\pi/2,\pi]\).'
+    explanation: '\(\int_0^{\pi/2}\cos x\,dx=1\).'
+  149:
+    topic: s5-4
+    question: 'Find \(\dfrac{d}{dx}\displaystyle\int_0^{\sqrt x}\cos t\,dt\).'
+    A: '\(\dfrac{\cos\sqrt x}{2\sqrt x}\)'
+    B: '\(-\sin\sqrt x\)'
+    C: '\(\dfrac{\sin\sqrt x}{2\sqrt x}\)'
+    D: '\(\cos\sqrt x\)'
+    answer: A
+    hint: 'Fundamental Theorem Part 1 with the Chain Rule: \(f(u(x))\,u''(x)\).'
+    explanation: '\(\cos(\sqrt x)\cdot\tfrac{1}{2\sqrt x}\).'
+  150:
+    topic: s5-4
+    question: 'Find \(\dfrac{d}{dx}\displaystyle\int_1^{\sin x}3t^2\,dt\).'
+    A: '\(\sin^3x\)'
+    B: '\(3\sin^2x\cos x\)'
+    C: '\(3\sin^2x\)'
+    D: '\(3\cos^2x\sin x\)'
+    answer: B
+    hint: '\(f(u)\,u''\) with \(u=\sin x\).'
+    explanation: '\(3(\sin x)^2\cdot\cos x\).'
+  151:
+    topic: s5-4
+    question: 'Find \(\dfrac{d}{dt}\displaystyle\int_0^{t^4}\sqrt u\,du\).'
+    A: '\(4t^3\)'
+    B: '\(t^2\)'
+    C: '\(\dfrac{t^2}{4}\)'
+    D: '\(4t^5\)'
+    answer: D
+    hint: '\(\sqrt{t^4}\cdot4t^3\).'
+    explanation: '\(t^2\cdot4t^3=4t^5\).'
+  152:
+    topic: s5-4
+    question: 'Find \(\dfrac{d}{d\theta}\displaystyle\int_0^{\tan\theta}\sec^2y\,dy\).'
+    A: '\(\sec^2(\tan\theta)\)'
+    B: '\(\sec^2\theta\)'
+    C: '\(\tan\theta\sec^2\theta\)'
+    D: '\(\sec^2(\tan\theta)\cdot\sec^2\theta\)'
+    answer: D
+    hint: The integrand evaluated at the upper limit, times the derivative of the upper limit.
+    explanation: 'Upper limit \(u=\tan\theta\) with \(u''=\sec^2\theta\), and \(f(u)=\sec^2u\).'
+  153:
+    topic: s5-4
+    question: 'Find \(\dfrac{dy}{dx}\) if \(y=\displaystyle\int_0^{x}\sqrt{1+t^2}\,dt\).'
+    A: '\(\dfrac{1}{2\sqrt{1+x^2}}\)'
+    B: '\(\sqrt{1+x^2}\)'
+    C: '\(\sqrt{1+x^2}-1\)'
+    D: '\(\dfrac{x}{\sqrt{1+x^2}}\)'
+    answer: B
+    hint: Fundamental Theorem, Part 1.
+    explanation: 'The derivative of the area function is the integrand at \(x\).'
+  154:
+    topic: s5-4
+    question: 'Find \(\dfrac{dy}{dx}\) if \(y=\displaystyle\int_1^{x}\dfrac1t\,dt\) for \(x>0\).'
+    A: '\(1\)'
+    B: '\(\ln x\)'
+    C: '\(-\dfrac{1}{x^2}\)'
+    D: '\(\dfrac1x\)'
+    answer: D
+    hint: Part 1 of the Fundamental Theorem.
+    explanation: '\(y=\ln x\), so \(y''=1/x\).'
+  155:
+    topic: s5-4
+    question: 'Find \(\dfrac{dy}{dx}\) if \(y=\displaystyle\int_{\sqrt x}^{0}\sin(t^2)\,dt\).'
+    A: '\(-\sin x\)'
+    B: '\(\sin x\)'
+    C: '\(-\dfrac{\sin x}{2\sqrt x}\)'
+    D: '\(\dfrac{\sin x}{2\sqrt x}\)'
+    answer: C
+    hint: Swap the limits to put 0 at the bottom; that introduces a minus sign.
+    explanation: '\(y=-\int_0^{\sqrt x}\sin t^2\,dt\), so \(y''=-\sin(x)\cdot\tfrac{1}{2\sqrt x}\).'
+  156:
+    topic: s5-4
+    question: 'Find \(\dfrac{dy}{dx}\) if \(y=\displaystyle\int_0^{x^2}\cos\sqrt t\,dt\).'
+    A: '\(2x\cos(x^2)\)'
+    B: '\(\cos x\)'
+    C: '\(2x\cos x\)'
+    D: '\(\cos(x^2)\)'
+    answer: C
+    hint: 'Substitute \(t=x^2\) in the integrand and multiply by \(2x\).'
+    explanation: '\(\cos\sqrt{x^2}\cdot2x=2x\cos x\) (for \(x\ge0\)).'
+  157:
+    topic: s5-4
+    question: 'Find \(\dfrac{dy}{dx}\) if \(y=\displaystyle\int_0^{\sin^{-1}x}\dfrac{dt}{\sqrt{1-t^2}}\) for \(|x|<1\).'
+    A: '\(\dfrac{1}{\sqrt{1-(\sin^{-1}x)^2}\,\sqrt{1-x^2}}\)'
+    B: '\(1\)'
+    C: '\(\sin^{-1}x\)'
+    D: '\(\dfrac{1}{\sqrt{1-x^2}}\)'
+    answer: A
+    hint: 'Upper limit \(u=\sin^{-1}x\), with \(u''=\dfrac1{\sqrt{1-x^2}}\); the integrand at \(u\) is \(\dfrac{1}{\sqrt{1-u^2}}\).'
+    explanation: 'Chain rule: \(f(u)\,u''\).'
+  158:
+    topic: s5-4
+    question: 'Find the total area between the graph of \(y=-x^2-2x\) on \([-3,2]\) and the \(x\)-axis.'
+    A: '\(- \frac{28}{3}\)'
+    B: '\(\frac{28}{3}\)'
+    C: '\(- \frac{20}{3}\)'
+    D: '\(\frac{56}{3}\)'
+    answer: B
+    hint: 'Find where the graph crosses the \(x\)-axis and integrate the absolute value piece by piece.'
+    explanation: 'The total area is \(\frac{28}{3}\) (the signed integral is \(- \frac{20}{3}\)).'
+  159:
+    topic: s5-4
+    question: 'Find the total area between the graph of \(y=3x^2-3\) on \([-2,2]\) and the \(x\)-axis.'
+    A: '\(12\)'
+    B: '\(4\)'
+    C: '\(24\)'
+    D: '\(-12\)'
+    answer: A
+    hint: 'Find where the graph crosses the \(x\)-axis and integrate the absolute value piece by piece.'
+    explanation: 'The total area is \(12\) (the signed integral is \(4\)).'
+  160:
+    topic: s5-4
+    question: 'Find the total area between the graph of \(y=x^3-3x^2+2x\) on \([0,2]\) and the \(x\)-axis.'
+    A: '\(- \frac{1}{2}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: B
+    hint: 'Find where the graph crosses the \(x\)-axis and integrate the absolute value piece by piece.'
+    explanation: 'The total area is \(\frac{1}{2}\) (the signed integral is \(0\)).'
+  161:
+    topic: s5-4
+    question: 'Find the total area between the graph of \(y=x^3-4x\) on \([-2,2]\) and the \(x\)-axis.'
+    A: '\(16\)'
+    B: '\(8\)'
+    C: '\(-8\)'
+    D: '\(0\)'
+    answer: B
+    hint: 'Find where the graph crosses the \(x\)-axis and integrate the absolute value piece by piece.'
+    explanation: 'The total area is \(8\) (the signed integral is \(0\)).'
+  162:
+    topic: s5-4
+    question: 'The region between \(y=2\) and \(y=1+\cos x\) for \(0\le x\le\pi\) has area'
+    A: '\(2\pi\)'
+    B: '\(\dfrac\pi2\)'
+    C: '\(\pi\)'
+    D: '\(3\pi\)'
+    answer: C
+    hint: The region is the rectangle of height 2 minus the area under the cosine curve.
+    explanation: '\(2\pi-\int_0^\pi(1+\cos x)\,dx=2\pi-\pi=\pi\).'
+  163:
+    topic: s5-4
+    question: 'Which function solves the initial value problem \(\dfrac{dy}{dx}=\dfrac1x\), \(y(\pi)=-3\)?'
+    A: '\(y=\displaystyle\int_1^x\dfrac1t\,dt-3\)'
+    B: '\(y=\displaystyle\int_0^x\sec t\,dt+4\)'
+    C: '\(y=\displaystyle\int_{-1}^x\sec t\,dt+4\)'
+    D: '\(y=\displaystyle\int_\pi^x\dfrac1t\,dt-3\)'
+    answer: D
+    hint: 'The lower limit of the integral should be the \(x\)-value of the initial condition.'
+    explanation: 'At \(x=\pi\) the integral is 0, so \(y(\pi)=-3\).'
+  164:
+    topic: s5-4
+    question: 'Express the solution of \(\dfrac{dy}{dx}=\sec x\), \(y(2)=3\) in terms of an integral.'
+    A: '\(y=\displaystyle\int_3^x\sec t\,dt+2\)'
+    B: '\(y=\displaystyle\int_2^x\sec t\,dt+2\)'
+    C: '\(y=\displaystyle\int_2^x\sec t\,dt+3\)'
+    D: '\(y=\displaystyle\int_0^x\sec t\,dt+3\)'
+    answer: C
+    hint: Use the initial point as the lower limit and add the initial value.
+    explanation: '\(y(2)=0+3\).'
+  165:
+    topic: s5-4
+    question: 'Express the solution of \(\dfrac{ds}{dt}=f(t)\), \(s(t_0)=s_0\) as an integral.'
+    A: '\(s=\displaystyle\int_{t_0}^tf(\tau)\,d\tau+s_0\)'
+    B: '\(s=\displaystyle\int_{s_0}^tf(\tau)\,d\tau+t_0\)'
+    C: '\(s=\displaystyle\int_0^tf(\tau)\,d\tau\)'
+    D: '\(s=f(t)+s_0\)'
+    answer: A
+    hint: Fundamental Theorem Part 1.
+    explanation: 'The integral starts at 0 when \(t=t_0\).'
+  166:
+    topic: s5-4
+    question: 'Archimedes showed the area under the parabolic arch \(y=h-\dfrac{4h}{b^2}x^2\) for \(-\tfrac b2\le x\le\tfrac b2\) is'
+    A: '\(\dfrac13bh\)'
+    B: '\(bh\)'
+    C: '\(\dfrac12bh\)'
+    D: '\(\dfrac23bh\)'
+    answer: D
+    hint: 'Integrate from \(-b/2\) to \(b/2\) (use symmetry).'
+    explanation: '\(2\left[h\cdot\tfrac b2-\tfrac{4h}{3b^2}\cdot\tfrac{b^3}{8}\right]=\tfrac23bh\), two-thirds the base times the height.'
+  167:
+    topic: s5-4
+    question: 'A company''s marginal revenue is \(\dfrac{dr}{dx}=2-\dfrac{2}{(x+1)^2}\) (thousands of dollars per thousand units). Producing from \(x=0\) to \(x=3\) thousand units adds revenue of'
+    A: '\(\frac{9}{2}\)'
+    B: '\(\frac{11}{2}\)'
+    C: '\(6\)'
+    D: '\(\frac{3}{2}\)'
+    answer: A
+    hint: Integrate the marginal revenue.
+    explanation: '\(\left[2x+\tfrac{2}{x+1}\right]_0^3=6+\tfrac12-2=\tfrac92\) thousand dollars.'
+  168:
+    topic: s5-4
+    question: 'The marginal cost of printing a poster is \(\dfrac{dc}{dx}=\dfrac{1}{2\sqrt x}\) dollars. The cost of printing posters 2 through 100, \(c(100)-c(1)\), is'
+    A: '\(9\)'
+    B: '\(\frac{9}{2}\)'
+    C: '\(10\)'
+    D: '\(99\)'
+    answer: A
+    hint: Integrate from 1 to 100.
+    explanation: '\(\left[\sqrt x\right]_1^{100}=10-1=9\) dollars.'
+  169:
+    topic: s5-4
+    question: 'If \(s=\displaystyle\int_0^tf(x)\,dx\) is the position of a particle and the graph of \(f\) is the velocity, the particle''s velocity at time \(t\) is'
+    A: '\(\displaystyle\int_0^tf\)'
+    B: '\(f''(t)\)'
+    C: '\(s(t)f(t)\)'
+    D: '\(f(t)\)'
+    answer: D
+    hint: The derivative of the integral is the integrand.
+    explanation: '\(\dfrac{ds}{dt}=f(t)\); acceleration is \(f''(t)\).'
+  170:
+    topic: s5-4
+    question: 'If \(\displaystyle\int_1^xf(t)\,dt=x^2-2x+1\), then \(f(x)=\)'
+    A: '\(\dfrac{x^3}{3}-x^2+x\)'
+    B: '\(2\)'
+    C: '\(2x-2\)'
+    D: '\(x^2-2x\)'
+    answer: C
+    hint: Differentiate both sides.
+    explanation: Part 1 of the Fundamental Theorem.
+  171:
+    topic: s5-4
+    question: 'If \(\displaystyle\int_0^xf(t)\,dt=x\cos\pi x\), then \(f(4)=\)'
+    A: '\(\pi\)'
+    B: '\(1\)'
+    C: '\(4\)'
+    D: '\(-1\)'
+    answer: B
+    hint: '\(f(x)=\cos\pi x-\pi x\sin\pi x\).'
+    explanation: '\(\cos4\pi-4\pi\sin4\pi=1-0=1\).'
+  172:
+    topic: s5-4
+    question: 'Suppose \(f\) has a positive derivative for all \(x\) and \(f(1)=0\). Then \(g(x)=\displaystyle\int_0^xf(t)\,dt\) has a local minimum at'
+    A: '\(g\) has no local extremum'
+    B: '\(x=0\)'
+    C: '\(x=1\)'
+    D: '\(x=2\)'
+    answer: C
+    hint: '\(g''=f\), which changes sign at \(x=1\).'
+    explanation: 'Since \(f\) is increasing with \(f(1)=0\), \(g''<0\) for \(x<1\) and \(g''>0\) for \(x>1\).'
+  173:
+    topic: s5-4
+    question: 'Under the same hypotheses (\(f''>0\), \(f(1)=0\)), the graph of \(g(x)=\int_0^xf(t)\,dt\) has'
+    A: 'an inflection point at \(x=1\)'
+    B: 'a horizontal tangent and a local minimum at \(x=1\), and \(g\) is concave up everywhere'
+    C: 'a vertical tangent at \(x=1\)'
+    D: 'a local maximum at \(x=1\)'
+    answer: B
+    hint: '\(g''''=f''>0\).'
+    explanation: Positive second derivative means concave up.
+  174:
+    topic: s5-4
+    question: 'If \(f\) has a negative derivative for all \(x\) and \(f(1)=0\), then \(h(x)=\displaystyle\int_0^xf(t)\,dt\) has'
+    A: 'an inflection point at \(x=1\)'
+    B: no critical points
+    C: 'a local minimum at \(x=1\)'
+    D: 'a local maximum at \(x=1\)'
+    answer: D
+    hint: '\(h''=f\) is decreasing and crosses zero at 1.'
+    explanation: '\(h''>0\) before 1 and \(h''<0\) after 1.'
+  175:
+    topic: s5-4
+    question: 'If \(\displaystyle\lim_{x\to0}\dfrac{1}{x^3}\int_0^x\dfrac{t^2}{t^4+1}\,dt\) is evaluated, the answer is'
+    A: '\(\dfrac13\)'
+    B: '\(\infty\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'The form is \(\tfrac00\); use L''Hôpital''s Rule with Part 1 of the FTC.'
+    explanation: '\(\dfrac{x^2/(x^4+1)}{3x^2}\to\dfrac13\).'
+  176:
+    topic: s5-4
+    question: 'If \(\displaystyle\int_1^xf(t)\,dt=x^2-2x+1\), the value \(f(4)\) is'
+    A: '\(9\)'
+    B: '\(8\)'
+    C: '\(2\)'
+    D: '\(6\)'
+    answer: D
+    hint: '\(f(x)=2x-2\).'
+    explanation: '\(f(4)=8-2=6\).'
+  177:
+    topic: s5-4
+    question: 'The linearization of \(f(x)=2-\displaystyle\int_2^{x+1}\dfrac{9}{1+t}\,dt\) at \(x=1\) is'
+    A: '\(L(x)=2-9(x-1)\)'
+    B: '\(L(x)=2-3(x-1)\)'
+    C: '\(L(x)=2+3(x-1)\)'
+    D: '\(L(x)=-3(x-1)\)'
+    answer: B
+    hint: '\(f(1)=2-\int_2^2=2\) and \(f''(x)=-\dfrac{9}{2+x}\).'
+    explanation: '\(f''(1)=-3\).'
+  178:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \sin{\left(3 x \right)}\,dx\) using \(u=3x\).'
+    A: '\(- \frac{\cos{\left(3 x \right)}}{6}+C\)'
+    B: '\(\frac{\cos{\left(3 x \right)}}{3}+C\)'
+    C: '\(- \frac{2 \cos{\left(3 x \right)}}{3}+C\)'
+    D: '\(- \frac{\cos{\left(3 x \right)}}{3}+C\)'
+    answer: D
+    hint: 'Let \(u=3x\); then \(du=3\,dx\).'
+    explanation: 'Differentiating \(- \frac{\cos{\left(3 x \right)}}{3}\) gives back \(\sin{\left(3 x \right)}\), so the answer is \(- \frac{\cos{\left(3 x \right)}}{3}+C\).'
+  179:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int x \sin{\left(2 x^{2} \right)}\,dx\) using \(u=2x^2\).'
+    A: '\(- \frac{\cos{\left(2 x^{2} \right)}}{8}+C\)'
+    B: '\(- \frac{\cos{\left(2 x^{2} \right)}}{4}+C\)'
+    C: '\(\frac{\cos{\left(2 x^{2} \right)}}{4}+C\)'
+    D: '\(- \frac{\cos{\left(2 x^{2} \right)}}{2}+C\)'
+    answer: B
+    hint: 'Let \(u=2x^2\); then \(du=4x\,dx\).'
+    explanation: 'Differentiating \(- \frac{\cos{\left(2 x^{2} \right)}}{4}\) gives back \(x \sin{\left(2 x^{2} \right)}\), so the answer is \(- \frac{\cos{\left(2 x^{2} \right)}}{4}+C\).'
+  180:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \tan{\left(2 t \right)} \sec{\left(2 t \right)}\,dt\) using \(u=2t\).'
+    A: '\(\frac{1}{\cos{\left(2 t \right)}}+C\)'
+    B: '\(- \frac{1}{2 \cos{\left(2 t \right)}}+C\)'
+    C: '\(\frac{1}{2 \cos{\left(2 t \right)}}+C\)'
+    D: '\(\frac{\sin{\left(2 t \right)}}{\cos^{2}{\left(2 t \right)}}+C\)'
+    answer: C
+    hint: 'Let \(u=2t\).'
+    explanation: 'Differentiating \(\frac{1}{2 \cos{\left(2 t \right)}}\) gives back \(\tan{\left(2 t \right)} \sec{\left(2 t \right)}\), so the answer is \(\frac{1}{2 \cos{\left(2 t \right)}}+C\).'
+  181:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{28}{\left(7 x - 2\right)^{5}}\,dx\) using \(u=7x-2\).'
+    A: '\(- \frac{28 \left(- 268912 x^{3} + 230496 x^{2} - 65856 x + 6272\right)}{\left(67228 x^{4} - 76832 x^{3} + 32928 x^{2} - 6272 x + 448\right)^{2}}+C\)'
+    B: '\(- \frac{56}{67228 x^{4} - 76832 x^{3} + 32928 x^{2} - 6272 x + 448}+C\)'
+    C: '\(\frac{28}{67228 x^{4} - 76832 x^{3} + 32928 x^{2} - 6272 x + 448}+C\)'
+    D: '\(- \frac{28}{67228 x^{4} - 76832 x^{3} + 32928 x^{2} - 6272 x + 448}+C\)'
+    answer: D
+    hint: 'Let \(u=7x-2\).'
+    explanation: 'Differentiating \(- \frac{28}{67228 x^{4} - 76832 x^{3} + 32928 x^{2} - 6272 x + 448}\) gives back \(\frac{28}{\left(7 x - 2\right)^{5}}\), so the answer is \(- \frac{28}{67228 x^{4} - 76832 x^{3} + 32928 x^{2} - 6272 x + 448}+C\).'
+  182:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int x^{3} \left(x^{4} - 1\right)^{2}\,dx\) using \(u=x^4-1\).'
+    A: '\(\frac{x^{12}}{6} - \frac{x^{8}}{2} + \frac{x^{4}}{2}+C\)'
+    B: '\(x^{11} - 2 x^{7} + x^{3}+C\)'
+    C: '\(- \frac{x^{12}}{12} + \frac{x^{8}}{4} - \frac{x^{4}}{4}+C\)'
+    D: '\(\frac{x^{12}}{12} - \frac{x^{8}}{4} + \frac{x^{4}}{4}+C\)'
+    answer: D
+    hint: 'Let \(u=x^4-1\).'
+    explanation: 'Differentiating \(\frac{x^{12}}{12} - \frac{x^{8}}{4} + \frac{x^{4}}{4}\) gives back \(x^{3} \left(x^{4} - 1\right)^{2}\), so the answer is \(\frac{x^{12}}{12} - \frac{x^{8}}{4} + \frac{x^{4}}{4}+C\).'
+  183:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{9 r^{2}}{\sqrt{1 - r^{3}}}\,dr\) using \(u=1-r^3\).'
+    A: '\(- 6 \sqrt{1 - r^{3}}+C\)'
+    B: '\(6 \sqrt{1 - r^{3}}+C\)'
+    C: '\(- 3 \sqrt{1 - r^{3}}+C\)'
+    D: '\(- 12 \sqrt{1 - r^{3}}+C\)'
+    answer: A
+    hint: 'Let \(u=1-r^3\).'
+    explanation: 'Differentiating \(- 6 \sqrt{1 - r^{3}}\) gives back \(\frac{9 r^{2}}{\sqrt{1 - r^{3}}}\), so the answer is \(- 6 \sqrt{1 - r^{3}}+C\).'
+  184:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int 12 \left(y^{3} + 2 y\right) \left(y^{4} + 4 y^{2} + 1\right)^{2}\,dy\) using \(u=y^4+4y^2+1\).'
+    A: '\(y^{12} + 12 y^{10} + 51 y^{8} + 88 y^{6} + 51 y^{4} + 12 y^{2}+C\)'
+    B: '\(- y^{12} - 12 y^{10} - 51 y^{8} - 88 y^{6} - 51 y^{4} - 12 y^{2}+C\)'
+    C: '\(2 y^{12} + 24 y^{10} + 102 y^{8} + 176 y^{6} + 102 y^{4} + 24 y^{2}+C\)'
+    D: '\(12 y^{11} + 120 y^{9} + 408 y^{7} + 528 y^{5} + 204 y^{3} + 24 y+C\)'
+    answer: A
+    hint: 'Let \(u=y^4+4y^2+1\).'
+    explanation: 'Differentiating \(y^{12} + 12 y^{10} + 51 y^{8} + 88 y^{6} + 51 y^{4} + 12 y^{2}\) gives back \(12 \left(y^{3} + 2 y\right) \left(y^{4} + 4 y^{2} + 1\right)^{2}\), so the answer is \(y^{12} + 12 y^{10} + 51 y^{8} + 88 y^{6} + 51 y^{4} + 12 y^{2}+C\).'
+  185:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{\cos^{2}{\left(\frac{1}{x} \right)}}{x^{2}}\,dx\) using \(u=-1/x\).'
+    A: '\(\frac{4 x \tan^{3}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{4 x \tan{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 \tan^{4}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{4 \tan^{2}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x}+C\)'
+    B: '\(\frac{2 x \left(- 2 \tan^{4}{\left(\frac{1}{2 x} \right)} - 4 \tan^{2}{\left(\frac{1}{2 x} \right)} - 2 + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{x} + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan{\left(\frac{1}{2 x} \right)}}{x}\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{\left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)^{2}} - \frac{2 x \left(- 2 \tan^{4}{\left(\frac{1}{2 x} \right)} - 4 \tan^{2}{\left(\frac{1}{2 x} \right)} - 2 + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{x} + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan{\left(\frac{1}{2 x} \right)}}{x}\right) \tan{\left(\frac{1}{2 x} \right)}}{\left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)^{2}} + \frac{2 \tan^{3}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 \tan{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{\left(- 2 \tan^{4}{\left(\frac{1}{2 x} \right)} - 4 \tan^{2}{\left(\frac{1}{2 x} \right)} - 2 + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{x} + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan{\left(\frac{1}{2 x} \right)}}{x}\right) \tan^{4}{\left(\frac{1}{2 x} \right)}}{\left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)^{2}} - \frac{2 \left(- 2 \tan^{4}{\left(\frac{1}{2 x} \right)} - 4 \tan^{2}{\left(\frac{1}{2 x} \right)} - 2 + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{x} + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan{\left(\frac{1}{2 x} \right)}}{x}\right) \tan^{2}{\left(\frac{1}{2 x} \right)}}{\left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)^{2}} - \frac{- 2 \tan^{4}{\left(\frac{1}{2 x} \right)} - 4 \tan^{2}{\left(\frac{1}{2 x} \right)} - 2 + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{x} + \frac{4 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan{\left(\frac{1}{2 x} \right)}}{x}}{\left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)^{2}} - \frac{3 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{2}{\left(\frac{1}{2 x} \right)}}{x \left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)} + \frac{\tan^{2}{\left(\frac{1}{2 x} \right)} + 1}{x \left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)} + \frac{2 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan^{3}{\left(\frac{1}{2 x} \right)}}{x^{2} \left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)} + \frac{2 \left(\tan^{2}{\left(\frac{1}{2 x} \right)} + 1\right) \tan{\left(\frac{1}{2 x} \right)}}{x^{2} \left(2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x\right)}+C\)'
+    C: '\(\frac{2 x \tan^{3}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 x \tan{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{\tan^{4}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 \tan^{2}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{1}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x}+C\)'
+    D: '\(- \frac{2 x \tan^{3}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} + \frac{2 x \tan{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} + \frac{\tan^{4}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} + \frac{2 \tan^{2}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} + \frac{1}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x}+C\)'
+    answer: C
+    hint: 'Let \(u=-\tfrac1x\).'
+    explanation: 'Differentiating \(\frac{2 x \tan^{3}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 x \tan{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{\tan^{4}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 \tan^{2}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{1}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x}\) gives back \(\frac{\cos^{2}{\left(\frac{1}{x} \right)}}{x^{2}}\), so the answer is \(\frac{2 x \tan^{3}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 x \tan{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{\tan^{4}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{2 \tan^{2}{\left(\frac{1}{2 x} \right)}}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x} - \frac{1}{2 x \tan^{4}{\left(\frac{1}{2 x} \right)} + 4 x \tan^{2}{\left(\frac{1}{2 x} \right)} + 2 x}+C\).'
+  186:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{1}{\sqrt{5 x + 8}}\,dx\).'
+    A: '\(\frac{\sqrt{5 x + 8}}{5}+C\)'
+    B: '\(\frac{4 \sqrt{5 x + 8}}{5}+C\)'
+    C: '\(\frac{2 \sqrt{5 x + 8}}{5}+C\)'
+    D: '\(- \frac{2 \sqrt{5 x + 8}}{5}+C\)'
+    answer: C
+    hint: 'Try \(u=5x+8\).'
+    explanation: 'Differentiating \(\frac{2 \sqrt{5 x + 8}}{5}\) gives back \(\frac{1}{\sqrt{5 x + 8}}\), so the answer is \(\frac{2 \sqrt{5 x + 8}}{5}+C\).'
+  187:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \sqrt{3 - 2 x}\,dx\).'
+    A: '\(- \frac{2 \left(3 - 2 x\right)^{\frac{3}{2}}}{3}+C\)'
+    B: '\(- \frac{\left(3 - 2 x\right)^{\frac{3}{2}}}{6}+C\)'
+    C: '\(- \frac{\left(3 - 2 x\right)^{\frac{3}{2}}}{3}+C\)'
+    D: '\(\frac{\left(3 - 2 x\right)^{\frac{3}{2}}}{3}+C\)'
+    answer: C
+    hint: 'Let \(u=3-2x\).'
+    explanation: 'Differentiating \(- \frac{\left(3 - 2 x\right)^{\frac{3}{2}}}{3}\) gives back \(\sqrt{3 - 2 x}\), so the answer is \(- \frac{\left(3 - 2 x\right)^{\frac{3}{2}}}{3}+C\).'
+  188:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \left(2 x + 1\right)^{3}\,dx\).'
+    A: '\(4 x^{4} + 8 x^{3} + 6 x^{2} + 2 x+C\)'
+    B: '\(8 x^{3} + 12 x^{2} + 6 x + 1+C\)'
+    C: '\(2 x^{4} + 4 x^{3} + 3 x^{2} + x+C\)'
+    D: '\(- 2 x^{4} - 4 x^{3} - 3 x^{2} - x+C\)'
+    answer: C
+    hint: 'Let \(u=2x+1\).'
+    explanation: 'Differentiating \(2 x^{4} + 4 x^{3} + 3 x^{2} + x\) gives back \(\left(2 x + 1\right)^{3}\), so the answer is \(2 x^{4} + 4 x^{3} + 3 x^{2} + x+C\).'
+  189:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{1}{\sqrt{5 s + 4}}\,ds\).'
+    A: '\(\frac{\sqrt{5 s + 4}}{5}+C\)'
+    B: '\(\frac{4 \sqrt{5 s + 4}}{5}+C\)'
+    C: '\(- \frac{2 \sqrt{5 s + 4}}{5}+C\)'
+    D: '\(\frac{2 \sqrt{5 s + 4}}{5}+C\)'
+    answer: D
+    hint: 'Let \(u=5s+4\).'
+    explanation: 'Differentiating \(\frac{2 \sqrt{5 s + 4}}{5}\) gives back \(\frac{1}{\sqrt{5 s + 4}}\), so the answer is \(\frac{2 \sqrt{5 s + 4}}{5}+C\).'
+  190:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{3}{\left(2 - x\right)^{2}}\,dx\).'
+    A: '\(- \frac{6}{x - 2}+C\)'
+    B: '\(\frac{3}{x - 2}+C\)'
+    C: '\(- \frac{3}{x - 2}+C\)'
+    D: '\(\frac{3}{\left(x - 2\right)^{2}}+C\)'
+    answer: C
+    hint: 'Let \(u=2-x\).'
+    explanation: 'Differentiating \(- \frac{3}{x - 2}\) gives back \(\frac{3}{\left(2 - x\right)^{2}}\), so the answer is \(- \frac{3}{x - 2}+C\).'
+  191:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int x \sqrt{1 - x^{2}}\,dx\).'
+    A: '\(- \frac{x^{3}}{3 \sqrt{1 - x^{2}}} + \frac{2 x \sqrt{1 - x^{2}}}{3} + \frac{x}{3 \sqrt{1 - x^{2}}}+C\)'
+    B: '\(\frac{2 x^{2} \sqrt{1 - x^{2}}}{3} - \frac{2 \sqrt{1 - x^{2}}}{3}+C\)'
+    C: '\(\frac{x^{2} \sqrt{1 - x^{2}}}{3} - \frac{\sqrt{1 - x^{2}}}{3}+C\)'
+    D: '\(- \frac{x^{2} \sqrt{1 - x^{2}}}{3} + \frac{\sqrt{1 - x^{2}}}{3}+C\)'
+    answer: C
+    hint: 'Let \(u=1-x^2\).'
+    explanation: 'Differentiating \(\frac{x^{2} \sqrt{1 - x^{2}}}{3} - \frac{\sqrt{1 - x^{2}}}{3}\) gives back \(x \sqrt{1 - x^{2}}\), so the answer is \(\frac{x^{2} \sqrt{1 - x^{2}}}{3} - \frac{\sqrt{1 - x^{2}}}{3}+C\).'
+  192:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \cos{\left(3 x + 4 \right)}\,dx\).'
+    A: '\(\frac{2 \sin{\left(3 x + 4 \right)}}{3}+C\)'
+    B: '\(\frac{\sin{\left(3 x + 4 \right)}}{3}+C\)'
+    C: '\(\frac{\sin{\left(3 x + 4 \right)}}{6}+C\)'
+    D: '\(- \frac{\sin{\left(3 x + 4 \right)}}{3}+C\)'
+    answer: B
+    hint: 'Let \(u=3x+4\).'
+    explanation: 'Differentiating \(\frac{\sin{\left(3 x + 4 \right)}}{3}\) gives back \(\cos{\left(3 x + 4 \right)}\), so the answer is \(\frac{\sin{\left(3 x + 4 \right)}}{3}+C\).'
+  193:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \tan{\left(x \right)}\,dx\).'
+    A: '\(\frac{\sin{\left(x \right)}}{\cos{\left(x \right)}}+C\)'
+    B: '\(\ln{\left(\cos{\left(x \right)} \right)}+C\)'
+    C: '\(- \ln{\left(\cos{\left(x \right)} \right)}+C\)'
+    D: '\(- 2 \ln{\left(\cos{\left(x \right)} \right)}+C\)'
+    answer: C
+    hint: '\(\tan x=\dfrac{\sin x}{\cos x}\); let \(u=\cos x\).'
+    explanation: 'Differentiating \(- \ln{\left(\cos{\left(x \right)} \right)}\) gives back \(\tan{\left(x \right)}\), so the answer is \(- \ln{\left(\cos{\left(x \right)} \right)}+C\).'
+  194:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \tan^{2}{\left(x \right)} \sec^{2}{\left(x \right)}\,dx\).'
+    A: '\(- \frac{2 \sin{\left(x \right)}}{3 \cos{\left(x \right)}} + \frac{2 \sin{\left(x \right)}}{3 \cos^{3}{\left(x \right)}}+C\)'
+    B: '\(\frac{\sin{\left(x \right)}}{3 \cos{\left(x \right)}} - \frac{\sin{\left(x \right)}}{3 \cos^{3}{\left(x \right)}}+C\)'
+    C: '\(- \frac{\sin^{2}{\left(x \right)}}{3 \cos^{2}{\left(x \right)}} + \frac{\sin^{2}{\left(x \right)}}{\cos^{4}{\left(x \right)}} - \frac{1}{3} + \frac{1}{3 \cos^{2}{\left(x \right)}}+C\)'
+    D: '\(- \frac{\sin{\left(x \right)}}{3 \cos{\left(x \right)}} + \frac{\sin{\left(x \right)}}{3 \cos^{3}{\left(x \right)}}+C\)'
+    answer: D
+    hint: 'Let \(u=\tan x\).'
+    explanation: 'Differentiating \(- \frac{\sin{\left(x \right)}}{3 \cos{\left(x \right)}} + \frac{\sin{\left(x \right)}}{3 \cos^{3}{\left(x \right)}}\) gives back \(\tan^{2}{\left(x \right)} \sec^{2}{\left(x \right)}\), so the answer is \(- \frac{\sin{\left(x \right)}}{3 \cos{\left(x \right)}} + \frac{\sin{\left(x \right)}}{3 \cos^{3}{\left(x \right)}}+C\).'
+  195:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \sqrt{x} \sin{\left(x^{\frac{3}{2}} - 1 \right)}\,dx\).'
+    A: '\(- \frac{4 \cos{\left(x^{\frac{3}{2}} - 1 \right)}}{3}+C\)'
+    B: '\(\frac{2 \cos{\left(x^{\frac{3}{2}} - 1 \right)}}{3}+C\)'
+    C: '\(- \frac{\cos{\left(x^{\frac{3}{2}} - 1 \right)}}{3}+C\)'
+    D: '\(- \frac{2 \cos{\left(x^{\frac{3}{2}} - 1 \right)}}{3}+C\)'
+    answer: D
+    hint: 'Let \(u=x^{3/2}-1\).'
+    explanation: 'Differentiating \(- \frac{2 \cos{\left(x^{\frac{3}{2}} - 1 \right)}}{3}\) gives back \(\sqrt{x} \sin{\left(x^{\frac{3}{2}} - 1 \right)}\), so the answer is \(- \frac{2 \cos{\left(x^{\frac{3}{2}} - 1 \right)}}{3}+C\).'
+  196:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int x e^{x^{2}}\,dx\).'
+    A: '\(\frac{e^{x^{2}}}{2}+C\)'
+    B: '\(e^{x^{2}}+C\)'
+    C: '\(- \frac{e^{x^{2}}}{2}+C\)'
+    D: '\(\frac{e^{x^{2}}}{4}+C\)'
+    answer: A
+    hint: 'Let \(u=x^2\).'
+    explanation: 'Differentiating \(\frac{e^{x^{2}}}{2}\) gives back \(x e^{x^{2}}\), so the answer is \(\frac{e^{x^{2}}}{2}+C\).'
+  197:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int e^{\sin{\left(x \right)}} \cos{\left(x \right)}\,dx\).'
+    A: '\(- e^{\sin{\left(x \right)}}+C\)'
+    B: '\(2 e^{\sin{\left(x \right)}}+C\)'
+    C: '\(\frac{e^{\sin{\left(x \right)}}}{2}+C\)'
+    D: '\(e^{\sin{\left(x \right)}}+C\)'
+    answer: D
+    hint: 'Let \(u=\sin x\).'
+    explanation: 'Differentiating \(e^{\sin{\left(x \right)}}\) gives back \(e^{\sin{\left(x \right)}} \cos{\left(x \right)}\), so the answer is \(e^{\sin{\left(x \right)}}+C\).'
+  198:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{1}{x \ln{\left(x \right)}}\,dx\).'
+    A: '\(\ln{\left(\ln{\left(x \right)} \right)}+C\)'
+    B: '\(\frac{\ln{\left(\ln{\left(x \right)} \right)}}{2}+C\)'
+    C: '\(2 \ln{\left(\ln{\left(x \right)} \right)}+C\)'
+    D: '\(- \ln{\left(\ln{\left(x \right)} \right)}+C\)'
+    answer: A
+    hint: 'Let \(u=\ln x\).'
+    explanation: 'Differentiating \(\ln{\left(\ln{\left(x \right)} \right)}\) gives back \(\frac{1}{x \ln{\left(x \right)}}\), so the answer is \(\ln{\left(\ln{\left(x \right)} \right)}+C\).'
+  199:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{1}{4 x^{2} + 1}\,dx\).'
+    A: '\(\frac{\tan^{-1}{\left(2 x \right)}}{4}+C\)'
+    B: '\(\frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
+    C: '\(\tan^{-1}{\left(2 x \right)}+C\)'
+    D: '\(- \frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
+    answer: B
+    hint: 'Think \(\int\dfrac{du}{1+u^2}=\tan^{-1}u\) with \(u=2x\).'
+    explanation: 'Differentiating \(\frac{\tan^{-1}{\left(2 x \right)}}{2}\) gives back \(\frac{1}{4 x^{2} + 1}\), so the answer is \(\frac{\tan^{-1}{\left(2 x \right)}}{2}+C\).'
+  200:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{e^{x}}{e^{2 x} + 1}\,dx\).'
+    A: '\(2 \operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
+    B: '\(\frac{\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}}{2}+C\)'
+    C: '\(- \operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
+    D: '\(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\)'
+    answer: D
+    hint: 'Let \(u=e^x\).'
+    explanation: 'Differentiating \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}\) gives back \(\frac{e^{x}}{e^{2 x} + 1}\), so the answer is \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}+C\).'
+  201:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{5}{4 r^{2} + 9}\,dr\).'
+    A: '\(\frac{5}{9 \left(\frac{4 r^{2}}{9} + 1\right)}+C\)'
+    B: '\(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{3}+C\)'
+    C: '\(- \frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}+C\)'
+    D: '\(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}+C\)'
+    answer: D
+    hint: 'Write the denominator as \(9\left(1+\tfrac{4r^2}{9}\right)\).'
+    explanation: 'Differentiating \(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}\) gives back \(\frac{5}{4 r^{2} + 9}\), so the answer is \(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}+C\).'
+  202:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{1}{\sqrt{1 - 4 x^{2}}}\,dx\).'
+    A: '\(- \frac{\sin^{-1}{\left(2 x \right)}}{2}+C\)'
+    B: '\(\frac{\sin^{-1}{\left(2 x \right)}}{4}+C\)'
+    C: '\(\sin^{-1}{\left(2 x \right)}+C\)'
+    D: '\(\frac{\sin^{-1}{\left(2 x \right)}}{2}+C\)'
+    answer: D
+    hint: 'The pattern \(\dfrac{du}{\sqrt{1-u^2}}\) with \(u=2x\).'
+    explanation: 'Differentiating \(\frac{\sin^{-1}{\left(2 x \right)}}{2}\) gives back \(\frac{1}{\sqrt{1 - 4 x^{2}}}\), so the answer is \(\frac{\sin^{-1}{\left(2 x \right)}}{2}+C\).'
+  203:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \tan{\left(x \right)} \sqrt{\sec{\left(x \right)}}\,dx\).'
+    A: '\(\sqrt{\sec{\left(x \right)}}+C\)'
+    B: '\(4 \sqrt{\sec{\left(x \right)}}+C\)'
+    C: '\(- 2 \sqrt{\sec{\left(x \right)}}+C\)'
+    D: '\(2 \sqrt{\sec{\left(x \right)}}+C\)'
+    answer: D
+    hint: 'Let \(u=\sec x\).'
+    explanation: 'Differentiating \(2 \sqrt{\sec{\left(x \right)}}\) gives back \(\tan{\left(x \right)} \sqrt{\sec{\left(x \right)}}\), so the answer is \(2 \sqrt{\sec{\left(x \right)}}+C\).'
+  204:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \frac{\sin{\left(2 t + 1 \right)}}{\cos^{2}{\left(2 t + 1 \right)}}\,dt\).'
+    A: '\(\frac{1}{2 \cos{\left(2 t + 1 \right)}}+C\)'
+    B: '\(\frac{1}{\cos{\left(2 t + 1 \right)}}+C\)'
+    C: '\(- \frac{1}{2 \cos{\left(2 t + 1 \right)}}+C\)'
+    D: '\(\frac{1}{4 \cos{\left(2 t + 1 \right)}}+C\)'
+    answer: A
+    hint: 'Let \(u=\cos(2t+1)\).'
+    explanation: 'Differentiating \(\frac{1}{2 \cos{\left(2 t + 1 \right)}}\) gives back \(\frac{\sin{\left(2 t + 1 \right)}}{\cos^{2}{\left(2 t + 1 \right)}}\), so the answer is \(\frac{1}{2 \cos{\left(2 t + 1 \right)}}+C\).'
+  205:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \left(1 - \cos{\left(\frac{t}{2} \right)}\right)^{2} \sin{\left(\frac{t}{2} \right)}\,dt\).'
+    A: '\(- \frac{4 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 4 \cos^{2}{\left(\frac{t}{2} \right)} - 4 \cos{\left(\frac{t}{2} \right)}+C\)'
+    B: '\(- \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos^{2}{\left(\frac{t}{2} \right)} - 2 \cos{\left(\frac{t}{2} \right)}+C\)'
+    C: '\(\frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} - 2 \cos^{2}{\left(\frac{t}{2} \right)} + 2 \cos{\left(\frac{t}{2} \right)}+C\)'
+    D: '\(\sin{\left(\frac{t}{2} \right)} \cos^{2}{\left(\frac{t}{2} \right)} - 2 \sin{\left(\frac{t}{2} \right)} \cos{\left(\frac{t}{2} \right)} + \sin{\left(\frac{t}{2} \right)}+C\)'
+    answer: B
+    hint: 'Let \(u=1-\cos\tfrac t2\).'
+    explanation: 'Differentiating \(- \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos^{2}{\left(\frac{t}{2} \right)} - 2 \cos{\left(\frac{t}{2} \right)}\) gives back \(\left(1 - \cos{\left(\frac{t}{2} \right)}\right)^{2} \sin{\left(\frac{t}{2} \right)}\), so the answer is \(- \frac{2 \cos^{3}{\left(\frac{t}{2} \right)}}{3} + 2 \cos^{2}{\left(\frac{t}{2} \right)} - 2 \cos{\left(\frac{t}{2} \right)}+C\).'
+  206:
+    topic: s5-5
+    question: 'Find \(\displaystyle\int \cot{\left(2 \theta \right)} \csc{\left(2 \theta \right)}\,d\theta\).'
+    A: '\(- \frac{1}{2 \sin{\left(2 \theta \right)}}+C\)'
+    B: '\(\frac{\cos{\left(2 \theta \right)}}{\sin^{2}{\left(2 \theta \right)}}+C\)'
+    C: '\(- \frac{1}{\sin{\left(2 \theta \right)}}+C\)'
+    D: '\(\frac{1}{2 \sin{\left(2 \theta \right)}}+C\)'
+    answer: A
+    hint: 'Let \(u=2\theta\) and recall \(\int\csc u\cot u\,du=-\csc u\).'
+    explanation: 'Differentiating \(- \frac{1}{2 \sin{\left(2 \theta \right)}}\) gives back \(\cot{\left(2 \theta \right)} \csc{\left(2 \theta \right)}\), so the answer is \(- \frac{1}{2 \sin{\left(2 \theta \right)}}+C\).'
+  207:
+    topic: s5-5
+    question: 'Evaluate \(\displaystyle\int\csc^2 2\theta\cot2\theta\,d\theta\) using (a) \(u=\cot2\theta\) and (b) \(u=\csc2\theta\). The two answers are'
+    A: 'the substitution \(u=\csc2\theta\) does not work'
+    B: "both correct: they differ by a constant"
+    C: they are equal with the same constant
+    D: one of them must be wrong
+    answer: B
+    hint: '\(-\tfrac14\cot^22\theta+C_1\) and \(-\tfrac14\csc^22\theta+C_2\); use \(\csc^2=1+\cot^2\).'
+    explanation: '\(\csc^2u=1+\cot^2u\), so the two antiderivatives differ by the constant \(-\tfrac14\).'
+  208:
+    topic: s5-5
+    question: 'Which statement about \(\displaystyle\int2\sin x\cos x\,dx\) done three ways (\(u=\sin x\), \(u=\cos x\), and \(2\sin x\cos x=\sin2x\)) is correct?'
+    A: All three are correct; the results differ only by constants
+    B: 'The results are equal for every \(C\)'
+    C: The three results are different functions
+    D: Only one of the three is correct
+    answer: A
+    hint: '\(\sin^2x\), \(-\cos^2x\) and \(-\tfrac12\cos2x\) have the same derivative.'
+    explanation: '\(\sin^2x=-\cos^2x+1=-\tfrac12\cos2x+\tfrac12\).'
+  209:
+    topic: s5-5
+    question: 'Can both \(\displaystyle\int\sec^2x\tan x\,dx=\dfrac{\tan^2x}{2}+C\) and \(\displaystyle\int\sec^2x\tan x\,dx=\dfrac{\sec^2x}{2}+C\) be correct?'
+    A: No, neither is correct
+    B: No, only the second is correct
+    C: No, only the first is correct
+    D: 'Yes: \(\sec^2x=\tan^2x+1\), so they differ by a constant'
+    answer: D
+    hint: 'Compare \(\tfrac{\sec^2x}2\) with \(\tfrac{\tan^2x}{2}\).'
+    explanation: 'They differ by \(\tfrac12\).'
+  210:
+    topic: s5-5
+    question: 'Solve \(\dfrac{ds}{dt}=12t(3t^2-1)^3\), \(s(1)=3\).'
+    A: '\(s=(3t^2-1)^4/4\)'
+    B: '\(s=(3t^2-1)^4-13\)'
+    C: '\(s=(3t^2-1)^4/4-1\)'
+    D: '\(s=(3t^2-1)^4/4+1\)'
+    answer: C
+    hint: 'Let \(u=3t^2-1\); \(\int12t\,u^3dt=\int2u^3du\).'
+    explanation: '\(s=\tfrac{(3t^2-1)^4}{2\cdot2}+C\) and \(s(1)=4+C=3\) gives \(C=-1\).'
+  211:
+    topic: s5-5
+    question: 'Solve \(\dfrac{dr}{d\theta}=3\cos^2\!\left(\dfrac\pi4-\theta\right)\), \(r(0)=\dfrac\pi8\).'
+    A: '\(r=\dfrac{3\theta}2+\dfrac\pi8\)'
+    B: '\(r=\sin\!\left(\dfrac\pi4-\theta\right)^3+\dfrac\pi8\)'
+    C: '\(r=3\theta+\dfrac{\pi}{8}\)'
+    D: '\(r=\dfrac{3\theta}{2}-\dfrac{3}{4}\sin\!\left(\dfrac\pi2-2\theta\right)+\dfrac{\pi}{8}+\dfrac34\)'
+    answer: D
+    hint: 'Use \(\cos^2u=\tfrac{1+\cos2u}2\).'
+    explanation: '\(r=\tfrac32\theta-\tfrac34\sin(\tfrac\pi2-2\theta)+C\), and \(r(0)=-\tfrac34+C=\tfrac\pi8\).'
+  212:
+    topic: s5-5
+    question: 'A particle has velocity \(v=\dfrac{ds}{dt}=6\sin2t\) m/s with \(s(0)=0\). Its position at \(t=\pi/2\) is'
+    A: '\(3\) m'
+    B: '\(-6\) m'
+    C: '\(0\) m'
+    D: '\(6\) m'
+    answer: D
+    hint: '\(s=-3\cos2t+C\), with \(s(0)=0\).'
+    explanation: '\(C=3\), so \(s(\pi/2)=-3\cos\pi+3=6\).'
+  213:
+    topic: s5-5
+    question: 'A particle has acceleration \(a=\pi^2\cos\pi t\) m/s\(^2\), \(s(0)=0\), \(v(0)=8\). Its position at \(t=1\) s is'
+    A: '\(\pi\) m'
+    B: '\(8\) m'
+    C: '\(10\) m'
+    D: '\(9\) m'
+    answer: C
+    hint: Integrate twice, applying each initial condition.
+    explanation: '\(v=\pi\sin\pi t+8\), \(s=-\cos\pi t+8t+1\) (since \(s(0)=-1+C=0\)), so \(s(1)=1+8+1=10\).'
+  214:
+    topic: s5-5
+    question: 'The velocity of a particle moving on a line is \(v=\dfrac{ds}{dt}=\) given, and \(s=\displaystyle\int v\,dt\). If \(v=6\sin2t\), then \(s(\pi/2)-s(0)\) equals'
+    A: '\(3\)'
+    B: '\(-6\)'
+    C: '\(6\)'
+    D: '\(0\)'
+    answer: C
+    hint: 'This is the displacement: \(\int_0^{\pi/2}6\sin2t\,dt\).'
+    explanation: '\([-3\cos2t]_0^{\pi/2}=3+3=6\).'
+  215:
+    topic: s5-5
+    question: 'The average value of \(V=V_{\max}\sin120\pi t\) over a full cycle \([0,\tfrac1{60}]\) is'
+    A: '\(\dfrac{2V_{\max}}\pi\)'
+    B: '\(0\)'
+    C: '\(V_{\max}\)'
+    D: '\(\dfrac{V_{\max}}{2}\)'
+    answer: B
+    hint: '\(\sin\) is positive for half the cycle and negative for half.'
+    explanation: '\(\int_0^{1/60}\sin120\pi t\,dt=0\).'
+  216:
+    topic: s5-5
+    question: Household voltage is rated at 240 V rms. The peak voltage allowed is
+    A: '\(120\) V'
+    B: '\(480\) V'
+    C: '\(240\) V'
+    D: '\(240\sqrt2\approx339\) V'
+    answer: D
+    hint: 'rms \(=\dfrac{V_{\max}}{\sqrt2}\).'
+    explanation: 'Because \(\int_0^{1/60}(V_{\max})^2\sin^2120\pi t\,dt=\tfrac{V_{\max}^2}{120}\), the rms value is \(V_{\max}/\sqrt2\).'
+  217:
+    topic: s5-5
+    question: 'Using the substitution \(u=x-1\), \(\displaystyle\int\sqrt{1+\sin^2(x-1)}\,\sin(x-1)\cos(x-1)\,dx\) equals'
+    A: '\(\dfrac23\left(1+\sin^2(x-1)\right)^{3/2}+C\)'
+    B: '\(\dfrac13\left(1+\sin^2(x-1)\right)^{3/2}+C\)'
+    C: '\(\left(1+\sin^2(x-1)\right)^{3/2}+C\)'
+    D: '\(\dfrac12\sin^2(x-1)\sqrt{1+\sin^2(x-1)}+C\)'
+    answer: B
+    hint: 'Let \(u=1+\sin^2(x-1)\); then \(du=2\sin(x-1)\cos(x-1)\,dx\).'
+    explanation: '\(\tfrac12\int u^{1/2}du=\tfrac13u^{3/2}\).'
+  218:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{3} \sqrt{y + 1}\,dy\).'
+    A: '\(- \frac{14}{3}\)'
+    B: '\(\frac{14}{3}\)'
+    C: '\(\frac{7}{3}\)'
+    D: '\(\frac{28}{3}\)'
+    answer: B
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(\frac{2 \left(y + 1\right)^{\frac{3}{2}}}{3}\); then \(F(3)-F(0)=\frac{14}{3}\).'
+  219:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} y \sqrt{1 - y^{2}}\,dy\).'
+    A: '\(\frac{2}{3}\)'
+    B: '\(\frac{1}{6}\)'
+    C: '\(- \frac{1}{3}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: D
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(\frac{y^{2} \sqrt{1 - y^{2}}}{3} - \frac{\sqrt{1 - y^{2}}}{3}\); then \(F(1)-F(0)=\frac{1}{3}\).'
+  220:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{4}} \tan{\left(x \right)} \sec^{2}{\left(x \right)}\,dx\).'
+    A: '\(- \frac{1}{2}\)'
+    B: '\(\frac{1}{4}\)'
+    C: '\(1\)'
+    D: '\(\frac{1}{2}\)'
+    answer: D
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(\frac{1}{2 \cos^{2}{\left(x \right)}}\); then \(F(\frac{\pi}{4})-F(0)=\frac{1}{2}\).'
+  221:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\pi} 3 \sin{\left(x \right)} \cos^{2}{\left(x \right)}\,dx\).'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(-2\)'
+    D: '\(1\)'
+    answer: B
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(- \cos^{3}{\left(x \right)}\); then \(F(\pi)-F(0)=2\).'
+  222:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} t^{3} \left(t^{4} + 1\right)^{3}\,dt\).'
+    A: '\(- \frac{15}{16}\)'
+    B: '\(\frac{15}{16}\)'
+    C: '\(\frac{15}{8}\)'
+    D: '\(\frac{15}{32}\)'
+    answer: B
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(\frac{t^{16}}{16} + \frac{t^{12}}{4} + \frac{3 t^{8}}{8} + \frac{t^{4}}{4}\); then \(F(1)-F(0)=\frac{15}{16}\).'
+  223:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\sqrt{7}} t \sqrt[3]{t^{2} + 1}\,dt\).'
+    A: '\(\frac{45}{16}\)'
+    B: '\(- \frac{45}{8}\)'
+    C: '\(\frac{45}{8}\)'
+    D: '\(\frac{45}{4}\)'
+    answer: C
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(\frac{3 t^{2} \sqrt[3]{t^{2} + 1}}{8} + \frac{3 \sqrt[3]{t^{2} + 1}}{8}\); then \(F(\sqrt{7})-F(0)=\frac{45}{8}\).'
+  224:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{-1}^{1} \frac{5 r}{\left(r^{2} + 4\right)^{2}}\,dr\).'
+    A: '\(-1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: C
+    hint: Use a substitution to find an antiderivative, then evaluate (or change the limits).
+    explanation: 'An antiderivative is \(- \frac{5}{2 r^{2} + 8}\); then \(F(1)-F(-1)=0\).'
+  225:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{-1}^{0} \sqrt{y + 1}\,dy\).'
+    A: '\(\frac{2}{3}\)'
+    B: '\(- \frac{2}{3}\)'
+    C: '\(\frac{4}{3}\)'
+    D: '\(\frac{1}{3}\)'
+    answer: A
+    hint: Use the substitution formula, changing the limits.
+    explanation: 'An antiderivative is \(\frac{2 \left(y + 1\right)^{\frac{3}{2}}}{3}\); then \(F(0)-F(-1)=\frac{2}{3}\).'
+  226:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{-1}^{1} y \sqrt{1 - y^{2}}\,dy\).'
+    A: '\(1\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(0\)'
+    D: '\(-1\)'
+    answer: C
+    hint: "Check for symmetry: an odd integrand over a symmetric interval integrates to 0."
+    explanation: 'An antiderivative is \(\frac{y^{2} \sqrt{1 - y^{2}}}{3} - \frac{\sqrt{1 - y^{2}}}{3}\); then \(F(1)-F(-1)=0\).'
+  227:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{- \frac{\pi}{4}}^{0} \tan{\left(x \right)} \sec^{2}{\left(x \right)}\,dx\).'
+    A: '\(\frac{1}{2}\)'
+    B: '\(-1\)'
+    C: '\(- \frac{1}{4}\)'
+    D: '\(- \frac{1}{2}\)'
+    answer: D
+    hint: Use the substitution formula, changing the limits.
+    explanation: 'An antiderivative is \(\frac{1}{2 \cos^{2}{\left(x \right)}}\); then \(F(0)-F(- \frac{\pi}{4})=- \frac{1}{2}\).'
+  228:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{-1}^{1} t^{3} \left(t^{4} + 1\right)^{3}\,dt\).'
+    A: '\(-1\)'
+    B: '\(1\)'
+    C: '\(\frac{1}{2}\)'
+    D: '\(0\)'
+    answer: D
+    hint: "Check for symmetry: an odd integrand over a symmetric interval integrates to 0."
+    explanation: 'An antiderivative is \(\frac{t^{16}}{16} + \frac{t^{12}}{4} + \frac{3 t^{8}}{8} + \frac{t^{4}}{4}\); then \(F(1)-F(-1)=0\).'
+  229:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} \frac{10 \sqrt{v}}{\left(v^{\frac{3}{2}} + 1\right)^{2}}\,dv\).'
+    A: '\(\frac{20}{3}\)'
+    B: '\(\frac{10}{3}\)'
+    C: '\(- \frac{10}{3}\)'
+    D: '\(\frac{5}{3}\)'
+    answer: B
+    hint: 'Let \(u=1+v^{3/2}\); then \(du=\tfrac32\sqrt v\,dv\).'
+    explanation: 'An antiderivative is \(- \frac{20}{3 v^{\frac{3}{2}} + 3}\); then \(F(1)-F(0)=\frac{10}{3}\).'
+  230:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{1} \frac{x^{3}}{\sqrt{x^{4} + 9}}\,dx\).'
+    A: '\(- \frac{3}{2} + \frac{\sqrt{10}}{2}\)'
+    B: '\(- \frac{3}{4} + \frac{\sqrt{10}}{4}\)'
+    C: '\(-3 + \sqrt{10}\)'
+    D: '\(\frac{3}{2} - \frac{\sqrt{10}}{2}\)'
+    answer: A
+    hint: 'Let \(u=x^4+9\).'
+    explanation: 'An antiderivative is \(\frac{\sqrt{x^{4} + 9}}{2}\); then \(F(1)-F(0)=- \frac{3}{2} + \frac{\sqrt{10}}{2}\).'
+  231:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{6}} \left(1 - \cos{\left(3 t \right)}\right) \sin{\left(3 t \right)}\,dt\).'
+    A: '\(\frac{1}{3}\)'
+    B: '\(\frac{1}{6}\)'
+    C: '\(\frac{1}{12}\)'
+    D: '\(- \frac{1}{6}\)'
+    answer: B
+    hint: 'Let \(u=1-\cos3t\).'
+    explanation: 'An antiderivative is \(- \frac{\sin^{2}{\left(3 t \right)}}{6} - \frac{\cos{\left(3 t \right)}}{3}\); then \(F(\frac{\pi}{6})-F(0)=\frac{1}{6}\).'
+  232:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{- \frac{\pi}{2}}^{0} \left(\tan{\left(\frac{t}{2} \right)} + 2\right) \sec^{2}{\left(\frac{t}{2} \right)}\,dt\).'
+    A: '\(\frac{3}{2}\)'
+    B: '\(3\)'
+    C: '\(-3\)'
+    D: '\(6\)'
+    answer: B
+    hint: 'Let \(u=2+\tan\tfrac t2\).'
+    explanation: 'An antiderivative is \(\tan^{2}{\left(\frac{t}{2} \right)} + 4 \tan{\left(\frac{t}{2} \right)}\); then \(F(0)-F(- \frac{\pi}{2})=3\).'
+  233:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_0^{2\pi}\dfrac{\cos z}{\sqrt{4+3\sin z}}\,dz\).'
+    A: '\(2\pi\)'
+    B: '\(0\)'
+    C: '\(\dfrac{4}{3}\)'
+    D: '\(\dfrac23\)'
+    answer: B
+    hint: 'Let \(u=4+3\sin z\). Compare \(u(0)\) and \(u(2\pi)\).'
+    explanation: 'Both limits give \(u=4\), so the integral is 0.'
+  234:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\pi} \frac{\sin{\left(t \right)}}{2 - \cos{\left(t \right)}}\,dt\).'
+    A: '\(2 \ln{\left(3 \right)}\)'
+    B: '\(\frac{\ln{\left(3 \right)}}{2}\)'
+    C: '\(- \ln{\left(3 \right)}\)'
+    D: '\(\ln{\left(3 \right)}\)'
+    answer: D
+    hint: 'Let \(u=2-\cos t\).'
+    explanation: 'An antiderivative is \(\ln{\left(\cos{\left(t \right)} - 2 \right)}\); then \(F(\pi)-F(0)=\ln{\left(3 \right)}\).'
+  235:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{3}} \frac{4 \sin{\left(\theta \right)}}{1 - 4 \cos{\left(\theta \right)}}\,d\theta\).'
+    A: '\(- \ln{\left(3 \right)}\)'
+    B: '\(- 2 \ln{\left(3 \right)}\)'
+    C: '\(- \frac{\ln{\left(3 \right)}}{2}\)'
+    D: '\(\ln{\left(3 \right)}\)'
+    answer: A
+    hint: 'Let \(u=1-4\cos\theta\).'
+    explanation: 'An antiderivative is \(\ln{\left(4 \cos{\left(\theta \right)} - 1 \right)}\); then \(F(\frac{\pi}{3})-F(0)=- \ln{\left(3 \right)}\).'
+  236:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{1}^{2} \frac{2 \ln{\left(x \right)}}{x}\,dx\).'
+    A: '\(2 \ln{\left(2 \right)}^{2}\)'
+    B: '\(- \ln{\left(2 \right)}^{2}\)'
+    C: '\(\ln{\left(2 \right)}^{2}\)'
+    D: '\(\frac{\ln{\left(2 \right)}^{2}}{2}\)'
+    answer: C
+    hint: 'Let \(u=\ln x\).'
+    explanation: 'An antiderivative is \(\ln{\left(x \right)}^{2}\); then \(F(2)-F(1)=\ln{\left(2 \right)}^{2}\).'
+  237:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{2}^{4} \frac{1}{x \ln{\left(x \right)}^{2}}\,dx\).'
+    A: '\(\frac{1}{4 \ln{\left(2 \right)}}\)'
+    B: '\(\frac{1}{2 \ln{\left(2 \right)}}\)'
+    C: '\(- \frac{1}{2 \ln{\left(2 \right)}}\)'
+    D: '\(\frac{1}{\ln{\left(2 \right)}}\)'
+    answer: B
+    hint: 'Let \(u=\ln x\).'
+    explanation: 'An antiderivative is \(- \frac{1}{\ln{\left(x \right)}}\); then \(F(4)-F(2)=\frac{1}{2 \ln{\left(2 \right)}}\).'
+  238:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\ln{\left(\sqrt{3} \right)}} \frac{e^{x}}{e^{2 x} + 1}\,dx\).'
+    A: '\(- \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{2} - \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{2}\)'
+    B: '\(- \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{2} - \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{2}\)'
+    C: '\(- i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right) - i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right) + i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right) + i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)\)'
+    D: '\(- \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{4} - \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{4} + \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{4} + \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{4}\)'
+    answer: A
+    hint: 'Let \(u=e^x\).'
+    explanation: 'An antiderivative is \(\operatorname{RootSum} {\left(4 z^{2} + 1, \left( i \mapsto i \ln{\left(2 i + e^{x} \right)} \right)\right)}\); then \(F(\ln{\left(\sqrt{3} \right)})-F(0)=- \frac{i \left(\ln{\left(2 \right)} - \frac{i \pi}{6}\right)}{2} - \frac{i \left(\ln{\left(\sqrt{2} \right)} + \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(\sqrt{2} \right)} - \frac{i \pi}{4}\right)}{2} + \frac{i \left(\ln{\left(2 \right)} + \frac{i \pi}{6}\right)}{2}\).'
+  239:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{\frac{\pi}{2}}^{\pi} 2 \cot{\left(\frac{\theta}{3} \right)}\,d\theta\).'
+    A: '\(2 \ln{\left(27 \right)}\)'
+    B: '\(\ln{\left(27 \right)}\)'
+    C: '\(\frac{\ln{\left(27 \right)}}{2}\)'
+    D: '\(- \ln{\left(27 \right)}\)'
+    answer: B
+    hint: 'Let \(u=\theta/3\), then \(\int\cot u\,du=\ln|\sin u|\).'
+    explanation: 'An antiderivative is \(6 \ln{\left(\sin{\left(\frac{\theta}{3} \right)} \right)}\); then \(F(\pi)-F(\frac{\pi}{2})=\ln{\left(27 \right)}\).'
+  240:
+    topic: s5-6
+    question: 'Evaluate \(\displaystyle\int_{0}^{\frac{\pi}{12}} 6 \tan{\left(3 x \right)}\,dx\).'
+    A: '\(\ln{\left(2 \right)}\)'
+    B: '\(\frac{\ln{\left(2 \right)}}{2}\)'
+    C: '\(2 \ln{\left(2 \right)}\)'
+    D: '\(- \ln{\left(2 \right)}\)'
+    answer: A
+    hint: '\(\int\tan u\,du=-\ln|\cos u|\).'
+    explanation: 'An antiderivative is \(- 2 \ln{\left(\cos{\left(3 x \right)} \right)}\); then \(F(\frac{\pi}{12})-F(0)=\ln{\left(2 \right)}\).'
+  241:
+    topic: s5-6
+    question: 'Which of the two ways of evaluating \(\displaystyle\int_{-1}^{1}r\sqrt{1-r^2}\,dr\) is right? (I) Let \(u=1-r^2\) and change limits to \(u(-1)=0\), \(u(1)=0\). (II) Compute the antiderivative \(-\tfrac13(1-r^2)^{3/2}\) and substitute.'
+    A: '(I) gives 0 and (II) gives \(\tfrac23\)'
+    B: "Both give 0: the integrand is odd"
+    C: 'Neither works because the integrand is not defined at \(\pm1\)'
+    D: '(I) gives \(\tfrac23\) and (II) gives 0'
+    answer: B
+    hint: 'Check the symmetry of \(r\sqrt{1-r^2}\).'
+    explanation: 'An odd function integrates to 0 over \([-1,1]\), and both methods agree.'
+  242:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=x^2-2\) and \(y=2\).'
+    A: '\(\frac{64}{3}\)'
+    B: '\(- \frac{32}{3}\)'
+    C: '\(\frac{16}{3}\)'
+    D: '\(\frac{32}{3}\)'
+    answer: D
+    hint: 'Find the intersection points, decide which curve is on top, and integrate (top \(-\) bottom).'
+    explanation: 'The area is \(\displaystyle\int_{-2}^{2}\left(\text{top}-\text{bottom}\right)dx=\frac{32}{3}\).'
+  243:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=2x-x^2\) and \(y=-3\).'
+    A: '\(- \frac{32}{3}\)'
+    B: '\(\frac{64}{3}\)'
+    C: '\(\frac{16}{3}\)'
+    D: '\(\frac{32}{3}\)'
+    answer: D
+    hint: 'Find the intersection points, decide which curve is on top, and integrate (top \(-\) bottom).'
+    explanation: 'The area is \(\displaystyle\int_{-1}^{3}\left(\text{top}-\text{bottom}\right)dx=\frac{32}{3}\).'
+  244:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=x^4\) and \(y=8x\).'
+    A: '\(- \frac{48}{5}\)'
+    B: '\(\frac{24}{5}\)'
+    C: '\(\frac{96}{5}\)'
+    D: '\(\frac{48}{5}\)'
+    answer: D
+    hint: 'Find the intersection points, decide which curve is on top, and integrate (top \(-\) bottom).'
+    explanation: 'The area is \(\displaystyle\int_{0}^{2}\left(\text{top}-\text{bottom}\right)dx=\frac{48}{5}\).'
+  245:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=x^2-2x\) and \(y=x\).'
+    A: '\(\frac{9}{2}\)'
+    B: '\(- \frac{9}{2}\)'
+    C: '\(9\)'
+    D: '\(\frac{9}{4}\)'
+    answer: A
+    hint: 'Find the intersection points, decide which curve is on top, and integrate (top \(-\) bottom).'
+    explanation: 'The area is \(\displaystyle\int_{0}^{3}\left(\text{top}-\text{bottom}\right)dx=\frac{9}{2}\).'
+  246:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=x^2\) and \(y=-x^2+4x\).'
+    A: '\(\frac{16}{3}\)'
+    B: '\(\frac{8}{3}\)'
+    C: '\(- \frac{8}{3}\)'
+    D: '\(\frac{4}{3}\)'
+    answer: B
+    hint: 'Find the intersection points, decide which curve is on top, and integrate (top \(-\) bottom).'
+    explanation: 'The area is \(\displaystyle\int_{0}^{2}\left(\text{top}-\text{bottom}\right)dx=\frac{8}{3}\).'
+  247:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=7-2x^2\) and \(y=x^2+4\).'
+    A: '\(8\)'
+    B: '\(4\)'
+    C: '\(2\)'
+    D: '\(-4\)'
+    answer: B
+    hint: 'Find the intersection points, decide which curve is on top, and integrate (top \(-\) bottom).'
+    explanation: 'The area is \(\displaystyle\int_{-1}^{1}\left(\text{top}-\text{bottom}\right)dx=4\).'
+  248:
+    topic: s5-6
+    question: 'The area enclosed by \(y=x\sqrt{a^2-x^2}\) (\(a>0\)) and the \(x\)-axis for \(0\le x\le a\) is'
+    A: '\(\dfrac{a^3}{3}\)'
+    B: '\(\dfrac{a^3}{2}\)'
+    C: '\(\dfrac{2a^3}{3}\)'
+    D: '\(\dfrac{a^2}{3}\)'
+    answer: A
+    hint: 'Let \(u=a^2-x^2\).'
+    explanation: '\(\left[-\tfrac13(a^2-x^2)^{3/2}\right]_0^a=\tfrac{a^3}3\).'
+  249:
+    topic: s5-6
+    question: 'Find the area of the region enclosed by \(x=2y^2\), \(x=0\), and \(y=3\) (integrate with respect to \(y\)).'
+    A: '\(18\)'
+    B: '\(36\)'
+    C: '\(9\)'
+    D: '\(-18\)'
+    answer: A
+    hint: 'Solve each curve for \(x\) in terms of \(y\), find the \(y\)-values where they meet, and integrate (right \(-\) left).'
+    explanation: 'The area is \(18\).'
+  250:
+    topic: s5-6
+    question: 'Find the area of the region enclosed by \(x=y^2\) and \(x=y+2\) (integrate with respect to \(y\)).'
+    A: '\(\frac{9}{4}\)'
+    B: '\(\frac{9}{2}\)'
+    C: '\(9\)'
+    D: '\(- \frac{9}{2}\)'
+    answer: B
+    hint: 'Solve each curve for \(x\) in terms of \(y\), find the \(y\)-values where they meet, and integrate (right \(-\) left).'
+    explanation: 'The area is \(\frac{9}{2}\).'
+  251:
+    topic: s5-6
+    question: 'Find the area of the region enclosed by \(x-y^2=0\) and \(x+2y^2=3\) (integrate with respect to \(y\)).'
+    A: '\(4\)'
+    B: '\(8\)'
+    C: '\(-4\)'
+    D: '\(2\)'
+    answer: A
+    hint: 'Solve each curve for \(x\) in terms of \(y\), find the \(y\)-values where they meet, and integrate (right \(-\) left).'
+    explanation: 'The area is \(4\).'
+  252:
+    topic: s5-6
+    question: 'Find the area of the region enclosed by \(x+y^2=0\) and \(x+3y^2=2\) (integrate with respect to \(y\)).'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{16}{3}\)'
+    C: '\(\frac{8}{3}\)'
+    D: '\(- \frac{8}{3}\)'
+    answer: C
+    hint: 'Solve each curve for \(x\) in terms of \(y\), find the \(y\)-values where they meet, and integrate (right \(-\) left).'
+    explanation: 'The area is \(\frac{8}{3}\).'
+  253:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=2\sin x\) and \(y=\sin2x\) for \(0\le x\le\pi\).'
+    A: '\(8\)'
+    B: '\(4\)'
+    C: '\(-4\)'
+    D: '\(2\)'
+    answer: B
+    hint: 'Determine which curve lies above the other on the interval; use \(\sec^2=1+\tan^2\) where helpful.'
+    explanation: 'The area is \(4\).'
+  254:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=8\cos x\) and \(y=\sec^2x\) for \(-\tfrac\pi3\le x\le\tfrac\pi3\).'
+    A: '\(12 \sqrt{3}\)'
+    B: '\(- 6 \sqrt{3}\)'
+    C: '\(3 \sqrt{3}\)'
+    D: '\(6 \sqrt{3}\)'
+    answer: D
+    hint: 'Determine which curve lies above the other on the interval; use \(\sec^2=1+\tan^2\) where helpful.'
+    explanation: 'The area is \(6 \sqrt{3}\).'
+  255:
+    topic: s5-6
+    question: 'Find the area enclosed by \(y=\sec^2x\) and \(y=\tan^2x\) for \(-\tfrac\pi4\le x\le\tfrac\pi4\).'
+    A: '\(\frac{\pi}{4}\)'
+    B: '\(- \frac{\pi}{2}\)'
+    C: '\(\pi\)'
+    D: '\(\frac{\pi}{2}\)'
+    answer: D
+    hint: 'Determine which curve lies above the other on the interval; use \(\sec^2=1+\tan^2\) where helpful.'
+    explanation: 'The area is \(\frac{\pi}{2}\).'
+  256:
+    topic: s5-6
+    question: 'Find the area between \(y=\ln x\) and \(y=\ln2x\) from \(x=1\) to \(x=5\).'
+    A: '\(\ln{\left(16 \right)}\)'
+    B: '\(2 \ln{\left(16 \right)}\)'
+    C: '\(\frac{\ln{\left(16 \right)}}{2}\)'
+    D: '\(- \ln{\left(16 \right)}\)'
+    answer: A
+    hint: '\(\ln2x-\ln x=\ln2\) is constant.'
+    explanation: 'The region has height \(\ln2\) and width 4, so the area is \(4\ln2\).'
+  257:
+    topic: s5-6
+    question: 'Find the area between \(y=\tan x\) and the \(x\)-axis from \(x=-\tfrac\pi4\) to \(x=\tfrac\pi3\).'
+    A: '\(- \frac{3 \ln{\left(2 \right)}}{2}\)'
+    B: '\(\frac{3 \ln{\left(2 \right)}}{2}\)'
+    C: '\(3 \ln{\left(2 \right)}\)'
+    D: '\(\frac{3 \ln{\left(2 \right)}}{4}\)'
+    answer: B
+    hint: '\(\tan x\) is negative on \((-\tfrac\pi4,0)\) and positive on \((0,\tfrac\pi3)\), so integrate each piece separately.'
+    explanation: '\(\ln\sqrt2+\ln2=\ln(2\sqrt2)=\tfrac32\ln2\).'
+  258:
+    topic: s5-6
+    question: 'Find the area of the region in the first quadrant bounded above by \(y=e^{2x}\), below by \(y=e^x\), and on the right by \(x=\ln3\).'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(-2\)'
+    answer: B
+    hint: 'The curves meet at \(x=0\).'
+    explanation: '\(\left[\tfrac12e^{2x}-e^x\right]_0^{\ln3}=\left(\tfrac92-3\right)-\left(\tfrac12-1\right)=2\).'
+  259:
+    topic: s5-6
+    question: 'Find the area between \(y=\dfrac{2x}{1+x^2}\) and the \(x\)-axis on \([-2,2]\).'
+    A: '\(- \ln{\left(25 \right)}\)'
+    B: '\(\frac{\ln{\left(25 \right)}}{2}\)'
+    C: '\(2 \ln{\left(25 \right)}\)'
+    D: '\(\ln{\left(25 \right)}\)'
+    answer: D
+    hint: The function is odd, so the signed integral is 0, but the area is twice the right half.
+    explanation: '\(2\ln(1+x^2)\big|_0^2=2\ln5\).'
+  260:
+    topic: s5-6
+    question: 'Find the area between \(y=2^{1-x}\) and the \(x\)-axis on \([-1,1]\).'
+    A: '\(\frac{6}{\ln{\left(2 \right)}}\)'
+    B: '\(- \frac{3}{\ln{\left(2 \right)}}\)'
+    C: '\(\frac{3}{\ln{\left(2 \right)}}\)'
+    D: '\(\frac{3}{2 \ln{\left(2 \right)}}\)'
+    answer: C
+    hint: '\(\int2^{1-x}dx=-\dfrac{2^{1-x}}{\ln2}\).'
+    explanation: '\(\dfrac{4-1}{\ln2}=\dfrac{3}{\ln2}\).'
+  261:
+    topic: s5-6
+    question: 'The area between the curve \(y=x^3-x\) and the line \(y=0\) (propeller) is found by integrating over two pieces. The curve \(x-y^3=0\) and the line \(x-y=0\) enclose a region of area'
+    A: '\(\dfrac13\)'
+    B: '\(\dfrac14\)'
+    C: '\(1\)'
+    D: '\(\dfrac12\)'
+    answer: D
+    hint: 'The curves meet at \((-1,-1),(0,0),(1,1)\); the region is symmetric.'
+    explanation: '\(2\int_0^1(y-y^3)\,dy=2\left(\tfrac12-\tfrac14\right)=\tfrac12\).'
+  262:
+    topic: s5-6
+    question: 'If the area between a positive continuous function \(f\) and the \(x\)-axis from \(x=a\) to \(x=b\) is 4, then the area between \(y=f(x)\) and \(y=2f(x)\) from \(a\) to \(b\) is'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(8\)'
+    D: '\(12\)'
+    answer: A
+    hint: 'The vertical gap is \(2f-f=f\).'
+    explanation: '\(\int_a^bf=4\).'
+  263:
+    topic: s5-6
+    question: 'The region bounded below by \(y=x^2\) and above by \(y=4\) is cut into two equal-area parts by a horizontal line \(y=c\). The value of \(c\) is'
+    A: '\(c=3\)'
+    B: '\(c=4^{2/3}\approx2.52\)'
+    C: '\(c=2\)'
+    D: '\(c=\dfrac{8}{3}\)'
+    answer: B
+    hint: 'Integrate with respect to \(y\): the half-width is \(\sqrt y\), so the area below the cut is \(\tfrac43c^{3/2}\) and the total is \(\tfrac{32}{3}\).'
+    explanation: '\(\tfrac{4}{3}c^{3/2}=\tfrac{16}{3}\) gives \(c^{3/2}=4\), so \(c=4^{2/3}\approx2.52\).'
+  264:
+    topic: s5-6
+    question: 'If \(f\) is an even function with \(\int_0^1f(x)\,dx=3\), then \(\displaystyle\int_{-1}^0f(x)\,dx=\)'
+    A: '\(3\)'
+    B: '\(0\)'
+    C: '\(6\)'
+    D: '\(-3\)'
+    answer: A
+    hint: 'An even function is symmetric about the \(y\)-axis.'
+    explanation: 'The two halves have equal area. (For an odd \(f\) the answer would be \(-3\).)'
+  265:
+    topic: s5-6
+    question: 'For continuous \(f\), \(\displaystyle\int_0^1f(x)\,dx=\int_0^1f(1-x)\,dx\) because'
+    A: '\(f\) is always symmetric'
+    B: both integrals equal 0
+    C: '\(f(1-x)=f(x)\) for all \(x\)'
+    D: 'the substitution \(u=1-x\) reverses the interval and sign twice'
+    answer: D
+    hint: 'Substitute \(u=1-x\) and track the limits and \(du\).'
+    explanation: '\(\int_0^1f(1-x)\,dx=-\int_1^0f(u)\,du=\int_0^1f(u)\,du\).'
+  266:
+    topic: s5-6
+    question: 'By the shift property \(\displaystyle\int_a^bf(x)\,dx=\int_{a-c}^{b-c}f(x+c)\,dx\), the value of \(\displaystyle\int_{-2}^{-1}(x+2)^3dx\) equals'
+    A: '\(\displaystyle\int_{-2}^{-1}x^3\,dx\)'
+    B: '\(\displaystyle\int_0^1x^3\,dx=\dfrac14\)'
+    C: '\(\displaystyle\int_0^1x^3\,dx\cdot2\)'
+    D: '\(\dfrac13\)'
+    answer: B
+    hint: 'Let \(u=x+2\).'
+    explanation: 'The limits become 0 and 1, giving \(\tfrac14\).'
+  267:
+    topic: s5-6
+    question: 'For continuous \(f\) with \(\displaystyle I=\int_0^a\dfrac{f(x)}{f(x)+f(a-x)}\,dx\), adding the substituted copy of the integral shows \(I=\)'
+    A: '\(0\)'
+    B: '\(a\)'
+    C: '\(\dfrac{a^2}{2}\)'
+    D: '\(\dfrac a2\)'
+    answer: D
+    hint: 'The substituted integral has \(f(a-x)\) in the numerator, and the two integrands sum to 1.'
+    explanation: '\(2I=\int_0^a1\,dx=a\).'
+  268:
+    topic: s5-6
+    question: 'For positive \(x\) and \(y\), \(\displaystyle\int_x^{xy}\dfrac1t\,dt=\int_1^y\dfrac1t\,dt\) is shown by the substitution'
+    A: '\(u=t^2\)'
+    B: '\(u=t/x\)'
+    C: '\(u=xt\)'
+    D: '\(u=1/t\)'
+    answer: B
+    hint: 'You want the limits \(x\) and \(xy\) to become 1 and \(y\).'
+    explanation: '\(u=t/x\) gives \(\dfrac{dt}{t}=\dfrac{du}{u}\).'
+  269:
+    topic: s5-6
+    question: 'To confirm \(\displaystyle\int_{-2}^{-1}(x+2)^3dx=\int_0^1x^3\,dx\) geometrically, the graph of \(y=(x+2)^3\) is'
+    A: '\(y=x^3\) shifted 2 units to the right'
+    B: 'the graph of \(y=x^3\) shifted 2 units to the left'
+    C: '\(y=x^3\) shifted up 2 units'
+    D: '\(y=x^3\) reflected across the \(y\)-axis'
+    answer: B
+    hint: 'Replacing \(x\) by \(x+2\) moves the graph left.'
+    explanation: The shaded regions are congruent.
