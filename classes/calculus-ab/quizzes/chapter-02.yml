@@ -1133,7 +1133,7 @@ questions:
     explanation: '\(\sin(\tfrac\pi2\cdot1)=1\).'
   112:
     topic: s2-6
-    question: 'Find \(\lim_{x\to 1} \operatorname{acos}{\left(\ln{\left(\sqrt{x} \right)} \right)}\).'
+    question: 'Find \(\lim_{x\to 1} \cos^{-1}{\left(\ln{\left(\sqrt{x} \right)} \right)}\).'
     A: '\(\frac{\pi}{2}\)'
     B: '\(- \frac{\pi}{2}\)'
     C: does not exist

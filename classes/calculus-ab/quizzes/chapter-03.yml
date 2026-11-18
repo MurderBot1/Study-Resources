@@ -1849,7 +1849,7 @@ questions:
     explanation: '\(\cos^{-1}0=\tfrac\pi2\).'
   183:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[\operatorname{acos}{\left(x^{2} \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dx}\left[\cos^{-1}{\left(x^{2} \right)}\right]\).'
     A: '\(- \frac{2 x}{\sqrt{1 - x^{4}}}\)'
     B: '\(- \frac{2 x}{\sqrt{- x^{4} - 1}}\)'
     C: '\(- \frac{2 x}{\sqrt{1 - \frac{x^{4}}{2}}}\)'
@@ -1859,7 +1859,7 @@ questions:
     explanation: 'Differentiating gives \(- \frac{2 x}{\sqrt{1 - x^{4}}}\).'
   184:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dt}\left[\operatorname{asin}{\left(\sqrt{2} t \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dt}\left[\sin^{-1}{\left(\sqrt{2} t \right)}\right]\).'
     A: '\(\frac{\sqrt{2}}{\sqrt{2 - 2 t^{2}}}\)'
     B: '\(\frac{2 \sqrt{2}}{\sqrt{1 - 2 t^{2}}}\)'
     C: '\(\frac{1}{\sqrt{1 - 2 t}}\)'
@@ -1869,7 +1869,7 @@ questions:
     explanation: 'Differentiating gives \(\frac{\sqrt{2}}{\sqrt{1 - 2 t^{2}}}\).'
   185:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[\operatorname{atan}{\left(\ln{\left(x \right)} \right)}\right]\).'
+    question: 'Find \(\dfrac{d}{dx}\left[\tan^{-1}{\left(\ln{\left(x \right)} \right)}\right]\).'
     A: '\(x \left(\ln{(x)}^{2} + 1\right)\)'
     B: '\(\frac{1}{x \left(\ln{(x)} + 1\right)}\)'
     C: '\(\frac{1}{x \left(\ln{(x)}^{3} + 1\right)}\)'
@@ -1879,34 +1879,34 @@ questions:
     explanation: 'Differentiating gives \(\frac{1}{x \left(\ln{\left(x \right)}^{2} + 1\right)}\).'
   186:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(\operatorname{atan}{\left(x \right)} \right)}\right]\).'
-    A: '\(\frac{1}{\left(x^{2} + \frac{1}{2}\right) \operatorname{atan}{(x)}}\)'
-    B: '\(\frac{1}{\sqrt{x^{2} + 1} \sqrt{\operatorname{atan}{(x)}}}\)'
-    C: '\(\left(x^{2} + 1\right) \operatorname{atan}{(x)}\)'
-    D: '\(\frac{1}{\left(x^{2} + 1\right) \operatorname{atan}{(x)}}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[\ln{\left(\tan^{-1}{\left(x \right)} \right)}\right]\).'
+    A: '\(\frac{1}{\left(x^{2} + \frac{1}{2}\right) \tan^{-1}{(x)}}\)'
+    B: '\(\frac{1}{\sqrt{x^{2} + 1} \sqrt{\tan^{-1}{(x)}}}\)'
+    C: '\(\left(x^{2} + 1\right) \tan^{-1}{(x)}\)'
+    D: '\(\frac{1}{\left(x^{2} + 1\right) \tan^{-1}{(x)}}\)'
     answer: D
     hint: 'Chain rule with \(\ln u\).'
-    explanation: 'Differentiating gives \(\frac{1}{\left(x^{2} + 1\right) \operatorname{atan}{\left(x \right)}}\).'
+    explanation: 'Differentiating gives \(\frac{1}{\left(x^{2} + 1\right) \tan^{-1}{\left(x \right)}}\).'
   187:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}\right]\).'
-    A: '\(- \operatorname{asin}{(x)}\)'
-    B: '\(2 \operatorname{asin}{(x)}\)'
-    C: '\(\operatorname{asin}{(x)} + 1\)'
-    D: '\(\operatorname{asin}{(x)}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[x \sin^{-1}{\left(x \right)} + \sqrt{1 - x^{2}}\right]\).'
+    A: '\(- \sin^{-1}{(x)}\)'
+    B: '\(2 \sin^{-1}{(x)}\)'
+    C: '\(\sin^{-1}{(x)} + 1\)'
+    D: '\(\sin^{-1}{(x)}\)'
     answer: D
     hint: Product rule; watch the cancellation.
-    explanation: 'Differentiating gives \(\operatorname{asin}{\left(x \right)}\).'
+    explanation: 'Differentiating gives \(\sin^{-1}{\left(x \right)}\).'
   188:
     topic: s3-8
-    question: 'Find \(\dfrac{d}{dx}\left[- x \operatorname{atan}{\left(\frac{x}{2} \right)} + \ln{\left(x^{2} + 4 \right)}\right]\).'
-    A: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
-    B: '\(\frac{2 x}{x^{2} + 4} - \operatorname{atan}{\left(\frac{x}{2} \right)} - \frac{2}{x}\)'
-    C: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 2\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
-    D: '\(\frac{2 x}{x^{2} + 3} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\)'
+    question: 'Find \(\dfrac{d}{dx}\left[- x \tan^{-1}{\left(\frac{x}{2} \right)} + \ln{\left(x^{2} + 4 \right)}\right]\).'
+    A: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\)'
+    B: '\(\frac{2 x}{x^{2} + 4} - \tan^{-1}{\left(\frac{x}{2} \right)} - \frac{2}{x}\)'
+    C: '\(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 2\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\)'
+    D: '\(\frac{2 x}{x^{2} + 3} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\)'
     answer: A
     hint: 'Product rule on \(x\tan^{-1}(x/2)\); terms cancel.'
-    explanation: 'Differentiating gives \(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \operatorname{atan}{\left(\frac{x}{2} \right)}\).'
+    explanation: 'Differentiating gives \(\frac{2 x}{x^{2} + 4} - \frac{x}{2 \left(\frac{x^{2}}{4} + 1\right)} - \tan^{-1}{\left(\frac{x}{2} \right)}\).'
   189:
     topic: s3-8
     question: 'The functions \(f(x)=\sin^{-1}\dfrac{x-1}{x+1}\) and \(g(x)=2\tan^{-1}\sqrt x\) (\(x\ge0\)) have the same derivative, so'

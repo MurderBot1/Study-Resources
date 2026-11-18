@@ -2217,22 +2217,22 @@ questions:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(\frac{2}{\sqrt{1 - x^{2}}}\right)dx\) is'
     A: '\(\frac{2 x}{\left(1 - x^{2}\right)^{\frac{3}{2}}}+C\)'
-    B: '\(2 \operatorname{asin}{\left(x \right)}+C\)'
-    C: '\(4 \operatorname{asin}{\left(x \right)}+C\)'
-    D: '\(- 2 \operatorname{asin}{\left(x \right)}+C\)'
+    B: '\(2 \sin^{-1}{\left(x \right)}+C\)'
+    C: '\(4 \sin^{-1}{\left(x \right)}+C\)'
+    D: '\(- 2 \sin^{-1}{\left(x \right)}+C\)'
     answer: B
     hint: '\(\dfrac{d}{dx}\sin^{-1}x=\dfrac1{\sqrt{1-x^2}}\).'
-    explanation: 'Differentiating \(2 \operatorname{asin}{\left(x \right)}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+    explanation: 'Differentiating \(2 \sin^{-1}{\left(x \right)}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
   221:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(\frac{1}{4 x^{2} + 1}\right)dx\) is'
-    A: '\(\operatorname{atan}{\left(2 x \right)}+C\)'
-    B: '\(- \frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    A: '\(\tan^{-1}{\left(2 x \right)}+C\)'
+    B: '\(- \frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
     C: '\(- \frac{8 x}{\left(4 x^{2} + 1\right)^{2}}+C\)'
-    D: '\(\frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    D: '\(\frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
     answer: D
     hint: '\(\int\dfrac{du}{1+u^2}=\tan^{-1}u\); let \(u=2x\).'
-    explanation: 'Differentiating \(\frac{\operatorname{atan}{\left(2 x \right)}}{2}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
+    explanation: 'Differentiating \(\frac{\tan^{-1}{\left(2 x \right)}}{2}\) returns the integrand, and the constant \(C\) accounts for all antiderivatives.'
   222:
     topic: s4-8
     question: 'The most general antiderivative \(\displaystyle\int\left(4 \tan{\left(x \right)} \sec{\left(x \right)} - 2 \sec^{2}{\left(x \right)}\right)dx\) is'

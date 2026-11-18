@@ -1448,7 +1448,7 @@ questions:
     D: '\(- \pi\)'
     answer: A
     hint: '\(\int\dfrac{dx}{1+x^2}=\tan^{-1}x\).'
-    explanation: 'An antiderivative is \(4 \operatorname{atan}{\left(x \right)}\); then \(F(1)-F(0)=\pi\).'
+    explanation: 'An antiderivative is \(4 \tan^{-1}{\left(x \right)}\); then \(F(1)-F(0)=\pi\).'
   144:
     topic: s5-4
     question: 'Evaluate \(\displaystyle\int_{2}^{5} \frac{x}{\sqrt{x^{2} + 1}}\,dx\).'
@@ -2002,13 +2002,13 @@ questions:
   199:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{1}{4 x^{2} + 1}\,dx\).'
-    A: '\(\frac{\operatorname{atan}{\left(2 x \right)}}{4}+C\)'
-    B: '\(\frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
-    C: '\(\operatorname{atan}{\left(2 x \right)}+C\)'
-    D: '\(- \frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\)'
+    A: '\(\frac{\tan^{-1}{\left(2 x \right)}}{4}+C\)'
+    B: '\(\frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
+    C: '\(\tan^{-1}{\left(2 x \right)}+C\)'
+    D: '\(- \frac{\tan^{-1}{\left(2 x \right)}}{2}+C\)'
     answer: B
     hint: 'Think \(\int\dfrac{du}{1+u^2}=\tan^{-1}u\) with \(u=2x\).'
-    explanation: 'Differentiating \(\frac{\operatorname{atan}{\left(2 x \right)}}{2}\) gives back \(\frac{1}{4 x^{2} + 1}\), so the answer is \(\frac{\operatorname{atan}{\left(2 x \right)}}{2}+C\).'
+    explanation: 'Differentiating \(\frac{\tan^{-1}{\left(2 x \right)}}{2}\) gives back \(\frac{1}{4 x^{2} + 1}\), so the answer is \(\frac{\tan^{-1}{\left(2 x \right)}}{2}+C\).'
   200:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{e^{x}}{e^{2 x} + 1}\,dx\).'
@@ -2023,22 +2023,22 @@ questions:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{5}{4 r^{2} + 9}\,dr\).'
     A: '\(\frac{5}{9 \left(\frac{4 r^{2}}{9} + 1\right)}+C\)'
-    B: '\(\frac{5 \operatorname{atan}{\left(\frac{2 r}{3} \right)}}{3}+C\)'
-    C: '\(- \frac{5 \operatorname{atan}{\left(\frac{2 r}{3} \right)}}{6}+C\)'
-    D: '\(\frac{5 \operatorname{atan}{\left(\frac{2 r}{3} \right)}}{6}+C\)'
+    B: '\(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{3}+C\)'
+    C: '\(- \frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}+C\)'
+    D: '\(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}+C\)'
     answer: D
     hint: 'Write the denominator as \(9\left(1+\tfrac{4r^2}{9}\right)\).'
-    explanation: 'Differentiating \(\frac{5 \operatorname{atan}{\left(\frac{2 r}{3} \right)}}{6}\) gives back \(\frac{5}{4 r^{2} + 9}\), so the answer is \(\frac{5 \operatorname{atan}{\left(\frac{2 r}{3} \right)}}{6}+C\).'
+    explanation: 'Differentiating \(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}\) gives back \(\frac{5}{4 r^{2} + 9}\), so the answer is \(\frac{5 \tan^{-1}{\left(\frac{2 r}{3} \right)}}{6}+C\).'
   202:
     topic: s5-5
     question: 'Find \(\displaystyle\int \frac{1}{\sqrt{1 - 4 x^{2}}}\,dx\).'
-    A: '\(- \frac{\operatorname{asin}{\left(2 x \right)}}{2}+C\)'
-    B: '\(\frac{\operatorname{asin}{\left(2 x \right)}}{4}+C\)'
-    C: '\(\operatorname{asin}{\left(2 x \right)}+C\)'
-    D: '\(\frac{\operatorname{asin}{\left(2 x \right)}}{2}+C\)'
+    A: '\(- \frac{\sin^{-1}{\left(2 x \right)}}{2}+C\)'
+    B: '\(\frac{\sin^{-1}{\left(2 x \right)}}{4}+C\)'
+    C: '\(\sin^{-1}{\left(2 x \right)}+C\)'
+    D: '\(\frac{\sin^{-1}{\left(2 x \right)}}{2}+C\)'
     answer: D
     hint: 'The pattern \(\dfrac{du}{\sqrt{1-u^2}}\) with \(u=2x\).'
-    explanation: 'Differentiating \(\frac{\operatorname{asin}{\left(2 x \right)}}{2}\) gives back \(\frac{1}{\sqrt{1 - 4 x^{2}}}\), so the answer is \(\frac{\operatorname{asin}{\left(2 x \right)}}{2}+C\).'
+    explanation: 'Differentiating \(\frac{\sin^{-1}{\left(2 x \right)}}{2}\) gives back \(\frac{1}{\sqrt{1 - 4 x^{2}}}\), so the answer is \(\frac{\sin^{-1}{\left(2 x \right)}}{2}+C\).'
   203:
     topic: s5-5
     question: 'Find \(\displaystyle\int \tan{\left(x \right)} \sqrt{\sec{\left(x \right)}}\,dx\).'
