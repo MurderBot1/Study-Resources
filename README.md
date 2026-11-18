@@ -7,7 +7,7 @@ Quizzes and flashcards to share with classmates. It's a plain static site (HTML,
 | Class | Quizzes | Flashcards |
 | --- | --- | --- |
 | **APUSH – Williams** (`classes/apush-williams/`) | Enduring Vision Quiz, Early Republic Quiz, Road to the Civil War Quiz | Terms quiz flashcards (230 terms), Enduring Vision flashcards (111 cards) |
-| **Calculus AB** (`classes/calculus-ab/`) | One quiz per chapter of *Thomas' Calculus: Early Transcendentals* (11th ed.), chapters 1–16 as they are added | |
+| **Calculus AB** (`classes/calculus-ab/`) | One quiz per chapter of *Thomas' Calculus: Early Transcendentals* (11th ed.), chapters 1–16 | |
 
 ## Publish with GitHub Pages
 
