@@ -1,0 +1,4071 @@
+# Chapter 12: Vectors and the Geometry of Space
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 12.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 12: Vectors and the Geometry of Space"
+description: Three-dimensional coordinates, vectors, the dot and cross products, lines and planes in space, and cylinders and quadric surfaces.
+topics:
+  s12-1:
+    title: 12.1 Three-Dimensional Coordinate Systems
+  s12-2:
+    title: 12.2 Vectors
+  s12-3:
+    title: 12.3 The Dot Product
+  s12-4:
+    title: 12.4 The Cross Product
+  s12-5:
+    title: 12.5 Lines and Planes in Space
+  s12-6:
+    title: 12.6 Cylinders and Quadric Surfaces
+questions:
+  1:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x=2,\ y=3\) is'
+    A: 'the line parallel to the \(z\)-axis through \((2,3,0)\)'
+    B: 'the point \((2,3,0)\)'
+    C: 'the plane \(x=2\)'
+    D: 'the line parallel to the \(x\)-axis through \((0,3,0)\)'
+    answer: A
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  2:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x=-1,\ z=0\) is'
+    A: 'the line parallel to the \(z\)-axis through \((-1,0,0)\)'
+    B: 'the line parallel to the \(y\)-axis through \((-1,0,0)\)'
+    C: 'the point \((-1,0,0)\)'
+    D: 'the plane \(x=-1\)'
+    answer: B
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  3:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(y=0,\ z=0\) is'
+    A: 'the \(x\)-axis'
+    B: the origin
+    C: 'the \(y\)-axis'
+    D: 'the \(xy\)-plane'
+    answer: A
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  4:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x=1,\ y=0\) is'
+    A: 'the line parallel to the \(y\)-axis through \((1,0,0)\)'
+    B: 'the line parallel to the \(z\)-axis through \((1,0,0)\)'
+    C: 'the point \((1,0,0)\)'
+    D: 'the plane \(x=1\)'
+    answer: B
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  5:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+y^2=4,\ z=0\) is'
+    A: 'the cylinder of radius \(2\) about the \(z\)-axis'
+    B: 'the circle of radius \(4\) in the \(xy\)-plane'
+    C: 'the sphere of radius \(2\)'
+    D: 'the circle of radius \(2\) centered at the origin in the \(xy\)-plane'
+    answer: D
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  6:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+y^2=4,\ z=-2\) is'
+    A: 'the cylinder \(x^2+y^2=4\)'
+    B: 'the circle of radius \(2\) centered at \((0,0,-2)\) in the plane \(z=-2\)'
+    C: 'the circle of radius \(2\) centered at the origin'
+    D: 'the circle of radius \(4\) in the plane \(z=-2\)'
+    answer: B
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  7:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+z^2=4,\ y=0\) is'
+    A: 'the circle in the \(xy\)-plane'
+    B: 'the sphere of radius \(2\)'
+    C: 'the circle of radius \(2\) centered at the origin in the \(xz\)-plane'
+    D: 'the cylinder \(x^2+z^2=4\)'
+    answer: C
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  8:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(y^2+z^2=1,\ x=0\) is'
+    A: 'the cylinder \(y^2+z^2=1\)'
+    B: a point
+    C: 'the circle of radius \(1\) centered at the origin in the \(yz\)-plane'
+    D: 'the circle in the \(xz\)-plane'
+    answer: C
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  9:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+y^2+z^2=1,\ x=0\) is'
+    A: the unit sphere
+    B: 'the unit circle in the \(xy\)-plane'
+    C: 'the unit circle in the \(yz\)-plane'
+    D: 'the unit disk in the \(yz\)-plane'
+    answer: C
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  10:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+y^2+z^2=25,\ y=-4\) is'
+    A: 'the circle of radius \(5\) centered at the origin'
+    B: 'the circle of radius \(3\) centered at the origin'
+    C: 'the circle of radius \(4\) centered at \((0,-4,0)\)'
+    D: 'the circle of radius \(3\) centered at \((0,-4,0)\) in the plane \(y=-4\)'
+    answer: D
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  11:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+y^2+(z+3)^2=25,\ z=0\) is'
+    A: 'the circle of radius \(4\) centered at \((0,0,-3)\)'
+    B: 'the circle of radius \(3\) centered at \((0,0,-3)\)'
+    C: 'the circle of radius \(5\) centered at the origin'
+    D: 'the circle of radius \(4\) centered at the origin in the \(xy\)-plane'
+    answer: D
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  12:
+    topic: s12-1
+    question: 'The set of points whose coordinates satisfy \(x^2+(y-1)^2+z^2=4,\ y=0\) is'
+    A: 'the sphere of radius \(2\)'
+    B: 'the circle of radius \(2\) in the \(xz\)-plane'
+    C: 'the circle of radius \(\sqrt5\) in the \(xz\)-plane'
+    D: 'the circle \(x^2+z^2=3\) in the \(xz\)-plane (radius \(\sqrt3\))'
+    answer: D
+    hint: Each equation restricts one coordinate or one relation; combine them.
+    explanation: Substitute the second equation into the first.
+  13:
+    topic: s12-1
+    question: 'The set of points satisfying \(x\ge0,\ y\ge0,\ z=0\) is'
+    A: 'the first quadrant of the \(xy\)-plane'
+    B: 'the positive \(x\)-axis'
+    C: 'the half-space \(z\ge0\)'
+    D: the first octant
+    answer: A
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  14:
+    topic: s12-1
+    question: 'The set of points satisfying \(0\le x\le1,\ 0\le y\le1,\ 0\le z\le1\) is'
+    A: 'the unit square in the \(xy\)-plane'
+    B: the solid unit cube in the first octant
+    C: the surface of the unit cube only
+    D: the unit sphere
+    answer: B
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  15:
+    topic: s12-1
+    question: 'The set of points satisfying \(x^2+y^2+z^2\le1\) is'
+    A: the unit disk
+    B: 'the solid ball of radius \(1\) centered at the origin'
+    C: the exterior of the unit sphere
+    D: the unit sphere only
+    answer: B
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  16:
+    topic: s12-1
+    question: 'The set of points satisfying \(x^2+y^2+z^2>1\) is'
+    A: the region outside the unit sphere
+    B: 'the solid ball of radius \(1\)'
+    C: the unit sphere
+    D: 'the half-space \(z>1\)'
+    answer: A
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  17:
+    topic: s12-1
+    question: 'The set of points satisfying \(x^2+y^2\le1,\ z=3\) is'
+    A: 'the disk of radius \(1\) in the plane \(z=3\)'
+    B: 'the circle of radius \(1\) in the plane \(z=3\)'
+    C: 'the solid cylinder of radius \(1\)'
+    D: 'the ball of radius \(1\)'
+    answer: A
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  18:
+    topic: s12-1
+    question: 'The set of points satisfying \(x^2+y^2\le1,\ \text{no restriction on }z\) is'
+    A: 'the disk of radius \(1\) in the \(xy\)-plane'
+    B: the circular cylinder surface only
+    C: the unit ball
+    D: 'the solid infinite cylinder of radius \(1\) about the \(z\)-axis'
+    answer: D
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  19:
+    topic: s12-1
+    question: 'The set of points satisfying \(x^2+y^2+z^2=1,\ z\ge0\) is'
+    A: the upper hemisphere of the unit sphere (a surface)
+    B: the lower hemisphere
+    C: the unit disk
+    D: the solid upper half-ball
+    answer: A
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  20:
+    topic: s12-1
+    question: 'The set of points satisfying \(x=y,\ z=0\) is'
+    A: 'the line \(y=x\) in the \(xy\)-plane'
+    B: 'the line \(y=x\) in the plane \(z=1\)'
+    C: 'the plane \(x=y\)'
+    D: 'the \(x\)-axis'
+    answer: A
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  21:
+    topic: s12-1
+    question: 'The set of points satisfying \(x=y,\ \text{no restriction on }z\) is'
+    A: 'the plane \(z=x\)'
+    B: 'the line \(y=x\) in the \(xy\)-plane'
+    C: 'the vertical plane through the \(z\)-axis containing the line \(y=x\)'
+    D: 'the \(xy\)-plane'
+    answer: C
+    hint: Describe each condition geometrically.
+    explanation: Intersect the conditions.
+  22:
+    topic: s12-1
+    question: 'The inequalities describing the slab bounded by the planes \(z=0\) and \(z=1\) (planes included) are'
+    A: '\(0\le z\le1\)'
+    B: '\(z=0\) or \(z=1\)'
+    C: '\(0\le x\le1\)'
+    D: '\(0<z<1\)'
+    answer: A
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  23:
+    topic: s12-1
+    question: 'The inequalities describing the solid cube in the first octant bounded by the coordinate planes and the planes \(x=2\), \(y=2\), \(z=2\) are'
+    A: '\(x\le2,\ y\le2,\ z\le2\)'
+    B: '\(0\le x\le2,\ 0\le y\le2,\ 0\le z\le2\)'
+    C: '\(0\le x\le2\) only'
+    D: '\(0<x<2,\ 0<y<2,\ 0<z<2\)'
+    answer: B
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  24:
+    topic: s12-1
+    question: 'The inequalities describing the half-space consisting of the points on and below the \(xy\)-plane are'
+    A: '\(z=0\)'
+    B: '\(z<0\)'
+    C: '\(z\ge0\)'
+    D: '\(z\le0\)'
+    answer: D
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  25:
+    topic: s12-1
+    question: 'The inequalities describing the upper hemisphere of the sphere of radius \(1\) centered at the origin are'
+    A: '\(x^2+y^2+z^2\le1,\ z\ge0\)'
+    B: '\(x^2+y^2=1,\ z\ge0\)'
+    C: '\(x^2+y^2+z^2=1,\ z\le0\)'
+    D: '\(x^2+y^2+z^2=1,\ z\ge0\)'
+    answer: D
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  26:
+    topic: s12-1
+    question: 'The inequalities describing the interior of the sphere of radius \(1\) centered at \((1,1,1)\) are'
+    A: '\((x-1)^2+(y-1)^2+(z-1)^2<1\)'
+    B: '\((x+1)^2+(y+1)^2+(z+1)^2<1\)'
+    C: '\(x^2+y^2+z^2<1\)'
+    D: '\((x-1)^2+(y-1)^2+(z-1)^2>1\)'
+    answer: A
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  27:
+    topic: s12-1
+    question: 'The inequalities describing the exterior of the sphere of radius \(1\) centered at \((1,1,1)\) are'
+    A: '\(x^2+y^2+z^2>1\)'
+    B: '\((x-1)^2+(y-1)^2+(z-1)^2=1\)'
+    C: '\((x-1)^2+(y-1)^2+(z-1)^2<1\)'
+    D: '\((x-1)^2+(y-1)^2+(z-1)^2>1\)'
+    answer: D
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  28:
+    topic: s12-1
+    question: 'The inequalities describing the closed region bounded by the spheres of radius \(1\) and \(2\) centered at the origin are'
+    A: '\(1<x^2+y^2+z^2<4\)'
+    B: '\(x^2+y^2+z^2\le4\)'
+    C: '\(1\le x^2+y^2+z^2\le2\)'
+    D: '\(1\le x^2+y^2+z^2\le4\)'
+    answer: D
+    hint: Translate each description.
+    explanation: Use the distance formula for spheres.
+  29:
+    topic: s12-1
+    question: 'An equation for the plane perpendicular to the \(x\)-axis at \((3,0,0)\) is'
+    A: '\(z=3\)'
+    B: '\(x+y+z=3\)'
+    C: '\(x=3\)'
+    D: '\(y=3\)'
+    answer: C
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  30:
+    topic: s12-1
+    question: 'An equation for the plane perpendicular to the \(y\)-axis at \((0,-1,0)\) is'
+    A: '\(z=-1\)'
+    B: '\(y=1\)'
+    C: '\(x=-1\)'
+    D: '\(y=-1\)'
+    answer: D
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  31:
+    topic: s12-1
+    question: 'An equation for the plane perpendicular to the \(z\)-axis at \((0,0,-2)\) is'
+    A: '\(x=-2\)'
+    B: '\(z=-2\)'
+    C: '\(z=2\)'
+    D: '\(y=-2\)'
+    answer: B
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  32:
+    topic: s12-1
+    question: 'An equation for the plane through \((3,-1,2)\) perpendicular to the \(y\)-axis is'
+    A: '\(z=2\)'
+    B: '\(y=-1\)'
+    C: '\(x=3\)'
+    D: '\(y=1\)'
+    answer: B
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  33:
+    topic: s12-1
+    question: 'An equation for the plane through \((3,-1,1)\) parallel to the \(xz\)-plane is'
+    A: '\(y=-1\)'
+    B: '\(y=1\)'
+    C: '\(x=3\)'
+    D: '\(z=1\)'
+    answer: A
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  34:
+    topic: s12-1
+    question: 'An equation for the plane through \((3,-1,1)\) parallel to the \(yz\)-plane is'
+    A: '\(x=3\)'
+    B: '\(y=-1\)'
+    C: '\(z=1\)'
+    D: '\(x=-1\)'
+    answer: A
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  35:
+    topic: s12-1
+    question: 'An equation for the plane through \((3,-1,1)\) parallel to the \(xy\)-plane is'
+    A: '\(y=-1\)'
+    B: '\(z=-1\)'
+    C: '\(z=1\)'
+    D: '\(x=3\)'
+    answer: C
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  36:
+    topic: s12-1
+    question: 'An equation for the circle of radius \(2\) centered at \((0,2,0)\) lying in the \(xy\)-plane is'
+    A: '\(x^2+y^2=4,\ z=0\)'
+    B: '\(x^2+(y-2)^2=4,\ z=2\)'
+    C: '\(x^2+(y-2)^2=4,\ z=0\)'
+    D: '\(x^2+(y-2)^2=2,\ z=0\)'
+    answer: C
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  37:
+    topic: s12-1
+    question: 'An equation for the circle of radius \(2\) centered at \((0,2,0)\) lying in the \(yz\)-plane is'
+    A: '\(y^2+z^2=4,\ x=0\)'
+    B: '\((y-2)^2+z^2=4,\ x=0\)'
+    C: '\((y-2)^2+z^2=4,\ x=2\)'
+    D: '\(x^2+(y-2)^2=4,\ z=0\)'
+    answer: B
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  38:
+    topic: s12-1
+    question: 'An equation for the circle of radius \(1\) centered at \((-3,4,1)\) lying in a plane parallel to the \(xy\)-plane is'
+    A: '\((x+3)^2+(y-4)^2=1\) (no condition on \(z\))'
+    B: '\((x+3)^2+(y-4)^2=1,\ z=1\)'
+    C: '\((x+3)^2+(y-4)^2=1,\ z=0\)'
+    D: '\((x-3)^2+(y+4)^2=1,\ z=1\)'
+    answer: B
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  39:
+    topic: s12-1
+    question: 'An equation for the set of points equidistant from the origin and \((0,2,0)\) is'
+    A: 'the plane \(x=1\)'
+    B: 'the sphere \(x^2+y^2+z^2=1\)'
+    C: 'the plane \(y=1\)'
+    D: 'the plane \(y=2\)'
+    answer: C
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  40:
+    topic: s12-1
+    question: 'An equation for the set of points 2 units from \((0,0,1)\) and 2 units from \((0,0,-1)\) is'
+    A: 'the two points \((0,0,\pm\sqrt3)\)'
+    B: 'the circle \(x^2+y^2=3\), \(z=0\)'
+    C: 'the plane \(z=0\)'
+    D: 'the circle \(x^2+y^2=4\), \(z=0\)'
+    answer: B
+    hint: Use the coordinate-plane equations or the distance formula.
+    explanation: Substitute the data.
+  41:
+    topic: s12-1
+    question: 'The distance between \(P_1(1, 1, 1)\) and \(P_2(3, 3, 0)\) is'
+    A: '\(9\)'
+    B: '\(3\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(5\)'
+    answer: B
+    hint: '\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\).'
+    explanation: 'The sum of squares is \(9\).'
+  42:
+    topic: s12-1
+    question: 'The distance between \(P_1(-1, 1, 5)\) and \(P_2(2, 5, 0)\) is'
+    A: '\(\frac{5 \sqrt{2}}{2}\)'
+    B: '\(12\)'
+    C: '\(50\)'
+    D: '\(5 \sqrt{2}\)'
+    answer: D
+    hint: '\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\).'
+    explanation: 'The sum of squares is \(50\).'
+  43:
+    topic: s12-1
+    question: 'The distance between \(P_1(1, 4, 5)\) and \(P_2(-2, -2, 7)\) is'
+    A: '\(11\)'
+    B: '\(49\)'
+    C: '\(\frac{7}{2}\)'
+    D: '\(7\)'
+    answer: D
+    hint: '\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\).'
+    explanation: 'The sum of squares is \(49\).'
+  44:
+    topic: s12-1
+    question: 'The distance between \(P_1(3, 4, 5)\) and \(P_2(2, 3, 4)\) is'
+    A: '\(\sqrt{3}\)'
+    B: '\(3\)'
+    C: '\(\frac{\sqrt{3}}{2}\)'
+    D: '\(1 + \sqrt{3}\)'
+    answer: A
+    hint: '\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\).'
+    explanation: 'The sum of squares is \(3\).'
+  45:
+    topic: s12-1
+    question: 'The distance between \(P_1(0, 0, 0)\) and \(P_2(2, -2, -2)\) is'
+    A: '\(2 \sqrt{3}\)'
+    B: '\(12\)'
+    C: '\(\sqrt{3}\)'
+    D: '\(6\)'
+    answer: A
+    hint: '\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\).'
+    explanation: 'The sum of squares is \(12\).'
+  46:
+    topic: s12-1
+    question: 'The distance between \(P_1(5, 3, -2)\) and \(P_2(0, 0, 0)\) is'
+    A: '\(\sqrt{38}\)'
+    B: '\(10\)'
+    C: '\(\frac{\sqrt{38}}{2}\)'
+    D: '\(38\)'
+    answer: A
+    hint: '\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\).'
+    explanation: 'The sum of squares is \(38\).'
+  47:
+    topic: s12-1
+    question: 'The sphere \((x+2)^2+y^2+(z-2)^2=8\) has'
+    A: 'center \((2, 0, -2)\), radius \(8\)'
+    B: 'center \((-2, 0, 2)\), radius \(8\)'
+    C: 'center \((2, 0, -2)\), radius \(2 \sqrt{2}\)'
+    D: 'center \((-2, 0, 2)\), radius \(2 \sqrt{2}\)'
+    answer: D
+    hint: 'Compare with \((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: 'The right side is \(r^2\).'
+  48:
+    topic: s12-1
+    question: 'The sphere \(\left(x+\tfrac12\right)^2+\left(y+\tfrac12\right)^2+\left(z+\tfrac12\right)^2=\tfrac{21}4\) has'
+    A: 'center \((\frac{1}{2}, \frac{1}{2}, \frac{1}{2})\), radius \(\frac{\sqrt{21}}{2}\)'
+    B: 'center \((- \frac{1}{2}, - \frac{1}{2}, - \frac{1}{2})\), radius \(\frac{\sqrt{21}}{2}\)'
+    C: 'center \((- \frac{1}{2}, - \frac{1}{2}, - \frac{1}{2})\), radius \(\frac{21}{4}\)'
+    D: 'center \((\frac{1}{2}, \frac{1}{2}, \frac{1}{2})\), radius \(\frac{21}{4}\)'
+    answer: B
+    hint: 'Compare with \((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: 'The right side is \(r^2\).'
+  49:
+    topic: s12-1
+    question: 'The sphere \(\left(x-\sqrt2\right)^2+\left(y-\sqrt2\right)^2+\left(z+\sqrt2\right)^2=2\) has'
+    A: 'center \((\sqrt{2}, \sqrt{2}, - \sqrt{2})\), radius \(\sqrt{2}\)'
+    B: 'center \((- \sqrt{2}, - \sqrt{2}, \sqrt{2})\), radius \(\sqrt{2}\)'
+    C: 'center \((- \sqrt{2}, - \sqrt{2}, \sqrt{2})\), radius \(2\)'
+    D: 'center \((\sqrt{2}, \sqrt{2}, - \sqrt{2})\), radius \(2\)'
+    answer: A
+    hint: 'Compare with \((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: 'The right side is \(r^2\).'
+  50:
+    topic: s12-1
+    question: 'The sphere \(x^2+\left(y+\tfrac13\right)^2+\left(z-\tfrac13\right)^2=\tfrac{29}9\) has'
+    A: 'center \((0, \frac{1}{3}, - \frac{1}{3})\), radius \(\frac{\sqrt{29}}{3}\)'
+    B: 'center \((0, \frac{1}{3}, - \frac{1}{3})\), radius \(\frac{29}{9}\)'
+    C: 'center \((0, - \frac{1}{3}, \frac{1}{3})\), radius \(\frac{29}{9}\)'
+    D: 'center \((0, - \frac{1}{3}, \frac{1}{3})\), radius \(\frac{\sqrt{29}}{3}\)'
+    answer: D
+    hint: 'Compare with \((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: 'The right side is \(r^2\).'
+  51:
+    topic: s12-1
+    question: 'An equation of the sphere with center \((1, 2, 3)\) and radius \(\sqrt{14}\) is'
+    A: '\((x-1)^2+(y-2)^2+(z-3)^2=\sqrt{14}\)'
+    B: '\((x+1)^2+(y+2)^2+(z+3)^2=14\)'
+    C: '\((x+1)^2+(y+2)^2+(z+3)^2=\sqrt{14}\)'
+    D: '\((x-1)^2+(y-2)^2+(z-3)^2=14\)'
+    answer: D
+    hint: '\((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: Be careful with signs and with squaring the radius.
+  52:
+    topic: s12-1
+    question: 'An equation of the sphere with center \((0, -1, 5)\) and radius \(2\) is'
+    A: '\(x^2+(y-1)^2+(z+5)^2=4\)'
+    B: '\(x^2+(y+1)^2+(z-5)^2=2\)'
+    C: '\(x^2+(y+1)^2+(z-5)^2=4\)'
+    D: '\(x^2+(y-1)^2+(z+5)^2=2\)'
+    answer: C
+    hint: '\((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: Be careful with signs and with squaring the radius.
+  53:
+    topic: s12-1
+    question: 'An equation of the sphere with center \((-2, 0, 0)\) and radius \(\sqrt{3}\) is'
+    A: '\((x+2)^2+y^2+z^2=3\)'
+    B: '\((x+2)^2+y^2+z^2=\sqrt{3}\)'
+    C: '\((x-2)^2+y^2+z^2=\sqrt{3}\)'
+    D: '\((x-2)^2+y^2+z^2=3\)'
+    answer: A
+    hint: '\((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: Be careful with signs and with squaring the radius.
+  54:
+    topic: s12-1
+    question: 'An equation of the sphere with center \((0, -7, 0)\) and radius \(7\) is'
+    A: '\(x^2+(y-7)^2+z^2=7\)'
+    B: '\(x^2+(y-7)^2+z^2=49\)'
+    C: '\(x^2+(y+7)^2+z^2=7\)'
+    D: '\(x^2+(y+7)^2+z^2=49\)'
+    answer: D
+    hint: '\((x-a)^2+(y-b)^2+(z-c)^2=r^2\).'
+    explanation: Be careful with signs and with squaring the radius.
+  55:
+    topic: s12-1
+    question: 'The sphere \(x^2+y^2+z^2+4x-4z=0\) has'
+    A: 'center \((-4, 0, 4)\), radius \(2 \sqrt{2}\)'
+    B: 'center \((-2, 0, 2)\), radius \(8\)'
+    C: 'center \((2, 0, -2)\), radius \(2 \sqrt{2}\)'
+    D: 'center \((-2, 0, 2)\), radius \(2 \sqrt{2}\)'
+    answer: D
+    hint: Divide by the common coefficient and complete the square in each variable.
+    explanation: The center is half of the negated linear coefficients.
+  56:
+    topic: s12-1
+    question: 'The sphere \(x^2+y^2+z^2-6y+8z=0\) has'
+    A: 'center \((0, 3, -4)\), radius \(25\)'
+    B: 'center \((0, 6, -8)\), radius \(5\)'
+    C: 'center \((0, -3, 4)\), radius \(5\)'
+    D: 'center \((0, 3, -4)\), radius \(5\)'
+    answer: D
+    hint: Divide by the common coefficient and complete the square in each variable.
+    explanation: The center is half of the negated linear coefficients.
+  57:
+    topic: s12-1
+    question: 'The sphere \(2x^2+2y^2+2z^2+x+y+z=9\) has'
+    A: 'center \((- \frac{1}{4}, - \frac{1}{4}, - \frac{1}{4})\), radius \(\frac{5 \sqrt{3}}{4}\)'
+    B: 'center \((- \frac{1}{2}, - \frac{1}{2}, - \frac{1}{2})\), radius \(\frac{5 \sqrt{3}}{4}\)'
+    C: 'center \((\frac{1}{4}, \frac{1}{4}, \frac{1}{4})\), radius \(\frac{5 \sqrt{3}}{4}\)'
+    D: 'center \((- \frac{1}{4}, - \frac{1}{4}, - \frac{1}{4})\), radius \(\frac{75}{16}\)'
+    answer: A
+    hint: Divide by the common coefficient and complete the square in each variable.
+    explanation: The center is half of the negated linear coefficients.
+  58:
+    topic: s12-1
+    question: 'The sphere \(3x^2+3y^2+3z^2+2y-2z=9\) has'
+    A: 'center \((0, - \frac{2}{3}, \frac{2}{3})\), radius \(\frac{\sqrt{29}}{3}\)'
+    B: 'center \((0, - \frac{1}{3}, \frac{1}{3})\), radius \(\frac{29}{9}\)'
+    C: 'center \((0, - \frac{1}{3}, \frac{1}{3})\), radius \(\frac{\sqrt{29}}{3}\)'
+    D: 'center \((0, \frac{1}{3}, - \frac{1}{3})\), radius \(\frac{\sqrt{29}}{3}\)'
+    answer: C
+    hint: Divide by the common coefficient and complete the square in each variable.
+    explanation: The center is half of the negated linear coefficients.
+  59:
+    topic: s12-1
+    question: 'The perimeter of the triangle with vertices \(A(-1,2,1)\), \(B(1,-1,3)\), \(C(3,4,5)\) is'
+    A: '\(6 \sqrt{561}\)'
+    B: '\(\sqrt{17} + \sqrt{33} + 7\)'
+    C: '\(\sqrt{17} + \sqrt{33}\)'
+    D: '\(\sqrt{17} + \sqrt{33} + 6\)'
+    answer: D
+    hint: Add the three side lengths.
+    explanation: '\(AB=\sqrt{17}\), \(BC=\sqrt{33}\), \(CA=6\).'
+  60:
+    topic: s12-1
+    question: 'The point \(P(3,1,2)\) is equidistant from \(A(2,-1,3)\) and \(B(4,3,1)\) because'
+    A: '\(PA=\sqrt6\) and \(PB=\sqrt{12}\)'
+    B: '\(PA=PB=\sqrt6\)'
+    C: '\(PA=PB=6\)'
+    D: '\(PA=3\), \(PB=\sqrt3\)'
+    answer: B
+    hint: Compute both distances.
+    explanation: '\(PA=\sqrt{1+4+1}\) and \(PB=\sqrt{1+4+1}\).'
+  61:
+    topic: s12-1
+    question: 'The distance from \(P(x,y,z)\) to the \(x\)-axis is'
+    A: '\(\sqrt{x^2+z^2}\)'
+    B: '\(\sqrt{x^2+y^2}\)'
+    C: '\(\sqrt{y^2+z^2}\)'
+    D: '\(|x|\)'
+    answer: C
+    hint: 'Drop a perpendicular to the \(x\)-axis.'
+    explanation: The foot of the perpendicular zeroes the appropriate coordinates.
+  62:
+    topic: s12-1
+    question: 'The distance from \(P(x,y,z)\) to the \(y\)-axis is'
+    A: '\(\sqrt{x^2+z^2}\)'
+    B: '\(|y|\)'
+    C: '\(\sqrt{x^2+y^2}\)'
+    D: '\(\sqrt{y^2+z^2}\)'
+    answer: A
+    hint: 'Drop a perpendicular to the \(y\)-axis.'
+    explanation: The foot of the perpendicular zeroes the appropriate coordinates.
+  63:
+    topic: s12-1
+    question: 'The distance from \(P(x,y,z)\) to the \(z\)-axis is'
+    A: '\(|z|\)'
+    B: '\(\sqrt{x^2+y^2}\)'
+    C: '\(\sqrt{y^2+z^2}\)'
+    D: '\(\sqrt{x^2+z^2}\)'
+    answer: B
+    hint: 'Drop a perpendicular to the \(z\)-axis.'
+    explanation: The foot of the perpendicular zeroes the appropriate coordinates.
+  64:
+    topic: s12-1
+    question: 'The distance from \(P(x,y,z)\) to the \(xy\)-plane is'
+    A: '\(|z|\)'
+    B: '\(|x|+|y|\)'
+    C: '\(\sqrt{x^2+y^2}\)'
+    D: '\(z^2\)'
+    answer: A
+    hint: 'Drop a perpendicular to the \(xy\)-plane.'
+    explanation: The foot of the perpendicular zeroes the appropriate coordinates.
+  65:
+    topic: s12-1
+    question: 'The distance from \(P(x,y,z)\) to the \(yz\)-plane is'
+    A: '\(\sqrt{y^2+z^2}\)'
+    B: '\(x^2\)'
+    C: '\(|x|\)'
+    D: '\(|y|\)'
+    answer: C
+    hint: 'Drop a perpendicular to the \(yz\)-plane.'
+    explanation: The foot of the perpendicular zeroes the appropriate coordinates.
+  66:
+    topic: s12-1
+    question: 'The distance from \(P(x,y,z)\) to the \(xz\)-plane is'
+    A: '\(y^2\)'
+    B: '\(|y|\)'
+    C: '\(|x|\)'
+    D: '\(\sqrt{x^2+z^2}\)'
+    answer: B
+    hint: 'Drop a perpendicular to the \(xz\)-plane.'
+    explanation: The foot of the perpendicular zeroes the appropriate coordinates.
+  67:
+    topic: s12-1
+    question: 'The line through \((1,3,-1)\) parallel to the \(x\)-axis is described by'
+    A: '\(x=1,\ z=-1\)'
+    B: '\(y=3\)'
+    C: '\(y=3,\ z=-1\)'
+    D: '\(x=1,\ y=3\)'
+    answer: C
+    hint: 'Only \(x\) varies.'
+    explanation: 'Fix \(y\) and \(z\).'
+  68:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(3\mathbf u=\)'
+    A: '\(\langle -9, -6\rangle\)'
+    B: '\(\langle 9, -6\rangle\)'
+    C: '\(\langle -9, 6\rangle\)'
+    D: '\(\langle -6, 9\rangle\)'
+    answer: B
+    hint: Combine components.
+    explanation: 'The result is \(\langle 9, -6\rangle\).'
+  69:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(3\mathbf u\) is'
+    A: '\(117\)'
+    B: '\(3 \sqrt{13}\)'
+    C: '\(15\)'
+    D: '\(1 + 3 \sqrt{13}\)'
+    answer: B
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle 9, -6\rangle\).'
+  70:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(-2\mathbf v=\)'
+    A: '\(\langle -10, 4\rangle\)'
+    B: '\(\langle -4, 10\rangle\)'
+    C: '\(\langle -4, -10\rangle\)'
+    D: '\(\langle 4, -10\rangle\)'
+    answer: D
+    hint: Combine components.
+    explanation: 'The result is \(\langle 4, -10\rangle\).'
+  71:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(-2\mathbf v\) is'
+    A: '\(116\)'
+    B: '\(2 \sqrt{29}\)'
+    C: '\(14\)'
+    D: '\(1 + 2 \sqrt{29}\)'
+    answer: B
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle 4, -10\rangle\).'
+  72:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(\mathbf u+\mathbf v=\)'
+    A: '\(\langle -1, 3\rangle\)'
+    B: '\(\langle -1, -3\rangle\)'
+    C: '\(\langle 3, 1\rangle\)'
+    D: '\(\langle 1, 3\rangle\)'
+    answer: D
+    hint: Combine components.
+    explanation: 'The result is \(\langle 1, 3\rangle\).'
+  73:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(\mathbf u+\mathbf v\) is'
+    A: '\(10\)'
+    B: '\(4\)'
+    C: '\(\sqrt{10}\)'
+    D: '\(1 + \sqrt{10}\)'
+    answer: C
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle 1, 3\rangle\).'
+  74:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(\mathbf u-\mathbf v=\)'
+    A: '\(\langle -5, 7\rangle\)'
+    B: '\(\langle -7, 5\rangle\)'
+    C: '\(\langle -5, -7\rangle\)'
+    D: '\(\langle 5, -7\rangle\)'
+    answer: D
+    hint: Combine components.
+    explanation: 'The result is \(\langle 5, -7\rangle\).'
+  75:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(\mathbf u-\mathbf v\) is'
+    A: '\(\sqrt{74}\)'
+    B: '\(1 + \sqrt{74}\)'
+    C: '\(12\)'
+    D: '\(74\)'
+    answer: A
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle 5, -7\rangle\).'
+  76:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(2\mathbf u-3\mathbf v=\)'
+    A: '\(\langle 12, -19\rangle\)'
+    B: '\(\langle -12, -19\rangle\)'
+    C: '\(\langle -19, 12\rangle\)'
+    D: '\(\langle -12, 19\rangle\)'
+    answer: A
+    hint: Combine components.
+    explanation: 'The result is \(\langle 12, -19\rangle\).'
+  77:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(2\mathbf u-3\mathbf v\) is'
+    A: '\(31\)'
+    B: '\(1 + \sqrt{505}\)'
+    C: '\(\sqrt{505}\)'
+    D: '\(505\)'
+    answer: C
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle 12, -19\rangle\).'
+  78:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(-2\mathbf u+5\mathbf v=\)'
+    A: '\(\langle 16, 29\rangle\)'
+    B: '\(\langle 16, -29\rangle\)'
+    C: '\(\langle -16, 29\rangle\)'
+    D: '\(\langle 29, -16\rangle\)'
+    answer: C
+    hint: Combine components.
+    explanation: 'The result is \(\langle -16, 29\rangle\).'
+  79:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(-2\mathbf u+5\mathbf v\) is'
+    A: '\(45\)'
+    B: '\(\sqrt{1097}\)'
+    C: '\(1097\)'
+    D: '\(1 + \sqrt{1097}\)'
+    answer: B
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle -16, 29\rangle\).'
+  80:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(\tfrac35\mathbf u+\tfrac45\mathbf v=\)'
+    A: '\(\langle \frac{14}{5}, \frac{1}{5}\rangle\)'
+    B: '\(\langle \frac{1}{5}, \frac{14}{5}\rangle\)'
+    C: '\(\langle - \frac{1}{5}, - \frac{14}{5}\rangle\)'
+    D: '\(\langle - \frac{1}{5}, \frac{14}{5}\rangle\)'
+    answer: B
+    hint: Combine components.
+    explanation: 'The result is \(\langle \frac{1}{5}, \frac{14}{5}\rangle\).'
+  81:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(\tfrac35\mathbf u+\tfrac45\mathbf v\) is'
+    A: '\(\frac{\sqrt{197}}{5}\)'
+    B: '\(\frac{197}{25}\)'
+    C: '\(1 + \frac{\sqrt{197}}{5}\)'
+    D: '\(3\)'
+    answer: A
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle \frac{1}{5}, \frac{14}{5}\rangle\).'
+  82:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle3,-2\rangle\) and \(\mathbf v=\langle-2,5\rangle\), then \(-\tfrac5{13}\mathbf u+\tfrac{12}{13}\mathbf v=\)'
+    A: '\(\langle 3, - \frac{70}{13}\rangle\)'
+    B: '\(\langle -3, \frac{70}{13}\rangle\)'
+    C: '\(\langle \frac{70}{13}, -3\rangle\)'
+    D: '\(\langle 3, \frac{70}{13}\rangle\)'
+    answer: B
+    hint: Combine components.
+    explanation: 'The result is \(\langle -3, \frac{70}{13}\rangle\).'
+  83:
+    topic: s12-2
+    question: 'For \(\mathbf u=\langle3,-2\rangle\), \(\mathbf v=\langle-2,5\rangle\), the length of \(-\tfrac5{13}\mathbf u+\tfrac{12}{13}\mathbf v\) is'
+    A: '\(1 + \frac{\sqrt{6421}}{13}\)'
+    B: '\(\frac{109}{13}\)'
+    C: '\(\frac{6421}{169}\)'
+    D: '\(\frac{\sqrt{6421}}{13}\)'
+    answer: D
+    hint: '\(|\langle a,b\rangle|=\sqrt{a^2+b^2}\).'
+    explanation: 'Compute from the components \(\langle -3, \frac{70}{13}\rangle\).'
+  84:
+    topic: s12-2
+    question: 'The vector \(\overrightarrow{PQ}\) for \(P(1,3)\), \(Q(2,-1)\) is'
+    A: '\(\langle -1, 4\rangle\)'
+    B: '\(\langle 1, -4\rangle\)'
+    C: '\(\langle -1, -4\rangle\)'
+    D: '\(\langle -4, 1\rangle\)'
+    answer: B
+    hint: '\(\overrightarrow{PQ}=Q-P\).'
+    explanation: '\(\langle2-1,-1-3\rangle\).'
+  85:
+    topic: s12-2
+    question: 'The vector \(\overrightarrow{OP}\) from the origin to the midpoint \(P\) of the segment \(RS\), \(R(2,-1)\), \(S(-4,3)\), is'
+    A: '\(\langle -1, 1\rangle\)'
+    B: '\(\langle -2, 2\rangle\)'
+    C: '\(\langle 1, -1\rangle\)'
+    D: '\(\langle 1, 1\rangle\)'
+    answer: A
+    hint: 'The midpoint is \(\tfrac{R+S}2\).'
+    explanation: '\(P=(-1,1)\).'
+  86:
+    topic: s12-2
+    question: 'The vector from \(A(2,3)\) to the origin is'
+    A: '\(\langle 2, 3\rangle\)'
+    B: '\(\langle 2, -3\rangle\)'
+    C: '\(\langle -2, -3\rangle\)'
+    D: '\(\langle -3, -2\rangle\)'
+    answer: C
+    hint: Terminal minus initial.
+    explanation: '\(\langle0-2,0-3\rangle\).'
+  87:
+    topic: s12-2
+    question: 'For \(A(1,-1)\), \(B(2,0)\), \(C(-1,3)\), \(D(-2,2)\), the sum \(\overrightarrow{AB}+\overrightarrow{CD}\) is'
+    A: '\(\langle 2, 2\rangle\)'
+    B: '\(\langle 0, 2\rangle\)'
+    C: '\(\langle 0, 0\rangle\)'
+    D: '\(\langle 1, -1\rangle\)'
+    answer: C
+    hint: '\(\overrightarrow{AB}=\langle1,1\rangle\), \(\overrightarrow{CD}=\langle-1,-1\rangle\).'
+    explanation: The vectors are opposite.
+  88:
+    topic: s12-2
+    question: 'The unit vector making an angle \(\theta=\dfrac{2\pi}3\) with the positive \(x\)-axis is'
+    A: '\(\langle \frac{1}{2}, \frac{\sqrt{3}}{2}\rangle\)'
+    B: '\(\langle - \frac{1}{2}, \frac{\sqrt{3}}{2}\rangle\)'
+    C: '\(\langle \frac{1}{2}, - \frac{\sqrt{3}}{2}\rangle\)'
+    D: '\(\langle \frac{\sqrt{3}}{2}, - \frac{1}{2}\rangle\)'
+    answer: B
+    hint: '\(\langle\cos\theta,\sin\theta\rangle\).'
+    explanation: '\(\cos\tfrac{2\pi}3=-\tfrac12\), \(\sin\tfrac{2\pi}3=\tfrac{\sqrt3}2\).'
+  89:
+    topic: s12-2
+    question: 'The unit vector making an angle \(\theta=-\dfrac{3\pi}4\) with the positive \(x\)-axis is'
+    A: '\(\langle - \frac{\sqrt{2}}{2}, - \frac{\sqrt{2}}{2}\rangle\)'
+    B: '\(\langle \frac{\sqrt{2}}{2}, - \frac{\sqrt{2}}{2}\rangle\)'
+    C: '\(\langle \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\rangle\)'
+    D: '\(\langle - \sqrt{2}, - \sqrt{2}\rangle\)'
+    answer: A
+    hint: '\(\langle\cos\theta,\sin\theta\rangle\).'
+    explanation: 'Both cosine and sine are \(-\tfrac{\sqrt2}2\).'
+  90:
+    topic: s12-2
+    question: 'Rotating \(\langle0,1\rangle\) by \(120^\circ\) counterclockwise gives the unit vector'
+    A: '\(\langle - \frac{\sqrt{3}}{2}, - \frac{1}{2}\rangle\)'
+    B: '\(\langle \frac{\sqrt{3}}{2}, \frac{1}{2}\rangle\)'
+    C: '\(\langle - \frac{1}{2}, - \frac{\sqrt{3}}{2}\rangle\)'
+    D: '\(\langle \frac{\sqrt{3}}{2}, - \frac{1}{2}\rangle\)'
+    answer: A
+    hint: '\(\langle0,1\rangle\) has angle \(90^\circ\); the new angle is \(210^\circ\).'
+    explanation: '\(\langle\cos210^\circ,\sin210^\circ\rangle\).'
+  91:
+    topic: s12-2
+    question: 'Rotating \(\langle1,0\rangle\) by \(135^\circ\) counterclockwise gives the unit vector'
+    A: '\(\langle - \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\rangle\)'
+    B: '\(\langle \frac{\sqrt{2}}{2}, - \frac{\sqrt{2}}{2}\rangle\)'
+    C: '\(\langle \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\rangle\)'
+    D: '\(\langle - \sqrt{2}, \sqrt{2}\rangle\)'
+    answer: A
+    hint: 'The new angle is \(135^\circ\).'
+    explanation: '\(\langle\cos135^\circ,\sin135^\circ\rangle\).'
+  92:
+    topic: s12-2
+    question: 'The vector \(\overrightarrow{P_1P_2}\) for \(P_1(5, 7, -1)\), \(P_2(2, 9, -2)\), in the form \(v_1\mathbf i+v_2\mathbf j+v_3\mathbf k\), is'
+    A: '\(-\mathbf{i}+2\mathbf{j}-3\mathbf{k}\)'
+    B: '\(3\mathbf{i}+2\mathbf{j}-\mathbf{k}\)'
+    C: '\(-3\mathbf{i}+2\mathbf{j}-\mathbf{k}\)'
+    D: '\(3\mathbf{i}-2\mathbf{j}+\mathbf{k}\)'
+    answer: C
+    hint: Terminal point minus initial point.
+    explanation: Subtract coordinates.
+  93:
+    topic: s12-2
+    question: 'The vector \(\overrightarrow{P_1P_2}\) for \(P_1(1, 2, 0)\), \(P_2(-3, 0, 5)\), in the form \(v_1\mathbf i+v_2\mathbf j+v_3\mathbf k\), is'
+    A: '\(4\mathbf{i}-2\mathbf{j}+5\mathbf{k}\)'
+    B: '\(4\mathbf{i}+2\mathbf{j}-5\mathbf{k}\)'
+    C: '\(5\mathbf{i}-2\mathbf{j}-4\mathbf{k}\)'
+    D: '\(-4\mathbf{i}-2\mathbf{j}+5\mathbf{k}\)'
+    answer: D
+    hint: Terminal point minus initial point.
+    explanation: Subtract coordinates.
+  94:
+    topic: s12-2
+    question: 'The vector \(\overrightarrow{P_1P_2}\) for \(P_1(-7, -8, 1)\), \(P_2(-10, 8, 1)\), in the form \(v_1\mathbf i+v_2\mathbf j+v_3\mathbf k\), is'
+    A: '\(-3\mathbf{i}+16\mathbf{j}\)'
+    B: '\(16\mathbf{j}-3\mathbf{k}\)'
+    C: '\(3\mathbf{i}-16\mathbf{j}\)'
+    D: '\(3\mathbf{i}+16\mathbf{j}\)'
+    answer: A
+    hint: Terminal point minus initial point.
+    explanation: Subtract coordinates.
+  95:
+    topic: s12-2
+    question: 'The vector \(\overrightarrow{P_1P_2}\) for \(P_1(1, 0, 3)\), \(P_2(-1, 2, 5)\), in the form \(v_1\mathbf i+v_2\mathbf j+v_3\mathbf k\), is'
+    A: '\(-2\mathbf{i}+2\mathbf{j}+2\mathbf{k}\)'
+    B: '\(2\mathbf{i}+2\mathbf{j}+2\mathbf{k}\)'
+    C: '\(2\mathbf{i}-2\mathbf{j}-2\mathbf{k}\)'
+    D: '\(2\mathbf{i}+2\mathbf{j}-2\mathbf{k}\)'
+    answer: A
+    hint: Terminal point minus initial point.
+    explanation: Subtract coordinates.
+  96:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle1,1,-1\rangle\) and \(\mathbf v=\langle2,0,3\rangle\), then \(5\mathbf u-\mathbf v=\)'
+    A: '\(\langle 3, 5, -8\rangle\)'
+    B: '\(\langle -8, 5, 3\rangle\)'
+    C: '\(\langle -3, -5, 8\rangle\)'
+    D: '\(\langle -3, 5, -8\rangle\)'
+    answer: A
+    hint: Combine component by component.
+    explanation: '\(\langle5-2,5-0,-5-3\rangle\).'
+  97:
+    topic: s12-2
+    question: 'If \(\mathbf u=\langle-1,0,2\rangle\) and \(\mathbf v=\langle1,1,1\rangle\), then \(-2\mathbf u+3\mathbf v=\)'
+    A: '\(\langle -5, 3, -1\rangle\)'
+    B: '\(\langle -1, 3, 5\rangle\)'
+    C: '\(\langle 5, 3, -1\rangle\)'
+    D: '\(\langle -5, -3, 1\rangle\)'
+    answer: C
+    hint: Combine component by component.
+    explanation: '\(\langle2+3,0+3,-4+3\rangle\).'
+  98:
+    topic: s12-2
+    question: 'The vector \(2\mathbf{i}+\mathbf{j}-2\mathbf{k}\) as a product of its length and direction is'
+    A: '\(\frac{1}{3}\,\left(\frac{2}{3}\mathbf{i}+\frac{1}{3}\mathbf{j}-\frac{2}{3}\mathbf{k}\right)\)'
+    B: '\(9\,\left(\frac{2}{3}\mathbf{i}+\frac{1}{3}\mathbf{j}-\frac{2}{3}\mathbf{k}\right)\)'
+    C: '\(3\,\left(\frac{2}{3}\mathbf{i}+\frac{1}{3}\mathbf{j}-\frac{2}{3}\mathbf{k}\right)\)'
+    D: '\(3\,\left(2\mathbf{i}+\mathbf{j}-2\mathbf{k}\right)\)'
+    answer: C
+    hint: 'Length \(|\mathbf v|\); direction \(\mathbf v/|\mathbf v|\).'
+    explanation: '\(|\mathbf v|=3\).'
+  99:
+    topic: s12-2
+    question: 'The vector \(9\mathbf{i}-2\mathbf{j}+6\mathbf{k}\) as a product of its length and direction is'
+    A: '\(\frac{1}{11}\,\left(\frac{9}{11}\mathbf{i}-\frac{2}{11}\mathbf{j}+\frac{6}{11}\mathbf{k}\right)\)'
+    B: '\(121\,\left(\frac{9}{11}\mathbf{i}-\frac{2}{11}\mathbf{j}+\frac{6}{11}\mathbf{k}\right)\)'
+    C: '\(11\,\left(9\mathbf{i}-2\mathbf{j}+6\mathbf{k}\right)\)'
+    D: '\(11\,\left(\frac{9}{11}\mathbf{i}-\frac{2}{11}\mathbf{j}+\frac{6}{11}\mathbf{k}\right)\)'
+    answer: D
+    hint: 'Length \(|\mathbf v|\); direction \(\mathbf v/|\mathbf v|\).'
+    explanation: '\(|\mathbf v|=11\).'
+  100:
+    topic: s12-2
+    question: 'The vector \(5\mathbf{k}\) as a product of its length and direction is'
+    A: '\(\frac{1}{5}\,\left(\mathbf{k}\right)\)'
+    B: '\(25\,\left(\mathbf{k}\right)\)'
+    C: '\(5\,\left(\mathbf{k}\right)\)'
+    D: '\(5\,\left(5\mathbf{k}\right)\)'
+    answer: C
+    hint: 'Length \(|\mathbf v|\); direction \(\mathbf v/|\mathbf v|\).'
+    explanation: '\(|\mathbf v|=5\).'
+  101:
+    topic: s12-2
+    question: 'The vector of length \(7\) in the direction of \(\mathbf v=12\mathbf i-5\mathbf k\) is'
+    A: '\(-\frac{84}{13}\mathbf{i}-\frac{35}{13}\mathbf{k}\)'
+    B: '\(\frac{84}{13}\mathbf{i}-\frac{35}{13}\mathbf{k}\)'
+    C: '\(-\frac{35}{13}\mathbf{i}+\frac{84}{13}\mathbf{k}\)'
+    D: '\(-\frac{84}{13}\mathbf{i}+\frac{35}{13}\mathbf{k}\)'
+    answer: B
+    hint: '\(\dfrac{7\mathbf v}{|\mathbf v|}\) with \(|\mathbf v|=13\).'
+    explanation: '\(\dfrac7{13}(12\mathbf i-5\mathbf k)\).'
+  102:
+    topic: s12-2
+    question: 'The vector of length \(3\) in the direction opposite to \(\mathbf v=\tfrac12\mathbf i-\tfrac12\mathbf j-\tfrac12\mathbf k\) is'
+    A: '\(\sqrt{3}\mathbf{i}-\sqrt{3}\mathbf{j}-\sqrt{3}\mathbf{k}\)'
+    B: '\(\sqrt{3}\mathbf{i}+\sqrt{3}\mathbf{j}+\sqrt{3}\mathbf{k}\)'
+    C: '\(-\sqrt{3}\mathbf{i}+\sqrt{3}\mathbf{j}+\sqrt{3}\mathbf{k}\)'
+    D: '\(\sqrt{3}\mathbf{i}+\sqrt{3}\mathbf{j}-\sqrt{3}\mathbf{k}\)'
+    answer: C
+    hint: 'Use \(-3\,\dfrac{\mathbf v}{|\mathbf v|}\) with \(|\mathbf v|=\tfrac{\sqrt3}2\).'
+    explanation: '\(-3\cdot\dfrac{2}{\sqrt3}\left(\tfrac12,-\tfrac12,-\tfrac12\right)=\langle-\sqrt3,\sqrt3,\sqrt3\rangle\).'
+  103:
+    topic: s12-2
+    question: 'The direction of \(\overrightarrow{P_1P_2}\) for \(P_1(-1, 1, 5)\), \(P_2(2, 5, 0)\) is'
+    A: '\(-\frac{3 \sqrt{2}}{10}\mathbf{i}+\frac{2 \sqrt{2}}{5}\mathbf{j}-\frac{\sqrt{2}}{2}\mathbf{k}\)'
+    B: '\(-\frac{\sqrt{2}}{2}\mathbf{i}+\frac{2 \sqrt{2}}{5}\mathbf{j}+\frac{3 \sqrt{2}}{10}\mathbf{k}\)'
+    C: '\(\frac{3 \sqrt{2}}{10}\mathbf{i}+\frac{2 \sqrt{2}}{5}\mathbf{j}-\frac{\sqrt{2}}{2}\mathbf{k}\)'
+    D: '\(-\frac{3 \sqrt{2}}{10}\mathbf{i}-\frac{2 \sqrt{2}}{5}\mathbf{j}+\frac{\sqrt{2}}{2}\mathbf{k}\)'
+    answer: C
+    hint: Divide by the length.
+    explanation: '\(\overrightarrow{P_1P_2}=\langle 3, 4, -5\rangle\).'
+  104:
+    topic: s12-2
+    question: 'The midpoint of the segment \(P_1P_2\) for \(P_1(-1, 1, 5)\), \(P_2(2, 5, 0)\) is'
+    A: '\((\frac{1}{2}, 3, \frac{5}{2})\)'
+    B: '\((- \frac{3}{2}, -2, \frac{5}{2})\)'
+    C: '\((1, 6, 5)\)'
+    D: '\((\frac{3}{2}, 2, - \frac{5}{2})\)'
+    answer: A
+    hint: Average the coordinates.
+    explanation: '\(\left(\tfrac{x_1+x_2}2,\tfrac{y_1+y_2}2,\tfrac{z_1+z_2}2\right)\).'
+  105:
+    topic: s12-2
+    question: 'The direction of \(\overrightarrow{P_1P_2}\) for \(P_1(1, 4, 5)\), \(P_2(4, -2, 7)\) is'
+    A: '\(\frac{2}{7}\mathbf{i}-\frac{6}{7}\mathbf{j}+\frac{3}{7}\mathbf{k}\)'
+    B: '\(-\frac{3}{7}\mathbf{i}-\frac{6}{7}\mathbf{j}+\frac{2}{7}\mathbf{k}\)'
+    C: '\(\frac{3}{7}\mathbf{i}-\frac{6}{7}\mathbf{j}+\frac{2}{7}\mathbf{k}\)'
+    D: '\(-\frac{3}{7}\mathbf{i}+\frac{6}{7}\mathbf{j}-\frac{2}{7}\mathbf{k}\)'
+    answer: C
+    hint: Divide by the length.
+    explanation: '\(\overrightarrow{P_1P_2}=\langle 3, -6, 2\rangle\).'
+  106:
+    topic: s12-2
+    question: 'The midpoint of the segment \(P_1P_2\) for \(P_1(1, 4, 5)\), \(P_2(4, -2, 7)\) is'
+    A: '\((\frac{3}{2}, -3, 1)\)'
+    B: '\((- \frac{3}{2}, 3, -1)\)'
+    C: '\((5, 2, 12)\)'
+    D: '\((\frac{5}{2}, 1, 6)\)'
+    answer: D
+    hint: Average the coordinates.
+    explanation: '\(\left(\tfrac{x_1+x_2}2,\tfrac{y_1+y_2}2,\tfrac{z_1+z_2}2\right)\).'
+  107:
+    topic: s12-2
+    question: 'The direction of \(\overrightarrow{P_1P_2}\) for \(P_1(3, 4, 5)\), \(P_2(2, 3, 4)\) is'
+    A: '\(-\frac{\sqrt{3}}{3}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}-\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    B: '\(\frac{\sqrt{3}}{3}\mathbf{i}+\frac{\sqrt{3}}{3}\mathbf{j}+\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    C: '\(-\frac{2 \sqrt{3}}{3}\mathbf{i}-\frac{2 \sqrt{3}}{3}\mathbf{j}-\frac{2 \sqrt{3}}{3}\mathbf{k}\)'
+    D: '\(\frac{\sqrt{3}}{3}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}-\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    answer: A
+    hint: Divide by the length.
+    explanation: '\(\overrightarrow{P_1P_2}=\langle -1, -1, -1\rangle\).'
+  108:
+    topic: s12-2
+    question: 'The midpoint of the segment \(P_1P_2\) for \(P_1(3, 4, 5)\), \(P_2(2, 3, 4)\) is'
+    A: '\((5, 7, 9)\)'
+    B: '\((\frac{5}{2}, \frac{7}{2}, \frac{9}{2})\)'
+    C: '\((\frac{1}{2}, \frac{1}{2}, \frac{1}{2})\)'
+    D: '\((- \frac{1}{2}, - \frac{1}{2}, - \frac{1}{2})\)'
+    answer: B
+    hint: Average the coordinates.
+    explanation: '\(\left(\tfrac{x_1+x_2}2,\tfrac{y_1+y_2}2,\tfrac{z_1+z_2}2\right)\).'
+  109:
+    topic: s12-2
+    question: 'The direction of \(\overrightarrow{P_1P_2}\) for \(P_1(0, 0, 0)\), \(P_2(2, -2, -2)\) is'
+    A: '\(-\frac{\sqrt{3}}{3}\mathbf{i}+\frac{\sqrt{3}}{3}\mathbf{j}+\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    B: '\(-\frac{\sqrt{3}}{3}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}-\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    C: '\(-\frac{\sqrt{3}}{3}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}+\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    D: '\(\frac{\sqrt{3}}{3}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}-\frac{\sqrt{3}}{3}\mathbf{k}\)'
+    answer: D
+    hint: Divide by the length.
+    explanation: '\(\overrightarrow{P_1P_2}=\langle 2, -2, -2\rangle\).'
+  110:
+    topic: s12-2
+    question: 'The midpoint of the segment \(P_1P_2\) for \(P_1(0, 0, 0)\), \(P_2(2, -2, -2)\) is'
+    A: '\((1, -1, -1)\)'
+    B: '\((2, -2, -2)\)'
+    C: '\((-1, 1, 1)\)'
+    D: '\((2, 0, 0)\)'
+    answer: A
+    hint: Average the coordinates.
+    explanation: '\(\left(\tfrac{x_1+x_2}2,\tfrac{y_1+y_2}2,\tfrac{z_1+z_2}2\right)\).'
+  111:
+    topic: s12-2
+    question: 'If \(\overrightarrow{AB}=\mathbf i+4\mathbf j-2\mathbf k\) and \(B=(5,1,3)\), then \(A=\)'
+    A: '\((4, -3, 5)\)'
+    B: '\((4, 3, 5)\)'
+    C: '\((6, 5, 1)\)'
+    D: '\((-4, 3, -5)\)'
+    answer: A
+    hint: '\(A=B-\overrightarrow{AB}\).'
+    explanation: '\((5-1,1-4,3+2)\).'
+  112:
+    topic: s12-2
+    question: 'If \(\overrightarrow{AB}=-7\mathbf i+3\mathbf j+8\mathbf k\) and \(A=(-2,-3,6)\), then \(B=\)'
+    A: '\((9, 0, -14)\)'
+    B: '\((-9, 0, 14)\)'
+    C: '\((5, -6, -2)\)'
+    D: '\((-9, -6, 14)\)'
+    answer: B
+    hint: '\(B=A+\overrightarrow{AB}\).'
+    explanation: '\((-2-7,-3+3,6+8)\).'
+  113:
+    topic: s12-2
+    question: 'For \(\mathbf u=2\mathbf i+\mathbf j\), \(\mathbf v=\mathbf i+\mathbf j\), \(\mathbf w=\mathbf i-\mathbf j\), the scalars with \(\mathbf u=a\mathbf v+b\mathbf w\) are'
+    A: '\(a=\dfrac12\), \(b=\dfrac32\)'
+    B: '\(a=2\), \(b=-1\)'
+    C: '\(a=\dfrac32\), \(b=\dfrac12\)'
+    D: '\(a=1\), \(b=1\)'
+    answer: C
+    hint: 'Solve \(a+b=2\), \(a-b=1\).'
+    explanation: 'Adding: \(2a=3\).'
+  114:
+    topic: s12-2
+    question: 'Let \(\mathbf u=\mathbf i-2\mathbf j\), \(\mathbf v=2\mathbf i+3\mathbf j\), \(\mathbf w=\mathbf i+\mathbf j\). Writing \(\mathbf u=\mathbf u_1+\mathbf u_2\) with \(\mathbf u_1\parallel\mathbf v\) and \(\mathbf u_2\parallel\mathbf w\) gives'
+    A: '\(\mathbf u_1=-\mathbf v\), \(\mathbf u_2=3\mathbf w\)'
+    B: '\(\mathbf u_1=-3\mathbf v=-6\mathbf i-9\mathbf j\), \(\mathbf u_2=7\mathbf w\)'
+    C: '\(\mathbf u_1=3\mathbf v\), \(\mathbf u_2=-7\mathbf w\)'
+    D: '\(\mathbf u_1=\mathbf v\), \(\mathbf u_2=\mathbf w\)'
+    answer: B
+    hint: 'Solve \(\mathbf u=a\mathbf v+b\mathbf w\): \(2a+b=1\), \(3a+b=-2\).'
+    explanation: '\(a=-3\), \(b=7\).'
+  115:
+    topic: s12-2
+    question: 'A suitcase is pulled with force \(\mathbf F\), \(|\mathbf F|=10\) lb, at \(30^\circ\) above horizontal. Then \(\mathbf F=\)'
+    A: '\(5\sqrt3\,\mathbf i+5\,\mathbf j\)'
+    B: '\(5\,\mathbf i+5\sqrt3\,\mathbf j\)'
+    C: '\(10\sqrt3\,\mathbf i+10\,\mathbf j\)'
+    D: '\(5\sqrt3\,\mathbf i-5\,\mathbf j\)'
+    answer: A
+    hint: '\(\mathbf F=10(\cos30^\circ\mathbf i+\sin30^\circ\mathbf j)\).'
+    explanation: '\(10\cdot\tfrac{\sqrt3}2=5\sqrt3\).'
+  116:
+    topic: s12-2
+    question: 'A kite string pulls with \(|\mathbf F|=12\) lb at \(45^\circ\) below the horizontal (toward the person). The horizontal and vertical components have magnitude'
+    A: '\(6\) lb each'
+    B: '\(12\sqrt2\) lb each'
+    C: '\(6\sqrt2\approx8.49\) lb each'
+    D: '\(12\) lb each'
+    answer: C
+    hint: 'Components are \(12\cos45^\circ\) and \(12\sin45^\circ\).'
+    explanation: '\(12\cdot\tfrac{\sqrt2}2=6\sqrt2\).'
+  117:
+    topic: s12-2
+    question: 'An airplane flies \(25^\circ\) west of north at \(800\) km/h (\(x\) east, \(y\) north). Its velocity is about'
+    A: '\(\langle338.1,\ 725.1\rangle\)'
+    B: '\(\langle-338.1,\ -725.1\rangle\)'
+    C: '\(\langle-338.1,\ 725.1\rangle\)'
+    D: '\(\langle-725.1,\ 338.1\rangle\)'
+    answer: C
+    hint: 'West of north: negative \(x\) component \(800\sin25^\circ\).'
+    explanation: '\(\langle-800\sin25^\circ,\ 800\cos25^\circ\rangle\).'
+  118:
+    topic: s12-2
+    question: 'An airplane flies \(10^\circ\) east of south at \(600\) km/h (\(x\) east, \(y\) north). Its velocity is about'
+    A: '\(\langle590.9,\ -104.2\rangle\)'
+    B: '\(\langle104.2,\ 590.9\rangle\)'
+    C: '\(\langle-104.2,\ -590.9\rangle\)'
+    D: '\(\langle104.2,\ -590.9\rangle\)'
+    answer: D
+    hint: 'East of south: positive \(x\), negative \(y\).'
+    explanation: '\(\langle600\sin10^\circ,\ -600\cos10^\circ\rangle\).'
+  119:
+    topic: s12-2
+    question: 'A bird flies 5 km from its nest at \(60^\circ\) north of east, then 10 km southeast. With the nest at the origin (\(x\) east, \(y\) north), the pole is at about'
+    A: '\((7.07,\ 7.07)\)'
+    B: '\((2.50,\ 4.33)\)'
+    C: '\((9.57,\ 2.74)\)'
+    D: '\((9.57,\ -2.74)\)'
+    answer: D
+    hint: Add the displacement vectors.
+    explanation: '\((2.5+7.07,\ 4.33-7.07)\).'
+  120:
+    topic: s12-2
+    question: 'The point \(Q\) dividing \(P_1P_2\) into two lengths whose ratio is \(p/q=r\) has coordinates'
+    A: '\(\left(\dfrac{x_1+x_2}{2},\dfrac{y_1+y_2}{2},\dfrac{z_1+z_2}{2}\right)\)'
+    B: '\(\left(rx_1+x_2,ry_1+y_2,rz_1+z_2\right)\)'
+    C: '\(\left(\dfrac{rx_1+x_2}{1+r},\dfrac{ry_1+y_2}{1+r},\dfrac{rz_1+z_2}{1+r}\right)\)'
+    D: '\(\left(\dfrac{x_1+rx_2}{1+r},\dfrac{y_1+ry_2}{1+r},\dfrac{z_1+rz_2}{1+r}\right)\)'
+    answer: D
+    hint: 'Use similar triangles: \(\overrightarrow{P_1Q}=\dfrac r{1+r}\overrightarrow{P_1P_2}\).'
+    explanation: 'For \(r=1\) this is the midpoint formula.'
+  121:
+    topic: s12-2
+    question: 'The median \(CM\) of triangle \(ABC\) with \(A(4,2,0)\), \(B(1,3,0)\), \(C(1,1,3)\) has \(\overrightarrow{CM}=\)'
+    A: '\(\langle \frac{3}{2}, \frac{3}{2}, -3\rangle\)'
+    B: '\(\langle \frac{5}{2}, \frac{5}{2}, 0\rangle\)'
+    C: '\(\langle - \frac{3}{2}, - \frac{3}{2}, 3\rangle\)'
+    D: '\(\langle 3, 3, -6\rangle\)'
+    answer: A
+    hint: '\(M=\left(\tfrac52,\tfrac52,0\right)\) is the midpoint of \(AB\).'
+    explanation: '\(M-C=\left\langle\tfrac32,\tfrac32,-3\right\rangle\).'
+  122:
+    topic: s12-2
+    question: 'The medians of the triangle with vertices \(A(4,2,0)\), \(B(1,3,0)\), \(C(1,1,3)\) intersect (the center of mass) at'
+    A: '\((2, 2, 1)\)'
+    B: '\((6, 6, 3)\)'
+    C: '\((1, 1, 3)\)'
+    D: '\((\frac{5}{2}, \frac{5}{2}, 0)\)'
+    answer: A
+    hint: 'The centroid is two-thirds of the way along a median from a vertex: \(\tfrac{A+B+C}3\).'
+    explanation: '\(\left(\tfrac{4+1+1}3,\tfrac{2+3+1}3,\tfrac{0+0+3}3\right)\).'
+  123:
+    topic: s12-2
+    question: 'The vector from the origin to the intersection of the medians of the triangle \(A(1,-1,2)\), \(B(2,1,3)\), \(C(-1,2,-1)\) is'
+    A: '\(\langle \frac{2}{3}, \frac{2}{3}, \frac{4}{3}\rangle\)'
+    B: '\(\langle 2, 2, 4\rangle\)'
+    C: '\(\langle 1, 1, 2\rangle\)'
+    D: '\(\langle \frac{1}{3}, \frac{1}{3}, \frac{2}{3}\rangle\)'
+    answer: A
+    hint: 'The centroid is \(\tfrac{A+B+C}3\).'
+    explanation: '\(\left\langle\tfrac{1+2-1}3,\tfrac{-1+1+2}3,\tfrac{2+3-1}3\right\rangle\).'
+  124:
+    topic: s12-2
+    question: Every unit vector in the plane can be written as
+    A: '\(\langle\sin\theta,\sin\theta\rangle\)'
+    B: '\(\langle\cos\theta,\sin\theta\rangle\) for some \(\theta\)'
+    C: '\(\langle1,\tan\theta\rangle\)'
+    D: '\(\langle\cos\theta,\cos\theta\rangle\)'
+    answer: B
+    hint: A unit vector ends on the unit circle.
+    explanation: 'Rotating \(\mathbf i\) through \(\theta\) gives \(\langle\cos\theta,\sin\theta\rangle\).'
+  125:
+    topic: s12-2
+    question: 'If \(a\), \(b\), \(c\) are the midpoints of the sides \(BC\), \(CA\), \(AB\) of triangle \(ABC\), then \(\overrightarrow{Aa}+\overrightarrow{Bb}+\overrightarrow{Cc}=\)'
+    A: '\(\overrightarrow{AC}\)'
+    B: '\(\overrightarrow{AB}\)'
+    C: '\(\mathbf0\)'
+    D: '\(2\overrightarrow{Aa}\)'
+    answer: C
+    hint: Write each median in terms of the side vectors.
+    explanation: '\(\tfrac12(\mathbf b+\mathbf c)-\mathbf a\) plus the other two cancel.'
+  126:
+    topic: s12-2
+    question: 'The sum of the vectors from the center of a regular \(n\)-sided polygon to its vertices is'
+    A: '\(n\) times the radius'
+    B: '\(\mathbf0\)'
+    C: '\(2\pi\)'
+    D: the vector to one vertex
+    answer: B
+    hint: Rotating the polygon about its center leaves the sum unchanged.
+    explanation: 'A vector equal to its own rotation by \(2\pi/n\) must be zero.'
+  127:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}-4\mathbf{j}+\sqrt{5}\mathbf{k}\) and \(\mathbf u=-2\mathbf{i}+4\mathbf{j}-\sqrt{5}\mathbf{k}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(25\)'
+    B: '\(-25\)'
+    C: '\(-24\)'
+    D: '\(625\)'
+    answer: B
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(-25\).'
+  128:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}-4\mathbf{j}+\sqrt{5}\mathbf{k}\) and \(\mathbf u=-2\mathbf{i}+4\mathbf{j}-\sqrt{5}\mathbf{k}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(1\)'
+    B: '\(-25\)'
+    C: '\(-1\)'
+    D: '\(-2\)'
+    answer: C
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{-25}{5\cdot5}\).'
+  129:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}-4\mathbf{j}+\sqrt{5}\mathbf{k}\) and \(\mathbf u=-2\mathbf{i}+4\mathbf{j}-\sqrt{5}\mathbf{k}\), the scalar component of \(\mathbf u\) in the direction of \(\mathbf v\) is'
+    A: '\(-25\)'
+    B: '\(-10\)'
+    C: '\(-5\)'
+    D: '\(5\)'
+    answer: C
+    hint: '\(\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf v|}\).'
+    explanation: '\(\dfrac{-25}{5}\).'
+  130:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}-4\mathbf{j}+\sqrt{5}\mathbf{k}\) and \(\mathbf u=-2\mathbf{i}+4\mathbf{j}-\sqrt{5}\mathbf{k}\), \(\operatorname{proj}_{\mathbf v}\mathbf u=\)'
+    A: '\(-2\mathbf{i}+4\mathbf{j}-\sqrt{5}\mathbf{k}\)'
+    B: '\(2\mathbf{i}-4\mathbf{j}+\sqrt{5}\mathbf{k}\)'
+    C: '\(-\sqrt{5}\mathbf{i}+4\mathbf{j}-2\mathbf{k}\)'
+    D: '\(2\mathbf{i}+4\mathbf{j}-\sqrt{5}\mathbf{k}\)'
+    answer: A
+    hint: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf v\cdot\mathbf v}\right)\mathbf v\).'
+    explanation: 'The scalar multiplier is \(\dfrac{-25}{25}\).'
+  131:
+    topic: s12-3
+    question: 'For \(\mathbf v=\frac{3}{5}\mathbf{i}+\frac{4}{5}\mathbf{k}\) and \(\mathbf u=5\mathbf{i}+12\mathbf{j}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(3\)'
+    B: '\(4\)'
+    C: '\(-3\)'
+    D: '\(9\)'
+    answer: A
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(3\).'
+  132:
+    topic: s12-3
+    question: 'For \(\mathbf v=\frac{3}{5}\mathbf{i}+\frac{4}{5}\mathbf{k}\) and \(\mathbf u=5\mathbf{i}+12\mathbf{j}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(\frac{3}{13}\)'
+    B: '\(\frac{6}{13}\)'
+    C: '\(- \frac{3}{13}\)'
+    D: '\(3\)'
+    answer: A
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{3}{1\cdot13}\).'
+  133:
+    topic: s12-3
+    question: 'For \(\mathbf v=\frac{3}{5}\mathbf{i}+\frac{4}{5}\mathbf{k}\) and \(\mathbf u=5\mathbf{i}+12\mathbf{j}\), the scalar component of \(\mathbf u\) in the direction of \(\mathbf v\) is'
+    A: '\(3\)'
+    B: '\(6\)'
+    C: '\(-3\)'
+    D: '\(\frac{3}{13}\)'
+    answer: A
+    hint: '\(\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf v|}\).'
+    explanation: '\(\dfrac{3}{1}\).'
+  134:
+    topic: s12-3
+    question: 'For \(\mathbf v=\frac{3}{5}\mathbf{i}+\frac{4}{5}\mathbf{k}\) and \(\mathbf u=5\mathbf{i}+12\mathbf{j}\), \(\operatorname{proj}_{\mathbf v}\mathbf u=\)'
+    A: '\(-\frac{9}{5}\mathbf{i}-\frac{12}{5}\mathbf{k}\)'
+    B: '\(\frac{15}{169}\mathbf{i}+\frac{36}{169}\mathbf{j}\)'
+    C: '\(\frac{12}{5}\mathbf{i}+\frac{9}{5}\mathbf{k}\)'
+    D: '\(\frac{9}{5}\mathbf{i}+\frac{12}{5}\mathbf{k}\)'
+    answer: D
+    hint: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf v\cdot\mathbf v}\right)\mathbf v\).'
+    explanation: 'The scalar multiplier is \(\dfrac{3}{1}\).'
+  135:
+    topic: s12-3
+    question: 'For \(\mathbf v=10\mathbf{i}+11\mathbf{j}-2\mathbf{k}\) and \(\mathbf u=3\mathbf{j}+4\mathbf{k}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(26\)'
+    B: '\(25\)'
+    C: '\(-25\)'
+    D: '\(625\)'
+    answer: B
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(25\).'
+  136:
+    topic: s12-3
+    question: 'For \(\mathbf v=10\mathbf{i}+11\mathbf{j}-2\mathbf{k}\) and \(\mathbf u=3\mathbf{j}+4\mathbf{k}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(\frac{1}{3}\)'
+    B: '\(- \frac{1}{3}\)'
+    C: '\(\frac{2}{3}\)'
+    D: '\(25\)'
+    answer: A
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{25}{15\cdot5}\).'
+  137:
+    topic: s12-3
+    question: 'For \(\mathbf v=10\mathbf{i}+11\mathbf{j}-2\mathbf{k}\) and \(\mathbf u=3\mathbf{j}+4\mathbf{k}\), the scalar component of \(\mathbf u\) in the direction of \(\mathbf v\) is'
+    A: '\(\frac{5}{3}\)'
+    B: '\(25\)'
+    C: '\(5\)'
+    D: '\(- \frac{5}{3}\)'
+    answer: A
+    hint: '\(\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf v|}\).'
+    explanation: '\(\dfrac{25}{15}\).'
+  138:
+    topic: s12-3
+    question: 'For \(\mathbf v=10\mathbf{i}+11\mathbf{j}-2\mathbf{k}\) and \(\mathbf u=3\mathbf{j}+4\mathbf{k}\), \(\operatorname{proj}_{\mathbf v}\mathbf u=\)'
+    A: '\(-\frac{10}{9}\mathbf{i}-\frac{11}{9}\mathbf{j}+\frac{2}{9}\mathbf{k}\)'
+    B: '\(3\mathbf{j}+4\mathbf{k}\)'
+    C: '\(-\frac{2}{9}\mathbf{i}+\frac{11}{9}\mathbf{j}+\frac{10}{9}\mathbf{k}\)'
+    D: '\(\frac{10}{9}\mathbf{i}+\frac{11}{9}\mathbf{j}-\frac{2}{9}\mathbf{k}\)'
+    answer: D
+    hint: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf v\cdot\mathbf v}\right)\mathbf v\).'
+    explanation: 'The scalar multiplier is \(\dfrac{25}{225}\).'
+  139:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}+10\mathbf{j}-11\mathbf{k}\) and \(\mathbf u=2\mathbf{i}+2\mathbf{j}+\mathbf{k}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(14\)'
+    B: '\(13\)'
+    C: '\(169\)'
+    D: '\(-13\)'
+    answer: B
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(13\).'
+  140:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}+10\mathbf{j}-11\mathbf{k}\) and \(\mathbf u=2\mathbf{i}+2\mathbf{j}+\mathbf{k}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(\frac{13}{45}\)'
+    B: '\(13\)'
+    C: '\(- \frac{13}{45}\)'
+    D: '\(\frac{26}{45}\)'
+    answer: A
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{13}{15\cdot3}\).'
+  141:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}+10\mathbf{j}-11\mathbf{k}\) and \(\mathbf u=2\mathbf{i}+2\mathbf{j}+\mathbf{k}\), the scalar component of \(\mathbf u\) in the direction of \(\mathbf v\) is'
+    A: '\(\frac{13}{15}\)'
+    B: '\(13\)'
+    C: '\(\frac{13}{3}\)'
+    D: '\(- \frac{13}{15}\)'
+    answer: A
+    hint: '\(\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf v|}\).'
+    explanation: '\(\dfrac{13}{15}\).'
+  142:
+    topic: s12-3
+    question: 'For \(\mathbf v=2\mathbf{i}+10\mathbf{j}-11\mathbf{k}\) and \(\mathbf u=2\mathbf{i}+2\mathbf{j}+\mathbf{k}\), \(\operatorname{proj}_{\mathbf v}\mathbf u=\)'
+    A: '\(\frac{26}{225}\mathbf{i}+\frac{26}{45}\mathbf{j}-\frac{143}{225}\mathbf{k}\)'
+    B: '\(\frac{26}{9}\mathbf{i}+\frac{26}{9}\mathbf{j}+\frac{13}{9}\mathbf{k}\)'
+    C: '\(-\frac{143}{225}\mathbf{i}+\frac{26}{45}\mathbf{j}+\frac{26}{225}\mathbf{k}\)'
+    D: '\(-\frac{26}{225}\mathbf{i}-\frac{26}{45}\mathbf{j}+\frac{143}{225}\mathbf{k}\)'
+    answer: A
+    hint: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf v\cdot\mathbf v}\right)\mathbf v\).'
+    explanation: 'The scalar multiplier is \(\dfrac{13}{225}\).'
+  143:
+    topic: s12-3
+    question: 'For \(\mathbf v=5\mathbf{j}-3\mathbf{k}\) and \(\mathbf u=\mathbf{i}+\mathbf{j}+\mathbf{k}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(3\)'
+    B: '\(-2\)'
+    C: '\(4\)'
+    D: '\(2\)'
+    answer: D
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(2\).'
+  144:
+    topic: s12-3
+    question: 'For \(\mathbf v=5\mathbf{j}-3\mathbf{k}\) and \(\mathbf u=\mathbf{i}+\mathbf{j}+\mathbf{k}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(\frac{\sqrt{102}}{51}\)'
+    B: '\(\frac{2 \sqrt{102}}{51}\)'
+    C: '\(2\)'
+    D: '\(- \frac{\sqrt{102}}{51}\)'
+    answer: A
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{2}{\sqrt{34}\cdot\sqrt{3}}\).'
+  145:
+    topic: s12-3
+    question: 'For \(\mathbf v=5\mathbf{j}-3\mathbf{k}\) and \(\mathbf u=\mathbf{i}+\mathbf{j}+\mathbf{k}\), the scalar component of \(\mathbf u\) in the direction of \(\mathbf v\) is'
+    A: '\(2\)'
+    B: '\(\frac{2 \sqrt{3}}{3}\)'
+    C: '\(\frac{\sqrt{34}}{17}\)'
+    D: '\(- \frac{\sqrt{34}}{17}\)'
+    answer: C
+    hint: '\(\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf v|}\).'
+    explanation: '\(\dfrac{2}{\sqrt{34}}\).'
+  146:
+    topic: s12-3
+    question: 'For \(\mathbf v=5\mathbf{j}-3\mathbf{k}\) and \(\mathbf u=\mathbf{i}+\mathbf{j}+\mathbf{k}\), \(\operatorname{proj}_{\mathbf v}\mathbf u=\)'
+    A: '\(\frac{5}{17}\mathbf{j}-\frac{3}{17}\mathbf{k}\)'
+    B: '\(-\frac{3}{17}\mathbf{i}+\frac{5}{17}\mathbf{j}\)'
+    C: '\(\frac{2}{3}\mathbf{i}+\frac{2}{3}\mathbf{j}+\frac{2}{3}\mathbf{k}\)'
+    D: '\(-\frac{5}{17}\mathbf{j}+\frac{3}{17}\mathbf{k}\)'
+    answer: A
+    hint: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf v\cdot\mathbf v}\right)\mathbf v\).'
+    explanation: 'The scalar multiplier is \(\dfrac{2}{34}\).'
+  147:
+    topic: s12-3
+    question: 'For \(\mathbf v=-\mathbf{i}+\mathbf{j}\) and \(\mathbf u=\sqrt{2}\mathbf{i}+\sqrt{3}\mathbf{j}+2\mathbf{k}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(5 - 2 \sqrt{6}\)'
+    B: '\(- \sqrt{3} + \sqrt{2}\)'
+    C: '\(- \sqrt{2} + 1 + \sqrt{3}\)'
+    D: '\(- \sqrt{2} + \sqrt{3}\)'
+    answer: D
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(- \sqrt{2} + \sqrt{3}\).'
+  148:
+    topic: s12-3
+    question: 'For \(\mathbf v=-\mathbf{i}+\mathbf{j}\) and \(\mathbf u=\sqrt{2}\mathbf{i}+\sqrt{3}\mathbf{j}+2\mathbf{k}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(\frac{1}{3} - \frac{\sqrt{6}}{6}\)'
+    B: '\(- \sqrt{2} + \sqrt{3}\)'
+    C: '\(- \frac{2}{3} + \frac{\sqrt{6}}{3}\)'
+    D: '\(- \frac{1}{3} + \frac{\sqrt{6}}{6}\)'
+    answer: D
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{- \sqrt{2} + \sqrt{3}}{\sqrt{2}\cdot3}\).'
+  149:
+    topic: s12-3
+    question: 'For \(\mathbf v=5\mathbf{i}+\mathbf{j}\) and \(\mathbf u=2\mathbf{i}+\sqrt{17}\mathbf{j}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(\left(\sqrt{17} + 10\right)^{2}\)'
+    B: '\(-10 - \sqrt{17}\)'
+    C: '\(\sqrt{17} + 10\)'
+    D: '\(\sqrt{17} + 11\)'
+    answer: C
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(\sqrt{17} + 10\).'
+  150:
+    topic: s12-3
+    question: 'For \(\mathbf v=5\mathbf{i}+\mathbf{j}\) and \(\mathbf u=2\mathbf{i}+\sqrt{17}\mathbf{j}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(\sqrt{17} + 10\)'
+    B: '\(\frac{\sqrt{546} \left(-10 - \sqrt{17}\right)}{546}\)'
+    C: '\(\frac{\sqrt{546} \left(\sqrt{17} + 10\right)}{273}\)'
+    D: '\(\frac{\sqrt{546} \left(\sqrt{17} + 10\right)}{546}\)'
+    answer: D
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{\sqrt{17} + 10}{\sqrt{26}\cdot\sqrt{21}}\).'
+  151:
+    topic: s12-3
+    question: 'For \(\mathbf v=\frac{\sqrt{2}}{2}\mathbf{i}+\frac{\sqrt{3}}{3}\mathbf{j}\) and \(\mathbf u=\frac{\sqrt{2}}{2}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}\), \(\mathbf v\cdot\mathbf u=\)'
+    A: '\(\frac{7}{6}\)'
+    B: '\(\frac{1}{6}\)'
+    C: '\(\frac{1}{36}\)'
+    D: '\(- \frac{1}{6}\)'
+    answer: B
+    hint: Multiply corresponding components and add.
+    explanation: 'The sum is \(\frac{1}{6}\).'
+  152:
+    topic: s12-3
+    question: 'For \(\mathbf v=\frac{\sqrt{2}}{2}\mathbf{i}+\frac{\sqrt{3}}{3}\mathbf{j}\) and \(\mathbf u=\frac{\sqrt{2}}{2}\mathbf{i}-\frac{\sqrt{3}}{3}\mathbf{j}\), the cosine of the angle between \(\mathbf v\) and \(\mathbf u\) is'
+    A: '\(- \frac{1}{5}\)'
+    B: '\(\frac{1}{6}\)'
+    C: '\(\frac{1}{5}\)'
+    D: '\(\frac{2}{5}\)'
+    answer: C
+    hint: '\(\cos\theta=\dfrac{\mathbf v\cdot\mathbf u}{|\mathbf v||\mathbf u|}\).'
+    explanation: '\(\dfrac{\frac{1}{6}}{\frac{\sqrt{30}}{6}\cdot\frac{\sqrt{30}}{6}}\).'
+  153:
+    topic: s12-3
+    question: 'The angle between \(\mathbf u=\mathbf{i}+\mathbf{j}\) and \(\mathbf v=\mathbf{i}+2\mathbf{j}-\mathbf{k}\) (nearest hundredth of a radian) is'
+    A: '\(1.05\)'
+    B: '\(0.26\)'
+    C: '\(0.52\)'
+    D: '\(2.62\)'
+    answer: C
+    hint: '\(\theta=\cos^{-1}\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf u||\mathbf v|}\).'
+    explanation: '\(\mathbf u\cdot\mathbf v=3\), so \(\theta\approx0.52\).'
+  154:
+    topic: s12-3
+    question: 'The angle between \(\mathbf u=2\mathbf{i}-2\mathbf{j}+\mathbf{k}\) and \(\mathbf v=3\mathbf{i}+4\mathbf{k}\) (nearest hundredth of a radian) is'
+    A: '\(2.3\)'
+    B: '\(0.42\)'
+    C: '\(0.73\)'
+    D: '\(0.84\)'
+    answer: D
+    hint: '\(\theta=\cos^{-1}\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf u||\mathbf v|}\).'
+    explanation: '\(\mathbf u\cdot\mathbf v=10\), so \(\theta\approx0.84\).'
+  155:
+    topic: s12-3
+    question: 'The angle between \(\mathbf u=\sqrt{3}\mathbf{i}-7\mathbf{j}\) and \(\mathbf v=\sqrt{3}\mathbf{i}+\mathbf{j}-2\mathbf{k}\) (nearest hundredth of a radian) is'
+    A: '\(1.77\)'
+    B: '\(-0.2\)'
+    C: '\(0.88\)'
+    D: '\(1.37\)'
+    answer: A
+    hint: '\(\theta=\cos^{-1}\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf u||\mathbf v|}\).'
+    explanation: '\(\mathbf u\cdot\mathbf v=-4\), so \(\theta\approx1.77\).'
+  156:
+    topic: s12-3
+    question: 'The angle between \(\mathbf u=\mathbf{i}+\sqrt{2}\mathbf{j}-\sqrt{2}\mathbf{k}\) and \(\mathbf v=-\mathbf{i}+\mathbf{j}+\mathbf{k}\) (nearest hundredth of a radian) is'
+    A: '\(-0.26\)'
+    B: '\(1.31\)'
+    C: '\(1.83\)'
+    D: '\(0.92\)'
+    answer: C
+    hint: '\(\theta=\cos^{-1}\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf u||\mathbf v|}\).'
+    explanation: '\(\mathbf u\cdot\mathbf v=-1\), so \(\theta\approx1.83\).'
+  157:
+    topic: s12-3
+    question: 'In the triangle with vertices \(A(-1,0)\), \(B(2,1)\), \(C(1,-2)\), the angle at \(A\) is (radians, two decimals)'
+    A: '\(1.11\)'
+    B: '\(0.55\)'
+    C: '\(2.03\)'
+    D: '\(1.57\)'
+    answer: A
+    hint: Use the two side vectors from that vertex.
+    explanation: 'The angle is \(\approx1.11\).'
+  158:
+    topic: s12-3
+    question: 'In the triangle with vertices \(A(-1,0)\), \(B(2,1)\), \(C(1,-2)\), the angle at \(B\) is (radians, two decimals)'
+    A: '\(0.93\)'
+    B: '\(0.46\)'
+    C: '\(2.21\)'
+    D: '\(1.57\)'
+    answer: A
+    hint: Use the two side vectors from that vertex.
+    explanation: 'The angle is \(\approx0.93\).'
+  159:
+    topic: s12-3
+    question: 'In the triangle with vertices \(A(-1,0)\), \(B(2,1)\), \(C(1,-2)\), the angle at \(C\) is (radians, two decimals)'
+    A: '\(0.55\)'
+    B: '\(1.57\)'
+    C: '\(1.11\)'
+    D: '\(2.03\)'
+    answer: C
+    hint: Use the two side vectors from that vertex.
+    explanation: 'The angle is \(\approx1.11\).'
+  160:
+    topic: s12-3
+    question: 'The diagonals of the rectangle with vertices \(A(1,0)\), \(B(0,3)\), \(C(3,4)\), \(D(4,1)\) meet at an angle of'
+    A: '\(\dfrac\pi2\) (they are perpendicular)'
+    B: '\(\dfrac{2\pi}3\)'
+    C: '\(\dfrac\pi4\)'
+    D: '\(\dfrac\pi3\)'
+    answer: A
+    hint: '\(\overrightarrow{AC}=\langle2,4\rangle\), \(\overrightarrow{BD}=\langle4,-2\rangle\).'
+    explanation: '\(\overrightarrow{AC}\cdot\overrightarrow{BD}=8-8=0\) (the rectangle is a square).'
+  161:
+    topic: s12-3
+    question: 'The direction cosines of \(\mathbf v=a\mathbf i+b\mathbf j+c\mathbf k\) are \(\cos\alpha=\dfrac a{|\mathbf v|}\), \(\cos\beta=\dfrac b{|\mathbf v|}\), \(\cos\gamma=\dfrac c{|\mathbf v|}\). They satisfy'
+    A: '\(\cos\alpha+\cos\beta+\cos\gamma=1\)'
+    B: '\(\cos^2\alpha+\cos^2\beta=1\)'
+    C: '\(\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1\)'
+    D: '\(\cos^2\alpha+\cos^2\beta+\cos^2\gamma=0\)'
+    answer: C
+    hint: Add the squares of the three fractions.
+    explanation: '\(\dfrac{a^2+b^2+c^2}{|\mathbf v|^2}=1\).'
+  162:
+    topic: s12-3
+    question: 'If \(\mathbf v=a\mathbf i+b\mathbf j+c\mathbf k\) is a unit vector, then \(a,b,c\) are'
+    A: 'equal to \(1\)'
+    B: 'the direction sines of \(\mathbf v\)'
+    C: 'the angles \(\alpha,\beta,\gamma\) themselves'
+    D: 'the direction cosines of \(\mathbf v\)'
+    answer: D
+    hint: '\(|\mathbf v|=1\).'
+    explanation: '\(\cos\alpha=\dfrac a1\), etc.'
+  163:
+    topic: s12-3
+    question: 'A water main turns from a 20% grade in the north direction to a 10% grade in the east direction. The angle \(\theta\) between the two directions \(\langle0,1,0.2\rangle\) and \(\langle1,0,0.1\rangle\) is about (degrees, one decimal)'
+    A: '\(88.9^{\circ}\)'
+    B: '\(1.1^{\circ}\)'
+    C: '\(44.4^{\circ}\)'
+    D: '\(45^{\circ}\)'
+    answer: A
+    hint: '\(\cos\theta=\dfrac{0.02}{\sqrt{1.04}\sqrt{1.01}}\).'
+    explanation: '\(\theta\approx88.9^\circ\).'
+  164:
+    topic: s12-3
+    question: 'Writing \(\mathbf u=3\mathbf{j}+4\mathbf{k}\) as a vector parallel to \(\mathbf v=\mathbf{i}+\mathbf{j}\) plus a vector orthogonal to \(\mathbf v\), the parallel part is'
+    A: '\(-\frac{3}{2}\mathbf{i}-\frac{3}{2}\mathbf{j}\)'
+    B: '\(-\frac{3}{2}\mathbf{i}+\frac{3}{2}\mathbf{j}+4\mathbf{k}\)'
+    C: '\(\frac{3}{2}\mathbf{i}+\frac{3}{2}\mathbf{j}\)'
+    D: '\(3\mathbf{i}+3\mathbf{j}\)'
+    answer: C
+    hint: 'The parallel part is \(\operatorname{proj}_{\mathbf v}\mathbf u\).'
+    explanation: 'The orthogonal part is \(\mathbf u-\operatorname{proj}_{\mathbf v}\mathbf u=-\frac{3}{2}\mathbf{i}+\frac{3}{2}\mathbf{j}+4\mathbf{k}\).'
+  165:
+    topic: s12-3
+    question: 'Writing \(\mathbf u=\mathbf{j}+\mathbf{k}\) as a vector parallel to \(\mathbf v=\mathbf{i}+\mathbf{j}\) plus a vector orthogonal to \(\mathbf v\), the parallel part is'
+    A: '\(\mathbf{i}+\mathbf{j}\)'
+    B: '\(-\frac{1}{2}\mathbf{i}+\frac{1}{2}\mathbf{j}+\mathbf{k}\)'
+    C: '\(\frac{1}{2}\mathbf{i}+\frac{1}{2}\mathbf{j}\)'
+    D: '\(-\frac{1}{2}\mathbf{i}-\frac{1}{2}\mathbf{j}\)'
+    answer: C
+    hint: 'The parallel part is \(\operatorname{proj}_{\mathbf v}\mathbf u\).'
+    explanation: 'The orthogonal part is \(\mathbf u-\operatorname{proj}_{\mathbf v}\mathbf u=-\frac{1}{2}\mathbf{i}+\frac{1}{2}\mathbf{j}+\mathbf{k}\).'
+  166:
+    topic: s12-3
+    question: 'Writing \(\mathbf u=8\mathbf{i}+4\mathbf{j}-12\mathbf{k}\) as a vector parallel to \(\mathbf v=\mathbf{i}+2\mathbf{j}-\mathbf{k}\) plus a vector orthogonal to \(\mathbf v\), the parallel part is'
+    A: '\(-\frac{14}{3}\mathbf{i}-\frac{28}{3}\mathbf{j}+\frac{14}{3}\mathbf{k}\)'
+    B: '\(\frac{14}{3}\mathbf{i}+\frac{28}{3}\mathbf{j}-\frac{14}{3}\mathbf{k}\)'
+    C: '\(\frac{10}{3}\mathbf{i}-\frac{16}{3}\mathbf{j}-\frac{22}{3}\mathbf{k}\)'
+    D: '\(\frac{28}{3}\mathbf{i}+\frac{56}{3}\mathbf{j}-\frac{28}{3}\mathbf{k}\)'
+    answer: B
+    hint: 'The parallel part is \(\operatorname{proj}_{\mathbf v}\mathbf u\).'
+    explanation: 'The orthogonal part is \(\mathbf u-\operatorname{proj}_{\mathbf v}\mathbf u=\frac{10}{3}\mathbf{i}-\frac{16}{3}\mathbf{j}-\frac{22}{3}\mathbf{k}\).'
+  167:
+    topic: s12-3
+    question: 'For \(\mathbf u=\mathbf i+(\mathbf j+\mathbf k)\) and \(\mathbf v=\mathbf i\), \(\operatorname{proj}_{\mathbf v}\mathbf u\) is'
+    A: '\(\mathbf i+\mathbf j+\mathbf k\)'
+    B: '\(\mathbf0\)'
+    C: '\(\mathbf i\), and \(\mathbf u-\operatorname{proj}_{\mathbf v}\mathbf u=\mathbf j+\mathbf k\)'
+    D: '\(\mathbf j+\mathbf k\)'
+    answer: C
+    hint: '\(\mathbf u\cdot\mathbf v=1\) and \(\mathbf v\cdot\mathbf v=1\).'
+    explanation: 'The decomposition \(\mathbf i+(\mathbf j+\mathbf k)\) is the one given by projection.'
+  168:
+    topic: s12-3
+    question: 'Orthogonal vectors \(\mathbf v_1,\mathbf v_2\) have \(\mathbf v_1+\mathbf v_2\) orthogonal to \(\mathbf v_1-\mathbf v_2\) exactly when'
+    A: always
+    B: '\(\mathbf v_1\perp\mathbf v_2\)'
+    C: '\(\mathbf v_1\parallel\mathbf v_2\)'
+    D: '\(|\mathbf v_1|=|\mathbf v_2|\)'
+    answer: D
+    hint: '\((\mathbf v_1+\mathbf v_2)\cdot(\mathbf v_1-\mathbf v_2)=|\mathbf v_1|^2-|\mathbf v_2|^2\).'
+    explanation: The dot product is zero iff the lengths are equal.
+  169:
+    topic: s12-3
+    question: 'If \(AB\) is the diameter of a circle with center \(O\) and \(C\) lies on the circle, then \(\overrightarrow{CA}\) and \(\overrightarrow{CB}\) are'
+    A: 'at \(45^\circ\)'
+    B: equal in length
+    C: orthogonal
+    D: parallel
+    answer: C
+    hint: 'Write \(\overrightarrow{CA}=-\mathbf u-\mathbf v\), \(\overrightarrow{CB}=\mathbf u-\mathbf v\) with \(|\mathbf u|=|\mathbf v|\).'
+    explanation: '\((-\mathbf u-\mathbf v)\cdot(\mathbf u-\mathbf v)=|\mathbf v|^2-|\mathbf u|^2=0\).'
+  170:
+    topic: s12-3
+    question: The diagonals of a rhombus (equal sides) are
+    A: 'at \(60^\circ\)'
+    B: equal in length
+    C: parallel
+    D: perpendicular
+    answer: D
+    hint: 'The diagonals are \(\mathbf u+\mathbf v\) and \(\mathbf u-\mathbf v\) with \(|\mathbf u|=|\mathbf v|\).'
+    explanation: '\((\mathbf u+\mathbf v)\cdot(\mathbf u-\mathbf v)=0\).'
+  171:
+    topic: s12-3
+    question: A parallelogram is a rectangle if and only if
+    A: its sides have equal length
+    B: its diagonals have equal length
+    C: its diagonals are perpendicular
+    D: it has an acute angle
+    answer: B
+    hint: '\(|\mathbf u+\mathbf v|=|\mathbf u-\mathbf v|\iff\mathbf u\cdot\mathbf v=0\).'
+    explanation: Square both sides.
+  172:
+    topic: s12-3
+    question: 'The Cauchy–Schwarz inequality states that for any vectors \(\mathbf u,\mathbf v\)'
+    A: '\(\mathbf u\cdot\mathbf v\le|\mathbf u|+|\mathbf v|\)'
+    B: '\(|\mathbf u\cdot\mathbf v|=|\mathbf u||\mathbf v|\) always'
+    C: '\(|\mathbf u\cdot\mathbf v|\le|\mathbf u||\mathbf v|\), with equality exactly when one vector is a scalar multiple of the other'
+    D: '\(|\mathbf u\cdot\mathbf v|\ge|\mathbf u||\mathbf v|\)'
+    answer: C
+    hint: '\(\mathbf u\cdot\mathbf v=|\mathbf u||\mathbf v|\cos\theta\).'
+    explanation: '\(|\cos\theta|\le1\), with equality when \(\theta=0\) or \(\pi\).'
+  173:
+    topic: s12-3
+    question: 'If \(\mathbf u_1\) and \(\mathbf u_2\) are orthogonal unit vectors and \(\mathbf v=a\mathbf u_1+b\mathbf u_2\), then \(\mathbf v\cdot\mathbf u_1=\)'
+    A: '\(a\)'
+    B: '\(b\)'
+    C: '\(a+b\)'
+    D: '\(0\)'
+    answer: A
+    hint: '\(\mathbf u_1\cdot\mathbf u_1=1\), \(\mathbf u_2\cdot\mathbf u_1=0\).'
+    explanation: Distribute the dot product.
+  174:
+    topic: s12-3
+    question: 'If \(\mathbf u\cdot\mathbf v_1=\mathbf u\cdot\mathbf v_2\) and \(\mathbf u\ne\mathbf 0\), can you conclude \(\mathbf v_1=\mathbf v_2\)?'
+    A: Yes, by cancellation
+    B: 'Yes, if \(\mathbf u\) is a unit vector'
+    C: 'No: \(\mathbf v_1-\mathbf v_2\) need only be orthogonal to \(\mathbf u\)'
+    D: Yes, if the vectors are in the plane
+    answer: C
+    hint: '\(\mathbf u\cdot(\mathbf v_1-\mathbf v_2)=0\).'
+    explanation: 'Example: \(\mathbf u=\mathbf i\), \(\mathbf v_1=\mathbf j\), \(\mathbf v_2=\mathbf k\).'
+  175:
+    topic: s12-3
+    question: 'The set of points \((x,y)\) with \((x\mathbf i+y\mathbf j)\cdot\mathbf v\le0\), where \(\mathbf v\) is a fixed nonzero vector, is'
+    A: the whole plane
+    B: 'the half-plane on the side of the line through the origin perpendicular to \(\mathbf v\) opposite to \(\mathbf v\)'
+    C: 'the half-plane on the same side as \(\mathbf v\)'
+    D: 'the line through the origin parallel to \(\mathbf v\)'
+    answer: B
+    hint: 'The dot product is negative when the angle exceeds \(90^\circ\).'
+    explanation: 'The boundary line is perpendicular to \(\mathbf v\).'
+  176:
+    topic: s12-3
+    question: 'A gun with muzzle velocity \(1200\) ft/s is fired at \(8^\circ\) above the horizontal. The horizontal and vertical components are about'
+    A: '\(1200\) ft/s and \(8\) ft/s'
+    B: '\(1188.3\) ft/s and \(167.0\) ft/s'
+    C: '\(1188.3\) ft/s and \(1200\) ft/s'
+    D: '\(167.0\) ft/s and \(1188.3\) ft/s'
+    answer: B
+    hint: '\(1200\cos8^\circ\) and \(1200\sin8^\circ\).'
+    explanation: Use the angle with the horizontal.
+  177:
+    topic: s12-3
+    question: 'The work done by the force \(\mathbf F=5\mathbf i\) (5 N) in moving an object along the line from the origin to \((1,1)\) (meters) is'
+    A: '\(10\) J'
+    B: '\(5\sqrt2\) J'
+    C: '\(5\) J'
+    D: '\(0\) J'
+    answer: C
+    hint: '\(W=\mathbf F\cdot\mathbf D\), \(\mathbf D=\langle1,1\rangle\).'
+    explanation: '\(5\cdot1+0\cdot1\).'
+  178:
+    topic: s12-3
+    question: 'The work done by a locomotive pulling with a force of \(602{,}148\) N along a straight \(605\)-km route is about'
+    A: '\(3.64\times10^{14}\) J'
+    B: '\(3.64\times10^{11}\) J'
+    C: '\(6.02\times10^{5}\) J'
+    D: '\(3.64\times10^{8}\) J'
+    answer: B
+    hint: '\(W=Fd\) with \(d=605{,}000\) m.'
+    explanation: '\(602{,}148\times605{,}000\approx3.64\times10^{11}\).'
+  179:
+    topic: s12-3
+    question: 'The work to slide a crate 20 m by pulling with a \(200\) N force at \(30^\circ\) above the horizontal is about'
+    A: '\(2000\) J'
+    B: '\(3464\) J'
+    C: '\(4000\) J'
+    D: '\(6928\) J'
+    answer: B
+    hint: '\(W=Fd\cos30^\circ\).'
+    explanation: '\(200\cdot20\cdot\tfrac{\sqrt3}2\approx3464\).'
+  180:
+    topic: s12-3
+    question: 'The wind exerts a \(1000\)-lb force at \(60^\circ\) to the direction of motion of a sailboat. The work done in moving the boat 1 mile is about (ft-lb)'
+    A: '\(2.64\times10^6\)'
+    B: '\(4.57\times10^6\)'
+    C: '\(5.28\times10^6\)'
+    D: '\(1.32\times10^6\)'
+    answer: A
+    hint: '\(W=|\mathbf F||\mathbf D|\cos60^\circ\) with \(|\mathbf D|=5280\) ft.'
+    explanation: '\(1000\cdot5280\cdot\tfrac12\).'
+  181:
+    topic: s12-3
+    question: 'The line through \(P(2,1)\) perpendicular to \(\mathbf v=\mathbf{i}+2\mathbf{j}\) has equation'
+    A: '\(2x+y=4\)'
+    B: '\(x-2y=0\)'
+    C: '\(x+2y=4\)'
+    D: '\(x+2y=1\)'
+    answer: C
+    hint: 'The line is \(ax+by=c\) with \(\langle a,b\rangle=\mathbf v\).'
+    explanation: '\(c=\mathbf v\cdot P\).'
+  182:
+    topic: s12-3
+    question: 'The line through \(P(-1,2)\) perpendicular to \(\mathbf v=-2\mathbf{i}-\mathbf{j}\) has equation'
+    A: '\(2x+y=0\)'
+    B: '\(x+2y=0\)'
+    C: '\(2x-y=0\)'
+    D: '\(2x+y=2\)'
+    answer: A
+    hint: 'The line is \(ax+by=c\) with \(\langle a,b\rangle=\mathbf v\).'
+    explanation: '\(c=\mathbf v\cdot P\).'
+  183:
+    topic: s12-3
+    question: 'The line through \(P(-2,-7)\) perpendicular to \(\mathbf v=-2\mathbf{i}+\mathbf{j}\) has equation'
+    A: '\(x-2y=-3\)'
+    B: '\(2x+y=-3\)'
+    C: '\(-2x+y=3\)'
+    D: '\(-2x+y=-3\)'
+    answer: D
+    hint: 'The line is \(ax+by=c\) with \(\langle a,b\rangle=\mathbf v\).'
+    explanation: '\(c=\mathbf v\cdot P\).'
+  184:
+    topic: s12-3
+    question: 'The line through \(P(11,10)\) perpendicular to \(\mathbf v=2\mathbf{i}-3\mathbf{j}\) has equation'
+    A: '\(3x+2y=-8\)'
+    B: '\(2x-3y=8\)'
+    C: '\(2x-3y=-8\)'
+    D: '\(2x+3y=-8\)'
+    answer: C
+    hint: 'The line is \(ax+by=c\) with \(\langle a,b\rangle=\mathbf v\).'
+    explanation: '\(c=\mathbf v\cdot P\).'
+  185:
+    topic: s12-3
+    question: 'The line through \(P(-2,1)\) parallel to \(\mathbf v=\mathbf{i}-\mathbf{j}\) has equation'
+    A: '\(x-y=3\)'
+    B: '\(x-y=-3\)'
+    C: '\(x+y=-1\)'
+    D: '\(x+y=1\)'
+    answer: C
+    hint: 'A line parallel to \(a\mathbf i+b\mathbf j\) is \(bx-ay=c\).'
+    explanation: 'Substitute \(P\) to find \(c\).'
+  186:
+    topic: s12-3
+    question: 'The line through \(P(0,-2)\) parallel to \(\mathbf v=2\mathbf{i}+3\mathbf{j}\) has equation'
+    A: '\(3x+2y=4\)'
+    B: '\(2x+3y=-6\)'
+    C: '\(3x-2y=4\)'
+    D: '\(3x-2y=-4\)'
+    answer: C
+    hint: 'A line parallel to \(a\mathbf i+b\mathbf j\) is \(bx-ay=c\).'
+    explanation: 'Substitute \(P\) to find \(c\).'
+  187:
+    topic: s12-3
+    question: 'The line through \(P(1,2)\) parallel to \(\mathbf v=-\mathbf{i}-2\mathbf{j}\) has equation'
+    A: '\(2x-y=0\)'
+    B: '\(2x+y=4\)'
+    C: '\(x+2y=5\)'
+    D: '\(2x-y=1\)'
+    answer: A
+    hint: 'A line parallel to \(a\mathbf i+b\mathbf j\) is \(bx-ay=c\).'
+    explanation: 'Substitute \(P\) to find \(c\).'
+  188:
+    topic: s12-3
+    question: 'The line through \(P(1,3)\) parallel to \(\mathbf v=3\mathbf{i}-2\mathbf{j}\) has equation'
+    A: '\(3x-2y=-3\)'
+    B: '\(3x+2y=9\)'
+    C: '\(2x-3y=-7\)'
+    D: '\(2x+3y=11\)'
+    answer: D
+    hint: 'A line parallel to \(a\mathbf i+b\mathbf j\) is \(bx-ay=c\).'
+    explanation: 'Substitute \(P\) to find \(c\).'
+  189:
+    topic: s12-3
+    question: 'The acute angle between the lines \(3x+y=5\) and \(2x-y=4\) is'
+    A: '\(\dfrac\pi4\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac\pi2\)'
+    D: '\(\dfrac\pi6\)'
+    answer: A
+    hint: 'Use the normals \(\langle3,1\rangle\) and \(\langle2,-1\rangle\).'
+    explanation: '\(\cos\theta=\dfrac5{\sqrt{10}\sqrt5}=\dfrac1{\sqrt2}\).'
+  190:
+    topic: s12-3
+    question: 'The acute angle between the lines \(y=\sqrt3x-1\) and \(y=-\sqrt3x+2\) is'
+    A: '\(\dfrac\pi4\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac{2\pi}3\)'
+    D: '\(\dfrac\pi6\)'
+    answer: B
+    hint: 'The slopes are \(\pm\sqrt3\), i.e. directions at \(60^\circ\) and \(120^\circ\).'
+    explanation: 'The angle between them is \(60^\circ\) (acute).'
+  191:
+    topic: s12-3
+    question: 'The acute angle between \(\sqrt3x-y=-2\) and \(x-\sqrt3y=1\) is'
+    A: '\(\dfrac\pi3\)'
+    B: '\(\dfrac\pi4\)'
+    C: '\(\dfrac\pi2\)'
+    D: '\(\dfrac\pi6\)'
+    answer: D
+    hint: 'Normals: \(\langle\sqrt3,-1\rangle\), \(\langle1,-\sqrt3\rangle\).'
+    explanation: '\(\cos\theta=\dfrac{2\sqrt3}{4}\).'
+  192:
+    topic: s12-3
+    question: 'The acute angle between \(x+\sqrt3y=1\) and \(\left(1-\sqrt3\right)x+\left(1+\sqrt3\right)y=8\) is'
+    A: '\(\dfrac\pi2\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac\pi4\)'
+    D: '\(\dfrac\pi6\)'
+    answer: C
+    hint: 'Normals \(\langle1,\sqrt3\rangle\) and \(\langle1-\sqrt3,1+\sqrt3\rangle\).'
+    explanation: 'Dot \(=4\), lengths \(2\) and \(2\sqrt2\): \(\cos\theta=\tfrac1{\sqrt2}\).'
+  193:
+    topic: s12-3
+    question: 'The acute angle between \(3x-4y=3\) and \(x-y=7\) is (radians, four decimals)'
+    A: '\(0.2838\)'
+    B: '\(0.1419\)'
+    C: '\(0.5\)'
+    D: '\(0.7854\)'
+    answer: B
+    hint: 'Normals \(\langle3,-4\rangle\), \(\langle1,-1\rangle\).'
+    explanation: '\(\cos\theta=\dfrac7{5\sqrt2}\).'
+  194:
+    topic: s12-3
+    question: 'The acute angle between \(12x+5y=1\) and \(2x-2y=3\) is (radians, four decimals)'
+    A: '\(1.1802\)'
+    B: '\(1.9\)'
+    C: '\(0.3805\)'
+    D: '\(0.7854\)'
+    answer: A
+    hint: 'Normals \(\langle12,5\rangle\), \(\langle2,-2\rangle\).'
+    explanation: '\(\cos\theta=\dfrac{14}{13\cdot2\sqrt2}\).'
+  195:
+    topic: s12-3
+    question: 'The curves \(y=\dfrac32-x^2\) and \(y=x^2\) meet at \(\left(\pm\dfrac{\sqrt3}2,\dfrac34\right)\). The acute angle between them at each point is'
+    A: '\(\dfrac\pi4\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac\pi2\)'
+    D: '\(\dfrac\pi6\)'
+    answer: B
+    hint: 'Slopes at \(x=\tfrac{\sqrt3}2\): \(-2x=-\sqrt3\) and \(2x=\sqrt3\).'
+    explanation: '\(\tan\theta=\left|\dfrac{2\sqrt3}{1-3}\right|=\sqrt3\).'
+  196:
+    topic: s12-3
+    question: 'The curves \(x=\dfrac34-y^2\) and \(x=y^2-\dfrac34\) meet at \(\left(0,\pm\dfrac{\sqrt3}2\right)\). The acute angle between them is'
+    A: '\(\dfrac\pi3\)'
+    B: '\(\dfrac\pi4\)'
+    C: '\(\dfrac\pi2\)'
+    D: '\(\dfrac\pi6\)'
+    answer: A
+    hint: 'Tangent vectors \(\langle-2y,1\rangle\) and \(\langle2y,1\rangle\).'
+    explanation: '\(\cos\theta=\dfrac{|{-4y^2}+1|}{4y^2+1}=\dfrac{2}{4}\).'
+  197:
+    topic: s12-3
+    question: 'The curves \(y=x^3\) and \(x=y^2\) meet at \((0,0)\) and \((1,1)\). At \((1,1)\) the acute angle between them is'
+    A: '\(\dfrac\pi4\)'
+    B: '\(\dfrac\pi3\)'
+    C: '\(\dfrac\pi6\)'
+    D: '\(\dfrac\pi2\)'
+    answer: A
+    hint: 'Slopes: \(3\) and \(\tfrac12\).'
+    explanation: '\(\tan\theta=\left|\dfrac{3-\frac12}{1+\frac32}\right|=1\).'
+  198:
+    topic: s12-3
+    question: 'At the other intersection \((0,0)\) of \(y=x^3\) and \(x=y^2\), the curves are'
+    A: 'at \(45^\circ\)'
+    B: 'perpendicular (\(\dfrac\pi2\))'
+    C: 'at \(60^\circ\)'
+    D: tangent to each other
+    answer: B
+    hint: 'The tangent to \(y=x^3\) at the origin is horizontal; to \(x=y^2\) it is vertical.'
+    explanation: A horizontal and a vertical tangent are perpendicular.
+  199:
+    topic: s12-3
+    question: 'A box is pulled up a \(15^\circ\) incline by a force at \(33^\circ\) above the horizontal. If the component parallel to the plane must be \(2.5\) lb, then \(|\mathbf w|\) is about'
+    A: '\(2.63\) lb'
+    B: '\(1.9\) lb'
+    C: '\(2.5\) lb'
+    D: '\(3.0\) lb'
+    answer: A
+    hint: 'The force makes \(33^\circ-15^\circ=18^\circ\) with the plane.'
+    explanation: '\(\dfrac{2.5}{\cos18^\circ}\approx2.63\).'
+  200:
+    topic: s12-3
+    question: 'When \(\mathbf u\cdot\mathbf v=0\) for nonzero \(\mathbf u,\mathbf v\), the vectors are'
+    A: unit vectors
+    B: equal
+    C: orthogonal
+    D: parallel
+    answer: C
+    hint: '\(\cos\theta=0\).'
+    explanation: '\(\theta=\tfrac\pi2\).'
+  201:
+    topic: s12-3
+    question: 'Under what circumstances does \(|\mathbf u\cdot\mathbf v|=|\mathbf u||\mathbf v|\)?'
+    A: 'when \(\mathbf u\) and \(\mathbf v\) are parallel (one is a scalar multiple of the other)'
+    B: never
+    C: 'when \(\mathbf u\perp\mathbf v\)'
+    D: always
+    answer: A
+    hint: '\(|\cos\theta|=1\).'
+    explanation: '\(\theta=0\) or \(\pi\).'
+  202:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf{i}-2\mathbf{j}-\mathbf{k}\) and \(\mathbf v=\mathbf{i}-\mathbf{k}\), \(\mathbf u\times\mathbf v=\)'
+    A: '\(4\mathbf{i}+2\mathbf{j}+4\mathbf{k}\)'
+    B: '\(-2\mathbf{i}-\mathbf{j}-2\mathbf{k}\)'
+    C: '\(-2\mathbf{i}+\mathbf{j}+2\mathbf{k}\)'
+    D: '\(2\mathbf{i}+\mathbf{j}+2\mathbf{k}\)'
+    answer: D
+    hint: 'Expand the determinant \(\begin{vmatrix}\mathbf i&\mathbf j&\mathbf k\\u_1&u_2&u_3\\v_1&v_2&v_3\end{vmatrix}\).'
+    explanation: 'The result is \(2\mathbf{i}+\mathbf{j}+2\mathbf{k}\).'
+  203:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf{i}-2\mathbf{j}-\mathbf{k}\) and \(\mathbf v=\mathbf{i}-\mathbf{k}\), \(|\mathbf u\times\mathbf v|=\)'
+    A: '\(3\)'
+    B: '\(4\)'
+    C: '\(9\)'
+    D: '\(3 \sqrt{2}\)'
+    answer: A
+    hint: The length of the cross product is the area of the parallelogram.
+    explanation: '\(|2\mathbf{i}+\mathbf{j}+2\mathbf{k}|=3\).'
+  204:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf{i}+3\mathbf{j}\) and \(\mathbf v=-\mathbf{i}+\mathbf{j}\), \(\mathbf u\times\mathbf v=\)'
+    A: '\(10\mathbf{k}\)'
+    B: '\(-5\mathbf{k}\)'
+    C: '\(5\mathbf{k}\)'
+    D: '\(5\mathbf{i}\)'
+    answer: C
+    hint: 'Expand the determinant \(\begin{vmatrix}\mathbf i&\mathbf j&\mathbf k\\u_1&u_2&u_3\\v_1&v_2&v_3\end{vmatrix}\).'
+    explanation: 'The result is \(5\mathbf{k}\).'
+  205:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf{i}+3\mathbf{j}\) and \(\mathbf v=-\mathbf{i}+\mathbf{j}\), \(|\mathbf u\times\mathbf v|=\)'
+    A: '\(\sqrt{26}\)'
+    B: '\(25\)'
+    C: '\(1\)'
+    D: '\(5\)'
+    answer: D
+    hint: The length of the cross product is the area of the parallelogram.
+    explanation: '\(|5\mathbf{k}|=5\).'
+  206:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf{i}\) and \(\mathbf v=-3\mathbf{j}\), \(\mathbf u\times\mathbf v=\)'
+    A: '\(-6\mathbf{i}\)'
+    B: '\(-12\mathbf{k}\)'
+    C: '\(-6\mathbf{k}\)'
+    D: '\(6\mathbf{k}\)'
+    answer: C
+    hint: 'Expand the determinant \(\begin{vmatrix}\mathbf i&\mathbf j&\mathbf k\\u_1&u_2&u_3\\v_1&v_2&v_3\end{vmatrix}\).'
+    explanation: 'The result is \(-6\mathbf{k}\).'
+  207:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf{i}\) and \(\mathbf v=-3\mathbf{j}\), \(|\mathbf u\times\mathbf v|=\)'
+    A: '\(7\)'
+    B: '\(6\)'
+    C: '\(37\)'
+    D: '\(1\)'
+    answer: B
+    hint: The length of the cross product is the area of the parallelogram.
+    explanation: '\(|-6\mathbf{k}|=6\).'
+  208:
+    topic: s12-4
+    question: 'For \(\mathbf u=-8\mathbf{i}-2\mathbf{j}-4\mathbf{k}\) and \(\mathbf v=2\mathbf{i}+2\mathbf{j}+\mathbf{k}\), \(\mathbf u\times\mathbf v=\)'
+    A: '\(-6\mathbf{i}+12\mathbf{k}\)'
+    B: '\(-12\mathbf{i}+6\mathbf{k}\)'
+    C: '\(-6\mathbf{i}-12\mathbf{k}\)'
+    D: '\(6\mathbf{i}-12\mathbf{k}\)'
+    answer: D
+    hint: 'Expand the determinant \(\begin{vmatrix}\mathbf i&\mathbf j&\mathbf k\\u_1&u_2&u_3\\v_1&v_2&v_3\end{vmatrix}\).'
+    explanation: 'The result is \(6\mathbf{i}-12\mathbf{k}\).'
+  209:
+    topic: s12-4
+    question: 'For \(\mathbf u=-8\mathbf{i}-2\mathbf{j}-4\mathbf{k}\) and \(\mathbf v=2\mathbf{i}+2\mathbf{j}+\mathbf{k}\), \(|\mathbf u\times\mathbf v|=\)'
+    A: '\(6 \sqrt{5}\)'
+    B: '\(6 \sqrt{21}\)'
+    C: '\(180\)'
+    D: '\(-24\)'
+    answer: A
+    hint: The length of the cross product is the area of the parallelogram.
+    explanation: '\(|6\mathbf{i}-12\mathbf{k}|=6 \sqrt{5}\).'
+  210:
+    topic: s12-4
+    question: 'For \(\mathbf u=\frac{3}{2}\mathbf{i}-\frac{1}{2}\mathbf{j}+\mathbf{k}\) and \(\mathbf v=\mathbf{i}+\mathbf{j}+2\mathbf{k}\), \(\mathbf u\times\mathbf v=\)'
+    A: '\(2\mathbf{i}-2\mathbf{j}+2\mathbf{k}\)'
+    B: '\(-2\mathbf{i}-2\mathbf{j}+2\mathbf{k}\)'
+    C: '\(2\mathbf{i}+2\mathbf{j}-2\mathbf{k}\)'
+    D: '\(2\mathbf{i}-2\mathbf{j}-2\mathbf{k}\)'
+    answer: B
+    hint: 'Expand the determinant \(\begin{vmatrix}\mathbf i&\mathbf j&\mathbf k\\u_1&u_2&u_3\\v_1&v_2&v_3\end{vmatrix}\).'
+    explanation: 'The result is \(-2\mathbf{i}-2\mathbf{j}+2\mathbf{k}\).'
+  211:
+    topic: s12-4
+    question: 'For \(\mathbf u=\frac{3}{2}\mathbf{i}-\frac{1}{2}\mathbf{j}+\mathbf{k}\) and \(\mathbf v=\mathbf{i}+\mathbf{j}+2\mathbf{k}\), \(|\mathbf u\times\mathbf v|=\)'
+    A: '\(12\)'
+    B: '\(3\)'
+    C: '\(2 \sqrt{3}\)'
+    D: '\(\sqrt{21}\)'
+    answer: C
+    hint: The length of the cross product is the area of the parallelogram.
+    explanation: '\(|-2\mathbf{i}-2\mathbf{j}+2\mathbf{k}|=2 \sqrt{3}\).'
+  212:
+    topic: s12-4
+    question: 'If \(\mathbf u=2\mathbf i-2\mathbf j+4\mathbf k\) and \(\mathbf v=-\mathbf i+\mathbf j-2\mathbf k\), then \(\mathbf u\times\mathbf v=\)'
+    A: '\(-8\)'
+    B: '\(\mathbf0\) (the vectors are parallel)'
+    C: '\(2\mathbf i+2\mathbf j+\mathbf k\)'
+    D: '\(\mathbf i-\mathbf j+2\mathbf k\)'
+    answer: B
+    hint: Look at the ratio of corresponding components.
+    explanation: '\(\mathbf u=-2\mathbf v\).'
+  213:
+    topic: s12-4
+    question: '\(\mathbf u\times\mathbf 0\) equals'
+    A: '\(\mathbf0\)'
+    B: '\(\mathbf u\)'
+    C: undefined
+    D: '\(0\) as a scalar only when \(\mathbf u=\mathbf0\)'
+    answer: A
+    hint: The cross product is linear in each factor.
+    explanation: It is the zero vector.
+  214:
+    topic: s12-4
+    question: 'If \(\mathbf u=2\mathbf i\) and \(\mathbf v=-3\mathbf j\), then \(\mathbf u\times\mathbf v=\)'
+    A: '\(6\mathbf i\)'
+    B: '\(-6\)'
+    C: '\(-6\mathbf k\)'
+    D: '\(6\mathbf k\)'
+    answer: C
+    hint: '\(\mathbf i\times\mathbf j=\mathbf k\).'
+    explanation: '\(2\cdot(-3)(\mathbf i\times\mathbf j)\).'
+  215:
+    topic: s12-4
+    question: '\((\mathbf i\times\mathbf j)\times(\mathbf j\times\mathbf k)=\)'
+    A: '\(\mathbf k\)'
+    B: '\(\mathbf0\)'
+    C: '\(-\mathbf j\)'
+    D: '\(\mathbf k\times\mathbf i=\mathbf j\)'
+    answer: D
+    hint: '\(\mathbf i\times\mathbf j=\mathbf k\) and \(\mathbf j\times\mathbf k=\mathbf i\).'
+    explanation: '\(\mathbf k\times\mathbf i=\mathbf j\).'
+  216:
+    topic: s12-4
+    question: 'For \(\mathbf u=\mathbf i,\ \mathbf v=\mathbf j\), the vector \(\mathbf u\times\mathbf v\) is'
+    A: '\(-\mathbf{k}\)'
+    B: '\(\mathbf{i}+\mathbf{j}\)'
+    C: '\(\mathbf{k}\)'
+    D: '\(\mathbf{i}-\mathbf{j}\)'
+    answer: C
+    hint: Use the right-hand rule or the determinant.
+    explanation: '\(\mathbf u\times\mathbf v=\mathbf{k}\).'
+  217:
+    topic: s12-4
+    question: 'For \(\mathbf u=\mathbf i-\mathbf k,\ \mathbf v=\mathbf j\), the vector \(\mathbf u\times\mathbf v\) is'
+    A: '\(\mathbf{i}+\mathbf{k}\)'
+    B: '\(-\mathbf{i}-\mathbf{k}\)'
+    C: '\(\mathbf{i}+\mathbf{j}-\mathbf{k}\)'
+    D: '\(\mathbf{i}-\mathbf{j}-\mathbf{k}\)'
+    answer: A
+    hint: Use the right-hand rule or the determinant.
+    explanation: '\(\mathbf u\times\mathbf v=\mathbf{i}+\mathbf{k}\).'
+  218:
+    topic: s12-4
+    question: 'For \(\mathbf u=\mathbf i-\mathbf k,\ \mathbf v=\mathbf j+\mathbf k\), the vector \(\mathbf u\times\mathbf v\) is'
+    A: '\(-\mathbf{i}+\mathbf{j}-\mathbf{k}\)'
+    B: '\(\mathbf{i}-\mathbf{j}-2\mathbf{k}\)'
+    C: '\(\mathbf{i}-\mathbf{j}+\mathbf{k}\)'
+    D: '\(\mathbf{i}+\mathbf{j}\)'
+    answer: C
+    hint: Use the right-hand rule or the determinant.
+    explanation: '\(\mathbf u\times\mathbf v=\mathbf{i}-\mathbf{j}+\mathbf{k}\).'
+  219:
+    topic: s12-4
+    question: 'For \(\mathbf u=2\mathbf i-\mathbf j,\ \mathbf v=\mathbf i+2\mathbf j\), the vector \(\mathbf u\times\mathbf v\) is'
+    A: '\(5\mathbf{k}\)'
+    B: '\(\mathbf{i}-3\mathbf{j}\)'
+    C: '\(3\mathbf{i}+\mathbf{j}\)'
+    D: '\(-5\mathbf{k}\)'
+    answer: A
+    hint: Use the right-hand rule or the determinant.
+    explanation: '\(\mathbf u\times\mathbf v=5\mathbf{k}\).'
+  220:
+    topic: s12-4
+    question: 'For \(\mathbf u=\mathbf i+\mathbf j,\ \mathbf v=\mathbf i-\mathbf j\), the vector \(\mathbf u\times\mathbf v\) is'
+    A: '\(2\mathbf{k}\)'
+    B: '\(2\mathbf{i}\)'
+    C: '\(-2\mathbf{k}\)'
+    D: '\(2\mathbf{j}\)'
+    answer: C
+    hint: Use the right-hand rule or the determinant.
+    explanation: '\(\mathbf u\times\mathbf v=-2\mathbf{k}\).'
+  221:
+    topic: s12-4
+    question: 'For \(\mathbf u=\mathbf j+2\mathbf k,\ \mathbf v=\mathbf i\), the vector \(\mathbf u\times\mathbf v\) is'
+    A: '\(2\mathbf{j}-\mathbf{k}\)'
+    B: '\(-\mathbf{i}+\mathbf{j}+2\mathbf{k}\)'
+    C: '\(\mathbf{i}+\mathbf{j}+2\mathbf{k}\)'
+    D: '\(-2\mathbf{j}+\mathbf{k}\)'
+    answer: A
+    hint: Use the right-hand rule or the determinant.
+    explanation: '\(\mathbf u\times\mathbf v=2\mathbf{j}-\mathbf{k}\).'
+  222:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(P(1, -1, 2)\), \(Q(2, 0, -1)\), \(R(0, 2, 1)\) is'
+    A: '\(1 + 4 \sqrt{6}\)'
+    B: '\(\sqrt{6}\)'
+    C: '\(2 \sqrt{6}\)'
+    D: '\(4 \sqrt{6}\)'
+    answer: C
+    hint: 'Area \(=\tfrac12|\overrightarrow{PQ}\times\overrightarrow{PR}|\).'
+    explanation: '\(\overrightarrow{PQ}\times\overrightarrow{PR}=8\mathbf{i}+4\mathbf{j}+4\mathbf{k}\), so the area is \(2 \sqrt{6}\).'
+  223:
+    topic: s12-4
+    question: 'A unit vector perpendicular to the plane through \(P(1, -1, 2)\), \(Q(2, 0, -1)\), \(R(0, 2, 1)\) is'
+    A: '\(\frac{\sqrt{6}}{6}\mathbf{i}+\frac{\sqrt{6}}{6}\mathbf{j}+\frac{\sqrt{6}}{3}\mathbf{k}\)'
+    B: '\(-\frac{\sqrt{6}}{3}\mathbf{i}-\frac{\sqrt{6}}{6}\mathbf{j}-\frac{\sqrt{6}}{6}\mathbf{k}\)'
+    C: '\(8\mathbf{i}+4\mathbf{j}+4\mathbf{k}\)'
+    D: '\(\frac{\sqrt{6}}{3}\mathbf{i}+\frac{\sqrt{6}}{6}\mathbf{j}+\frac{\sqrt{6}}{6}\mathbf{k}\)'
+    answer: D
+    hint: 'Normalize \(\overrightarrow{PQ}\times\overrightarrow{PR}\).'
+    explanation: '\(\dfrac{8\mathbf{i}+4\mathbf{j}+4\mathbf{k}}{4 \sqrt{6}}\) (or its negative).'
+  224:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(P(1, 1, 1)\), \(Q(2, 1, 3)\), \(R(3, -1, 1)\) is'
+    A: '\(6\)'
+    B: '\(3\)'
+    C: '\(7\)'
+    D: '\(\frac{3}{2}\)'
+    answer: B
+    hint: 'Area \(=\tfrac12|\overrightarrow{PQ}\times\overrightarrow{PR}|\).'
+    explanation: '\(\overrightarrow{PQ}\times\overrightarrow{PR}=4\mathbf{i}+4\mathbf{j}-2\mathbf{k}\), so the area is \(3\).'
+  225:
+    topic: s12-4
+    question: 'A unit vector perpendicular to the plane through \(P(1, 1, 1)\), \(Q(2, 1, 3)\), \(R(3, -1, 1)\) is'
+    A: '\(\frac{2}{3}\mathbf{i}+\frac{2}{3}\mathbf{j}-\frac{1}{3}\mathbf{k}\)'
+    B: '\(4\mathbf{i}+4\mathbf{j}-2\mathbf{k}\)'
+    C: '\(-\frac{2}{3}\mathbf{i}-\frac{2}{3}\mathbf{j}+\frac{1}{3}\mathbf{k}\)'
+    D: '\(-\frac{1}{3}\mathbf{i}+\frac{2}{3}\mathbf{j}+\frac{2}{3}\mathbf{k}\)'
+    answer: A
+    hint: 'Normalize \(\overrightarrow{PQ}\times\overrightarrow{PR}\).'
+    explanation: '\(\dfrac{4\mathbf{i}+4\mathbf{j}-2\mathbf{k}}{6}\) (or its negative).'
+  226:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(P(2, -2, 1)\), \(Q(3, 1, 2)\), \(R(3, -1, 1)\) is'
+    A: '\(\frac{\sqrt{6}}{4}\)'
+    B: '\(1 + \sqrt{6}\)'
+    C: '\(\frac{\sqrt{6}}{2}\)'
+    D: '\(\sqrt{6}\)'
+    answer: C
+    hint: 'Area \(=\tfrac12|\overrightarrow{PQ}\times\overrightarrow{PR}|\).'
+    explanation: '\(\overrightarrow{PQ}\times\overrightarrow{PR}=-\mathbf{i}+\mathbf{j}-2\mathbf{k}\), so the area is \(\frac{\sqrt{6}}{2}\).'
+  227:
+    topic: s12-4
+    question: 'A unit vector perpendicular to the plane through \(P(2, -2, 1)\), \(Q(3, 1, 2)\), \(R(3, -1, 1)\) is'
+    A: '\(-\frac{\sqrt{6}}{3}\mathbf{i}+\frac{\sqrt{6}}{6}\mathbf{j}-\frac{\sqrt{6}}{6}\mathbf{k}\)'
+    B: '\(\frac{\sqrt{6}}{6}\mathbf{i}-\frac{\sqrt{6}}{6}\mathbf{j}+\frac{\sqrt{6}}{3}\mathbf{k}\)'
+    C: '\(-\frac{\sqrt{6}}{6}\mathbf{i}+\frac{\sqrt{6}}{6}\mathbf{j}-\frac{\sqrt{6}}{3}\mathbf{k}\)'
+    D: '\(-\mathbf{i}+\mathbf{j}-2\mathbf{k}\)'
+    answer: C
+    hint: 'Normalize \(\overrightarrow{PQ}\times\overrightarrow{PR}\).'
+    explanation: '\(\dfrac{-\mathbf{i}+\mathbf{j}-2\mathbf{k}}{\sqrt{6}}\) (or its negative).'
+  228:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(P(-2, 2, 0)\), \(Q(0, 1, -1)\), \(R(-1, 2, -2)\) is'
+    A: '\(\sqrt{14}\)'
+    B: '\(\frac{\sqrt{14}}{2}\)'
+    C: '\(\frac{\sqrt{14}}{4}\)'
+    D: '\(1 + \sqrt{14}\)'
+    answer: B
+    hint: 'Area \(=\tfrac12|\overrightarrow{PQ}\times\overrightarrow{PR}|\).'
+    explanation: '\(\overrightarrow{PQ}\times\overrightarrow{PR}=2\mathbf{i}+3\mathbf{j}+\mathbf{k}\), so the area is \(\frac{\sqrt{14}}{2}\).'
+  229:
+    topic: s12-4
+    question: 'A unit vector perpendicular to the plane through \(P(-2, 2, 0)\), \(Q(0, 1, -1)\), \(R(-1, 2, -2)\) is'
+    A: '\(-\frac{\sqrt{14}}{7}\mathbf{i}-\frac{3 \sqrt{14}}{14}\mathbf{j}-\frac{\sqrt{14}}{14}\mathbf{k}\)'
+    B: '\(2\mathbf{i}+3\mathbf{j}+\mathbf{k}\)'
+    C: '\(\frac{\sqrt{14}}{14}\mathbf{i}+\frac{3 \sqrt{14}}{14}\mathbf{j}+\frac{\sqrt{14}}{7}\mathbf{k}\)'
+    D: '\(\frac{\sqrt{14}}{7}\mathbf{i}+\frac{3 \sqrt{14}}{14}\mathbf{j}+\frac{\sqrt{14}}{14}\mathbf{k}\)'
+    answer: D
+    hint: 'Normalize \(\overrightarrow{PQ}\times\overrightarrow{PR}\).'
+    explanation: '\(\dfrac{2\mathbf{i}+3\mathbf{j}+\mathbf{k}}{\sqrt{14}}\) (or its negative).'
+  230:
+    topic: s12-4
+    question: 'The volume of the parallelepiped determined by \(\mathbf u=2\mathbf{i}\), \(\mathbf v=2\mathbf{j}\), \(\mathbf w=2\mathbf{k}\) is'
+    A: '\(17\)'
+    B: '\(8\)'
+    C: '\(5\)'
+    D: '\(11\)'
+    answer: B
+    hint: 'Volume \(=|(\mathbf u\times\mathbf v)\cdot\mathbf w|\).'
+    explanation: 'The triple scalar product is \(8\).'
+  231:
+    topic: s12-4
+    question: 'The volume of the parallelepiped determined by \(\mathbf u=\mathbf{i}-\mathbf{j}+\mathbf{k}\), \(\mathbf v=2\mathbf{i}+\mathbf{j}-2\mathbf{k}\), \(\mathbf w=-\mathbf{i}+2\mathbf{j}-\mathbf{k}\) is'
+    A: '\(3\)'
+    B: '\(7\)'
+    C: '\(4\)'
+    D: '\(9\)'
+    answer: C
+    hint: 'Volume \(=|(\mathbf u\times\mathbf v)\cdot\mathbf w|\).'
+    explanation: 'The triple scalar product is \(4\).'
+  232:
+    topic: s12-4
+    question: 'The volume of the parallelepiped determined by \(\mathbf u=2\mathbf{i}+\mathbf{j}\), \(\mathbf v=2\mathbf{i}-\mathbf{j}+\mathbf{k}\), \(\mathbf w=\mathbf{i}+2\mathbf{j}\) is'
+    A: '\(\frac{5}{2}\)'
+    B: '\(6\)'
+    C: '\(3\)'
+    D: '\(-5\)'
+    answer: C
+    hint: 'Volume \(=|(\mathbf u\times\mathbf v)\cdot\mathbf w|\).'
+    explanation: 'The triple scalar product is \(-3\).'
+  233:
+    topic: s12-4
+    question: 'The volume of the parallelepiped determined by \(\mathbf u=\mathbf{i}+\mathbf{j}-2\mathbf{k}\), \(\mathbf v=-\mathbf{i}-\mathbf{k}\), \(\mathbf w=2\mathbf{i}+4\mathbf{j}-2\mathbf{k}\) is'
+    A: '\(5\)'
+    B: '\(8\)'
+    C: '\(11\)'
+    D: '\(17\)'
+    answer: B
+    hint: 'Volume \(=|(\mathbf u\times\mathbf v)\cdot\mathbf w|\).'
+    explanation: 'The triple scalar product is \(8\).'
+  234:
+    topic: s12-4
+    question: 'For \(\mathbf u=5\mathbf i-\mathbf j+\mathbf k\), \(\mathbf v=\mathbf j-5\mathbf k\), \(\mathbf w=-15\mathbf i+3\mathbf j-3\mathbf k\), which pair is parallel?'
+    A: none are parallel
+    B: '\(\mathbf u\) and \(\mathbf w\) (\(\mathbf w=-3\mathbf u\)); no pair is perpendicular'
+    C: '\(\mathbf u\) and \(\mathbf v\)'
+    D: '\(\mathbf v\) and \(\mathbf w\)'
+    answer: B
+    hint: Compare components, and compute the dot products.
+    explanation: '\(\mathbf u\cdot\mathbf v=-6\), \(\mathbf v\cdot\mathbf w=18\), \(\mathbf u\cdot\mathbf w=-81\).'
+  235:
+    topic: s12-4
+    question: 'For \(\mathbf u=\mathbf i+2\mathbf j-\mathbf k\), \(\mathbf v=-\mathbf i+\mathbf j+\mathbf k\), \(\mathbf w=\mathbf i+\mathbf k\), \(\mathbf r=-\dfrac\pi2\mathbf i-\pi\mathbf j+\dfrac\pi2\mathbf k\):'
+    A: '\(\mathbf u\) is perpendicular to \(\mathbf r\)'
+    B: '\(\mathbf u\parallel\mathbf w\)'
+    C: '\(\mathbf u\parallel\mathbf r\), and \(\mathbf v\) is perpendicular to \(\mathbf u\), \(\mathbf w\), and \(\mathbf r\)'
+    D: no two are perpendicular
+    answer: C
+    hint: '\(\mathbf r=-\tfrac\pi2\mathbf u\); compute the dot products with \(\mathbf v\).'
+    explanation: '\(\mathbf u\cdot\mathbf v=-1+2-1=0\), \(\mathbf v\cdot\mathbf w=0\), \(\mathbf v\cdot\mathbf r=0\).'
+  236:
+    topic: s12-4
+    question: 'The magnitude of the torque exerted by a \(30\)-lb force at \(60^\circ\) on a wrench with \(|\overrightarrow{PQ}|=8\) in. is about (ft-lb)'
+    A: '\(10\)'
+    B: '\(26\)'
+    C: '\(20\)'
+    D: '\(17.3\)'
+    answer: D
+    hint: '\(|\boldsymbol\tau|=\dfrac8{12}\cdot30\sin60^\circ\).'
+    explanation: '\(20\cdot\tfrac{\sqrt3}2\approx17.3\).'
+  237:
+    topic: s12-4
+    question: 'The torque of a \(30\)-lb force at \(135^\circ\) on an 8-in. wrench has magnitude about (ft-lb)'
+    A: '\(20\)'
+    B: '\(14.1\)'
+    C: '\(17.3\)'
+    D: '\(10\)'
+    answer: B
+    hint: '\(\sin135^\circ=\tfrac{\sqrt2}2\).'
+    explanation: '\(20\cdot\tfrac{\sqrt2}2\approx14.1\).'
+  238:
+    topic: s12-4
+    question: 'Is the statement \(|\mathbf u|=\sqrt{\mathbf u\cdot\mathbf u}\) always true?'
+    A: Yes, always true
+    B: Only in the plane
+    C: Only for unit vectors
+    D: No, not always true
+    answer: A
+    hint: Definition of length.
+    explanation: Definition of length.
+  239:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\cdot\mathbf u=|\mathbf u|\) always true?'
+    A: Only in the plane
+    B: No, not always true
+    C: Only for unit vectors
+    D: Yes, always true
+    answer: B
+    hint: 'It equals \(|\mathbf u|^2\).'
+    explanation: 'It equals \(|\mathbf u|^2\).'
+  240:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\times\mathbf0=\mathbf0\times\mathbf u=\mathbf0\) always true?'
+    A: No, not always true
+    B: Only for unit vectors
+    C: Only in the plane
+    D: Yes, always true
+    answer: D
+    hint: Zero vector.
+    explanation: Zero vector.
+  241:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\times(-\mathbf u)=\mathbf0\) always true?'
+    A: Yes, always true
+    B: Only for unit vectors
+    C: Only in the plane
+    D: No, not always true
+    answer: A
+    hint: Parallel vectors.
+    explanation: Parallel vectors.
+  242:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\times\mathbf v=\mathbf v\times\mathbf u\) always true?'
+    A: Only for unit vectors
+    B: Only in the plane
+    C: No, not always true
+    D: Yes, always true
+    answer: C
+    hint: It is anticommutative.
+    explanation: It is anticommutative.
+  243:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\times(\mathbf v+\mathbf w)=\mathbf u\times\mathbf v+\mathbf u\times\mathbf w\) always true?'
+    A: No, not always true
+    B: Only in the plane
+    C: Only for unit vectors
+    D: Yes, always true
+    answer: D
+    hint: Distributive.
+    explanation: Distributive.
+  244:
+    topic: s12-4
+    question: 'Is the statement \((\mathbf u\times\mathbf v)\cdot\mathbf v=0\) always true?'
+    A: No, not always true
+    B: Only in the plane
+    C: Yes, always true
+    D: Only for unit vectors
+    answer: C
+    hint: 'The cross product is perpendicular to \(\mathbf v\).'
+    explanation: 'The cross product is perpendicular to \(\mathbf v\).'
+  245:
+    topic: s12-4
+    question: 'Is the statement \((\mathbf u\times\mathbf v)\cdot\mathbf w=\mathbf u\cdot(\mathbf v\times\mathbf w)\) always true?'
+    A: Only for unit vectors
+    B: No, not always true
+    C: Yes, always true
+    D: Only in the plane
+    answer: C
+    hint: Triple scalar product identity.
+    explanation: Triple scalar product identity.
+  246:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\cdot\mathbf v=\mathbf v\cdot\mathbf u\) always true?'
+    A: No, not always true
+    B: Only for unit vectors
+    C: Only in the plane
+    D: Yes, always true
+    answer: D
+    hint: Commutative.
+    explanation: Commutative.
+  247:
+    topic: s12-4
+    question: 'Is the statement \(\mathbf u\times\mathbf v=-(\mathbf v\times\mathbf u)\) always true?'
+    A: Only for unit vectors
+    B: No, not always true
+    C: Only in the plane
+    D: Yes, always true
+    answer: D
+    hint: Anticommutative.
+    explanation: Anticommutative.
+  248:
+    topic: s12-4
+    question: 'Is the statement \((-\mathbf u)\times\mathbf v=-(\mathbf u\times\mathbf v)\) always true?'
+    A: Yes, always true
+    B: Only in the plane
+    C: No, not always true
+    D: Only for unit vectors
+    answer: A
+    hint: Scalars factor out.
+    explanation: Scalars factor out.
+  249:
+    topic: s12-4
+    question: 'Is the statement \((c\mathbf u)\cdot\mathbf v=\mathbf u\cdot(c\mathbf v)=c(\mathbf u\cdot\mathbf v)\) always true?'
+    A: No, not always true
+    B: Only in the plane
+    C: Yes, always true
+    D: Only for unit vectors
+    answer: C
+    hint: Scalar property.
+    explanation: Scalar property.
+  250:
+    topic: s12-4
+    question: 'Is the statement \((c\mathbf u)\times\mathbf v=\mathbf u\times(c\mathbf v)=c(\mathbf u\times\mathbf v)\) always true?'
+    A: No, not always true
+    B: Yes, always true
+    C: Only for unit vectors
+    D: Only in the plane
+    answer: B
+    hint: Scalar property.
+    explanation: Scalar property.
+  251:
+    topic: s12-4
+    question: 'Is the statement \((\mathbf u\times\mathbf v)\cdot\mathbf u=0\) always true?'
+    A: Yes, always true
+    B: Only for unit vectors
+    C: No, not always true
+    D: Only in the plane
+    answer: A
+    hint: 'The cross product is perpendicular to \(\mathbf u\).'
+    explanation: 'The cross product is perpendicular to \(\mathbf u\).'
+  252:
+    topic: s12-4
+    question: 'Is the statement \((\mathbf u\times\mathbf v)\cdot\mathbf v=\mathbf u\cdot(\mathbf v\times\mathbf v)\) and equals \(\mathbf u\cdot\mathbf v\) always true?'
+    A: Only in the plane
+    B: No, not always true
+    C: Yes, always true
+    D: Only for unit vectors
+    answer: B
+    hint: 'Both sides are \(0\), but the statement ends with \(\mathbf u\cdot\mathbf v\).'
+    explanation: 'Both sides are \(0\), but the statement ends with \(\mathbf u\cdot\mathbf v\).'
+  253:
+    topic: s12-4
+    question: 'The vector projection of \(\mathbf u\) onto \(\mathbf v\) is given by'
+    A: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf u\cdot\mathbf u}\right)\mathbf v\)'
+    B: '\(\dfrac{\mathbf u\cdot\mathbf v}{|\mathbf u|}\)'
+    C: '\(\mathbf u\times\mathbf v\)'
+    D: '\(\left(\dfrac{\mathbf u\cdot\mathbf v}{\mathbf v\cdot\mathbf v}\right)\mathbf v\)'
+    answer: D
+    hint: Recall the geometric meaning of each product.
+    explanation: Standard identities.
+  254:
+    topic: s12-4
+    question: 'A vector orthogonal to both \(\mathbf u\) and \(\mathbf v\) is given by'
+    A: '\(\mathbf u\times\mathbf v\)'
+    B: '\(\mathbf u-\mathbf v\)'
+    C: '\(\mathbf u+\mathbf v\)'
+    D: '\(\mathbf u\cdot\mathbf v\)'
+    answer: A
+    hint: Recall the geometric meaning of each product.
+    explanation: Standard identities.
+  255:
+    topic: s12-4
+    question: 'The volume of the parallelepiped determined by \(\mathbf u,\mathbf v,\mathbf w\) is given by'
+    A: '\(|(\mathbf u\times\mathbf v)\cdot\mathbf w|\)'
+    B: '\(|\mathbf u||\mathbf v||\mathbf w|\)'
+    C: '\(|\mathbf u\times\mathbf v|\)'
+    D: '\(\mathbf u\cdot\mathbf v\cdot\mathbf w\)'
+    answer: A
+    hint: Recall the geometric meaning of each product.
+    explanation: Standard identities.
+  256:
+    topic: s12-4
+    question: 'The area of the parallelogram determined by \(\mathbf u\) and \(\mathbf v\) is given by'
+    A: '\(\mathbf u\cdot\mathbf v\)'
+    B: '\(\tfrac12|\mathbf u\times\mathbf v|\)'
+    C: '\(|\mathbf u\times\mathbf v|\)'
+    D: '\(|\mathbf u||\mathbf v|\)'
+    answer: C
+    hint: Recall the geometric meaning of each product.
+    explanation: Standard identities.
+  257:
+    topic: s12-4
+    question: 'A vector orthogonal to \(\mathbf u+\mathbf v\) and \(\mathbf u-\mathbf v\) (when they are not parallel) is given by'
+    A: '\(\mathbf u\)'
+    B: '\(\mathbf u+\mathbf v\)'
+    C: '\(\mathbf u\cdot\mathbf v\)'
+    D: '\((\mathbf u+\mathbf v)\times(\mathbf u-\mathbf v)\) (equivalently \(\mathbf v\times\mathbf u\) up to a factor)'
+    answer: D
+    hint: Recall the geometric meaning of each product.
+    explanation: Standard identities.
+  258:
+    topic: s12-4
+    question: 'A vector of length \(|\mathbf u|\) in the direction of \(\mathbf v\) is given by'
+    A: '\(\dfrac{\mathbf v}{|\mathbf u|}\)'
+    B: '\(|\mathbf u|\mathbf v\)'
+    C: '\(\dfrac{|\mathbf u|}{|\mathbf v|}\mathbf v\)'
+    D: '\(\mathbf u\times\mathbf v\)'
+    answer: C
+    hint: Recall the geometric meaning of each product.
+    explanation: Standard identities.
+  259:
+    topic: s12-4
+    question: 'If \(\mathbf u\times\mathbf v=\mathbf u\times\mathbf w\) and \(\mathbf u\ne\mathbf0\), then'
+    A: '\(\mathbf v\) need not equal \(\mathbf w\): only \(\mathbf v-\mathbf w\parallel\mathbf u\)'
+    B: '\(\mathbf v=\mathbf w\)'
+    C: '\(\mathbf v\perp\mathbf w\)'
+    D: '\(\mathbf u=\mathbf0\)'
+    answer: A
+    hint: '\(\mathbf u\times(\mathbf v-\mathbf w)=\mathbf0\).'
+    explanation: 'The difference is parallel to \(\mathbf u\).'
+  260:
+    topic: s12-4
+    question: 'If \(\mathbf u\times\mathbf v=\mathbf u\times\mathbf w\) AND \(\mathbf u\cdot\mathbf v=\mathbf u\cdot\mathbf w\) with \(\mathbf u\ne\mathbf0\), then'
+    A: '\(\mathbf v\parallel\mathbf w\) only'
+    B: '\(\mathbf v=\mathbf w\)'
+    C: '\(\mathbf v\perp\mathbf w\)'
+    D: nothing can be concluded
+    answer: B
+    hint: '\(\mathbf v-\mathbf w\) is both parallel and perpendicular to \(\mathbf u\).'
+    explanation: 'The only such vector is \(\mathbf0\).'
+  261:
+    topic: s12-4
+    question: 'The vector \((\mathbf u\times\mathbf v)\times\mathbf w\) lies in the plane of'
+    A: '\(\mathbf u\) and \(\mathbf w\)'
+    B: '\(\mathbf v\) and \(\mathbf w\)'
+    C: none of these planes
+    D: '\(\mathbf u\) and \(\mathbf v\) (in nondegenerate cases)'
+    answer: D
+    hint: 'It is perpendicular to \(\mathbf u\times\mathbf v\).'
+    explanation: 'Vectors perpendicular to the normal \(\mathbf u\times\mathbf v\) lie in the plane of \(\mathbf u,\mathbf v\).'
+  262:
+    topic: s12-4
+    question: 'The area of the parallelogram with vertices \(A(1, 0)\), \(B(0, 1)\), \(C(-1, 0)\), \(D(0, -1)\) is'
+    A: '\(2\)'
+    B: '\(5\)'
+    C: '\(3\)'
+    D: '\(4\)'
+    answer: A
+    hint: 'Area \(=|\overrightarrow{AB}\times\overrightarrow{AD}|\).'
+    explanation: 'The \(2\)-D cross product is \(x_1y_2-x_2y_1=2\) in absolute value.'
+  263:
+    topic: s12-4
+    question: 'The area of the parallelogram with vertices \(A(0, 0)\), \(B(7, 3)\), \(C(9, 8)\), \(D(2, 5)\) is'
+    A: '\(29\)'
+    B: '\(58\)'
+    C: '\(30\)'
+    D: '\(31\)'
+    answer: A
+    hint: 'Area \(=|\overrightarrow{AB}\times\overrightarrow{AD}|\).'
+    explanation: 'The \(2\)-D cross product is \(x_1y_2-x_2y_1=29\) in absolute value.'
+  264:
+    topic: s12-4
+    question: 'The area of the parallelogram with vertices \(A(-1, 2)\), \(B(2, 0)\), \(C(7, 1)\), \(D(4, 3)\) is'
+    A: '\(14\)'
+    B: '\(15\)'
+    C: '\(13\)'
+    D: '\(26\)'
+    answer: C
+    hint: 'Area \(=|\overrightarrow{AB}\times\overrightarrow{AD}|\).'
+    explanation: 'The \(2\)-D cross product is \(x_1y_2-x_2y_1=13\) in absolute value.'
+  265:
+    topic: s12-4
+    question: 'The area of the parallelogram with vertices \(A(-6, 0)\), \(B(1, -4)\), \(C(3, 1)\), \(D(-4, 5)\) is'
+    A: '\(43\)'
+    B: '\(45\)'
+    C: '\(44\)'
+    D: '\(86\)'
+    answer: A
+    hint: 'Area \(=|\overrightarrow{AB}\times\overrightarrow{AD}|\).'
+    explanation: 'The \(2\)-D cross product is \(x_1y_2-x_2y_1=43\) in absolute value.'
+  266:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(A(0, 0)\), \(B(-2, 3)\), \(C(3, 1)\) is'
+    A: '\(\frac{11}{2}\)'
+    B: '\(11\)'
+    C: '\(\frac{13}{2}\)'
+    D: '\(\frac{11}{4}\)'
+    answer: A
+    hint: 'Area \(=\tfrac12|\overrightarrow{AB}\times\overrightarrow{AC}|\).'
+    explanation: 'Half the absolute value of the \(2\)-D cross product.'
+  267:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(A(-1, -1)\), \(B(3, 3)\), \(C(2, 1)\) is'
+    A: '\(1\)'
+    B: '\(3\)'
+    C: '\(2\)'
+    D: '\(4\)'
+    answer: C
+    hint: 'Area \(=\tfrac12|\overrightarrow{AB}\times\overrightarrow{AC}|\).'
+    explanation: 'Half the absolute value of the \(2\)-D cross product.'
+  268:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(A(-5, 3)\), \(B(1, -2)\), \(C(6, -2)\) is'
+    A: '\(25\)'
+    B: '\(\frac{27}{2}\)'
+    C: '\(\frac{25}{2}\)'
+    D: '\(\frac{25}{4}\)'
+    answer: C
+    hint: 'Area \(=\tfrac12|\overrightarrow{AB}\times\overrightarrow{AC}|\).'
+    explanation: 'Half the absolute value of the \(2\)-D cross product.'
+  269:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \(A(-6, 0)\), \(B(10, -5)\), \(C(-2, 4)\) is'
+    A: '\(21\)'
+    B: '\(42\)'
+    C: '\(84\)'
+    D: '\(43\)'
+    answer: B
+    hint: 'Area \(=\tfrac12|\overrightarrow{AB}\times\overrightarrow{AC}|\).'
+    explanation: 'Half the absolute value of the \(2\)-D cross product.'
+  270:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \((0,0)\), \((a_1,a_2)\), \((b_1,b_2)\) is'
+    A: '\(\dfrac12\left|a_1b_2-a_2b_1\right|\)'
+    B: '\(\dfrac12\left|a_1b_1-a_2b_2\right|\)'
+    C: '\(a_1b_2-a_2b_1\)'
+    D: '\(\dfrac12(a_1b_1+a_2b_2)\)'
+    answer: A
+    hint: 'Treat the points as vectors in the \(xy\)-plane (third component \(0\)).'
+    explanation: '\(\tfrac12|\mathbf a\times\mathbf b|\).'
+  271:
+    topic: s12-4
+    question: 'The area of the triangle with vertices \((a_1,a_2)\), \((b_1,b_2)\), \((c_1,c_2)\) is'
+    A: '\(\left|\det\begin{pmatrix}a_1&a_2&1\\b_1&b_2&1\\c_1&c_2&1\end{pmatrix}\right|\)'
+    B: '\(\det\begin{pmatrix}a_1&a_2\\b_1&b_2\end{pmatrix}\)'
+    C: '\(\dfrac12\left|\det\begin{pmatrix}a_1&a_2&1\\b_1&b_2&1\\c_1&c_2&1\end{pmatrix}\right|\)'
+    D: '\(\dfrac12\left(a_1+b_1+c_1\right)\)'
+    answer: C
+    hint: Subtract the first row from the others.
+    explanation: 'This reduces to \(\tfrac12|\overrightarrow{AB}\times\overrightarrow{AC}|\).'
+  272:
+    topic: s12-5
+    question: 'The line through \(P(3,-4,-1)\) parallel to \(\mathbf i+\mathbf j+\mathbf k\) has parametric equations'
+    A: '\(x=-4+t,\ y=-1+t,\ z=3+t\)'
+    B: '\(x=3+t,\ y=-4+t,\ z=-1+t\)'
+    C: '\(x=-3+t,\ y=4+t,\ z=1+t\)'
+    D: '\(x=3+3t,\ y=-4+2t,\ z=-1+2t\)'
+    answer: B
+    hint: '\(x=x_0+at\), etc., with \(\langle a,b,c\rangle\) the direction.'
+    explanation: 'Add \(t\) times each component.'
+  273:
+    topic: s12-5
+    question: 'The line through \(P(1, 2, -1)\) and \(Q(-1, 0, 1)\) has parametric equations (using \(P\) as the base point)'
+    A: '\(x=2-2t,\ y=-1-2t,\ z=1+2t\)'
+    B: '\(x=1-3t,\ y=2-4t,\ z=-1+4t\)'
+    C: '\(x=-1-2t,\ y=-2-2t,\ z=1+2t\)'
+    D: '\(x=1-2t,\ y=2-2t,\ z=-1+2t\)'
+    answer: D
+    hint: 'Direction \(=\overrightarrow{PQ}\).'
+    explanation: '\(\overrightarrow{PQ}=\langle -2, -2, 2\rangle\).'
+  274:
+    topic: s12-5
+    question: 'The line through \(P(-2, 0, 3)\) and \(Q(3, 5, -2)\) has parametric equations (using \(P\) as the base point)'
+    A: '\(x=-2+11t,\ y=10t,\ z=3-10t\)'
+    B: '\(x=-2+5t,\ y=5t,\ z=3-5t\)'
+    C: '\(x=5t,\ y=3+5t,\ z=-2-5t\)'
+    D: '\(x=2+5t,\ y=5t,\ z=-3-5t\)'
+    answer: B
+    hint: 'Direction \(=\overrightarrow{PQ}\).'
+    explanation: '\(\overrightarrow{PQ}=\langle 5, 5, -5\rangle\).'
+  275:
+    topic: s12-5
+    question: 'The line through \(P(1, 2, 0)\) and \(Q(1, 1, -1)\) has parametric equations (using \(P\) as the base point)'
+    A: '\(x=1+t,\ y=2-2t,\ z=-2t\)'
+    B: '\(x=2,\ y=-t,\ z=1-t\)'
+    C: '\(x=-1,\ y=-2-t,\ z=-t\)'
+    D: '\(x=1,\ y=2-t,\ z=-t\)'
+    answer: D
+    hint: 'Direction \(=\overrightarrow{PQ}\).'
+    explanation: '\(\overrightarrow{PQ}=\langle 0, -1, -1\rangle\).'
+  276:
+    topic: s12-5
+    question: 'The line through the origin parallel to \(2\mathbf j+\mathbf k\) has parametric equations'
+    A: '\(x=1,\ y=1+2t,\ z=1+t\)'
+    B: '\(x=0,\ y=2t,\ z=t\)'
+    C: '\(x=2t,\ y=0,\ z=t\)'
+    D: '\(x=t,\ y=4t,\ z=2t\)'
+    answer: B
+    hint: 'Base point \(O\), direction \(\langle0,2,1\rangle\).'
+    explanation: '\(x=0\), \(y=2t\), \(z=t\).'
+  277:
+    topic: s12-5
+    question: 'The line through \((3,-2,1)\) parallel to the line \(x=1+2t\), \(y=2-t\), \(z=3t\) has equations'
+    A: '\(x=3+5t,\ y=-2-2t,\ z=1+6t\)'
+    B: '\(x=3+2t,\ y=-2-t,\ z=1+3t\)'
+    C: '\(x=-2+2t,\ y=1-t,\ z=3+3t\)'
+    D: '\(x=-3+2t,\ y=2-t,\ z=-1+3t\)'
+    answer: B
+    hint: Parallel lines share a direction vector.
+    explanation: 'Direction \(\langle2,-1,3\rangle\).'
+  278:
+    topic: s12-5
+    question: 'The line through \((1,1,1)\) parallel to the \(z\)-axis has equations'
+    A: '\(x=-1,\ y=-1,\ z=-1+t\)'
+    B: '\(x=2,\ y=2,\ z=2+t\)'
+    C: '\(x=1+t,\ y=1,\ z=1+2t\)'
+    D: '\(x=1,\ y=1,\ z=1+t\)'
+    answer: D
+    hint: 'Direction \(\mathbf k\).'
+    explanation: '\(x=1\), \(y=1\), \(z=1+t\).'
+  279:
+    topic: s12-5
+    question: 'The line through \((2,4,5)\) perpendicular to the plane \(3x+7y-5z=21\) has equations'
+    A: '\(x=2+7t,\ y=4+14t,\ z=5-10t\)'
+    B: '\(x=4+3t,\ y=5+7t,\ z=2-5t\)'
+    C: '\(x=-2+3t,\ y=-4+7t,\ z=-5-5t\)'
+    D: '\(x=2+3t,\ y=4+7t,\ z=5-5t\)'
+    answer: D
+    hint: 'The normal vector \(\langle3,7,-5\rangle\) is the direction.'
+    explanation: '\(x=2+3t\), \(y=4+7t\), \(z=5-5t\).'
+  280:
+    topic: s12-5
+    question: 'The line through \((0,-7,0)\) perpendicular to the plane \(x+2y+2z=13\) has equations'
+    A: '\(x=t,\ y=7+2t,\ z=2t\)'
+    B: '\(x=-7+t,\ y=2t,\ z=2t\)'
+    C: '\(x=t,\ y=-7+2t,\ z=2t\)'
+    D: '\(x=3t,\ y=-7+4t,\ z=4t\)'
+    answer: C
+    hint: Use the normal as the direction.
+    explanation: '\(x=t\), \(y=-7+2t\), \(z=2t\).'
+  281:
+    topic: s12-5
+    question: 'The line through \((2,3,0)\) perpendicular to \(\mathbf u=\mathbf i+2\mathbf j+3\mathbf k\) and \(\mathbf v=3\mathbf i+4\mathbf j+5\mathbf k\) has direction'
+    A: '\(2\mathbf{i}+4\mathbf{j}+2\mathbf{k}\)'
+    B: '\(-2\mathbf{i}+4\mathbf{j}-2\mathbf{k}\) (or any multiple, e.g. \(\langle-1,2,-1\rangle\))'
+    C: '\(4\mathbf{i}+6\mathbf{j}+8\mathbf{k}\)'
+    D: '\(-2\mathbf{i}-4\mathbf{j}-2\mathbf{k}\)'
+    answer: B
+    hint: 'Take \(\mathbf u\times\mathbf v\).'
+    explanation: '\(\mathbf u\times\mathbf v=\langle-2,4,-2\rangle\).'
+  282:
+    topic: s12-5
+    question: 'Parametric equations of the segment from \((0,0,0)\) to \((1,1,\tfrac32)\) are'
+    A: '\(x=1+t\), \(y=1+t\), \(z=\tfrac32+\tfrac32t\), \(0\le t\le1\)'
+    B: '\(x=t\), \(y=t\), \(z=\tfrac32t\), \(t\ge0\)'
+    C: '\(x=t\), \(y=t\), \(z=t\), \(0\le t\le1\)'
+    D: '\(x=t\), \(y=t\), \(z=\tfrac32t\), \(0\le t\le1\)'
+    answer: D
+    hint: 'Use \(\mathbf r(t)=\mathbf r_0+t(\mathbf r_1-\mathbf r_0)\) with \(0\le t\le1\).'
+    explanation: 'At \(t=0\) you are at the start; at \(t=1\), at the end.'
+  283:
+    topic: s12-5
+    question: 'The line segment from \((1,0,-1)\) to \((0,3,0)\) can be parametrized by'
+    A: '\(x=1+t\), \(y=3t\), \(z=-1+t\), \(0\le t\le1\)'
+    B: '\(x=1-t\), \(y=3t\), \(z=-1-t\), \(0\le t\le1\)'
+    C: '\(x=1-t\), \(y=3t\), \(z=-1+t\), \(0\le t\le1\)'
+    D: '\(x=1-t\), \(y=3t\), \(z=-1+t\), \(t\ge0\)'
+    answer: C
+    hint: 'Direction \(\langle-1,3,1\rangle\).'
+    explanation: 'Check the endpoints at \(t=0,1\).'
+  284:
+    topic: s12-5
+    question: 'The plane through \(P_0(0,2,-1)\) normal to \(\mathbf n=3\mathbf i-2\mathbf j-\mathbf k\) is'
+    A: '\(3x-2y-z=-3\)'
+    B: '\(-2x+3y-z=-3\)'
+    C: '\(3x-2y-z=-2\)'
+    D: '\(3x-2y-z=3\)'
+    answer: A
+    hint: '\(\mathbf n\cdot(\mathbf r-\mathbf r_0)=0\).'
+    explanation: '\(3x-2y-z=0-4+1\).'
+  285:
+    topic: s12-5
+    question: 'The plane through \((1,-1,3)\) parallel to \(3x+y+z=7\) is'
+    A: '\(x+3y+z=5\)'
+    B: '\(3x+y+z=5\)'
+    C: '\(3x+y+z=-5\)'
+    D: '\(3x+y+z=6\)'
+    answer: B
+    hint: 'Same normal \(\langle3,1,1\rangle\).'
+    explanation: '\(3(1)+(-1)+3=5\).'
+  286:
+    topic: s12-5
+    question: 'The plane through \(A(1, 1, -1)\), \(B(2, 0, 2)\), \(C(0, -2, 1)\) is'
+    A: '\(-5x+7y-4z=6\)'
+    B: '\(7x-5y-4z=6\)'
+    C: '\(7x-5y-4z=7\)'
+    D: '\(7x-5y-4z=-6\)'
+    answer: B
+    hint: 'Normal \(=\overrightarrow{AB}\times\overrightarrow{AC}\).'
+    explanation: '\(\mathbf n=\langle 7, -5, -4\rangle\) (possibly scaled).'
+  287:
+    topic: s12-5
+    question: 'The plane through \(A(2, 4, 5)\), \(B(1, 5, 7)\), \(C(-1, 6, 8)\) is'
+    A: '\(-3x-y+z=-9\)'
+    B: '\(-x-3y+z=-9\)'
+    C: '\(-x-3y+z=9\)'
+    D: '\(-x-3y+z=-8\)'
+    answer: B
+    hint: 'Normal \(=\overrightarrow{AB}\times\overrightarrow{AC}\).'
+    explanation: '\(\mathbf n=\langle -1, -3, 1\rangle\) (possibly scaled).'
+  288:
+    topic: s12-5
+    question: 'The plane through \(A(1,-2,1)\) perpendicular to the vector from the origin to \(A\) is'
+    A: '\(x-2y+z=7\)'
+    B: '\(x-2y+z=-6\)'
+    C: '\(-2x+y+z=6\)'
+    D: '\(x-2y+z=6\)'
+    answer: D
+    hint: 'The normal is \(\overrightarrow{OA}\).'
+    explanation: '\(x-2y+z=1+4+1\).'
+  289:
+    topic: s12-5
+    question: 'The lines \(x=2t+1\), \(y=3t+2\), \(z=4t+3\) and \(x=s+2\), \(y=2s+4\), \(z=-4s-1\) intersect at'
+    A: '\((2, 4, -1)\)'
+    B: '\((3, 5, 7)\)'
+    C: '\((0, 0, 0)\)'
+    D: '\((1, 2, 3)\)'
+    answer: D
+    hint: 'Solve \(2t+1=s+2\) and \(3t+2=2s+4\).'
+    explanation: '\(t=0\), \(s=-1\); check \(z\): \(3=-4(-1)-1\).'
+  290:
+    topic: s12-5
+    question: 'The plane containing the lines \(x=2t+1,y=3t+2,z=4t+3\) and \(x=s+2,y=2s+4,z=-4s-1\) is'
+    A: '\(-20x+12y+z=-7\)'
+    B: '\(-20x+12y+z=7\)'
+    C: '\(12x-20y+z=7\)'
+    D: '\(-20x+12y+z=8\)'
+    answer: B
+    hint: 'Normal \(=\langle2,3,4\rangle\times\langle1,2,-4\rangle\); use the intersection point.'
+    explanation: '\(\mathbf n=\langle-20,12,1\rangle\).'
+  291:
+    topic: s12-5
+    question: 'The distance from the point \(P(0, 0, 12)\) to the line through \(Q(0, 0, 0)\) with direction \(\langle 4, -2, 2\rangle\) is'
+    A: '\(1 + 2 \sqrt{30}\)'
+    B: '\(120\)'
+    C: '\(2 \sqrt{30}\)'
+    D: '\(12\)'
+    answer: C
+    hint: '\(d=\dfrac{|\overrightarrow{QP}\times\mathbf v|}{|\mathbf v|}\).'
+    explanation: '\(\overrightarrow{QP}\times\mathbf v=\langle 24, 48, 0\rangle\).'
+  292:
+    topic: s12-5
+    question: 'The distance from the point \(P(0, 0, 0)\) to the line through \(Q(5, 5, -3)\) with direction \(\langle 3, 4, -5\rangle\) is'
+    A: '\(\sqrt{59}\)'
+    B: '\(9\)'
+    C: '\(3\)'
+    D: '\(4\)'
+    answer: C
+    hint: '\(d=\dfrac{|\overrightarrow{QP}\times\mathbf v|}{|\mathbf v|}\).'
+    explanation: '\(\overrightarrow{QP}\times\mathbf v=\langle 13, -16, -5\rangle\).'
+  293:
+    topic: s12-5
+    question: 'The distance from the point \(P(2, 1, -1)\) to the line through \(Q(0, 1, 0)\) with direction \(\langle 2, 2, 2\rangle\) is'
+    A: '\(\sqrt{5}\)'
+    B: '\(\frac{14}{3}\)'
+    C: '\(1 + \frac{\sqrt{42}}{3}\)'
+    D: '\(\frac{\sqrt{42}}{3}\)'
+    answer: D
+    hint: '\(d=\dfrac{|\overrightarrow{QP}\times\mathbf v|}{|\mathbf v|}\).'
+    explanation: '\(\overrightarrow{QP}\times\mathbf v=\langle 2, -6, 4\rangle\).'
+  294:
+    topic: s12-5
+    question: 'The distance from the point \((2, -3, 4)\) to the plane \(x+2y+2z=13\) is'
+    A: '\(4\)'
+    B: '\(9\)'
+    C: '\(\frac{3}{2}\)'
+    D: '\(3\)'
+    answer: D
+    hint: '\(d=\dfrac{|ax_0+by_0+cz_0-D|}{\sqrt{a^2+b^2+c^2}}\).'
+    explanation: 'The numerator is \(9\) and the denominator is \(3\).'
+  295:
+    topic: s12-5
+    question: 'The distance from the point \((0, 0, 0)\) to the plane \(3x+2y+6z=6\) is'
+    A: '\(\frac{6}{7}\)'
+    B: '\(6\)'
+    C: '\(\frac{13}{7}\)'
+    D: '\(\frac{3}{7}\)'
+    answer: A
+    hint: '\(d=\dfrac{|ax_0+by_0+cz_0-D|}{\sqrt{a^2+b^2+c^2}}\).'
+    explanation: 'The numerator is \(6\) and the denominator is \(7\).'
+  296:
+    topic: s12-5
+    question: 'The distance from the point \((0, 1, 1)\) to the plane \(+4y+3z=-12\) is'
+    A: '\(\frac{19}{5}\)'
+    B: '\(\frac{24}{5}\)'
+    C: '\(19\)'
+    D: '\(\frac{19}{10}\)'
+    answer: A
+    hint: '\(d=\dfrac{|ax_0+by_0+cz_0-D|}{\sqrt{a^2+b^2+c^2}}\).'
+    explanation: 'The numerator is \(19\) and the denominator is \(5\).'
+  297:
+    topic: s12-5
+    question: 'The distance from the point \((2, 2, 3)\) to the plane \(2x+y+2z=4\) is'
+    A: '\(\frac{8}{3}\)'
+    B: '\(\frac{4}{3}\)'
+    C: '\(\frac{11}{3}\)'
+    D: '\(8\)'
+    answer: A
+    hint: '\(d=\dfrac{|ax_0+by_0+cz_0-D|}{\sqrt{a^2+b^2+c^2}}\).'
+    explanation: 'The numerator is \(8\) and the denominator is \(3\).'
+  298:
+    topic: s12-5
+    question: 'The distance from the point \((0, -1, 0)\) to the plane \(2x+y+2z=4\) is'
+    A: '\(5\)'
+    B: '\(\frac{8}{3}\)'
+    C: '\(\frac{5}{3}\)'
+    D: '\(\frac{5}{6}\)'
+    answer: C
+    hint: '\(d=\dfrac{|ax_0+by_0+cz_0-D|}{\sqrt{a^2+b^2+c^2}}\).'
+    explanation: 'The numerator is \(5\) and the denominator is \(3\).'
+  299:
+    topic: s12-5
+    question: 'The distance from the point \((1, 0, -1)\) to the plane \(-4x+y+z=4\) is'
+    A: '\(\frac{3 \sqrt{2}}{4}\)'
+    B: '\(1 + \frac{3 \sqrt{2}}{2}\)'
+    C: '\(9\)'
+    D: '\(\frac{3 \sqrt{2}}{2}\)'
+    answer: D
+    hint: '\(d=\dfrac{|ax_0+by_0+cz_0-D|}{\sqrt{a^2+b^2+c^2}}\).'
+    explanation: 'The numerator is \(9\) and the denominator is \(3 \sqrt{2}\).'
+  300:
+    topic: s12-5
+    question: 'The distance between the parallel planes \(x+2y+6z=1\) and \(x+2y+6z=10\) is'
+    A: '\(\dfrac{11}{\sqrt{41}}\)'
+    B: '\(\dfrac9{\sqrt{41}}\)'
+    C: '\(\dfrac{9}{41}\)'
+    D: '\(9\)'
+    answer: B
+    hint: Pick a point on one plane and use the point-plane distance.
+    explanation: '\(\dfrac{|10-1|}{\sqrt{1+4+36}}\).'
+  301:
+    topic: s12-5
+    question: 'The line \(x=2+t\), \(y=1+t\), \(z=-\dfrac12-\dfrac12t\) is parallel to the plane \(x+2y+6z=10\), at distance'
+    A: '\(\dfrac{9}{41}\)'
+    B: '\(\dfrac9{\sqrt{41}}\)'
+    C: '\(0\)'
+    D: '\(\dfrac{10}{\sqrt{41}}\)'
+    answer: B
+    hint: 'The direction \(\langle1,1,-\tfrac12\rangle\) satisfies \(\langle1,2,6\rangle\cdot\mathbf v=1+2-3=0\).'
+    explanation: 'Distance from \((2,1,-\tfrac12)\): \(\dfrac{|2+2-3-10|}{\sqrt{41}}\).'
+  302:
+    topic: s12-5
+    question: 'The angle between the planes with normals \(\langle 1, 1, 0\rangle\) and \(\langle 2, 1, -2\rangle\) is'
+    A: '\(\dfrac\pi2\)'
+    B: '\(\dfrac\pi6\)'
+    C: '\(\dfrac\pi4\)'
+    D: '\(\dfrac\pi3\)'
+    answer: C
+    hint: '\(\cos\theta=\dfrac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}\).'
+    explanation: '\(\cos\theta=\frac{\sqrt{2}}{2}\).'
+  303:
+    topic: s12-5
+    question: 'The angle between the planes with normals \(\langle 5, 1, -1\rangle\) and \(\langle 1, -2, 3\rangle\) is'
+    A: '\(\dfrac\pi3\)'
+    B: '\(\dfrac\pi4\)'
+    C: '\(0\)'
+    D: '\(\dfrac\pi2\)'
+    answer: D
+    hint: '\(\cos\theta=\dfrac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}\).'
+    explanation: '\(\cos\theta=0\).'
+  304:
+    topic: s12-5
+    question: 'The acute angle between the planes \(2x+2y+2z=3,\ 2x-2y-z=5\) (radians, two decimals) is'
+    A: '\(0.69\)'
+    B: '\(0.19\)'
+    C: '\(1.38\)'
+    D: '\(1.76\)'
+    answer: C
+    hint: '\(\cos\theta=\dfrac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}\).'
+    explanation: '\(\theta\approx1.38\).'
+  305:
+    topic: s12-5
+    question: 'The acute angle between the planes \(x+y+z=1\ \text{and the }xy\text{-plane}\) (radians, two decimals) is'
+    A: '\(0.62\)'
+    B: '\(0.48\)'
+    C: '\(0.96\)'
+    D: '\(2.19\)'
+    answer: C
+    hint: '\(\cos\theta=\dfrac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}\).'
+    explanation: '\(\theta\approx0.96\).'
+  306:
+    topic: s12-5
+    question: 'The acute angle between the planes \(2x+2y-z=3,\ x+y+z=2\) (radians, two decimals) is'
+    A: '\(0.96\)'
+    B: '\(0.62\)'
+    C: '\(2.19\)'
+    D: '\(0.48\)'
+    answer: A
+    hint: '\(\cos\theta=\dfrac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}\).'
+    explanation: '\(\theta\approx0.96\).'
+  307:
+    topic: s12-5
+    question: 'The acute angle between the planes \(4y+3z=-12,\ 3x+2y+6z=6\) (radians, two decimals) is'
+    A: '\(0.84\)'
+    B: '\(0.73\)'
+    C: '\(2.41\)'
+    D: '\(0.37\)'
+    answer: B
+    hint: '\(\cos\theta=\dfrac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}\).'
+    explanation: '\(\theta\approx0.73\).'
+  308:
+    topic: s12-5
+    question: 'The line \(x=1-t,\ y=3t,\ z=1+t\) meets the plane \(\ 2x-y+3z=6\) at'
+    A: '\((1, 0, 1)\)'
+    B: '\((- \frac{3}{2}, \frac{3}{2}, - \frac{1}{2})\)'
+    C: '\((\frac{3}{2}, - \frac{3}{2}, \frac{1}{2})\)'
+    D: '\((\frac{1}{2}, \frac{3}{2}, \frac{3}{2})\)'
+    answer: C
+    hint: 'Substitute the line into the plane to find \(t\).'
+    explanation: '\(t=- \frac{1}{2}\).'
+  309:
+    topic: s12-5
+    question: 'The line \(x=2,\ y=3+2t,\ z=-2-2t\) meets the plane \(\ 6x+3y-4z=-12\) at'
+    A: '\((-2, \frac{20}{7}, - \frac{27}{7})\)'
+    B: '\((2, 3, -2)\)'
+    C: '\((2, - \frac{6}{7}, \frac{13}{7})\)'
+    D: '\((2, - \frac{20}{7}, \frac{27}{7})\)'
+    answer: D
+    hint: 'Substitute the line into the plane to find \(t\).'
+    explanation: '\(t=- \frac{41}{14}\).'
+  310:
+    topic: s12-5
+    question: 'The line \(x=1+2t,\ y=1+5t,\ z=3t\) meets the plane \(\ x+y+z=2\) at'
+    A: '\((1, 1, 0)\)'
+    B: '\((-1, -1, 0)\)'
+    C: '\((3, 6, 3)\)'
+    D: '\((\frac{5}{3}, \frac{8}{3}, 1)\)'
+    answer: A
+    hint: 'Substitute the line into the plane to find \(t\).'
+    explanation: '\(t=0\).'
+  311:
+    topic: s12-5
+    question: 'The line \(x=-1+3t,\ y=-2,\ z=5t\) meets the plane \(\ 2x-3z=7\) at'
+    A: '\((-4, -2, -5)\)'
+    B: '\((4, 2, 5)\)'
+    C: '\((-1, -2, 0)\)'
+    D: '\((-6, -2, - \frac{25}{3})\)'
+    answer: A
+    hint: 'Substitute the line into the plane to find \(t\).'
+    explanation: '\(t=-1\).'
+  312:
+    topic: s12-5
+    question: 'The planes \(x+y+z=1\) and \(x+y=2\) intersect in the line'
+    A: '\(x=1+t\), \(y=1+t\), \(z=-1\)'
+    B: '\(x=1-t\), \(y=1+t\), \(z=-1\)'
+    C: '\(x=1-t\), \(y=1+t\), \(z=1\)'
+    D: '\(x=t\), \(y=t\), \(z=-1\)'
+    answer: B
+    hint: 'The direction is \(\mathbf n_1\times\mathbf n_2=\langle-1,1,0\rangle\); \(z=-1\) when \(x+y=2\).'
+    explanation: 'A point is \((1,1,-1)\).'
+  313:
+    topic: s12-5
+    question: 'The plane through \(P_0(2,1,-1)\) perpendicular to the line of intersection of the planes \(2x+y-z=3\) and \(x+2y+z=2\) is'
+    A: '\(x+y-z=4\)'
+    B: '\(3x+3y=9\)'
+    C: '\(x-y+z=2\)'
+    D: '\(x-y+z=0\)'
+    answer: D
+    hint: 'The normal is \(\langle2,1,-1\rangle\times\langle1,2,1\rangle=\langle3,-3,3\rangle\).'
+    explanation: '\(x-y+z=2-1-1\).'
+  314:
+    topic: s12-5
+    question: 'The plane through \(P_1(1,2,3)\), \(P_2(3,2,1)\) perpendicular to the plane \(4x-y+2z=7\) is'
+    A: '\(x+6y+z=-16\)'
+    B: '\(x+6y+z=17\)'
+    C: '\(6x+y+z=16\)'
+    D: '\(x+6y+z=16\)'
+    answer: D
+    hint: 'The normal is \(\overrightarrow{P_1P_2}\times\langle4,-1,2\rangle\), scaled.'
+    explanation: '\(\langle2,0,-2\rangle\times\langle4,-1,2\rangle=\langle-2,-12,-2\rangle\propto\langle1,6,1\rangle\).'
+  315:
+    topic: s12-5
+    question: 'The lines \(L_1\): \(x=3+2t,\ y=-1+4t,\ z=2-t\) and \(L_2\): \(x=1+4s,\ y=1+2s,\ z=-3+4s\) are'
+    A: parallel
+    B: skew
+    C: perpendicular and parallel
+    D: intersect
+    answer: D
+    hint: Compare directions, then test for a common point.
+    explanation: 'Parallel lines have proportional directions; otherwise the lines meet iff \((P_2-P_1)\cdot(\mathbf d_1\times\mathbf d_2)=0\).'
+  316:
+    topic: s12-5
+    question: 'The lines \(L_1\): \(x=3+2t,\ y=-1+4t,\ z=2-t\) and \(L_3\): \(x=3+2s,\ y=2+2s,\ z=-2+2s\) are'
+    A: skew
+    B: intersect
+    C: parallel
+    D: perpendicular and parallel
+    answer: A
+    hint: Compare directions, then test for a common point.
+    explanation: 'Parallel lines have proportional directions; otherwise the lines meet iff \((P_2-P_1)\cdot(\mathbf d_1\times\mathbf d_2)=0\).'
+  317:
+    topic: s12-5
+    question: 'The lines \(L_2\): \(x=1+4t,\ y=1+2t,\ z=-3+4t\) and \(L_3\): \(x=3+2s,\ y=2+2s,\ z=-2+2s\) are'
+    A: perpendicular and parallel
+    B: parallel
+    C: intersect
+    D: skew
+    answer: D
+    hint: Compare directions, then test for a common point.
+    explanation: 'Parallel lines have proportional directions; otherwise the lines meet iff \((P_2-P_1)\cdot(\mathbf d_1\times\mathbf d_2)=0\).'
+  318:
+    topic: s12-5
+    question: Two lines in space are skew when
+    A: they are parallel
+    B: they intersect at one point
+    C: they are not parallel and do not intersect
+    D: they are perpendicular
+    answer: C
+    hint: Skew lines lie in no common plane.
+    explanation: "Example: the flight paths of two planes at different altitudes."
+  319:
+    topic: s12-5
+    question: Is it possible for a nonzero vector to be perpendicular to both of two disjoint, nonparallel (skew) lines?
+    A: No, never
+    B: Only if they intersect
+    C: "Yes: the cross product of their directions"
+    D: Only if the lines are parallel
+    answer: C
+    hint: The direction vectors are not parallel, so their cross product is nonzero.
+    explanation: It is perpendicular to both directions.
+  320:
+    topic: s12-5
+    question: 'Two planes \(A_1x+B_1y+C_1z=D_1\) and \(A_2x+B_2y+C_2z=D_2\) are parallel when'
+    A: their normals are perpendicular
+    B: '\(D_1=D_2\)'
+    C: 'their normals are parallel (\(\mathbf n_1\times\mathbf n_2=\mathbf0\)), and perpendicular when \(\mathbf n_1\cdot\mathbf n_2=0\)'
+    D: '\(A_1=A_2\) only'
+    answer: C
+    hint: Look at the normal vectors.
+    explanation: Planes are parallel/perpendicular exactly when their normals are.
+  321:
+    topic: s12-5
+    question: A line is parallel to a plane when
+    A: the plane contains the origin
+    B: "its direction vector is perpendicular to the plane's normal vector"
+    C: its direction is parallel to the normal
+    D: the line passes through the origin
+    answer: B
+    hint: '\(\mathbf d\cdot\mathbf n=0\).'
+    explanation: The line can then be at a nonzero distance from the plane.
+  322:
+    topic: s12-5
+    question: 'The line \(x=1-2t\), \(y=2+5t\), \(z=-3t\) and the plane \(2x+y-z=8\):'
+    A: the line lies in the plane
+    B: the line is parallel to the plane
+    C: 'the line is not parallel to the plane, since \(\mathbf d\cdot\mathbf n=-4+5+3=4\ne0\)'
+    D: the line is perpendicular to the plane
+    answer: C
+    hint: 'Compute \(\langle-2,5,-3\rangle\cdot\langle2,1,-1\rangle\).'
+    explanation: A nonzero dot product means the line crosses the plane.
+  323:
+    topic: s12-5
+    question: 'The graph of \(\dfrac xa+\dfrac yb+\dfrac zc=1\) (\(a,b,c\ne0\)) is'
+    A: a plane through the origin
+    B: a line
+    C: 'the plane with intercepts \((a,0,0)\), \((0,b,0)\), \((0,0,c)\)'
+    D: a sphere
+    answer: C
+    hint: Set two variables equal to zero.
+    explanation: The equation is linear.
+  324:
+    topic: s12-5
+    question: 'A plane through the origin that meets the plane \(2x+3y+z=12\) in a right angle has a normal vector that is'
+    A: 'perpendicular to \(\langle2,3,1\rangle\)'
+    B: 'of length \(1\)'
+    C: 'equal to \(\langle0,0,1\rangle\)'
+    D: 'parallel to \(\langle2,3,1\rangle\)'
+    answer: A
+    hint: Perpendicular planes have perpendicular normals.
+    explanation: 'For example \(\langle1,-1,1\rangle\) works: \(2-3+1=0\).'
+  325:
+    topic: s12-5
+    question: 'The line \(x=1+2t\), \(y=-1-t\), \(z=3t\) meets the \(xz\)-plane (\(y=0\)) at'
+    A: '\((0, - \frac{1}{2}, - \frac{3}{2})\)'
+    B: '\((1, -1, 0)\)'
+    C: '\((-1, 0, -3)\)'
+    D: '\((3, 0, 3)\)'
+    answer: C
+    hint: 'Set \(y=0\): \(-1-t=0\).'
+    explanation: '\(t=-1\), giving \(x=-1\), \(z=-3\).'
+  326:
+    topic: s12-5
+    question: 'The line \(x=1+2t\), \(y=-1-t\), \(z=3t\) meets the \(yz\)-plane (\(x=0\)) at'
+    A: '\((-1, 0, -3)\)'
+    B: '\((0, \frac{1}{2}, \frac{3}{2})\)'
+    C: '\((1, -1, 0)\)'
+    D: '\((0, - \frac{1}{2}, - \frac{3}{2})\)'
+    answer: D
+    hint: 'Set \(x=0\): \(1+2t=0\).'
+    explanation: '\(t=-\tfrac12\), giving \(y=-\tfrac12\), \(z=-\tfrac32\).'
+  327:
+    topic: s12-5
+    question: 'The line \(x=1+2t\), \(y=-1-t\), \(z=3t\) meets the \(xy\)-plane (\(z=0\)) at'
+    A: '\((0, - \frac{1}{2}, - \frac{3}{2})\)'
+    B: '\((3, -2, 0)\)'
+    C: '\((-1, 0, -3)\)'
+    D: '\((1, -1, 0)\)'
+    answer: D
+    hint: 'Set \(z=0\): \(t=0\).'
+    explanation: 'The point is \((1,-1,0)\).'
+  328:
+    topic: s12-5
+    question: 'In perspective drawing, an eye at \(E(x_0,0,0)\) sees \(P_1(x_1,y_1,z_1)\) projected onto the \(yz\)-plane at \(P(0,y,z)\) with'
+    A: '\(y=\dfrac{x_0y_1}{x_0-x_1}\), \(z=\dfrac{x_0z_1}{x_0-x_1}\)'
+    B: '\(y=\dfrac{x_0y_1}{x_0+x_1}\), \(z=\dfrac{x_0z_1}{x_0+x_1}\)'
+    C: '\(y=\dfrac{y_1}{x_0-x_1}\), \(z=\dfrac{z_1}{x_0-x_1}\)'
+    D: '\(y=y_1\), \(z=z_1\)'
+    answer: A
+    hint: '\(\overrightarrow{EP}=c\,\overrightarrow{EP_1}\) with \(c=\dfrac{x_0}{x_0-x_1}\).'
+    explanation: 'The \(x\)-component gives \(-x_0=c(x_1-x_0)\).'
+  329:
+    topic: s12-5
+    question: 'In that perspective formula, as the eye moves far away (\(x_0\to\infty\)), the projected point approaches'
+    A: infinity
+    B: the origin
+    C: '\((0,0,0)\) only'
+    D: '\((0,y_1,z_1)\), the orthogonal projection'
+    answer: D
+    hint: '\(\dfrac{x_0}{x_0-x_1}\to1\).'
+    explanation: Parallel projection is the limit of perspective projection.
+  330:
+    topic: s12-6
+    question: 'The graph of \(x^2+y^2+4z^2=10\) is'
+    A: an ellipsoid
+    B: a sphere
+    C: a hyperboloid of one sheet
+    D: an elliptic paraboloid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an ellipsoid."
+  331:
+    topic: s12-6
+    question: 'The graph of \(9y^2+z^2=16\) is'
+    A: an ellipsoid
+    B: an elliptic cone
+    C: a circular cylinder
+    D: an elliptic cylinder
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cylinder."
+  332:
+    topic: s12-6
+    question: 'The graph of \(y^2+z^2=x^2\) is'
+    A: a circular cone
+    B: a circular paraboloid
+    C: a hyperboloid of one sheet
+    D: an elliptic cone
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular cone."
+  333:
+    topic: s12-6
+    question: 'The graph of \(x=y^2-z^2\) is'
+    A: a hyperbolic cylinder
+    B: an elliptic paraboloid
+    C: a hyperbolic paraboloid
+    D: a hyperboloid of one sheet
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic paraboloid."
+  334:
+    topic: s12-6
+    question: 'The graph of \(x=-y^2-z^2\) is'
+    A: an elliptic paraboloid
+    B: a hyperbolic paraboloid
+    C: a circular paraboloid
+    D: a circular cone
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular paraboloid."
+  335:
+    topic: s12-6
+    question: 'The graph of \(x^2+2z^2-y^2=1\) is'
+    A: a hyperboloid of one sheet
+    B: an elliptic cone
+    C: an ellipsoid
+    D: a hyperboloid of two sheets
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  336:
+    topic: s12-6
+    question: 'The graph of \(x=z^2-y^2\) is'
+    A: a hyperboloid of one sheet
+    B: a hyperbolic cylinder
+    C: a hyperbolic paraboloid
+    D: an elliptic paraboloid
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic paraboloid."
+  337:
+    topic: s12-6
+    question: 'The graph of \(z=-4x^2-y^2\) is'
+    A: a hyperbolic paraboloid
+    B: a circular paraboloid
+    C: an elliptic paraboloid
+    D: an ellipsoid
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic paraboloid."
+  338:
+    topic: s12-6
+    question: 'The graph of \(x^2+4z^2=y^2\) is'
+    A: a circular cone
+    B: an elliptic paraboloid
+    C: an elliptic cone
+    D: a hyperboloid of one sheet
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cone."
+  339:
+    topic: s12-6
+    question: 'The graph of \(9x^2+4y^2+2z^2=36\) is'
+    A: a hyperboloid of one sheet
+    B: a sphere
+    C: an elliptic paraboloid
+    D: an ellipsoid
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an ellipsoid."
+  340:
+    topic: s12-6
+    question: 'The graph of \(z^2+x^2-y^2=1\) is'
+    A: an ellipsoid
+    B: a hyperboloid of two sheets
+    C: a hyperboloid of one sheet
+    D: an elliptic cone
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  341:
+    topic: s12-6
+    question: 'The graph of \(x^2+2z^2=8\) is'
+    A: an ellipsoid
+    B: an elliptic cone
+    C: a circular cylinder
+    D: an elliptic cylinder
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cylinder."
+  342:
+    topic: s12-6
+    question: 'The graph of \(x^2+y^2=4\) is'
+    A: a circular cylinder
+    B: a sphere
+    C: a circular cone
+    D: an elliptic cylinder
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular cylinder."
+  343:
+    topic: s12-6
+    question: 'The graph of \(z=y^2-1\) is'
+    A: an elliptic paraboloid
+    B: a hyperbolic paraboloid
+    C: a parabolic cylinder
+    D: a hyperbolic cylinder
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a parabolic cylinder."
+  344:
+    topic: s12-6
+    question: 'The graph of \(4x^2+y^2=36\) is'
+    A: an ellipsoid
+    B: an elliptic cylinder
+    C: an elliptic cone
+    D: a circular cylinder
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cylinder."
+  345:
+    topic: s12-6
+    question: 'The graph of \(z^2-y^2=1\) is'
+    A: a hyperboloid of one sheet
+    B: a hyperbolic paraboloid
+    C: a parabolic cylinder
+    D: a hyperbolic cylinder
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic cylinder."
+  346:
+    topic: s12-6
+    question: 'The graph of \(yz=1\) is'
+    A: a hyperboloid of one sheet
+    B: a hyperbolic cylinder
+    C: a parabolic cylinder
+    D: a hyperbolic paraboloid
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic cylinder."
+  347:
+    topic: s12-6
+    question: 'The graph of \(x=y^2\) is'
+    A: a parabolic cylinder
+    B: a hyperbolic cylinder
+    C: an elliptic paraboloid
+    D: a hyperbolic paraboloid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a parabolic cylinder."
+  348:
+    topic: s12-6
+    question: 'The graph of \(x^2+y^2+z^2=9\) is'
+    A: a circular cylinder
+    B: an ellipsoid
+    C: a circular cone
+    D: a sphere
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a sphere."
+  349:
+    topic: s12-6
+    question: 'The graph of \(z=x^2+4y^2\) is'
+    A: a hyperbolic paraboloid
+    B: a circular paraboloid
+    C: an elliptic paraboloid
+    D: an ellipsoid
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic paraboloid."
+  350:
+    topic: s12-6
+    question: 'The graph of \(z=8-x^2-y^2\) is'
+    A: an elliptic paraboloid
+    B: a circular paraboloid
+    C: a hyperbolic paraboloid
+    D: a circular cone
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular paraboloid."
+  351:
+    topic: s12-6
+    question: 'The graph of \(x=4-4y^2-z^2\) is'
+    A: a circular paraboloid
+    B: an ellipsoid
+    C: a hyperbolic paraboloid
+    D: an elliptic paraboloid
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic paraboloid."
+  352:
+    topic: s12-6
+    question: 'The graph of \(x^2+y^2=z^2\) is'
+    A: an elliptic cone
+    B: a circular paraboloid
+    C: a hyperboloid of one sheet
+    D: a circular cone
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular cone."
+  353:
+    topic: s12-6
+    question: 'The graph of \(4x^2+9z^2=9y^2\) is'
+    A: a hyperboloid of one sheet
+    B: a circular cone
+    C: an elliptic cone
+    D: an elliptic paraboloid
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cone."
+  354:
+    topic: s12-6
+    question: 'The graph of \(x^2+y^2-z^2=1\) is'
+    A: a hyperboloid of two sheets
+    B: an elliptic cone
+    C: an ellipsoid
+    D: a hyperboloid of one sheet
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  355:
+    topic: s12-6
+    question: 'The graph of \(y^2+z^2-x^2=1\) is'
+    A: a hyperboloid of one sheet
+    B: an elliptic cone
+    C: a hyperboloid of two sheets
+    D: an ellipsoid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  356:
+    topic: s12-6
+    question: 'The graph of \(z^2-x^2-y^2=1\) is'
+    A: an ellipsoid
+    B: a hyperboloid of two sheets
+    C: an elliptic cone
+    D: a hyperboloid of one sheet
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of two sheets."
+  357:
+    topic: s12-6
+    question: 'The graph of \(\dfrac{y^2}4-x^2-z^2=1\) is'
+    A: an ellipsoid
+    B: a hyperboloid of two sheets
+    C: a hyperboloid of one sheet
+    D: an elliptic cone
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of two sheets."
+  358:
+    topic: s12-6
+    question: 'The graph of \(x^2-\dfrac{y^2}{4}-\dfrac{z^2}{9}=1\) is'
+    A: a hyperboloid of one sheet
+    B: an elliptic cone
+    C: a hyperboloid of two sheets
+    D: an ellipsoid
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of two sheets."
+  359:
+    topic: s12-6
+    question: 'The graph of \(y^2-x^2=z\) is'
+    A: a hyperbolic paraboloid
+    B: a hyperbolic cylinder
+    C: a hyperboloid of one sheet
+    D: an elliptic paraboloid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic paraboloid."
+  360:
+    topic: s12-6
+    question: 'The graph of \(4x^2+4y^2=z^2\) is'
+    A: a circular cone
+    B: a hyperboloid of one sheet
+    C: an elliptic cone
+    D: a circular paraboloid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular cone."
+  361:
+    topic: s12-6
+    question: 'The graph of \(z=1+y^2-x^2\) is'
+    A: a hyperbolic cylinder
+    B: an elliptic paraboloid
+    C: a hyperbolic paraboloid
+    D: a hyperboloid of one sheet
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic paraboloid."
+  362:
+    topic: s12-6
+    question: 'The graph of \(y^2-z^2=4\) is'
+    A: a hyperboloid of one sheet
+    B: a hyperbolic cylinder
+    C: a hyperbolic paraboloid
+    D: a parabolic cylinder
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic cylinder."
+  363:
+    topic: s12-6
+    question: 'The graph of \(y=-(x^2+z^2)\) is'
+    A: a circular cone
+    B: a hyperbolic paraboloid
+    C: a circular paraboloid
+    D: an elliptic paraboloid
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular paraboloid."
+  364:
+    topic: s12-6
+    question: 'The graph of \(z^2-4x^2-4y^2=4\) is'
+    A: a hyperboloid of one sheet
+    B: an elliptic cone
+    C: an ellipsoid
+    D: a hyperboloid of two sheets
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of two sheets."
+  365:
+    topic: s12-6
+    question: 'The graph of \(16x^2+4y^2=1\) is'
+    A: a circular cylinder
+    B: an elliptic cylinder
+    C: an ellipsoid
+    D: an elliptic cone
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cylinder."
+  366:
+    topic: s12-6
+    question: 'The graph of \(z=x^2+y^2+1\) is'
+    A: a hyperbolic paraboloid
+    B: a circular paraboloid
+    C: an elliptic paraboloid
+    D: a circular cone
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular paraboloid."
+  367:
+    topic: s12-6
+    question: 'The graph of \(x^2+y^2-z^2=4\) is'
+    A: a hyperboloid of two sheets
+    B: a hyperboloid of one sheet
+    C: an elliptic cone
+    D: an ellipsoid
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  368:
+    topic: s12-6
+    question: 'The graph of \(x=4-y^2\) is'
+    A: a parabolic cylinder
+    B: a hyperbolic cylinder
+    C: an elliptic paraboloid
+    D: a hyperbolic paraboloid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a parabolic cylinder."
+  369:
+    topic: s12-6
+    question: 'The graph of \(x^2+z^2=y\) is'
+    A: a circular paraboloid
+    B: a circular cone
+    C: an elliptic paraboloid
+    D: a hyperbolic paraboloid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular paraboloid."
+  370:
+    topic: s12-6
+    question: 'The graph of \(z^2-\dfrac{x^2}4-y^2=1\) is'
+    A: a hyperboloid of two sheets
+    B: an ellipsoid
+    C: a hyperboloid of one sheet
+    D: an elliptic cone
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of two sheets."
+  371:
+    topic: s12-6
+    question: 'The graph of \(x^2+z^2=1\) is'
+    A: a circular cylinder
+    B: an elliptic cylinder
+    C: a circular cone
+    D: a sphere
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a circular cylinder."
+  372:
+    topic: s12-6
+    question: 'The graph of \(4x^2+y^2+z^2=4\) is'
+    A: a hyperboloid of one sheet
+    B: an elliptic paraboloid
+    C: a sphere
+    D: an ellipsoid
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an ellipsoid."
+  373:
+    topic: s12-6
+    question: 'The graph of \(16y^2+9z^2=4x^2\) is'
+    A: an elliptic paraboloid
+    B: an elliptic cone
+    C: a circular cone
+    D: a hyperboloid of one sheet
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic cone."
+  374:
+    topic: s12-6
+    question: 'The graph of \(z=x^2-y^2-1\) is'
+    A: an elliptic paraboloid
+    B: a hyperbolic paraboloid
+    C: a hyperboloid of one sheet
+    D: a hyperbolic cylinder
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperbolic paraboloid."
+  375:
+    topic: s12-6
+    question: 'The graph of \(4y^2+z^2-4x^2=4\) is'
+    A: a hyperboloid of one sheet
+    B: a hyperboloid of two sheets
+    C: an ellipsoid
+    D: an elliptic cone
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  376:
+    topic: s12-6
+    question: 'The graph of \(z=1-x^2\) is'
+    A: an elliptic paraboloid
+    B: a hyperbolic paraboloid
+    C: a parabolic cylinder
+    D: a hyperbolic cylinder
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a parabolic cylinder."
+  377:
+    topic: s12-6
+    question: 'The graph of \(\dfrac{x^2}4+y^2-z^2=1\) is'
+    A: an elliptic cone
+    B: a hyperboloid of two sheets
+    C: an ellipsoid
+    D: a hyperboloid of one sheet
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  378:
+    topic: s12-6
+    question: 'The graph of \(4x^2+9y^2+4z^2=36\) is'
+    A: a hyperboloid of one sheet
+    B: an elliptic paraboloid
+    C: an ellipsoid
+    D: a sphere
+    answer: C
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an ellipsoid."
+  379:
+    topic: s12-6
+    question: 'The graph of \(9x^2+4y^2+36z^2=36\) is'
+    A: an ellipsoid
+    B: a sphere
+    C: an elliptic paraboloid
+    D: a hyperboloid of one sheet
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an ellipsoid."
+  380:
+    topic: s12-6
+    question: 'The graph of \(z=x^2+9y^2\) is'
+    A: a circular paraboloid
+    B: a hyperbolic paraboloid
+    C: an ellipsoid
+    D: an elliptic paraboloid
+    answer: D
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic paraboloid."
+  381:
+    topic: s12-6
+    question: 'The graph of \(z=18-x^2-9y^2\) is'
+    A: an elliptic paraboloid
+    B: a circular paraboloid
+    C: a hyperbolic paraboloid
+    D: an ellipsoid
+    answer: A
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: an elliptic paraboloid."
+  382:
+    topic: s12-6
+    question: 'The graph of \(x^2+z^2-y^2=1\) is'
+    A: a hyperboloid of two sheets
+    B: a hyperboloid of one sheet
+    C: an elliptic cone
+    D: an ellipsoid
+    answer: B
+    hint: Look at the pattern of squared terms and signs; find the traces.
+    explanation: "Completing the classification: a hyperboloid of one sheet."
+  383:
+    topic: s12-6
+    question: 'The cylinder \(x^2+y^2=4\) in space is generated by'
+    A: 'a vertical line moving around the circle \(x^2+y^2=4\) in the \(xy\)-plane'
+    B: 'a plane rotating about the \(z\)-axis'
+    C: a sphere of radius 2
+    D: 'a circle moving along the \(z\)-axis in a sphere'
+    answer: A
+    hint: 'The equation has no \(z\).'
+    explanation: 'Every plane \(z=c\) cuts a circle of radius \(2\).'
+  384:
+    topic: s12-6
+    question: 'The equation \(z=y^2-1\) in space represents'
+    A: 'a parabolic cylinder with rulings parallel to the \(x\)-axis'
+    B: 'a parabola in the \(yz\)-plane only'
+    C: a paraboloid of revolution
+    D: a plane
+    answer: A
+    hint: 'The variable \(x\) is missing.'
+    explanation: 'The parabola in the \(yz\)-plane is translated along \(x\).'
+  385:
+    topic: s12-6
+    question: 'The ellipsoid \(x^2+\dfrac{y^2}4+\dfrac{z^2}9=1\) cut by the plane \(z=c\) (\(|c|<3\)) has cross-section of area'
+    A: '\(A(c)=\pi\left(1-\dfrac{c^2}9\right)\)'
+    B: '\(A(c)=2\pi\left(1-\dfrac{c^2}9\right)\)'
+    C: '\(A(c)=2\pi\left(1+\dfrac{c^2}9\right)\)'
+    D: '\(A(c)=2\pi\left(1-\dfrac{c^2}3\right)\)'
+    answer: B
+    hint: 'The slice is an ellipse with semi-axes \(\sqrt{1-c^2/9}\) and \(2\sqrt{1-c^2/9}\).'
+    explanation: 'Area \(=\pi ab\) with \(a=\sqrt{1-c^2/9}\), \(b=2a\).'
+  386:
+    topic: s12-6
+    question: 'The volume of the ellipsoid \(x^2+\dfrac{y^2}4+\dfrac{z^2}9=1\) is'
+    A: '\(\dfrac{8\pi}3\)'
+    B: '\(4\pi\)'
+    C: '\(12\pi\)'
+    D: '\(8\pi\)'
+    answer: D
+    hint: '\(V=\displaystyle\int_{-3}^{3}2\pi\left(1-\dfrac{c^2}9\right)dc\).'
+    explanation: '\(2\pi\cdot4=8\pi\), matching \(\tfrac43\pi abc\) with \(a,b,c=1,2,3\).'
+  387:
+    topic: s12-6
+    question: 'The volume of the ellipsoid \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1\) is'
+    A: '\(\dfrac43\pi(a+b+c)\)'
+    B: '\(\pi abc\)'
+    C: '\(\dfrac{4}{3}\pi a^2b\)'
+    D: '\(\dfrac43\pi abc\), which gives \(\dfrac43\pi a^3\) for a sphere'
+    answer: D
+    hint: 'Integrate the cross-sectional area \(\pi ab\left(1-\dfrac{z^2}{c^2}\right)\) from \(-c\) to \(c\).'
+    explanation: '\(\pi ab\cdot\dfrac{4c}3\).'
+  388:
+    topic: s12-6
+    question: 'A barrel of height \(2h\), midsection radius \(R\) and end radius \(r\) is shaped like an ellipsoid piece. Its volume is'
+    A: '\(V=\dfrac{4\pi hR^2}3\)'
+    B: '\(V=2\pi hR^2\)'
+    C: '\(V=\dfrac{\pi h}{3}\left(2R^2+r^2\right)\)'
+    D: '\(V=\dfrac{2\pi h}3\left(2R^2+r^2\right)\)'
+    answer: D
+    hint: 'Check the cylinder case \(r=R\): the volume should be \(2\pi hR^2\).'
+    explanation: 'For \(r=R\): \(\tfrac{2\pi h}3\cdot3R^2=2\pi hR^2\); for \(r=0\), \(h=R\): \(\tfrac{4\pi R^3}3\) (a sphere).'
+  389:
+    topic: s12-6
+    question: 'The volume of the segment cut from the paraboloid \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=\dfrac zc\) by the plane \(z=h\) equals'
+    A: the base area times the altitude
+    B: '\(\pi abh\)'
+    C: one-third of the base area times the altitude
+    D: 'half the base area times the altitude: \(\dfrac12\cdot\pi ab\,\dfrac hc\cdot h\)'
+    answer: D
+    hint: 'The cross-section at height \(z\) has area \(\pi ab\dfrac zc\).'
+    explanation: '\(\displaystyle\int_0^h\pi ab\dfrac zc\,dz=\dfrac{\pi abh^2}{2c}\).'
+  390:
+    topic: s12-6
+    question: 'The volume bounded by the hyperboloid \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}-\dfrac{z^2}{c^2}=1\) and the planes \(z=0\), \(z=h\) is'
+    A: '\(\pi ab\left(h+\dfrac{h^3}{3c^2}\right)\)'
+    B: '\(\pi ab\left(h-\dfrac{h^3}{3c^2}\right)\)'
+    C: '\(\pi abh\)'
+    D: '\(\dfrac{\pi abh^3}{3c^2}\)'
+    answer: A
+    hint: 'The cross-section at height \(z\) is an ellipse of area \(\pi ab\left(1+\dfrac{z^2}{c^2}\right)\).'
+    explanation: 'Integrate from \(0\) to \(h\).'
+  391:
+    topic: s12-6
+    question: 'That hyperboloid volume can be written as \(V=\dfrac h6\left(A_0+4A_m+A_h\right)\), where \(A_m\) is the cross-section area at'
+    A: '\(z=h\)'
+    B: '\(z=0\)'
+    C: 'the middle height \(z=\dfrac h2\)'
+    D: '\(z=\dfrac h3\)'
+    answer: C
+    hint: "This is Simpson's Rule applied to the (quadratic) cross-sectional area function."
+    explanation: 'Simpson''s Rule is exact for polynomials of degree \(\le3\).'
+  392:
+    topic: s12-6
+    question: 'If the hyperbolic paraboloid \(\dfrac{y^2}{b^2}-\dfrac{x^2}{a^2}=\dfrac zc\) is cut by the plane \(y=y_1\), the resulting curve is'
+    A: 'a parabola opening downward (for \(c>0\)) with vertex \(\left(0,y_1,\dfrac{cy_1^2}{b^2}\right)\)'
+    B: 'a parabola opening upward with vertex \((0,y_1,0)\)'
+    C: an ellipse
+    D: a hyperbola
+    answer: A
+    hint: 'Solve for \(z\): \(z=c\left(\dfrac{y_1^2}{b^2}-\dfrac{x^2}{a^2}\right)\).'
+    explanation: '\(z=\dfrac{cy_1^2}{b^2}-\dfrac{c}{a^2}x^2\) is a downward parabola.'
+  393:
+    topic: s12-6
+    question: 'Setting \(z=0\) in \(Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Jz+K=0\) gives'
+    A: 'a curve in the \(xy\)-plane that is a conic section (possibly degenerate)'
+    B: a plane
+    C: a surface
+    D: a straight line always
+    answer: A
+    hint: 'The resulting equation is quadratic in \(x\) and \(y\).'
+    explanation: 'It has the form \(Ax^2+Dxy+By^2+Gx+Hy+K=0\).'
+  394:
+    topic: s12-6
+    question: The trace of a quadric surface in a plane parallel to a coordinate plane is always
+    A: a straight line
+    B: "a conic section (not a coincidence: fixing one variable leaves a second-degree equation in two variables)"
+    C: a parabola
+    D: a circle
+    answer: B
+    hint: Substitute a constant for one variable.
+    explanation: The equation stays quadratic in the remaining two variables.
+  395:
+    topic: s12-6
+    question: The trace of a quadric surface in a plane that is not parallel to a coordinate plane is
+    A: still a conic section (a quadratic equation restricted to a plane stays quadratic)
+    B: a circle only
+    C: always a line
+    D: not defined
+    answer: A
+    hint: Parametrize the plane by two coordinates.
+    explanation: Substituting a linear relation into a quadratic expression gives a quadratic expression.
+  396:
+    topic: s12-6
+    question: 'The surface \(z=x^2+y^2\) has horizontal traces \(z=c\) that are'
+    A: 'ellipses for all \(c\)'
+    B: parabolas
+    C: hyperbolas
+    D: 'circles for \(c>0\) (a single point for \(c=0\), empty for \(c<0\))'
+    answer: D
+    hint: 'Set \(z=c\): \(x^2+y^2=c\).'
+    explanation: A circular paraboloid.
+  397:
+    topic: s12-6
+    question: 'The surface \(z=x^2-y^2\) has the trace \(z=0\) equal to'
+    A: a parabola
+    B: a circle
+    C: a single point
+    D: 'the two lines \(y=\pm x\)'
+    answer: D
+    hint: 'Set \(0=x^2-y^2\).'
+    explanation: '\((x-y)(x+y)=0\); the surface is a saddle.'
+  398:
+    topic: s12-6
+    question: 'The surface \(x^2+y^2-z^2=1\) has horizontal traces \(z=c\) that are'
+    A: 'circles of radius \(\sqrt{1-c^2}\)'
+    B: hyperbolas
+    C: parabolas
+    D: 'circles of radius \(\sqrt{1+c^2}\)'
+    answer: D
+    hint: 'Set \(z=c\): \(x^2+y^2=1+c^2\).'
+    explanation: The surface is connected (one sheet).
+  399:
+    topic: s12-6
+    question: 'The surface \(z^2-x^2-y^2=1\) has horizontal traces \(z=c\) that are'
+    A: hyperbolas
+    B: 'circles for every \(c\)'
+    C: lines
+    D: 'empty for \(|c|<1\), and circles of radius \(\sqrt{c^2-1}\) for \(|c|\ge1\)'
+    answer: D
+    hint: 'Set \(z=c\): \(x^2+y^2=c^2-1\).'
+    explanation: 'Two separate sheets (\(z\ge1\) and \(z\le-1\)).'
+  400:
+    topic: s12-6
+    question: 'The surface \(x^2+y^2=z^2\) has horizontal traces that are'
+    A: 'circles whose radius \(|z|\) grows linearly (a cone), degenerating to a point at \(z=0\)'
+    B: parabolas
+    C: hyperbolas
+    D: circles of constant radius
+    answer: A
+    hint: 'Set \(z=c\).'
+    explanation: '\(x^2+y^2=c^2\).'
+  401:
+    topic: s12-6
+    question: 'The quadric \(z=x^2+y^2\) is called a paraboloid of revolution because'
+    A: it has no axis
+    B: its traces are parabolas only
+    C: it is a cone
+    D: 'it is obtained by revolving the parabola \(z=y^2\) about the \(z\)-axis'
+    answer: D
+    hint: Horizontal traces are circles.
+    explanation: 'Rotation about the \(z\)-axis preserves \(x^2+y^2\).'
+  402:
+    topic: s12-6
+    question: Which of the following is NOT a quadric surface?
+    A: '\(x^2+y^2+z^2=1\)'
+    B: '\(z=\sin x\)'
+    C: '\(z=x^2+y^2\)'
+    D: '\(x^2+y^2=z^2\)'
+    answer: B
+    hint: 'A quadric is a second-degree equation in \(x,y,z\).'
+    explanation: '\(z=\sin x\) is not polynomial.'
+  403:
+    topic: s12-6
+    question: 'The graph of \(4z^2-x^2-y^2=4\) has cross-sections \(z=c\) that are circles when \(|c|\) is'
+    A: any value
+    B: 'exactly \(0\)'
+    C: 'less than \(1\)'
+    D: 'at least \(1\)'
+    answer: D
+    hint: '\(x^2+y^2=4(c^2-1)\).'
+    explanation: The right-hand side must be nonnegative.
+  404:
+    topic: s12-6
+    question: 'The graph of \(x=4-y^2\) is'
+    A: a paraboloid
+    B: a hyperbolic paraboloid
+    C: a parabola only
+    D: 'a parabolic cylinder (a parabola in the \(xy\)-plane extruded along \(z\))'
+    answer: D
+    hint: 'The variable \(z\) is missing.'
+    explanation: 'Each plane \(z=c\) cuts the same parabola.'
+  405:
+    topic: s12-6
+    question: 'The graph of \(yz=1\) is'
+    A: 'a hyperbolic cylinder with rulings parallel to the \(x\)-axis'
+    B: a hyperboloid
+    C: a hyperbolic paraboloid
+    D: a plane
+    answer: A
+    hint: 'The variable \(x\) is missing.'
+    explanation: 'Each plane \(x=c\) cuts the hyperbola \(yz=1\).'
