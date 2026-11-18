@@ -97,6 +97,30 @@ window.CATALOG = {
           description: "Sections 8.1–8.8: Basic integration formulas, integration by parts, partial fractions, trigonometric integrals and substitutions, integral tables, numerical integration, and improper integrals.",
           meta: "465 questions · hints",
           quiz: "chapter-08"
+        },
+        {
+          title: "Chapter 9: Further Applications of Integration",
+          description: "Sections 9.1–9.5: Slope fields and separable equations, first-order linear equations, Euler's method, autonomous equations and phase lines, and applications of first-order equations.",
+          meta: "172 questions · hints",
+          quiz: "chapter-09"
+        },
+        {
+          title: "Chapter 10: Conic Sections and Polar Coordinates",
+          description: "Sections 10.1–10.8: Parabolas, ellipses and hyperbolas, eccentricity and directrices, rotation of axes, parametrized conics and the cycloid, polar coordinates and graphs, areas and lengths in polar coordinates, and conics in polar form.",
+          meta: "411 questions · hints",
+          quiz: "chapter-10"
+        },
+        {
+          title: "Chapter 11: Infinite Sequences and Series",
+          description: "Sections 11.1–11.11: Sequences and their limits, infinite series, the integral, comparison, ratio and root tests, alternating series and absolute convergence, power series, Taylor and Maclaurin series, error estimates, binomial series and applications, and Fourier series.",
+          meta: "618 questions · hints",
+          quiz: "chapter-11"
+        },
+        {
+          title: "Chapter 12: Vectors and the Geometry of Space",
+          description: "Sections 12.1–12.6: Three-dimensional coordinates, vectors, the dot and cross products, lines and planes in space, and cylinders and quadric surfaces.",
+          meta: "405 questions · hints",
+          quiz: "chapter-12"
         }
       ],
       flashcards: []

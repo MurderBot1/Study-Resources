@@ -1,0 +1,4135 @@
+# Chapter 10: Conic Sections and Polar Coordinates
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 10.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 10: Conic Sections and Polar Coordinates"
+description: Parabolas, ellipses and hyperbolas, eccentricity and directrices, rotation of axes, parametrized conics and the cycloid, polar coordinates and graphs, areas and lengths in polar coordinates, and conics in polar form.
+topics:
+  s10-1:
+    title: 10.1 Conic Sections and Quadratic Equations
+  s10-2:
+    title: 10.2 Classifying Conic Sections by Eccentricity
+  s10-3:
+    title: 10.3 Quadratic Equations and Rotations
+  s10-4:
+    title: 10.4 Conics and Parametric Equations; The Cycloid
+  s10-5:
+    title: 10.5 Polar Coordinates
+  s10-6:
+    title: 10.6 Graphing in Polar Coordinates
+  s10-7:
+    title: 10.7 Areas and Lengths in Polar Coordinates
+  s10-8:
+    title: 10.8 Conic Sections in Polar Coordinates
+questions:
+  1:
+    topic: s10-1
+    question: 'Match the parabola \(x^2=2y\) with its description.'
+    A: 'opens upward, focus \(\left(0,2\right)\)'
+    B: 'opens to the right, focus \(\left(\tfrac12,0\right)\)'
+    C: 'opens downward, focus \(\left(0,-\tfrac12\right)\)'
+    D: 'opens upward, focus \(\left(0,\tfrac12\right)\)'
+    answer: D
+    hint: '\(x^2=4py\) with \(4p=2\).'
+    explanation: '\(p=\tfrac12>0\), so it opens upward with focus \((0,p)\).'
+  2:
+    topic: s10-1
+    question: 'Match the parabola \(x^2=-6y\) with its description.'
+    A: 'opens downward, focus \(\left(0,-6\right)\), directrix \(y=6\)'
+    B: 'opens upward, focus \(\left(0,\tfrac32\right)\), directrix \(y=-\tfrac32\)'
+    C: 'opens to the left, focus \(\left(-\tfrac32,0\right)\), directrix \(x=\tfrac32\)'
+    D: 'opens downward, focus \(\left(0,-\tfrac32\right)\), directrix \(y=\tfrac32\)'
+    answer: D
+    hint: '\(4p=-6\).'
+    explanation: '\(p=-\tfrac32\), so the focus is \((0,p)\) and the directrix is \(y=-p\).'
+  3:
+    topic: s10-1
+    question: 'The parabola \(y^2=8x\) has focus and directrix'
+    A: 'focus \((-2,0)\), directrix \(x=2\)'
+    B: 'focus \((2,0)\), directrix \(x=-2\)'
+    C: 'focus \((8,0)\), directrix \(x=-8\)'
+    D: 'focus \((0,2)\), directrix \(y=-2\)'
+    answer: B
+    hint: '\(y^2=4px\).'
+    explanation: '\(4p=8\) gives \(p=2\).'
+  4:
+    topic: s10-1
+    question: 'The parabola \(y^2=-4x\) opens'
+    A: 'to the left, with focus \((-4,0)\)'
+    B: 'to the right, with focus \((1,0)\)'
+    C: 'downward, with focus \((0,-1)\)'
+    D: 'to the left, with focus \((-1,0)\)'
+    answer: D
+    hint: '\(4p=-4\).'
+    explanation: '\(p=-1\).'
+  5:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(y^2=12x\).'
+    A: 'focus \((-3,\ 0)\), directrix \(x=3\)'
+    B: 'focus \((0,\ 3)\), directrix \(y=-3\)'
+    C: 'focus \((3,\ 0)\), directrix \(x=-3\)'
+    D: 'focus \((12,\ 0)\), directrix \(x=-12\)'
+    answer: C
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=12\), so \(p=3\).'
+  6:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(y^2=-2x\).'
+    A: 'focus \((0,\ - \frac{1}{2})\), directrix \(y=\frac{1}{2}\)'
+    B: 'focus \((\frac{1}{2},\ 0)\), directrix \(x=- \frac{1}{2}\)'
+    C: 'focus \((- \frac{1}{2},\ 0)\), directrix \(x=\frac{1}{2}\)'
+    D: 'focus \((-2,\ 0)\), directrix \(x=2\)'
+    answer: C
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=-2\), so \(p=- \frac{1}{2}\).'
+  7:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(x^2=6y\).'
+    A: 'focus \((0,\ \frac{3}{2})\), directrix \(y=- \frac{3}{2}\)'
+    B: 'focus \((\frac{3}{2},\ 0)\), directrix \(x=- \frac{3}{2}\)'
+    C: 'focus \((0,\ 6)\), directrix \(y=-6\)'
+    D: 'focus \((0,\ - \frac{3}{2})\), directrix \(y=\frac{3}{2}\)'
+    answer: A
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=6\), so \(p=\frac{3}{2}\).'
+  8:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(x^2=-8y\).'
+    A: 'focus \((0,\ -2)\), directrix \(y=2\)'
+    B: 'focus \((0,\ -8)\), directrix \(y=8\)'
+    C: 'focus \((0,\ 2)\), directrix \(y=-2\)'
+    D: 'focus \((-2,\ 0)\), directrix \(x=2\)'
+    answer: A
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=-8\), so \(p=-2\).'
+  9:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(y^2=4x\).'
+    A: 'focus \((0,\ 1)\), directrix \(y=-1\)'
+    B: 'focus \((1,\ 0)\), directrix \(x=-1\)'
+    C: 'focus \((-1,\ 0)\), directrix \(x=1\)'
+    D: 'focus \((4,\ 0)\), directrix \(x=-4\)'
+    answer: B
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=4\), so \(p=1\).'
+  10:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(x^2=-4y\).'
+    A: 'focus \((0,\ -1)\), directrix \(y=1\)'
+    B: 'focus \((0,\ 1)\), directrix \(y=-1\)'
+    C: 'focus \((-1,\ 0)\), directrix \(x=1\)'
+    D: 'focus \((0,\ -4)\), directrix \(y=4\)'
+    answer: A
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=-4\), so \(p=-1\).'
+  11:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(y=4x^2\).'
+    A: 'focus \((0,\ \frac{1}{4})\), directrix \(y=- \frac{1}{4}\)'
+    B: 'focus \((0,\ \frac{1}{16})\), directrix \(y=- \frac{1}{16}\)'
+    C: 'focus \((\frac{1}{16},\ 0)\), directrix \(x=- \frac{1}{16}\)'
+    D: 'focus \((0,\ - \frac{1}{16})\), directrix \(y=\frac{1}{16}\)'
+    answer: B
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=\frac{1}{4}\), so \(p=\frac{1}{16}\).'
+  12:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(y=-8x^2\).'
+    A: 'focus \((0,\ - \frac{1}{32})\), directrix \(y=\frac{1}{32}\)'
+    B: 'focus \((0,\ \frac{1}{32})\), directrix \(y=- \frac{1}{32}\)'
+    C: 'focus \((0,\ - \frac{1}{8})\), directrix \(y=\frac{1}{8}\)'
+    D: 'focus \((- \frac{1}{32},\ 0)\), directrix \(x=\frac{1}{32}\)'
+    answer: A
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=- \frac{1}{8}\), so \(p=- \frac{1}{32}\).'
+  13:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(x=-3y^2\).'
+    A: 'focus \((\frac{1}{12},\ 0)\), directrix \(x=- \frac{1}{12}\)'
+    B: 'focus \((0,\ - \frac{1}{12})\), directrix \(y=\frac{1}{12}\)'
+    C: 'focus \((- \frac{1}{3},\ 0)\), directrix \(x=\frac{1}{3}\)'
+    D: 'focus \((- \frac{1}{12},\ 0)\), directrix \(x=\frac{1}{12}\)'
+    answer: D
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=- \frac{1}{3}\), so \(p=- \frac{1}{12}\).'
+  14:
+    topic: s10-1
+    question: 'Find the focus and directrix of the parabola \(x=2y^2\).'
+    A: 'focus \((0,\ \frac{1}{8})\), directrix \(y=- \frac{1}{8}\)'
+    B: 'focus \((\frac{1}{2},\ 0)\), directrix \(x=- \frac{1}{2}\)'
+    C: 'focus \((\frac{1}{8},\ 0)\), directrix \(x=- \frac{1}{8}\)'
+    D: 'focus \((- \frac{1}{8},\ 0)\), directrix \(x=\frac{1}{8}\)'
+    answer: C
+    hint: 'Write it as \(y^2=4px\) or \(x^2=4py\) and read off \(p\).'
+    explanation: 'Here \(4p=\frac{1}{2}\), so \(p=\frac{1}{8}\).'
+  15:
+    topic: s10-1
+    question: 'The foci of the ellipse \(16x^2+25y^2=400\) are'
+    A: '\((3,\ 0)\) and \((-3,\ 0)\)'
+    B: '\((0,\ 3)\) and \((0,\ -3)\)'
+    C: '\((9,\ 0)\) and \((-9,\ 0)\)'
+    D: '\((\sqrt{41},\ 0)\) and \((- \sqrt{41},\ 0)\)'
+    answer: A
+    hint: 'Divide to get standard form \(\dfrac{x^2}{25}+\dfrac{y^2}{16}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=25\), \(b^2=16\), \(c=3\). The major axis is along the \(x\)-axis.'
+  16:
+    topic: s10-1
+    question: 'The foci of the ellipse \(7x^2+16y^2=112\) are'
+    A: '\((3,\ 0)\) and \((-3,\ 0)\)'
+    B: '\((\sqrt{23},\ 0)\) and \((- \sqrt{23},\ 0)\)'
+    C: '\((9,\ 0)\) and \((-9,\ 0)\)'
+    D: '\((0,\ 3)\) and \((0,\ -3)\)'
+    answer: A
+    hint: 'Divide to get standard form \(\dfrac{x^2}{16}+\dfrac{y^2}{7}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=16\), \(b^2=7\), \(c=3\). The major axis is along the \(x\)-axis.'
+  17:
+    topic: s10-1
+    question: 'The foci of the ellipse \(2x^2+y^2=2\) are'
+    A: '\((0,\ \sqrt{3})\) and \((0,\ - \sqrt{3})\)'
+    B: '\((0,\ 1)\) and \((0,\ -1)\)'
+    C: '\((1,\ 0)\) and \((-1,\ 0)\)'
+    D: '\((0,\ \sqrt{2})\) and \((0,\ - \sqrt{2})\)'
+    answer: B
+    hint: 'Divide to get standard form \(\dfrac{x^2}{1}+\dfrac{y^2}{2}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=2\), \(b^2=1\), \(c=1\). The major axis is along the \(y\)-axis.'
+  18:
+    topic: s10-1
+    question: 'The foci of the ellipse \(2x^2+y^2=4\) are'
+    A: '\((\sqrt{2},\ 0)\) and \((- \sqrt{2},\ 0)\)'
+    B: '\((0,\ \sqrt{2})\) and \((0,\ - \sqrt{2})\)'
+    C: '\((0,\ 2)\) and \((0,\ -2)\)'
+    D: '\((0,\ \sqrt{6})\) and \((0,\ - \sqrt{6})\)'
+    answer: B
+    hint: 'Divide to get standard form \(\dfrac{x^2}{2}+\dfrac{y^2}{4}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=4\), \(b^2=2\), \(c=\sqrt{2}\). The major axis is along the \(y\)-axis.'
+  19:
+    topic: s10-1
+    question: 'The foci of the ellipse \(3x^2+2y^2=6\) are'
+    A: '\((0,\ \sqrt{5})\) and \((0,\ - \sqrt{5})\)'
+    B: '\((0,\ 1)\) and \((0,\ -1)\)'
+    C: '\((0,\ \sqrt{3})\) and \((0,\ - \sqrt{3})\)'
+    D: '\((1,\ 0)\) and \((-1,\ 0)\)'
+    answer: B
+    hint: 'Divide to get standard form \(\dfrac{x^2}{2}+\dfrac{y^2}{3}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=3\), \(b^2=2\), \(c=1\). The major axis is along the \(y\)-axis.'
+  20:
+    topic: s10-1
+    question: 'The foci of the ellipse \(9x^2+10y^2=90\) are'
+    A: '\((\sqrt{19},\ 0)\) and \((- \sqrt{19},\ 0)\)'
+    B: '\((0,\ 1)\) and \((0,\ -1)\)'
+    C: '\((\sqrt{10},\ 0)\) and \((- \sqrt{10},\ 0)\)'
+    D: '\((1,\ 0)\) and \((-1,\ 0)\)'
+    answer: D
+    hint: 'Divide to get standard form \(\dfrac{x^2}{10}+\dfrac{y^2}{9}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=10\), \(b^2=9\), \(c=1\). The major axis is along the \(x\)-axis.'
+  21:
+    topic: s10-1
+    question: 'The foci of the ellipse \(6x^2+9y^2=54\) are'
+    A: '\((0,\ \sqrt{3})\) and \((0,\ - \sqrt{3})\)'
+    B: '\((\sqrt{3},\ 0)\) and \((- \sqrt{3},\ 0)\)'
+    C: '\((3,\ 0)\) and \((-3,\ 0)\)'
+    D: '\((\sqrt{15},\ 0)\) and \((- \sqrt{15},\ 0)\)'
+    answer: B
+    hint: 'Divide to get standard form \(\dfrac{x^2}{9}+\dfrac{y^2}{6}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=9\), \(b^2=6\), \(c=\sqrt{3}\). The major axis is along the \(x\)-axis.'
+  22:
+    topic: s10-1
+    question: 'The foci of the ellipse \(169x^2+25y^2=4225\) are'
+    A: '\((0,\ \sqrt{194})\) and \((0,\ - \sqrt{194})\)'
+    B: '\((12,\ 0)\) and \((-12,\ 0)\)'
+    C: '\((0,\ 144)\) and \((0,\ -144)\)'
+    D: '\((0,\ 12)\) and \((0,\ -12)\)'
+    answer: D
+    hint: 'Divide to get standard form \(\dfrac{x^2}{25}+\dfrac{y^2}{169}=1\); then \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=169\), \(b^2=25\), \(c=12\). The major axis is along the \(y\)-axis.'
+  23:
+    topic: s10-1
+    question: 'The vertices of the ellipse \(16x^2+25y^2=400\) are'
+    A: '\((4,\ 0)\) and \((-4,\ 0)\)'
+    B: '\((5,\ 0)\) and \((-5,\ 0)\)'
+    C: '\((25,\ 0)\) and \((-25,\ 0)\)'
+    D: '\((0,\ 5)\) and \((0,\ -5)\)'
+    answer: B
+    hint: 'Vertices lie at distance \(a\) (the larger semi-axis) from the center.'
+    explanation: '\(a=\sqrt{25}=5\).'
+  24:
+    topic: s10-1
+    question: 'The vertices of the ellipse \(6x^2+9y^2=54\) are'
+    A: '\((0,\ 3)\) and \((0,\ -3)\)'
+    B: '\((\sqrt{6},\ 0)\) and \((- \sqrt{6},\ 0)\)'
+    C: '\((9,\ 0)\) and \((-9,\ 0)\)'
+    D: '\((3,\ 0)\) and \((-3,\ 0)\)'
+    answer: D
+    hint: 'Vertices lie at distance \(a\) (the larger semi-axis) from the center.'
+    explanation: '\(a=\sqrt{9}=3\).'
+  25:
+    topic: s10-1
+    question: 'The vertices of the ellipse \(169x^2+25y^2=4225\) are'
+    A: '\((13,\ 0)\) and \((-13,\ 0)\)'
+    B: '\((0,\ 169)\) and \((0,\ -169)\)'
+    C: '\((0,\ 13)\) and \((0,\ -13)\)'
+    D: '\((0,\ 5)\) and \((0,\ -5)\)'
+    answer: C
+    hint: 'Vertices lie at distance \(a\) (the larger semi-axis) from the center.'
+    explanation: '\(a=\sqrt{169}=13\).'
+  26:
+    topic: s10-1
+    question: 'An ellipse centered at the origin has foci \(\left(\pm\sqrt2,0\right)\) and vertices \((\pm2,0)\). Its equation is'
+    A: '\(\dfrac{x^2}{4}+\dfrac{y^2}{2}=1\)'
+    B: '\(\dfrac{x^2}{2}+\dfrac{y^2}{4}=1\)'
+    C: '\(\dfrac{x^2}{4}+\dfrac{y^2}{6}=1\)'
+    D: '\(\dfrac{x^2}{4}+y^2=1\)'
+    answer: A
+    hint: '\(a=2\), \(c=\sqrt2\), and \(b^2=a^2-c^2\).'
+    explanation: '\(b^2=4-2=2\).'
+  27:
+    topic: s10-1
+    question: 'An ellipse centered at the origin has foci \((0,\pm4)\) and vertices \((0,\pm5)\). Its equation is'
+    A: '\(\dfrac{x^2}{9}+\dfrac{y^2}{25}=1\)'
+    B: '\(\dfrac{x^2}{16}+\dfrac{y^2}{25}=1\)'
+    C: '\(\dfrac{x^2}{41}+\dfrac{y^2}{25}=1\)'
+    D: '\(\dfrac{x^2}{25}+\dfrac{y^2}{9}=1\)'
+    answer: A
+    hint: '\(a=5\) (along \(y\)), \(c=4\).'
+    explanation: '\(b^2=25-16=9\).'
+  28:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(x^2-y^2=1\) are'
+    A: '\((1,\ 0)\) and \((-1,\ 0)\)'
+    B: '\((\sqrt{2},\ 0)\) and \((- \sqrt{2},\ 0)\)'
+    C: '\((0,\ 0)\) and \((0,\ 0)\)'
+    D: '\((0,\ \sqrt{2})\) and \((0,\ - \sqrt{2})\)'
+    answer: B
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=1\), \(b^2=1\), so \(c=\sqrt{2}\).'
+  29:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(9x^2-16y^2=144\) are'
+    A: '\((4,\ 0)\) and \((-4,\ 0)\)'
+    B: '\((\sqrt{7},\ 0)\) and \((- \sqrt{7},\ 0)\)'
+    C: '\((0,\ 5)\) and \((0,\ -5)\)'
+    D: '\((5,\ 0)\) and \((-5,\ 0)\)'
+    answer: D
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=16\), \(b^2=9\), so \(c=5\).'
+  30:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(y^2-x^2=8\) are'
+    A: '\((4,\ 0)\) and \((-4,\ 0)\)'
+    B: '\((0,\ 2 \sqrt{2})\) and \((0,\ - 2 \sqrt{2})\)'
+    C: '\((0,\ 4)\) and \((0,\ -4)\)'
+    D: '\((0,\ 0)\) and \((0,\ 0)\)'
+    answer: C
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=8\), \(b^2=8\), so \(c=4\).'
+  31:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(y^2-x^2=4\) are'
+    A: '\((0,\ 2 \sqrt{2})\) and \((0,\ - 2 \sqrt{2})\)'
+    B: '\((0,\ 0)\) and \((0,\ 0)\)'
+    C: '\((0,\ 2)\) and \((0,\ -2)\)'
+    D: '\((2 \sqrt{2},\ 0)\) and \((- 2 \sqrt{2},\ 0)\)'
+    answer: A
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=4\), \(b^2=4\), so \(c=2 \sqrt{2}\).'
+  32:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(8x^2-2y^2=16\) are'
+    A: '\((\sqrt{2},\ 0)\) and \((- \sqrt{2},\ 0)\)'
+    B: '\((\sqrt{10},\ 0)\) and \((- \sqrt{10},\ 0)\)'
+    C: '\((0,\ \sqrt{10})\) and \((0,\ - \sqrt{10})\)'
+    D: '\((\sqrt{6},\ 0)\) and \((- \sqrt{6},\ 0)\)'
+    answer: B
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=2\), \(b^2=8\), so \(c=\sqrt{10}\).'
+  33:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(y^2-3x^2=3\) are'
+    A: '\((2,\ 0)\) and \((-2,\ 0)\)'
+    B: '\((0,\ \sqrt{3})\) and \((0,\ - \sqrt{3})\)'
+    C: '\((0,\ \sqrt{2})\) and \((0,\ - \sqrt{2})\)'
+    D: '\((0,\ 2)\) and \((0,\ -2)\)'
+    answer: D
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=3\), \(b^2=1\), so \(c=2\).'
+  34:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(8y^2-2x^2=16\) are'
+    A: '\((0,\ \sqrt{2})\) and \((0,\ - \sqrt{2})\)'
+    B: '\((0,\ \sqrt{10})\) and \((0,\ - \sqrt{10})\)'
+    C: '\((\sqrt{10},\ 0)\) and \((- \sqrt{10},\ 0)\)'
+    D: '\((0,\ \sqrt{6})\) and \((0,\ - \sqrt{6})\)'
+    answer: B
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=2\), \(b^2=8\), so \(c=\sqrt{10}\).'
+  35:
+    topic: s10-1
+    question: 'The foci of the hyperbola \(64x^2-36y^2=2304\) are'
+    A: '\((6,\ 0)\) and \((-6,\ 0)\)'
+    B: '\((2 \sqrt{7},\ 0)\) and \((- 2 \sqrt{7},\ 0)\)'
+    C: '\((0,\ 10)\) and \((0,\ -10)\)'
+    D: '\((10,\ 0)\) and \((-10,\ 0)\)'
+    answer: D
+    hint: 'Standard form first; for a hyperbola \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=36\), \(b^2=64\), so \(c=10\).'
+  36:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(9x^2-16y^2=144\) are'
+    A: '\(y=\pm \frac{4}{3}x\)'
+    B: '\(y=\pm \frac{3}{4}x\)'
+    C: '\(y=\pm \frac{3}{2}x\)'
+    D: '\(y=\pm \frac{3}{8}x\)'
+    answer: B
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=16\), \(b^2=9\); slope \(=\frac{3}{4}\).'
+  37:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(y^2-x^2=8\) are'
+    A: '\(y=\pm \frac{1}{2}x\)'
+    B: '\(y=\pm x\)'
+    C: '\(y=\pm 2x\)'
+    D: '\(y=\pm 8x\)'
+    answer: B
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=8\), \(b^2=8\); slope \(=1\).'
+  38:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(8x^2-2y^2=16\) are'
+    A: '\(y=\pm 2x\)'
+    B: '\(y=\pm \frac{1}{2}x\)'
+    C: '\(y=\pm x\)'
+    D: '\(y=\pm 4x\)'
+    answer: A
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=2\), \(b^2=8\); slope \(=2\).'
+  39:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(y^2-3x^2=3\) are'
+    A: '\(y=\pm \frac{\sqrt{3}}{3}x\)'
+    B: '\(y=\pm 2 \sqrt{3}x\)'
+    C: '\(y=\pm \sqrt{3}x\)'
+    D: '\(y=\pm \frac{\sqrt{3}}{2}x\)'
+    answer: C
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=3\), \(b^2=1\); slope \(=\sqrt{3}\).'
+  40:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(8y^2-2x^2=16\) are'
+    A: '\(y=\pm \frac{1}{2}x\)'
+    B: '\(y=\pm 2x\)'
+    C: '\(y=\pm x\)'
+    D: '\(y=\pm \frac{1}{4}x\)'
+    answer: A
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=2\), \(b^2=8\); slope \(=\frac{1}{2}\).'
+  41:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(64x^2-36y^2=2304\) are'
+    A: '\(y=\pm \frac{8}{3}x\)'
+    B: '\(y=\pm \frac{3}{4}x\)'
+    C: '\(y=\pm \frac{4}{3}x\)'
+    D: '\(y=\pm \frac{2}{3}x\)'
+    answer: C
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=36\), \(b^2=64\); slope \(=\frac{4}{3}\).'
+  42:
+    topic: s10-1
+    question: 'The asymptotes of the hyperbola \(9x^2-4y^2=36\) are'
+    A: '\(y=\pm \frac{3}{2}x\)'
+    B: '\(y=\pm \frac{2}{3}x\)'
+    C: '\(y=\pm \frac{3}{4}x\)'
+    D: '\(y=\pm 3x\)'
+    answer: A
+    hint: 'For \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) they are \(y=\pm\dfrac bax\); for \(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\) they are \(y=\pm\dfrac abx\).'
+    explanation: '\(a^2=4\), \(b^2=9\); slope \(=\frac{3}{2}\).'
+  43:
+    topic: s10-1
+    question: 'A hyperbola centered at the origin has foci \(\left(0,\pm\sqrt2\right)\) and asymptotes \(y=\pm x\). Its equation is'
+    A: '\(x^2-y^2=1\)'
+    B: '\(y^2-x^2=1\)'
+    C: '\(y^2-x^2=2\)'
+    D: '\(\dfrac{y^2}{2}-\dfrac{x^2}{2}=1\)'
+    answer: B
+    hint: '\(a=b\) (slopes \(\pm1\)) and \(c^2=a^2+b^2=2\).'
+    explanation: 'So \(a^2=b^2=1\), and the foci are on the \(y\)-axis.'
+  44:
+    topic: s10-1
+    question: 'A hyperbola centered at the origin has foci \((\pm2,0)\) and asymptotes \(y=\pm\dfrac1{\sqrt3}x\). Its equation is'
+    A: '\(\dfrac{x^2}{4}-y^2=1\)'
+    B: '\(x^2-\dfrac{y^2}{3}=1\)'
+    C: '\(\dfrac{x^2}{3}-y^2=1\)'
+    D: '\(\dfrac{x^2}{3}-\dfrac{y^2}{3}=1\)'
+    answer: C
+    hint: '\(\dfrac ba=\dfrac1{\sqrt3}\) and \(c^2=4=a^2+b^2\).'
+    explanation: '\(a^2+\tfrac{a^2}3=4\), so \(a^2=3\), \(b^2=1\).'
+  45:
+    topic: s10-1
+    question: 'A hyperbola has vertices \((\pm3,0)\) and asymptotes \(y=\pm\dfrac43x\). Its equation is'
+    A: '\(\dfrac{x^2}{16}-\dfrac{y^2}{9}=1\)'
+    B: '\(\dfrac{x^2}{9}-\dfrac{y^2}{4}=1\)'
+    C: '\(\dfrac{x^2}{9}-\dfrac{y^2}{7}=1\)'
+    D: '\(\dfrac{x^2}{9}-\dfrac{y^2}{16}=1\)'
+    answer: D
+    hint: '\(a=3\) and \(\dfrac ba=\dfrac43\).'
+    explanation: '\(b=4\).'
+  46:
+    topic: s10-1
+    question: 'A hyperbola has vertices \((0,\pm2)\) and asymptotes \(y=\pm\dfrac12x\). Its equation is'
+    A: '\(\dfrac{x^2}{4}-\dfrac{y^2}{16}=1\)'
+    B: '\(\dfrac{y^2}{4}-\dfrac{x^2}{1}=1\)'
+    C: '\(\dfrac{y^2}{4}-\dfrac{x^2}{4}=1\)'
+    D: '\(\dfrac{y^2}{4}-\dfrac{x^2}{16}=1\)'
+    answer: D
+    hint: 'For a vertical hyperbola the asymptote slope is \(\dfrac ab\).'
+    explanation: '\(\dfrac2b=\dfrac12\) gives \(b=4\).'
+  47:
+    topic: s10-1
+    question: 'The parabola \(y^2=8x\) is shifted down 2 and right 1 to \((y+2)^2=8(x-1)\). Its new focus and directrix are'
+    A: 'focus \((2,0)\), directrix \(x=-2\)'
+    B: 'focus \((1,-2)\), directrix \(x=-3\)'
+    C: 'focus \((3,2)\), directrix \(x=1\)'
+    D: 'focus \((3,-2)\), directrix \(x=-1\)'
+    answer: D
+    hint: 'Shift the original focus \((2,0)\) and directrix \(x=-2\) by \((+1,-2)\).'
+    explanation: 'Vertex \((1,-2)\); \(p=2\), so focus \((3,-2)\) and directrix \(x=1-2=-1\).'
+  48:
+    topic: s10-1
+    question: 'The parabola \(x^2=-4y\) is shifted left 1 and up 3 to \((x+1)^2=-4(y-3)\). Its new vertex, focus and directrix are'
+    A: 'vertex \((1,-3)\), focus \((1,-4)\), directrix \(y=-2\)'
+    B: 'vertex \((-1,3)\), focus \((-1,2)\), directrix \(y=4\)'
+    C: 'vertex \((-1,3)\), focus \((-1,4)\), directrix \(y=2\)'
+    D: 'vertex \((-1,3)\), focus \((-1,-1)\), directrix \(y=7\)'
+    answer: B
+    hint: 'Shift the original vertex \((0,0)\), focus \((0,-1)\), directrix \(y=1\) by \((-1,+3)\).'
+    explanation: 'Vertex \((-1,3)\), focus \((-1,2)\), directrix \(y=4\).'
+  49:
+    topic: s10-1
+    question: 'The ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}9=1\) is shifted right 4 and up 3. Its new center and foci are'
+    A: 'center \((4,3)\), foci \(\left(4\pm\sqrt7,\,3\right)\)'
+    B: 'center \((-4,-3)\), foci \(\left(-4\pm\sqrt7,\,-3\right)\)'
+    C: 'center \((4,3)\), foci \((4\pm5,\,3)\)'
+    D: 'center \((4,3)\), foci \(\left(4,\,3\pm\sqrt7\right)\)'
+    answer: A
+    hint: '\(c^2=16-9=7\); shift the old foci \((\pm\sqrt7,0)\) by \((4,3)\).'
+    explanation: The major axis stays horizontal.
+  50:
+    topic: s10-1
+    question: 'The ellipse \(\dfrac{x^2}9+\dfrac{y^2}{25}=1\) is shifted 3 left and 2 down. Its new center and foci are'
+    A: 'center \((-3,-2)\), foci \((-3,\,2)\) and \((-3,\,-6)\)'
+    B: 'center \((-3,-2)\), foci \((-3,\,2)\) and \((-3,\,-2)\)'
+    C: 'center \((-3,-2)\), foci \((1,-2)\) and \((-7,-2)\)'
+    D: 'center \((3,2)\), foci \((3,6)\) and \((3,-2)\)'
+    answer: A
+    hint: '\(c^2=25-9=16\); the foci are \(4\) above and below the center.'
+    explanation: 'Foci \((-3,-2\pm4)\).'
+  51:
+    topic: s10-1
+    question: 'The hyperbola \(\dfrac{x^2}{16}-\dfrac{y^2}9=1\) is shifted 2 units right. Its new foci and asymptotes are'
+    A: 'foci \((7,0)\) and \((-3,0)\); asymptotes \(y=\pm\dfrac34(x-2)\)'
+    B: 'foci \((7,0)\) and \((-3,0)\); asymptotes \(y=\pm\dfrac43(x-2)\)'
+    C: 'foci \((5,0)\) and \((-5,0)\); asymptotes \(y=\pm\dfrac34x\)'
+    D: 'foci \((3,0)\) and \((-7,0)\); asymptotes \(y=\pm\dfrac34(x+2)\)'
+    answer: A
+    hint: 'Original foci \((\pm5,0)\).'
+    explanation: 'Shifting by \(+2\): \((7,0)\) and \((-3,0)\).'
+  52:
+    topic: s10-1
+    question: 'The hyperbola \(\dfrac{y^2}4-\dfrac{x^2}5=1\) is shifted down 2. Its new center, vertices and foci are'
+    A: 'center \((0,-2)\), vertices \((0,0),(0,-4)\), foci \((\pm3,-2)\)'
+    B: 'center \((0,-2)\), vertices \((0,0),(0,-4)\), foci \((0,1),(0,-5)\)'
+    C: 'center \((0,-2)\), vertices \((0,2),(0,-6)\), foci \((0,1),(0,-5)\)'
+    D: 'center \((0,2)\), vertices \((0,4),(0,0)\), foci \((0,5),(0,-1)\)'
+    answer: B
+    hint: '\(c^2=4+5=9\).'
+    explanation: 'Original vertices \((0,\pm2)\) and foci \((0,\pm3)\), all shifted down 2.'
+  53:
+    topic: s10-1
+    question: 'The parabola \(y^2=4x\) is moved left 2 and down 3. Its new equation is'
+    A: '\((y-3)^2=4(x-2)\)'
+    B: '\((y+3)^2=4(x+2)\)'
+    C: '\((y-2)^2=4(x+3)\)'
+    D: '\((y+3)^2=4(x-2)\)'
+    answer: B
+    hint: 'Replace \(x\) by \(x+2\) and \(y\) by \(y+3\).'
+    explanation: 'Moving left \(2\) means \(x\to x+2\); down \(3\) means \(y\to y+3\).'
+  54:
+    topic: s10-1
+    question: 'The ellipse \(\dfrac{x^2}6+\dfrac{y^2}9=1\) is shifted left 2 and down 1. Its new equation is'
+    A: '\(\dfrac{(x+2)^2}6+\dfrac{(y+1)^2}9=1\)'
+    B: '\(\dfrac{(x+1)^2}6+\dfrac{(y+2)^2}9=1\)'
+    C: '\(\dfrac{(x+2)^2}9+\dfrac{(y+1)^2}6=1\)'
+    D: '\(\dfrac{(x-2)^2}6+\dfrac{(y-1)^2}9=1\)'
+    answer: A
+    hint: 'Left \(2\): replace \(x\) with \(x+2\).'
+    explanation: 'Down \(1\): replace \(y\) with \(y+1\).'
+  55:
+    topic: s10-1
+    question: 'The graph of \(x^2+4x+y^2=12\) is'
+    A: 'a circle with center \((-2,0)\) and radius \(16\)'
+    B: 'a circle with center \((2,0)\) and radius \(4\)'
+    C: 'an ellipse with center \((-2,0)\)'
+    D: 'a circle with center \((-2,0)\) and radius \(4\)'
+    answer: D
+    hint: 'Complete the square in \(x\).'
+    explanation: '\((x+2)^2+y^2=16\).'
+  56:
+    topic: s10-1
+    question: 'The graph of \(2x^2+2y^2-28x+12y+114=0\) is'
+    A: 'a circle with center \((7,-3)\) and radius \(2\)'
+    B: 'a circle with center \((-7,3)\) and radius \(1\)'
+    C: 'a circle with center \((7,-3)\) and radius \(1\)'
+    D: 'a circle with center \((14,-6)\) and radius \(1\)'
+    answer: C
+    hint: Divide by 2 and complete the square.
+    explanation: '\(x^2+y^2-14x+6y+57=0\) gives \((x-7)^2+(y+3)^2=1\).'
+  57:
+    topic: s10-1
+    question: 'The graph of \(x^2+2x+4y-3=0\) is'
+    A: 'a parabola with vertex \((1,-1)\) and focus \((1,-2)\)'
+    B: 'a parabola with vertex \((-1,1)\) and focus \((-1,2)\)'
+    C: 'a circle with center \((-1,1)\)'
+    D: 'a parabola with vertex \((-1,1)\) and focus \((-1,0)\)'
+    answer: D
+    hint: '\((x+1)^2=4-4y\).'
+    explanation: '\((x+1)^2=-4(y-1)\): \(p=-1\), so the focus is \((-1,1-1)=(-1,0)\).'
+  58:
+    topic: s10-1
+    question: 'The graph of \(y^2-4y-8x-12=0\) is'
+    A: 'a parabola with vertex \((-2,2)\) and focus \((-2,4)\)'
+    B: 'a parabola with vertex \((2,-2)\) and focus \((4,-2)\)'
+    C: 'a parabola with vertex \((-2,2)\) and focus \((0,2)\)'
+    D: 'a parabola with vertex \((-2,2)\) and focus \((-4,2)\)'
+    answer: C
+    hint: '\((y-2)^2=8x+16\).'
+    explanation: '\((y-2)^2=8(x+2)\): \(p=2\), so the focus is \((-2+2,2)=(0,2)\).'
+  59:
+    topic: s10-1
+    question: 'The graph of \(x^2+5y^2+4x=1\) is an ellipse with center and foci'
+    A: 'center \((-2,0)\), foci \((0,0)\) and \((-4,0)\)'
+    B: 'center \((-2,0)\), foci \((-2,\pm2)\)'
+    C: 'center \((-2,0)\), foci \((-2\pm\sqrt5,0)\)'
+    D: 'center \((2,0)\), foci \((4,0)\) and \((0,0)\)'
+    answer: A
+    hint: '\((x+2)^2+5y^2=5\).'
+    explanation: '\(\dfrac{(x+2)^2}5+y^2=1\): \(c^2=5-1=4\).'
+  60:
+    topic: s10-1
+    question: 'The graph of \(9x^2+6y^2+36y=0\) is an ellipse with center and foci'
+    A: 'center \((0,-3)\), foci \(\left(\pm\sqrt3,-3\right)\)'
+    B: 'center \((0,-3)\), foci \(\left(0,-3\pm\sqrt3\right)\)'
+    C: 'center \((0,-6)\), foci \(\left(0,-6\pm\sqrt3\right)\)'
+    D: 'center \((0,3)\), foci \(\left(0,3\pm\sqrt3\right)\)'
+    answer: B
+    hint: '\(9x^2+6(y+3)^2=54\).'
+    explanation: '\(\dfrac{x^2}6+\dfrac{(y+3)^2}9=1\): \(c^2=9-6=3\), major axis vertical.'
+  61:
+    topic: s10-1
+    question: 'The graph of \(x^2+2y^2-2x-4y=-1\) is an ellipse with center and foci'
+    A: 'center \((-1,-1)\), foci \((-2,-1)\) and \((0,-1)\)'
+    B: 'center \((1,1)\), foci \((1\pm\sqrt2,1)\)'
+    C: 'center \((1,1)\), foci \((1,0)\) and \((1,2)\)'
+    D: 'center \((1,1)\), foci \((0,1)\) and \((2,1)\)'
+    answer: D
+    hint: '\((x-1)^2+2(y-1)^2=2\).'
+    explanation: '\(\dfrac{(x-1)^2}2+(y-1)^2=1\): \(c^2=2-1=1\).'
+  62:
+    topic: s10-1
+    question: 'The graph of \(4x^2+y^2+8x-2y=-1\) is an ellipse with center and foci'
+    A: 'center \((1,-1)\), foci \(\left(1,-1\pm\sqrt3\right)\)'
+    B: 'center \((-1,1)\), foci \(\left(-1\pm\sqrt3,1\right)\)'
+    C: 'center \((-1,1)\), foci \(\left(-1,1\pm\sqrt3\right)\)'
+    D: 'center \((-1,1)\), foci \((-1,1\pm2)\)'
+    answer: C
+    hint: '\(4(x+1)^2+(y-1)^2=4\).'
+    explanation: '\((x+1)^2+\dfrac{(y-1)^2}4=1\): \(c^2=4-1=3\).'
+  63:
+    topic: s10-1
+    question: 'The graph of \(x^2-y^2-2x+4y=6\) is a hyperbola with center and asymptotes'
+    A: 'center \((1,2)\), asymptotes \(y-2=\pm(x-1)\)'
+    B: 'center \((1,-2)\), asymptotes \(y+2=\pm(x-1)\)'
+    C: 'center \((-1,-2)\), asymptotes \(y+2=\pm(x+1)\)'
+    D: 'center \((1,2)\), asymptotes \(y-2=\pm2(x-1)\)'
+    answer: A
+    hint: '\((x-1)^2-(y-2)^2=3\).'
+    explanation: '\(a^2=b^2=3\), so the asymptote slopes are \(\pm1\).'
+  64:
+    topic: s10-1
+    question: 'The graph of \(x^2-y^2+4x-6y=6\) is a hyperbola with center'
+    A: '\((2,3)\)'
+    B: '\((-2,-3)\)'
+    C: '\((-2,3)\)'
+    D: '\((4,6)\)'
+    answer: B
+    hint: Complete both squares.
+    explanation: '\((x+2)^2-(y+3)^2=1\).'
+  65:
+    topic: s10-1
+    question: 'The graph of \(2x^2-y^2+6y=3\) is a hyperbola with center and foci'
+    A: 'center \((0,3)\), foci \((0,0)\) and \((0,6)\)'
+    B: 'center \((0,-3)\), foci \((0,0)\) and \((0,-6)\)'
+    C: 'center \((0,3)\), foci \((0,3\pm\sqrt6)\)'
+    D: 'center \((0,3)\), foci \((\pm3,3)\)'
+    answer: A
+    hint: '\(2x^2-(y-3)^2=-6\).'
+    explanation: '\(\dfrac{(y-3)^2}6-\dfrac{x^2}3=1\): \(c^2=9\).'
+  66:
+    topic: s10-1
+    question: 'The graph of \(y^2-4x^2+16x=24\) is a hyperbola with center'
+    A: '\((-2,0)\)'
+    B: '\((4,0)\)'
+    C: '\((0,2)\)'
+    D: '\((2,0)\)'
+    answer: D
+    hint: '\(-4(x^2-4x)=-4(x-2)^2+16\).'
+    explanation: '\(y^2-4(x-2)^2=8\).'
+  67:
+    topic: s10-1
+    question: 'The circle through \((1,0)\), \((0,1)\) and \((2,2)\) has equation'
+    A: '\(x^2+y^2-\dfrac73x-\dfrac73y+\dfrac43=0\)'
+    B: '\(x^2+y^2-\dfrac73x-\dfrac73y-\dfrac43=0\)'
+    C: '\(x^2+y^2+\dfrac73x+\dfrac73y+\dfrac43=0\)'
+    D: '\(x^2+y^2-x-y=0\)'
+    answer: A
+    hint: 'Use \(x^2+y^2+Dx+Ey+F=0\) and substitute the three points.'
+    explanation: '\(1+D+F=0\), \(1+E+F=0\), \(8+2D+2E+F=0\) give \(D=E=-\tfrac73\), \(F=\tfrac43\).'
+  68:
+    topic: s10-1
+    question: 'The circle through \((2,3)\), \((3,2)\) and \((-4,3)\) has equation'
+    A: '\((x-1)^2+(y-1)^2=25\)'
+    B: '\((x+1)^2+(y+1)^2=25\)'
+    C: '\((x+1)^2+(y+1)^2=5\)'
+    D: '\(x^2+y^2=13\)'
+    answer: B
+    hint: 'The center lies on \(y=x\) and on \(x=-1\) (perpendicular bisectors).'
+    explanation: 'Center \((-1,-1)\); radius \(\sqrt{3^2+4^2}=5\).'
+  69:
+    topic: s10-1
+    question: 'The circle centered at \((-2,1)\) through \((1,3)\) has equation \((x+2)^2+(y-1)^2=13\). The point \((1.1,2.8)\) is'
+    A: on the circle
+    B: the center
+    C: outside the circle
+    D: inside the circle
+    answer: D
+    hint: 'Compare \((x+2)^2+(y-1)^2\) with \(13\).'
+    explanation: '\(3.1^2+1.8^2=12.85<13\).'
+  70:
+    topic: s10-1
+    question: 'The circle \((x-2)^2+(y-1)^2=5\) crosses the coordinate axes at \((0,0)\), \((0,2)\) and \((4,0)\). The tangent line at \((0,0)\) is'
+    A: '\(y=-\dfrac x2\)'
+    B: '\(y=\dfrac x2\)'
+    C: '\(y=2x\)'
+    D: '\(y=-2x\)'
+    answer: D
+    hint: 'The tangent is perpendicular to the radius from \((2,1)\).'
+    explanation: 'The radius has slope \(\tfrac12\); the tangent slope is \(-2\).'
+  71:
+    topic: s10-1
+    question: 'For that circle, the tangent line at \((0,2)\) is'
+    A: '\(y=2x+2\)'
+    B: '\(y=2x-2\)'
+    C: '\(y=-2x+2\)'
+    D: '\(y=\dfrac x2+2\)'
+    answer: A
+    hint: 'Radius from \((2,1)\) to \((0,2)\) has slope \(-\tfrac12\).'
+    explanation: 'The tangent slope is \(2\) and passes through \((0,2)\).'
+  72:
+    topic: s10-1
+    question: 'For that circle, the tangent line at \((4,0)\) is'
+    A: '\(y=2x-8\)'
+    B: '\(y=\dfrac x2-2\)'
+    C: '\(y=2x+8\)'
+    D: '\(y=-2x+8\)'
+    answer: A
+    hint: 'Radius from \((2,1)\) to \((4,0)\) has slope \(-\tfrac12\).'
+    explanation: 'Tangent slope \(2\) through \((4,0)\): \(y=2(x-4)\).'
+  73:
+    topic: s10-1
+    question: 'The set of points satisfying \(9x^2+16y^2\le144\) is'
+    A: 'the region inside and on the ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}9=1\)'
+    B: 'the region outside the ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}9=1\)'
+    C: 'the region inside the ellipse \(\dfrac{x^2}{9}+\dfrac{y^2}{16}=1\)'
+    D: the region between two ellipses
+    answer: A
+    hint: Divide by 144.
+    explanation: '\(\dfrac{x^2}{16}+\dfrac{y^2}9\le1\).'
+  74:
+    topic: s10-1
+    question: 'The set of points with \(x^2+y^2\ge1\) and \(4x^2+y^2\le4\) is'
+    A: 'the part of the elliptical region \(x^2+\dfrac{y^2}4\le1\) outside the unit disk'
+    B: the part of the unit disk outside the ellipse
+    C: the whole ellipse
+    D: the exterior of both curves
+    answer: A
+    hint: 'The ellipse \(x^2+\tfrac{y^2}4=1\) contains the unit circle.'
+    explanation: 'The unit circle touches the ellipse at \((\pm1,0)\).'
+  75:
+    topic: s10-1
+    question: 'The region \(|x^2-y^2|\le1\) lies'
+    A: 'between the hyperbolas \(x^2-y^2=1\) and \(y^2-x^2=1\) (containing the origin)'
+    B: outside both hyperbolas
+    C: 'inside the circle \(x^2+y^2=1\)'
+    D: in the first quadrant only
+    answer: A
+    hint: 'Rewrite as \(-1\le x^2-y^2\le1\).'
+    explanation: 'The boundary curves are two hyperbolas with the same asymptotes \(y=\pm x\).'
+  76:
+    topic: s10-1
+    question: 'Archimedes: the region enclosed by \(y=\dfrac{4h}{b^2}x^2\) and \(y=h\) is revolved about the \(y\)-axis. The volume of the solid, compared with the volume of the cone of base radius \(\tfrac b2\) and height \(h\), is'
+    A: '\(\dfrac32\) as large'
+    B: '\(\dfrac12\) as large'
+    C: '\(2\) times as large'
+    D: the same
+    answer: A
+    hint: '\(V=\pi\displaystyle\int_0^h\dfrac{b^2y}{4h}\,dy\).'
+    explanation: '\(V=\dfrac{\pi b^2h}{8}\) while the cone has \(\dfrac{\pi b^2h}{12}\); the ratio is \(\tfrac32\).'
+  77:
+    topic: s10-1
+    question: 'A suspension-bridge cable satisfies \(\dfrac{dy}{dx}=\dfrac wHx\) with \(y(0)=0\). The cable hangs in the shape'
+    A: '\(y=\dfrac{w}{2H}x^2\), a parabola'
+    B: '\(y=\dfrac{H}{2w}x^2\)'
+    C: '\(y=\dfrac wHx\), a line'
+    D: '\(y=\dfrac wHe^x\)'
+    answer: A
+    hint: Integrate once.
+    explanation: '\(y=\dfrac w{2H}x^2+C\) with \(C=0\).'
+  78:
+    topic: s10-1
+    question: 'The largest-area rectangle with sides parallel to the axes inscribed in the ellipse \(x^2+4y^2=4\) has dimensions and area'
+    A: '\(2\sqrt2\) by \(2\sqrt2\); area \(8\)'
+    B: '\(2\) by \(1\); area \(2\)'
+    C: '\(2\sqrt2\) by \(\sqrt2\); area \(4\)'
+    D: '\(\sqrt2\) by \(\sqrt2\); area \(2\)'
+    answer: C
+    hint: 'Maximize \(4xy\) subject to \(x^2+4y^2=4\).'
+    explanation: 'At the maximum \(x^2=4y^2=2\), so \(x=\sqrt2\), \(y=\tfrac{\sqrt2}{2}\); area \(4xy=4\).'
+  79:
+    topic: s10-1
+    question: 'The solid generated by revolving the ellipse \(9x^2+4y^2=36\) about the \(x\)-axis has volume'
+    A: '\(12\pi\)'
+    B: '\(16\pi\)'
+    C: '\(24\pi\)'
+    D: '\(36\pi\)'
+    answer: C
+    hint: '\(y^2=9\left(1-\dfrac{x^2}4\right)\); \(V=\pi\displaystyle\int_{-2}^2y^2\,dx\).'
+    explanation: '\(9\pi\left[x-\dfrac{x^3}{12}\right]_{-2}^{2}=24\pi\).'
+  80:
+    topic: s10-1
+    question: 'Revolving the ellipse \(9x^2+4y^2=36\) about the \(y\)-axis gives volume'
+    A: '\(36\pi\)'
+    B: '\(24\pi\)'
+    C: '\(8\pi\)'
+    D: '\(16\pi\)'
+    answer: D
+    hint: '\(x^2=4\left(1-\dfrac{y^2}9\right)\).'
+    explanation: '\(\pi\displaystyle\int_{-3}^3 4\left(1-\dfrac{y^2}9\right)dy=4\pi(6-2)=16\pi\).'
+  81:
+    topic: s10-1
+    question: 'The first-quadrant region bounded by the \(x\)-axis, \(x=4\) and the hyperbola \(9x^2-4y^2=36\) is revolved about the \(x\)-axis. Its volume is'
+    A: '\(\dfrac{32\pi}{3}\)'
+    B: '\(12\pi\)'
+    C: '\(48\pi\)'
+    D: '\(24\pi\)'
+    answer: D
+    hint: '\(y^2=\dfrac94(x^2-4)\) for \(2\le x\le4\).'
+    explanation: '\(\dfrac{9\pi}4\left[\dfrac{x^3}3-4x\right]_2^4=\dfrac{9\pi}4\cdot\dfrac{32}3=24\pi\).'
+  82:
+    topic: s10-1
+    question: 'The region bounded on the left by the \(y\)-axis, on the right by \(x^2-y^2=1\), and above and below by \(y=\pm3\) is revolved about the \(y\)-axis. The volume is'
+    A: '\(36\pi\)'
+    B: '\(12\pi\)'
+    C: '\(24\pi\)'
+    D: '\(18\pi\)'
+    answer: C
+    hint: 'Disks: \(x^2=1+y^2\).'
+    explanation: '\(\pi\displaystyle\int_{-3}^3(1+y^2)\,dy=\pi(6+18)=24\pi\).'
+  83:
+    topic: s10-1
+    question: 'The centroid of the region bounded below by the \(x\)-axis and above by the ellipse \(\dfrac{x^2}9+\dfrac{y^2}{16}=1\) is at'
+    A: '\(\left(\dfrac{4}{3\pi},0\right)\)'
+    B: '\(\left(0,\dfrac{16}{3\pi}\right)\)'
+    C: '\(\left(0,\dfrac{4}{3\pi}\right)\)'
+    D: '\(\left(0,2\right)\)'
+    answer: B
+    hint: 'By symmetry \(\bar x=0\); for a semi-ellipse with semi-axis \(b\), \(\bar y=\dfrac{4b}{3\pi}\).'
+    explanation: '\(b=4\) gives \(\bar y=\dfrac{16}{3\pi}\approx1.70\).'
+  84:
+    topic: s10-1
+    question: 'The surface generated by revolving \(y=\sqrt{x^2+1}\), \(0\le x\le\sqrt2\) (part of a hyperbola branch), about the \(x\)-axis has area (two decimals)'
+    A: '\(26.28\)'
+    B: '\(19.71\)'
+    C: '\(13.14\)'
+    D: '\(6.57\)'
+    answer: C
+    hint: '\(y\sqrt{1+(y'')^2}=\sqrt{x^2+1}\sqrt{\dfrac{2x^2+1}{x^2+1}}=\sqrt{2x^2+1}\).'
+    explanation: '\(S=2\pi\int_0^{\sqrt2}\sqrt{2x^2+1}\,dx\approx13.14\).'
+  85:
+    topic: s10-1
+    question: 'For a parabola \(y^2=4px\), the tangents at the endpoints of a chord through the focus meet on'
+    A: 'the \(y\)-axis'
+    B: the vertex
+    C: the latus rectum
+    D: 'the directrix \(x=-p\), and are perpendicular'
+    answer: D
+    hint: 'Use implicit differentiation: \(y''=\dfrac{2p}{y}\).'
+    explanation: 'Tangent slopes at the chord endpoints multiply to \(-1\), and they intersect on \(x=-p\).'
+  86:
+    topic: s10-1
+    question: 'The width of the parabola \(x^2=4py\) (\(p>0\)) at the focus (the length of the chord on \(y=p\)) is'
+    A: '\(8p\)'
+    B: '\(4p\)'
+    C: '\(p\)'
+    D: '\(2p\)'
+    answer: B
+    hint: 'Substitute \(y=p\).'
+    explanation: '\(x^2=4p^2\), so \(x=\pm2p\).'
+  87:
+    topic: s10-1
+    question: "In Kepler's string method for drawing a parabola, the pencil traces a parabola because"
+    A: the string length changes as the T-square moves
+    B: the pencil moves in a circle about the focus
+    C: the string forces the pencil to stay equally far from the focus and from the directrix
+    D: the T-square rotates about the focus
+    answer: C
+    hint: Compare the length of the string with the T-square.
+    explanation: 'Since the string length equals the T-square length, \(PF=PB\), the distance to the directrix.'
+  88:
+    topic: s10-1
+    question: The reflective property of a parabola says that a ray from the focus is reflected
+    A: back through the focus
+    B: perpendicular to the axis
+    C: toward the vertex
+    D: parallel to the axis of the parabola
+    answer: D
+    hint: 'At a point \(P\) on the parabola the tangent line bisects the angle between the focal ray and the line parallel to the axis.'
+    explanation: That is why parabolic mirrors collimate light from a source at the focus.
+  89:
+    topic: s10-1
+    question: 'Waves from two ripples at \(A\) and \(B\) have radii growing at the same rate, \(\dfrac{dr_A}{dt}=\dfrac{dr_B}{dt}\). The intersection point \(P\) therefore lies on'
+    A: 'an ellipse with foci \(A\) and \(B\)'
+    B: 'a hyperbola with foci \(A\) and \(B\)'
+    C: 'a circle through \(A\) and \(B\)'
+    D: 'a parabola with focus \(A\)'
+    answer: B
+    hint: 'The difference \(r_A-r_B\) is constant.'
+    explanation: A constant difference of distances to two fixed points defines a hyperbola.
+  90:
+    topic: s10-1
+    question: 'As \(x\to\infty\), the vertical distance \(\dfrac bax-\dfrac ba\sqrt{x^2-a^2}\) between the asymptote and the hyperbola \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) tends to'
+    A: '\(\dfrac ba\)'
+    B: '\(\infty\)'
+    C: '\(0\)'
+    D: '\(\dfrac{b}{2a}\)'
+    answer: C
+    hint: 'Multiply by the conjugate \(\dfrac{x+\sqrt{x^2-a^2}}{x+\sqrt{x^2-a^2}}\).'
+    explanation: '\(x-\sqrt{x^2-a^2}=\dfrac{a^2}{x+\sqrt{x^2-a^2}}\to0\).'
+  91:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(16x^2+25y^2=400\) is'
+    A: '\(\frac{\sqrt{41}}{5}\)'
+    B: '\(\frac{4}{5}\)'
+    C: '\(3\)'
+    D: '\(\frac{3}{5}\)'
+    answer: D
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=25\), \(b^2=16\), so \(e=\frac{3}{5}\).'
+  92:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(7x^2+16y^2=112\) is'
+    A: '\(3\)'
+    B: '\(\frac{3}{4}\)'
+    C: '\(\frac{\sqrt{7}}{4}\)'
+    D: '\(\frac{\sqrt{23}}{4}\)'
+    answer: B
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=16\), \(b^2=7\), so \(e=\frac{3}{4}\).'
+  93:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(2x^2+y^2=2\) is'
+    A: '\(\frac{\sqrt{6}}{2}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\frac{\sqrt{2}}{2}\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=2\), \(b^2=1\), so \(e=\frac{\sqrt{2}}{2}\).'
+  94:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(2x^2+y^2=4\) is'
+    A: '\(\frac{\sqrt{6}}{2}\)'
+    B: '\(\frac{1}{2}\)'
+    C: '\(\frac{\sqrt{2}}{2}\)'
+    D: '\(\sqrt{2}\)'
+    answer: C
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=4\), \(b^2=2\), so \(e=\frac{\sqrt{2}}{2}\).'
+  95:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(3x^2+2y^2=6\) is'
+    A: '\(\frac{\sqrt{15}}{3}\)'
+    B: '\(1\)'
+    C: '\(\frac{\sqrt{6}}{3}\)'
+    D: '\(\frac{\sqrt{3}}{3}\)'
+    answer: D
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=3\), \(b^2=2\), so \(e=\frac{\sqrt{3}}{3}\).'
+  96:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(9x^2+10y^2=90\) is'
+    A: '\(\frac{3 \sqrt{10}}{10}\)'
+    B: '\(\frac{\sqrt{190}}{10}\)'
+    C: '\(\frac{\sqrt{10}}{10}\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=10\), \(b^2=9\), so \(e=\frac{\sqrt{10}}{10}\).'
+  97:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(6x^2+9y^2=54\) is'
+    A: '\(\frac{\sqrt{3}}{3}\)'
+    B: '\(\frac{\sqrt{6}}{3}\)'
+    C: '\(\sqrt{3}\)'
+    D: '\(\frac{\sqrt{15}}{3}\)'
+    answer: A
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=9\), \(b^2=6\), so \(e=\frac{\sqrt{3}}{3}\).'
+  98:
+    topic: s10-2
+    question: 'The eccentricity of the ellipse \(169x^2+25y^2=4225\) is'
+    A: '\(\frac{12}{13}\)'
+    B: '\(\frac{5}{13}\)'
+    C: '\(12\)'
+    D: '\(\frac{\sqrt{194}}{13}\)'
+    answer: A
+    hint: '\(e=\dfrac ca\) where \(c^2=a^2-b^2\).'
+    explanation: '\(a^2=169\), \(b^2=25\), so \(e=\frac{12}{13}\).'
+  99:
+    topic: s10-2
+    question: 'The directrices of the ellipse \(16x^2+25y^2=400\) are'
+    A: '\(x=\pm\frac{25}{3}\)'
+    B: '\(x=\pm3\)'
+    C: '\(x=\pm5\)'
+    D: '\(y=\pm\frac{25}{3}\)'
+    answer: A
+    hint: 'Directrices are at distance \(\dfrac ae\) from the center along the major axis.'
+    explanation: '\(\dfrac ae=\dfrac{a^2}c=\frac{25}{3}\).'
+  100:
+    topic: s10-2
+    question: 'The directrices of the ellipse \(7x^2+16y^2=112\) are'
+    A: '\(x=\pm\frac{16}{3}\)'
+    B: '\(y=\pm\frac{16}{3}\)'
+    C: '\(x=\pm4\)'
+    D: '\(x=\pm3\)'
+    answer: A
+    hint: 'Directrices are at distance \(\dfrac ae\) from the center along the major axis.'
+    explanation: '\(\dfrac ae=\dfrac{a^2}c=\frac{16}{3}\).'
+  101:
+    topic: s10-2
+    question: 'The directrices of the ellipse \(3x^2+2y^2=6\) are'
+    A: '\(x=\pm3\)'
+    B: '\(y=\pm1\)'
+    C: '\(y=\pm3\)'
+    D: '\(y=\pm\sqrt{3}\)'
+    answer: C
+    hint: 'Directrices are at distance \(\dfrac ae\) from the center along the major axis.'
+    explanation: '\(\dfrac ae=\dfrac{a^2}c=3\).'
+  102:
+    topic: s10-2
+    question: 'The directrices of the ellipse \(169x^2+25y^2=4225\) are'
+    A: '\(x=\pm\frac{169}{12}\)'
+    B: '\(y=\pm\frac{169}{12}\)'
+    C: '\(y=\pm12\)'
+    D: '\(y=\pm13\)'
+    answer: B
+    hint: 'Directrices are at distance \(\dfrac ae\) from the center along the major axis.'
+    explanation: '\(\dfrac ae=\dfrac{a^2}c=\frac{169}{12}\).'
+  103:
+    topic: s10-2
+    question: 'Find the ellipse with foci \((0,\pm3)\) and eccentricity \(0.5\).'
+    A: '\(\dfrac{x^2}{36}+\dfrac{y^2}{27}=1\)'
+    B: '\(\dfrac{x^2}{45}+\dfrac{y^2}{36}=1\)'
+    C: '\(\dfrac{x^2}{30}+\dfrac{y^2}{36}=1\)'
+    D: '\(\dfrac{x^2}{27}+\dfrac{y^2}{36}=1\)'
+    answer: D
+    hint: '\(e=\dfrac ca\), so \(a=\dfrac ce\).'
+    explanation: '\(a=6\), \(b^2=36-9=27\).'
+  104:
+    topic: s10-2
+    question: 'Find the ellipse with foci \((\pm8,0)\) and eccentricity \(0.2\).'
+    A: '\(\dfrac{x^2}{1600}+\dfrac{y^2}{1536}=1\)'
+    B: '\(\dfrac{x^2}{1600}+\dfrac{y^2}{1664}=1\)'
+    C: '\(\dfrac{x^2}{1536}+\dfrac{y^2}{1600}=1\)'
+    D: '\(\dfrac{x^2}{1600}+\dfrac{y^2}{1584}=1\)'
+    answer: A
+    hint: '\(a=\dfrac ce=40\).'
+    explanation: '\(b^2=1600-64=1536\).'
+  105:
+    topic: s10-2
+    question: 'Find the ellipse with vertices \((0,\pm70)\) and eccentricity \(0.1\).'
+    A: '\(\dfrac{x^2}{4900}+\dfrac{y^2}{4851}=1\)'
+    B: '\(\dfrac{x^2}{4886}+\dfrac{y^2}{4900}=1\)'
+    C: '\(\dfrac{x^2}{4949}+\dfrac{y^2}{4900}=1\)'
+    D: '\(\dfrac{x^2}{4851}+\dfrac{y^2}{4900}=1\)'
+    answer: D
+    hint: '\(c=ae=7\).'
+    explanation: '\(b^2=4900-49=4851\).'
+  106:
+    topic: s10-2
+    question: 'An ellipse has vertices \((\pm10,0)\) and eccentricity \(0.24\). Its equation is'
+    A: '\(\dfrac{x^2}{100}+\dfrac{y^2}{105.76}=1\)'
+    B: '\(\dfrac{x^2}{100}+\dfrac{y^2}{94.24}=1\)'
+    C: '\(\dfrac{x^2}{94.24}+\dfrac{y^2}{100}=1\)'
+    D: '\(\dfrac{x^2}{100}+\dfrac{y^2}{97.6}=1\)'
+    answer: B
+    hint: '\(c=ae=2.4\).'
+    explanation: '\(b^2=100-5.76=94.24\).'
+  107:
+    topic: s10-2
+    question: 'An ellipse has focus \(\left(\sqrt5,0\right)\) with corresponding directrix \(x=\dfrac9{\sqrt5}\). Its equation is'
+    A: '\(\dfrac{x^2}4+\dfrac{y^2}9=1\)'
+    B: '\(\dfrac{x^2}{14}+\dfrac{y^2}{9}=1\)'
+    C: '\(\dfrac{x^2}{9}+\dfrac{y^2}{5}=1\)'
+    D: '\(\dfrac{x^2}9+\dfrac{y^2}4=1\)'
+    answer: D
+    hint: 'The directrix is at \(x=\dfrac{a^2}c\).'
+    explanation: '\(\dfrac{a^2}{\sqrt5}=\dfrac9{\sqrt5}\) gives \(a^2=9\); \(b^2=9-5=4\).'
+  108:
+    topic: s10-2
+    question: 'An ellipse has focus \((-4,0)\) and corresponding directrix \(x=-16\). Its equation is'
+    A: '\(\dfrac{x^2}{48}+\dfrac{y^2}{64}=1\)'
+    B: '\(\dfrac{x^2}{16}+\dfrac{y^2}{48}=1\)'
+    C: '\(\dfrac{x^2}{64}+\dfrac{y^2}{16}=1\)'
+    D: '\(\dfrac{x^2}{64}+\dfrac{y^2}{48}=1\)'
+    answer: D
+    hint: '\(\dfrac{a^2}c=16\) with \(c=4\).'
+    explanation: '\(a^2=64\), \(b^2=64-16=48\).'
+  109:
+    topic: s10-2
+    question: 'An ellipse has focus \((4,0)\) and corresponding directrix \(x=\dfrac{16}3\). Its equation is'
+    A: '\(\dfrac{3x^2}{16}+\dfrac{3y^2}{64}=1\)'
+    B: '\(\dfrac{3x^2}{64}+\dfrac{3y^2}{16}=1\)'
+    C: '\(\dfrac{x^2}{64}+\dfrac{y^2}{16}=1\)'
+    D: '\(\dfrac{x^2}{16}+\dfrac{y^2}{3}=1\)'
+    answer: B
+    hint: '\(\dfrac{a^2}c=\dfrac{16}3\) with \(c=4\).'
+    explanation: '\(a^2=\dfrac{64}3\), \(b^2=\dfrac{64}3-16=\dfrac{16}3\).'
+  110:
+    topic: s10-2
+    question: 'An ellipse has focus \(\left(-\sqrt2,0\right)\) and directrix \(x=-2\sqrt2\). Its equation is'
+    A: '\(\dfrac{x^2}4+\dfrac{y^2}2=1\)'
+    B: '\(\dfrac{x^2}2+\dfrac{y^2}4=1\)'
+    C: '\(\dfrac{x^2}8+\dfrac{y^2}6=1\)'
+    D: '\(\dfrac{x^2}4+\dfrac{y^2}8=1\)'
+    answer: A
+    hint: '\(a^2=c\cdot2\sqrt2\).'
+    explanation: '\(a^2=\sqrt2\cdot2\sqrt2=4\); \(b^2=4-2=2\).'
+  111:
+    topic: s10-2
+    question: 'The endpoints of the axes of an ellipse are \((1,1)\), \((3,4)\), \((1,7)\), \((-1,4)\). Its equation and eccentricity are'
+    A: '\(\dfrac{(x-1)^2}4+\dfrac{(y-4)^2}9=1\), \(e=\dfrac{\sqrt5}2\)'
+    B: '\(\dfrac{(x-1)^2}4+\dfrac{(y-4)^2}9=1\), \(e=\dfrac23\)'
+    C: '\(\dfrac{(x-1)^2}9+\dfrac{(y-4)^2}4=1\), \(e=\dfrac{\sqrt5}3\)'
+    D: '\(\dfrac{(x-1)^2}4+\dfrac{(y-4)^2}9=1\), \(e=\dfrac{\sqrt5}3\)'
+    answer: D
+    hint: 'The center is the midpoint \((1,4)\); semi-axes are \(2\) (horizontal) and \(3\) (vertical).'
+    explanation: '\(c=\sqrt{9-4}=\sqrt5\), \(e=\dfrac{\sqrt5}3\).'
+  112:
+    topic: s10-2
+    question: The ellipse in that problem has foci and directrices
+    A: 'foci \(\left(1\pm\sqrt5,4\right)\); directrices \(x=1\pm\dfrac9{\sqrt5}\)'
+    B: 'foci \(\left(1,4\pm\sqrt5\right)\); directrices \(y=4\pm\dfrac{3}{\sqrt5}\)'
+    C: 'foci \(\left(1,4\pm\sqrt5\right)\); directrices \(y=4\pm\dfrac9{\sqrt5}\)'
+    D: 'foci \(\left(1,4\pm3\right)\); directrices \(y=4\pm\dfrac9{\sqrt5}\)'
+    answer: C
+    hint: 'Directrices at \(\dfrac{a^2}c\) from the center along the major axis.'
+    explanation: '\(\dfrac{9}{\sqrt5}\).'
+  113:
+    topic: s10-2
+    question: 'Find the ellipse of eccentricity \(\tfrac23\) with directrix \(x=9\) and corresponding focus \((4,0)\).'
+    A: '\(\dfrac{x^2}{36}+\dfrac{y^2}{20}=1\)'
+    B: '\(\dfrac{x^2}{81}+\dfrac{y^2}{45}=1\)'
+    C: '\(\dfrac{x^2}{20}+\dfrac{y^2}{36}=1\)'
+    D: '\(\dfrac{(x-4)^2}{36}+\dfrac{y^2}{20}=1\)'
+    answer: A
+    hint: 'Use \(PF=e\cdot PD\): \(\sqrt{(x-4)^2+y^2}=\tfrac23|x-9|\).'
+    explanation: 'Squaring: \(9(x^2-8x+16+y^2)=4(x^2-18x+81)\), i.e. \(5x^2+9y^2=180\).'
+  114:
+    topic: s10-2
+    question: 'For the ellipse \(4x^2+y^2+ax+by+c=0\) to be tangent to the \(x\)-axis at the origin and pass through \((-1,2)\), the constants are'
+    A: '\(a=0\), \(b=4\), \(c=0\); eccentricity \(\dfrac{\sqrt3}2\)'
+    B: '\(a=-4\), \(b=0\), \(c=0\); eccentricity \(\dfrac12\)'
+    C: '\(a=0\), \(b=-4\), \(c=1\); eccentricity \(\dfrac{\sqrt3}2\)'
+    D: '\(a=0\), \(b=-4\), \(c=0\); eccentricity \(\dfrac{\sqrt3}2\)'
+    answer: D
+    hint: 'At \(y=0\) the equation \(4x^2+ax+c=0\) must have the double root \(x=0\).'
+    explanation: 'So \(a=c=0\); substituting \((-1,2)\): \(4+4+2b=0\), \(b=-4\). Then \(x^2+\dfrac{(y-2)^2}4=1\), \(e=\dfrac{\sqrt3}2\).'
+  115:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(x^2-y^2=1\) is'
+    A: '\(1 + \sqrt{2}\)'
+    B: '\(1\)'
+    C: '\(\sqrt{2}\)'
+    D: '\(\frac{\sqrt{2}}{2}\)'
+    answer: C
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=1\), \(b^2=1\), so \(e=\sqrt{2}\).'
+  116:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(9x^2-16y^2=144\) is'
+    A: '\(5\)'
+    B: '\(\frac{\sqrt{7}}{4}\)'
+    C: '\(\frac{3}{4}\)'
+    D: '\(\frac{5}{4}\)'
+    answer: D
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=16\), \(b^2=9\), so \(e=\frac{5}{4}\).'
+  117:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(y^2-x^2=8\) is'
+    A: '\(4\)'
+    B: '\(1 + \sqrt{2}\)'
+    C: '\(\sqrt{2}\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=8\), \(b^2=8\), so \(e=\sqrt{2}\).'
+  118:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(y^2-x^2=4\) is'
+    A: '\(\sqrt{2}\)'
+    B: '\(1\)'
+    C: '\(1 + \sqrt{2}\)'
+    D: '\(2 \sqrt{2}\)'
+    answer: A
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=4\), \(b^2=4\), so \(e=\sqrt{2}\).'
+  119:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(8x^2-2y^2=16\) is'
+    A: '\(\sqrt{3}\)'
+    B: '\(\sqrt{10}\)'
+    C: '\(2\)'
+    D: '\(\sqrt{5}\)'
+    answer: D
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=2\), \(b^2=8\), so \(e=\sqrt{5}\).'
+  120:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(y^2-3x^2=3\) is'
+    A: '\(\frac{2 \sqrt{3}}{3}\)'
+    B: '\(\frac{\sqrt{6}}{3}\)'
+    C: '\(2\)'
+    D: '\(\frac{\sqrt{3}}{3}\)'
+    answer: A
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=3\), \(b^2=1\), so \(e=\frac{2 \sqrt{3}}{3}\).'
+  121:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(8y^2-2x^2=16\) is'
+    A: '\(2\)'
+    B: '\(\sqrt{3}\)'
+    C: '\(\sqrt{10}\)'
+    D: '\(\sqrt{5}\)'
+    answer: D
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=2\), \(b^2=8\), so \(e=\sqrt{5}\).'
+  122:
+    topic: s10-2
+    question: 'The eccentricity of the hyperbola \(64x^2-36y^2=2304\) is'
+    A: '\(\frac{4}{3}\)'
+    B: '\(\frac{5}{3}\)'
+    C: '\(10\)'
+    D: '\(\frac{\sqrt{7}}{3}\)'
+    answer: B
+    hint: '\(e=\dfrac ca\) with \(c^2=a^2+b^2\).'
+    explanation: '\(a^2=36\), \(b^2=64\), so \(e=\frac{5}{3}\).'
+  123:
+    topic: s10-2
+    question: 'The directrices of the hyperbola \(9x^2-16y^2=144\) are'
+    A: '\(x=\pm4\)'
+    B: '\(y=\pm\frac{16}{5}\)'
+    C: '\(x=\pm5\)'
+    D: '\(x=\pm\frac{16}{5}\)'
+    answer: D
+    hint: 'Directrices are at \(\pm\dfrac ae=\pm\dfrac{a^2}c\) from the center.'
+    explanation: '\(\dfrac{a^2}c=\frac{16}{5}\).'
+  124:
+    topic: s10-2
+    question: 'The directrices of the hyperbola \(y^2-x^2=8\) are'
+    A: '\(y=\pm2 \sqrt{2}\)'
+    B: '\(x=\pm2\)'
+    C: '\(y=\pm4\)'
+    D: '\(y=\pm2\)'
+    answer: D
+    hint: 'Directrices are at \(\pm\dfrac ae=\pm\dfrac{a^2}c\) from the center.'
+    explanation: '\(\dfrac{a^2}c=2\).'
+  125:
+    topic: s10-2
+    question: 'The directrices of the hyperbola \(y^2-3x^2=3\) are'
+    A: '\(y=\pm\frac{3}{2}\)'
+    B: '\(y=\pm2\)'
+    C: '\(y=\pm\sqrt{3}\)'
+    D: '\(x=\pm\frac{3}{2}\)'
+    answer: A
+    hint: 'Directrices are at \(\pm\dfrac ae=\pm\dfrac{a^2}c\) from the center.'
+    explanation: '\(\dfrac{a^2}c=\frac{3}{2}\).'
+  126:
+    topic: s10-2
+    question: 'The directrices of the hyperbola \(64x^2-36y^2=2304\) are'
+    A: '\(y=\pm\frac{18}{5}\)'
+    B: '\(x=\pm10\)'
+    C: '\(x=\pm6\)'
+    D: '\(x=\pm\frac{18}{5}\)'
+    answer: D
+    hint: 'Directrices are at \(\pm\dfrac ae=\pm\dfrac{a^2}c\) from the center.'
+    explanation: '\(\dfrac{a^2}c=\frac{18}{5}\).'
+  127:
+    topic: s10-2
+    question: 'A hyperbola has eccentricity \(3\) and vertices \((0,\pm1)\). Its equation is'
+    A: '\(y^2-\dfrac{x^2}{9}=1\)'
+    B: '\(y^2-\dfrac{x^2}{10}=1\)'
+    C: '\(x^2-\dfrac{y^2}8=1\)'
+    D: '\(y^2-\dfrac{x^2}8=1\)'
+    answer: D
+    hint: '\(a=1\), \(c=ae=3\).'
+    explanation: '\(b^2=c^2-a^2=8\).'
+  128:
+    topic: s10-2
+    question: 'A hyperbola has eccentricity \(2\) and vertices \((\pm2,0)\). Its equation is'
+    A: '\(\dfrac{x^2}4-\dfrac{y^2}{8}=1\)'
+    B: '\(\dfrac{x^2}4-\dfrac{y^2}{4}=1\)'
+    C: '\(\dfrac{x^2}{12}-\dfrac{y^2}4=1\)'
+    D: '\(\dfrac{x^2}4-\dfrac{y^2}{12}=1\)'
+    answer: D
+    hint: '\(c=ae=4\).'
+    explanation: '\(b^2=16-4=12\).'
+  129:
+    topic: s10-2
+    question: 'A hyperbola has eccentricity \(3\) and foci \((\pm3,0)\). Its equation is'
+    A: '\(\dfrac{x^2}9-y^2=1\)'
+    B: '\(\dfrac{x^2}{3}-\dfrac{y^2}{6}=1\)'
+    C: '\(x^2-\dfrac{y^2}8=1\)'
+    D: '\(x^2-\dfrac{y^2}9=1\)'
+    answer: C
+    hint: '\(a=\dfrac ce=1\).'
+    explanation: '\(b^2=9-1=8\).'
+  130:
+    topic: s10-2
+    question: 'A hyperbola has eccentricity \(1.25\) and foci \((0,\pm5)\). Its equation is'
+    A: '\(\dfrac{y^2}{16}-\dfrac{x^2}9=1\)'
+    B: '\(\dfrac{y^2}{20}-\dfrac{x^2}{5}=1\)'
+    C: '\(\dfrac{x^2}{16}-\dfrac{y^2}9=1\)'
+    D: '\(\dfrac{y^2}{9}-\dfrac{x^2}{16}=1\)'
+    answer: A
+    hint: '\(a=\dfrac ce=4\).'
+    explanation: '\(b^2=25-16=9\).'
+  131:
+    topic: s10-2
+    question: 'A hyperbola has focus \((4,0)\) and corresponding directrix \(x=2\). Its equation is'
+    A: '\(\dfrac{x^2}{8}-\dfrac{y^2}{16}=1\)'
+    B: '\(\dfrac{x^2}{16}-\dfrac{y^2}{4}=1\)'
+    C: '\(\dfrac{x^2}8-\dfrac{y^2}8=1\)'
+    D: '\(\dfrac{x^2}2-\dfrac{y^2}{14}=1\)'
+    answer: C
+    hint: '\(\dfrac{a^2}c=2\), \(c=4\).'
+    explanation: '\(a^2=8\), \(b^2=c^2-a^2=8\).'
+  132:
+    topic: s10-2
+    question: 'A hyperbola has focus \((-2,0)\) and corresponding directrix \(x=-\dfrac12\). Its equation is'
+    A: '\(x^2-\dfrac{y^2}{4}=1\)'
+    B: '\(x^2-\dfrac{y^2}{3}=1\)'
+    C: '\(\dfrac{x^2}{3}-y^2=1\)'
+    D: '\(\dfrac{x^2}{4}-\dfrac{y^2}{3}=1\)'
+    answer: B
+    hint: '\(\dfrac{a^2}c=\dfrac12\) with \(c=2\).'
+    explanation: '\(a^2=1\), \(b^2=4-1=3\).'
+  133:
+    topic: s10-2
+    question: 'A hyperbola has focus \((-6,0)\) and corresponding directrix \(x=-2\). Its equation is'
+    A: '\(\dfrac{x^2}{4}-\dfrac{y^2}{32}=1\)'
+    B: '\(\dfrac{x^2}{12}-\dfrac{y^2}{12}=1\)'
+    C: '\(\dfrac{x^2}{12}-\dfrac{y^2}{24}=1\)'
+    D: '\(\dfrac{x^2}{24}-\dfrac{y^2}{12}=1\)'
+    answer: C
+    hint: '\(a^2=c\cdot2=12\).'
+    explanation: '\(b^2=36-12=24\).'
+  134:
+    topic: s10-2
+    question: 'A hyperbola of eccentricity \(\tfrac32\) has a focus at \((1,-3)\) and corresponding directrix \(y=2\). Its equation is'
+    A: '\(\dfrac{(y+6)^2}{36}-\dfrac{(x-1)^2}{45}=1\)'
+    B: '\(\dfrac{(y-6)^2}{36}-\dfrac{(x-1)^2}{45}=1\)'
+    C: '\(\dfrac{(y-6)^2}{45}-\dfrac{(x-1)^2}{36}=1\)'
+    D: '\(\dfrac{(x-1)^2}{36}-\dfrac{(y-6)^2}{45}=1\)'
+    answer: B
+    hint: 'Use \(PF=e\cdot PD\) and complete the square.'
+    explanation: '\(4(x-1)^2+4(y+3)^2=9(y-2)^2\) leads to \(4(x-1)^2-5(y-6)^2=-180\).'
+  135:
+    topic: s10-2
+    question: 'Writing \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) with \(b^2=a^2(e^2-1)\), as the eccentricity \(e\) grows large, the hyperbola'
+    A: does not change shape
+    B: turns into a circle
+    C: 'becomes wider, its branches flatten toward the \(y\)-axis'
+    D: 'becomes narrower, hugging the \(x\)-axis'
+    answer: C
+    hint: 'Asymptote slope \(\dfrac ba=\sqrt{e^2-1}\).'
+    explanation: 'The slope grows with \(e\), so the branches open up wider; as \(e\to1^+\) the branches collapse toward the \(x\)-axis.'
+  136:
+    topic: s10-2
+    question: Light directed at one focus of a hyperbolic mirror is reflected toward the other focus because
+    A: the hyperbola has a vertical tangent there
+    B: the two foci are at equal distances from the point
+    C: the directrix is perpendicular to the ray
+    D: the tangent at the point of reflection bisects the angle between the focal segments
+    answer: D
+    hint: Compare the reflective properties of ellipses and hyperbolas.
+    explanation: The reflection law (angle in equals angle out) holds with respect to the tangent line.
+  137:
+    topic: s10-2
+    question: A confocal ellipse and hyperbola (same foci) cross at their intersection point
+    A: at the focus
+    B: tangentially
+    C: 'at \(45^\circ\)'
+    D: at right angles
+    answer: D
+    hint: Combine the reflective properties of the two conics.
+    explanation: The tangent lines are perpendicular because one bisects the interior focal angle and the other the exterior one.
+  138:
+    topic: s10-2
+    question: 'The orbit of a satellite has \(r_{\max}\) and \(r_{\min}\) as the largest and smallest distances from the attracting focus. The eccentricity of the orbit is'
+    A: '\(\dfrac{r_{\min}}{r_{\max}}\)'
+    B: '\(\dfrac{r_{\max}+r_{\min}}{r_{\max}-r_{\min}}\)'
+    C: '\(\dfrac{r_{\max}-r_{\min}}{2}\)'
+    D: '\(\dfrac{r_{\max}-r_{\min}}{r_{\max}+r_{\min}}\)'
+    answer: D
+    hint: '\(r_{\max}=a+c\) and \(r_{\min}=a-c\).'
+    explanation: '\(\dfrac{(a+c)-(a-c)}{(a+c)+(a-c)}=\dfrac{2c}{2a}=e\).'
+  139:
+    topic: s10-2
+    question: 'To draw an ellipse of eccentricity \(0.2\) with a 10-in. string looped between two pins, the pins should be'
+    A: '\(2\) in. apart'
+    B: '\(5\) in. apart'
+    C: '\(4\) in. apart'
+    D: '\(1\) in. apart'
+    answer: A
+    hint: 'The string length is \(2a\) when pins are \(2c\) apart (for a taut-pencil construction).'
+    explanation: '\(2a=10\), \(a=5\), \(c=ae=1\); the foci are \(2c=2\) in. apart.'
+  140:
+    topic: s10-3
+    question: 'The equation \(x^2-3xy+y^2-x=0\) represents'
+    A: a parabola
+    B: a pair of intersecting lines
+    C: an ellipse (or circle)
+    D: a hyperbola
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=5\).'
+  141:
+    topic: s10-3
+    question: 'The equation \(3x^2-18xy+27y^2-5x+7y=-4\) represents'
+    A: a pair of intersecting lines
+    B: an ellipse (or circle)
+    C: a hyperbola
+    D: a parabola
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=0\).'
+  142:
+    topic: s10-3
+    question: 'The equation \(3x^2-7xy+\sqrt{17}y^2=1\) represents'
+    A: an ellipse (or circle)
+    B: a hyperbola
+    C: a parabola
+    D: a pair of intersecting lines
+    answer: A
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=49 - 12 \sqrt{17}\approx-0.477\).'
+  143:
+    topic: s10-3
+    question: 'The equation \(2x^2-\sqrt{15}xy+2y^2+x+y=0\) represents'
+    A: a hyperbola
+    B: a pair of intersecting lines
+    C: an ellipse (or circle)
+    D: a parabola
+    answer: C
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=-1\).'
+  144:
+    topic: s10-3
+    question: 'The equation \(x^2+2xy+y^2+2x-y+2=0\) represents'
+    A: a parabola
+    B: a hyperbola
+    C: an ellipse (or circle)
+    D: a pair of intersecting lines
+    answer: A
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=0\).'
+  145:
+    topic: s10-3
+    question: 'The equation \(2x^2-y^2+4xy-2x+3y=6\) represents'
+    A: an ellipse (or circle)
+    B: a parabola
+    C: a pair of intersecting lines
+    D: a hyperbola
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=24\).'
+  146:
+    topic: s10-3
+    question: 'The equation \(x^2+4xy+4y^2-3x=6\) represents'
+    A: an ellipse (or circle)
+    B: a pair of intersecting lines
+    C: a parabola
+    D: a hyperbola
+    answer: C
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=0\).'
+  147:
+    topic: s10-3
+    question: 'The equation \(x^2+y^2+3x-2y=10\) represents'
+    A: a parabola
+    B: a hyperbola
+    C: an ellipse (or circle)
+    D: a pair of intersecting lines
+    answer: C
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=-4\).'
+  148:
+    topic: s10-3
+    question: 'The equation \(xy+y^2-3x=5\) represents'
+    A: a pair of intersecting lines
+    B: a parabola
+    C: a hyperbola
+    D: an ellipse (or circle)
+    answer: C
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=1\).'
+  149:
+    topic: s10-3
+    question: 'The equation \(3x^2+6xy+3y^2-4x+5y=12\) represents'
+    A: a pair of intersecting lines
+    B: a hyperbola
+    C: a parabola
+    D: an ellipse (or circle)
+    answer: C
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=0\).'
+  150:
+    topic: s10-3
+    question: 'The equation \(3x^2-5xy+2y^2-7x-14y=-1\) represents'
+    A: a hyperbola
+    B: a parabola
+    C: a pair of intersecting lines
+    D: an ellipse (or circle)
+    answer: A
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=1\).'
+  151:
+    topic: s10-3
+    question: 'The equation \(2x^2-4.9xy+3y^2-4x=7\) represents'
+    A: a pair of intersecting lines
+    B: a parabola
+    C: an ellipse (or circle)
+    D: a hyperbola
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=\frac{1}{100}\).'
+  152:
+    topic: s10-3
+    question: 'The equation \(x^2-3xy+3y^2+6y=7\) represents'
+    A: a parabola
+    B: an ellipse (or circle)
+    C: a hyperbola
+    D: a pair of intersecting lines
+    answer: B
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=-3\).'
+  153:
+    topic: s10-3
+    question: 'The equation \(25x^2+21xy+4y^2-350x=0\) represents'
+    A: a parabola
+    B: a pair of intersecting lines
+    C: an ellipse (or circle)
+    D: a hyperbola
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=41\).'
+  154:
+    topic: s10-3
+    question: 'The equation \(6x^2+3xy+2y^2+17y+2=0\) represents'
+    A: a parabola
+    B: a pair of intersecting lines
+    C: a hyperbola
+    D: an ellipse (or circle)
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=-39\).'
+  155:
+    topic: s10-3
+    question: 'The equation \(3x^2+12xy+12y^2+435x-9y+72=0\) represents'
+    A: an ellipse (or circle)
+    B: a hyperbola
+    C: a pair of intersecting lines
+    D: a parabola
+    answer: D
+    hint: 'Compute the discriminant \(B^2-4AC\): negative gives an ellipse, zero a parabola, positive a hyperbola.'
+    explanation: '\(B^2-4AC=0\).'
+  156:
+    topic: s10-3
+    question: 'To remove the \(xy\)-term from \(xy=2\), rotate the axes through'
+    A: '\(45^\circ\), giving \(x''^2-y''^2=4\)'
+    B: '\(45^\circ\), giving \(x''^2+y''^2=4\)'
+    C: '\(90^\circ\), giving \(y''^2-x''^2=2\)'
+    D: '\(30^\circ\), giving \(x''^2-y''^2=4\)'
+    answer: A
+    hint: '\(\tan2\alpha=\dfrac{B}{A-C}\), undefined when \(A=C\) (so \(2\alpha=90^\circ\)).'
+    explanation: 'With \(x=\tfrac{x''-y''}{\sqrt2}\), \(y=\tfrac{x''+y''}{\sqrt2}\): \(xy=\tfrac{x''^2-y''^2}2=2\). The graph is a hyperbola.'
+  157:
+    topic: s10-3
+    question: 'Rotate the axes through \(45^\circ\) to remove the \(xy\)-term in \(x^2+xy+y^2=1\). The new equation is'
+    A: '\(3x''^2-y''^2=2\), a hyperbola'
+    B: '\(\dfrac{3x''^2}2+\dfrac{y''^2}2=2\), an ellipse'
+    C: '\(3x''^2+y''^2=2\), an ellipse'
+    D: '\(x''^2+3y''^2=2\), an ellipse'
+    answer: C
+    hint: 'When \(A=C\), \(\alpha=45^\circ\); use \(A''=A\cos^2\alpha+B\sin\alpha\cos\alpha+C\sin^2\alpha\).'
+    explanation: '\(A''=\tfrac32\), \(C''=\tfrac12\), so \(\tfrac32x''^2+\tfrac12y''^2=1\).'
+  158:
+    topic: s10-3
+    question: 'To remove the \(xy\)-term from \(3x^2+2\sqrt3xy+y^2-8x+8\sqrt3y=0\), rotate through'
+    A: '\(\alpha=45^\circ\); the graph is a hyperbola'
+    B: '\(\alpha=30^\circ\); the graph is an ellipse'
+    C: '\(\alpha=60^\circ\); the graph is a parabola'
+    D: '\(\alpha=30^\circ\) (since \(\tan2\alpha=\sqrt3\)); the graph is a parabola'
+    answer: D
+    hint: '\(\tan2\alpha=\dfrac{B}{A-C}=\dfrac{2\sqrt3}{2}\).'
+    explanation: '\(B^2-4AC=12-12=0\); the new equation is \(4x''^2+16y''=0\).'
+  159:
+    topic: s10-3
+    question: 'The equation \(x^2-\sqrt3xy+2y^2=1\) becomes free of the \(xy\)-term after rotating the axes through'
+    A: '\(45^\circ\)'
+    B: '\(30^\circ\)'
+    C: '\(60^\circ\)'
+    D: '\(15^\circ\)'
+    answer: B
+    hint: '\(\tan2\alpha=\dfrac{B}{A-C}=\dfrac{-\sqrt3}{-1}=\sqrt3\).'
+    explanation: '\(2\alpha=60^\circ\), so \(\alpha=30^\circ\); the graph is an ellipse (\(B^2-4AC=3-8<0\)).'
+  160:
+    topic: s10-3
+    question: 'After rotating the axes through \(45^\circ\), the equation \(3x^2+2xy+3y^2=19\) becomes'
+    A: '\(4x''^2-2y''^2=19\), a hyperbola'
+    B: '\(6x''^2=19\), a pair of lines'
+    C: '\(4x''^2+2y''^2=19\), an ellipse'
+    D: '\(2x''^2+4y''^2=19\), an ellipse'
+    answer: C
+    hint: '\(A=C\) forces \(\alpha=45^\circ\).'
+    explanation: '\(A''=\tfrac32+1+\tfrac32=4\), \(C''=\tfrac32-1+\tfrac32=2\).'
+  161:
+    topic: s10-3
+    question: 'After rotating through \(30^\circ\), the equation \(3x^2+4\sqrt3xy-y^2=7\) becomes'
+    A: '\(5x''^2+3y''^2=7\), an ellipse'
+    B: '\(5x''^2-3y''^2=7\), a hyperbola'
+    C: '\(2x''^2=7\), a parabola'
+    D: '\(3x''^2-5y''^2=7\), a hyperbola'
+    answer: B
+    hint: '\(\tan2\alpha=\dfrac{4\sqrt3}{4}=\sqrt3\).'
+    explanation: '\(A''=\tfrac94+3-\tfrac14=5\), \(C''=\tfrac34-3-\tfrac34=-3\).'
+  162:
+    topic: s10-3
+    question: 'To eliminate the cross-product term from \(14x^2+16xy+2y^2-10x+26370y-17=0\), rotate through an angle \(\alpha\) in Quadrant I with'
+    A: '\(\cos\alpha=\dfrac2{\sqrt5}\), \(\sin\alpha=\dfrac1{\sqrt5}\)'
+    B: '\(\cos\alpha=\dfrac1{\sqrt5}\), \(\sin\alpha=\dfrac2{\sqrt5}\)'
+    C: '\(\cos\alpha=\dfrac45\), \(\sin\alpha=\dfrac35\)'
+    D: '\(\cos\alpha=\dfrac35\), \(\sin\alpha=\dfrac45\)'
+    answer: A
+    hint: '\(\tan2\alpha=\dfrac{16}{14-2}=\dfrac43\), so \(\cos2\alpha=\dfrac35\).'
+    explanation: '\(\cos\alpha=\sqrt{\dfrac{1+3/5}2}=\dfrac2{\sqrt5}\) and \(\sin\alpha=\dfrac1{\sqrt5}\).'
+  163:
+    topic: s10-3
+    question: 'To eliminate the cross-product term from \(4x^2-4xy+y^2-8\sqrt5x-16\sqrt5y=0\), rotate through an angle in Quadrant II with'
+    A: '\(\sin\alpha=\dfrac2{\sqrt5}\), \(\cos\alpha=\dfrac1{\sqrt5}\)'
+    B: '\(\sin\alpha=\dfrac45\), \(\cos\alpha=-\dfrac35\)'
+    C: '\(\sin\alpha=\dfrac1{\sqrt5}\), \(\cos\alpha=-\dfrac2{\sqrt5}\)'
+    D: '\(\sin\alpha=\dfrac2{\sqrt5}\), \(\cos\alpha=-\dfrac1{\sqrt5}\)'
+    answer: C
+    hint: '\(\tan2\alpha=\dfrac{B}{A-C}=\dfrac{-4}{3}\) with \(2\alpha\) in Quadrant IV.'
+    explanation: '\(\cos2\alpha=\dfrac35\) gives \(\cos^2\alpha=\dfrac45\); in Quadrant II \(\cos\alpha<0\).'
+  164:
+    topic: s10-3
+    question: 'A \(90^\circ\) rotation about the origin carries the ellipse \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\) (\(a>b\)) to'
+    A: '\(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)'
+    B: '\(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)'
+    C: '\(\dfrac{x^2}{b^2}+\dfrac{y^2}{a^2}=1\)'
+    D: '\(\dfrac{y^2}{b^2}-\dfrac{x^2}{a^2}=1\)'
+    answer: C
+    hint: 'A \(90^\circ\) rotation swaps the roles of \(x\) and \(y\) (up to sign).'
+    explanation: The major axis becomes vertical.
+  165:
+    topic: s10-3
+    question: 'A \(90^\circ\) rotation about the origin carries the hyperbola \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) to'
+    A: '\(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)'
+    B: '\(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)'
+    C: '\(\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\)'
+    D: '\(\dfrac{x^2}{b^2}-\dfrac{y^2}{a^2}=1\)'
+    answer: C
+    hint: 'Replace \((x,y)\) by \((y,-x)\).'
+    explanation: The branches now open upward and downward.
+  166:
+    topic: s10-3
+    question: 'A \(90^\circ\) rotation takes the line \(y=mx\) (\(m\ne0\)) to'
+    A: '\(y=-\dfrac1mx\)'
+    B: '\(y=mx\)'
+    C: '\(y=\dfrac1mx\)'
+    D: '\(y=-mx\)'
+    answer: A
+    hint: The new line is perpendicular to the old one.
+    explanation: 'The slopes multiply to \(-1\).'
+  167:
+    topic: s10-3
+    question: 'A \(180^\circ\) rotation about the origin takes the line \(y=mx+b\) to'
+    A: '\(y=mx-b\)'
+    B: '\(y=-mx-b\)'
+    C: '\(y=mx+b\)'
+    D: '\(y=-mx+b\)'
+    answer: A
+    hint: 'Replace \((x,y)\) by \((-x,-y)\).'
+    explanation: '\(-y=-mx+b\), so \(y=mx-b\).'
+  168:
+    topic: s10-3
+    question: 'A \(180^\circ\) rotation about the origin leaves each of the following unchanged: the ellipse \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\), the hyperbola \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\), the circle \(x^2+y^2=a^2\), and'
+    A: 'the line \(y=mx+b\) (\(b\ne0\))'
+    B: no other graph
+    C: 'the line \(y=mx\)'
+    D: 'the parabola \(y=x^2\)'
+    answer: C
+    hint: 'Replace \((x,y)\) by \((-x,-y)\) in each equation.'
+    explanation: 'The first three involve only \(x^2\) and \(y^2\); \(y=mx\) maps to itself, but \(y=mx+b\) becomes \(y=mx-b\).'
+  169:
+    topic: s10-3
+    question: 'The hyperbola \(xy=a\) (\(a>0\)) has eccentricity'
+    A: '\(\dfrac{\sqrt2}2\)'
+    B: '\(2\)'
+    C: '\(\sqrt2\)'
+    D: '\(1\)'
+    answer: C
+    hint: 'Rotating through \(45^\circ\) gives \(x''^2-y''^2=2a\), a hyperbola with equal semi-axes.'
+    explanation: 'For \(a^2=b^2\): \(c=\sqrt2a\), \(e=\sqrt2\).'
+  170:
+    topic: s10-3
+    question: 'After a \(45^\circ\) rotation, \(xy=a\) becomes'
+    A: '\(x''^2-y''^2=a\)'
+    B: '\(2x''^2-y''^2=a\)'
+    C: '\(x''^2+y''^2=2a\)'
+    D: '\(x''^2-y''^2=2a\)'
+    answer: D
+    hint: '\(xy=\dfrac{x''^2-y''^2}2\).'
+    explanation: 'So \(\dfrac{x''^2-y''^2}2=a\).'
+  171:
+    topic: s10-3
+    question: 'The ellipse \(Ax^2+Bxy+Cy^2=1\) with \(B^2-4AC<0\) has area'
+    A: '\(\dfrac{\pi}{\sqrt{4AC-B^2}}\)'
+    B: '\(\dfrac{2\pi}{\sqrt{AC}}\)'
+    C: '\(\dfrac{2\pi}{4AC-B^2}\)'
+    D: '\(\dfrac{2\pi}{\sqrt{4AC-B^2}}\)'
+    answer: D
+    hint: 'Rotate to remove \(xy\): the area is \(\pi ab=\dfrac{\pi}{\sqrt{A''C''}}\) and \(4A''C''=4AC-B^2\).'
+    explanation: '\(\dfrac{\pi}{\sqrt{A''C''}}=\dfrac{2\pi}{\sqrt{4A''C''}}\).'
+  172:
+    topic: s10-3
+    question: Under any rotation of the axes about the origin, which quantities are invariant?
+    A: '\(A-C\) and \(D\)'
+    B: 'only \(A\) and \(C\) separately'
+    C: 'only \(B\)'
+    D: '\(B^2-4AC\), \(A+C\), and \(D^2+E^2\)'
+    answer: D
+    hint: 'Use the rotation equations for \(A'', B'', C'', D'', E''\).'
+    explanation: Each of these combinations is unchanged; the type of conic therefore does not depend on the rotation.
+  173:
+    topic: s10-3
+    question: 'If \(AC<0\) in \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\), then the graph (if it is a nondegenerate conic) is'
+    A: a hyperbola
+    B: a circle
+    C: a parabola
+    D: an ellipse
+    answer: A
+    hint: '\(B^2-4AC>B^2\ge0\).'
+    explanation: The discriminant is positive.
+  174:
+    topic: s10-3
+    question: 'Which statement about \(Ax^2+Bxy+Cy^2+Dx+Ey+F=0\) is FALSE?'
+    A: 'If \(AC<0\) the graph is a hyperbola (if nondegenerate)'
+    B: 'If \(B^2-4AC<0\) the graph is an ellipse, a point, or empty'
+    C: 'If \(B^2-4AC=0\) the graph can be a parabola or a pair of lines'
+    D: 'If \(AC>0\) the graph is always an ellipse'
+    answer: D
+    hint: 'Find a counterexample with \(AC>0\) and a large \(B\).'
+    explanation: '\(x^2+3xy+y^2=1\) has \(AC=1>0\) but \(B^2-4AC=5>0\): a hyperbola.'
+  175:
+    topic: s10-3
+    question: 'The graph of \(x^2+4xy+4y^2+6x+12y+9=0\) is'
+    A: 'the line \(x+2y+3=0\)'
+    B: two parallel lines
+    C: a parabola
+    D: an ellipse
+    answer: A
+    hint: Factor as a square.
+    explanation: '\((x+2y+3)^2=0\); the graph is the single line \(2y=-x-3\).'
+  176:
+    topic: s10-3
+    question: 'The graph of \(9x^2+6xy+y^2-12x-4y+4=0\) is'
+    A: a parabola
+    B: two parallel lines
+    C: 'the line \(y=-3x+2\)'
+    D: an ellipse
+    answer: C
+    hint: Look for a perfect square.
+    explanation: '\((3x+y-2)^2=0\).'
+  177:
+    topic: s10-3
+    question: 'The graph of \(xy-y-x+1=0\) is'
+    A: 'a hyperbola with asymptotes \(x=1\), \(y=1\)'
+    B: 'a pair of perpendicular lines \(x=1\) and \(y=1\)'
+    C: a parabola
+    D: a single point
+    answer: B
+    hint: 'Factor: \((x-1)(y-1)\).'
+    explanation: '\((x-1)(y-1)=0\) gives \(x=1\) or \(y=1\) (a degenerate hyperbola).'
+  178:
+    topic: s10-3
+    question: 'The graph of \(x^2-2xy+y^2=2\) is'
+    A: an ellipse
+    B: 'two parallel lines \(x-y=\pm\sqrt2\)'
+    C: a hyperbola
+    D: a parabola
+    answer: B
+    hint: The left side is a perfect square.
+    explanation: '\((x-y)^2=2\), a degenerate parabola.'
+  179:
+    topic: s10-3
+    question: 'The curve \(xy+2x-y=0\) is a'
+    A: ellipse
+    B: parabola
+    C: 'hyperbola, with the rational form \(y=\dfrac{2x}{1-x}\)'
+    D: pair of lines
+    answer: C
+    hint: 'Solve for \(y\): \(y(x-1)=-2x\).'
+    explanation: '\(y=-\dfrac{2x}{x-1}\); the graph has asymptotes \(x=1\) and \(y=-2\).'
+  180:
+    topic: s10-3
+    question: 'For \(x^2+4xy+4y^2+6x+12y+9=0\), the graph can be written in the form'
+    A: '\(y=2x+3\)'
+    B: '\(y=\dfrac{x+3}{2}\)'
+    C: '\(2y=-x-3\)'
+    D: '\(y=-2x-3\)'
+    answer: C
+    hint: 'Take the square root of \((x+2y+3)^2=0\).'
+    explanation: '\(x+2y+3=0\) gives \(2y=-x-3\).'
+  181:
+    topic: s10-3
+    question: 'For \(9x^2+6xy+y^2-12x-4y+4=0\), the graph can be written as'
+    A: '\(y=\dfrac{-x+2}{3}\)'
+    B: '\(y=-3x+2\)'
+    C: '\(y=-3x-2\)'
+    D: '\(y=3x-2\)'
+    answer: B
+    hint: 'Take the square root of \((3x+y-2)^2=0\).'
+    explanation: '\(3x+y-2=0\).'
+  182:
+    topic: s10-4
+    question: 'The path \(x=\cos t\), \(y=\sin t\), \(0\le t\le\pi\) is'
+    A: the upper half, traversed clockwise
+    B: the full unit circle
+    C: the lower half of the unit circle
+    D: 'the upper half of the unit circle, traversed counterclockwise from \((1,0)\) to \((-1,0)\)'
+    answer: D
+    hint: '\(x^2+y^2=1\) and \(y=\sin t\ge0\).'
+    explanation: 'At \(t=0\) the point is \((1,0)\); at \(t=\pi\) it is \((-1,0)\).'
+  183:
+    topic: s10-4
+    question: 'The path \(x=\sin(2\pi(1-t))\), \(y=\cos(2\pi(1-t))\), \(0\le t\le1\) is'
+    A: the full unit circle traversed once clockwise
+    B: the upper half circle
+    C: 'the full unit circle traversed once counterclockwise starting at \((0,1)\)'
+    D: the circle traversed twice
+    answer: C
+    hint: '\(x^2+y^2=1\); check the points at \(t=0\) and \(t=\tfrac14\).'
+    explanation: 'At \(t=0\): \((0,1)\); at \(t=\tfrac14\): \((\sin\tfrac{3\pi}2,\cos\tfrac{3\pi}2)=(-1,0)\), which is counterclockwise.'
+  184:
+    topic: s10-4
+    question: 'The path \(x=4\cos t\), \(y=5\sin t\), \(0\le t\le\pi\) is'
+    A: 'the upper half of \(\dfrac{x^2}{25}+\dfrac{y^2}{16}=1\)'
+    B: the right half of the ellipse
+    C: 'the whole ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}{25}=1\)'
+    D: 'the upper half of the ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}{25}=1\), from \((4,0)\) to \((-4,0)\)'
+    answer: D
+    hint: 'Eliminate \(t\) with \(\cos^2t+\sin^2t=1\).'
+    explanation: '\(y=5\sin t\ge0\) for \(0\le t\le\pi\).'
+  185:
+    topic: s10-4
+    question: 'The path \(x=4\sin t\), \(y=5\cos t\), \(0\le t\le2\pi\) is'
+    A: 'the full ellipse \(\dfrac{x^2}{16}+\dfrac{y^2}{25}=1\), traversed clockwise from \((0,5)\)'
+    B: the upper half only
+    C: 'the ellipse \(\dfrac{x^2}{25}+\dfrac{y^2}{16}=1\)'
+    D: 'the full ellipse traversed counterclockwise from \((0,5)\)'
+    answer: A
+    hint: 'At \(t=0\) the point is \((0,5)\); at \(t=\tfrac\pi2\) it is \((4,0)\).'
+    explanation: 'Going from \((0,5)\) to \((4,0)\) is clockwise.'
+  186:
+    topic: s10-4
+    question: 'The path \(x=t\), \(y=\sqrt t\), \(t\ge0\) is'
+    A: 'the parabola \(y=x^2\)'
+    B: 'the right half of \(x^2=y\)'
+    C: 'the upper half of the parabola \(y^2=x\)'
+    D: 'the whole parabola \(y^2=x\)'
+    answer: C
+    hint: '\(y^2=t=x\) and \(y\ge0\).'
+    explanation: It starts at the origin and moves up and to the right.
+  187:
+    topic: s10-4
+    question: 'The path \(x=\sec^2t-1\), \(y=\tan t\), \(-\tfrac\pi2<t<\tfrac\pi2\) is'
+    A: 'the entire parabola \(x=y^2\)'
+    B: 'the upper half of the parabola \(x=y^2\)'
+    C: 'the parabola \(y=x^2\)'
+    D: 'the hyperbola \(x^2-y^2=1\)'
+    answer: A
+    hint: '\(\sec^2t-1=\tan^2t\).'
+    explanation: '\(x=y^2\), and \(y=\tan t\) takes every real value.'
+  188:
+    topic: s10-4
+    question: 'The path \(x=-\sec t\), \(y=\tan t\), \(-\tfrac\pi2<t<\tfrac\pi2\) is'
+    A: 'the upper branch of \(y^2-x^2=1\)'
+    B: 'the whole hyperbola \(x^2-y^2=1\)'
+    C: 'the left branch of the hyperbola \(x^2-y^2=1\)'
+    D: 'the right branch of \(x^2-y^2=1\)'
+    answer: C
+    hint: '\(\sec^2t-\tan^2t=1\), and \(\sec t>0\) here.'
+    explanation: '\(x=-\sec t<0\).'
+  189:
+    topic: s10-4
+    question: 'The path \(x=\csc t\), \(y=\cot t\), \(0<t<\pi\) is'
+    A: 'the right branch of the hyperbola \(x^2-y^2=1\)'
+    B: 'the upper branch of \(y^2-x^2=1\)'
+    C: 'the left branch of \(x^2-y^2=1\)'
+    D: the whole hyperbola
+    answer: A
+    hint: '\(\csc^2t-\cot^2t=1\), and \(\csc t>0\) on \((0,\pi)\).'
+    explanation: '\(x\ge1\).'
+  190:
+    topic: s10-4
+    question: 'The path \(x=t\), \(y=\sqrt{4-t^2}\), \(0\le t\le2\) is'
+    A: the whole circle
+    B: 'a quarter of \(x^2+y^2=2\)'
+    C: 'the upper half of the circle \(x^2+y^2=4\)'
+    D: 'a quarter of the circle \(x^2+y^2=4\), in the first quadrant'
+    answer: D
+    hint: '\(x^2+y^2=4\) with \(x,y\ge0\).'
+    explanation: 'It runs from \((0,2)\) to \((2,0)\).'
+  191:
+    topic: s10-4
+    question: 'The path \(x=t^2\), \(y=\sqrt{t^4+1}\), \(t\ge0\) is'
+    A: 'the parabola \(y=x^2+1\)'
+    B: 'the right branch of \(x^2-y^2=1\)'
+    C: 'the whole upper branch of \(y^2-x^2=1\)'
+    D: 'the part of the upper branch of \(y^2-x^2=1\) with \(x\ge0\)'
+    answer: D
+    hint: '\(y^2-x^2=t^4+1-t^4=1\).'
+    explanation: '\(x=t^2\ge0\) and \(y\ge1\).'
+  192:
+    topic: s10-4
+    question: 'The path \(x=-\cosh t\), \(y=\sinh t\), \(-\infty<t<\infty\) is'
+    A: 'the right branch of \(x^2-y^2=1\)'
+    B: 'the upper branch of \(y^2-x^2=1\)'
+    C: 'the left branch of \(x^2-y^2=1\)'
+    D: the unit circle
+    answer: C
+    hint: '\(\cosh^2t-\sinh^2t=1\).'
+    explanation: '\(x=-\cosh t\le-1\).'
+  193:
+    topic: s10-4
+    question: 'The path \(x=2\sinh t\), \(y=2\cosh t\), \(-\infty<t<\infty\) is'
+    A: 'the right branch of \(x^2-y^2=4\)'
+    B: 'the upper branch of \(y^2-x^2=4\)'
+    C: 'the lower branch of \(y^2-x^2=4\)'
+    D: the whole hyperbola
+    answer: B
+    hint: '\(y^2-x^2=4\left(\cosh^2t-\sinh^2t\right)=4\).'
+    explanation: '\(y=2\cosh t\ge2\).'
+  194:
+    topic: s10-4
+    question: 'The path \(x=2t+3\), \(y=t^2-1\), \(-2\le t\le2\) is'
+    A: 'part of the parabola \(y=x^2-1\)'
+    B: a straight segment
+    C: 'part of the parabola \((x+3)^2=4(y-1)\)'
+    D: 'part of the parabola \((x-3)^2=4(y+1)\)'
+    answer: D
+    hint: 'Solve \(t=\dfrac{x-3}2\) and substitute into \(y\).'
+    explanation: '\(y+1=\dfrac{(x-3)^2}4\).'
+  195:
+    topic: s10-4
+    question: 'A hypocycloid (a circle of radius \(\tfrac a4\) rolling inside \(x^2+y^2=a^2\)) is the astroid with parametric equations'
+    A: '\(x=a\cos^2\theta\), \(y=a\sin^2\theta\)'
+    B: '\(x=a\sin^3\theta\), \(y=a\cos^3\theta\) traversed clockwise'
+    C: '\(x=a\cos\theta\), \(y=a\sin\theta\)'
+    D: '\(x=a\cos^3\theta\), \(y=a\sin^3\theta\)'
+    answer: D
+    hint: 'Take \(b=\tfrac a4\) in the general hypocycloid equations.'
+    explanation: 'The curve is \(x^{2/3}+y^{2/3}=a^{2/3}\), which has four cusps.'
+  196:
+    topic: s10-4
+    question: 'A wheel of radius \(a\) rolls along a horizontal line. A point \(P\) on a spoke \(b\) units from the center traces \(x=a\theta-b\sin\theta\), \(y=a-b\cos\theta\). The curve is a cycloid when'
+    A: '\(b=2a\)'
+    B: '\(b=0\)'
+    C: '\(b=\dfrac a2\)'
+    D: '\(b=a\)'
+    answer: D
+    hint: The point must lie on the rim.
+    explanation: 'For \(b=a\): \(x=a(\theta-\sin\theta)\), \(y=a(1-\cos\theta)\).'
+  197:
+    topic: s10-4
+    question: 'The cycloid \(x=t-\sin t\), \(y=1-\cos t\) has cusps (points where it touches the \(x\)-axis) at'
+    A: '\(t=\dfrac{\pi}{2}+\pi k\)'
+    B: '\(t=\pi k\) for integers \(k\)'
+    C: '\(t=2\pi k\) for integers \(k\)'
+    D: '\(t=0\) only'
+    answer: C
+    hint: 'The cusps are where \(y=0\), i.e., \(\cos t=1\).'
+    explanation: 'One arch runs over \(0\le t\le2\pi\), with width \(2\pi\) and height \(2\).'
+  198:
+    topic: s10-4
+    question: 'The point on the parabola \(x=t\), \(y=t^2\) closest to \(\left(2,\tfrac12\right)\) is'
+    A: '\(\left(\tfrac12,\tfrac14\right)\)'
+    B: '\((2,4)\)'
+    C: '\((0,0)\)'
+    D: '\((1,1)\)'
+    answer: D
+    hint: 'Minimize \(d^2=(t-2)^2+\left(t^2-\tfrac12\right)^2\).'
+    explanation: '\(\dfrac{d(d^2)}{dt}=2(t-2)+4t\left(t^2-\tfrac12\right)=4t^3-4\), so \(t=1\).'
+  199:
+    topic: s10-4
+    question: 'The point on the ellipse \(x=2\cos t\), \(y=\sin t\) closest to \(\left(\tfrac34,0\right)\) is'
+    A: '\(\left(\tfrac34,\ \pm\dfrac{\sqrt{55}}{8}\right)\)'
+    B: '\(\left(1,\ \pm\dfrac{\sqrt3}2\right)\)'
+    C: '\(\left(0,\ \pm1\right)\)'
+    D: '\(\left(2,0\right)\)'
+    answer: B
+    hint: '\(d^2=3\cos^2t-3\cos t+\tfrac{25}{16}\).'
+    explanation: 'The minimum is at \(\cos t=\tfrac12\), so \(x=1\) and \(y=\pm\tfrac{\sqrt3}2\); \(d^2=\tfrac{13}{16}\).'
+  200:
+    topic: s10-4
+    question: 'A deltoid is traced by \(x=2\cos t+\cos2t\), \(y=2\sin t-\sin2t\), \(0\le t\le2\pi\). It has'
+    A: three cusps
+    B: four cusps
+    C: two cusps
+    D: no cusps
+    answer: A
+    hint: It is a hypocycloid generated by a circle one-third the size of the fixed circle.
+    explanation: 'Replacing \(2\) with \(-2\) in the equations turns it into a different curve.'
+  201:
+    topic: s10-4
+    question: 'The parametric equations \(x=\cos t\), \(y=\sin t\) (\(0\le t\le2\pi\)) and \(x=\cos2t\), \(y=\sin2t\) (\(0\le t\le\pi\)) trace'
+    A: the same circle at the same speed
+    B: the same unit circle, but the second moves twice as fast
+    C: different circles
+    D: a circle and an ellipse
+    answer: B
+    hint: Eliminate the parameter.
+    explanation: 'Both satisfy \(x^2+y^2=1\).'
+  202:
+    topic: s10-5
+    question: 'Which pair of polar coordinates labels the same point as \((3,0)\)?'
+    A: '\((-3,0)\)'
+    B: '\((3,\pi)\)'
+    C: '\((-3,\pi)\)'
+    D: '\((-3,\tfrac\pi2)\)'
+    answer: C
+    hint: '\((-r,\theta+\pi)\) labels the same point as \((r,\theta)\).'
+    explanation: '\((-3,\pi)\) lies \(3\) units from the origin in the direction opposite \(\pi\), i.e. at \((3,0)\).'
+  203:
+    topic: s10-5
+    question: 'Which pair of polar coordinates labels the same point as \((-3,0)\)?'
+    A: '\((-3,2\pi)\)'
+    B: '\((-3,\pi)\)'
+    C: '\((3,2\pi)\)'
+    D: '\((3,\tfrac\pi2)\)'
+    answer: A
+    hint: 'Adding \(2\pi\) to the angle gives the same point.'
+    explanation: 'Both give the Cartesian point \((-3,0)\).'
+  204:
+    topic: s10-5
+    question: 'Which pair labels the same point as \((2,\tfrac{2\pi}3)\)?'
+    A: '\((-2,-\tfrac\pi3)\)'
+    B: '\((-2,\tfrac{2\pi}3)\)'
+    C: '\((2,\tfrac\pi3)\)'
+    D: '\((2,\tfrac{7\pi}3)\)'
+    answer: A
+    hint: 'Use \((-r,\theta+\pi)\), then subtract \(2\pi\).'
+    explanation: '\(\tfrac{2\pi}3+\pi-2\pi=-\tfrac\pi3\).'
+  205:
+    topic: s10-5
+    question: 'Which pair labels the same point as \((2,\tfrac\pi3)\)?'
+    A: '\((-2,\tfrac{2\pi}3)\)'
+    B: '\((-2,\tfrac\pi3)\)'
+    C: '\((2,-\tfrac\pi3)\)'
+    D: '\((2,\tfrac{7\pi}3)\)'
+    answer: D
+    hint: 'Adding \(2\pi\) to the angle does not change the point.'
+    explanation: '\(\tfrac\pi3+2\pi=\tfrac{7\pi}3\).'
+  206:
+    topic: s10-5
+    question: 'All polar coordinates of the point \((2,\tfrac\pi2)\) are'
+    A: '\((2,\tfrac\pi2+2n\pi)\) only'
+    B: '\((2,\tfrac\pi2+2n\pi)\) and \((-2,\tfrac{3\pi}2+2n\pi)\)'
+    C: '\((2,\tfrac\pi2+n\pi)\)'
+    D: '\((-2,\tfrac\pi2+2n\pi)\)'
+    answer: B
+    hint: 'Add multiples of \(2\pi\); also use a negative \(r\) with \(\theta+\pi\).'
+    explanation: The same point has infinitely many labels.
+  207:
+    topic: s10-5
+    question: All polar coordinates of the origin are
+    A: '\((r,0)\) for any \(r\)'
+    B: '\((0,2n\pi)\) only'
+    C: '\((0,\theta)\) for any \(\theta\)'
+    D: '\((0,0)\) only'
+    answer: C
+    hint: 'At \(r=0\) the angle is irrelevant.'
+    explanation: The origin is the pole; every angle describes it.
+  208:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \(\left(\sqrt2,\tfrac\pi4\right)\) are'
+    A: '\((-1,\ -1)\)'
+    B: '\((1,\ 1)\)'
+    C: '\((1,\ -1)\)'
+    D: '\((-1,\ 1)\)'
+    answer: B
+    hint: '\(x=r\cos\theta\), \(y=r\sin\theta\).'
+    explanation: '\(x=1\), \(y=1\).'
+  209:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \(\left(-3,\tfrac{5\pi}6\right)\) are'
+    A: '\((- \frac{3 \sqrt{3}}{2},\ - \frac{3}{2})\)'
+    B: '\((\frac{3 \sqrt{3}}{2},\ \frac{3}{2})\)'
+    C: '\((- \frac{3}{2},\ \frac{3 \sqrt{3}}{2})\)'
+    D: '\((\frac{3 \sqrt{3}}{2},\ - \frac{3}{2})\)'
+    answer: D
+    hint: '\(x=r\cos\theta\), \(y=r\sin\theta\).'
+    explanation: '\(x=\frac{3 \sqrt{3}}{2}\), \(y=- \frac{3}{2}\).'
+  210:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \(\left(2\sqrt3,\tfrac{2\pi}3\right)\) are'
+    A: '\((- \sqrt{3},\ -3)\)'
+    B: '\((- \sqrt{3},\ 3)\)'
+    C: '\((\sqrt{3},\ 3)\)'
+    D: '\((3,\ - \sqrt{3})\)'
+    answer: B
+    hint: '\(x=r\cos\theta\), \(y=r\sin\theta\).'
+    explanation: '\(x=- \sqrt{3}\), \(y=3\).'
+  211:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \(\left(-\sqrt2,\tfrac\pi4\right)\) are'
+    A: '\((1,\ 1)\)'
+    B: '\((-1,\ 1)\)'
+    C: '\((-1,\ -1)\)'
+    D: '\((1,\ -1)\)'
+    answer: C
+    hint: '\(x=r\cos\theta\), \(y=r\sin\theta\).'
+    explanation: '\(x=-1\), \(y=-1\).'
+  212:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \(\left(5,\tan^{-1}\tfrac43\right)\) are'
+    A: '\((5,0)\)'
+    B: '\((3,4)\)'
+    C: '\((4,3)\)'
+    D: '\((-3,-4)\)'
+    answer: B
+    hint: '\(\cos\theta=\tfrac35\), \(\sin\theta=\tfrac45\) when \(\tan\theta=\tfrac43\) in Quadrant I.'
+    explanation: '\(x=5\cdot\tfrac35=3\), \(y=5\cdot\tfrac45=4\).'
+  213:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \((-1,7\pi)\) are'
+    A: '\((0,-1)\)'
+    B: '\((0,1)\)'
+    C: '\((1,0)\)'
+    D: '\((-1,0)\)'
+    answer: C
+    hint: '\(\cos7\pi=-1\) and \(\sin7\pi=0\).'
+    explanation: '\(x=(-1)(-1)=1\), \(y=0\).'
+  214:
+    topic: s10-5
+    question: 'The Cartesian coordinates of the polar point \((0,\tfrac\pi2)\) are'
+    A: '\((0,0)\)'
+    B: '\((0,\tfrac\pi2)\)'
+    C: '\((1,0)\)'
+    D: '\((0,1)\)'
+    answer: A
+    hint: '\(r=0\).'
+    explanation: 'Any point with \(r=0\) is the origin.'
+  215:
+    topic: s10-5
+    question: 'The set of points with polar coordinates satisfying \(r=2\) is'
+    A: 'a vertical line \(x=2\)'
+    B: 'a circle of radius \(2\) centered at the origin'
+    C: a ray from the origin
+    D: 'the disk of radius \(2\)'
+    answer: B
+    hint: '\(r\) is the distance from the origin.'
+    explanation: 'All points at distance \(2\).'
+  216:
+    topic: s10-5
+    question: 'The inequality \(1\le r\le2\) describes'
+    A: 'the closed annulus between the circles of radius \(1\) and \(2\)'
+    B: 'a disk of radius \(2\)'
+    C: a circle
+    D: 'the outside of the circle \(r=1\)'
+    answer: A
+    hint: 'Distance from the origin between \(1\) and \(2\).'
+    explanation: It is a ring.
+  217:
+    topic: s10-5
+    question: 'The set \(0\le\theta\le\tfrac\pi6\), \(r\ge0\) is'
+    A: 'the ray \(\theta=\tfrac\pi6\)'
+    B: the whole first quadrant
+    C: 'an infinite wedge (sector) in the first quadrant between the \(x\)-axis and the ray \(\theta=\tfrac\pi6\)'
+    D: a finite sector of a disk
+    answer: C
+    hint: 'Angles between \(0\) and \(\tfrac\pi6\) with unlimited \(r\).'
+    explanation: The wedge extends without bound.
+  218:
+    topic: s10-5
+    question: 'The set \(\theta=\tfrac\pi2\), \(r\ge0\) is'
+    A: 'the whole \(y\)-axis'
+    B: 'the point \((0,\tfrac\pi2)\)'
+    C: 'the positive \(y\)-axis (a ray)'
+    D: 'the positive \(x\)-axis'
+    answer: C
+    hint: 'Fixed angle, \(r\) nonnegative.'
+    explanation: It points straight up from the origin.
+  219:
+    topic: s10-5
+    question: 'The set \(\theta=\tfrac\pi2\), \(r\le0\) is'
+    A: 'the whole \(y\)-axis'
+    B: 'the negative \(x\)-axis'
+    C: 'the negative \(y\)-axis (a ray)'
+    D: 'the positive \(y\)-axis'
+    answer: C
+    hint: 'A negative \(r\) points opposite the angle.'
+    explanation: 'Opposite \(\tfrac\pi2\) is straight down.'
+  220:
+    topic: s10-5
+    question: 'The set \(0\le\theta\le\pi\), \(r=-1\) is'
+    A: the lower half of the unit circle
+    B: 'a segment on the \(x\)-axis'
+    C: the upper half of the unit circle
+    D: the whole unit circle
+    answer: A
+    hint: '\(r=-1\) reflects each point through the origin.'
+    explanation: '\((-1,\theta)=(1,\theta+\pi)\), and \(\theta+\pi\in[\pi,2\pi]\).'
+  221:
+    topic: s10-5
+    question: 'The inequality \(0\le\theta\le\pi\), \(r=1\) describes'
+    A: the upper half of the unit circle
+    B: the whole unit circle
+    C: the lower half of the unit circle
+    D: the unit disk
+    answer: A
+    hint: '\(r=1\) with angles from \(0\) to \(\pi\).'
+    explanation: '\(y=\sin\theta\ge0\).'
+  222:
+    topic: s10-5
+    question: 'The polar equation \(r\cos\theta=2\) is equivalent to'
+    A: 'the line \(y=x+2\)'
+    B: 'the line \(x=2\)'
+    C: 'the line \(y=2\)'
+    D: 'the circle \(x^2+y^2=2\)'
+    answer: B
+    hint: '\(x=r\cos\theta\).'
+    explanation: It is a vertical line.
+  223:
+    topic: s10-5
+    question: 'The polar equation \(r\sin\theta=-1\) is equivalent to'
+    A: 'the line \(y=1\)'
+    B: 'the circle \(x^2+y^2=1\)'
+    C: 'the line \(x=-1\)'
+    D: 'the line \(y=-1\)'
+    answer: D
+    hint: '\(y=r\sin\theta\).'
+    explanation: A horizontal line.
+  224:
+    topic: s10-5
+    question: 'The polar equation \(r\sin\theta=0\) is equivalent to'
+    A: 'the \(x\)-axis'
+    B: 'the \(y\)-axis'
+    C: the origin only
+    D: 'the line \(y=x\)'
+    answer: A
+    hint: '\(y=0\).'
+    explanation: 'All points with \(y=0\).'
+  225:
+    topic: s10-5
+    question: 'The polar equation \(r\cos\theta=0\) is equivalent to'
+    A: the origin only
+    B: 'the \(y\)-axis'
+    C: 'the \(x\)-axis'
+    D: 'the line \(y=x\)'
+    answer: B
+    hint: '\(x=0\).'
+    explanation: 'All points with \(x=0\).'
+  226:
+    topic: s10-5
+    question: 'The polar equation \(r=4\csc\theta\) is equivalent to'
+    A: 'the line \(y=-4\)'
+    B: 'the line \(y=4\)'
+    C: 'the circle \(x^2+y^2=16\)'
+    D: 'the line \(x=4\)'
+    answer: B
+    hint: 'Multiply by \(\sin\theta\).'
+    explanation: '\(r\sin\theta=4\).'
+  227:
+    topic: s10-5
+    question: 'The polar equation \(r=-3\sec\theta\) is equivalent to'
+    A: 'the circle \(x^2+y^2=9\)'
+    B: 'the line \(x=-3\)'
+    C: 'the line \(x=3\)'
+    D: 'the line \(y=-3\)'
+    answer: B
+    hint: 'Multiply by \(\cos\theta\).'
+    explanation: '\(r\cos\theta=-3\).'
+  228:
+    topic: s10-5
+    question: 'The polar equation \(r\cos\theta+r\sin\theta=1\) is equivalent to'
+    A: 'the line \(x-y=1\)'
+    B: 'the circle \(x^2+y^2=1\)'
+    C: 'the line \(y=x\)'
+    D: 'the line \(x+y=1\)'
+    answer: D
+    hint: 'Substitute \(x\) and \(y\).'
+    explanation: '\(x+y=1\).'
+  229:
+    topic: s10-5
+    question: 'The polar equation \(r\sin\theta=r\cos\theta\) is equivalent to'
+    A: 'the line \(y=-x\)'
+    B: the unit circle
+    C: 'the \(x\)-axis'
+    D: 'the line \(y=x\) (together with the origin)'
+    answer: D
+    hint: '\(y=x\).'
+    explanation: Both sides vanish at the origin.
+  230:
+    topic: s10-5
+    question: 'The polar equation \(r^2=1\) is equivalent to'
+    A: 'the circle \(x^2+y^2=1\)'
+    B: 'the circle \(x^2+y^2=2\)'
+    C: 'the point \((1,0)\)'
+    D: 'the line \(x=1\)'
+    answer: A
+    hint: '\(r^2=x^2+y^2\).'
+    explanation: Unit circle.
+  231:
+    topic: s10-5
+    question: 'The polar equation \(r^2=4r\sin\theta\) is equivalent to'
+    A: 'the circle \(x^2+y^2=4\)'
+    B: 'the circle \((x-2)^2+y^2=4\)'
+    C: 'the circle \(x^2+(y-2)^2=4\)'
+    D: 'the circle \(x^2+(y+2)^2=4\)'
+    answer: C
+    hint: '\(x^2+y^2=4y\).'
+    explanation: 'Complete the square in \(y\).'
+  232:
+    topic: s10-5
+    question: 'The polar equation \(r=\dfrac5{\sin\theta-2\cos\theta}\) is equivalent to'
+    A: 'the circle \(x^2+y^2=25\)'
+    B: 'the line \(y=\dfrac x2+5\)'
+    C: 'the line \(y=2x+5\)'
+    D: 'the line \(y=-2x+5\)'
+    answer: C
+    hint: 'Clear the denominator: \(r\sin\theta-2r\cos\theta=5\).'
+    explanation: '\(y-2x=5\).'
+  233:
+    topic: s10-5
+    question: 'The polar equation \(r^2\sin2\theta=2\) is equivalent to'
+    A: 'the circle \(x^2+y^2=2\)'
+    B: 'the hyperbola \(xy=2\)'
+    C: 'the hyperbola \(xy=1\)'
+    D: 'the parabola \(y=x^2\)'
+    answer: C
+    hint: '\(\sin2\theta=2\sin\theta\cos\theta\).'
+    explanation: '\(2r^2\sin\theta\cos\theta=2xy=2\).'
+  234:
+    topic: s10-5
+    question: 'The polar equation \(r=\cot\theta\csc\theta\) is equivalent to'
+    A: 'the parabola \(x^2=y\)'
+    B: 'the hyperbola \(xy=1\)'
+    C: 'the parabola \(y^2=x\)'
+    D: 'the circle \(x^2+y^2=1\)'
+    answer: C
+    hint: 'Multiply by \(r\sin^2\theta\): \(r\sin^2\theta=\cos\theta\).'
+    explanation: '\(r^2\sin^2\theta=r\cos\theta\) gives \(y^2=x\).'
+  235:
+    topic: s10-5
+    question: 'The polar equation \(r=4\tan\theta\sec\theta\) is equivalent to'
+    A: 'the circle \(x^2+y^2=16\)'
+    B: 'the parabola \(x^2=4y\)'
+    C: 'the line \(y=4x\)'
+    D: 'the parabola \(y^2=4x\)'
+    answer: B
+    hint: '\(r\cos^2\theta=4\sin\theta\).'
+    explanation: '\(r^2\cos^2\theta=4r\sin\theta\).'
+  236:
+    topic: s10-5
+    question: 'The polar equation \(r=\csc\theta\,e^{r\cos\theta}\) is equivalent to'
+    A: 'the curve \(y=e^x\)'
+    B: 'the line \(y=x+1\)'
+    C: 'the curve \(x=e^y\)'
+    D: 'the curve \(y=\ln x\)'
+    answer: A
+    hint: 'Multiply by \(\sin\theta\).'
+    explanation: '\(r\sin\theta=e^{r\cos\theta}\).'
+  237:
+    topic: s10-5
+    question: 'The polar equation \(r\sin\theta=\ln r+\ln\cos\theta\) is equivalent to'
+    A: 'the curve \(y=\ln x\)'
+    B: 'the curve \(y=\ln y\)'
+    C: 'the line \(y=x\)'
+    D: 'the curve \(y=e^x\)'
+    answer: A
+    hint: Combine the logarithms.
+    explanation: '\(\ln r+\ln\cos\theta=\ln(r\cos\theta)=\ln x\).'
+  238:
+    topic: s10-5
+    question: 'The polar equation \(r^2+2r^2\cos\theta\sin\theta=1\) is equivalent to'
+    A: 'the pair of lines \(x+y=\pm1\)'
+    B: 'the hyperbola \(xy=1\)'
+    C: 'the line \(x+y=1\)'
+    D: 'the circle \(x^2+y^2=1\)'
+    answer: A
+    hint: '\(x^2+y^2+2xy=1\).'
+    explanation: '\((x+y)^2=1\).'
+  239:
+    topic: s10-5
+    question: 'The polar equation \(\cos^2\theta=\sin^2\theta\) is equivalent to'
+    A: 'the circle \(x^2+y^2=1\)'
+    B: 'the hyperbola \(x^2-y^2=1\)'
+    C: 'the pair of lines \(y=\pm x\)'
+    D: 'the line \(y=x\) only'
+    answer: C
+    hint: '\(\tan^2\theta=1\).'
+    explanation: '\(y^2=x^2\).'
+  240:
+    topic: s10-5
+    question: 'The polar equation \(r^2=-4r\cos\theta\) is equivalent to'
+    A: 'the circle \((x-2)^2+y^2=4\)'
+    B: 'the circle \((x+2)^2+y^2=4\)'
+    C: 'the circle \(x^2+(y+2)^2=4\)'
+    D: 'the circle \(x^2+y^2=4\)'
+    answer: B
+    hint: '\(x^2+y^2=-4x\).'
+    explanation: Complete the square.
+  241:
+    topic: s10-5
+    question: 'The polar equation \(r^2=-6r\sin\theta\) is equivalent to'
+    A: 'the circle \(x^2+y^2=9\)'
+    B: 'the circle \(x^2+(y+3)^2=9\)'
+    C: 'the circle \((x+3)^2+y^2=9\)'
+    D: 'the circle \(x^2+(y-3)^2=9\)'
+    answer: B
+    hint: '\(x^2+y^2=-6y\).'
+    explanation: Complete the square.
+  242:
+    topic: s10-5
+    question: 'The polar equation \(r=8\sin\theta\) is equivalent to'
+    A: 'the circle \(x^2+(y-8)^2=64\)'
+    B: 'the circle \(x^2+y^2=64\)'
+    C: 'the circle \(x^2+(y-4)^2=16\)'
+    D: 'the circle \((x-4)^2+y^2=16\)'
+    answer: C
+    hint: 'Multiply by \(r\).'
+    explanation: '\(x^2+y^2=8y\).'
+  243:
+    topic: s10-5
+    question: 'The polar equation \(r=3\cos\theta\) is equivalent to'
+    A: 'the circle \(x^2+\left(y-\tfrac32\right)^2=\tfrac94\)'
+    B: 'the circle \(\left(x-\tfrac32\right)^2+y^2=\tfrac94\)'
+    C: 'the circle \(x^2+y^2=9\)'
+    D: 'the circle \((x-3)^2+y^2=9\)'
+    answer: B
+    hint: 'Multiply by \(r\): \(x^2+y^2=3x\).'
+    explanation: Complete the square.
+  244:
+    topic: s10-5
+    question: 'The polar equation \(r=2\cos\theta+2\sin\theta\) is equivalent to'
+    A: 'the circle \((x-1)^2+(y-1)^2=2\)'
+    B: 'the line \(x+y=2\)'
+    C: 'the circle \((x-1)^2+(y-1)^2=4\)'
+    D: 'the circle \((x-2)^2+(y-2)^2=2\)'
+    answer: A
+    hint: 'Multiply by \(r\).'
+    explanation: '\(x^2+y^2=2x+2y\).'
+  245:
+    topic: s10-5
+    question: 'The polar equation \(r=2\cos\theta-\sin\theta\) is equivalent to'
+    A: 'the line \(2x-y=1\)'
+    B: 'the circle \((x-1)^2+\left(y+\tfrac12\right)^2=\tfrac54\)'
+    C: 'the circle \((x+1)^2+\left(y-\tfrac12\right)^2=\tfrac54\)'
+    D: 'the circle \((x-2)^2+(y+1)^2=5\)'
+    answer: B
+    hint: 'Multiply by \(r\).'
+    explanation: '\(x^2+y^2=2x-y\).'
+  246:
+    topic: s10-5
+    question: 'The polar equation \(r\sin\left(\theta+\tfrac\pi6\right)=2\) is equivalent to'
+    A: 'the line \(x-\sqrt3y=4\)'
+    B: 'the line \(\sqrt3x+y=4\)'
+    C: 'the line \(x+\sqrt3y=4\)'
+    D: 'the line \(x+\sqrt3y=2\)'
+    answer: C
+    hint: 'Expand \(\sin(\theta+\tfrac\pi6)\).'
+    explanation: '\(\tfrac{\sqrt3}2y+\tfrac12x=2\).'
+  247:
+    topic: s10-5
+    question: 'The polar equation \(r\sin\left(\tfrac{2\pi}3-\theta\right)=5\) is equivalent to'
+    A: 'the line \(\sqrt3x-y=10\)'
+    B: 'the line \(\sqrt3x+y=10\)'
+    C: 'the line \(x+\sqrt3y=10\)'
+    D: 'the line \(\sqrt3x+y=5\)'
+    answer: B
+    hint: '\(\sin(\tfrac{2\pi}3-\theta)=\tfrac{\sqrt3}2\cos\theta+\tfrac12\sin\theta\).'
+    explanation: '\(\tfrac{\sqrt3}2x+\tfrac12y=5\).'
+  248:
+    topic: s10-5
+    question: 'The Cartesian equation \(x=7\) has the polar form'
+    A: '\(r=7\csc\theta\)'
+    B: '\(r=7\sec\theta\)'
+    C: '\(r=7\)'
+    D: '\(\theta=7\)'
+    answer: B
+    hint: '\(x=r\cos\theta\).'
+    explanation: '\(r\cos\theta=7\).'
+  249:
+    topic: s10-5
+    question: 'The Cartesian equation \(y=1\) has the polar form'
+    A: '\(\theta=1\)'
+    B: '\(r=1\)'
+    C: '\(r=\csc\theta\)'
+    D: '\(r=\sec\theta\)'
+    answer: C
+    hint: '\(y=r\sin\theta\).'
+    explanation: '\(r\sin\theta=1\).'
+  250:
+    topic: s10-5
+    question: 'The Cartesian equation \(x=y\) has the polar form'
+    A: '\(r=1\)'
+    B: '\(\theta=\dfrac{3\pi}4\)'
+    C: '\(\theta=\dfrac\pi2\)'
+    D: '\(\theta=\dfrac\pi4\)'
+    answer: D
+    hint: '\(\tan\theta=1\).'
+    explanation: 'The line through the origin at \(45^\circ\).'
+  251:
+    topic: s10-5
+    question: 'The Cartesian equation \(x-y=3\) has the polar form'
+    A: '\(r(\cos\theta-\sin\theta)=3\)'
+    B: '\(r(\cos\theta+\sin\theta)=3\)'
+    C: '\(r(\sin\theta-\cos\theta)=3\)'
+    D: '\(r=3\)'
+    answer: A
+    hint: 'Substitute \(x\) and \(y\).'
+    explanation: '\(r\cos\theta-r\sin\theta=3\).'
+  252:
+    topic: s10-5
+    question: 'The Cartesian equation \(x^2+y^2=4\) has the polar form'
+    A: '\(r=2\)'
+    B: '\(r=4\)'
+    C: '\(r=2\cos\theta\)'
+    D: '\(r=\sqrt2\)'
+    answer: A
+    hint: '\(r^2=x^2+y^2\).'
+    explanation: '\(r^2=4\) with \(r=2\).'
+  253:
+    topic: s10-5
+    question: 'The Cartesian equation \(x^2-y^2=1\) has the polar form'
+    A: '\(r^2=\cos2\theta\)'
+    B: '\(r^2\cos2\theta=1\)'
+    C: '\(r=\cos2\theta\)'
+    D: '\(r^2\sin2\theta=1\)'
+    answer: B
+    hint: '\(\cos^2\theta-\sin^2\theta=\cos2\theta\).'
+    explanation: '\(r^2\left(\cos^2\theta-\sin^2\theta\right)=1\).'
+  254:
+    topic: s10-5
+    question: 'The Cartesian equation \(xy=2\) has the polar form'
+    A: '\(r^2\cos2\theta=4\)'
+    B: '\(r^2\sin2\theta=2\)'
+    C: '\(r\sin2\theta=4\)'
+    D: '\(r^2\sin2\theta=4\)'
+    answer: D
+    hint: '\(xy=r^2\sin\theta\cos\theta\).'
+    explanation: '\(\tfrac{r^2}2\sin2\theta=2\).'
+  255:
+    topic: s10-5
+    question: 'The Cartesian equation \(y^2=4x\) has the polar form'
+    A: '\(r=4\cos\theta\)'
+    B: '\(r^2=4\cos\theta\)'
+    C: '\(r=\dfrac{4\sin\theta}{\cos^2\theta}\)'
+    D: '\(r=\dfrac{4\cos\theta}{\sin^2\theta}\)'
+    answer: D
+    hint: '\(r^2\sin^2\theta=4r\cos\theta\).'
+    explanation: 'Divide by \(r\sin^2\theta\).'
+  256:
+    topic: s10-5
+    question: 'The Cartesian equation \(x^2+(y-2)^2=4\) has the polar form'
+    A: '\(r=2\)'
+    B: '\(r=4\sin\theta\)'
+    C: '\(r=2\sin\theta\)'
+    D: '\(r=4\cos\theta\)'
+    answer: B
+    hint: 'Expand and use \(x^2+y^2=r^2\).'
+    explanation: '\(r^2=4r\sin\theta\).'
+  257:
+    topic: s10-5
+    question: 'The Cartesian equation \((x-5)^2+y^2=25\) has the polar form'
+    A: '\(r=10\sin\theta\)'
+    B: '\(r=5\cos\theta\)'
+    C: '\(r=10\cos\theta\)'
+    D: '\(r=5\)'
+    answer: C
+    hint: 'Expand: \(x^2+y^2=10x\).'
+    explanation: '\(r^2=10r\cos\theta\).'
+  258:
+    topic: s10-5
+    question: 'The Cartesian equation \(x^2+xy+y^2=1\) has the polar form'
+    A: '\(r^2(1+\sin2\theta)=1\)'
+    B: '\(r^2(1-\sin\theta\cos\theta)=1\)'
+    C: '\(r^2(1+\sin\theta\cos\theta)=1\)'
+    D: '\(r(1+\sin\theta\cos\theta)=1\)'
+    answer: C
+    hint: '\(xy=r^2\sin\theta\cos\theta\).'
+    explanation: '\(r^2+r^2\sin\theta\cos\theta=1\).'
+  259:
+    topic: s10-5
+    question: 'The Cartesian equation \((x-3)^2+(y+1)^2=4\) has the polar form'
+    A: '\(r^2-6r\cos\theta+2r\sin\theta-6=0\)'
+    B: '\(r^2+6r\cos\theta-2r\sin\theta+6=0\)'
+    C: '\(r^2-6r\cos\theta-2r\sin\theta+6=0\)'
+    D: '\(r^2-6r\cos\theta+2r\sin\theta+6=0\)'
+    answer: D
+    hint: 'Expand: \(x^2+y^2-6x+2y+6=0\).'
+    explanation: 'Replace \(x,y\) with \(r\cos\theta,r\sin\theta\).'
+  260:
+    topic: s10-5
+    question: 'The Cartesian equation \((x+2)^2+(y-5)^2=16\) has the polar form'
+    A: '\(r^2+4r\cos\theta+10r\sin\theta+13=0\)'
+    B: '\(r^2+4r\cos\theta-10r\sin\theta+13=0\)'
+    C: '\(r^2+4r\cos\theta-10r\sin\theta-13=0\)'
+    D: '\(r^2-4r\cos\theta+10r\sin\theta+13=0\)'
+    answer: B
+    hint: 'Expand: \(x^2+y^2+4x-10y+13=0\).'
+    explanation: 'Replace \(x,y\) with \(r\cos\theta,r\sin\theta\).'
+  261:
+    topic: s10-5
+    question: 'Every vertical line \(x=a\) has a polar equation of the form'
+    A: '\(r=a\csc\theta\)'
+    B: '\(r=a\sec\theta\)'
+    C: '\(\theta=a\)'
+    D: '\(r=a\cos\theta\)'
+    answer: B
+    hint: '\(x=r\cos\theta\).'
+    explanation: '\(r\cos\theta=a\).'
+  262:
+    topic: s10-5
+    question: 'Every horizontal line \(y=b\) has a polar equation of the form'
+    A: '\(\theta=b\)'
+    B: '\(r=b\sec\theta\)'
+    C: '\(r=b\sin\theta\)'
+    D: '\(r=b\csc\theta\)'
+    answer: D
+    hint: '\(y=r\sin\theta\).'
+    explanation: '\(r\sin\theta=b\).'
+  263:
+    topic: s10-6
+    question: 'The graph of \(r=1+\cos\theta\) is symmetric about'
+    A: 'the \(x\)-axis'
+    B: 'the \(y\)-axis'
+    C: the origin
+    D: both axes and the origin
+    answer: A
+    hint: '\(\cos(-\theta)=\cos\theta\).'
+    explanation: 'Replacing \(\theta\) by \(-\theta\) leaves the equation unchanged (cardioid).'
+  264:
+    topic: s10-6
+    question: 'The graph of \(r=2-2\cos\theta\) is symmetric about'
+    A: both axes and the origin
+    B: 'the \(x\)-axis'
+    C: 'the \(y\)-axis'
+    D: the origin
+    answer: B
+    hint: '\(\cos(-\theta)=\cos\theta\).'
+    explanation: 'A cardioid opening along the \(x\)-axis.'
+  265:
+    topic: s10-6
+    question: 'The graph of \(r=1-\sin\theta\) is symmetric about'
+    A: 'the \(y\)-axis'
+    B: 'the \(x\)-axis'
+    C: the origin
+    D: both axes and the origin
+    answer: A
+    hint: '\(\sin(\pi-\theta)=\sin\theta\).'
+    explanation: 'Replacing \(\theta\) by \(\pi-\theta\) leaves the equation unchanged.'
+  266:
+    topic: s10-6
+    question: 'The graph of \(r=2+\sin\theta\) is symmetric about'
+    A: both axes and the origin
+    B: 'the \(x\)-axis'
+    C: 'the \(y\)-axis'
+    D: the origin
+    answer: C
+    hint: '\(\sin(\pi-\theta)=\sin\theta\).'
+    explanation: 'It is a limaçon (oval) with symmetry about the \(y\)-axis.'
+  267:
+    topic: s10-6
+    question: 'The graph of \(r=1+2\sin\theta\) is symmetric about'
+    A: 'the \(y\)-axis'
+    B: 'the \(x\)-axis'
+    C: both axes and the origin
+    D: the origin
+    answer: A
+    hint: '\(\sin(\pi-\theta)=\sin\theta\).'
+    explanation: 'A limaçon with an inner loop, symmetric about the \(y\)-axis.'
+  268:
+    topic: s10-6
+    question: 'The graph of \(r^2=4\cos2\theta\) is symmetric about'
+    A: no axis
+    B: the origin only
+    C: 'the \(x\)-axis only'
+    D: 'the \(x\)-axis, the \(y\)-axis and the origin'
+    answer: D
+    hint: 'Test \((r,-\theta)\), \((-r,\theta)\).'
+    explanation: The lemniscate satisfies all three tests.
+  269:
+    topic: s10-6
+    question: 'The graph of \(r^2=\cos\theta\) is symmetric about'
+    A: 'the \(x\)-axis, the \(y\)-axis and the origin'
+    B: no axis
+    C: 'the \(x\)-axis only'
+    D: 'the \(y\)-axis only'
+    answer: A
+    hint: '\(r\to-r\) leaves \(r^2\) unchanged; \(\theta\to-\theta\) leaves \(\cos\theta\) unchanged.'
+    explanation: Two symmetries imply the third.
+  270:
+    topic: s10-6
+    question: 'The graph of \(r^2=\sin\theta\) is symmetric about'
+    A: 'the \(y\)-axis only'
+    B: 'the \(x\)-axis only'
+    C: 'the \(y\)-axis and the origin (hence also the \(x\)-axis)'
+    D: no axis
+    answer: C
+    hint: 'Replace \(r\) by \(-r\), and \(\theta\) by \(\pi-\theta\).'
+    explanation: '\(r^2=\sin\theta\) is unchanged by \(r\to-r\) (origin) and \(\theta\to\pi-\theta\) (\(y\)-axis), so also by the \(x\)-axis reflection.'
+  271:
+    topic: s10-6
+    question: 'The graph of \(r=\cos\dfrac\theta2\) is symmetric about'
+    A: 'the \(y\)-axis'
+    B: the origin
+    C: both axes and the origin
+    D: 'the \(x\)-axis'
+    answer: D
+    hint: '\(\cos\left(-\tfrac\theta2\right)=\cos\tfrac\theta2\).'
+    explanation: '\(\theta\to-\theta\) leaves the equation unchanged.'
+  272:
+    topic: s10-6
+    question: 'The graph of \(r=\sin\dfrac\theta2\) is symmetric about'
+    A: both axes and the origin
+    B: the origin
+    C: 'the \(x\)-axis'
+    D: 'the \(y\)-axis'
+    answer: D
+    hint: 'Try \((r,\theta)\to(-r,-\theta)\).'
+    explanation: '\(-r=\sin(-\tfrac\theta2)\) gives \(r=\sin\tfrac\theta2\).'
+  273:
+    topic: s10-6
+    question: 'If a polar curve has any two of the three symmetries (about the \(x\)-axis, the \(y\)-axis, the origin), then it'
+    A: is a circle
+    B: also has the third
+    C: cannot have the third
+    D: is a lemniscate
+    answer: B
+    hint: Combine two reflections or a reflection with a half-turn.
+    explanation: 'Reflecting across both axes is a rotation by \(\pi\), the origin symmetry; and similarly for the other pairs.'
+  274:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=-1+\cos\theta\) at \(\theta=\tfrac\pi2\) is'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(-1\)'
+    D: '\(2\)'
+    answer: C
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(-1\) and the denominator is \(1\).'
+  275:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=-1+\cos\theta\) at \(\theta=-\tfrac\pi2\) is'
+    A: '\(-1\)'
+    B: '\(2\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: D
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(-1\) and the denominator is \(-1\).'
+  276:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=-1+\sin\theta\) at \(\theta=0\) is'
+    A: '\(2\)'
+    B: '\(0\)'
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: C
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(-1\) and the denominator is \(1\).'
+  277:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=-1+\sin\theta\) at \(\theta=\pi\) is'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(-1\)'
+    D: '\(2\)'
+    answer: A
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(1\) and the denominator is \(1\).'
+  278:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=\sin2\theta\) at \(\theta=\tfrac\pi4\) is'
+    A: '\(0\)'
+    B: '\(-1\)'
+    C: '\(1\)'
+    D: '\(2\)'
+    answer: B
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(\frac{\sqrt{2}}{2}\) and the denominator is \(- \frac{\sqrt{2}}{2}\).'
+  279:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=\sin2\theta\) at \(\theta=-\tfrac\pi4\) is'
+    A: '\(1\)'
+    B: '\(0\)'
+    C: '\(2\)'
+    D: '\(-1\)'
+    answer: A
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(- \frac{\sqrt{2}}{2}\) and the denominator is \(- \frac{\sqrt{2}}{2}\).'
+  280:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=\sin2\theta\) at \(\theta=\tfrac{3\pi}4\) is'
+    A: '\(-1\)'
+    B: '\(0\)'
+    C: '\(2\)'
+    D: '\(1\)'
+    answer: D
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(\frac{\sqrt{2}}{2}\) and the denominator is \(\frac{\sqrt{2}}{2}\).'
+  281:
+    topic: s10-6
+    question: 'The slope \(\dfrac{dy}{dx}\) of the polar curve \(r=\sin2\theta\) at \(\theta=-\tfrac{3\pi}4\) is'
+    A: '\(2\)'
+    B: '\(-1\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: B
+    hint: '\(\dfrac{dy}{dx}=\dfrac{r''\sin\theta+r\cos\theta}{r''\cos\theta-r\sin\theta}\).'
+    explanation: 'At this angle the numerator is \(- \frac{\sqrt{2}}{2}\) and the denominator is \(\frac{\sqrt{2}}{2}\).'
+  282:
+    topic: s10-6
+    question: 'The slope of the four-leaved rose \(r=\cos2\theta\) at \(\theta=\tfrac\pi2\) is'
+    A: '\(0\)'
+    B: undefined
+    C: '\(-1\)'
+    D: '\(1\)'
+    answer: A
+    hint: 'At \(\theta=\tfrac\pi2\), \(r=-1\) and \(r''=0\); the denominator is \(r''\cos\theta-r\sin\theta=1\).'
+    explanation: 'The numerator is \(r''\sin\theta+r\cos\theta=0\), so the tangent is horizontal.'
+  283:
+    topic: s10-6
+    question: 'The tangent to \(r=\cos2\theta\) at \(\theta=0\) is'
+    A: 'of slope \(-1\)'
+    B: horizontal
+    C: 'of slope \(1\)'
+    D: vertical (slope undefined)
+    answer: D
+    hint: 'At \(\theta=0\), \(r=1\), \(r''=0\).'
+    explanation: 'The denominator \(r''\cos\theta-r\sin\theta=0\) while the numerator is \(1\).'
+  284:
+    topic: s10-6
+    question: "Which of these limaçons has an inner loop?"
+    A: '\(r=2+\cos\theta\)'
+    B: '\(r=\tfrac12+\cos\theta\)'
+    C: '\(r=1-\cos\theta\)'
+    D: '\(r=\tfrac32+\cos\theta\)'
+    answer: B
+    hint: 'For \(r=a+b\cos\theta\): inner loop if \(a<b\); cardioid if \(a=b\); dimpled if \(b<a<2b\); oval if \(a\ge2b\).'
+    explanation: 'Here \(a=\tfrac12<b=1\).'
+  285:
+    topic: s10-6
+    question: 'The limaçon \(r=1-\cos\theta\) is a'
+    A: cardioid
+    B: "oval limaçon"
+    C: "limaçon with an inner loop"
+    D: "dimpled limaçon"
+    answer: A
+    hint: '\(a=b\).'
+    explanation: A heart-shaped curve with a cusp at the origin.
+  286:
+    topic: s10-6
+    question: 'The limaçon \(r=\tfrac32+\cos\theta\) is a'
+    A: "dimpled limaçon"
+    B: "limaçon with an inner loop"
+    C: cardioid
+    D: "oval limaçon"
+    answer: A
+    hint: 'Here \(b<a<2b\).'
+    explanation: '\(1<\tfrac32<2\).'
+  287:
+    topic: s10-6
+    question: 'The limaçon \(r=2+\cos\theta\) is a'
+    A: "dimpled limaçon"
+    B: "limaçon with an inner loop"
+    C: cardioid
+    D: "convex (oval) limaçon"
+    answer: D
+    hint: 'Here \(a\ge2b\).'
+    explanation: '\(2\ge2\).'
+  288:
+    topic: s10-6
+    question: 'Which equation has the same graph as \(r=1-\cos\theta\)?'
+    A: '\(r=1+\cos\theta\)'
+    B: '\(r=-1+\cos\theta\)'
+    C: '\(r=-1-\cos\theta\)'
+    D: '\(r=\cos\theta-1\) with \(\theta\) shifted by \(\tfrac\pi2\)'
+    answer: C
+    hint: 'Replace \((r,\theta)\) by \((-r,\theta+\pi)\) in \(r=-1-\cos\theta\).'
+    explanation: '\(-r=-1-\cos(\theta+\pi)=-1+\cos\theta\), so \(r=1-\cos\theta\).'
+  289:
+    topic: s10-6
+    question: 'Which equation has the same graph as \(r=\cos2\theta\)?'
+    A: '\(r=-\sin\left(2\theta+\tfrac\pi2\right)\)'
+    B: '\(r=\sin2\theta\)'
+    C: '\(r=-\cos\tfrac\theta2\)'
+    D: '\(r=\cos\theta\)'
+    answer: A
+    hint: 'Use \(\sin(2\theta+\tfrac\pi2)=\cos2\theta\).'
+    explanation: '\(-\sin(2\theta+\tfrac\pi2)=-\cos2\theta\), which traces the same four-leaved rose (replace \(\theta\) by \(\theta+\tfrac\pi2\) and \(r\) by \(-r\)).'
+  290:
+    topic: s10-6
+    question: 'The graph of \(r=\sin\dfrac\theta2\)... is traced completely for \(\theta\) in'
+    A: '\([0,8\pi]\)'
+    B: '\([0,\pi]\)'
+    C: '\([0,4\pi]\)'
+    D: '\([0,2\pi]\)'
+    answer: C
+    hint: 'The period of \(\sin\tfrac\theta2\) is \(4\pi\).'
+    explanation: 'The curve closes after \(\theta\) increases by \(4\pi\).'
+  291:
+    topic: s10-6
+    question: 'The region \(-1\le r\le2\), \(-\tfrac\pi2\le\theta\le\tfrac\pi2\) is'
+    A: 'the right half-disk of radius \(2\)'
+    B: 'the full disk of radius \(2\)'
+    C: 'the left half-disk of radius \(2\)'
+    D: 'the right half-disk of radius \(2\) together with the left half-disk of radius \(1\)'
+    answer: D
+    hint: 'A negative \(r\) with angle \(\theta\) is a point in the opposite direction.'
+    explanation: 'For \(r\in[-1,0]\) the points lie on the left side (\(\theta+\pi\)).'
+  292:
+    topic: s10-6
+    question: 'The region \(0\le r\le2\sec\theta\), \(-\tfrac\pi4\le\theta\le\tfrac\pi4\) is'
+    A: 'the half-disk \(x\ge0\)'
+    B: 'the triangle with vertices \((0,0)\), \((2,2)\), \((2,-2)\)'
+    C: 'a sector of a circle of radius \(2\)'
+    D: 'the triangle with vertices \((0,0)\), \((1,1)\), \((1,-1)\)'
+    answer: B
+    hint: '\(r=2\sec\theta\) is the line \(x=2\).'
+    explanation: 'The rays at \(\pm45^\circ\) cut the line at \((2,\pm2)\).'
+  293:
+    topic: s10-6
+    question: 'The inequality \(0\le r\le2-2\cos\theta\) describes'
+    A: 'a disk of radius \(4\)'
+    B: the region enclosed by a cardioid
+    C: 'a circle of radius \(2\)'
+    D: the region outside a cardioid
+    answer: B
+    hint: Each ray from the origin extends out to the cardioid.
+    explanation: 'The boundary is \(r=2(1-\cos\theta)\).'
+  294:
+    topic: s10-6
+    question: 'The inequality \(0\le r^2\le\cos\theta\) describes'
+    A: the whole plane
+    B: the region outside the curve
+    C: a circle
+    D: 'the region inside the curve \(r^2=\cos\theta\) (a lemniscate-like loop)'
+    answer: D
+    hint: 'It requires \(\cos\theta\ge0\), so \(-\tfrac\pi2\le\theta\le\tfrac\pi2\).'
+    explanation: The region lies in the right half-plane.
+  295:
+    topic: s10-6
+    question: 'The point \(\left(2,\tfrac{3\pi}4\right)\) lies on \(r=2\sin2\theta\) because'
+    A: '\(2\sin\tfrac{3\pi}4=2\)'
+    B: 'the same point has the labels \(\left(-2,\tfrac{7\pi}4\right)\), and \(2\sin\tfrac{7\pi}2=-2\)'
+    C: it does not lie on the curve
+    D: '\(2\sin\tfrac{3\pi}2=2\)'
+    answer: B
+    hint: Try other polar labels of the same point.
+    explanation: '\(\left(-2,\tfrac{7\pi}4\right)\) satisfies \(r=2\sin2\theta\).'
+  296:
+    topic: s10-6
+    question: 'The point \(\left(\tfrac12,\tfrac{3\pi}2\right)\) lies on \(r=-\sin\dfrac\theta3\) because'
+    A: it does not lie on the curve
+    B: '\(-\sin\tfrac{3\pi}{2\cdot3}=\tfrac12\) directly'
+    C: '\(\sin\tfrac{3\pi}{6}=\tfrac12\)'
+    D: 'the point has another label \((r,\theta)\) with \(\theta=\tfrac{7\pi}{2}\) giving \(-\sin\tfrac{7\pi}6=\tfrac12\)'
+    answer: D
+    hint: 'Use other labels with \(\theta+2\pi k\).'
+    explanation: '\(-\sin\tfrac{7\pi}6=\tfrac12\), and \(\theta=\tfrac{7\pi}2\) is \(\tfrac{3\pi}2\) plus \(2\pi\).'
+  297:
+    topic: s10-6
+    question: 'The curves \(r=1+\cos\theta\) and \(r=1-\cos\theta\) intersect at'
+    A: '\(\left(2,0\right)\) and the origin'
+    B: the origin only
+    C: '\(\left(1,0\right)\) and \(\left(1,\pi\right)\) only'
+    D: '\(\left(1,\pm\tfrac\pi2\right)\) and the origin'
+    answer: D
+    hint: 'Set \(1+\cos\theta=1-\cos\theta\).'
+    explanation: '\(\cos\theta=0\) gives \(\theta=\pm\tfrac\pi2\), \(r=1\); both curves also pass through the origin.'
+  298:
+    topic: s10-6
+    question: 'The curves \(r=1+\sin\theta\) and \(r=1-\sin\theta\) intersect at'
+    A: the origin only
+    B: '\((1,0)\), \((1,\pi)\) and the origin'
+    C: '\((2,0)\) and the origin'
+    D: '\((1,\tfrac\pi2)\) and \((1,-\tfrac\pi2)\)'
+    answer: B
+    hint: 'Set \(1+\sin\theta=1-\sin\theta\).'
+    explanation: '\(\sin\theta=0\) gives \(\theta=0,\pi\); the origin is on both curves with different angles.'
+  299:
+    topic: s10-6
+    question: 'The circles \(r=2\sin\theta\) and \(r=2\sin2\theta\) (restricted to \(0\le\theta\le\pi\)) meet away from the origin at angle(s)'
+    A: '\(\theta=\tfrac\pi6\)'
+    B: '\(\theta=\tfrac\pi3\) (point \((\sqrt3,\tfrac\pi3)\))'
+    C: '\(\theta=\tfrac\pi2\)'
+    D: '\(\theta=\tfrac{2\pi}3\) only'
+    answer: B
+    hint: 'Solve \(\sin\theta=\sin2\theta=2\sin\theta\cos\theta\).'
+    explanation: '\(\cos\theta=\tfrac12\) gives \(\theta=\tfrac\pi3\) and \(r=2\sin\tfrac\pi3=\sqrt3\).'
+  300:
+    topic: s10-6
+    question: 'The curves \(r=\cos\theta\) and \(r=1-\cos\theta\) intersect (off the origin) at'
+    A: '\(\left(\tfrac12,\pm\tfrac{2\pi}3\right)\)'
+    B: '\(\left(\tfrac12,\pm\tfrac\pi6\right)\)'
+    C: '\(\left(1,\pm\tfrac\pi3\right)\)'
+    D: '\(\left(\tfrac12,\pm\tfrac\pi3\right)\)'
+    answer: D
+    hint: 'Solve \(\cos\theta=1-\cos\theta\).'
+    explanation: '\(\cos\theta=\tfrac12\), so \(\theta=\pm\tfrac\pi3\) and \(r=\tfrac12\).'
+  301:
+    topic: s10-6
+    question: 'The curves \(r=\sqrt2\) and \(r^2=4\sin\theta\) intersect at'
+    A: '\(\left(2,\tfrac\pi6\right)\) and \(\left(2,\tfrac{5\pi}6\right)\)'
+    B: '\(\left(\sqrt2,\tfrac\pi6\right)\) and \(\left(\sqrt2,\tfrac{5\pi}6\right)\)'
+    C: '\(\left(\sqrt2,\tfrac\pi3\right)\) and \(\left(\sqrt2,\tfrac{2\pi}3\right)\)'
+    D: '\(\left(\sqrt2,\tfrac\pi4\right)\) and \(\left(\sqrt2,\tfrac{3\pi}4\right)\)'
+    answer: B
+    hint: 'Substitute \(r^2=2\).'
+    explanation: '\(4\sin\theta=2\), so \(\sin\theta=\tfrac12\).'
+  302:
+    topic: s10-6
+    question: 'The curves \(r^2=\sqrt2\sin\theta\) and \(r^2=\sqrt2\cos\theta\) intersect at'
+    A: '\(\left(\pm1,\tfrac\pi4\right)\) and the origin'
+    B: '\(\left(\pm\sqrt2,\tfrac\pi4\right)\) and the origin'
+    C: '\(\left(1,\tfrac\pi4\right)\) and \(\left(1,\tfrac{5\pi}4\right)\)'
+    D: '\(\left(1,\tfrac\pi4\right)\) only'
+    answer: A
+    hint: 'Set \(\sin\theta=\cos\theta\).'
+    explanation: '\(\theta=\tfrac\pi4\) gives \(r^2=1\), so \(r=\pm1\); also the origin.'
+  303:
+    topic: s10-6
+    question: 'The curves \(r=1\) and \(r=2\sin2\theta\) intersect when \(\theta\in[0,\tfrac\pi2]\) at'
+    A: '\(\theta=\tfrac\pi{24}\) and \(\theta=\tfrac{5\pi}{24}\)'
+    B: '\(\theta=\tfrac\pi6\) and \(\theta=\tfrac{5\pi}6\)'
+    C: '\(\theta=\tfrac\pi{12}\) and \(\theta=\tfrac{5\pi}{12}\)'
+    D: '\(\theta=\tfrac\pi4\) only'
+    answer: C
+    hint: 'Solve \(2\sin2\theta=1\).'
+    explanation: '\(2\theta=\tfrac\pi6,\tfrac{5\pi}6\).'
+  304:
+    topic: s10-6
+    question: 'The maximum width of the petal of the four-leaved rose \(r=\cos2\theta\) that lies along the \(x\)-axis (to three decimals) is'
+    A: '\(1.000\)'
+    B: '\(0.707\)'
+    C: '\(0.544\)'
+    D: '\(0.272\)'
+    answer: C
+    hint: 'Maximize \(y=r\sin\theta=\cos2\theta\sin\theta\) and double.'
+    explanation: '\(\cos2\theta=4\sin^2\theta\) gives \(\sin^2\theta=\tfrac16\); \(y_{\max}=\dfrac{2}{3\sqrt6}\approx0.272\); width \(\approx0.544\).'
+  305:
+    topic: s10-6
+    question: 'The maximum height above the \(x\)-axis of the cardioid \(r=2(1+\cos\theta)\) (to two decimals) is'
+    A: '\(3.46\)'
+    B: '\(2.00\)'
+    C: '\(4.00\)'
+    D: '\(2.60\)'
+    answer: D
+    hint: 'Maximize \(y=2(1+\cos\theta)\sin\theta\).'
+    explanation: '\(y''=0\) at \(\theta=\tfrac\pi3\): \(y=3\cdot\tfrac{\sqrt3}2=\tfrac{3\sqrt3}2\approx2.60\).'
+  306:
+    topic: s10-6
+    question: 'The graph of \(r=\theta\) (\(\theta\ge0\)) is an'
+    A: logarithmic spiral
+    B: Archimedean spiral
+    C: hyperbolic spiral
+    D: lemniscate
+    answer: B
+    hint: '\(r\) grows linearly with \(\theta\).'
+    explanation: Equal turns add equal distances from the origin.
+  307:
+    topic: s10-6
+    question: 'The graph of \(r=e^{\theta/10}\) is a'
+    A: Archimedean spiral
+    B: rose
+    C: hyperbolic spiral
+    D: logarithmic spiral
+    answer: D
+    hint: '\(r\) grows exponentially in \(\theta\).'
+    explanation: 'Each full turn multiplies \(r\) by a constant factor.'
+  308:
+    topic: s10-6
+    question: 'The graph of \(r=\dfrac8\theta\) (\(\theta>0\)) is a'
+    A: circle
+    B: 'hyperbolic spiral, which winds toward the origin as \(\theta\to\infty\)'
+    C: logarithmic spiral
+    D: Archimedean spiral
+    answer: B
+    hint: '\(r\to0\) as \(\theta\to\infty\).'
+    explanation: '\(r\theta=8\).'
+  309:
+    topic: s10-6
+    question: 'A rose \(r=\cos m\theta\) with \(m\) a positive odd integer has'
+    A: '\(m/2\) petals'
+    B: '\(m\) petals'
+    C: '\(2m\) petals'
+    D: one petal
+    answer: B
+    hint: 'Count the petals for \(m=1,3,5\).'
+    explanation: '\(m=3\) gives a three-petaled rose; even \(m\) gives \(2m\) petals.'
+  310:
+    topic: s10-6
+    question: 'A rose \(r=\cos m\theta\) with \(m\) a positive even integer has'
+    A: '\(m\) petals'
+    B: '\(2m\) petals'
+    C: one petal
+    D: '\(m/2\) petals'
+    answer: B
+    hint: '\(r=\cos2\theta\) has four petals.'
+    explanation: 'For even \(m\) the curve is traced once for \(0\le\theta<2\pi\) with \(2m\) petals.'
+  311:
+    topic: s10-7
+    question: 'The area inside the oval limaçon \(r=4+2\cos\theta\) is'
+    A: '\(9 \pi\)'
+    B: '\(18 \pi\)'
+    C: '\(16 \pi\)'
+    D: '\(36 \pi\)'
+    answer: B
+    hint: '\(A=\tfrac12\displaystyle\int_0^{2\pi}r^2\,d\theta\).'
+    explanation: '\(\tfrac12\int_0^{2\pi}(16+16\cos\theta+4\cos^2\theta)d\theta=\tfrac12(32\pi+4\pi)=18\pi\).'
+  312:
+    topic: s10-7
+    question: 'The area inside the cardioid \(r=a(1+\cos\theta)\) is'
+    A: '\(3 \pi a^{2}\)'
+    B: '\(\pi a^{2}\)'
+    C: '\(\frac{3 \pi a^{2}}{4}\)'
+    D: '\(\frac{3 \pi a^{2}}{2}\)'
+    answer: D
+    hint: '\(A=\tfrac{a^2}2\displaystyle\int_0^{2\pi}(1+\cos\theta)^2d\theta\).'
+    explanation: '\(\tfrac{a^2}2\left(2\pi+\pi\right)=\dfrac{3\pi a^2}2\).'
+  313:
+    topic: s10-7
+    question: 'The area of one leaf of the four-leaved rose \(r=\cos2\theta\) is'
+    A: '\(\frac{\pi}{2}\)'
+    B: '\(\frac{\pi}{16}\)'
+    C: '\(\frac{\pi}{8}\)'
+    D: '\(\frac{\pi}{4}\)'
+    answer: C
+    hint: 'One leaf is traced for \(-\tfrac\pi4\le\theta\le\tfrac\pi4\).'
+    explanation: '\(\tfrac12\int_{-\pi/4}^{\pi/4}\cos^22\theta\,d\theta=\dfrac\pi8\).'
+  314:
+    topic: s10-7
+    question: 'The area inside the lemniscate \(r^2=2a^2\cos2\theta\) (\(a>0\)) is'
+    A: '\(\pi a^{2}\)'
+    B: '\(2 a^{2}\)'
+    C: '\(4 a^{2}\)'
+    D: '\(a^{2}\)'
+    answer: B
+    hint: 'Use \(4\) times the area of the quarter \(0\le\theta\le\tfrac\pi4\).'
+    explanation: '\(4\cdot\tfrac12\int_0^{\pi/4}2a^2\cos2\theta\,d\theta=2a^2\).'
+  315:
+    topic: s10-7
+    question: 'The area inside one loop of the lemniscate \(r^2=4\sin2\theta\) is'
+    A: '\(4\)'
+    B: '\(2\)'
+    C: '\(1\)'
+    D: '\(\pi\)'
+    answer: B
+    hint: 'One loop: \(0\le\theta\le\tfrac\pi2\).'
+    explanation: '\(\tfrac12\int_0^{\pi/2}4\sin2\theta\,d\theta=2\).'
+  316:
+    topic: s10-7
+    question: 'The area inside the six-lobed curve \(r^2=2\sin3\theta\) (all six lobes) is'
+    A: '\(8\)'
+    B: '\(4\)'
+    C: '\(2\)'
+    D: '\(\frac{2}{3}\)'
+    answer: B
+    hint: 'Each lobe has area \(\tfrac12\int_0^{\pi/3}2\sin3\theta\,d\theta\).'
+    explanation: 'Each lobe has area \(\tfrac23\); six lobes give \(4\).'
+  317:
+    topic: s10-7
+    question: 'The area shared by the circles \(r=2\cos\theta\) and \(r=2\sin\theta\) is'
+    A: '\(-1 + \frac{\pi}{4}\)'
+    B: '\(\frac{\pi}{2}\)'
+    C: '\(-1 + \frac{\pi}{2}\)'
+    D: '\(-2 + \pi\)'
+    answer: C
+    hint: 'Double the area of the sector \(0\le\theta\le\tfrac\pi4\) under \(r=2\sin\theta\), plus the corresponding sector of the other circle.'
+    explanation: '\(2\left[\tfrac12\int_0^{\pi/4}4\sin^2\theta\,d\theta\right]\) gives \(\dfrac\pi2-1\).'
+  318:
+    topic: s10-7
+    question: 'The area shared by the circles \(r=1\) and \(r=2\sin\theta\) is'
+    A: '\(1.571\)'
+    B: '\(2.457\)'
+    C: '\(1.228\)'
+    D: '\(0.614\)'
+    answer: C
+    hint: 'Split the region at the intersections \(\theta=\tfrac\pi6\) and \(\tfrac{5\pi}6\).'
+    explanation: '\(2\cdot\tfrac12\int_0^{\pi/6}4\sin^2\theta\,d\theta+\tfrac12\int_{\pi/6}^{5\pi/6}1\,d\theta=\dfrac\pi3\cdot\ldots\approx1.228\).'
+  319:
+    topic: s10-7
+    question: 'The area shared by the circles \(r=1\) and \(r=2\sin\theta\) equals'
+    A: '\(\dfrac{2\pi}3-\dfrac{\sqrt3}2\)'
+    B: '\(\pi-\sqrt3\)'
+    C: '\(\dfrac{2\pi}3+\dfrac{\sqrt3}2\)'
+    D: '\(\dfrac{\pi}{3}-\dfrac{\sqrt3}4\)'
+    answer: A
+    hint: See the previous computation.
+    explanation: 'The sum evaluates to \(\dfrac{2\pi}3-\dfrac{\sqrt3}2\approx1.228\).'
+  320:
+    topic: s10-7
+    question: 'The area shared by the cardioids \(r=2(1+\cos\theta)\) and \(r=2(1-\cos\theta)\) is'
+    A: '\(8 + 3 \pi\)'
+    B: '\(-8 + 6 \pi\)'
+    C: '\(-8 + 3 \pi\)'
+    D: '\(3 \pi\)'
+    answer: C
+    hint: 'By symmetry use \(4\) times the part of the first cardioid with \(\tfrac\pi2\le\theta\le\pi\) halved appropriately.'
+    explanation: 'The shared region has area \(3\pi-8\).'
+  321:
+    topic: s10-7
+    question: 'The area inside the lemniscate \(r^2=6\cos2\theta\) and outside the circle \(r=\sqrt3\) is'
+    A: '\(- \pi + 6 \sqrt{3}\)'
+    B: '\(\pi + 3 \sqrt{3}\)'
+    C: '\(- \pi + 3 \sqrt{3}\)'
+    D: '\(- \pi + \sqrt{3}\)'
+    answer: C
+    hint: 'They meet at \(\theta=\pm\tfrac\pi6\); use symmetry.'
+    explanation: '\(4\left[\tfrac12\int_0^{\pi/6}\left(6\cos2\theta-3\right)d\theta\right]=3\sqrt3-\pi\).'
+  322:
+    topic: s10-7
+    question: 'The area inside the circle \(r=3a\cos\theta\) and outside the cardioid \(r=a(1+\cos\theta)\) (\(a>0\)) is'
+    A: '\(\pi a^{2}\)'
+    B: '\(2 \pi a^{2}\)'
+    C: '\(\frac{3 \pi a^{2}}{2}\)'
+    D: '\(\frac{\pi a^{2}}{2}\)'
+    answer: A
+    hint: 'They meet where \(3\cos\theta=1+\cos\theta\), i.e. \(\theta=\pm\tfrac\pi3\).'
+    explanation: '\(2\cdot\tfrac12\int_0^{\pi/3}a^2\left(9\cos^2\theta-(1+\cos\theta)^2\right)d\theta=\pi a^2\).'
+  323:
+    topic: s10-7
+    question: 'The area inside the circle \(r=-2\cos\theta\) and outside the circle \(r=1\) is'
+    A: '\(- \frac{\sqrt{3}}{2} + \frac{2 \pi}{3}\)'
+    B: '\(\sqrt{3} + \frac{2 \pi}{3}\)'
+    C: '\(\frac{\sqrt{3}}{2} + \frac{\pi}{3}\)'
+    D: '\(- \frac{\sqrt{3}}{2} + \frac{\pi}{3}\)'
+    answer: C
+    hint: 'They intersect at \(\theta=\pm\tfrac{2\pi}3\) (on the left side).'
+    explanation: '\(\tfrac12\int_{2\pi/3}^{4\pi/3}\left(4\cos^2\theta-1\right)d\theta=\dfrac\pi3+\dfrac{\sqrt3}2\).'
+  324:
+    topic: s10-7
+    question: 'The area inside the outer loop of the limaçon \(r=2\cos\theta+1\) is'
+    A: '\(3 \sqrt{3} + 2 \pi\)'
+    B: '\(\frac{3 \sqrt{3}}{2} + \pi\)'
+    C: '\(\frac{3 \sqrt{3}}{2} + 2 \pi\)'
+    D: '\(- \frac{3 \sqrt{3}}{2} + 2 \pi\)'
+    answer: C
+    hint: 'The outer loop is traced for \(-\tfrac{2\pi}3\le\theta\le\tfrac{2\pi}3\) (where \(r\ge0\)), but it includes the inner loop''s region.'
+    explanation: '\(\tfrac12\int_{-2\pi/3}^{2\pi/3}(2\cos\theta+1)^2d\theta=2\pi+\dfrac{3\sqrt3}2\).'
+  325:
+    topic: s10-7
+    question: 'The area inside the inner loop of \(r=2\cos\theta+1\) is'
+    A: '\(- 3 \sqrt{3} + 2 \pi\)'
+    B: '\(\frac{3 \sqrt{3}}{2} + \pi\)'
+    C: '\(- \frac{3 \sqrt{3}}{4} + \frac{\pi}{2}\)'
+    D: '\(\pi - \frac{3 \sqrt{3}}{2}\)'
+    answer: D
+    hint: 'The inner loop is traced for \(\tfrac{2\pi}3\le\theta\le\tfrac{4\pi}3\), where \(r\le0\).'
+    explanation: '\(\tfrac12\int_{2\pi/3}^{4\pi/3}(2\cos\theta+1)^2d\theta=\pi-\dfrac{3\sqrt3}2\).'
+  326:
+    topic: s10-7
+    question: 'The area inside the outer loop and outside the inner loop of \(r=2\cos\theta+1\) is'
+    A: '\(\pi - 3 \sqrt{3}\)'
+    B: '\(3 \sqrt{3} + 3 \pi\)'
+    C: '\(\pi + 3 \sqrt{3}\)'
+    D: '\(\frac{3 \sqrt{3}}{2} + \pi\)'
+    answer: C
+    hint: Subtract the inner loop area from the outer loop area.
+    explanation: '\(\left(2\pi+\tfrac{3\sqrt3}2\right)-\left(\pi-\tfrac{3\sqrt3}2\right)=\pi+3\sqrt3\).'
+  327:
+    topic: s10-7
+    question: 'The area inside the circle \(r=6\) above the line \(r=3\csc\theta\) (\(y=3\)) is (two decimals)'
+    A: '\(33.17\)'
+    B: '\(44.22\)'
+    C: '\(22.11\)'
+    D: '\(11.06\)'
+    answer: C
+    hint: 'They meet where \(3\csc\theta=6\): \(\theta=\tfrac\pi6,\tfrac{5\pi}6\).'
+    explanation: '\(\tfrac12\int_{\pi/6}^{5\pi/6}\left(36-9\csc^2\theta\right)d\theta=12\pi-9\sqrt3\approx22.11\).'
+  328:
+    topic: s10-7
+    question: 'The area inside the circle \(r=6\) above the line \(y=3\) equals'
+    A: '\(12\pi-9\sqrt3\)'
+    B: '\(6\pi-9\sqrt3\)'
+    C: '\(18\pi-9\sqrt3\)'
+    D: '\(12\pi+9\sqrt3\)'
+    answer: A
+    hint: It is a circular segment.
+    explanation: '\(\tfrac12\left[36\theta+9\cot\theta\right]_{\pi/6}^{5\pi/6}=12\pi-9\sqrt3\).'
+  329:
+    topic: s10-7
+    question: 'The area inside the cardioid \(r=\cos\theta+1\) and outside the circle \(r=\cos\theta\) is'
+    A: '\(\dfrac{3\pi}2\)'
+    B: '\(\pi\)'
+    C: '\(\dfrac{3\pi}4\)'
+    D: '\(\dfrac{5\pi}4\)'
+    answer: D
+    hint: 'The circle \(r=\cos\theta\) (area \(\tfrac\pi4\)) lies entirely inside the cardioid (area \(\tfrac{3\pi}2\)).'
+    explanation: '\(\tfrac{3\pi}2-\tfrac\pi4=\tfrac{5\pi}4\). The integral \(\tfrac12\int_0^{2\pi}\left[(\cos\theta+1)^2-\cos^2\theta\right]d\theta=\pi\) is wrong because \(\theta\) from \(0\) to \(2\pi\) traces the circle twice.'
+  330:
+    topic: s10-7
+    question: 'The length of the spiral \(r=\theta^2\), \(0\le\theta\le\sqrt5\), is'
+    A: '\(\dfrac{38}3\)'
+    B: '\(\dfrac{27}3\)'
+    C: '\(\dfrac{19}9\)'
+    D: '\(\dfrac{19}3\)'
+    answer: D
+    hint: '\(L=\displaystyle\int\sqrt{r^2+(r'')^2}\,d\theta=\int\theta\sqrt{\theta^2+4}\,d\theta\).'
+    explanation: '\(\dfrac13\left(\theta^2+4\right)^{3/2}\Big|_0^{\sqrt5}=\dfrac{27-8}3\).'
+  331:
+    topic: s10-7
+    question: 'The length of the spiral \(r=\dfrac{e^\theta}{\sqrt2}\), \(0\le\theta\le\pi\), is'
+    A: '\(e^\pi-1\)'
+    B: '\(\dfrac{e^\pi-1}{\sqrt2}\)'
+    C: '\(e^{\pi}\)'
+    D: '\(\sqrt2\left(e^\pi-1\right)\)'
+    answer: A
+    hint: '\(r''=r\), so \(\sqrt{r^2+r''^2}=\sqrt2\,r=e^\theta\).'
+    explanation: '\(\int_0^\pi e^\theta d\theta=e^\pi-1\).'
+  332:
+    topic: s10-7
+    question: 'The length of the cardioid \(r=1+\cos\theta\) is'
+    A: '\(8\)'
+    B: '\(2\pi\)'
+    C: '\(4\)'
+    D: '\(6\)'
+    answer: A
+    hint: '\(r^2+r''^2=2+2\cos\theta=4\cos^2\tfrac\theta2\).'
+    explanation: '\(2\int_0^\pi2\cos\tfrac\theta2\,d\theta=8\).'
+  333:
+    topic: s10-7
+    question: 'The length of the curve \(r=a\sin^2\dfrac\theta2\), \(0\le\theta\le\pi\) (\(a>0\)), is'
+    A: '\(a\)'
+    B: '\(4a\)'
+    C: '\(\pi a\)'
+    D: '\(2a\)'
+    answer: D
+    hint: '\(r^2+r''^2=a^2\sin^2\tfrac\theta2\).'
+    explanation: '\(a\int_0^\pi\sin\tfrac\theta2d\theta=2a\).'
+  334:
+    topic: s10-7
+    question: 'The length of the parabolic segment \(r=\dfrac6{1+\cos\theta}\), \(0\le\theta\le\tfrac\pi2\), is (two decimals)'
+    A: '\(3.44\)'
+    B: '\(13.77\)'
+    C: '\(6.89\)'
+    D: '\(10.33\)'
+    answer: C
+    hint: '\(r^2+r''^2=\dfrac{72}{(1+\cos\theta)^3}\).'
+    explanation: '\(L=\int_0^{\pi/2}\dfrac{6\sqrt2}{(1+\cos\theta)^{3/2}}d\theta\approx6.89\).'
+  335:
+    topic: s10-7
+    question: 'The length of the parabolic segment \(r=\dfrac2{1-\cos\theta}\), \(\tfrac\pi2\le\theta\le\pi\), is (two decimals)'
+    A: '\(2.3\)'
+    B: '\(1.15\)'
+    C: '\(4.59\)'
+    D: '\(3.44\)'
+    answer: A
+    hint: '\(r^2+r''^2=\dfrac{8}{(1-\cos\theta)^3}\).'
+    explanation: 'Evaluate \(\int\sqrt{8}\,(1-\cos\theta)^{-3/2}d\theta\) numerically: \(\approx2.30\).'
+  336:
+    topic: s10-7
+    question: 'The length of the curve \(r=\cos^3\dfrac\theta3\), \(0\le\theta\le\dfrac\pi4\), is'
+    A: '\(\dfrac\pi8+\dfrac34\)'
+    B: '\(\dfrac\pi8+\dfrac38\)'
+    C: '\(\dfrac\pi8-\dfrac38\)'
+    D: '\(\dfrac\pi4+\dfrac38\)'
+    answer: B
+    hint: '\(r^2+r''^2=\cos^6\tfrac\theta3+\cos^4\tfrac\theta3\sin^2\tfrac\theta3=\cos^4\tfrac\theta3\).'
+    explanation: '\(\int_0^{\pi/4}\cos^2\tfrac\theta3d\theta=\left[\tfrac\theta2+\tfrac34\sin\tfrac{2\theta}3\right]_0^{\pi/4}=\tfrac\pi8+\tfrac38\).'
+  337:
+    topic: s10-7
+    question: 'The length of the curve \(r=\sqrt{1+\sin2\theta}\), \(0\le\theta\le\pi\sqrt2\), is'
+    A: '\(2\)'
+    B: '\(4\pi\)'
+    C: '\(\pi\sqrt2\)'
+    D: '\(2\pi\)'
+    answer: D
+    hint: 'Simplify \(r^2+r''^2\).'
+    explanation: '\(r^2+r''^2=2\), so \(L=\sqrt2\cdot\pi\sqrt2=2\pi\).'
+  338:
+    topic: s10-7
+    question: 'The length of the curve \(r=\sqrt{1+\cos2\theta}\), \(0\le\theta\le\pi\sqrt2\), is'
+    A: '\(\pi\)'
+    B: '\(2\pi\)'
+    C: '\(\pi\sqrt2\)'
+    D: '\(4\pi\)'
+    answer: B
+    hint: '\(r''=-\dfrac{\sin2\theta}{r}\).'
+    explanation: '\(r^2+r''^2=1+\cos2\theta+\dfrac{\sin^22\theta}{1+\cos2\theta}=2\), so \(L=\sqrt2\cdot\pi\sqrt2=2\pi\).'
+  339:
+    topic: s10-7
+    question: 'Using the polar arc-length formula, the circumference of \(r=a\cos\theta\) is'
+    A: '\(\pi a\)'
+    B: '\(\dfrac{\pi a}2\)'
+    C: '\(\pi a^2\)'
+    D: '\(2\pi a\)'
+    answer: A
+    hint: '\(r^2+r''^2=a^2\), and the circle is traced once for \(0\le\theta\le\pi\).'
+    explanation: '\(\int_0^\pi a\,d\theta=\pi a\).'
+  340:
+    topic: s10-7
+    question: 'Using the polar arc-length formula, the circumference of \(r=a\) is'
+    A: '\(4\pi a\)'
+    B: '\(\pi a\)'
+    C: '\(\pi a^2\)'
+    D: '\(2\pi a\)'
+    answer: D
+    hint: '\(\int_0^{2\pi}a\,d\theta\).'
+    explanation: 'It is a circle of radius \(a\).'
+  341:
+    topic: s10-7
+    question: 'The surface generated by revolving \(r=\sqrt{\cos2\theta}\), \(0\le\theta\le\tfrac\pi4\), about the \(y\)-axis has area'
+    A: '\(2\pi\sqrt2\)'
+    B: '\(\pi\sqrt2\)'
+    C: '\(\dfrac{\pi\sqrt2}2\)'
+    D: '\(\pi\)'
+    answer: B
+    hint: '\(S=2\pi\displaystyle\int r\cos\theta\sqrt{r^2+r''^2}\,d\theta\) with \(\sqrt{r^2+r''^2}=\dfrac1{\sqrt{\cos2\theta}}\).'
+    explanation: '\(S=2\pi\int_0^{\pi/4}\cos\theta\,d\theta=2\pi\sin\tfrac\pi4=\pi\sqrt2\).'
+  342:
+    topic: s10-7
+    question: 'The surface generated by revolving \(r=\sqrt2\,e^{\theta/2}\), \(0\le\theta\le\tfrac\pi2\), about the \(x\)-axis has area'
+    A: '\(\pi\sqrt5\left(e^{\pi/2}-1\right)\)'
+    B: '\(\pi\sqrt5\left(e^{\pi/2}+1\right)\)'
+    C: '\(\pi\left(e^{\pi/2}+1\right)\)'
+    D: '\(2\pi\sqrt5\left(e^{\pi/2}+1\right)\)'
+    answer: B
+    hint: '\(r''=\tfrac r2\), so \(\sqrt{r^2+r''^2}=\tfrac{\sqrt5}2r\).'
+    explanation: '\(S=2\pi\cdot\tfrac{\sqrt5}2\int_0^{\pi/2}2e^\theta\sin\theta\,d\theta=\pi\sqrt5\left(e^{\pi/2}+1\right)\).'
+  343:
+    topic: s10-7
+    question: 'The surface generated by revolving the right half of the lemniscate \(r^2=\cos2\theta\) about the \(x\)-axis has area'
+    A: '\(\pi\left(2+\sqrt2\right)\)'
+    B: '\(\pi\sqrt2\)'
+    C: '\(\pi\left(2-\sqrt2\right)\)'
+    D: '\(2\pi\left(2-\sqrt2\right)\)'
+    answer: C
+    hint: 'Use \(2\times\) the upper-half integral \(S=2\pi\int r\sin\theta\,ds\) with \(ds=\dfrac{d\theta}{\sqrt{\cos2\theta}}\).'
+    explanation: '\(S=2\pi\int_0^{\pi/4}\sin\theta\,d\theta=2\pi\left(1-\tfrac{\sqrt2}2\right)\) (the upper half is revolved to cover the whole surface once).'
+  344:
+    topic: s10-7
+    question: 'Revolving the circle \(r=2a\cos\theta\) (\(a>0\)) about the \(y\)-axis generates a surface of area'
+    A: '\(2\pi^2a^2\)'
+    B: '\(4\pi a^2\)'
+    C: '\(8\pi^2a^2\)'
+    D: '\(4\pi^2a^2\)'
+    answer: D
+    hint: 'Pappus: area \(=\) (length of the curve)\(\times\)(distance traveled by its centroid).'
+    explanation: '\(2\pi a\cdot2\pi a=4\pi^2a^2\).'
+  345:
+    topic: s10-7
+    question: 'The average value of \(r\) over the cardioid \(r=a(1-\cos\theta)\), \(0\le\theta\le2\pi\), is'
+    A: '\(\dfrac{3a}{2}\)'
+    B: '\(\dfrac a2\)'
+    C: '\(a\)'
+    D: '\(2a\)'
+    answer: C
+    hint: '\(r_{av}=\dfrac1{2\pi}\displaystyle\int_0^{2\pi}a(1-\cos\theta)\,d\theta\).'
+    explanation: '\(\dfrac{1}{2\pi}\cdot2\pi a=a\).'
+  346:
+    topic: s10-7
+    question: 'The average value of \(r\) over the circle \(r=a\cos\theta\), \(-\tfrac\pi2\le\theta\le\tfrac\pi2\), is'
+    A: '\(\dfrac{a}{2}\)'
+    B: '\(\dfrac a\pi\)'
+    C: '\(a\)'
+    D: '\(\dfrac{2a}\pi\)'
+    answer: D
+    hint: '\(r_{av}=\dfrac1\pi\displaystyle\int_{-\pi/2}^{\pi/2}a\cos\theta\,d\theta\).'
+    explanation: '\(\dfrac{2a}\pi\).'
+  347:
+    topic: s10-7
+    question: 'If \(f\) is continuous, the length of the curve \(r=2f(\theta)\), \(\alpha\le\theta\le\beta\), compared with the length of \(r=f(\theta)\) is'
+    A: exactly twice as long
+    B: the same
+    C: four times as long
+    D: half as long
+    answer: A
+    hint: '\(\sqrt{(2f)^2+(2f'')^2}=2\sqrt{f^2+f''^2}\).'
+    explanation: Lengths scale with the factor.
+  348:
+    topic: s10-7
+    question: 'If the curves \(r=f(\theta)\) and \(r=2f(\theta)\) (\(\alpha\le\theta\le\beta\)) are revolved about the \(x\)-axis, the surface area of the second is'
+    A: the same
+    B: four times that of the first
+    C: twice that of the first
+    D: eight times that of the first
+    answer: B
+    hint: Surface area scales like length times radius.
+    explanation: Both length and radius double.
+  349:
+    topic: s10-7
+    question: 'The centroid of the region enclosed by the cardioid \(r=a(1+\cos\theta)\) has \(\bar x=\)'
+    A: '\(\dfrac{3a}{4}\)'
+    B: '\(\dfrac{5a}6\)'
+    C: '\(a\)'
+    D: '\(\dfrac{a}2\)'
+    answer: B
+    hint: '\(\bar x=\dfrac{\frac23\int r^3\cos\theta\,d\theta}{\int r^2d\theta}\).'
+    explanation: 'The region is symmetric about the \(x\)-axis (\(\bar y=0\)), and \(\bar x=\dfrac{5a}6\).'
+  350:
+    topic: s10-7
+    question: 'The centroid of the semicircular region \(0\le r\le a\), \(0\le\theta\le\pi\), has \(\bar y=\)'
+    A: '\(\dfrac{4a}{3\pi}\)'
+    B: '\(\dfrac{4a}{3}\)'
+    C: '\(\dfrac{2a}{3\pi}\)'
+    D: '\(\dfrac a2\)'
+    answer: A
+    hint: '\(\bar y=\dfrac{\frac23\int_0^\pi a^3\sin\theta\,d\theta}{\int_0^\pi a^2\,d\theta}\).'
+    explanation: '\(\bar y=\dfrac{\frac23\cdot2a^3}{\pi a^2}=\dfrac{4a}{3\pi}\).'
+  351:
+    topic: s10-8
+    question: 'The line at perpendicular distance \(5\) from the origin whose perpendicular direction is \(\dfrac\pi6\) has polar and Cartesian equations'
+    A: '\(r\cos\left(\theta+\tfrac\pi6\right)=5\); \(\tfrac{\sqrt3}2x-\tfrac12y=5\)'
+    B: '\(r\cos\left(\theta-\tfrac\pi6\right)=5\); \(\tfrac{\sqrt3}2x+\tfrac12y=5\)'
+    C: '\(r\cos\left(\theta-\tfrac\pi3\right)=5\); \(\tfrac12x+\tfrac{\sqrt3}2y=5\)'
+    D: '\(r\cos\left(\theta-\tfrac\pi6\right)=\tfrac{5}{2}\); \(\tfrac{\sqrt3}2x+\tfrac12y=\tfrac52\)'
+    answer: B
+    hint: 'The line \(r\cos(\theta-\theta_0)=r_0\) is at distance \(r_0\) from the origin with normal direction \(\theta_0\).'
+    explanation: 'Expand \(\cos(\theta-\theta_0)\) to get the Cartesian form.'
+  352:
+    topic: s10-8
+    question: 'The line at perpendicular distance \(2\) from the origin whose perpendicular direction is \(\dfrac{3\pi}4\) has polar and Cartesian equations'
+    A: '\(r\cos\left(\theta+\tfrac{3\pi}4\right)=2\); \(-x-y=2\sqrt2\)'
+    B: '\(r\cos\left(\theta-\tfrac{\pi}4\right)=2\); \(x+y=2\sqrt2\)'
+    C: '\(r\cos\left(\theta-\tfrac{3\pi}4\right)=2\); \(-x+y=2\sqrt2\)'
+    D: '\(r\cos\left(\theta-\tfrac{3\pi}4\right)=\sqrt2\); \(-x+y=2\)'
+    answer: C
+    hint: 'The line \(r\cos(\theta-\theta_0)=r_0\) is at distance \(r_0\) from the origin with normal direction \(\theta_0\).'
+    explanation: 'Expand \(\cos(\theta-\theta_0)\) to get the Cartesian form.'
+  353:
+    topic: s10-8
+    question: 'The line at perpendicular distance \(3\) with perpendicular direction \(\dfrac{4\pi}3\) has polar and Cartesian equations'
+    A: '\(r\cos\left(\theta-\tfrac{4\pi}3\right)=3\); \(x+\sqrt3y=-6\)'
+    B: '\(r\cos\left(\theta-\tfrac{2\pi}3\right)=3\); \(x-\sqrt3y=-6\)'
+    C: '\(r\cos\left(\theta+\tfrac{4\pi}3\right)=3\); \(x+\sqrt3y=6\)'
+    D: '\(r\cos\left(\theta-\tfrac{\pi}3\right)=3\); \(\sqrt3x+y=-6\)'
+    answer: A
+    hint: 'The line \(r\cos(\theta-\theta_0)=r_0\) is at distance \(r_0\) from the origin with normal direction \(\theta_0\).'
+    explanation: 'Expand \(\cos(\theta-\theta_0)\) to get the Cartesian form.'
+  354:
+    topic: s10-8
+    question: 'The line at perpendicular distance \(4\) with perpendicular direction \(-\dfrac\pi4\) has polar and Cartesian equations'
+    A: '\(r\cos\left(\theta+\tfrac\pi4\right)=2\sqrt2\); \(x-y=4\)'
+    B: '\(r\cos\left(\theta-\tfrac\pi4\right)=4\); \(x+y=4\sqrt2\)'
+    C: '\(r\cos\left(\theta+\tfrac\pi4\right)=4\); \(x-y=4\sqrt2\)'
+    D: '\(r\cos\left(\theta+\tfrac{3\pi}4\right)=4\); \(x-y=-4\sqrt2\)'
+    answer: C
+    hint: 'The line \(r\cos(\theta-\theta_0)=r_0\) is at distance \(r_0\) from the origin with normal direction \(\theta_0\).'
+    explanation: 'Expand \(\cos(\theta-\theta_0)\) to get the Cartesian form.'
+  355:
+    topic: s10-8
+    question: 'The graph of \(r\cos\left(\theta-\tfrac\pi4\right)=\sqrt2\) is the line'
+    A: '\(x-y=2\)'
+    B: '\(x+y=\sqrt2\)'
+    C: '\(x+y=1\)'
+    D: '\(x+y=2\)'
+    answer: D
+    hint: '\(\cos(\theta-\tfrac\pi4)=\tfrac{\sqrt2}2(\cos\theta+\sin\theta)\).'
+    explanation: '\(\tfrac{\sqrt2}2(x+y)=\sqrt2\).'
+  356:
+    topic: s10-8
+    question: 'The graph of \(r\cos\left(\theta+\tfrac{3\pi}4\right)=1\) is the line'
+    A: '\(x+y=\sqrt2\)'
+    B: '\(x+y=-\sqrt2\)'
+    C: '\(x-y=\sqrt2\)'
+    D: '\(x+y=-1\)'
+    answer: B
+    hint: '\(\cos(\theta+\tfrac{3\pi}4)=-\tfrac{\sqrt2}2(\cos\theta+\sin\theta)\).'
+    explanation: '\(-\tfrac{\sqrt2}2(x+y)=1\).'
+  357:
+    topic: s10-8
+    question: 'The graph of \(r\cos\left(\theta-\tfrac{2\pi}3\right)=3\) is the line'
+    A: '\(\sqrt3x-y=6\)'
+    B: '\(-x+\sqrt3y=3\)'
+    C: '\(-x+\sqrt3y=6\)'
+    D: '\(x+\sqrt3y=6\)'
+    answer: C
+    hint: '\(\cos(\theta-\tfrac{2\pi}3)=-\tfrac12\cos\theta+\tfrac{\sqrt3}2\sin\theta\).'
+    explanation: '\(-\tfrac12x+\tfrac{\sqrt3}2y=3\).'
+  358:
+    topic: s10-8
+    question: 'The graph of \(r\cos\left(\theta+\tfrac\pi3\right)=2\) is the line'
+    A: '\(x-\sqrt3y=2\)'
+    B: '\(x-\sqrt3y=4\)'
+    C: '\(x+\sqrt3y=4\)'
+    D: '\(\sqrt3x-y=4\)'
+    answer: B
+    hint: '\(\cos(\theta+\tfrac\pi3)=\tfrac12\cos\theta-\tfrac{\sqrt3}2\sin\theta\).'
+    explanation: '\(\tfrac12x-\tfrac{\sqrt3}2y=2\).'
+  359:
+    topic: s10-8
+    question: 'The line \(\sqrt2x+\sqrt2y=6\) has the form \(r\cos(\theta-\theta_0)=r_0\) with'
+    A: '\(\theta_0=\tfrac\pi2\), \(r_0=3\)'
+    B: '\(\theta_0=\tfrac\pi4\), \(r_0=3\)'
+    C: '\(\theta_0=-\tfrac\pi4\), \(r_0=3\)'
+    D: '\(\theta_0=\tfrac\pi4\), \(r_0=6\)'
+    answer: B
+    hint: 'Divide by \(\sqrt{(\sqrt2)^2+(\sqrt2)^2}=2\).'
+    explanation: '\(\tfrac{\sqrt2}2x+\tfrac{\sqrt2}2y=3\), i.e. \(\cos\tfrac\pi4\,x+\sin\tfrac\pi4\,y=3\).'
+  360:
+    topic: s10-8
+    question: 'The line \(\sqrt3x-y=1\) has the form \(r\cos(\theta-\theta_0)=r_0\) with'
+    A: '\(\theta_0=-\tfrac\pi6\), \(r_0=1\)'
+    B: '\(\theta_0=\tfrac\pi6\), \(r_0=\tfrac12\)'
+    C: '\(\theta_0=-\tfrac\pi3\), \(r_0=\tfrac12\)'
+    D: '\(\theta_0=-\tfrac\pi6\), \(r_0=\tfrac12\)'
+    answer: D
+    hint: 'Divide by \(2\).'
+    explanation: '\(\tfrac{\sqrt3}2x-\tfrac12y=\tfrac12\): the unit normal is \((\cos(-\tfrac\pi6),\sin(-\tfrac\pi6))\).'
+  361:
+    topic: s10-8
+    question: 'The line \(y=-5\) has the form \(r\cos(\theta-\theta_0)=r_0\) with'
+    A: '\(\theta_0=\pi\), \(r_0=5\)'
+    B: '\(\theta_0=-\tfrac\pi2\), \(r_0=5\)'
+    C: '\(\theta_0=-\tfrac\pi2\), \(r_0=-5\)'
+    D: '\(\theta_0=\tfrac\pi2\), \(r_0=5\)'
+    answer: B
+    hint: The normal from the origin points straight down.
+    explanation: '\(-y=5\), and \(\cos(\theta+\tfrac\pi2)=-\sin\theta\).'
+  362:
+    topic: s10-8
+    question: 'The line \(x=-4\) has the form \(r\cos(\theta-\theta_0)=r_0\) with'
+    A: '\(\theta_0=\pi\), \(r_0=4\)'
+    B: '\(\theta_0=\pi\), \(r_0=-4\)'
+    C: '\(\theta_0=0\), \(r_0=4\)'
+    D: '\(\theta_0=\tfrac\pi2\), \(r_0=4\)'
+    answer: A
+    hint: The normal from the origin points left.
+    explanation: '\(-x=4\), and \(\cos(\theta-\pi)=-\cos\theta\).'
+  363:
+    topic: s10-8
+    question: 'The circle \((x-6)^2+y^2=36\) has polar equation'
+    A: '\(r=6\cos\theta\)'
+    B: '\(r=12\sin\theta\)'
+    C: '\(r=-12\cos\theta\)'
+    D: '\(r=12\cos\theta\)'
+    answer: D
+    hint: 'Expand: \(x^2+y^2=12x\).'
+    explanation: 'Replace and divide by \(r\).'
+  364:
+    topic: s10-8
+    question: 'The circle \((x+2)^2+y^2=4\) has polar equation'
+    A: '\(r=-4\sin\theta\)'
+    B: '\(r=-4\cos\theta\)'
+    C: '\(r=-2\cos\theta\)'
+    D: '\(r=4\cos\theta\)'
+    answer: B
+    hint: '\(x^2+y^2=-4x\).'
+    explanation: '\(r^2=-4r\cos\theta\).'
+  365:
+    topic: s10-8
+    question: 'The circle \(x^2+(y-5)^2=25\) has polar equation'
+    A: '\(r=10\sin\theta\)'
+    B: '\(r=5\sin\theta\)'
+    C: '\(r=10\cos\theta\)'
+    D: '\(r=-10\sin\theta\)'
+    answer: A
+    hint: '\(x^2+y^2=10y\).'
+    explanation: '\(r=10\sin\theta\).'
+  366:
+    topic: s10-8
+    question: 'The circle \(x^2+(y+7)^2=49\) has polar equation'
+    A: '\(r=-7\sin\theta\)'
+    B: '\(r=-14\cos\theta\)'
+    C: '\(r=14\sin\theta\)'
+    D: '\(r=-14\sin\theta\)'
+    answer: D
+    hint: '\(x^2+y^2=-14y\).'
+    explanation: '\(r=-14\sin\theta\).'
+  367:
+    topic: s10-8
+    question: 'The circle \(x^2+2x+y^2=0\) has polar equation'
+    A: '\(r=2\cos\theta\)'
+    B: '\(r=-2\cos\theta\)'
+    C: '\(r=-2\sin\theta\)'
+    D: '\(r=-\cos\theta\)'
+    answer: B
+    hint: '\(r^2=-2r\cos\theta\).'
+    explanation: 'Center \((-1,0)\), radius \(1\).'
+  368:
+    topic: s10-8
+    question: 'The circle \(x^2-16x+y^2=0\) has polar equation'
+    A: '\(r=-16\cos\theta\)'
+    B: '\(r=16\cos\theta\)'
+    C: '\(r=16\sin\theta\)'
+    D: '\(r=8\cos\theta\)'
+    answer: B
+    hint: '\(r^2=16r\cos\theta\).'
+    explanation: 'Center \((8,0)\), radius \(8\).'
+  369:
+    topic: s10-8
+    question: 'The circle \(x^2+y^2+y=0\) has polar equation'
+    A: '\(r=-\sin\theta\)'
+    B: '\(r=\sin\theta\)'
+    C: '\(r=-2\sin\theta\)'
+    D: '\(r=-\cos\theta\)'
+    answer: A
+    hint: '\(r^2=-r\sin\theta\).'
+    explanation: 'Center \(\left(0,-\tfrac12\right)\), radius \(\tfrac12\).'
+  370:
+    topic: s10-8
+    question: 'The circle \(x^2+y^2-\tfrac43y=0\) has polar equation'
+    A: '\(r=\tfrac43\cos\theta\)'
+    B: '\(r=\tfrac23\sin\theta\)'
+    C: '\(r=\tfrac43\sin\theta\)'
+    D: '\(r=-\tfrac43\sin\theta\)'
+    answer: C
+    hint: '\(r^2=\tfrac43r\sin\theta\).'
+    explanation: 'Center \(\left(0,\tfrac23\right)\), radius \(\tfrac23\).'
+  371:
+    topic: s10-8
+    question: 'The circle \(r=4\cos\theta\) has center (in Cartesian coordinates) and radius'
+    A: '\((0,2)\); radius \(2\)'
+    B: '\((2,0)\); radius \(4\)'
+    C: '\((4,0)\); radius \(4\)'
+    D: '\((2,0)\); radius \(2\)'
+    answer: D
+    hint: 'Multiply by \(r\) and complete the square.'
+    explanation: 'The circle \(r=2a\cos\theta\) has center \((a,0)\); \(r=2a\sin\theta\) has center \((0,a)\); both have radius \(|a|\).'
+  372:
+    topic: s10-8
+    question: 'The circle \(r=6\sin\theta\) has center (in Cartesian coordinates) and radius'
+    A: '\((3,0)\); radius \(3\)'
+    B: '\((0,3)\); radius \(3\)'
+    C: '\((0,6)\); radius \(6\)'
+    D: '\((0,3)\); radius \(6\)'
+    answer: B
+    hint: 'Multiply by \(r\) and complete the square.'
+    explanation: 'The circle \(r=2a\cos\theta\) has center \((a,0)\); \(r=2a\sin\theta\) has center \((0,a)\); both have radius \(|a|\).'
+  373:
+    topic: s10-8
+    question: 'The circle \(r=-2\cos\theta\) has center (in Cartesian coordinates) and radius'
+    A: '\((-1,0)\); radius \(2\)'
+    B: '\((1,0)\); radius \(1\)'
+    C: '\((-1,0)\); radius \(1\)'
+    D: '\((-2,0)\); radius \(2\)'
+    answer: C
+    hint: 'Multiply by \(r\) and complete the square.'
+    explanation: 'The circle \(r=2a\cos\theta\) has center \((a,0)\); \(r=2a\sin\theta\) has center \((0,a)\); both have radius \(|a|\).'
+  374:
+    topic: s10-8
+    question: 'The circle \(r=-8\sin\theta\) has center (in Cartesian coordinates) and radius'
+    A: '\((0,-8)\); radius \(8\)'
+    B: '\((0,4)\); radius \(4\)'
+    C: '\((0,-4)\); radius \(4\)'
+    D: '\((0,-4)\); radius \(8\)'
+    answer: C
+    hint: 'Multiply by \(r\) and complete the square.'
+    explanation: 'The circle \(r=2a\cos\theta\) has center \((a,0)\); \(r=2a\sin\theta\) has center \((0,a)\); both have radius \(|a|\).'
+  375:
+    topic: s10-8
+    question: 'A conic with one focus at the origin has eccentricity \(1\) and directrix \(x=2\). Its polar equation is'
+    A: '\(r=\dfrac2{1-\cos\theta}\)'
+    B: '\(r=\dfrac2{1+\cos\theta}\)'
+    C: '\(r=\dfrac2{1+\sin\theta}\)'
+    D: '\(r=\dfrac1{1+\cos\theta}\)'
+    answer: B
+    hint: '\(r=\dfrac{ke}{1+e\cos\theta}\) for a directrix \(x=k>0\).'
+    explanation: '\(ke=2\cdot1=2\).'
+  376:
+    topic: s10-8
+    question: 'A conic with one focus at the origin has eccentricity \(1\) and directrix \(y=2\). Its polar equation is'
+    A: '\(r=\dfrac2{1-\sin\theta}\)'
+    B: '\(r=\dfrac1{1+\sin\theta}\)'
+    C: '\(r=\dfrac2{1+\sin\theta}\)'
+    D: '\(r=\dfrac2{1+\cos\theta}\)'
+    answer: C
+    hint: '\(r=\dfrac{ke}{1+e\sin\theta}\) for a directrix \(y=k>0\).'
+    explanation: '\(ke=2\).'
+  377:
+    topic: s10-8
+    question: 'A conic with focus at the origin has \(e=5\) and directrix \(y=-6\). Its polar equation is'
+    A: '\(r=\dfrac{30}{1+5\sin\theta}\)'
+    B: '\(r=\dfrac{30}{1-5\sin\theta}\)'
+    C: '\(r=\dfrac{6}{1-5\sin\theta}\)'
+    D: '\(r=\dfrac{30}{1-5\cos\theta}\)'
+    answer: B
+    hint: 'For \(y=-k\), use \(r=\dfrac{ke}{1-e\sin\theta}\).'
+    explanation: '\(ke=6\cdot5=30\); it is a hyperbola.'
+  378:
+    topic: s10-8
+    question: 'A conic with focus at the origin has \(e=2\) and directrix \(x=4\). Its polar equation is'
+    A: '\(r=\dfrac2{1+4\cos\theta}\)'
+    B: '\(r=\dfrac8{1+2\cos\theta}\)'
+    C: '\(r=\dfrac4{1+2\cos\theta}\)'
+    D: '\(r=\dfrac8{1-2\cos\theta}\)'
+    answer: B
+    hint: '\(r=\dfrac{ke}{1+e\cos\theta}\).'
+    explanation: '\(ke=8\).'
+  379:
+    topic: s10-8
+    question: 'A conic with focus at the origin has \(e=\tfrac12\) and directrix \(x=1\). Its polar equation is'
+    A: '\(r=\dfrac1{2-\cos\theta}\)'
+    B: '\(r=\dfrac2{2+\cos\theta}\)'
+    C: '\(r=\dfrac1{2+\cos\theta}\)'
+    D: '\(r=\dfrac{1}{1+2\cos\theta}\)'
+    answer: C
+    hint: '\(r=\dfrac{ke}{1+e\cos\theta}=\dfrac{1/2}{1+\frac12\cos\theta}\).'
+    explanation: Multiply top and bottom by 2.
+  380:
+    topic: s10-8
+    question: 'A conic with focus at the origin has \(e=\tfrac14\) and directrix \(x=-2\). Its polar equation is'
+    A: '\(r=\dfrac{1}{4-\cos\theta}\)'
+    B: '\(r=\dfrac2{4+\cos\theta}\)'
+    C: '\(r=\dfrac{8}{1-\cos\theta}\)'
+    D: '\(r=\dfrac2{4-\cos\theta}\)'
+    answer: D
+    hint: 'For \(x=-k\): \(r=\dfrac{ke}{1-e\cos\theta}\).'
+    explanation: '\(ke=\tfrac12\), so \(r=\dfrac{1/2}{1-\frac14\cos\theta}=\dfrac2{4-\cos\theta}\).'
+  381:
+    topic: s10-8
+    question: 'A conic with focus at the origin has \(e=\tfrac15\) and directrix \(y=-10\). Its polar equation is'
+    A: '\(r=\dfrac{10}{5+\sin\theta}\)'
+    B: '\(r=\dfrac{10}{5-\sin\theta}\)'
+    C: '\(r=\dfrac{2}{5-\sin\theta}\)'
+    D: '\(r=\dfrac{50}{1-5\sin\theta}\)'
+    answer: B
+    hint: '\(r=\dfrac{ke}{1-e\sin\theta}\), \(ke=2\).'
+    explanation: '\(\dfrac{2}{1-\frac15\sin\theta}=\dfrac{10}{5-\sin\theta}\).'
+  382:
+    topic: s10-8
+    question: 'A conic with focus at the origin has \(e=\tfrac13\) and directrix \(y=6\). Its polar equation is'
+    A: '\(r=\dfrac{2}{3+\sin\theta}\)'
+    B: '\(r=\dfrac6{3-\sin\theta}\)'
+    C: '\(r=\dfrac{18}{1+3\sin\theta}\)'
+    D: '\(r=\dfrac6{3+\sin\theta}\)'
+    answer: D
+    hint: '\(r=\dfrac{ke}{1+e\sin\theta}\), \(ke=2\).'
+    explanation: '\(\dfrac{2}{1+\frac13\sin\theta}=\dfrac6{3+\sin\theta}\).'
+  383:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac1{1+\cos\theta}\) is'
+    A: 'an ellipse with vertex \(\left(\tfrac12,0\right)\)'
+    B: 'a hyperbola with directrix \(x=1\)'
+    C: 'a parabola with vertex \(\left(\tfrac12,0\right)\) and directrix \(x=1\)'
+    D: 'a parabola with vertex \((1,0)\) and directrix \(x=\tfrac12\)'
+    answer: C
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\).'
+    explanation: '\(e=1\), \(ke=1\), so \(k=1\); at \(\theta=0\), \(r=\tfrac12\).'
+  384:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac6{2+\cos\theta}\) is'
+    A: 'an ellipse with \(e=\tfrac12\), directrix \(x=6\), and vertices \((2,0)\) and \((-6,0)\)'
+    B: 'an ellipse with \(e=2\)'
+    C: 'a parabola with directrix \(x=6\)'
+    D: 'an ellipse with vertices \((6,0)\) and \((2,0)\)'
+    answer: A
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac{6}{2+\cos\theta}=\dfrac3{1+\frac12\cos\theta}\); \(e=\tfrac12\), \(ke=3\).'
+    explanation: 'At \(\theta=0\): \(r=2\); at \(\theta=\pi\): \(r=6\) (point \((-6,0)\)). Center \((-2,0)\), \(a=4\).'
+  385:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac{25}{10-5\cos\theta}\) is'
+    A: 'an ellipse with \(e=\tfrac12\) and directrix \(x=-5\)'
+    B: a parabola
+    C: 'an ellipse with \(e=\tfrac12\) and directrix \(x=5\)'
+    D: 'a hyperbola with \(e=2\)'
+    answer: A
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac{25}{10-5\cos\theta}=\dfrac{5/2}{1-\frac12\cos\theta}\).'
+    explanation: 'The minus sign puts the directrix on the left: \(x=-k\) with \(ke=\tfrac52\), \(k=5\).'
+  386:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac4{2-2\cos\theta}\) is'
+    A: 'a parabola with vertex \((1,0)\) and directrix \(x=2\)'
+    B: 'a hyperbola with vertex \((-1,0)\)'
+    C: 'an ellipse with \(e=1\)'
+    D: 'a parabola with vertex \((-1,0)\) and directrix \(x=-2\)'
+    answer: D
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac4{2-2\cos\theta}=\dfrac2{1-\cos\theta}\); \(e=1\), \(k=2\).'
+    explanation: 'At \(\theta=\pi\): \(r=1\), so the vertex is \((-1,0)\).'
+  387:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac{400}{16+8\sin\theta}\) is'
+    A: 'a hyperbola with \(e=2\)'
+    B: 'an ellipse with \(e=\tfrac12\) and directrix \(y=50\)'
+    C: 'an ellipse with \(e=\tfrac12\) and directrix \(y=-50\)'
+    D: 'a parabola with directrix \(y=50\)'
+    answer: B
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac{400}{16+8\sin\theta}=\dfrac{25}{1+\frac12\sin\theta}\).'
+    explanation: '\(ke=25\) with \(e=\tfrac12\), so \(k=50\).'
+  388:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac{12}{3+3\sin\theta}\) is'
+    A: 'an ellipse with vertex \((0,2)\)'
+    B: 'a parabola with vertex \((0,4)\) and directrix \(y=2\)'
+    C: 'a hyperbola with directrix \(y=4\)'
+    D: 'a parabola with vertex \((0,2)\) and directrix \(y=4\)'
+    answer: D
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac{12}{3+3\sin\theta}=\dfrac4{1+\sin\theta}\).'
+    explanation: '\(e=1\), \(k=4\); at \(\theta=\tfrac\pi2\): \(r=2\).'
+  389:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac8{2-2\sin\theta}\) is'
+    A: 'a parabola with directrix \(y=-4\)'
+    B: 'a hyperbola with directrix \(y=-4\)'
+    C: 'a parabola with directrix \(y=4\)'
+    D: 'an ellipse with directrix \(y=-4\)'
+    answer: A
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac8{2-2\sin\theta}=\dfrac4{1-\sin\theta}\).'
+    explanation: '\(e=1\), \(k=4\); the minus sign with \(\sin\theta\) puts the directrix below: \(y=-4\).'
+  390:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac4{2-\sin\theta}\) is'
+    A: 'a parabola with directrix \(y=-4\)'
+    B: 'an ellipse with \(e=\tfrac12\) and directrix \(y=-4\)'
+    C: a hyperbola
+    D: 'an ellipse with \(e=\tfrac12\) and directrix \(y=4\)'
+    answer: B
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(\dfrac4{2-\sin\theta}=\dfrac2{1-\frac12\sin\theta}\).'
+    explanation: '\(e=\tfrac12\), \(ke=2\), \(k=4\).'
+  391:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac{1}{1+2\cos\theta}\) is'
+    A: 'an ellipse with \(e=\tfrac12\)'
+    B: 'a hyperbola with \(e=2\)'
+    C: a parabola
+    D: 'an ellipse with \(e=2\)'
+    answer: B
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(e\) is the coefficient of \(\cos\theta\) in the denominator when the constant term is \(1\).'
+    explanation: '\(e=2>1\).'
+  392:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac{1}{1-\sin\theta}\) is'
+    A: 'a parabola with directrix \(y=-1\)'
+    B: an ellipse
+    C: 'a parabola with directrix \(y=1\)'
+    D: a hyperbola
+    answer: A
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(e=1\).'
+    explanation: '\(ke=1\), \(k=1\); the minus puts the directrix below.'
+  393:
+    topic: s10-8
+    question: 'The graph of \(r=\dfrac{1}{1+2\sin\theta}\) is'
+    A: 'a hyperbola with \(e=2\) and directrix \(y=\tfrac12\)'
+    B: 'an ellipse with \(e=2\)'
+    C: 'a hyperbola with directrix \(y=-\tfrac12\)'
+    D: a parabola
+    answer: A
+    hint: 'Write it as \(r=\dfrac{ke}{1\pm e\cos\theta}\) (or with \(\sin\theta\)) and read off \(e\). \(e=2\), \(ke=1\).'
+    explanation: '\(k=\tfrac12\).'
+  394:
+    topic: s10-8
+    question: 'For an ellipse of semimajor axis \(a\) and eccentricity \(e\) with a focus at the origin, the center is at distance'
+    A: '\(ae\) from the origin'
+    B: '\(\dfrac ae\) from the origin'
+    C: '\(a\) from the origin'
+    D: '\(a(1-e)\) from the origin'
+    answer: A
+    hint: 'The center is a distance \(c\) from each focus.'
+    explanation: '\(c=ae\).'
+  395:
+    topic: s10-8
+    question: For a planet orbiting the sun (the sun at one focus), the closest and farthest distances are
+    A: '\(a(1+e)\) (perihelion) and \(a(1-e)\) (aphelion)'
+    B: '\(a(1-e)\) (perihelion) and \(a(1+e)\) (aphelion)'
+    C: '\(\dfrac ae\) and \(ae\)'
+    D: '\(a-e\) and \(a+e\)'
+    answer: B
+    hint: 'The polar equation is \(r=\dfrac{a(1-e^2)}{1+e\cos\theta}\).'
+    explanation: 'At \(\theta=0\), \(r=a(1-e)\); at \(\theta=\pi\), \(r=a(1+e)\).'
+  396:
+    topic: s10-8
+    question: 'Mercury has semimajor axis \(0.3871\) AU and eccentricity \(0.2056\). Its perihelion and aphelion distances (in AU, to three decimals) are'
+    A: '\(0.308\) and \(0.467\)'
+    B: '\(0.371\) and \(0.403\)'
+    C: '\(0.321\) and \(0.487\)'
+    D: '\(0.181\) and \(0.593\)'
+    answer: A
+    hint: '\(r_{\min}=a(1-e)\), \(r_{\max}=a(1+e)\).'
+    explanation: '\(0.3871(1\mp0.2056)\).'
+  397:
+    topic: s10-8
+    question: 'Mars has semimajor axis \(1.524\) AU and eccentricity \(0.0934\). Its perihelion and aphelion distances (in AU, to three decimals) are'
+    A: '\(1.431\) and \(1.617\)'
+    B: '\(1.511\) and \(1.537\)'
+    C: '\(1.394\) and \(1.681\)'
+    D: '\(1.382\) and \(1.666\)'
+    answer: D
+    hint: '\(r_{\min}=a(1-e)\), \(r_{\max}=a(1+e)\).'
+    explanation: '\(1.524(1\mp0.0934)\).'
+  398:
+    topic: s10-8
+    question: 'Jupiter has semimajor axis \(5.203\) AU and eccentricity \(0.0484\). Its perihelion and aphelion distances (in AU, to three decimals) are'
+    A: '\(5.191\) and \(5.215\)'
+    B: '\(5.155\) and \(5.251\)'
+    C: '\(4.951\) and \(5.455\)'
+    D: '\(4.963\) and \(5.468\)'
+    answer: C
+    hint: '\(r_{\min}=a(1-e)\), \(r_{\max}=a(1+e)\).'
+    explanation: '\(5.203(1\mp0.0484)\).'
+  399:
+    topic: s10-8
+    question: 'Uranus has semimajor axis \(19.18\) AU and eccentricity \(0.046\). Its perihelion and aphelion distances (in AU, to three decimals) are'
+    A: '\(19.139\) and \(19.221\)'
+    B: '\(19.134\) and \(19.226\)'
+    C: '\(18.298\) and \(20.062\)'
+    D: '\(18.337\) and \(20.105\)'
+    answer: C
+    hint: '\(r_{\min}=a(1-e)\), \(r_{\max}=a(1+e)\).'
+    explanation: '\(19.18(1\mp0.046)\).'
+  400:
+    topic: s10-8
+    question: 'Pluto has semimajor axis \(39.44\) AU and eccentricity \(0.2481\). Its perihelion and aphelion distances (in AU, to three decimals) are'
+    A: '\(37.012\) and \(41.868\)'
+    B: '\(29.655\) and \(49.225\)'
+    C: '\(39.192\) and \(39.688\)'
+    D: '\(31.600\) and \(52.454\)'
+    answer: B
+    hint: '\(r_{\min}=a(1-e)\), \(r_{\max}=a(1+e)\).'
+    explanation: '\(39.44(1\mp0.2481)\).'
+  401:
+    topic: s10-8
+    question: 'A polar equation for the orbit of Mercury (\(a=0.3871\) AU, \(e=0.2056\)) with the sun at the origin is'
+    A: '\(r=\dfrac{0.3871}{1+0.2056\cos\theta}\)'
+    B: '\(r=\dfrac{0.3871(1+0.2056^2)}{1+0.2056\cos\theta}\)'
+    C: '\(r=\dfrac{0.3707}{1+0.3871\cos\theta}\)'
+    D: '\(r=\dfrac{0.3871(1-0.2056^2)}{1+0.2056\cos\theta}\approx\dfrac{0.3707}{1+0.2056\cos\theta}\)'
+    answer: D
+    hint: '\(r=\dfrac{a(1-e^2)}{1+e\cos\theta}\).'
+    explanation: '\(0.3871(1-0.04227)=0.3707\).'
+  402:
+    topic: s10-8
+    question: 'To draw an ellipse of eccentricity \(0.2\) with a 10-in. string, the pins should be placed'
+    A: '\(5\) in. apart'
+    B: '\(2\) in. apart'
+    C: '\(4\) in. apart'
+    D: '\(1\) in. apart'
+    answer: B
+    hint: 'The string length is \(2a\), and the pin separation is \(2c=2ae\).'
+    explanation: '\(2a=10\) gives \(a=5\); \(c=ae=1\); the pins are \(2c=2\) in. apart.'
+  403:
+    topic: s10-8
+    question: 'The polar equation of the parabola with focus at the origin and directrix \(r\cos\theta=4\) is'
+    A: '\(r=\dfrac4{1-\cos\theta}\)'
+    B: '\(r=\dfrac4{1+\cos\theta}\)'
+    C: '\(r=\dfrac8{1+\cos\theta}\)'
+    D: '\(r=\dfrac2{1+\cos\theta}\)'
+    answer: B
+    hint: '\(e=1\) and \(k=4\).'
+    explanation: '\(r=\dfrac{ke}{1+e\cos\theta}\).'
+  404:
+    topic: s10-8
+    question: 'The polar equation of the parabola with focus at the origin and directrix \(r\cos\left(\theta-\tfrac\pi2\right)=2\) is'
+    A: '\(r=\dfrac4{1+\sin\theta}\)'
+    B: '\(r=\dfrac2{1+\cos\theta}\)'
+    C: '\(r=\dfrac2{1-\sin\theta}\)'
+    D: '\(r=\dfrac2{1+\sin\theta}\)'
+    answer: D
+    hint: '\(r\cos(\theta-\tfrac\pi2)=r\sin\theta\), so the directrix is \(y=2\).'
+    explanation: '\(e=1\), \(k=2\).'
+  405:
+    topic: s10-8
+    question: 'The curves \(r=4\sin\theta\) and \(r=\sqrt3\sec\theta\) in Cartesian form are \(x^2+(y-2)^2=4\) and \(x=\sqrt3\). They intersect at'
+    A: '\(\left(\sqrt3,2\right)\) only'
+    B: '\(\left(1,\sqrt3\right)\) and \(\left(3,\sqrt3\right)\)'
+    C: '\(\left(\sqrt3,1\right)\) and \(\left(\sqrt3,3\right)\)'
+    D: '\(\left(\sqrt3,0\right)\) and \(\left(\sqrt3,4\right)\)'
+    answer: C
+    hint: 'Substitute \(x=\sqrt3\): \(3+(y-2)^2=4\).'
+    explanation: '\((y-2)^2=1\) gives \(y=1\) or \(3\).'
+  406:
+    topic: s10-8
+    question: 'The polar equation of the circle \(x^2+y^2-2ay=0\) is'
+    A: '\(r=2a\cos\theta\)'
+    B: '\(r=-2a\sin\theta\)'
+    C: '\(r=a\sin\theta\)'
+    D: '\(r=2a\sin\theta\)'
+    answer: D
+    hint: '\(r^2=2ar\sin\theta\).'
+    explanation: 'Divide by \(r\).'
+  407:
+    topic: s10-8
+    question: 'The polar equation of the parabola \(y^2=4ax+4a^2\) (focus at the origin) is'
+    A: '\(r=\dfrac{2a}{1+\cos\theta}\)'
+    B: '\(r=\dfrac{4a}{1-\cos\theta}\)'
+    C: '\(r=\dfrac{2a}{1-\cos\theta}\)'
+    D: '\(r=\dfrac{a}{1-\cos\theta}\)'
+    answer: C
+    hint: 'Write \(y^2=4a(x+a)\); its focus is \((0,0)\).'
+    explanation: '\(x^2+y^2=(x+2a)^2\) (distance to focus equals distance to the line \(x=-2a\)), so \(r=2a+r\cos\theta\).'
+  408:
+    topic: s10-8
+    question: 'The polar equation of the line \(x\cos\alpha+y\sin\alpha=p\) is'
+    A: '\(r=p\cos\alpha\)'
+    B: '\(r\cos(\theta-\alpha)=p\)'
+    C: '\(r\cos(\theta+\alpha)=p\)'
+    D: '\(r\sin(\theta-\alpha)=p\)'
+    answer: B
+    hint: 'Substitute \(x=r\cos\theta\), \(y=r\sin\theta\).'
+    explanation: '\(r(\cos\theta\cos\alpha+\sin\theta\sin\alpha)=r\cos(\theta-\alpha)\).'
+  409:
+    topic: s10-8
+    question: 'The polar equation of the curve \(\left(x^2+y^2\right)^2+2ax\left(x^2+y^2\right)-a^2y^2=0\) is'
+    A: '\(r=2a\sin\theta\)'
+    B: '\(r=a(1-\cos\theta)\) (a cardioid)'
+    C: '\(r=a\cos2\theta\)'
+    D: '\(r=a(1+\cos\theta)\)'
+    answer: B
+    hint: 'Divide by \(r^2\): \(r^2+2ar\cos\theta-a^2\sin^2\theta=0\).'
+    explanation: 'The quadratic in \(r\) has roots \(r=-a\cos\theta\pm a\), giving \(r=a(1-\cos\theta)\).'
+  410:
+    topic: s10-8
+    question: 'For \(r=\dfrac{ke}{1+e\cos\theta}\), as \(e\) increases from \(0\) to \(1\) (with \(ke\) fixed) the ellipse'
+    A: becomes a hyperbola immediately
+    B: shrinks to a point
+    C: becomes a circle
+    D: becomes more elongated and approaches a parabola
+    answer: D
+    hint: '\(e=0\) is a circle; \(e=1\) is a parabola.'
+    explanation: 'Small \(e\) gives a nearly circular ellipse.'
+  411:
+    topic: s10-8
+    question: 'For \(r=\dfrac{ke}{1+e\cos\theta}\) with \(e>1\), the graph is'
+    A: an ellipse
+    B: a parabola
+    C: a circle
+    D: 'a hyperbola, and the polar curve has asymptotic directions where \(1+e\cos\theta=0\)'
+    answer: D
+    hint: 'The denominator can vanish when \(e>1\).'
+    explanation: '\(\cos\theta=-\tfrac1e\) gives the asymptotic directions.'
