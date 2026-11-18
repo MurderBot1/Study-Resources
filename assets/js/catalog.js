@@ -121,6 +121,30 @@ window.CATALOG = {
           description: "Sections 12.1–12.6: Three-dimensional coordinates, vectors, the dot and cross products, lines and planes in space, and cylinders and quadric surfaces.",
           meta: "405 questions · hints",
           quiz: "chapter-12"
+        },
+        {
+          title: "Chapter 13: Vector-Valued Functions and Motion in Space",
+          description: "Sections 13.1–13.6: Vector functions and their derivatives and integrals, projectile motion, arc length, curvature, the TNB frame, torsion, and planetary motion.",
+          meta: "419 questions · hints",
+          quiz: "chapter-13"
+        },
+        {
+          title: "Chapter 14: Partial Derivatives",
+          description: "Sections 14.1–14.10: Functions of several variables, limits and continuity, partial derivatives, the Chain Rule, directional derivatives and gradients, tangent planes and linearization, extreme values, Lagrange multipliers, constrained variables, and Taylor's formula.",
+          meta: "820 questions · hints",
+          quiz: "chapter-14"
+        },
+        {
+          title: "Chapter 15: Multiple Integrals",
+          description: "Sections 15.1–15.7: Double integrals and their regions, area, moments and centers of mass, polar form, triple integrals, masses and moments in three dimensions, cylindrical and spherical coordinates, and substitutions with Jacobians.",
+          meta: "371 questions · hints",
+          quiz: "chapter-15"
+        },
+        {
+          title: "Chapter 16: Integration in Vector Fields",
+          description: "Sections 16.1–16.8: Line integrals, vector fields, work, circulation and flux, path independence and potential functions, Green's Theorem, surface area and surface integrals, parametrized surfaces, Stokes' Theorem, and the Divergence Theorem.",
+          meta: "358 questions · hints",
+          quiz: "chapter-16"
         }
       ],
       flashcards: []

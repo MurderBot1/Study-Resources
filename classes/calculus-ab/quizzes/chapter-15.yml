@@ -84,10 +84,10 @@ questions:
   7:
     topic: s15-1
     question: 'Evaluate \(\displaystyle\int_{1}^{\ln{\left(8 \right)}}\int_{0}^{\ln{\left(y \right)}}e^{x + y}\,dx\,dy\).'
-    A: '\(- \ln{\left(16777216 \right)} - e + 16\)'
-    B: '\(-32 + 2 e + 2 \ln{\left(16777216 \right)}\)'
-    C: '\(-16 + e + \ln{\left(16777216 \right)}\)'
-    D: '\(-15 + e + \ln{\left(16777216 \right)}\)'
+    A: '\(- 24 \ln{\left(2 \right)} - e + 16\)'
+    B: '\(-32 + 2 e + 48 \ln{\left(2 \right)}\)'
+    C: '\(-16 + e + 24 \ln{\left(2 \right)}\)'
+    D: '\(-15 + e + 24 \ln{\left(2 \right)}\)'
     answer: C
     hint: Integrate with respect to the inner variable first, treating the other as a constant.
     explanation: Evaluate the inner integral, then integrate the result over the outer limits.
@@ -127,7 +127,7 @@ questions:
     A: '\(1 + \frac{3 \ln{\left(2 \right)}}{2}\)'
     B: '\(\frac{3 \ln{\left(2 \right)}}{2}\)'
     C: '\(- \frac{3 \ln{\left(2 \right)}}{2}\)'
-    D: '\(\ln{\left(8 \right)}\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
     answer: B
     hint: 'Integrate in \(y\) from \(x\) to \(2x\) first.'
     explanation: '\(\int_1^2x\ln2\,dx\).'
@@ -324,9 +324,9 @@ questions:
   31:
     topic: s15-1
     question: 'The value of \(\displaystyle\int_0^{\ln2}\int_{e^x}^2dy\,dx\) is'
-    A: '\(\ln{\left(4 \right)}\)'
+    A: '\(2 \ln{\left(2 \right)}\)'
     B: '\(\ln{\left(2 \right)}\)'
-    C: '\(-1 + \ln{\left(4 \right)}\)'
+    C: '\(-1 + 2 \ln{\left(2 \right)}\)'
     D: '\(1 - \ln{\left(2 \right)}\)'
     answer: C
     hint: '\(\int_0^{\ln2}(2-e^x)dx\).'
@@ -554,9 +554,9 @@ questions:
   54:
     topic: s15-1
     question: 'The volume of the solid bounded by \(x=1\), \(x=2\), \(y=\pm1/x\), \(z=0\), and \(z=x+1\) is'
-    A: '\(1 + \ln{\left(4 \right)}\)'
+    A: '\(1 + 2 \ln{\left(2 \right)}\)'
     B: '\(\ln{\left(2 \right)} + 2\)'
-    C: '\(\ln{\left(16 \right)}\)'
+    C: '\(4 \ln{\left(2 \right)}\)'
     D: '\(2 \ln{\left(2 \right)} + 2\)'
     answer: D
     hint: 'Height \(x+1\), base \(|y|\le1/x\).'
@@ -564,7 +564,7 @@ questions:
   55:
     topic: s15-1
     question: 'The volume of the solid bounded by \(x=\pm\pi/3\), \(y=\pm\sec x\), \(z=1+y^2\), and \(z=0\) is'
-    A: '\(1 + \frac{4 \sqrt{3}}{3} + \ln{\left(\frac{\left(\sqrt{3} + 2\right)^{\frac{7}{3}}}{\left(2 - \sqrt{3}\right)^{\frac{7}{3}}} \right)}\)'
+    A: '\(1 + \frac{4 \sqrt{3}}{3} - \frac{7 \ln{\left(2 - \sqrt{3} \right)}}{3} + \frac{7 \ln{\left(\sqrt{3} + 2 \right)}}{3}\)'
     B: '\(\frac{7 \ln{\left(\frac{\sqrt{3}}{2} + 1 \right)}}{3} + \frac{4 \sqrt{3}}{3} - \frac{7 \ln{\left(1 - \frac{\sqrt{3}}{2} \right)}}{3}\)'
     C: '\(\frac{14 \ln{\left(\frac{\sqrt{3}}{2} + 1 \right)}}{3} + \frac{8 \sqrt{3}}{3} - \frac{14 \ln{\left(1 - \frac{\sqrt{3}}{2} \right)}}{3}\)'
     D: '\(\frac{7 \ln{\left(\frac{\sqrt{3}}{2} + 1 \right)}}{6} + \frac{2 \sqrt{3}}{3} - \frac{7 \ln{\left(1 - \frac{\sqrt{3}}{2} \right)}}{6}\)'
@@ -624,10 +624,10 @@ questions:
   61:
     topic: s15-1
     question: '\(\displaystyle\iint\frac{dA}{(x^2-x)(y-1)^{2/3}}\) over \(2\le x<\infty\), \(0\le y\le2\) equals'
-    A: '\(\ln{\left(64 \right)}\)'
-    B: '\(\ln{\left(4 \right)}\)'
+    A: '\(6 \ln{\left(2 \right)}\)'
+    B: '\(2 \ln{\left(2 \right)}\)'
     C: '\(6\)'
-    D: '\(\ln{\left(8 \right)}\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
     answer: A
     hint: 'The integral separates into \(\int_2^\infty\frac{dx}{x^2-x}\int_0^2\frac{dy}{(y-1)^{2/3}}\).'
     explanation: '\(\ln2\cdot6\).'
@@ -1444,7 +1444,7 @@ questions:
   143:
     topic: s15-3
     question: 'Converting to polar coordinates, \(\displaystyle\int_0^{\ln2}\int_0^{\sqrt{(\ln2)^2-y^2}}e^{\sqrt{x^2+y^2}}\,dx\,dy\) equals'
-    A: '\(- \pi + \pi \ln{\left(4 \right)}\)'
+    A: '\(- \pi + 2 \pi \ln{\left(2 \right)}\)'
     B: '\(\pi \left(- \frac{1}{2} + \ln{\left(2 \right)}\right)\)'
     C: '\(- \frac{\pi}{2} + 1 + \pi \ln{\left(2 \right)}\)'
     D: '\(\pi \left(\frac{1}{2} - \ln{\left(2 \right)}\right)\)'
@@ -1474,10 +1474,10 @@ questions:
   146:
     topic: s15-3
     question: 'Converting to polar coordinates, \(\displaystyle\int_{-1}^{1}\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}}\ln(x^2+y^2+1)\,dx\,dy\) equals'
-    A: '\(1 - \pi \left(1 - \ln{\left(4 \right)}\right)\)'
-    B: '\(\pi \left(-1 + \ln{\left(4 \right)}\right)\)'
-    C: '\(\pi \left(1 - \ln{\left(4 \right)}\right)\)'
-    D: '\(- 2 \pi \left(1 - \ln{\left(4 \right)}\right)\)'
+    A: '\(1 - \pi \left(1 - 2 \ln{\left(2 \right)}\right)\)'
+    B: '\(\pi \left(-1 + 2 \ln{\left(2 \right)}\right)\)'
+    C: '\(\pi \left(1 - 2 \ln{\left(2 \right)}\right)\)'
+    D: '\(- 2 \pi \left(1 - 2 \ln{\left(2 \right)}\right)\)'
     answer: B
     hint: 'Sketch the region, write \(x=r\cos\theta\), \(y=r\sin\theta\), and replace \(dy\,dx\) by \(r\,dr\,d\theta\).'
     explanation: Evaluate the equivalent polar integral.
@@ -1766,7 +1766,7 @@ questions:
     question: 'The integral of \(f(x,y)=\dfrac1{1-x^2-y^2}\) over the disk \(x^2+y^2\le\tfrac34\) is'
     A: '\(2 \pi\)'
     B: '\(\pi \ln{\left(3 \right)}\)'
-    C: '\(\ln{\left(4^{\pi} \right)}\)'
+    C: '\(2 \pi \ln{\left(2 \right)}\)'
     D: '\(\pi \ln{\left(2 \right)}\)'
     answer: C
     hint: '\(2\pi\int_0^{\sqrt3/2}\dfrac{r}{1-r^2}dr\).'
@@ -1994,10 +1994,10 @@ questions:
   198:
     topic: s15-4
     question: 'Evaluate \(\displaystyle\int_0^7\int_0^2\int_0^{\sqrt{4-q^2}}\frac q{r+1}\,dp\,dq\,dr\).'
-    A: '\(1 + \ln{\left(256 \right)}\)'
-    B: '\(\ln{\left(256 \right)}\)'
-    C: '\(\ln{\left(65536 \right)}\)'
-    D: '\(- \ln{\left(256 \right)}\)'
+    A: '\(1 + 8 \ln{\left(2 \right)}\)'
+    B: '\(8 \ln{\left(2 \right)}\)'
+    C: '\(16 \ln{\left(2 \right)}\)'
+    D: '\(- 8 \ln{\left(2 \right)}\)'
     answer: B
     hint: Integrate the innermost variable first and work outward.
     explanation: Evaluate each of the three integrals in turn.
@@ -3547,7 +3547,7 @@ questions:
     A: '\(\frac{3 \ln{\left(2 \right)}}{4}\)'
     B: '\(\frac{3 \ln{\left(2 \right)}}{2}\)'
     C: '\(\ln{\left(2 \right)}\)'
-    D: '\(\ln{\left(8 \right)}\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
     answer: B
     hint: 'In the \(uv\)-plane \(y/x=v\) and the region is \(1\le u\le2\), \(\tfrac1u\le v\le\tfrac2u\).'
     explanation: 'Directly: \(\int_1^2y\,dy\int_1^2\tfrac{dx}x=\tfrac32\ln2\).'
@@ -3704,10 +3704,10 @@ questions:
   369:
     topic: s15-7
     question: '\(\displaystyle\iiint_D(x^2y+3xyz)\,dx\,dy\,dz\) over \(1\le x\le2\), \(0\le xy\le2\), \(0\le z\le1\), using \(u=x\), \(v=xy\), \(w=3z\), equals'
-    A: '\(\ln{\left(8 \right)} + 4\)'
-    B: '\(2 + \ln{\left(8 \right)}\)'
+    A: '\(3 \ln{\left(2 \right)} + 4\)'
+    B: '\(2 + 3 \ln{\left(2 \right)}\)'
     C: '\(\ln{\left(2 \right)} + 2\)'
-    D: '\(\ln{\left(8 \right)}\)'
+    D: '\(3 \ln{\left(2 \right)}\)'
     answer: B
     hint: 'The integrand becomes \(uv+vw\) and \(|J|=\tfrac1{3u}\).'
     explanation: '\(\int_1^2\int_0^2\int_0^3\dfrac{uv+vw}{3u}dw\,dv\,du=2+3\ln2\).'
