@@ -1,0 +1,1739 @@
+# Chapter 9: Further Applications of Integration
+#
+# Practice questions based on the exercises in Thomas' Calculus: Early Transcendentals (11th ed.), Chapter 9.
+# Math is written in LaTeX between \( and \). Format: see the README ("Quiz file format").
+
+title: "Chapter 9: Further Applications of Integration"
+description: "Slope fields and separable equations, first-order linear equations, Euler's method, autonomous equations and phase lines, and applications of first-order equations."
+topics:
+  s9-1:
+    title: 9.1 Slope Fields and Separable Differential Equations
+  s9-2:
+    title: 9.2 First-Order Linear Differential Equations
+  s9-3:
+    title: "9.3 Euler's Method"
+  s9-4:
+    title: 9.4 Graphical Solutions of Autonomous Differential Equations
+  s9-5:
+    title: 9.5 Applications of First-Order Differential Equations
+questions:
+  1:
+    topic: s9-1
+    question: 'Which function is a solution of \(2y''+3y=e^{-x}\) for every constant \(C\)?'
+    A: '\(y=C e^{- \frac{3 x}{2}} + e^{- x}\)'
+    B: '\(y=C e^{- x} + e^{- x}\)'
+    C: '\(y=C + e^{- \frac{3 x}{2}}\)'
+    D: '\(y=C e^{- \frac{3 x}{2}} + 2 e^{- x}\)'
+    answer: A
+    hint: 'Substitute into \(2y''+3y\) and compare with \(e^{-x}\).'
+    explanation: 'For \(y=e^{-x}\): \(2(-e^{-x})+3e^{-x}=e^{-x}\), and the \(Ce^{-3x/2}\) term solves \(2y''+3y=0\).'
+  2:
+    topic: s9-1
+    question: 'Which function is a solution of \(y''=y^2\) for every constant \(C\)?'
+    A: '\(y=\frac{1}{C + x}\)'
+    B: '\(y=- \frac{1}{C + x^{2}}\)'
+    C: '\(y=- \frac{1}{C + x}\)'
+    D: '\(y=e^{C + x}\)'
+    answer: C
+    hint: 'Differentiate and compare with \(y^2\).'
+    explanation: '\(y=-(x+C)^{-1}\) gives \(y''=(x+C)^{-2}=y^2\).'
+  3:
+    topic: s9-1
+    question: 'If \(y=\dfrac1x\displaystyle\int_1^x\dfrac{e^t}t\,dt\) for \(x>0\), then \(x^2y''+xy\) equals'
+    A: '\(1\)'
+    B: '\(xe^x\)'
+    C: '\(\dfrac{e^x}x\)'
+    D: '\(e^x\)'
+    answer: D
+    hint: 'Note \(xy=\displaystyle\int_1^x\dfrac{e^t}t\,dt\), and use the Fundamental Theorem.'
+    explanation: '\((xy)''=y+xy''=\dfrac{e^x}x\); multiply by \(x\): \(xy+x^2y''=e^x\).'
+  4:
+    topic: s9-1
+    question: 'If \(y=\dfrac{1}{\sqrt{1+x^4}}\displaystyle\int_1^x\sqrt{1+t^4}\,dt\), then \(y''+\dfrac{2x^3}{1+x^4}y\) equals'
+    A: '\(\sqrt{1+x^4}\)'
+    B: '\(\dfrac{2x^3}{1+x^4}\)'
+    C: '\(0\)'
+    D: '\(1\)'
+    answer: D
+    hint: 'Differentiate the product of \(\left(1+x^4\right)^{-1/2}\) and the integral.'
+    explanation: '\(y''=-\dfrac{2x^3}{1+x^4}y+1\), so the left side is \(1\).'
+  5:
+    topic: s9-1
+    question: 'The function \(y=e^{-x}\tan^{-1}\left(2e^x\right)\) satisfies \(y''+y=\)'
+    A: '\(\dfrac{2e^x}{1+4e^{2x}}\)'
+    B: '\(\dfrac{1}{1+4e^{2x}}\)'
+    C: '\(\dfrac{2}{1+4e^{2x}}\)'
+    D: '\(\tan^{-1}\left(2e^x\right)\)'
+    answer: C
+    hint: 'Product rule: \(y''=-e^{-x}\tan^{-1}(2e^x)+e^{-x}\dfrac{2e^x}{1+4e^{2x}}\).'
+    explanation: 'The \(-y\) cancels with \(+y\), leaving \(\dfrac{2}{1+4e^{2x}}\).'
+  6:
+    topic: s9-1
+    question: 'For \(y=\dfrac{\cos x}x\) (\(x>0\)), the expression \(xy''+y\) equals'
+    A: '\(\sin x\)'
+    B: '\(-\cos x\)'
+    C: '\(-\sin x\)'
+    D: '\(0\)'
+    answer: C
+    hint: '\(xy''+y=(xy)''\) and \(xy=\cos x\).'
+    explanation: '\((\cos x)''=-\sin x\). The initial condition \(y(\pi/2)=0\) also holds.'
+  7:
+    topic: s9-1
+    question: 'The function \(y=\dfrac x{\ln x}\) satisfies \(x^2y''=xy-y^2\) for \(x>1\) and the initial value'
+    A: '\(y(e)=\dfrac1e\)'
+    B: '\(y(1)=e\)'
+    C: '\(y(e)=e\)'
+    D: '\(y(e)=1\)'
+    answer: C
+    hint: 'Evaluate \(\dfrac x{\ln x}\) at \(x=e\).'
+    explanation: '\(\dfrac{e}{\ln e}=e\).'
+  8:
+    topic: s9-1
+    question: 'Which function solves \(y''=e^{-x^2}-2xy\) with \(y(2)=0\)?'
+    A: '\(y=x e^{- x^{2}} - 2\)'
+    B: '\(y=\left(x - 2\right) e^{- x^{2}}\)'
+    C: '\(y=\left(x + 2\right) e^{- x^{2}}\)'
+    D: '\(y=\left(x - 2\right) e^{- x}\)'
+    answer: B
+    hint: 'Try \(y=(x-2)e^{-x^2}\): it vanishes at \(x=2\).'
+    explanation: '\(y''=e^{-x^2}-2x(x-2)e^{-x^2}=e^{-x^2}-2xy\).'
+  9:
+    topic: s9-1
+    question: 'Solve \(2\sqrt{xy}\,\dfrac{dy}{dx}=1\) for \(x,y>0\).'
+    A: '\(2 \sqrt{x} + \frac{4 y^{\frac{3}{2}}}{3}=C\)'
+    B: '\(- 2 \sqrt{x} + \frac{4 y^{\frac{3}{2}}}{3}=C\)'
+    C: '\(- 2 \sqrt{x} + \frac{2 y^{\frac{3}{2}}}{3}=C\)'
+    D: '\(- 2 \sqrt{x} + \frac{4 \sqrt{y}}{3}=C\)'
+    answer: B
+    hint: 'Separate: \(2\sqrt y\,dy=\dfrac{dx}{\sqrt x}\).'
+    explanation: '\(\dfrac43y^{3/2}=2\sqrt x+C\).'
+  10:
+    topic: s9-1
+    question: 'Solve \(\dfrac{dy}{dx}=x^2\sqrt y\) for \(y>0\).'
+    A: '\(y=\left(C + \frac{x^{3}}{3}\right)^{2}\)'
+    B: '\(y=C + \frac{x^{3}}{3}\)'
+    C: '\(y=\left(C + \frac{x^{3}}{6}\right)^{2}\)'
+    D: '\(y=C + \frac{x^{3}}{6}\)'
+    answer: C
+    hint: 'Separate: \(\dfrac{dy}{\sqrt y}=x^2dx\).'
+    explanation: '\(2\sqrt y=\dfrac{x^3}3+C\), so \(y=\left(\dfrac{x^3}6+C\right)^2\).'
+  11:
+    topic: s9-1
+    question: 'Solve \(\dfrac{dy}{dx}=e^{x-y}\).'
+    A: '\(y=C + e^{x}\)'
+    B: '\(y=C + x\)'
+    C: '\(y=\ln{\left(C + e^{x} \right)}\)'
+    D: '\(y=\ln{\left(C + x \right)}\)'
+    answer: C
+    hint: '\(e^y\,dy=e^x\,dx\).'
+    explanation: '\(e^y=e^x+C\), so \(y=\ln(e^x+C)\).'
+  12:
+    topic: s9-1
+    question: 'Solve \(\dfrac{dy}{dx}=3x^2e^{-y}\).'
+    A: '\(y=\ln{\left(C + x^{3} \right)}\)'
+    B: '\(y=C + x^{3}\)'
+    C: '\(y=3 \ln{\left(C + x^{2} \right)}\)'
+    D: '\(y=C + \ln{\left(x^{3} \right)}\)'
+    answer: A
+    hint: '\(e^y\,dy=3x^2dx\).'
+    explanation: '\(e^y=x^3+C\).'
+  13:
+    topic: s9-1
+    question: 'Solve \(\dfrac{dy}{dx}=\sqrt y\cos^2\sqrt y\) for \(y>0\) (implicit form).'
+    A: '\(- x + \tan{\left(\sqrt{y} \right)}=C\)'
+    B: '\(- x + 2 \sqrt{y}=C\)'
+    C: '\(- x + 2 \tan{\left(\sqrt{y} \right)}=C\)'
+    D: '\(- x + 2 \tan{\left(y \right)}=C\)'
+    answer: C
+    hint: '\(\dfrac{dy}{\sqrt y\cos^2\sqrt y}=dx\); let \(u=\sqrt y\).'
+    explanation: '\(\int\dfrac{dy}{\sqrt y\cos^2\sqrt y}=2\tan\sqrt y\), so \(2\tan\sqrt y=x+C\).'
+  14:
+    topic: s9-1
+    question: 'Solve \(\sqrt x\,\dfrac{dy}{dx}=e^{y+\sqrt x}\) for \(x>0\) (implicit form).'
+    A: '\(2 e^{\sqrt{x}} + e^{y}=C\)'
+    B: '\(e^{\sqrt{x}} + e^{- y}=C\)'
+    C: '\(- 2 e^{\sqrt{x}} + e^{- y}=C\)'
+    D: '\(2 e^{\sqrt{x}} + e^{- y}=C\)'
+    answer: D
+    hint: '\(e^{-y}dy=\dfrac{e^{\sqrt x}}{\sqrt x}dx\).'
+    explanation: '\(-e^{-y}=2e^{\sqrt x}+C\), so \(e^{-y}+2e^{\sqrt x}=C\).'
+  15:
+    topic: s9-1
+    question: 'Solve \((\sec x)\,\dfrac{dy}{dx}=e^{y+\sin x}\) (implicit form).'
+    A: '\(e^{y} + e^{\sin{\left(x \right)}}=C\)'
+    B: '\(e^{\sin{\left(x \right)}} + e^{- y}=C\)'
+    C: '\(- e^{\sin{\left(x \right)}} + e^{- y}=C\)'
+    D: '\(\sin{\left(x \right)} + e^{- y}=C\)'
+    answer: B
+    hint: '\(e^{-y}dy=e^{\sin x}\cos x\,dx\).'
+    explanation: '\(-e^{-y}=e^{\sin x}+C\).'
+  16:
+    topic: s9-1
+    question: 'Solve \(\dfrac{dy}{dx}=2x\sqrt{1-y^2}\) for \(-1<y<1\) (implicit form).'
+    A: '\(- x + \sin^{-1}{\left(y \right)}=C\)'
+    B: '\(- x^{2} + \cos^{-1}{\left(y \right)}=C\)'
+    C: '\(- x^{2} + y=C\)'
+    D: '\(- x^{2} + \sin^{-1}{\left(y \right)}=C\)'
+    answer: D
+    hint: '\(\dfrac{dy}{\sqrt{1-y^2}}=2x\,dx\).'
+    explanation: '\(\sin^{-1}y=x^2+C\), i.e. \(y=\sin(x^2+C)\).'
+  17:
+    topic: s9-1
+    question: 'Solve \(\dfrac{dy}{dx}=\dfrac{e^{2x-y}}{e^{x+y}}\).'
+    A: '\(y=\ln{\left(C + 2 e^{x} \right)}\)'
+    B: '\(y=C + e^{x}\)'
+    C: '\(y=\frac{\ln{\left(C + e^{x} \right)}}{2}\)'
+    D: '\(y=\frac{\ln{\left(C + 2 e^{x} \right)}}{2}\)'
+    answer: D
+    hint: 'Simplify: \(\dfrac{dy}{dx}=e^{x-2y}\); then \(e^{2y}dy=e^xdx\).'
+    explanation: '\(\dfrac12e^{2y}=e^x+C\), so \(y=\tfrac12\ln(2e^x+C)\).'
+  18:
+    topic: s9-1
+    question: 'For the equation \(y''=y+1\), the slope is zero along'
+    A: 'the \(x\)-axis'
+    B: 'the vertical line \(x=-1\)'
+    C: 'the line \(y=x\)'
+    D: 'the horizontal line \(y=-1\)'
+    answer: D
+    hint: 'Slope field segments are flat where \(y''=0\).'
+    explanation: 'The right side depends only on \(y\) and vanishes when \(y=-1\).'
+  19:
+    topic: s9-1
+    question: 'For the equation \(y''=x+y\), the slope field has horizontal segments along'
+    A: 'the \(x\)-axis only'
+    B: 'the line \(y=-x\)'
+    C: 'the line \(y=1\)'
+    D: 'the line \(y=x\)'
+    answer: B
+    hint: 'Set \(x+y=0\).'
+    explanation: 'On \(y=-x\) the slope is \(0\); the slope is positive above this line.'
+  20:
+    topic: s9-1
+    question: 'The slope field of \(y''=-\dfrac xy\) looks like'
+    A: parallel straight lines
+    B: exponential curves
+    C: a family of parabolas opening upward
+    D: concentric circles (the solution curves are circles about the origin)
+    answer: D
+    hint: 'Separate: \(y\,dy=-x\,dx\).'
+    explanation: '\(x^2+y^2=C\).'
+  21:
+    topic: s9-1
+    question: 'In the slope field of \(y''=y^2-x^2\), the segments are horizontal along'
+    A: 'the line \(y=0\) only'
+    B: 'the \(x\)-axis only'
+    C: the unit circle
+    D: 'the lines \(y=x\) and \(y=-x\)'
+    answer: D
+    hint: 'Set \(y^2-x^2=0\).'
+    explanation: '\((y-x)(y+x)=0\).'
+  22:
+    topic: s9-1
+    question: 'The equilibrium solutions of \(y''=(y+2)(y-2)\) are'
+    A: '\(y=-2\) only'
+    B: '\(y=-2\) and \(y=2\)'
+    C: '\(y=\pm4\)'
+    D: '\(y=0\)'
+    answer: B
+    hint: 'Constant solutions satisfy \(y''=0\).'
+    explanation: 'The factors are zero at \(y=\pm2\).'
+  23:
+    topic: s9-1
+    question: 'The equilibrium solutions of \(y''=y(y+1)(y-1)\) are'
+    A: '\(y=0\) only'
+    B: '\(y=-1\) and \(1\) only'
+    C: '\(y=-1,\ 0,\ 1\)'
+    D: '\(y=0\) and \(1\) only'
+    answer: C
+    hint: Set each factor equal to zero.
+    explanation: 'The three horizontal solutions are \(y=-1,0,1\).'
+  24:
+    topic: s9-1
+    question: 'The solution of \(y''=y\) through \((0,1)\) is'
+    A: '\(y=2 e^{x}\)'
+    B: '\(y=x + 1\)'
+    C: '\(y=e^{x}\)'
+    D: '\(y=e^{- x}\)'
+    answer: C
+    hint: 'Separate and integrate: \(\ln|y|=x+C\).'
+    explanation: '\(y=Ce^x\) with \(C=1\).'
+  25:
+    topic: s9-1
+    question: 'The solution of \(y''=2(y-4)\) through \((0,1)\) is'
+    A: '\(y=1 - 3 e^{2 x}\)'
+    B: '\(y=4 - 3 e^{- 2 x}\)'
+    C: '\(y=3 e^{2 x} + 4\)'
+    D: '\(y=4 - 3 e^{2 x}\)'
+    answer: D
+    hint: '\(y-4=Ce^{2x}\).'
+    explanation: '\(1-4=C\), so \(y=4-3e^{2x}\).'
+  26:
+    topic: s9-1
+    question: 'The solution of \(y''=y^2\) through \((0,1)\) is'
+    A: '\(y=- \frac{1}{x + 1}\)'
+    B: '\(y=\frac{1}{1 - x}\)'
+    C: '\(y=e^{x}\)'
+    D: '\(y=\frac{1}{x + 1}\)'
+    answer: B
+    hint: '\(-\dfrac1y=x+C\).'
+    explanation: '\(C=-1\) gives \(y=\dfrac1{1-x}\), which blows up at \(x=1\).'
+  27:
+    topic: s9-1
+    question: 'The solution of \(y''=(y-1)(x+2)\) through \((0,3)\) is'
+    A: '\(y=2 e^{\frac{x^{2}}{2}} + 1\)'
+    B: '\(y=2 e^{x^{2} + 2 x} + 1\)'
+    C: '\(y=3 e^{\frac{x^{2}}{2} + 2 x}\)'
+    D: '\(y=2 e^{\frac{x^{2}}{2} + 2 x} + 1\)'
+    answer: D
+    hint: '\(\dfrac{dy}{y-1}=(x+2)dx\).'
+    explanation: '\(\ln|y-1|=\tfrac{x^2}2+2x+C\); \(y(0)=3\) gives \(e^C=2\).'
+  28:
+    topic: s9-1
+    question: 'The solution of \(y''=\dfrac{xy}{x^2+4}\) through \((0,2)\) is'
+    A: '\(y=\frac{\sqrt{x^{2} + 4}}{2}\)'
+    B: '\(y=2 \sqrt{x^{2} + 4}\)'
+    C: '\(y=\sqrt{x^{2} + 4}\)'
+    D: '\(y=x^{2} + 4\)'
+    answer: C
+    hint: '\(\dfrac{dy}{y}=\dfrac{x\,dx}{x^2+4}\).'
+    explanation: '\(\ln|y|=\tfrac12\ln(x^2+4)+C\); \(y(0)=2\) gives \(y=\sqrt{x^2+4}\).'
+  29:
+    topic: s9-1
+    question: 'The logistic problem \(y''=y(2-y)\), \(y(0)=\tfrac12\) has solution'
+    A: '\(y=\frac{2}{1 + e^{- 2 x}}\)'
+    B: '\(y=\frac{2}{1 + 3 e^{- 2 x}}\)'
+    C: '\(y=\frac{1}{1 + 3 e^{- 2 x}}\)'
+    D: '\(y=\frac{2}{1 + 3 e^{- x}}\)'
+    answer: B
+    hint: 'Logistic form \(y=\dfrac{2}{1+Ae^{-2x}}\).'
+    explanation: '\(y(0)=\tfrac2{1+A}=\tfrac12\) gives \(A=3\).'
+  30:
+    topic: s9-1
+    question: 'For \(y''=(\sin x)(\sin y)\), \(y(0)=2\), separating variables gives'
+    A: '\(\tan\dfrac y2=\sin x+C\)'
+    B: '\(\ln|\sin y|=-\cos x+C\)'
+    C: '\(\ln\left|\tan\dfrac y2\right|=-\cos x+C\)'
+    D: '\(\ln\left|\tan\dfrac y2\right|=\cos x+C\)'
+    answer: C
+    hint: '\(\csc y\,dy=\sin x\,dx\) and \(\int\csc y\,dy=\ln\left|\tan\tfrac y2\right|\).'
+    explanation: '\(\int\sin x\,dx=-\cos x\).'
+  31:
+    topic: s9-1
+    question: 'Using \(y''+y=f(x)\), \(y(0)=0\) with \(f(x)=2x\), the solution is'
+    A: '\(y=2x-2-2e^{-x}\)'
+    B: '\(y=2x+2-2e^{-x}\)'
+    C: '\(y=2x-2+2e^{-x}\)'
+    D: '\(y=x^2\)'
+    answer: C
+    hint: 'Integrating factor \(e^x\): \((ye^x)''=2xe^x\).'
+    explanation: '\(ye^x=2(x-1)e^x+C\), and \(y(0)=0\) gives \(C=2\).'
+  32:
+    topic: s9-1
+    question: 'Using \(y''+y=f(x)\), \(y(0)=0\) with \(f(x)=3e^{x/2}\), the solution is'
+    A: '\(y=e^{x/2}-e^{-x}\)'
+    B: '\(y=2e^{x/2}-2e^{-x}\)'
+    C: '\(y=3e^{x/2}-3e^{-x}\)'
+    D: '\(y=2e^{x/2}+2e^{-x}\)'
+    answer: B
+    hint: 'Integrating factor \(e^x\): \((ye^x)''=3e^{3x/2}\).'
+    explanation: '\(ye^x=2e^{3x/2}+C\), and \(y(0)=0\) gives \(C=-2\).'
+  33:
+    topic: s9-1
+    question: 'The differential equation \(y''=\dfrac{3x^2+4x+2}{2(y-1)}\) has implicit general solution'
+    A: '\((y-1)^2=x^3+2x^2+2x+C\)'
+    B: '\((y-1)^2=3x^2+4x+2+C\)'
+    C: '\(y-1=x^3+2x^2+2x+C\)'
+    D: '\((y-1)^2=2\left(x^3+2x^2+2x\right)+C\)'
+    answer: A
+    hint: '\(2(y-1)\,dy=\left(3x^2+4x+2\right)dx\).'
+    explanation: Integrate both sides.
+  34:
+    topic: s9-1
+    question: 'For that equation with \(y(0)=-1\), the solution is'
+    A: '\(y=1-\sqrt{x^3+2x^2+2x+2}\)'
+    B: '\(y=-1-\sqrt{x^3+2x^2+2x}\)'
+    C: '\(y=1+\sqrt{x^3+2x^2+2x+4}\)'
+    D: '\(y=1-\sqrt{x^3+2x^2+2x+4}\)'
+    answer: D
+    hint: 'The constant: \((-1-1)^2=0+C\).'
+    explanation: '\(C=4\), and the sign is chosen so that \(y(0)=1-2=-1\).'
+  35:
+    topic: s9-2
+    question: 'Solve \(x\dfrac{dy}{dx}+y=e^x\), \(x>0\).'
+    A: '\(y=\frac{C}{x} + e^{x}\)'
+    B: '\(y=x \left(C + e^{x}\right)\)'
+    C: '\(y=\frac{C + e^{x}}{x}\)'
+    D: '\(y=1 + \frac{- C + e^{x}}{x}\)'
+    answer: C
+    hint: 'The left side is \((xy)''\).'
+    explanation: '\(xy=e^x+C\).'
+  36:
+    topic: s9-2
+    question: 'Solve \(e^x\dfrac{dy}{dx}+2e^xy=1\).'
+    A: '\(y=C e^{- 2 x} + 1\)'
+    B: '\(y=C e^{- 2 x} + e^{- x}\)'
+    C: '\(y=C e^{2 x} + e^{- x}\)'
+    D: '\(y=C + e^{- x}\)'
+    answer: B
+    hint: 'Divide by \(e^x\): \(y''+2y=e^{-x}\); integrating factor \(e^{2x}\).'
+    explanation: '\((ye^{2x})''=e^{x}\), so \(ye^{2x}=e^x+C\).'
+  37:
+    topic: s9-2
+    question: 'Solve \(xy''+3y=\dfrac{\sin x}{x^2}\), \(x>0\).'
+    A: '\(y=\frac{C - \cos{\left(x \right)}}{x^{3}}\)'
+    B: '\(y=\frac{C + \cos{\left(x \right)}}{x^{3}}\)'
+    C: '\(y=\frac{C - \cos{\left(x \right)}}{x^{2}}\)'
+    D: '\(y=\frac{C - \sin{\left(x \right)}}{x^{3}}\)'
+    answer: A
+    hint: 'Integrating factor \(x^3\): \((x^3y)''=\sin x\).'
+    explanation: '\(x^3y=-\cos x+C\).'
+  38:
+    topic: s9-2
+    question: 'Solve \(y''+(\tan x)y=\cos^2x\), \(-\tfrac\pi2<x<\tfrac\pi2\).'
+    A: '\(y=\left(C + \cos{\left(x \right)}\right) \sin{\left(x \right)}\)'
+    B: '\(y=\left(C + \cos{\left(x \right)}\right) \cos{\left(x \right)}\)'
+    C: '\(y=C \sin{\left(x \right)} + \cos{\left(x \right)}\)'
+    D: '\(y=\left(C + \sin{\left(x \right)}\right) \cos{\left(x \right)}\)'
+    answer: D
+    hint: 'Integrating factor \(e^{\int\tan x\,dx}=\sec x\).'
+    explanation: '\((y\sec x)''=\cos x\), so \(y\sec x=\sin x+C\).'
+  39:
+    topic: s9-2
+    question: 'Solve \(x\dfrac{dy}{dx}+2y=1-\dfrac1x\), \(x>0\).'
+    A: '\(y=\frac{C}{x} + \frac{1}{2} - \frac{1}{x}\)'
+    B: '\(y=\frac{C}{x^{2}} + 1 - \frac{1}{x}\)'
+    C: '\(y=\frac{C}{x^{2}} + \frac{1}{2} + \frac{1}{x}\)'
+    D: '\(y=\frac{C}{x^{2}} + \frac{1}{2} - \frac{1}{x}\)'
+    answer: D
+    hint: 'Integrating factor \(x^2\): \((x^2y)''=x-1\).'
+    explanation: '\(x^2y=\tfrac{x^2}2-x+C\).'
+  40:
+    topic: s9-2
+    question: 'Solve \((1+x)y''+y=\sqrt x\).'
+    A: '\(y=\left(C + \frac{2 x^{\frac{3}{2}}}{3}\right) \left(x + 1\right)\)'
+    B: '\(y=\frac{C + \frac{2 x^{\frac{3}{2}}}{3}}{x + 1}\)'
+    C: '\(y=\frac{C + \frac{x^{\frac{3}{2}}}{3}}{x + 1}\)'
+    D: '\(y=\frac{C}{x + 1} + \frac{2 x^{\frac{3}{2}}}{3}\)'
+    answer: B
+    hint: 'The left side is \(((1+x)y)''\).'
+    explanation: '\((1+x)y=\int\sqrt x\,dx=\tfrac23x^{3/2}+C\).'
+  41:
+    topic: s9-2
+    question: 'Solve \(2y''=e^{x/2}+y\).'
+    A: '\(y=C e^{- \frac{x}{2}} + \frac{x e^{\frac{x}{2}}}{2}\)'
+    B: '\(y=C e^{\frac{x}{2}} + \frac{e^{\frac{x}{2}}}{2}\)'
+    C: '\(y=C e^{\frac{x}{2}} + x e^{\frac{x}{2}}\)'
+    D: '\(y=C e^{\frac{x}{2}} + \frac{x e^{\frac{x}{2}}}{2}\)'
+    answer: D
+    hint: 'Rewrite as \(y''-\tfrac12y=\tfrac12e^{x/2}\); integrating factor \(e^{-x/2}\).'
+    explanation: '\((ye^{-x/2})''=\tfrac12\), so \(ye^{-x/2}=\tfrac x2+C\).'
+  42:
+    topic: s9-2
+    question: 'Solve \(e^{2x}y''+2e^{2x}y=2x\).'
+    A: '\(y=\left(C + \frac{x^{2}}{2}\right) e^{- 2 x}\)'
+    B: '\(y=\left(C + x^{2}\right) e^{2 x}\)'
+    C: '\(y=\left(C + 2 x\right) e^{- 2 x}\)'
+    D: '\(y=\left(C + x^{2}\right) e^{- 2 x}\)'
+    answer: D
+    hint: 'The left side is \((e^{2x}y)''\).'
+    explanation: '\(e^{2x}y=x^2+C\).'
+  43:
+    topic: s9-2
+    question: 'Solve \(xy''-y=2x\ln x\), \(x>0\).'
+    A: '\(y=C x + 2 x \ln{\left(x \right)}\)'
+    B: '\(y=C + x \ln{\left(x \right)}^{2}\)'
+    C: '\(y=C x + x \ln{\left(x \right)}^{2}\)'
+    D: '\(y=C x + \ln{\left(x \right)}^{2}\)'
+    answer: C
+    hint: 'Divide by \(x^2\): \(\left(\dfrac yx\right)''=\dfrac{2\ln x}x\).'
+    explanation: '\(\dfrac yx=(\ln x)^2+C\).'
+  44:
+    topic: s9-2
+    question: 'Solve \(x\dfrac{dy}{dx}=\dfrac{\cos x}x-2y\), \(x>0\).'
+    A: '\(y=\frac{C + \sin{\left(x \right)}}{x^{2}}\)'
+    B: '\(y=x^{2} \left(C + \sin{\left(x \right)}\right)\)'
+    C: '\(y=\frac{C + \cos{\left(x \right)}}{x^{2}}\)'
+    D: '\(y=\frac{C + \sin{\left(x \right)}}{x}\)'
+    answer: A
+    hint: 'Rewrite \(xy''+2y=\dfrac{\cos x}x\); multiply by \(x\).'
+    explanation: '\((x^2y)''=\cos x\).'
+  45:
+    topic: s9-2
+    question: 'Solve \((t-1)^3\dfrac{ds}{dt}+4(t-1)^2s=t+1\), \(t>1\).'
+    A: '\(s=\dfrac{\frac{t^3}3+t+C}{(t-1)^4}\)'
+    B: '\(s=\dfrac{\frac{t^2}2+t+C}{(t-1)^4}\)'
+    C: '\(s=\dfrac{\frac{t^3}3-t+C}{(t-1)^3}\)'
+    D: '\(s=\dfrac{\frac{t^3}3-t+C}{(t-1)^4}\)'
+    answer: D
+    hint: 'Multiply by \(t-1\): the left side becomes \(\left((t-1)^4s\right)''\).'
+    explanation: '\((t-1)^4s=\int(t+1)(t-1)\,dt=\tfrac{t^3}3-t+C\).'
+  46:
+    topic: s9-2
+    question: 'Solve \((t+1)\dfrac{ds}{dt}+2s=3(t+1)+\dfrac1{(t+1)^2}\), \(t>-1\).'
+    A: '\(s=\dfrac{(t+1)^3-\ln(t+1)+C}{(t+1)^2}\)'
+    B: '\(s=\dfrac{3(t+1)^2+\ln(t+1)+C}{(t+1)^2}\)'
+    C: '\(s=\dfrac{(t+1)^3+\ln(t+1)+C}{(t+1)^2}\)'
+    D: '\(s=\dfrac{(t+1)^3+\ln(t+1)+C}{t+1}\)'
+    answer: C
+    hint: 'Divide by \(t+1\); the integrating factor is \((t+1)^2\).'
+    explanation: '\(\left((t+1)^2s\right)''=3(t+1)^2+\dfrac1{t+1}\).'
+  47:
+    topic: s9-2
+    question: 'Solve \(\sin\theta\dfrac{dr}{d\theta}+(\cos\theta)r=\tan\theta\), \(0<\theta<\tfrac\pi2\).'
+    A: '\(r=-\ln(\cos\theta)+C\sin\theta\)'
+    B: '\(r=\dfrac{-\ln(\sin\theta)+C}{\sin\theta}\)'
+    C: '\(r=\dfrac{-\ln(\cos\theta)+C}{\sin\theta}\)'
+    D: '\(r=\dfrac{\ln(\cos\theta)+C}{\sin\theta}\)'
+    answer: C
+    hint: 'The left side is \((r\sin\theta)''\).'
+    explanation: '\(r\sin\theta=\int\tan\theta\,d\theta=-\ln\cos\theta+C\).'
+  48:
+    topic: s9-2
+    question: 'Solve \(\tan\theta\dfrac{dr}{d\theta}+r=\sin^2\theta\), \(0<\theta<\tfrac\pi2\).'
+    A: '\(r=\dfrac{\sin\theta}3+\dfrac C{\sin\theta}\)'
+    B: '\(r=\dfrac{\cos^2\theta}3+\dfrac C{\sin\theta}\)'
+    C: '\(r=\dfrac{\sin^2\theta}3+C\sin\theta\)'
+    D: '\(r=\dfrac{\sin^2\theta}3+\dfrac C{\sin\theta}\)'
+    answer: D
+    hint: 'Multiply by \(\cos\theta\): \((r\sin\theta)''=\sin^2\theta\cos\theta\).'
+    explanation: '\(r\sin\theta=\dfrac{\sin^3\theta}3+C\).'
+  49:
+    topic: s9-2
+    question: 'Solve \(\dfrac{dy}{dt}+2y=3\), \(y(0)=1\).'
+    A: '\(y=3-2e^{-2t}\)'
+    B: '\(y=\dfrac32-\dfrac12e^{-2t}\)'
+    C: '\(y=\dfrac32+\dfrac12e^{-2t}\)'
+    D: '\(y=\dfrac32-\dfrac12e^{2t}\)'
+    answer: B
+    hint: 'Integrating factor \(e^{2t}\).'
+    explanation: '\(y=\tfrac32+Ce^{-2t}\); \(y(0)=1\) gives \(C=-\tfrac12\).'
+  50:
+    topic: s9-2
+    question: 'Solve \(t\dfrac{dy}{dt}+2y=t^3\), \(t>0\), \(y(2)=1\) (written with \(t\) renamed \(x\)): \(xy''+2y=x^3\), \(y(2)=1\).'
+    A: '\(y=\frac{x^{3}}{5} + \frac{7}{5 x^{2}}\)'
+    B: '\(y=\frac{x^{3}}{5} - \frac{12}{5 x^{2}}\)'
+    C: '\(y=\frac{x^{3}}{5} + \frac{12}{5 x^{2}}\)'
+    D: '\(y=\frac{x^{3}}{5} - \frac{12 x^{2}}{5}\)'
+    answer: B
+    hint: '\((x^2y)''=x^4\).'
+    explanation: '\(x^2y=\tfrac{x^5}5+C\); \(y(2)=1\) gives \(C=-\tfrac{12}5\).'
+  51:
+    topic: s9-2
+    question: 'Solve \(xy''+y=\sin x\), \(x>0\), \(y(\pi/2)=1\).'
+    A: '\(y=\frac{- \cos{\left(x \right)} + \frac{\pi}{2}}{x}\)'
+    B: '\(y=\frac{\cos{\left(x \right)} + \frac{\pi}{2}}{x}\)'
+    C: '\(y=\frac{\pi - \cos{\left(x \right)}}{x}\)'
+    D: '\(y=\frac{1 - \cos{\left(x \right)}}{x}\)'
+    answer: A
+    hint: '\((xy)''=\sin x\), so \(xy=-\cos x+C\).'
+    explanation: '\(y(\pi/2)=1\) gives \(\tfrac\pi2=C\).'
+  52:
+    topic: s9-2
+    question: 'Solve \(\theta\dfrac{dy}{d\theta}-2y=\theta^3\sec\theta\tan\theta\), \(\theta>0\), \(y(\pi/3)=2\).'
+    A: '\(y=\theta^2\left(\tan\theta+\dfrac{18}{\pi^2}-2\right)\)'
+    B: '\(y=\theta\left(\sec\theta+\dfrac{18}{\pi^2}-2\right)\)'
+    C: '\(y=\theta^2\left(\sec\theta+\dfrac{18}{\pi^2}-2\right)\)'
+    D: '\(y=\theta^2\left(\sec\theta-\dfrac{18}{\pi^2}+2\right)\)'
+    answer: C
+    hint: 'Divide by \(\theta\); the integrating factor is \(\theta^{-2}\), so \(\left(y/\theta^2\right)''=\sec\theta\tan\theta\).'
+    explanation: '\(\dfrac y{\theta^2}=\sec\theta+C\); at \(\theta=\pi/3\): \(\dfrac{18}{\pi^2}=2+C\).'
+  53:
+    topic: s9-2
+    question: 'Solve \(\dfrac{dy}{dx}+xy=x\), \(y(0)=-6\).'
+    A: '\(y=1 - 7 e^{- x^{2}}\)'
+    B: '\(y=1 + 7 e^{- \frac{x^{2}}{2}}\)'
+    C: '\(y=- 6 e^{- \frac{x^{2}}{2}}\)'
+    D: '\(y=1 - 7 e^{- \frac{x^{2}}{2}}\)'
+    answer: D
+    hint: 'Separable: \(\dfrac{dy}{y-1}=-x\,dx\).'
+    explanation: '\(y-1=Ce^{-x^2/2}\); \(y(0)=-6\) gives \(C=-7\).'
+  54:
+    topic: s9-2
+    question: 'Solve \((x+1)\dfrac{dy}{dx}-2\left(x^2+x\right)y=\dfrac{e^{x^2}}{x+1}\), \(x>-1\), \(y(0)=5\).'
+    A: '\(y=e^{x^2}\left(5-\dfrac1{x+1}\right)\)'
+    B: '\(y=e^{x^2}\left(4+\dfrac1{x+1}\right)\)'
+    C: '\(y=e^{x^2}\left(6-\dfrac1{x+1}\right)\)'
+    D: '\(y=e^{-x^2}\left(6-\dfrac1{x+1}\right)\)'
+    answer: C
+    hint: 'Divide by \(x+1\): \(y''-2xy=\dfrac{e^{x^2}}{(x+1)^2}\); integrating factor \(e^{-x^2}\).'
+    explanation: '\(\left(ye^{-x^2}\right)''=(x+1)^{-2}\), so \(ye^{-x^2}=-\dfrac1{x+1}+C\); \(y(0)=5\) gives \(C=6\).'
+  55:
+    topic: s9-2
+    question: 'The solution of \(\dfrac{dy}{dt}=ky\), \(y(0)=y_0\) (treated as a linear equation with \(P=-k\), \(Q=0\)) is'
+    A: '\(y=y_0e^{kt}\)'
+    B: '\(y=ky_0e^{t}\)'
+    C: '\(y=y_0+kt\)'
+    D: '\(y=y_0e^{-kt}\)'
+    answer: A
+    hint: 'Integrating factor \(e^{-kt}\).'
+    explanation: '\((ye^{-kt})''=0\).'
+  56:
+    topic: s9-2
+    question: 'The initial value problem \(\dfrac{du}{dt}+\dfrac kmu=0\), \(u(0)=u_0\) has solution'
+    A: '\(u=u_0-\dfrac kmt\)'
+    B: '\(u=u_0e^{-kt/m}\)'
+    C: '\(u=u_0e^{kt/m}\)'
+    D: '\(u=\dfrac{u_0}{1+kt/m}\)'
+    answer: B
+    hint: 'Separate variables: \(\dfrac{du}u=-\dfrac km\,dt\).'
+    explanation: '\(\ln|u|=-\dfrac kmt+C\).'
+  57:
+    topic: s9-2
+    question: Which of these is correct?
+    A: both forms are always wrong
+    B: '\(x\displaystyle\int\dfrac1x\,dx=\ln|x|+C\)'
+    C: '\(x\displaystyle\int\dfrac1x\,dx=x\ln|x|+C\), since constants are arbitrary'
+    D: '\(x\displaystyle\int\dfrac1x\,dx=x\ln|x|+Cx\), not \(x\ln|x|+C\)'
+    answer: D
+    hint: 'The factor \(x\) multiplies the whole antiderivative, constant included.'
+    explanation: '\(x(\ln|x|+C)=x\ln|x|+Cx\).'
+  58:
+    topic: s9-2
+    question: Which statement is correct?
+    A: '\(\dfrac1{\cos x}\displaystyle\int\cos x\,dx=\sec x+C\)'
+    B: '\(\dfrac1{\cos x}\displaystyle\int\cos x\,dx=\tan x+\dfrac C{\cos x}\)'
+    C: '\(\dfrac1{\cos x}\displaystyle\int\cos x\,dx=\sin x+C\)'
+    D: '\(\dfrac1{\cos x}\displaystyle\int\cos x\,dx=\tan x+C\)'
+    answer: B
+    hint: 'Divide the entire antiderivative \(\sin x+C\) by \(\cos x\).'
+    explanation: '\(\dfrac{\sin x+C}{\cos x}=\tan x+\dfrac C{\cos x}\).'
+  59:
+    topic: s9-2
+    question: A tank holds 100 gal of brine with 50 lb of salt. Brine with 2 lb/gal enters at 5 gal/min and the well-mixed solution leaves at 4 gal/min. The rate (lb/min) at which salt enters is
+    A: '\(8\)'
+    B: '\(2\)'
+    C: '\(10\)'
+    D: '\(5\)'
+    answer: C
+    hint: 'Rate in \(=\) (concentration in)\(\times\)(flow in).'
+    explanation: '\(2\cdot5=10\) lb/min.'
+  60:
+    topic: s9-2
+    question: 'For that tank, the volume of brine at time \(t\) (minutes) is'
+    A: '\(100+5t\) gallons'
+    B: '\(100-t\) gallons'
+    C: '\(100+t\) gallons'
+    D: '\(100\) gallons'
+    answer: C
+    hint: 'Net inflow is \(5-4=1\) gal/min.'
+    explanation: '\(V=100+(5-4)t\).'
+  61:
+    topic: s9-2
+    question: 'For that tank, with \(x(t)\) pounds of salt, the initial value problem is'
+    A: '\(x''=10-\dfrac{4x}{100+t}\), \(x(0)=50\)'
+    B: '\(x''=10-\dfrac{4x}{100}\), \(x(0)=50\)'
+    C: '\(x''=2-\dfrac{x}{100+t}\), \(x(0)=50\)'
+    D: '\(x''=10-\dfrac{5x}{100+t}\), \(x(0)=50\)'
+    answer: A
+    hint: 'Rate out \(=\) (concentration \(\dfrac x{100+t}\))\(\times4\).'
+    explanation: Rate in minus rate out.
+  62:
+    topic: s9-2
+    question: For that tank, the amount of salt after 25 minutes (pounds, two decimals) is
+    A: '\(125\text{ lb}\)'
+    B: '\(250\text{ lb}\)'
+    C: '\(94.28\text{ lb}\)'
+    D: '\(188.56\text{ lb}\)'
+    answer: D
+    hint: 'Integrating factor \((100+t)^4\): \(x=2(100+t)+\dfrac{C}{(100+t)^4}\).'
+    explanation: '\(C=-150\cdot10^8\) from \(x(0)=50\); \(x(25)=250-150(0.8)^4\approx188.56\) lb.'
+  63:
+    topic: s9-2
+    question: Then the concentration of salt after 25 minutes (lb/gal, two decimals) is
+    A: '\(2\text{ lb/gal}\)'
+    B: '\(1.51\text{ lb/gal}\)'
+    C: '\(0.75\text{ lb/gal}\)'
+    D: '\(0.5\text{ lb/gal}\)'
+    answer: B
+    hint: 'Divide by the volume \(125\) gal.'
+    explanation: '\(\dfrac{188.56}{125}\approx1.51\) lb/gal.'
+  64:
+    topic: s9-2
+    question: 'A 200-gal tank is half full of distilled water. Solution at 0.5 lb/gal enters at 5 gal/min; the well-stirred mixture leaves at 3 gal/min. The tank is full when \(t=\)'
+    A: '\(20\) min'
+    B: '\(33.3\) min'
+    C: '\(100\) min'
+    D: '\(50\) min'
+    answer: D
+    hint: 'Volume \(=100+2t\).'
+    explanation: '\(100+2t=200\) gives \(t=50\).'
+  65:
+    topic: s9-2
+    question: For that tank, the pounds of concentrate when the tank becomes full are (two decimals)
+    A: '\(100\text{ lb}\)'
+    B: '\(82.32\text{ lb}\)'
+    C: '\(17.68\text{ lb}\)'
+    D: '\(50\text{ lb}\)'
+    answer: B
+    hint: '\(x''+\dfrac{3x}{100+2t}=2.5\); integrating factor \((100+2t)^{3/2}\).'
+    explanation: '\(x=\tfrac12(100+2t)-50000(100+2t)^{-3/2}\); at \(t=50\): \(100-17.68\approx82.32\) lb.'
+  66:
+    topic: s9-2
+    question: A tank holds 100 gal of fresh water. Fertilizer solution (1 lb/gal) enters at 1 gal/min and the mixture leaves at 3 gal/min. The time (minutes) at which the amount of fertilizer is greatest is about
+    A: '\(50\text{ min}\)'
+    B: '\(33.3\text{ min}\)'
+    C: '\(27.8\text{ min}\)'
+    D: '\(13.9\text{ min}\)'
+    answer: C
+    hint: 'The amount is maximal when \(x''=0\), i.e. when the outflow rate equals the inflow rate \(1\) lb/min.'
+    explanation: '\(x=(100-2t)-0.1(100-2t)^{3/2}\); \(x''=0\) when \(100-2t=\tfrac{400}9\), so \(t\approx27.8\).'
+  67:
+    topic: s9-2
+    question: In that fertilizer tank the maximum amount of fertilizer is about (pounds)
+    A: '\(7.41\text{ lb}\)'
+    B: '\(29.63\text{ lb}\)'
+    C: '\(14.81\text{ lb}\)'
+    D: '\(44.44\text{ lb}\)'
+    answer: C
+    hint: 'At the maximum, \(x=\dfrac{V}{3}\) with \(V=\dfrac{400}9\).'
+    explanation: '\(\dfrac{400/9}{3}\approx14.81\) lb.'
+  68:
+    topic: s9-2
+    question: 'A 4500-ft\(^3\) room starts with clean air. Smoke with 4% carbon monoxide enters at 0.3 ft\(^3\)/min, and the same volume leaves. The time (minutes) when the concentration reaches 0.01% is about'
+    A: '\(18.8\text{ min}\)'
+    B: '\(37.5\text{ min}\)'
+    C: '\(75\text{ min}\)'
+    D: '\(150\text{ min}\)'
+    answer: B
+    hint: '\(c''=\dfrac{0.3}{4500}(0.04-c)\), so \(c=0.04\left(1-e^{-t/15000}\right)\).'
+    explanation: '\(1-e^{-t/15000}=0.0025\), so \(t=-15000\ln0.9975\approx37.5\) min.'
+  69:
+    topic: s9-2
+    question: 'In an RL circuit that is closed at \(t=0\) (\(L\dfrac{di}{dt}+Ri=V\), \(i(0)=0\)) the current is'
+    A: '\(i=\dfrac VRe^{-Rt/L}\)'
+    B: '\(i=\dfrac VR\left(1-e^{-Rt/L}\right)\)'
+    C: '\(i=\dfrac VL\left(1-e^{-Rt/L}\right)\)'
+    D: '\(i=\dfrac VR\left(1-e^{Rt/L}\right)\)'
+    answer: B
+    hint: 'Solve \(\dfrac{di}{dt}+\dfrac RLi=\dfrac VL\).'
+    explanation: '\(i=\dfrac VR+Ce^{-Rt/L}\); \(i(0)=0\) gives \(C=-\dfrac VR\).'
+  70:
+    topic: s9-2
+    question: The current in a closed RL circuit reaches half of its steady-state value after
+    A: '\(\dfrac LR\) seconds'
+    B: '\(\dfrac{V}{R}\ln2\) seconds'
+    C: '\(\dfrac RL\ln2\) seconds'
+    D: '\(\dfrac LR\ln2\) seconds, regardless of \(V\)'
+    answer: D
+    hint: 'Set \(1-e^{-Rt/L}=\tfrac12\).'
+    explanation: '\(e^{-Rt/L}=\tfrac12\), so \(t=\dfrac LR\ln2\).'
+  71:
+    topic: s9-2
+    question: 'After the switch in an RL circuit is opened, \(L\dfrac{di}{dt}+Ri=0\) with \(i(0)=\dfrac VR\). The current is'
+    A: '\(i=\dfrac VRe^{Rt/L}\)'
+    B: '\(i=\dfrac VR\left(1-e^{-Rt/L}\right)\)'
+    C: '\(i=\dfrac VRe^{-Rt/L}\)'
+    D: '\(i=Ve^{-Rt/L}\)'
+    answer: C
+    hint: Separate variables.
+    explanation: '\(i=i_0e^{-Rt/L}\).'
+  72:
+    topic: s9-2
+    question: 'In the decaying circuit \(i=\dfrac VRe^{-Rt/L}\), at \(t=L/R\) the current is'
+    A: '\(\dfrac I2\)'
+    B: '\(Ie\)'
+    C: '\(\dfrac Ie\), where \(I=\dfrac VR\)'
+    D: '\(0\)'
+    answer: C
+    hint: 'Substitute \(t=L/R\).'
+    explanation: '\(e^{-1}=\dfrac1e\). The quantity \(L/R\) is the circuit''s time constant.'
+  73:
+    topic: s9-2
+    question: 'In a closed RL circuit, at \(t=3L/R\) (three time constants) the current is what percentage of its steady-state value (to one decimal)?'
+    A: '\(63.2\text{ \%}\)'
+    B: '\(99.3\text{ \%}\)'
+    C: '\(86.5\text{ \%}\)'
+    D: '\(95\text{ \%}\)'
+    answer: D
+    hint: '\(i=\dfrac VR\left(1-e^{-3}\right)\).'
+    explanation: '\(1-e^{-3}\approx0.9502\), about 95%.'
+  74:
+    topic: s9-2
+    question: 'At \(t=2L/R\) the current is what percentage of its steady-state value (one decimal)?'
+    A: '\(95\text{ \%}\)'
+    B: '\(86.5\text{ \%}\)'
+    C: '\(63.2\text{ \%}\)'
+    D: '\(98.2\text{ \%}\)'
+    answer: B
+    hint: '\(1-e^{-2}\).'
+    explanation: '\(1-e^{-2}\approx0.8647\), about 86.5%.'
+  75:
+    topic: s9-2
+    question: 'Solve the Bernoulli equation \(y''-y=-y^2\) (using \(u=y^{-1}\)).'
+    A: '\(y=\frac{1}{C e^{x} + 1}\)'
+    B: '\(y=C e^{- x} + 1\)'
+    C: '\(y=\frac{e^{x}}{C + 1}\)'
+    D: '\(y=\frac{1}{C e^{- x} + 1}\)'
+    answer: D
+    hint: 'Substituting \(u=y^{-1}\) gives \(u''+u=1\).'
+    explanation: '\(u=1+Ce^{-x}\), so \(y=\dfrac1{1+Ce^{-x}}\).'
+  76:
+    topic: s9-2
+    question: 'Solve \(y''-y=xy^2\) (using \(u=y^{-1}\)).'
+    A: '\(y=C e^{- x} - x + 1\)'
+    B: '\(y=\frac{1}{C e^{x} - x + 1}\)'
+    C: '\(y=\frac{1}{C e^{- x} - x + 1}\)'
+    D: '\(y=\frac{1}{C e^{- x} + x + 1}\)'
+    answer: C
+    hint: '\(u''=-y^{-2}y''=-u-x\), so \(u''+u=-x\).'
+    explanation: '\(u=1-x+Ce^{-x}\).'
+  77:
+    topic: s9-2
+    question: 'Solve \(xy''+y=y^{-2}\) (using \(u=y^3\)).'
+    A: '\(y=1+\dfrac C{x^3}\)'
+    B: '\(y^{-3}=1+\dfrac C{x^3}\)'
+    C: '\(y^3=1+Cx^3\)'
+    D: '\(y^3=1+\dfrac C{x^3}\)'
+    answer: D
+    hint: '\(u=y^{3}\) gives \(u''+\dfrac3xu=\dfrac3x\).'
+    explanation: '\(\left(x^3u\right)''=3x^2\), so \(x^3u=x^3+C\).'
+  78:
+    topic: s9-2
+    question: 'Solve \(x^2y''+2xy=y^3\) (using \(u=y^{-2}\)).'
+    A: '\(y^{-2}=\dfrac2{5x}+Cx^2\)'
+    B: '\(y^{2}=\dfrac2{5x}+Cx^4\)'
+    C: '\(y^{-2}=\dfrac2{5x}+Cx^4\)'
+    D: '\(y^{-2}=\dfrac5{2x}+Cx^4\)'
+    answer: C
+    hint: '\(u''-\dfrac4xu=-\dfrac2{x^2}\); integrating factor \(x^{-4}\).'
+    explanation: '\(\left(ux^{-4}\right)''=-2x^{-6}\), so \(ux^{-4}=\dfrac{2}{5x^5}+C\).'
+  79:
+    topic: s9-2
+    question: 'To turn the Bernoulli equation \(\dfrac{dy}{dx}+P(x)y=Q(x)y^n\) into a linear equation, substitute'
+    A: '\(u=\ln y\)'
+    B: '\(u=y^n\)'
+    C: '\(u=y^{1-n}\)'
+    D: '\(u=y^{n-1}\)'
+    answer: C
+    hint: 'The exponent \(1-n\) removes the \(y^n\) term.'
+    explanation: 'Then \(\dfrac{du}{dx}+(1-n)P(x)u=(1-n)Q(x)\).'
+  80:
+    topic: s9-3
+    question: 'For \(y''=1-\dfrac yx\), \(y(2)=-1\): Euler''s method with \(dx=\frac{1}{2}\) gives the approximation \(y(3.5)\approx\)'
+    A: '\(1.05\)'
+    B: '\(0.625\)'
+    C: '\(0.875\)'
+    D: '\(0.75\)'
+    answer: D
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: -0.2500, 0.3000, 0.7500."
+  81:
+    topic: s9-3
+    question: 'For \(y''=1-\dfrac yx\), \(y(2)=-1\): The exact value of \(y(3.5)\) is (exact solution \(y=\tfrac x2-\tfrac4x\))'
+    A: '\(0.6071\)'
+    B: '\(0.4964\)'
+    C: '\(0.9071\)'
+    D: '\(0.7179\)'
+    answer: A
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(3.5)=0.6071\).'
+  82:
+    topic: s9-3
+    question: 'For \(y''=x(1-y)\), \(y(0)=0\): Euler''s method with \(dx=\frac{1}{5}\) gives the approximation \(y(0.6)\approx\)'
+    A: '\(0.0551\)'
+    B: '\(0.4168\)'
+    C: '\(0.1168\)'
+    D: '\(0.1785\)'
+    answer: C
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 0.0000, 0.0400, 0.1168."
+  83:
+    topic: s9-3
+    question: 'For \(y''=x(1-y)\), \(y(0)=0\): The exact value of \(y(0.6)\) is (exact solution \(y=1-e^{-x^2/2}\))'
+    A: '\(0.0983\)'
+    B: '\(0.1647\)'
+    C: '\(0.4647\)'
+    D: '\(0.2312\)'
+    answer: B
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(0.6)=0.1647\).'
+  84:
+    topic: s9-3
+    question: 'For \(y''=2xy+2y\), \(y(0)=3\): Euler''s method with \(dx=\frac{1}{5}\) gives the approximation \(y(0.6)\approx\)'
+    A: '\(9.997\)'
+    B: '\(8.6773\)'
+    C: '\(9.697\)'
+    D: '\(10.7167\)'
+    answer: C
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 4.2000, 6.2160, 9.6970."
+  85:
+    topic: s9-3
+    question: 'For \(y''=2xy+2y\), \(y(0)=3\): The exact value of \(y(0.6)\) is (exact solution \(y=3e^{x^2+2x}\))'
+    A: '\(15.7541\)'
+    B: '\(12.7988\)'
+    C: '\(14.5765\)'
+    D: '\(14.2765\)'
+    answer: D
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(0.6)=14.2765\).'
+  86:
+    topic: s9-3
+    question: 'For \(y''=y^2(1+2x)\), \(y(-1)=1\): Euler''s method with \(dx=\frac{1}{2}\) gives the approximation \(y(0.5)\approx\)'
+    A: '\(0.7375\)'
+    B: '\(0.925\)'
+    C: '\(0.5125\)'
+    D: '\(0.625\)'
+    answer: D
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 0.5000, 0.5000, 0.6250."
+  87:
+    topic: s9-3
+    question: 'For \(y''=y^2(1+2x)\), \(y(-1)=1\): The exact value of \(y(0.5)\) is (exact solution \(y=\dfrac1{1-x-x^2}\))'
+    A: '\(4.45\)'
+    B: '\(4.3\)'
+    C: '\(4\)'
+    D: '\(3.55\)'
+    answer: C
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(0.5)=4.0000\).'
+  88:
+    topic: s9-3
+    question: 'For \(y''=2xe^{x^2}\), \(y(0)=2\): Euler''s method with \(dx=\frac{1}{10}\) gives the approximation \(y(1)\approx\)'
+    A: '\(3.8542\)'
+    B: '\(3.4584\)'
+    C: '\(3.0625\)'
+    D: '\(3.7584\)'
+    answer: B
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 2.0000, 2.0202, 2.0618, 2.1275, 2.2214, 2.3498, 2.5218, 2.7503, 3.0537, 3.4584."
+  89:
+    topic: s9-3
+    question: 'For \(y''=2xe^{x^2}\), \(y(0)=2\): The exact value of \(y(1)\) is (exact solution \(y=e^{x^2}+1\))'
+    A: '\(4.1401\)'
+    B: '\(3.7183\)'
+    C: '\(4.0183\)'
+    D: '\(3.2965\)'
+    answer: B
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(1)=3.7183\).'
+  90:
+    topic: s9-3
+    question: 'For \(y''=y+e^x-2\), \(y(0)=2\): Euler''s method with \(dx=\frac{1}{2}\) gives the approximation \(y(2)\approx\)'
+    A: '\(8.7897\)'
+    B: '\(10.1219\)'
+    C: '\(9.8219\)'
+    D: '\(10.8541\)'
+    answer: C
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 2.5000, 3.5744, 5.7207, 9.8219."
+  91:
+    topic: s9-3
+    question: 'For \(y''=y+e^x-2\), \(y(0)=2\): The exact value of \(y(2)\) is (exact solution \(y=xe^x+2\))'
+    A: '\(15.0503\)'
+    B: '\(17.0781\)'
+    C: '\(16.7781\)'
+    D: '\(18.5059\)'
+    answer: C
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(2)=16.7781\).'
+  92:
+    topic: s9-3
+    question: 'For \(y''=y\), \(y(0)=1\): Euler''s method with \(dx=\frac{1}{5}\) gives the approximation \(y(1)\approx\)'
+    A: '\(2.7872\)'
+    B: '\(2.4883\)'
+    C: '\(2.7883\)'
+    D: '\(2.1895\)'
+    answer: B
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 1.2000, 1.4400, 1.7280, 2.0736, 2.4883."
+  93:
+    topic: s9-3
+    question: 'For \(y''=y\), \(y(0)=1\): The exact value of \(y(1)\) is (exact solution \(y=e^x\))'
+    A: '\(3.0183\)'
+    B: '\(3.0401\)'
+    C: '\(2.3965\)'
+    D: '\(2.7183\)'
+    answer: D
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(1)=2.7183\).'
+  94:
+    topic: s9-3
+    question: 'For \(y''=\dfrac yx\), \(y(1)=2\): Euler''s method with \(dx=\frac{1}{5}\) gives the approximation \(y(2)\approx\)'
+    A: '\(4.3\)'
+    B: '\(3.55\)'
+    C: '\(4.45\)'
+    D: '\(4\)'
+    answer: D
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 2.4000, 2.8000, 3.2000, 3.6000, 4.0000."
+  95:
+    topic: s9-3
+    question: 'For \(y''=\dfrac yx\), \(y(1)=2\): The exact value of \(y(2)\) is (exact solution \(y=2x\))'
+    A: '\(4.45\)'
+    B: '\(4\)'
+    C: '\(4.3\)'
+    D: '\(3.55\)'
+    answer: B
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(2)=4.0000\).'
+  96:
+    topic: s9-3
+    question: 'For \(y''=\dfrac{y^2}{\sqrt x}\), \(y(1)=-1\): Euler''s method with \(dx=\frac{1}{2}\) gives the approximation \(y(5)\approx\)'
+    A: '\(0.0728\)'
+    B: '\(-0.1999\)'
+    C: '\(-0.2545\)'
+    D: '\(-0.2272\)'
+    answer: D
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: -0.5000, -0.3979, -0.3420, -0.3050, -0.2781, -0.2575, -0.2409, -0.2272."
+  97:
+    topic: s9-3
+    question: 'For \(y''=\dfrac{y^2}{\sqrt x}\), \(y(1)=-1\): The exact value of \(y(5)\) is (exact solution \(y=\dfrac1{1-2\sqrt x}\))'
+    A: '\(-0.3092\)'
+    B: '\(-0.288\)'
+    C: '\(0.012\)'
+    D: '\(-0.2668\)'
+    answer: B
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(5)=-0.2880\).'
+  98:
+    topic: s9-3
+    question: 'For \(y''=y-e^{2x}\), \(y(0)=1\): Euler''s method with \(dx=\frac{1}{3}\) gives the approximation \(y(2)\approx\)'
+    A: '\(-20.9544\)'
+    B: '\(-18.909\)'
+    C: '\(-20.6544\)'
+    D: '\(-22.9998\)'
+    answer: A
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 1.0000, 0.6841, -0.3524, -2.9329, -8.7079, -20.9544."
+  99:
+    topic: s9-3
+    question: 'For \(y''=y-e^{2x}\), \(y(0)=1\): The exact value of \(y(2)\) is (exact solution \(y=2e^x-e^{2x}\))'
+    A: '\(-35.888\)'
+    B: '\(-39.52\)'
+    C: '\(-43.752\)'
+    D: '\(-39.82\)'
+    answer: D
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(2)=-39.8200\).'
+  100:
+    topic: s9-3
+    question: 'For \(y''=\dfrac{\sqrt x}y\), \(y(0)=1\): Euler''s method with \(dx=\frac{1}{10}\) gives the approximation \(y(1)\approx\)'
+    A: '\(1.8\)'
+    B: '\(1.3\)'
+    C: '\(1.7\)'
+    D: '\(1.5\)'
+    answer: D
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 1.0000, 1.0316, 1.0750, 1.1259, 1.1821, 1.2419, 1.3043, 1.3684, 1.4338, 1.5000."
+  101:
+    topic: s9-3
+    question: 'For \(y''=\dfrac{\sqrt x}y\), \(y(0)=1\): The exact value of \(y(1)\) is (exact solution \(y=\sqrt{\tfrac43x^{3/2}+1}\))'
+    A: '\(1.5275\)'
+    B: '\(1.3248\)'
+    C: '\(1.8275\)'
+    D: '\(1.7303\)'
+    answer: A
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(1)=1.5275\).'
+  102:
+    topic: s9-3
+    question: 'For \(y''=1+y^2\), \(y(0)=0\): Euler''s method with \(dx=\frac{1}{10}\) gives the approximation \(y(1)\approx\)'
+    A: '\(1.3964\)'
+    B: '\(1.586\)'
+    C: '\(1.2068\)'
+    D: '\(1.6964\)'
+    answer: A
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 0.1000, 0.2010, 0.3050, 0.4143, 0.5315, 0.6598, 0.8033, 0.9678, 1.1615, 1.3964."
+  103:
+    topic: s9-3
+    question: 'For \(y''=1+y^2\), \(y(0)=0\): The exact value of \(y(1)\) is (exact solution \(y=\tan x\))'
+    A: '\(1.3517\)'
+    B: '\(1.5574\)'
+    C: '\(1.7631\)'
+    D: '\(1.8574\)'
+    answer: B
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(1)=1.5574\).'
+  104:
+    topic: s9-3
+    question: 'For \(y''=2y^2(x-1)\), \(y(2)=-\tfrac12\): Euler''s method with \(dx=\frac{1}{5}\) gives the approximation \(y(3)\approx\)'
+    A: '\(0.1149\)'
+    B: '\(-0.2166\)'
+    C: '\(-0.1536\)'
+    D: '\(-0.1851\)'
+    answer: D
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: -0.4000, -0.3232, -0.2647, -0.2199, -0.1851."
+  105:
+    topic: s9-3
+    question: 'For \(y''=2y^2(x-1)\), \(y(2)=-\tfrac12\): The exact value of \(y(3)\) is (exact solution \(y=-\dfrac1{x^2-2x+2}\))'
+    A: '\(-0.2\)'
+    B: '\(-0.23\)'
+    C: '\(-0.17\)'
+    D: '\(0.1\)'
+    answer: A
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(3)=-0.2000\).'
+  106:
+    topic: s9-3
+    question: 'For \(y''=y-1\), \(y(0)=3\): Euler''s method with \(dx=\frac{1}{10}\) gives the approximation \(y(1)\approx\)'
+    A: '\(5.5187\)'
+    B: '\(6.1875\)'
+    C: '\(6.8562\)'
+    D: '\(6.4875\)'
+    answer: B
+    hint: 'Euler''s method: \(y_{n+1}=y_n+f(x_n,y_n)\,dx\).'
+    explanation: "Iterating: 3.2000, 3.4200, 3.6620, 3.9282, 4.2210, 4.5431, 4.8974, 5.2872, 5.7159, 6.1875."
+  107:
+    topic: s9-3
+    question: 'For \(y''=y-1\), \(y(0)=3\): The exact value of \(y(1)\) is (exact solution \(y=1+2e^x\))'
+    A: '\(6.7366\)'
+    B: '\(6.4366\)'
+    C: '\(7.1302\)'
+    D: '\(5.7429\)'
+    answer: B
+    hint: Solve the initial value problem exactly, then evaluate.
+    explanation: '\(y(1)=6.4366\).'
+  108:
+    topic: s9-3
+    question: 'Use the improved Euler method on \(y''=2y(x+1)\), \(y(0)=3\), \(dx=0.2\). The third approximation \(y_3\) is'
+    A: '\(14.9201\)'
+    B: '\(9.6971\)'
+    C: '\(13.5637\)'
+    D: '\(12.2073\)'
+    answer: C
+    hint: 'Improved Euler: \(z=y_n+f(x_n,y_n)dx\), then \(y_{n+1}=y_n+\dfrac{f(x_n,y_n)+f(x_{n+1},z)}2dx\).'
+    explanation: "Successive values: 4.6080, 7.6235, 13.5637."
+  109:
+    topic: s9-3
+    question: 'For \(y''=2y(x+1)\), \(y(0)=3\), \(dx=0.2\), which estimate of \(y(0.6)\) is closer to the exact value \(14.2765\)?'
+    A: 'The ordinary Euler estimate \(9.6970\)'
+    B: 'The improved Euler estimate \(13.5637\)'
+    C: "Neither: both are exact"
+    D: They are equally close
+    answer: B
+    hint: 'Improved Euler: \(z=y_n+f(x_n,y_n)dx\), then \(y_{n+1}=y_n+\dfrac{f(x_n,y_n)+f(x_{n+1},z)}2dx\).'
+    explanation: 'Improved Euler is second-order; its error here is \(0.7128\) versus \(4.5795\) for Euler.'
+  110:
+    topic: s9-3
+    question: 'Use the improved Euler method on \(y''=x(1-y)\), \(y(1)=0\), \(dx=0.2\). The third approximation \(y_3\) is'
+    A: '\(0.4831\)'
+    B: '\(0.5623\)'
+    C: '\(0.5368\)'
+    D: '\(0.5904\)'
+    answer: C
+    hint: 'Improved Euler: \(z=y_n+f(x_n,y_n)dx\), then \(y_{n+1}=y_n+\dfrac{f(x_n,y_n)+f(x_{n+1},z)}2dx\).'
+    explanation: "Successive values: 0.1960, 0.3780, 0.5368."
+  111:
+    topic: s9-3
+    question: 'For \(y''=x(1-y)\), \(y(1)=0\), \(dx=0.2\), which estimate of \(y(1.6)\) is closer to the exact value \(0.5416\)?'
+    A: "Neither: both are exact"
+    B: 'The improved Euler estimate \(0.5368\)'
+    C: They are equally close
+    D: 'The ordinary Euler estimate \(0.5622\)'
+    answer: B
+    hint: 'Improved Euler: \(z=y_n+f(x_n,y_n)dx\), then \(y_{n+1}=y_n+\dfrac{f(x_n,y_n)+f(x_{n+1},z)}2dx\).'
+    explanation: 'Improved Euler is second-order; its error here is \(0.0048\) versus \(0.0206\) for Euler.'
+  112:
+    topic: s9-3
+    question: 'For \(y''=2y^2(x-1)\), \(y(2)=-\tfrac12\), the exact value is \(y(3)=-0.2\). The error of Euler''s method with \(dx=0.1\) is about'
+    A: '\(0.0071\)'
+    B: '\(0.0149\)'
+    C: '\(0.0143\)'
+    D: '\(0.0036\)'
+    answer: A
+    hint: 'Run 10 Euler steps and subtract from \(-0.2\).'
+    explanation: '\(|y_{10}-(-0.2)|\approx0.0071\).'
+  113:
+    topic: s9-3
+    question: "As the step size is halved, Euler's method error typically"
+    A: is roughly halved
+    B: doubles
+    C: stays the same
+    D: is cut to a quarter
+    answer: A
+    hint: "Euler's method has first-order accuracy."
+    explanation: 'Error \(\propto dx\); that is why the improved Euler method (error \(\propto dx^2\)) is preferred.'
+  114:
+    topic: s9-3
+    question: As the step size is halved, the improved Euler method error typically
+    A: stays the same
+    B: is roughly halved
+    C: is cut by a factor of eight
+    D: is cut to about a quarter
+    answer: D
+    hint: The improved Euler method is second-order.
+    explanation: 'Error \(\propto dx^2\).'
+  115:
+    topic: s9-3
+    question: "Euler's method approximates the solution curve by"
+    A: the slope at the end of each step
+    B: a sequence of parabolas
+    C: a sequence of short line segments using the slope at the start of each step
+    D: the average of all slopes
+    answer: C
+    hint: It follows the slope field in small steps.
+    explanation: 'Each new point is \((x_n+dx,\ y_n+f(x_n,y_n)dx)\).'
+  116:
+    topic: s9-3
+    question: "The improved Euler method differs from Euler's method by"
+    A: doubling the step size
+    B: using the exact solution
+    C: using only the slope at the end of the step
+    D: averaging the slope at the start and the predicted slope at the end of the step
+    answer: D
+    hint: It is a predictor-corrector method.
+    explanation: '\(y_{n+1}=y_n+\dfrac{f(x_n,y_n)+f(x_{n+1},z_n)}2dx\).'
+  117:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dy}{dx}=(y+2)(y-3)\).'
+    A: '\(-2\): unstable; \(3\): stable'
+    B: '\(-2\): stable; \(3\): unstable'
+    C: '\(-2\): stable; \(3\): stable'
+    D: '\(-2\): unstable; \(3\): unstable'
+    answer: B
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(-2\) is stable; \(3\) is unstable.'
+  118:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dy}{dx}=y^2-4\).'
+    A: '\(-2\): unstable; \(2\): stable'
+    B: '\(-2\): unstable; \(2\): unstable'
+    C: '\(-2\): stable; \(2\): stable'
+    D: '\(-2\): stable; \(2\): unstable'
+    answer: D
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(-2\) is stable; \(2\) is unstable.'
+  119:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dy}{dx}=y^3-y\).'
+    A: '\(-1\): stable; \(0\): unstable; \(1\): stable'
+    B: '\(-1\): unstable; \(0\): stable; \(1\): stable'
+    C: '\(-1\): unstable; \(0\): stable; \(1\): unstable'
+    D: '\(-1\): stable; \(0\): stable; \(1\): unstable'
+    answer: C
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(-1\) is unstable; \(0\) is stable; \(1\) is unstable.'
+  120:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dy}{dx}=y^2-2y\).'
+    A: '\(0\): unstable; \(2\): unstable'
+    B: '\(0\): stable; \(2\): unstable'
+    C: '\(0\): stable; \(2\): stable'
+    D: '\(0\): unstable; \(2\): stable'
+    answer: B
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(0\) is stable; \(2\) is unstable.'
+  121:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(y''=(y-1)(y-2)(y-3)\).'
+    A: '\(1\): unstable; \(2\): stable; \(3\): stable'
+    B: '\(1\): stable; \(2\): unstable; \(3\): stable'
+    C: '\(1\): stable; \(2\): stable; \(3\): unstable'
+    D: '\(1\): unstable; \(2\): stable; \(3\): unstable'
+    answer: D
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(1\) is unstable; \(2\) is stable; \(3\) is unstable.'
+  122:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(y''=y^3-y^2\).'
+    A: '\(0\): stable; \(1\): unstable'
+    B: '\(0\): semistable; \(1\): unstable'
+    C: '\(0\): stable; \(1\): stable'
+    D: '\(0\): semistable; \(1\): stable'
+    answer: B
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(0\) is semistable; \(1\) is unstable.'
+  123:
+    topic: s9-4
+    question: 'For \(y''=y-\sqrt y\) with \(y>0\), the only equilibrium is \(y=1\), which is'
+    A: 'unstable (solutions starting above grow, those below decrease toward \(0\))'
+    B: there are no equilibria
+    C: stable
+    D: semistable
+    answer: A
+    hint: 'Sign of \(y-\sqrt y\): negative for \(0<y<1\), positive for \(y>1\).'
+    explanation: '\(f''(1)=1-\dfrac1{2}=\dfrac12>0\), so solutions move away from \(y=1\).'
+  124:
+    topic: s9-4
+    question: 'For \(y''=\sqrt y\) with \(y>0\), the solutions are'
+    A: always increasing, with no equilibrium
+    B: 'decreasing for \(y>1\)'
+    C: 'stable at \(y=0\)'
+    D: constant
+    answer: A
+    hint: 'The right side is positive for every \(y>0\).'
+    explanation: '\(y''>0\), and \(y''\) grows with \(y\), so the curves are concave up (\(y''''=\tfrac12\)).'
+  125:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dP}{dt}=1-2P\).'
+    A: every equilibrium is semistable
+    B: '\(\frac{1}{2}\): stable'
+    C: there are no equilibrium values
+    D: '\(\frac{1}{2}\): unstable'
+    answer: B
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(\frac{1}{2}\) is stable.'
+  126:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dP}{dt}=P(1-2P)\).'
+    A: '\(0\): stable; \(\frac{1}{2}\): stable'
+    B: '\(0\): unstable; \(\frac{1}{2}\): unstable'
+    C: '\(0\): unstable; \(\frac{1}{2}\): stable'
+    D: '\(0\): stable; \(\frac{1}{2}\): unstable'
+    answer: C
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(0\) is unstable; \(\frac{1}{2}\) is stable.'
+  127:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dP}{dt}=2P(P-3)\).'
+    A: '\(0\): stable; \(3\): stable'
+    B: '\(0\): unstable; \(3\): unstable'
+    C: '\(0\): unstable; \(3\): stable'
+    D: '\(0\): stable; \(3\): unstable'
+    answer: D
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(0\) is stable; \(3\) is unstable.'
+  128:
+    topic: s9-4
+    question: 'Classify the equilibrium values of \(\dfrac{dP}{dt}=3P(1-P)\left(P-\tfrac12\right)\).'
+    A: '\(0\): unstable; \(\frac{1}{2}\): unstable; \(1\): stable'
+    B: '\(0\): unstable; \(\frac{1}{2}\): stable; \(1\): unstable'
+    C: '\(0\): stable; \(\frac{1}{2}\): unstable; \(1\): stable'
+    D: '\(0\): stable; \(\frac{1}{2}\): unstable; \(1\): unstable'
+    answer: C
+    hint: 'Equilibria are zeros of \(f\); stable if \(f\) changes from \(+\) to \(-\), unstable if from \(-\) to \(+\).'
+    explanation: 'Signs of \(f\) around each zero: \(0\) is stable; \(\frac{1}{2}\) is unstable; \(1\) is stable.'
+  129:
+    topic: s9-4
+    question: 'In the logistic model \(\dfrac{dP}{dt}=rP(M-P)\), the population grows fastest when'
+    A: '\(P=\dfrac M4\)'
+    B: '\(P=0\)'
+    C: '\(P=\dfrac M2\)'
+    D: '\(P=M\)'
+    answer: C
+    hint: 'The growth rate \(rP(M-P)\) is a downward parabola in \(P\).'
+    explanation: 'Its vertex is at \(P=M/2\), which is also where the solution curves have inflection points.'
+  130:
+    topic: s9-4
+    question: 'For \(\dfrac{dP}{dt}=rP(M-P)(P-m)\) with \(0<m<M\), the equilibria are'
+    A: '\(0\) (unstable), \(m\) (stable), \(M\) (unstable)'
+    B: '\(0\) (stable), \(m\) (unstable), \(M\) (stable)'
+    C: '\(0\) (stable), \(m\) (stable), \(M\) (unstable)'
+    D: '\(m\) (unstable) and \(M\) (stable) only'
+    answer: B
+    hint: 'Check the sign of \(rP(M-P)(P-m)\) in each interval.'
+    explanation: 'Negative for \(0<P<m\), positive for \(m<P<M\), negative for \(P>M\).'
+  131:
+    topic: s9-4
+    question: 'In the deer model \(\dfrac{dP}{dt}=rP(M-P)(P-m)\), if the population ever falls below \(m\) then'
+    A: it stays constant
+    B: 'the population decreases toward \(0\) (extinction)'
+    C: 'it oscillates about \(m\)'
+    D: 'it recovers to \(M\)'
+    answer: B
+    hint: 'For \(0<P<m\), \(\dfrac{dP}{dt}<0\).'
+    explanation: 'So \(m\) acts as a threshold for survival.'
+  132:
+    topic: s9-4
+    question: 'In the deer model, if \(P>M\) for all \(t\) then \(\displaystyle\lim_{t\to\infty}P(t)=\)'
+    A: '\(0\)'
+    B: '\(M\)'
+    C: '\(\infty\)'
+    D: '\(m\)'
+    answer: B
+    hint: 'For \(P>M\), \(\dfrac{dP}{dt}<0\), and \(M\) is a stable equilibrium.'
+    explanation: 'The solution is decreasing and bounded below by \(M\), so it tends to \(M\).'
+  133:
+    topic: s9-4
+    question: 'A 160-lb skydiver (\(mg=160\)) falls with \(m\dfrac{dv}{dt}=mg-kv^2\), \(k=0.005\). The terminal velocity (ft/s, one decimal) is'
+    A: '\(357.8\text{ ft/s}\)'
+    B: '\(178.9\text{ ft/s}\)'
+    C: '\(32{,}000\text{ ft/s}\)'
+    D: '\(89.4\text{ ft/s}\)'
+    answer: B
+    hint: 'Terminal velocity is the stable equilibrium: set \(\dfrac{dv}{dt}=0\).'
+    explanation: '\(v=\sqrt{mg/k}=\sqrt{160/0.005}=\sqrt{32000}\approx178.9\) ft/s.'
+  134:
+    topic: s9-4
+    question: 'A body falling with air resistance proportional to \(\sqrt v\) satisfies \(m\dfrac{dv}{dt}=mg-k\sqrt v\). Its terminal velocity is'
+    A: '\(\dfrac{k}{mg}\)'
+    B: '\(\left(\dfrac{mg}k\right)^2\)'
+    C: '\(\sqrt{\dfrac{mg}k}\)'
+    D: '\(\dfrac{mg}k\)'
+    answer: B
+    hint: 'Set \(\dfrac{dv}{dt}=0\): \(k\sqrt v=mg\).'
+    explanation: '\(\sqrt v=\dfrac{mg}k\), so \(v=\left(\dfrac{mg}k\right)^2\).'
+  135:
+    topic: s9-4
+    question: 'A sailboat is pushed by a constant 50-lb wind force; water resistance is 5 times the speed (\(m\dfrac{dv}{dt}=50-5v\)). The maximum velocity is'
+    A: '\(5\) ft/s'
+    B: '\(50\) ft/s'
+    C: '\(10\) ft/s'
+    D: '\(250\) ft/s'
+    answer: C
+    hint: 'Maximum velocity is the equilibrium \(\dfrac{dv}{dt}=0\).'
+    explanation: '\(50-5v=0\) gives \(v=10\).'
+  136:
+    topic: s9-4
+    question: 'In the social diffusion model \(\dfrac{dX}{dt}=kX(N-X)\), information spreads fastest when'
+    A: '\(X=\dfrac N4\)'
+    B: '\(X=\dfrac N2\)'
+    C: '\(X=0\)'
+    D: '\(X=N\)'
+    answer: B
+    hint: 'The rate \(kX(N-X)\) is largest at the vertex of the parabola.'
+    explanation: 'Eventually everyone (\(N\) people) receives the information, since \(X=N\) is stable.'
+  137:
+    topic: s9-4
+    question: 'In an RL circuit \(L\dfrac{di}{dt}+Ri=V\) closed at \(t=0\), the steady-state current (as \(t\to\infty\)) is'
+    A: '\(\dfrac VL\)'
+    B: '\(0\)'
+    C: '\(\dfrac VR\)'
+    D: '\(VR\)'
+    answer: C
+    hint: 'The steady state is the equilibrium \(\dfrac{di}{dt}=0\).'
+    explanation: '\(Ri=V\).'
+  138:
+    topic: s9-4
+    question: 'A pearl sinking in shampoo obeys \(m\dfrac{dv}{dt}=mg-Pg-kv\) (weight minus buoyancy minus friction). Its terminal velocity is'
+    A: '\(\dfrac{mg}k\)'
+    B: '\(\dfrac{(m+P)g}k\)'
+    C: '\(\dfrac{(m-P)g}k\)'
+    D: '\(\dfrac{k}{(m-P)g}\)'
+    answer: C
+    hint: 'Set \(\dfrac{dv}{dt}=0\).'
+    explanation: '\(kv=(m-P)g\).'
+  139:
+    topic: s9-4
+    question: 'For the autonomous equation \(\dfrac{dy}{dx}=f(y)\), the solution curves through different points on the same horizontal line are'
+    A: 'identical in slope (the slope depends only on \(y\)), and each is a horizontal translate of the others'
+    B: always periodic
+    C: 'parallel in the \(y\)-direction'
+    D: always straight lines
+    answer: A
+    hint: 'The right side contains no \(x\).'
+    explanation: 'If \(y(x)\) is a solution, so is \(y(x-c)\).'
+  140:
+    topic: s9-5
+    question: 'A 66-kg cyclist on a 7-kg bicycle coasts from 9 m/s with \(k=3.9\) kg/s (\(m\dfrac{dv}{dt}=-kv\)). The distance coasted before stopping (m, one decimal) is'
+    A: '\(35.1\text{ m}\)'
+    B: '\(84.2\text{ m}\)'
+    C: '\(336.9\text{ m}\)'
+    D: '\(168.5\text{ m}\)'
+    answer: D
+    hint: '\(s(\infty)=\dfrac{mv_0}k\).'
+    explanation: '\(\dfrac{73\cdot9}{3.9}\approx168.5\) m.'
+  141:
+    topic: s9-5
+    question: For the same cyclist, the time (s, one decimal) for the speed to drop to 1 m/s is
+    A: '\(82.2\text{ s}\)'
+    B: '\(41.1\text{ s}\)'
+    C: '\(18.7\text{ s}\)'
+    D: '\(9.4\text{ s}\)'
+    answer: B
+    hint: '\(v=v_0e^{-kt/m}\).'
+    explanation: '\(t=\dfrac mk\ln9=\dfrac{73}{3.9}\ln9\approx41.1\) s.'
+  142:
+    topic: s9-5
+    question: 'An Iowa-class battleship (\(m=51{,}000{,}000\) kg, \(k=59{,}000\) kg/s) loses power at 9 m/s. The distance it coasts (m, nearest metre) is'
+    A: '\(3{,}890\text{ m}\)'
+    B: '\(15{,}560\text{ m}\)'
+    C: '\(864\text{ m}\)'
+    D: '\(7{,}780\text{ m}\)'
+    answer: D
+    hint: '\(\dfrac{mv_0}k\).'
+    explanation: '\(\dfrac{51\times10^6\cdot9}{59000}\approx7780\) m.'
+  143:
+    topic: s9-5
+    question: For the same battleship, the time (s, nearest second) for its speed to fall to 1 m/s is
+    A: '\(950\text{ s}\)'
+    B: '\(1{,}899\text{ s}\)'
+    C: '\(864\text{ s}\)'
+    D: '\(3{,}800\text{ s}\)'
+    answer: B
+    hint: '\(t=\dfrac mk\ln\dfrac{v_0}{v}\).'
+    explanation: '\(\dfrac{51\times10^6}{59000}\ln9\approx1899\) s.'
+  144:
+    topic: s9-5
+    question: 'When a skater of mass \(m\) coasts with initial velocity \(v_0\) and resistance \(-kv\), her distance from the start is'
+    A: '\(s(t)=\dfrac{mv_0}ke^{-kt/m}\)'
+    B: '\(s(t)=\dfrac{mv_0}k\left(1-e^{-kt/m}\right)\)'
+    C: '\(s(t)=v_0\left(1-e^{-kt/m}\right)\)'
+    D: '\(s(t)=\dfrac{kv_0}m\left(1-e^{-kt/m}\right)\)'
+    answer: B
+    hint: 'Integrate \(v=v_0e^{-kt/m}\) from \(0\) to \(t\).'
+    explanation: '\(s=\dfrac{mv_0}k\left(1-e^{-kt/m}\right)\), approaching \(\dfrac{mv_0}k\).'
+  145:
+    topic: s9-5
+    question: 'Ashley Sharritts coasted a total of 4.91 m with \(m=39.92\) kg and \(v_0=2.75\) m/s. The value of \(k\) (kg/s, one decimal) from \(s(\infty)=\dfrac{mv_0}k\) is'
+    A: '\(8.1\text{ kg/s}\)'
+    B: '\(11.2\text{ kg/s}\)'
+    C: '\(44.7\text{ kg/s}\)'
+    D: '\(22.4\text{ kg/s}\)'
+    answer: D
+    hint: '\(k=\dfrac{mv_0}{s_{\max}}\).'
+    explanation: '\(\dfrac{39.92\cdot2.75}{4.91}\approx22.4\).'
+  146:
+    topic: s9-5
+    question: 'Kelly Schmitzer coasted 1.32 m with \(m=49.90\) kg and \(v_0=0.80\) m/s. Then \(k\) (kg/s, one decimal) is'
+    A: '\(62.4\text{ kg/s}\)'
+    B: '\(60.5\text{ kg/s}\)'
+    C: '\(30.2\text{ kg/s}\)'
+    D: '\(15.1\text{ kg/s}\)'
+    answer: C
+    hint: '\(k=\dfrac{mv_0}{s_{\max}}\).'
+    explanation: '\(\dfrac{49.9\cdot0.8}{1.32}\approx30.2\).'
+  147:
+    topic: s9-5
+    question: 'A tank supports at most 150 guppies; 6 are introduced; \(\dfrac{dP}{dt}=0.0015(150-P)P\) (weeks). The population is'
+    A: '\(P=\dfrac{150}{1+25e^{-0.225t}}\)'
+    B: '\(P=\dfrac{6}{1+24e^{-0.225t}}\)'
+    C: '\(P=\dfrac{150}{1+24e^{-0.0015t}}\)'
+    D: '\(P=\dfrac{150}{1+24e^{-0.225t}}\)'
+    answer: D
+    hint: 'Logistic: \(P=\dfrac M{1+Ae^{-rMt}}\) with \(rM=0.0015\cdot150=0.225\).'
+    explanation: '\(A=\dfrac{150-6}6=24\).'
+  148:
+    topic: s9-5
+    question: For the guppy tank, the time (weeks, one decimal) for the population to reach 100 is
+    A: '\(21.3\text{ weeks}\)'
+    B: '\(17.2\text{ weeks}\)'
+    C: '\(8.6\text{ weeks}\)'
+    D: '\(34.4\text{ weeks}\)'
+    answer: B
+    hint: 'Set \(\dfrac{150}{1+24e^{-0.225t}}=100\).'
+    explanation: '\(24e^{-0.225t}=\tfrac12\), so \(t=\dfrac{\ln48}{0.225}\approx17.2\).'
+  149:
+    topic: s9-5
+    question: For the guppy tank, the time (weeks, one decimal) for the population to reach 125 is
+    A: '\(21.3\text{ weeks}\)'
+    B: '\(17.2\text{ weeks}\)'
+    C: '\(10.6\text{ weeks}\)'
+    D: '\(42.6\text{ weeks}\)'
+    answer: A
+    hint: 'Set \(\dfrac{150}{1+24e^{-0.225t}}=125\).'
+    explanation: '\(24e^{-0.225t}=0.2\), so \(t=\dfrac{\ln120}{0.225}\approx21.3\).'
+  150:
+    topic: s9-5
+    question: 'A preserve supports at most 250 gorillas; 28 were present in 1970; \(\dfrac{dP}{dt}=0.0004(250-P)P\). The population is'
+    A: '\(P=\dfrac{250}{1+8e^{-0.1t}}\)'
+    B: '\(P=\dfrac{250}{1+\frac{111}{14}e^{-0.0004t}}\)'
+    C: '\(P=\dfrac{28}{1+\frac{111}{14}e^{-0.1t}}\)'
+    D: '\(P=\dfrac{250}{1+\frac{111}{14}e^{-0.1t}}\)'
+    answer: D
+    hint: '\(rM=0.0004\cdot250=0.1\) and \(A=\dfrac{250-28}{28}\).'
+    explanation: '\(A=\dfrac{222}{28}=\dfrac{111}{14}\approx7.93\).'
+  151:
+    topic: s9-5
+    question: In that preserve, the time (years, one decimal) for the population to reach half the carrying capacity (125) is
+    A: '\(20.7\text{ years}\)'
+    B: '\(41.4\text{ years}\)'
+    C: '\(79.3\text{ years}\)'
+    D: '\(10.4\text{ years}\)'
+    answer: A
+    hint: 'At \(P=M/2\), \(Ae^{-rMt}=1\).'
+    explanation: '\(t=\dfrac{\ln(111/14)}{0.1}\approx20.7\) years.'
+  152:
+    topic: s9-5
+    question: 'In a logistic model \(\dfrac{dP}{dt}=rP(M-P)\), the population never actually reaches \(M\) in finite time because'
+    A: the growth rate becomes negative
+    B: '\(P\) is not differentiable at \(M\)'
+    C: '\(M\) is unstable'
+    D: '\(M\) is an equilibrium, and solutions cannot cross equilibria'
+    answer: D
+    hint: Uniqueness of solutions.
+    explanation: 'The solution approaches \(M\) asymptotically.'
+  153:
+    topic: s9-5
+    question: 'The halibut fishery: \(\dfrac{dy}{dt}=r(M-y)y\), \(M=8\times10^7\) kg, \(r=0.08875\times10^{-7}\)/yr. If \(y(0)=1.6\times10^7\) kg, the weight after 1 year (in millions of kg, two decimals) is'
+    A: '\(24\text{ million kg}\)'
+    B: '\(16.93\text{ million kg}\)'
+    C: '\(32\text{ million kg}\)'
+    D: '\(16\text{ million kg}\)'
+    answer: B
+    hint: '\(y=\dfrac M{1+Ae^{-rMt}}\) with \(rM=0.071\) and \(A=\dfrac{M-y_0}{y_0}=4\).'
+    explanation: '\(y(1)=\dfrac{80}{1+4e^{-0.071}}\approx16.93\) million kg.'
+  154:
+    topic: s9-5
+    question: 'For that fishery, the time (years, one decimal) when the weight reaches \(4\times10^7\) kg is'
+    A: '\(9.8\text{ years}\)'
+    B: '\(19.5\text{ years}\)'
+    C: '\(39\text{ years}\)'
+    D: '\(14\text{ years}\)'
+    answer: B
+    hint: 'Half of \(M\): \(Ae^{-rMt}=1\).'
+    explanation: '\(t=\dfrac{\ln4}{0.071}\approx19.5\) years.'
+  155:
+    topic: s9-5
+    question: 'For \(\dfrac{dP}{dt}=0.001(100-P)P-c\) with \(c=1\), the equilibrium values (to two decimals) are'
+    A: '\(P\approx5.00\) and \(P\approx95.00\)'
+    B: '\(P\approx0\) and \(P=100\)'
+    C: '\(P\approx11.27\) and \(P\approx88.73\)'
+    D: '\(P\approx11.27\) only'
+    answer: C
+    hint: 'Set \(0.001(100-P)P=1\), i.e. \(P^2-100P+1000=0\).'
+    explanation: '\(P=\dfrac{100\pm\sqrt{6000}}2\approx11.27,\ 88.73\).'
+  156:
+    topic: s9-5
+    question: 'In the modified logistic model \(\dfrac{dP}{dt}=0.001(100-P)P-c\), the constant \(c\) represents'
+    A: a constant harvesting (or hunting) rate
+    B: the carrying capacity
+    C: the initial population
+    D: the birth rate
+    answer: A
+    hint: It is subtracted from the growth rate.
+    explanation: 'Population is removed at \(c\) units per time.'
+  157:
+    topic: s9-5
+    question: 'The exact solution of \(y''=1+y\), \(y(0)=1\) is'
+    A: '\(y=2 e^{x} + 1\)'
+    B: '\(y=2 e^{x} - 1\)'
+    C: '\(y=e^{x}\)'
+    D: '\(y=e^{x} - 0.5\)'
+    answer: B
+    hint: 'Let \(u=1+y\).'
+    explanation: '\(1+y=2e^x\).'
+  158:
+    topic: s9-5
+    question: 'The exact solution of \(y''=0.5(400-y)y\), \(y(0)=2\) is'
+    A: '\(y=\frac{2}{1 + 199 e^{- 200 x}}\)'
+    B: '\(y=\frac{400}{1 + 199 e^{- \frac{x}{2}}}\)'
+    C: '\(y=\frac{400}{1 + 200 e^{- 200 x}}\)'
+    D: '\(y=\frac{400}{1 + 199 e^{- 200 x}}\)'
+    answer: D
+    hint: 'Logistic with \(M=400\), \(rM=200\).'
+    explanation: '\(A=\dfrac{400-2}2=199\).'
+  159:
+    topic: s9-5
+    question: 'The logistic equation \(\dfrac{dP}{dt}=r(M-P)P\) has general solution'
+    A: '\(P=\dfrac M{1+Ae^{-rMt}}\)'
+    B: '\(P=\dfrac{1+Ae^{-rMt}}{M}\)'
+    C: '\(P=\dfrac M{1+Ae^{-rt}}\)'
+    D: '\(P=M\left(1-Ae^{-rMt}\right)\)'
+    answer: A
+    hint: 'Use partial fractions: \(\dfrac1{P(M-P)}=\dfrac1M\left(\dfrac1P+\dfrac1{M-P}\right)\).'
+    explanation: '\(\ln\left|\dfrac P{M-P}\right|=rMt+C\).'
+  160:
+    topic: s9-5
+    question: 'The solution of \(\dfrac{dP}{dt}=kP^2\), \(P(0)=P_0>0\), is \(P=\dfrac{P_0}{1-kP_0t}\), which'
+    A: 'tends to \(0\) as \(t\to\infty\)'
+    B: 'blows up (has a vertical asymptote) at \(t=\dfrac1{kP_0}\)'
+    C: 'blows up at \(t=\dfrac{k}{P_0}\)'
+    D: 'is bounded for all \(t>0\)'
+    answer: B
+    hint: The denominator vanishes at a positive time.
+    explanation: '\(1-kP_0t=0\) gives \(t=\dfrac1{kP_0}\).'
+  161:
+    topic: s9-5
+    question: 'For \(\dfrac{dP}{dt}=r(M-P)(P-m)\) with \(m=100\), \(M=1200\), the equation separates as \(\left[\dfrac1{1200-P}+\dfrac1{P-100}\right]dP=\)'
+    A: '\(100r\,dt\)'
+    B: '\(1100r\,dt\)'
+    C: '\(1300r\,dt\)'
+    D: '\(r\,dt\)'
+    answer: B
+    hint: '\(\dfrac1{(M-P)(P-m)}=\dfrac1{M-m}\left(\dfrac1{M-P}+\dfrac1{P-m}\right)\).'
+    explanation: 'Multiply \(\dfrac{dP}{(M-P)(P-m)}=r\,dt\) by \(M-m=1100\).'
+  162:
+    topic: s9-5
+    question: 'With \(m=100\), \(M=1200\) and \(P(0)=300\), the solution of that equation satisfies'
+    A: '\(\dfrac{P-100}{1200-P}=\dfrac29e^{-1100rt}\)'
+    B: '\(\dfrac{P-100}{1200-P}=\dfrac29e^{1100rt}\)'
+    C: '\(\dfrac{P-100}{1200-P}=\dfrac92e^{1100rt}\)'
+    D: '\(\dfrac{1200-P}{P-100}=\dfrac29e^{1100rt}\)'
+    answer: B
+    hint: 'Integrate: \(\ln\left|\dfrac{P-100}{1200-P}\right|=1100rt+C\).'
+    explanation: 'At \(t=0\): \(\dfrac{200}{900}=\dfrac29\).'
+  163:
+    topic: s9-5
+    question: 'The orthogonal trajectories of the family \(y=mx\) are'
+    A: 'the hyperbolas \(xy=c\)'
+    B: 'the parabolas \(y=cx^2\)'
+    C: 'the circles \(x^2+y^2=c\)'
+    D: 'the lines \(y=cx\)'
+    answer: C
+    hint: 'The slope of the family is \(\dfrac yx\); orthogonal slope is \(-\dfrac xy\).'
+    explanation: '\(y\,dy=-x\,dx\) gives \(x^2+y^2=c\).'
+  164:
+    topic: s9-5
+    question: 'The orthogonal trajectories of \(y=cx^2\) are'
+    A: 'the ellipses \(2x^2+y^2=k\)'
+    B: 'the ellipses \(x^2+2y^2=k\)'
+    C: 'the circles \(x^2+y^2=k\)'
+    D: 'the parabolas \(y=kx^2\)'
+    answer: B
+    hint: 'Eliminate \(c\): \(y''=\dfrac{2y}x\); orthogonal slope is \(-\dfrac x{2y}\).'
+    explanation: '\(2y\,dy=-x\,dx\) gives \(x^2+2y^2=k\).'
+  165:
+    topic: s9-5
+    question: 'The orthogonal trajectories of \(2x^2+y^2=c^2\) are'
+    A: 'the parabolas \(y^2=Cx\)'
+    B: 'the lines \(y=Cx\)'
+    C: 'the parabolas \(x^2=Cy\)'
+    D: 'the circles \(x^2+y^2=C\)'
+    answer: A
+    hint: 'Differentiating: \(4x+2yy''=0\), so the slope is \(-\dfrac{2x}y\).'
+    explanation: 'Orthogonal slope \(\dfrac y{2x}\): \(\dfrac{dy}y=\dfrac{dx}{2x}\) gives \(y^2=Cx\).'
+  166:
+    topic: s9-5
+    question: 'The orthogonal trajectories of \(y=ce^{-x}\) are'
+    A: '\(y=-ce^{x}\)'
+    B: '\(y=e^{x}+C\)'
+    C: '\(y^2=2x+C\)'
+    D: '\(y^2=-2x+C\)'
+    answer: C
+    hint: 'The family satisfies \(y''=-y\); orthogonal slope is \(\dfrac1y\).'
+    explanation: '\(y\,dy=dx\) gives \(\dfrac{y^2}2=x+C\).'
+  167:
+    topic: s9-5
+    question: 'The orthogonal trajectories of \(kx^2+y^2=1\) satisfy'
+    A: '\(\ln|y|-\dfrac{y^2}2=\dfrac{x^2}2+C\)'
+    B: '\(y^2=x^2+C\)'
+    C: '\(\ln|y|+\dfrac{y^2}2=\dfrac{x^2}2+C\)'
+    D: '\(\ln|y|-\dfrac{y^2}2=-\dfrac{x^2}2+C\)'
+    answer: A
+    hint: 'Eliminate \(k\): \(y''=-\dfrac{1-y^2}{xy}\); orthogonal slope is \(\dfrac{xy}{1-y^2}\).'
+    explanation: '\(\dfrac{1-y^2}y\,dy=x\,dx\).'
+  168:
+    topic: s9-5
+    question: 'The orthogonal trajectories of \(y=e^{kx}\) satisfy'
+    A: '\(\ln y=-\dfrac{x^2}2+C\)'
+    B: '\(\dfrac{y^2\ln y}2-\dfrac{y^2}4=-\dfrac{x^2}2+C\)'
+    C: '\(\dfrac{y^2\ln y}2-\dfrac{y^2}4=\dfrac{x^2}2+C\)'
+    D: '\(y\ln y=-x+C\)'
+    answer: B
+    hint: 'Eliminate \(k=\dfrac{\ln y}x\): \(y''=\dfrac{y\ln y}x\); orthogonal slope is \(-\dfrac x{y\ln y}\).'
+    explanation: '\(y\ln y\,dy=-x\,dx\), and \(\int y\ln y\,dy=\dfrac{y^2\ln y}2-\dfrac{y^2}4\).'
+  169:
+    topic: s9-5
+    question: 'The curves \(2x^2+3y^2=5\) and \(y^2=x^3\) meet at \((1,1)\) with slopes'
+    A: '\(-\dfrac32\) and \(\dfrac23\), so they are not orthogonal'
+    B: '\(-\dfrac23\) and \(-\dfrac32\), so they are orthogonal'
+    C: '\(\dfrac23\) and \(\dfrac32\), so they are orthogonal'
+    D: '\(-\dfrac23\) and \(\dfrac32\), so they are orthogonal'
+    answer: D
+    hint: Differentiate implicitly.
+    explanation: '\(4x+6yy''=0\) gives \(-\tfrac23\); \(2yy''=3x^2\) gives \(\tfrac32\); the product is \(-1\).'
+  170:
+    topic: s9-5
+    question: 'The family of solutions of \(x\,dx+y\,dy=0\) is circles about the origin; its orthogonal trajectories are'
+    A: 'the parabolas \(y=kx^2\)'
+    B: 'the hyperbolas \(xy=k\)'
+    C: the same circles
+    D: 'the lines through the origin \(y=kx\)'
+    answer: D
+    hint: 'Slopes are \(-\dfrac xy\); orthogonal slope is \(\dfrac yx\).'
+    explanation: '\(\dfrac{dy}y=\dfrac{dx}x\) gives \(y=kx\).'
+  171:
+    topic: s9-5
+    question: 'The family of solutions of \(x\,dy-2y\,dx=0\) is \(y=Cx^2\); its orthogonal trajectories are'
+    A: '\(y=kx\)'
+    B: '\(y=kx^2\)'
+    C: '\(2x^2+y^2=k\)'
+    D: '\(x^2+2y^2=k\)'
+    answer: D
+    hint: 'Orthogonal slope is \(-\dfrac{x}{2y}\).'
+    explanation: '\(2y\,dy=-x\,dx\).'
+  172:
+    topic: s9-5
+    question: 'The parabolas \(y^2=4a^2-4ax\) and \(y^2=4b^2+4bx\) (\(a,b>0\)) intersect at'
+    A: '\(\left(a-b,\ \pm\sqrt{ab}\right)\)'
+    B: '\(\left(a-b,\ \pm2\sqrt{ab}\right)\)'
+    C: '\(\left(a+b,\ \pm2\sqrt{ab}\right)\)'
+    D: '\(\left(b-a,\ \pm2\sqrt{ab}\right)\)'
+    answer: B
+    hint: Set the right sides equal.
+    explanation: '\(4a^2-4ax=4b^2+4bx\) gives \(x=a-b\); then \(y^2=4ab\).'
